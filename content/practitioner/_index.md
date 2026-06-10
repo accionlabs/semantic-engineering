@@ -13,9 +13,9 @@ audience:
   - business-leader
 ---
 
-The methodology was originated and is operated by Accion Labs. This section is the only part of the site where Accion is the subject rather than the operator behind the methodology.
+The methodology was originated and is operated by Accion Labs. This section is the only part of the site where Accion Labs is the subject rather than the operator behind the methodology.
 
-The relationship between the methodology and its primary practitioner matters. Semantic Engineering is proprietary to Accion Labs. The framework, principles, and concepts are public. The methodology mark is reserved. Accion holds the copyright. We operate the methodology across more than two hundred enterprise clients.
+The relationship between the methodology and its primary practitioner matters. Semantic Engineering is proprietary to Accion Labs. The framework, principles, and concepts are public. The methodology mark is reserved. Accion Labs holds the copyright. We operate the methodology across more than two hundred enterprise clients.
 
 Our claim to operate the methodology rests on three things. The firm originated the framework that became the methodology's role-governance backbone (the 2017 Breeze framework) and the discovery that made the methodology viable at AI scale (the 2022 drug discovery hallucination problem and the knowledge-graph constraint response). We have spent years operationalizing the methodology across enterprise SDLC engagements. We have built the platforms that implement the methodology in production, with the principal platform (Breeze.AI) carrying the name of its 2017 ancestor.
 
@@ -43,7 +43,7 @@ The standard entry point into a commercial engagement with us.
 
 The workshop requires no infrastructure change, no system access beyond what is already in place, and no commitment beyond the workshop itself.
 
-### Why Accion as the Enabler
+### Why Accion Labs as the Enabler
 
 The [Enablement Partnership](../process/enablement-partnership.md) frames our role over multi-year engagements as enabling partner rather than vendor or custodian. The client's four custodians own the knowledge asset; we provide customization, setup, and managed support under codified engagement principles. The enablement relationship operates under explicit firewalls when we enable the same methodology for competing clients. The offboarding doctrine makes the exit real, which is what makes the entry decision easy.
 
@@ -51,7 +51,7 @@ This is the relational frame we propose for engagements that exceed the workshop
 
 ### What This Section Does Not Cover
 
-This section is about Accion as the methodology's operator. It does not advocate for the methodology. The methodology advocacy is in [The Manual Translation Tax](../manual-translation-tax.md), [Zones of AI-Assisted SDLC](../zones-of-ai-assisted-sdlc/_index.md), and [The Methodology](../semantic-knowledge-graphs/_index.md). Readers who want the case for the methodology should start there. Readers who have decided the methodology is what they need, and are evaluating Accion as the partner to operate it, will find what they need in this section.
+This section is about Accion Labs as the methodology's operator. It does not advocate for the methodology. The methodology advocacy is in [The Manual Translation Tax](../manual-translation-tax.md), [Zones of AI-Assisted SDLC](../zones-of-ai-assisted-sdlc/_index.md), and [The Methodology](../semantic-knowledge-graphs/_index.md). Readers who want the case for the methodology should start there. Readers who have decided the methodology is what they need, and are evaluating Accion Labs as the partner to operate it, will find what they need in this section.
 
 ---
 
@@ -106,7 +106,7 @@ Our six core capabilities together support the full Semantic Engineering engagem
 | Capability | What it covers |
 |---|---|
 | Enterprise AI and Gen AI | End-to-end AI solutions with proprietary frameworks (SPEX, ASIMOV, ECL) |
-| Platform Engineering | Accion Symphony Platform across Salesforce, Microsoft, AWS ecosystems |
+| Platform Engineering | Accion Labs Symphony Platform across Salesforce, Microsoft, AWS ecosystems |
 | Product Engineering | AI-native SDLC, Semantic Engineering, specification-as-a-product |
 | Data Engineering and Analytics | Modern data architectures, entity-context-linking, enterprise intelligence |
 | Legacy Modernization | ASIMOV framework: 6M+ LOC migrated across mainframe, Java, desktop systems |
@@ -126,7 +126,7 @@ Our internal operating model for AI engagements has six elements that align to t
 
 The full platform descriptions are in [Platforms](#platforms) below.
 
-### What Accion Brings to a Semantic Engineering Engagement
+### What Accion Labs Brings to a Semantic Engineering Engagement
 
 | Asset | What it gives the client |
 |---|---|
@@ -137,7 +137,7 @@ The full platform descriptions are in [Platforms](#platforms) below.
 | The Forward-Deployed Engineer program | The backfill model that staffs gaps in the client's custodianship layer when the client cannot cover all four ontology roles fluently |
 | The engagement model | A defined Advise-Launch-Scale-Optimize phasing that takes engagements from workshop to long-term operating mode |
 
-### Why Accion Is the Methodology's Home
+### Why Accion Labs Is the Methodology's Home
 
 Three things give us the credible claim to operate the methodology as its primary practitioner.
 
@@ -158,7 +158,7 @@ The technical implementations we bring to a Semantic Engineering engagement. Eac
 | [Breeze.AI](breeze-ai.md) | The AI-native SDLC platform. Operates the full four-layer knowledge graph plus the agent fleet (Impact Analysis, PR Validation, BDD Generation, KG Sync, Extraction). Developer is in the loop on per-change decisions. | When the engagement is ongoing SDLC governance and evolution of a live application. |
 | [ASIMOV](asimov.md) | The AI-led legacy modernization platform. Builds on Semantic Engineering principles. Three-stage agent pipeline (Ingestion → Transformation → Generation) anchored on a Source Graph and a Target Ontology Configurator. Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Fully agentic, humans outside the loop. Up to 4× faster than manual modernization. | When the engagement scope is replacing a legacy system (COBOL, Delphi, VB.NET, older Java, ASP.NET) with a modern stack (Java 21, .NET 8, React 18, Angular 19) while preserving behavior. |
 
-### Other Accion Platforms Referenced in the Methodology
+### Other Accion Labs Platforms Referenced in the Methodology
 
 Beyond the two SDLC-focused platforms above, several other platforms appear in the broader context. They are not the focus of this site but are referenced where relevant.
 
@@ -190,7 +190,7 @@ The Breeze.AI platform is the canonical implementation of the methodology. A cli
 
 | Deployment | Use case |
 |---|---|
-| SaaS (Accion-hosted) | Most engagements; lowest setup overhead |
+| SaaS (Accion Labs-hosted) | Most engagements; lowest setup overhead |
 | Client-hosted (dedicated tenancy) | Clients with data sovereignty or contractual requirements that preclude SaaS |
 | On-premises (Gen AI in a Box) | Highly regulated industries (defense, certain financial services, certain government) where the AI inference itself has to remain inside the client's infrastructure |
 
@@ -234,7 +234,7 @@ graph LR
 
 **Activities.** AI readiness assessment, use-case discovery and prioritization, platform evaluation (Breeze.AI versus ASIMOV versus both), twelve-week SE Foundation roadmap scoping, team composition recommendation under the fractional allocation model, ROI modeling.
 
-**Participants.** CxO sponsors (CTO, CIO, or VP Engineering), business stakeholders for the priority workstream, Accion AI strategists and lead architects.
+**Participants.** CxO sponsors (CTO, CIO, or VP Engineering), business stakeholders for the priority workstream, Accion Labs AI strategists and lead architects.
 
 **Deliverables.** AI roadmap for the engagement, prioritized use case backlog, platform recommendation, scoped Phase 2 plan with phase gates and acceptance criteria.
 
@@ -248,7 +248,7 @@ The Advise phase requires no infrastructure change and no system access beyond w
 
 **Activities.** Proof-of-value builds (the first demo against the live graph), agent fleet prototyping, data pipeline setup for KG sync, integration architecture with the client's existing toolchain (CI/CD, ticket system, design tools), brownfield extraction (if applicable) or Functional Ontology authoring (if greenfield).
 
-**Participants.** Product owners from the priority workstream, Accion engineering pods (Semantic Engineers, Agent Developers), client IT team, Forward-Deployed Engineer for the workstream (Accion-provided or jointly identified).
+**Participants.** Product owners from the priority workstream, Accion Labs engineering pods (Semantic Engineers, Agent Developers), client IT team, Forward-Deployed Engineer for the workstream (Accion Labs-provided or jointly identified).
 
 **Deliverables.** Working proof-of-value or MVP, architecture blueprint for the integration, success metrics baseline, all four ontologies passing the P0 verification suite, Impact Analysis Agent deployed in pre-implementation mode, PR Validation Agent deployed, KG Sync Agent operating.
 
@@ -260,7 +260,7 @@ The Advise phase requires no infrastructure change and no system access beyond w
 
 **Activities.** Production deployment of the methodology across additional workstreams, multi-agent rollout, performance tuning of the agent fleet, redundancy and recovery patterns, Forward-Deployed Engineer program expansion.
 
-**Participants.** Engineering leads across the portfolio, DevOps and MLOps teams, Accion delivery team, enablement layer beginning to form (Chief Architect, Ontology Maintainer).
+**Participants.** Engineering leads across the portfolio, DevOps and MLOps teams, Accion Labs delivery team, enablement layer beginning to form (Chief Architect, Ontology Maintainer).
 
 **Deliverables.** Production systems operating under the methodology across the portfolio, CI/CD pipelines integrated with the agent fleet, monitoring dashboards for graph health and agent performance, first Cross-Product Impact Extension agents in production.
 
@@ -272,7 +272,7 @@ The Advise phase requires no infrastructure change and no system access beyond w
 
 **Activities.** Continuous improvement of agent prompts and ontology shape, model retraining and drift tracking, cost optimization (model routing, token usage), governance audits (quarterly), rationalization cycles (quarterly), refresh sprints (triggered by freshness thresholds).
 
-**Participants.** Managed services team, client operations team, Accion's enablement layer (Chief Architect, Ontology Maintainer, Knowledge Agent Owner), AI governance board.
+**Participants.** Managed services team, client operations team, Accion Labs's enablement layer (Chief Architect, Ontology Maintainer, Knowledge Agent Owner), AI governance board.
 
 **Deliverables.** Optimization reports (quarterly), SLA compliance reporting, ROI realization metrics, rationalization backlog flowing into the product roadmap, enablement audit trail.
 
@@ -357,13 +357,13 @@ For greenfield scenarios, the team can begin building the Functional Ontology fr
 
 **Objective.** Extend the methodology across the portfolio. Deploy progressive autonomy on pattern-based work. Establish the enablement partnership as the operating mode. Reach Zone 4 across the engagement.
 
-**Deliverables.** The four-layer graph extended to additional products; Cross-Product Impact Extension agents deployed; Portfolio Rationalization Agent running on a quarterly cadence; progressive autonomy levels assigned per agent class; enablement engagement in place with named owners for each ontology category; Engagement Council established for cross-engagement governance when Accion is operating multiple competing-client engagements; offboarding doctrine documented and contractually binding; BDD scenarios auto-generated from the Functional Ontology at production scale.
+**Deliverables.** The four-layer graph extended to additional products; Cross-Product Impact Extension agents deployed; Portfolio Rationalization Agent running on a quarterly cadence; progressive autonomy levels assigned per agent class; enablement engagement in place with named owners for each ontology category; Engagement Council established for cross-engagement governance when Accion Labs is operating multiple competing-client engagements; offboarding doctrine documented and contractually binding; BDD scenarios auto-generated from the Functional Ontology at production scale.
 
-**Phase-gate criteria.** The methodology is operating across the products that matter to the enterprise; the enablement partnership is producing measurable health metrics on a continuous basis; the enablement contract is in place with the client; the team can sustainably operate the methodology without continuous Accion presence.
+**Phase-gate criteria.** The methodology is operating across the products that matter to the enterprise; the enablement partnership is producing measurable health metrics on a continuous basis; the enablement contract is in place with the client; the team can sustainably operate the methodology without continuous Accion Labs presence.
 
 **Team composition.** Layered team structure in full operation (Enablement Layer plus Forward-Deployed Engineers plus Implementation Teams); spec sprints running on the cadence appropriate to each workstream; fractional allocation engaged at trigger points across the portfolio.
 
-This phase has no fixed end. It is an operating mode. The enablement engagement continues as long as the client wants Accion to enable the custodianship of the knowledge asset.
+This phase has no fixed end. It is an operating mode. The enablement engagement continues as long as the client wants Accion Labs to enable the custodianship of the knowledge asset.
 
 ### Two Paths Through Phase 2
 

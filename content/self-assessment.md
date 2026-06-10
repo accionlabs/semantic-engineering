@@ -75,7 +75,7 @@ If your answers span two adjacent zones (mostly A with some B, or mostly B with 
 
 If your answers span non-adjacent zones (mostly A with some C), the work has uneven complexity across areas. The lower zone is the right starting point for the bulk of the work. The higher zone is worth investigating to understand where the more complex pockets came from and how the pattern was handled.
 
-## Want a Diagnostic Run by Accion?
+## Want a Diagnostic Run by Accion Labs?
 
 The [two-day deep-dive workshop](practitioner/_index.md#services) produces a more detailed diagnostic, including a per-ontology view of where the work sits across each of the four layers (the work can demand Zone 3 process on the Code Ontology while staying at Zone 2 on the Design Ontology), an identification of the specific ceiling conditions the team is bumping against, a scoped twelve-week roadmap for the transition with phase gates and acceptance criteria, and an indicative team composition under the fractional allocation model.
 

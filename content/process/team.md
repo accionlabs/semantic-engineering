@@ -20,13 +20,13 @@ Semantic Engineering at enterprise scale requires a different team shape. The th
 
 ## The Layered Team Structure
 
-![The three-layer team structure: Custodianship (top, the four ontology custodians), Implementation (middle), Enablement (bottom, Accion-supplied). Each layer with roles, cadence, sizing, and coordination flow](/diagrams/three-layer-team-structure.svg)
+![The three-layer team structure: Custodianship (top, the four ontology custodians), Implementation (middle), Enablement (bottom, Accion Labs-supplied). Each layer with roles, cadence, sizing, and coordination flow](/diagrams/three-layer-team-structure.svg)
 
 | Layer | Role | What this layer does |
 |---|---|---|
 | Top: Custodianship | Product Owner, Architect, UX Designer, Engineering Team representative | The four ontology custodians. Each owns one ontology layer. Runs the [spec sprint](spec-sprint.md). Validates specs against the knowledge graph via Impact Analysis. Makes cross-product reconciliations. Output is specifications, not code. Typically client-supplied, with Forward-Deployed Engineers backfilling missing coverage. |
 | Middle: Implementation Teams | Implementation Engineers, Agent Developers | Consumes the impact-analyzed specification. Produces code (or in the target state, agents that produce code) under the four-ontology governance. |
-| Bottom: Enablement (Accion-supplied) | Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers | Supports the custodianship layer with cross-ontology governance, ontology stewardship, agent-fleet operations, and brownfield extraction. Provides customization, setup, and managed support. Sits beneath the custodians, who own the asset. |
+| Bottom: Enablement (Accion Labs-supplied) | Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers | Supports the custodianship layer with cross-ontology governance, ontology stewardship, agent-fleet operations, and brownfield extraction. Provides customization, setup, and managed support. Sits beneath the custodians, who own the asset. |
 
 ## What to Expect
 
@@ -34,7 +34,7 @@ The methodology promises speed, quality, and a sustainable knowledge asset. The 
 
 In our client conversations we set the expectation early: the methodology can be rolled out in weeks, while the operating model that delivers its full value matures across quarters.
 
-> **How Accion supports the team transition**
+> **How Accion Labs supports the team transition**
 >
 > The [engagement model](../practitioner/_index.md#engagement-model) covers Advise, Launch, Scale, and Optimize phases. The Forward-Deployed Engineer program is a named offer in [Practitioner services](../practitioner/_index.md#services). Managed support tiers (Light Governance, Medium Curation, Deep Operations) are described on the [Enablement Partnership](enablement-partnership.md) page.
 
@@ -120,9 +120,9 @@ The fractional allocation model differs from how many engineering organizations 
 
 The methodology can be deployed before the operating model fully shifts. The full value compounds as the operating model matures. See [Engagement Model Evolution](#engagement-model-evolution) below for the two-stage engagement-shape transition.
 
-> **How Accion staffs the fractional allocation model**
+> **How Accion Labs staffs the fractional allocation model**
 >
-> Accion fields specialists from a shared pool across multiple client engagements. The pool means a single specialist can support several engagements while maintaining depth of judgment on each, so each engagement gets focused expertise at the moments it needs them.
+> Accion Labs fields specialists from a shared pool across multiple client engagements. The pool means a single specialist can support several engagements while maintaining depth of judgment on each, so each engagement gets focused expertise at the moments it needs them.
 
 ---
 
@@ -158,7 +158,7 @@ This layer owns the knowledge graph across years. It produces well-formed specif
 
 The Implementation Team's day-to-day work is constrained by the spec sprint's output. They are not authoring specs. They are not making architecture decisions. They are not extending the ontology shape. They are executing a known plan that the custodianship layer has validated.
 
-**Bottom Layer: Enablement (Accion-supplied).** Sits beneath the custodianship and implementation layers. Provides customization of Breeze.AI / ASIMOV, initial setup, and managed support cadence. Does not own the asset; supports the custodians who do.
+**Bottom Layer: Enablement (Accion Labs-supplied).** Sits beneath the custodianship and implementation layers. Provides customization of Breeze.AI / ASIMOV, initial setup, and managed support cadence. Does not own the asset; supports the custodians who do.
 
 | Role | Responsibility |
 |---|---|
@@ -208,15 +208,15 @@ Adopting the layered structure asks engineers to work in slightly different ways
 
 The transition tends to land well when teammates understand why the shape works and see a concrete role for themselves in it. Quarter 1 and Quarter 2 are typically the period when the structure is explained, piloted, and adjusted to the client's specific context.
 
-> **How Accion supports the transition**
+> **How Accion Labs supports the transition**
 >
-> The Accion engagement model includes change-management support alongside the methodology rollout. The Forward-Deployed Engineer program is staffed jointly: Accion contributes FDEs from a shared pool while the client identifies and grooms their own FDE candidates over two to three quarters.
+> The Accion Labs engagement model includes change-management support alongside the methodology rollout. The Forward-Deployed Engineer program is staffed jointly: Accion Labs contributes FDEs from a shared pool while the client identifies and grooms their own FDE candidates over two to three quarters.
 
 ---
 
 ## Forward-Deployed Engineers
 
-The industry has converged on "forward-deployed engineer" as the term for a specific profile: someone who sits close to a specific workstream, owns its specification quality, and brings architecture, design, and product judgment together. The role is the backfill option for the client's custodianship layer when the client cannot supply all four ontology custodian roles fluently, and it pairs with Accion's enablement layer to support the custodians across the engagement.
+The industry has converged on "forward-deployed engineer" as the term for a specific profile: someone who sits close to a specific workstream, owns its specification quality, and brings architecture, design, and product judgment together. The role is the backfill option for the client's custodianship layer when the client cannot supply all four ontology custodian roles fluently, and it pairs with Accion Labs's enablement layer to support the custodians across the engagement.
 
 ### The Role
 
@@ -300,7 +300,7 @@ The single most important hiring criterion is mindset, not seniority.
 
 The FDE does not write production code in the workstream they own. Writing code would conflict with the spec sprint cadence and would also pull the FDE into the implementation team's day-to-day rhythm. The FDE is a member of the implementation team in spirit but not in their daily work.
 
-The FDE does not govern the knowledge graph. Graph governance is the enablement layer (Accion)'s responsibility. The FDE surfaces findings from impact analysis that warrant enablement-layer attention, but the structural decisions about ontology shape, partition, and rationalization belong to the enablement layer (Accion).
+The FDE does not govern the knowledge graph. Graph governance is the enablement layer (Accion Labs)'s responsibility. The FDE surfaces findings from impact analysis that warrant enablement-layer attention, but the structural decisions about ontology shape, partition, and rationalization belong to the enablement layer (Accion Labs).
 
 The FDE does not own multiple unrelated workstreams. The fractional model has limits. An FDE who is fractionalized across more than two or three workstreams loses the depth that makes the role valuable in any of them.
 
@@ -310,9 +310,9 @@ Building a Forward-Deployed Engineer cohort is a multi-quarter change-management
 
 In our client conversations we set the expectation early: the methodology can be rolled out in weeks; the FDE program matures across quarters. Both are worth doing, and the two efforts run on different timelines.
 
-> **How Accion operationalizes the FDE program**
+> **How Accion Labs operationalizes the FDE program**
 >
-> Accion's [Forward-Deployed Engineer program](../practitioner/_index.md#services) is a named offer. The program identifies candidates inside the client's top accounts, grooms them over two to three quarters, and mandates them to the spec sprint cadence with delivery manager support.
+> Accion Labs's [Forward-Deployed Engineer program](../practitioner/_index.md#services) is a named offer. The program identifies candidates inside the client's top accounts, grooms them over two to three quarters, and mandates them to the spec sprint cadence with delivery manager support.
 
 ---
 
@@ -365,7 +365,7 @@ A useful framing for the long engagement: total cost-of-ownership over three yea
 
 The cumulative cost over three years is typically lower for the SE-driven engagement. The cumulative value delivered (features shipped, defects avoided, modernization completed) is meaningfully higher because the methodology compounds rather than depreciating.
 
-> **How Accion frames the engagement conversation**
+> **How Accion Labs frames the engagement conversation**
 >
 > The [two-day deep-dive workshop](../practitioner/_index.md#services) includes a session on the engagement frame. The workshop output describes both an effort-based engagement option and a deliverable-based engagement option, with the trade-offs explained. The client chooses the frame that matches their procurement environment.
 

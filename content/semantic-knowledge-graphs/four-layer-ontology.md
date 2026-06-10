@@ -313,11 +313,11 @@ The framework runs to concrete thresholds. The numbers below are what we operate
 | Quarterly | The P2 community structure and P3 centrality metrics. Output is a prioritized rationalization backlog. | Chief Architect, Ontology Maintainer |
 | Continuously | Ontology freshness check. Refresh sprints scheduled when freshness threshold is breached. | Knowledge Agent Owner |
 
-The metrics framework is what makes the knowledge graph a sustainable asset rather than another stale documentation artifact. The four ontology custodians own the framework; Accion's [Enablement Partnership](../process/enablement-partnership.md) supports them at a chosen tier of managed support.
+The metrics framework is what makes the knowledge graph a sustainable asset rather than another stale documentation artifact. The four ontology custodians own the framework; Accion Labs's [Enablement Partnership](../process/enablement-partnership.md) supports them at a chosen tier of managed support.
 
-> **How Accion operationalizes graph operation**
+> **How Accion Labs operationalizes graph operation**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) maintains the product-partitioned graphs, runs the brownfield extraction, runs the 29-metric framework and 14 verification checks, and runs the three Impact Analysis variants. The [Managed Support tiers](../process/enablement-partnership.md) (Light, Medium, Deep) determine which cadence of metrics review Accion runs alongside the client's custodians.
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) maintains the product-partitioned graphs, runs the brownfield extraction, runs the 29-metric framework and 14 verification checks, and runs the three Impact Analysis variants. The [Managed Support tiers](../process/enablement-partnership.md) (Light, Medium, Deep) determine which cadence of metrics review Accion Labs runs alongside the client's custodians.
 
 ---
 

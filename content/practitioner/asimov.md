@@ -1,6 +1,6 @@
 ---
 title: "ASIMOV"
-description: "The Accion platform for AI-led legacy modernization. Built on Semantic Engineering principles. INGESTION → TRANSFORMATION → GENERATION agent pipeline that uses a Source Graph and a Target Ontology Configurator to preserve behavioral parity while transforming the technology stack. Fully agentic, humans outside the loop."
+description: "The Accion Labs platform for AI-led legacy modernization. Built on Semantic Engineering principles. INGESTION → TRANSFORMATION → GENERATION agent pipeline that uses a Source Graph and a Target Ontology Configurator to preserve behavioral parity while transforming the technology stack. Fully agentic, humans outside the loop."
 weight: 20
 date: 2026-06-10
 lastmod: 2026-06-10
@@ -12,7 +12,7 @@ audience:
   - chief-architect
 ---
 
-The Accion platform for AI-led legacy modernization. ASIMOV is a peer of [Breeze.AI](breeze-ai.md) under Accion's Software Engineering and Modernization capability. Both apply Semantic Engineering principles. Breeze.AI is the AI-native SDLC platform for evolving an application; ASIMOV is the modernization platform for replacing a legacy stack while preserving the behavior the business has built up over years.
+The Accion Labs platform for AI-led legacy modernization. ASIMOV is a peer of [Breeze.AI](breeze-ai.md) under Accion Labs's Software Engineering and Modernization capability. Both apply Semantic Engineering principles. Breeze.AI is the AI-native SDLC platform for evolving an application; ASIMOV is the modernization platform for replacing a legacy stack while preserving the behavior the business has built up over years.
 
 **The headline outcomes (benchmark: 1M LOC standalone code).**
 
@@ -155,7 +155,7 @@ Multimodal transport, container freight station, and contract logistics services
 
 ![Breeze.AI and ASIMOV as peer platforms under Semantic Engineering: same principles, different problems, with key distinctions in problem, ontology usage, graph artifact, human role, and time horizon](/diagrams/breeze-vs-asimov.svg)
 
-ASIMOV and [Breeze.AI](breeze-ai.md) are peer platforms under Accion's Software Engineering and Modernization capability. Both apply Semantic Engineering principles. The difference is in the problem each one is shaped for.
+ASIMOV and [Breeze.AI](breeze-ai.md) are peer platforms under Accion Labs's Software Engineering and Modernization capability. Both apply Semantic Engineering principles. The difference is in the problem each one is shaped for.
 
 | Dimension | Breeze.AI | ASIMOV |
 |---|---|---|

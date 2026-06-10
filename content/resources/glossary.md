@@ -17,7 +17,7 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 **Architecture Ontology.** The third of the four ontology layers. Captures services, boundaries, dependencies, data stores, and integration paths. The Architecture Ontology is the minimal governance structure that ensures the architect is keeping service boundaries clean. See [The Four-Layer Ontology](../semantic-knowledge-graphs/four-layer-ontology.md#the-four-layer-ontology).
 
-**ASIMOV.** The Accion platform for AI-led legacy modernization. Built on Semantic Engineering principles (peer to Breeze.AI under L3). Three-stage agent pipeline: Ingestion (Code Ingestor and Code Context Enrichment Agent produce the Source Graph) → Transformation (Design Agent and Code Translation Agent generate against the Target Ontology Configurator) → Generation (Code Optimizer and Test Generation Agent produce the Target Source Code, test cases, and traceability artifacts). Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Migrates legacy stacks (COBOL, Delphi, VB.NET, older Java, ASP.NET) to modern stacks (Java 21, .NET 8, React 18, Angular 19) while preserving behavioral parity. Fully agentic with humans outside the loop validating the outcome rather than approving each step. See [ASIMOV](../practitioner/asimov.md).
+**ASIMOV.** The Accion Labs platform for AI-led legacy modernization. Built on Semantic Engineering principles (peer to Breeze.AI under L3). Three-stage agent pipeline: Ingestion (Code Ingestor and Code Context Enrichment Agent produce the Source Graph) → Transformation (Design Agent and Code Translation Agent generate against the Target Ontology Configurator) → Generation (Code Optimizer and Test Generation Agent produce the Target Source Code, test cases, and traceability artifacts). Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Migrates legacy stacks (COBOL, Delphi, VB.NET, older Java, ASP.NET) to modern stacks (Java 21, .NET 8, React 18, Angular 19) while preserving behavioral parity. Fully agentic with humans outside the loop validating the outcome rather than approving each step. See [ASIMOV](../practitioner/asimov.md).
 
 **Audit Trail.** The log of every agent action at every autonomy level, including the input, output, level of authorization, and the human owner. Reviewed by the Engagement Council and used as the basis for promotion decisions in the progressive autonomy framework. See [Progressive Autonomy](../the-agents.md#progressive-autonomy).
 
@@ -27,13 +27,13 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 **Blast Radius.** The set of other decisions, artifacts, and behaviors that must change if a given decision changes. Used as the test for aperture inclusion: elements with wide blast radius enter the graph; elements with locally contained blast radius stay local. See [Aperture](../semantic-knowledge-graphs/four-layer-ontology.md#aperture).
 
-**Breeze.AI.** The Accion platform that operationalizes Semantic Engineering for SDLC engagements. The four-layer knowledge graph sits at the center; six core agents (Impact Analysis, PR Validation, KG Sync, BDD Generation, Coding, Test Generation) operate on it; the integration surface plugs it into the client's existing toolchain (version control, CI/CD, ticket systems, design tools, AI coding assistants, test runners, observability). Peer to ASIMOV under Accion's L3. Three deployment modes: SaaS (Accion-hosted), Client-hosted dedicated, On-premises via Gen AI in a Box. The platform's name carries the 2017 Breeze framework's heritage: the role-governance discipline preserved, the maintenance burden handled by the agent fleet. See [Breeze.AI](../practitioner/breeze-ai.md).
+**Breeze.AI.** The Accion Labs platform that operationalizes Semantic Engineering for SDLC engagements. The four-layer knowledge graph sits at the center; six core agents (Impact Analysis, PR Validation, KG Sync, BDD Generation, Coding, Test Generation) operate on it; the integration surface plugs it into the client's existing toolchain (version control, CI/CD, ticket systems, design tools, AI coding assistants, test runners, observability). Peer to ASIMOV under Accion Labs's L3. Three deployment modes: SaaS (Accion Labs-hosted), Client-hosted dedicated, On-premises via Gen AI in a Box. The platform's name carries the 2017 Breeze framework's heritage: the role-governance discipline preserved, the maintenance burden handled by the agent fleet. See [Breeze.AI](../practitioner/breeze-ai.md).
 
 **Brownfield Extraction.** The process of building the four-layer knowledge graph from an existing code base. AST parsing extracts the Code Ontology; LLM-inferred metadata enriches each node; the Architecture, Functional, and Design ontologies are inferred from the enriched code graph. Typically completes in two to three weeks for a 2M+ LOC application. See [The Four-Layer Ontology](../semantic-knowledge-graphs/four-layer-ontology.md#the-four-layer-ontology).
 
 ## C
 
-**Chief Architect.** An Enablement Layer role (Accion-supplied) responsible for cross-ontology governance. Owns the bulk of P0 and P1 health metrics. Arbitrates layered structure, connectivity, and centrality findings on behalf of the client's custodians. See [The Enablement Partnership](../process/enablement-partnership.md) and [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
+**Chief Architect.** An Enablement Layer role (Accion Labs-supplied) responsible for cross-ontology governance. Owns the bulk of P0 and P1 health metrics. Arbitrates layered structure, connectivity, and centrality findings on behalf of the client's custodians. See [The Enablement Partnership](../process/enablement-partnership.md) and [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
 
 **Code Context Enrichment Agent.** ASIMOV's INGESTION-stage agent that annotates the Source Graph with relationships, dependencies, descriptions, and metrics. Produces the Enriched Graph that downstream stages operate on. See [ASIMOV Architecture](../practitioner/asimov.md#the-asimov-architecture).
 
@@ -61,13 +61,13 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 ## E
 
-**Enablement Layer.** The bottom layer of the layered team structure. Accion-supplied. Four roles: Chief Architect, Ontology Maintainer, Semantic Engineers, and Knowledge Agent Owner. Supports the client's custodianship layer with cross-ontology governance, ontology stewardship, agent-fleet operations, and brownfield extraction. Sits beneath the custodians, who own the asset. See [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
+**Enablement Layer.** The bottom layer of the layered team structure. Accion Labs-supplied. Four roles: Chief Architect, Ontology Maintainer, Semantic Engineers, and Knowledge Agent Owner. Supports the client's custodianship layer with cross-ontology governance, ontology stewardship, agent-fleet operations, and brownfield extraction. Sits beneath the custodians, who own the asset. See [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
 
-**Enablement Partnership.** The discipline by which Accion supports the client's custodians across years. Operationalized through five engagement principles (Care, Loyalty, Prudence, Independence, Transparency) and three tiers of managed support (Light, Medium, Deep). Accion provides customization, setup, and managed support; the client's custodians own the asset. See [The Enablement Partnership](../process/enablement-partnership.md).
+**Enablement Partnership.** The discipline by which Accion Labs supports the client's custodians across years. Operationalized through five engagement principles (Care, Loyalty, Prudence, Independence, Transparency) and three tiers of managed support (Light, Medium, Deep). Accion Labs provides customization, setup, and managed support; the client's custodians own the asset. See [The Enablement Partnership](../process/enablement-partnership.md).
 
-**Engagement Council.** The body that adjudicates conflicts when Accion enables the same methodology for competing clients. Operates independently of commercial account teams. See [The Enablement Partnership](../process/enablement-partnership.md#the-engagement-council).
+**Engagement Council.** The body that adjudicates conflicts when Accion Labs enables the same methodology for competing clients. Operates independently of commercial account teams. See [The Enablement Partnership](../process/enablement-partnership.md#the-engagement-council).
 
-**Engagement Model Evolution.** The two-phase evolution of how Accion's engagements are framed. Phase 1: effort-based engagement (familiar to procurement, maps to existing professional services patterns). Phase 2: deliverable-based engagement (the client commits to outcomes — validated four-layer graph, agent fleet, graph-health SLA — rather than to effort). The same engagement model supports both. See [Engagement Model Evolution](../process/team.md#engagement-model-evolution).
+**Engagement Model Evolution.** The two-phase evolution of how Accion Labs's engagements are framed. Phase 1: effort-based engagement (familiar to procurement, maps to existing professional services patterns). Phase 2: deliverable-based engagement (the client commits to outcomes — validated four-layer graph, agent fleet, graph-health SLA — rather than to effort). The same engagement model supports both. See [Engagement Model Evolution](../process/team.md#engagement-model-evolution).
 
 **Engineering Team (as custodian).** The fourth ontology custodian, owning the Code Ontology. At Zone 4 (Agentic SE at Scale), the Engineering Team's custodianship expands to include the agent fleet: approving Promotion Agreements, setting autonomy levels, reviewing the audit trail, and refining agent prompts. Bottom custodial layer in the Zone 4 diagram. See [Engineering Team's Custodianship of the Agent Fleet](../process/enablement-partnership.md#engineering-teams-custodianship-of-the-agent-fleet-zone-4-evolution).
 
@@ -83,7 +83,7 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 ## G
 
-**Gen AI in a Box.** The Accion deployment pattern for on-premises AI inference. Used by clients in highly regulated industries where AI inference must remain inside the client's infrastructure. Typically achieves 81% lower five-year TCO than cloud-only patterns at enterprise scale.
+**Gen AI in a Box.** The Accion Labs deployment pattern for on-premises AI inference. Used by clients in highly regulated industries where AI inference must remain inside the client's infrastructure. Typically achieves 81% lower five-year TCO than cloud-only patterns at enterprise scale.
 
 ## I
 
@@ -95,13 +95,13 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 **KG Sync Agent.** The agent that updates the knowledge graph on every PR merge. The drift-prevention mechanism that distinguishes a living asset from a stale documentation artifact. See [KG Sync Agent](../the-agents.md#the-kg-sync-agent).
 
-**Knowledge Agent Owner.** An Enablement Layer role (Accion-supplied) responsible for ongoing operations of the agent fleet against the knowledge graph: monthly KG refresh audit; tracking ontology age and freshness; triggering refresh sprints when freshness thresholds are breached. See [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
+**Knowledge Agent Owner.** An Enablement Layer role (Accion Labs-supplied) responsible for ongoing operations of the agent fleet against the knowledge graph: monthly KG refresh audit; tracking ontology age and freshness; triggering refresh sprints when freshness thresholds are breached. See [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
 
 **Knowledge Custodianship.** See Custodianship.
 
 ## L
 
-**Layered Team Structure.** The layered model that replaces distributed scrum. Custodianship at the top (the four ontology custodians, namely PO, Architect, UX Designer, and Engineering Team, typically client-supplied, with Forward-Deployed Engineers backfilling missing coverage); Implementation Teams in the middle consuming the impact-analyzed specs; the Enablement Layer at the bottom (Accion-supplied: Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers) supporting the custodians under a chosen tier of managed support. At Zone 4 the Engineering Team gains a second custodial role as custodian of the agent fleet. Each layer has its own cadence and its own work. See [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
+**Layered Team Structure.** The layered model that replaces distributed scrum. Custodianship at the top (the four ontology custodians, namely PO, Architect, UX Designer, and Engineering Team, typically client-supplied, with Forward-Deployed Engineers backfilling missing coverage); Implementation Teams in the middle consuming the impact-analyzed specs; the Enablement Layer at the bottom (Accion Labs-supplied: Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers) supporting the custodians under a chosen tier of managed support. At Zone 4 the Engineering Team gains a second custodial role as custodian of the agent fleet. Each layer has its own cadence and its own work. See [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
 
 ## M
 
@@ -113,7 +113,7 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 ## O
 
-**Ontology Maintainer.** An Enablement Layer role (Accion-supplied) responsible for per-ontology stewardship support. Investigates anomalies flagged by the verification checks. Advises on structural changes to a specific ontology layer; the ontology custodian (PO, Architect, UX Designer, or Engineering Team) holds the final say. See [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
+**Ontology Maintainer.** An Enablement Layer role (Accion Labs-supplied) responsible for per-ontology stewardship support. Investigates anomalies flagged by the verification checks. Advises on structural changes to a specific ontology layer; the ontology custodian (PO, Architect, UX Designer, or Engineering Team) holds the final say. See [Layered Team Structure](../process/team.md#layered-team-structure-in-depth).
 
 ## P
 

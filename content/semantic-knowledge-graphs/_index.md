@@ -28,7 +28,7 @@ The combination resolves both. Agents do the heavy lifting on the graph: extract
 
 What the combination produces is a structured, continuously enriched representation of how an enterprise's software thinks, decides, and operates. Over the lifetime of an engagement, the graph becomes inseparable from the business. The intent it captures, the judgment it encodes, the audit trail it maintains, the cross-layer connections it preserves: together these make it irreplaceable. Documents can be rewritten. Code can be rebuilt. A mature knowledge graph cannot be reconstructed without rerunning the years of governed activity that produced it.
 
-The asset deteriorates without ongoing curation. Agents reading and writing into the graph degrade it unless governed. Ontologies drift from operational reality unless refreshed. Audit trails atrophy unless reviewed. The graph needs named, accountable custodians. The four ontology custodians inside the client's team fill that role: the Product Owner for the Functional Ontology, the Architect for the Architecture Ontology, the UX Designer for the Design Ontology, the Engineering Team for the Code Ontology. Accion supports their custodianship through the [Enablement Partnership](../process/enablement-partnership.md), borrowed from managed-services partnerships and trusteeship.
+The asset deteriorates without ongoing curation. Agents reading and writing into the graph degrade it unless governed. Ontologies drift from operational reality unless refreshed. Audit trails atrophy unless reviewed. The graph needs named, accountable custodians. The four ontology custodians inside the client's team fill that role: the Product Owner for the Functional Ontology, the Architect for the Architecture Ontology, the UX Designer for the Design Ontology, the Engineering Team for the Code Ontology. Accion Labs supports their custodianship through the [Enablement Partnership](../process/enablement-partnership.md), borrowed from managed-services partnerships and trusteeship.
 
 ## The Four Custodians and Their Ontologies
 
@@ -89,7 +89,7 @@ The methodology does not remove humans from engineering. It changes the medium o
 
 Humans govern. AI executes. The custodianship discipline gives each role somewhere to put what they know in a form the agent can read.
 
-> **How Accion operationalizes this**
+> **How Accion Labs operationalizes this**
 >
 > The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the four-layer ontology, the brownfield extraction process, the cross-layer validation gate, and the agent fleet. The [ASIMOV platform](../practitioner/asimov.md) is the peer platform that applies the same Semantic Engineering principles to AI-led legacy modernization, with a focused subset of the ontologies and a fully agentic flow.
 

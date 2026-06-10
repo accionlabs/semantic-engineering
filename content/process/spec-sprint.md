@@ -102,9 +102,9 @@ The Spec Sprint team often fractionalizes across two or three workstreams. The P
 
 The two backlogs (spec sprint and implementation sprint) can live in the same platform (Jira, Posthog, or equivalent) with labels or board configurations distinguishing the two. The custodianship discipline is what matters; the tool is the team's existing one.
 
-> **How Accion supports the spec sprint adoption**
+> **How Accion Labs supports the spec sprint adoption**
 >
-> Accion's [Forward-Deployed Engineer program](team.md#forward-deployed-engineers) staffs the spec sprint with the role profile that makes it work. The [two-day deep-dive workshop](../practitioner/_index.md#services) includes a session on diagnosing whether the client's complexity has crossed the threshold where spec sprints become worth the cadence change.
+> Accion Labs's [Forward-Deployed Engineer program](team.md#forward-deployed-engineers) staffs the spec sprint with the role profile that makes it work. The [two-day deep-dive workshop](../practitioner/_index.md#services) includes a session on diagnosing whether the client's complexity has crossed the threshold where spec sprints become worth the cadence change.
 
 ---
 

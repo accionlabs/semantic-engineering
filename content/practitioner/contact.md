@@ -1,6 +1,6 @@
 ---
 title: Contact
-description: Request a workshop, a pricing conversation, or an analyst briefing. The routes to engage with Accion on a Semantic Engineering engagement.
+description: Request a workshop, a pricing conversation, or an analyst briefing. The routes to engage with Accion Labs on a Semantic Engineering engagement.
 weight: 30
 date: 2026-06-04
 lastmod: 2026-06-05
@@ -57,11 +57,11 @@ For analyst briefings, a methodology lead and an engagement team lead will typic
 
 ## What to Expect
 
-For workshop requests, our engagement team will respond with a proposed date, a list of attendees from Accion (typically two: a methodology lead and an engagement lead), and a short pre-workshop questionnaire to focus the agenda.
+For workshop requests, our engagement team will respond with a proposed date, a list of attendees from Accion Labs (typically two: a methodology lead and an engagement lead), and a short pre-workshop questionnaire to focus the agenda.
 
 For pricing inquiries, the response includes an initial scope confirmation and a proposed next conversation (typically a one-hour deep-scoping call before any pricing is shared).
 
-For analyst briefings, the response includes the proposed attendees from Accion, a one-page methodology summary, and a proposed agenda for the briefing.
+For analyst briefings, the response includes the proposed attendees from Accion Labs, a one-page methodology summary, and a proposed agenda for the briefing.
 
 ## Office Locations
 

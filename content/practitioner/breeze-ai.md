@@ -1,6 +1,6 @@
 ---
 title: "Breeze.AI"
-description: "The Accion platform that operationalizes Semantic Engineering for SDLC engagements. The four-layer knowledge graph, the agent fleet that operates on it, the validation gates, and the brownfield extraction process all live here."
+description: "The Accion Labs platform that operationalizes Semantic Engineering for SDLC engagements. The four-layer knowledge graph, the agent fleet that operates on it, the validation gates, and the brownfield extraction process all live here."
 weight: 10
 date: 2026-06-10
 lastmod: 2026-06-10
@@ -44,11 +44,11 @@ Breeze.AI is the production implementation of every methodology element describe
 
 ## Deployment Architecture
 
-![Three Breeze.AI deployment modes: SaaS (Accion-hosted), Client-hosted dedicated, On-premises (Gen AI in a Box), showing where the platform, the graph, and the inference live for each](/diagrams/breeze-deployment-modes.svg)
+![Three Breeze.AI deployment modes: SaaS (Accion Labs-hosted), Client-hosted dedicated, On-premises (Gen AI in a Box), showing where the platform, the graph, and the inference live for each](/diagrams/breeze-deployment-modes.svg)
 
 | Configuration | Where the platform runs | Where the graph lives | Where inference happens |
 |---|---|---|---|
-| SaaS (Accion-hosted) | Accion's managed infrastructure | Accion's managed graph storage | Cloud LLM providers (OpenAI, Anthropic, AWS Bedrock) |
+| SaaS (Accion Labs-hosted) | Accion Labs's managed infrastructure | Accion Labs's managed graph storage | Cloud LLM providers (OpenAI, Anthropic, AWS Bedrock) |
 | Client-hosted dedicated | Client's cloud account (AWS, Azure, GCP) | Client's cloud account | Cloud LLM providers or client-managed |
 | On-premises | Client's on-premises infrastructure | Client's data center | Local models via Gen AI in a Box |
 
@@ -86,7 +86,7 @@ Breeze.AI is in production at multiple client engagements.
 
 ## Engagement Lifecycle
 
-Breeze.AI is licensed as part of the Accion engagement.
+Breeze.AI is licensed as part of the Accion Labs engagement.
 
 | Engagement phase | What is licensed |
 |---|---|

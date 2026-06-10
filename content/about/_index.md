@@ -13,7 +13,7 @@ audience:
   - practitioner
 ---
 
-About the methodology rather than about Accion. The Accion section is [Practitioner](../practitioner/_index.md).
+About the methodology rather than about Accion Labs. The Accion Labs section is [Practitioner](../practitioner/_index.md).
 
 ### What You Will Find Here
 
@@ -26,7 +26,7 @@ About the methodology rather than about Accion. The Accion section is [Practitio
 
 ### What the About Section Is Not
 
-The About section is not Accion's company page. Accion's information lives in [Practitioner > Accion Labs](../practitioner/_index.md#about-accion-labs).
+The About section is not Accion Labs's company page. Accion Labs's information lives in [Practitioner > Accion Labs](../practitioner/_index.md#about-accion-labs).
 
 The About section is also not commercial. Commercial inquiries route to [Practitioner > Contact](../practitioner/contact.md).
 
@@ -48,7 +48,7 @@ The Semantic Engineering methodology and the content on this site are copyright 
 |---|---|
 | The methodology framework (four-layer ontology, agent fleet patterns, custodianship discipline, layered team structure) | Copyright Accion Labs; publicly described on this site; freely reusable in accordance with the fair-use guidance below |
 | The site's specific content (text, diagrams, structural arrangement) | Copyright Accion Labs; reproduction in derivative works requires attribution |
-| Source code in Accion's platforms (Breeze.AI, ASIMOV, ECL, KAPS, SPEX, Semantic KG) | Proprietary; not part of the public methodology |
+| Source code in Accion Labs's platforms (Breeze.AI, ASIMOV, ECL, KAPS, SPEX, Semantic KG) | Proprietary; not part of the public methodology |
 
 ### Trademarks
 
@@ -65,7 +65,7 @@ The trademark policy:
 |---|---|
 | Referring to the methodology by name in analyst reports, academic publications, journalism, and similar editorial contexts | Permitted with no advance permission required, in the same way other named methodologies are referenced |
 | Using "Semantic Engineering" as the name of a derivative methodology, consulting practice, or product | Not permitted without a license |
-| Using "Semantic Engineering" in marketing material that implies official Accion endorsement of a product or service | Not permitted without a license |
+| Using "Semantic Engineering" in marketing material that implies official Accion Labs endorsement of a product or service | Not permitted without a license |
 | Using "SE" as an abbreviation in editorial contexts | Permitted |
 | Translating "Semantic Engineering" into other languages for editorial use | Permitted with attribution to Accion Labs |
 
@@ -75,7 +75,7 @@ In all editorial contexts the term should be capitalized as "Semantic Engineerin
 
 Industry analysts (Gartner, Forrester, IDC, and others) and academic researchers are encouraged to reference, summarize, and critique the methodology in their published work. The following uses are explicitly permitted without advance permission:
 
-- Naming the methodology and Accion as its primary practitioner
+- Naming the methodology and Accion Labs as its primary practitioner
 - Summarizing the four-layer ontology, the agent fleet, the enablement partnership, and other public elements
 - Reproducing the diagrams from this site (mermaid sources are available on request) with attribution
 - Citing specific pages on the site directly
@@ -98,7 +98,7 @@ Academic researchers may freely use the methodology in their work, including:
 - Conducting independent research on the methodology's effectiveness
 - Comparing the methodology to other approaches in published comparative studies
 
-Academic researchers who want to engage Accion for primary-source interviews or access to engagement data should contact `academic@accionlabs.com` (a dedicated address for academic inquiries; see [About > Contact](#contact)).
+Academic researchers who want to engage Accion Labs for primary-source interviews or access to engagement data should contact `academic@accionlabs.com` (a dedicated address for academic inquiries; see [About > Contact](#contact)).
 
 ### Fair-Use Guidance for Practitioners
 
@@ -107,18 +107,18 @@ Independent practitioners (consultants, contractors, in-house engineers) may:
 - Adopt the methodology in their own work
 - Reference the methodology in client proposals and engagement materials
 - Cite specific pages or papers in client communications
-- Contribute patterns, refinements, and case studies through Accion's engagement-team channels
+- Contribute patterns, refinements, and case studies through Accion Labs's engagement-team channels
 
 The following are not permitted without a license:
 
-- Marketing oneself or one's firm as offering "Semantic Engineering" as a branded service in competition with Accion
-- Using the methodology's mark in a way that implies official Accion certification or endorsement
+- Marketing oneself or one's firm as offering "Semantic Engineering" as a branded service in competition with Accion Labs
+- Using the methodology's mark in a way that implies official Accion Labs certification or endorsement
 
 The methodology is intended to be widely practiced. The trademark constraint is narrow and specific to commercial branding.
 
 ### When a License Is Needed
 
-A formal license from Accion is required when:
+A formal license from Accion Labs is required when:
 
 - A firm wants to offer Semantic Engineering as a branded service under their own brand
 - A product wants to use "Semantic Engineering" as part of its name or marketing positioning
@@ -151,7 +151,7 @@ The methodology is governed by an Editorial Board inside Accion Labs.
 |---|---|
 | Editor-in-Chief | Final authority on changes to the spine of the methodology (the seven core sections of this site); arbitrates disputes; signs off on each version |
 | Section Editors | Per-section editorial responsibility; review contributions affecting their section; coordinate with the Editor-in-Chief on changes that affect multiple sections |
-| Custodianship Editor | Specific authority over the Enablement Partnership and its contractual frame; coordinates with Accion's legal function on any change with contractual implications |
+| Custodianship Editor | Specific authority over the Enablement Partnership and its contractual frame; coordinates with Accion Labs's legal function on any change with contractual implications |
 | Methodology Steward | Operational owner of the canon; maintains the change log; coordinates with the Practitioner Community on contributions |
 
 The Editorial Board meets monthly. Changes that affect the spine require Editor-in-Chief sign-off. Changes within a section can be approved by the Section Editor. Contributions from the community route to the Section Editor first.
@@ -183,7 +183,7 @@ Three paths for a practitioner to contribute to the methodology.
 
 | Path | Use case |
 |---|---|
-| Direct contribution | A specific pattern, refinement, or case study; submitted through Accion's engagement-team channels |
+| Direct contribution | A specific pattern, refinement, or case study; submitted through Accion Labs's engagement-team channels |
 | Editorial Board proposal | A spine-level change (renaming a concept, restructuring a section); submitted by writing to `methodology@accionlabs.com` |
 | Industry alignment proposal | A change that aligns the methodology to broader industry vocabulary (e.g., a Snowflake or Palantir terminology shift); submitted as an Editorial Board proposal with the industry context attached |
 
@@ -214,7 +214,7 @@ The Editorial Board's decisions are recorded in the change log with the reasonin
 
 ### Independence From Commercial Pressure
 
-The Editorial Board is structurally separated from Accion's commercial account teams. Editorial decisions are not influenced by client requests, account-level commercial pressure, or sales conversations. The independence is what protects the methodology from drift toward whatever is convenient for the largest client.
+The Editorial Board is structurally separated from Accion Labs's commercial account teams. Editorial decisions are not influenced by client requests, account-level commercial pressure, or sales conversations. The independence is what protects the methodology from drift toward whatever is convenient for the largest client.
 
 This separation is part of the [The Enablement Partnership](../process/enablement-partnership.md) discipline's Duty of Loyalty. The methodology serves practitioners and clients broadly; it does not serve any individual client at the expense of the methodology's integrity.
 

@@ -133,7 +133,7 @@ The hardest part of the Zone 1 to Zone 2 transition is changing the team's habit
 
 Engineering leaders adopting SDD should expect Sprint 1 and Sprint 2 to feel slower than the team's pre-SDD baseline. The improvement starts in Sprint 3 and stabilizes by Sprint 6. The leadership patience to hold the discipline through the first two sprints is what makes the adoption work.
 
-> **How Accion supports the Zone 1 to Zone 2 transition**
+> **How Accion Labs supports the Zone 1 to Zone 2 transition**
 >
 > The [two-day deep-dive workshop](../practitioner/_index.md#services) produces a prioritized SDD adoption plan for the client's active workstreams. The plan includes spec templates, the CI configuration for drift detection, and the spec-review cadence.
 

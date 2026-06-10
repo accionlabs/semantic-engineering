@@ -1,6 +1,6 @@
 ---
 title: AI-led SDLC, powered by Semantic Engineering
-description: How we build AI into enterprise software delivery at Accion. The methodology, the platform, the operating model.
+description: How we build AI into enterprise software delivery at Accion Labs. The methodology, the platform, the operating model.
 weight: 1
 date: 2026-06-04
 lastmod: 2026-06-05
@@ -18,7 +18,7 @@ audience:
   - analyst
 ---
 
-This site documents the methodology we developed at Accion for AI-assisted software delivery, the platform we built to operationalize it, and the operating model we run engagements under.
+This site documents the methodology we developed at Accion Labs for AI-assisted software delivery, the platform we built to operationalize it, and the operating model we run engagements under.
 
 ![Semantic Engineering at a Glance](/diagrams/hero-semantic-engineering-at-a-glance.svg)
 
@@ -44,15 +44,15 @@ We call the methodology Semantic Engineering. The platform we built to operation
 
 Before Gen AI came on the scene, our challenge was to arrive at some standardization and quality control of the critical roles that define the true value of the product - product owners (or business analysts), software architects and experience designers primarily. 
 
-We created a repository of guidelines and templates each role could use, and newer practitioners could be trained against. For product owners it defined persona definitions, outcome specifications, and scenarios. For architects it defined service decompositions, entity definitions, and integration patterns. For UX designers it defined design systems, component libraries, journey maps, and quantitative user metrics. These got ratified and rationalized across multiple product design and development engagements with customers in disparate domains and industries. In 2017, we formalized these guidelines and templates into an internal framework that we called Breeze. The framework has been used for every software engineering engagement of Accion since then. But using it was a lot of manual work. Maintaining the artifacts by hand across hundreds of engagements was the discipline that slipped first under deadline pressure, and we accepted that as a cost of doing business.
+We created a repository of guidelines and templates each role could use, and newer practitioners could be trained against. For product owners it defined persona definitions, outcome specifications, and scenarios. For architects it defined service decompositions, entity definitions, and integration patterns. For UX designers it defined design systems, component libraries, journey maps, and quantitative user metrics. These got ratified and rationalized across multiple product design and development engagements with customers in disparate domains and industries. In 2017, we formalized these guidelines and templates into an internal framework that we called Breeze. The framework has been used for every software engineering engagement of Accion Labs since then. But using it was a lot of manual work. Maintaining the artifacts by hand across hundreds of engagements was the discipline that slipped first under deadline pressure, and we accepted that as a cost of doing business.
 
-Gen AI first came into Accion in Q1 2022, when we were working with a drug discovery application for a pharma leader. What we needed was something better than NLP to parse through extensive text. Transformer models were already available even though Chat GPT was not yet released. They did provide much better context understanding than conventional NLP. But the models were naive and hallucinated extensively, providing decision pathways that did not exist in the validated pharmaceutical research, which made the technology unusable in its early form. We fixed it by building a decision tree of the validated pathways and giving the tree to the model as constrained options, so it could only pick from real pathways rather than invent its own. This methodology did work to provide much better results grounded in the knowledge graph. 
+Gen AI first came into Accion Labs in Q1 2022, when we were working with a drug discovery application for a pharma leader. What we needed was something better than NLP to parse through extensive text. Transformer models were already available even though Chat GPT was not yet released. They did provide much better context understanding than conventional NLP. But the models were naive and hallucinated extensively, providing decision pathways that did not exist in the validated pharmaceutical research, which made the technology unusable in its early form. We fixed it by building a decision tree of the validated pathways and giving the tree to the model as constrained options, so it could only pick from real pathways rather than invent its own. This methodology did work to provide much better results grounded in the knowledge graph. 
 
 As the foundation models became more proficient, we found that grounding them with a knowledge graph continued to provide more reliable results. Meanwhile, as AI started playing a major role in software engineering, we started evaluating how our Breeze guidelines and templates could be converted into the four graph ontologies, and created custom agents that could populate and query the graph. We named this framework after its 2017 ancestor: Breeze.AI.
 
 While brownfield software engineering projects used the Breeze.AI framework and ontologies, we could further optimize the ontologies for a frequent use case in software engineering - fully automated legacy application modernization, where we only modernize the technology but keep functional parity with the legacy application. Considering the number of clients and organizations who were struggling with this problem, we created another set of agents and ontologies for legacy modernization and called it ASIMOV (**A**gentic **S**oftware **I**ntelligence for **M**igration, **O**ptimization & **V**alidation).
 
-At Accion, we have documented and shared  the entire evolution of Semantic Engineering in our Innovation Summit with customers and partners, and are now practicing it across the board with all customer engagements... or to be more precise, with those customers that allow us to do so.
+At Accion Labs, we have documented and shared  the entire evolution of Semantic Engineering in our Innovation Summit with customers and partners, and are now practicing it across the board with all customer engagements... or to be more precise, with those customers that allow us to do so.
 
 The full origin story is in [Origins](about/origins.md).
 

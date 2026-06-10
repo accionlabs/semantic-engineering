@@ -13,7 +13,7 @@ audience:
   - product-owner
 ---
 
-[Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md) covers the structural substrate: the four-layer ontology, the aperture, the three sources of truth, the asset that compounds. This section covers how the substrate gets used in practice. A spec sprint produces well-formed specifications and refreshes the graph. An implementation sprint consumes those specs through a per-change SDLC flow operated by the agent fleet. A layered team runs both. The client's four custodians own the asset; Accion's enablement partnership supports them across years.
+[Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md) covers the structural substrate: the four-layer ontology, the aperture, the three sources of truth, the asset that compounds. This section covers how the substrate gets used in practice. A spec sprint produces well-formed specifications and refreshes the graph. An implementation sprint consumes those specs through a per-change SDLC flow operated by the agent fleet. A layered team runs both. The client's four custodians own the asset; Accion Labs's enablement partnership supports them across years.
 
 The picture this section maps to is [Zone 3](../zones-of-ai-assisted-sdlc/_index.md#zone-3-sdd-plus-semantic-engineering) at single-product scale and [Zone 4](../zones-of-ai-assisted-sdlc/_index.md#zone-4-se-at-scale) at portfolio scale.
 
@@ -50,7 +50,7 @@ The detailed mechanics of each sprint live on its own page. [Spec Sprint](spec-s
 
 The conventional distributed-scrum architecture was the right answer for the work engineers did ten years ago. AI compresses the work the engineer did, and pushes the bottleneck upstream into specification, ontology curation, design system maintenance, and architecture currency. The org structure that delivered the old work does not deliver the new work.
 
-The replacement is a three-layer structure. The top layer is custodianship: the four ontology custodians (Product Owner, Architect, UX Designer, Engineering Team) running the spec sprint and owning the graphs. The middle layer is implementation teams consuming the impact-analyzed specs. The bottom layer is the Enablement Layer (Accion-supplied: Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers) supporting the custodians under a chosen tier of managed support. Each layer has its own cadence. Specialists outside the layers (Agent Developers, Data Architects, UX Architects) engage fractionally at trigger points.
+The replacement is a three-layer structure. The top layer is custodianship: the four ontology custodians (Product Owner, Architect, UX Designer, Engineering Team) running the spec sprint and owning the graphs. The middle layer is implementation teams consuming the impact-analyzed specs. The bottom layer is the Enablement Layer (Accion Labs-supplied: Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers) supporting the custodians under a chosen tier of managed support. Each layer has its own cadence. Specialists outside the layers (Agent Developers, Data Architects, UX Architects) engage fractionally at trigger points.
 
 The full treatment of the layered structure, the fractional allocation model that staffs it, the Forward-Deployed Engineer role, and the commercial evolution that pairs with the operating-model shift is in [Team](team.md).
 
@@ -58,11 +58,11 @@ The full treatment of the layered structure, the fractional allocation model tha
 
 Zone 3 is single-product Semantic Engineering: one knowledge graph, one product, the per-change SDLC flow operated by the agent fleet, the spec sprint workshop running ahead of the implementation sprint. Most enterprise teams that adopt SE stabilize here for several quarters.
 
-Zone 4 is the operating mode at portfolio scale. Multiple products operate under their own knowledge graphs. Cross-product reasoning happens through the Cross-Product Impact Extension and the Portfolio Rationalization Agent (both in the [agent fleet](../the-agents.md)). The client's four custodians continue to own the four ontologies; the Engineering Team's custodianship expands to include the agent fleet. Accion's [enablement partnership](enablement-partnership.md) supports the custodians under codified engagement principles. The developer moves upstream from the per-change loop into custodianship of the agent fleet. The agents run the loop.
+Zone 4 is the operating mode at portfolio scale. Multiple products operate under their own knowledge graphs. Cross-product reasoning happens through the Cross-Product Impact Extension and the Portfolio Rationalization Agent (both in the [agent fleet](../the-agents.md)). The client's four custodians continue to own the four ontologies; the Engineering Team's custodianship expands to include the agent fleet. Accion Labs's [enablement partnership](enablement-partnership.md) supports the custodians under codified engagement principles. The developer moves upstream from the per-change loop into custodianship of the agent fleet. The agents run the loop.
 
-[The Enablement Partnership](enablement-partnership.md) is the engagement frame for Accion's role beneath the custodianship and implementation layers. It is what makes the long-term engagement work for both the enabling partner and the enterprise that owns the asset.
+[The Enablement Partnership](enablement-partnership.md) is the engagement frame for Accion Labs's role beneath the custodianship and implementation layers. It is what makes the long-term engagement work for both the enabling partner and the enterprise that owns the asset.
 
-> **How Accion operationalizes the process**
+> **How Accion Labs operationalizes the process**
 >
 > The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the per-change SDLC flow, the four-ontology validation gate, and the agent fleet. The [ASIMOV platform](../practitioner/asimov.md) is the peer platform that applies the same Semantic Engineering principles to AI-led legacy modernization, with a focused subset of the ontologies and a fully agentic flow. The [engagement model](../practitioner/_index.md#engagement-model) staffs the operating model across Advise, Launch, Scale, and Optimize phases.
 

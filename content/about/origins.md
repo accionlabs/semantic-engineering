@@ -20,7 +20,7 @@ This page tells the story.
 
 ## The 2017 Framework: Breeze
 
-Accion's engineering leadership in 2017 was tackling a recurring problem. The firm was scaling rapidly. The quality of architects, product owners, and UX designers across engagements was uneven. The firm needed a way to codify what good practice looked like for each of these roles so that newer hires could be trained against the standard.
+Accion Labs's engineering leadership in 2017 was tackling a recurring problem. The firm was scaling rapidly. The quality of architects, product owners, and UX designers across engagements was uneven. The firm needed a way to codify what good practice looked like for each of these roles so that newer hires could be trained against the standard.
 
 The framework was called Breeze. It articulated, for each role, the minimum set of artifacts and decisions a practitioner needed to be able to produce. For product owners, this meant persona definitions, outcome specifications, and scenario walkthroughs. For architects, it meant service decompositions, entity definitions, and integration patterns. For UX designers, it meant component libraries, journey maps, and quantitative user metrics that went beyond conventional satisfaction surveys.
 
@@ -30,7 +30,7 @@ Breeze taught the firm what the minimal governance structure looked like for eac
 
 ## The 2022 Discovery: Drug Discovery and Hallucination
 
-Five years after Breeze was published, a small Accion team started the firm's first GenAI project. The project began in Q1 2022 and deployed to production in Q3 2022. The use case was drug discovery for a pharma leader. ChatGPT was still ten months away. The team chose a transformer model because conventional NLP could not handle the language of pharmaceutical research.
+Five years after Breeze was published, a small Accion Labs team started the firm's first GenAI project. The project began in Q1 2022 and deployed to production in Q3 2022. The use case was drug discovery for a pharma leader. ChatGPT was still ten months away. The team chose a transformer model because conventional NLP could not handle the language of pharmaceutical research.
 
 The model hallucinated so badly during development that the application would have been useless without intervention. Instead of finding plausible pathways in the validated decision architecture the researchers needed, the model invented its own. The output was confident and wrong, which is the most expensive kind of wrong.
 

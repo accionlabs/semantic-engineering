@@ -76,7 +76,7 @@ The implementation sprint does not make architecture decisions. Architecture dec
 
 The implementation sprint does not govern the knowledge graph. Graph governance is the enablement team's responsibility. The implementation sprint surfaces findings through PR validation failures and the merge events that trigger KG sync; the enablement team acts on the patterns.
 
-> **How Accion operationalizes the implementation sprint**
+> **How Accion Labs operationalizes the implementation sprint**
 >
 > The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the Impact Analysis, Coding, Test Generation, PR Validation, and KG Sync agents that operate the per-change SDLC flow. The [engagement model](../practitioner/_index.md#engagement-model) staffs the implementation team and the Zone 4 custodial role evolution.
 

@@ -34,9 +34,9 @@ At that operating mode (Zone 4 in [Zones of AI-Assisted SDLC](zones-of-ai-assist
 
 The methodology is rolled out faster than the operating model. The operating model is what unlocks the aspirational endpoint. [The Team](process/team.md) covers that side.
 
-> **How Accion operationalizes the agent fleet**
+> **How Accion Labs operationalizes the agent fleet**
 >
-> The [Breeze.AI platform](practitioner/breeze-ai.md) implements the agent fleet described in this section. Each agent in production has a named human owner from Accion's engagement team.
+> The [Breeze.AI platform](practitioner/breeze-ai.md) implements the agent fleet described in this section. Each agent in production has a named human owner from Accion Labs's engagement team.
 
 ## Agent Fleet Topology
 
@@ -269,7 +269,7 @@ The spec sprint becomes the primary risk-management surface. Since pre-implement
 
 Senior engineers spend their time on judgment, not context assembly. The senior engineer's most valuable contribution is the judgment they bring to ambiguous decisions. The methodology takes the context-assembly work off their plate and lets them spend their time where it counts.
 
-> **How Accion operationalizes the Impact Analysis Agent**
+> **How Accion Labs operationalizes the Impact Analysis Agent**
 >
 > The [Breeze.AI platform](practitioner/breeze-ai.md) runs the Impact Analysis Agent in both pre and post implementation modes against the four-layer knowledge graph. For cross-product changes, the Cross-Product Impact Extension consults multiple product graphs in sequence. See [Partition by Product](semantic-knowledge-graphs/four-layer-ontology.md#partition-by-product).
 
@@ -336,7 +336,7 @@ A team adopting the PR Validation Agent will experience friction in the first fe
 
 The cost of a single production incident traceable to a structural violation typically exceeds the cumulative friction of all the PR gate blocks for the same class of violation over a year. The gate is paying for itself with the first incident it prevents.
 
-> **How Accion operationalizes the PR Validation Agent**
+> **How Accion Labs operationalizes the PR Validation Agent**
 >
 > The [Breeze.AI platform](practitioner/breeze-ai.md) runs the PR Validation Agent in the client's CI/CD pipeline. The agent's configuration is owned by the workstream's Tech Lead. The override audit trail is reviewed by the engagement's Chief Architect on a quarterly cadence.
 
@@ -419,7 +419,7 @@ The BDD Generation Agent is most valuable for functional behavior. It is less va
 
 For non-functional testing, the team continues to use the same patterns they use today: load testing tools for performance, security scanning tools for security, chaos engineering for reliability. The BDD Generation Agent handles the functional coverage. The team handles the non-functional coverage. The combination produces a fuller test posture than either alone.
 
-> **How Accion operationalizes the BDD Generation Agent**
+> **How Accion Labs operationalizes the BDD Generation Agent**
 >
 > The [Breeze.AI platform](practitioner/breeze-ai.md) runs the BDD Generation Agent against the client's Functional Ontology. Generated scenarios are committed to the test suite repository with the Tech Lead as the named approver for diffs.
 
@@ -495,9 +495,9 @@ Two failure modes we handle explicitly.
 
 Sync falling behind is rare in practice. Per-merge sync on a 1.6M LOC application typically completes in seconds. The capacity ceiling has not been hit in production engagements.
 
-> **How Accion operationalizes the KG Sync Agent**
+> **How Accion Labs operationalizes the KG Sync Agent**
 >
-> The [Breeze.AI platform](practitioner/breeze-ai.md) runs the KG Sync Agent as part of the client's CI/CD pipeline. Sync is triggered automatically on every merge to master. The Ontology Maintainer from the Accion engagement team owns the agent's operational health.
+> The [Breeze.AI platform](practitioner/breeze-ai.md) runs the KG Sync Agent as part of the client's CI/CD pipeline. Sync is triggered automatically on every merge to master. The Ontology Maintainer from the Accion Labs engagement team owns the agent's operational health.
 
 ## Progressive Autonomy
 
@@ -585,7 +585,7 @@ In practice, different agents in the fleet operate at different levels.
 
 The levels shift over time as evidence accumulates. The promotion path for each agent class is owned by the Chief Architect.
 
-> **How Accion operationalizes progressive autonomy**
+> **How Accion Labs operationalizes progressive autonomy**
 >
 > The [Breeze.AI platform](practitioner/breeze-ai.md) implements the five autonomy levels and the Promotion Agreement workflow. The Engagement Council reviews promotion decisions on a quarterly cadence as part of the [enablement engagement](process/enablement-partnership.md).
 
