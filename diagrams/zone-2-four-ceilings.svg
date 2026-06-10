@@ -1,0 +1,131 @@
+<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" width="1400" height="900" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .ceil { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 20px; font-weight: 700; fill: #E94E1B; }
+      .ceilSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #111111; }
+      .iblk { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #111111; }
+      .iblkSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #4b5563; }
+      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-style: italic; fill: #4b5563; }
+      .footer { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-style: italic; fill: #E94E1B; font-weight: 600; }
+    </style>
+  </defs>
+
+  <text x="700" y="45" text-anchor="middle" class="h1">The Four SDD Ceilings</text>
+  <text x="700" y="72" text-anchor="middle" class="sub">SDD raises the floor of AI-assisted engineering. It hits four ceilings at enterprise scale.</text>
+
+  <rect x="40" y="110" width="650" height="370" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="365" y="148" text-anchor="middle" class="ceil">Localized context</text>
+  <text x="365" y="175" text-anchor="middle" class="ceilSub">The spec is local to one team's view. Cross-team contracts are invisible.</text>
+
+  <rect x="75" y="200" width="280" height="100" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="215" y="225" text-anchor="middle" class="iblk">Team A spec</text>
+  <text x="215" y="248" text-anchor="middle" class="iblkSub">alert-frequency feature</text>
+  <text x="215" y="265" text-anchor="middle" class="iblkSub">approved by team A tech lead</text>
+  <text x="215" y="285" text-anchor="middle" class="iblkSub">writes to notification-preferences table</text>
+
+  <rect x="375" y="200" width="280" height="100" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="515" y="225" text-anchor="middle" class="iblk">Team B migration (parallel)</text>
+  <text x="515" y="248" text-anchor="middle" class="iblkSub">refactoring the same table</text>
+  <text x="515" y="265" text-anchor="middle" class="iblkSub">dropping 2 columns team A needs</text>
+  <text x="515" y="285" text-anchor="middle" class="iblkSub">team A PO never saw the migration</text>
+
+  <path d="M 215 305 L 365 360" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 515 305 L 365 360" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="125" y="370" width="480" height="90" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="365" y="397" text-anchor="middle" class="iblk" fill="#9ca3af">Both PRs merge in the same week</text>
+  <text x="365" y="420" text-anchor="middle" class="iblkSub">integration breaks Friday afternoon</text>
+  <text x="365" y="438" text-anchor="middle" class="iblkSub">production hotfix takes the weekend</text>
+  <text x="365" y="455" text-anchor="middle" class="ital">no place in SDD for either architect to look across boundary</text>
+
+  <rect x="710" y="110" width="650" height="370" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="1035" y="148" text-anchor="middle" class="ceil">Spec drift</text>
+  <text x="1035" y="175" text-anchor="middle" class="ceilSub">The custodians update their slices. No structural link maintains the connection.</text>
+
+  <line x1="780" y1="240" x2="1290" y2="240" stroke="#4b5563" stroke-width="2"/>
+  <line x1="780" y1="235" x2="780" y2="245" stroke="#4b5563" stroke-width="2"/>
+  <line x1="930" y1="235" x2="930" y2="245" stroke="#4b5563" stroke-width="2"/>
+  <line x1="1140" y1="235" x2="1140" y2="245" stroke="#4b5563" stroke-width="2"/>
+  <line x1="1290" y1="235" x2="1290" y2="245" stroke="#4b5563" stroke-width="2"/>
+
+  <text x="780" y="223" text-anchor="middle" class="iblk">Sprint 3</text>
+  <text x="930" y="223" text-anchor="middle" class="iblk">Sprint 5</text>
+  <text x="1140" y="223" text-anchor="middle" class="iblk">Sprint 8</text>
+  <text x="1290" y="223" text-anchor="middle" class="iblk">Sprint 11</text>
+
+  <rect x="750" y="260" width="270" height="80" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="885" y="285" text-anchor="middle" class="iblk">PO spec written</text>
+  <text x="885" y="303" text-anchor="middle" class="iblkSub">assumes alert prefs live in</text>
+  <text x="885" y="320" text-anchor="middle" class="iblkSub">saved-search service</text>
+
+  <path d="M 1020 300 L 1050 300" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="1055" y="260" width="270" height="80" rx="8" ry="8" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="1190" y="285" text-anchor="middle" class="iblk">Architect refactor</text>
+  <text x="1190" y="303" text-anchor="middle" class="iblkSub">moves alert prefs to notification</text>
+  <text x="1190" y="320" text-anchor="middle" class="iblkSub">service; wiki updated, spec not</text>
+
+  <path d="M 1190 340 L 1190 380" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <rect x="850" y="385" width="370" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="1035" y="412" text-anchor="middle" class="iblk" fill="#9ca3af">New spec in Sprint 8 reads old spec</text>
+  <text x="1035" y="430" text-anchor="middle" class="iblkSub">repeats the saved-search assumption</text>
+  <text x="1035" y="448" text-anchor="middle" class="iblkSub">writes to a table notification reads but never writes back</text>
+
+  <rect x="40" y="500" width="650" height="370" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="365" y="538" text-anchor="middle" class="ceil">Single-layer coverage</text>
+  <text x="365" y="565" text-anchor="middle" class="ceilSub">SDD captures the PO's intent. Architecture and design are invisible.</text>
+
+  <rect x="75" y="590" width="280" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="215" y="615" text-anchor="middle" class="iblk">Spec: "configuration form"</text>
+  <text x="215" y="635" text-anchor="middle" class="iblkSub">for daily / weekly / off frequency</text>
+  <text x="215" y="652" text-anchor="middle" class="iblkSub">acceptance criteria + scope</text>
+
+  <path d="M 215 670 L 215 705" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="75" y="710" width="280" height="80" rx="10" ry="10" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <text x="215" y="735" text-anchor="middle" class="iblk">Agent picks Dropdown</text>
+  <text x="215" y="755" text-anchor="middle" class="iblkSub">most common in training data,</text>
+  <text x="215" y="772" text-anchor="middle" class="iblkSub">inline labels, saved-search service</text>
+
+  <rect x="375" y="590" width="280" height="190" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="515" y="615" text-anchor="middle" class="iblk" fill="#9ca3af">Should have been SegmentedControl</text>
+  <text x="515" y="640" text-anchor="middle" class="iblkSub">per the Design Ontology rule:</text>
+  <text x="515" y="657" text-anchor="middle" class="iblkSub">"3 mutually-exclusive choices,</text>
+  <text x="515" y="674" text-anchor="middle" class="iblkSub">equal weight: SegmentedControl"</text>
+  <text x="515" y="710" text-anchor="middle" class="iblkSub">Should have routed via notification</text>
+  <text x="515" y="727" text-anchor="middle" class="iblkSub">service per the Architecture Ontology.</text>
+  <text x="515" y="760" text-anchor="middle" class="ital">designer + architect noticed too late</text>
+
+  <rect x="710" y="500" width="650" height="370" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="1035" y="538" text-anchor="middle" class="ceil">Specs become the bottleneck</text>
+  <text x="1035" y="565" text-anchor="middle" class="ceilSub">Make specs richer. Senior people drown in review. Engineers wait.</text>
+
+  <rect x="750" y="590" width="200" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="850" y="618" text-anchor="middle" class="iblk">PO writes spec</text>
+  <text x="850" y="640" text-anchor="middle" class="iblkSub">at the rate she can</text>
+  <text x="850" y="657" text-anchor="middle" class="iblkSub">think them through</text>
+
+  <rect x="975" y="590" width="200" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="1075" y="618" text-anchor="middle" class="iblk">Architect reviews</text>
+  <text x="1075" y="640" text-anchor="middle" class="iblkSub">at the rate she has</text>
+  <text x="1075" y="657" text-anchor="middle" class="iblkSub">free time (not much)</text>
+
+  <rect x="1200" y="590" width="135" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="1267" y="618" text-anchor="middle" class="iblk">Designer</text>
+  <text x="1267" y="640" text-anchor="middle" class="iblkSub">same boat</text>
+  <text x="1267" y="657" text-anchor="middle" class="iblkSub">as architect</text>
+
+  <path d="M 850 670 L 1042 705" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <path d="M 1075 670 L 1042 705" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <path d="M 1267 670 L 1042 705" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+
+  <rect x="800" y="710" width="490" height="100" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="1045" y="735" text-anchor="middle" class="iblk" fill="#9ca3af">Senior people in review meetings all week</text>
+  <text x="1045" y="758" text-anchor="middle" class="iblkSub">Implementation engineers wait for input</text>
+  <text x="1045" y="775" text-anchor="middle" class="iblkSub">Bottleneck moves from typing to thinking</text>
+  <text x="1045" y="797" text-anchor="middle" class="ital">operating model is not configured to absorb the shift</text>
+</svg>

@@ -1,0 +1,140 @@
+<svg viewBox="0 0 1400 620" xmlns="http://www.w3.org/2000/svg" width="1400" height="620" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .head { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; font-weight: 700; fill: #111111; }
+      .row { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #111111; }
+      .cell { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; }
+      .status { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; }
+      .legend { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; }
+      .legendLabel { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #111111; }
+    </style>
+  </defs>
+
+  <text x="700" y="45" text-anchor="middle" class="h1">How Each Zone Addresses the Three Components</text>
+  <text x="700" y="72" text-anchor="middle" class="sub">Each component independently gets unchanged · partial · addressed · sustained as the work moves up the zones.</text>
+
+  <rect x="60" y="100" width="220" height="60" rx="6" ry="6" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="170" y="138" text-anchor="middle" class="head">Manual Translation Tax</text>
+
+  <rect x="285" y="100" width="270" height="60" rx="6" ry="6" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="420" y="125" text-anchor="middle" class="head">Zone 1</text>
+  <text x="420" y="148" text-anchor="middle" class="cell">Manual / Vibe Coding</text>
+
+  <rect x="560" y="100" width="270" height="60" rx="6" ry="6" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="695" y="125" text-anchor="middle" class="head">Zone 2</text>
+  <text x="695" y="148" text-anchor="middle" class="cell">SDD</text>
+
+  <rect x="835" y="100" width="270" height="60" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="970" y="125" text-anchor="middle" class="head">Zone 3</text>
+  <text x="970" y="148" text-anchor="middle" class="cell">SDD + SE</text>
+
+  <rect x="1110" y="100" width="270" height="60" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="1245" y="125" text-anchor="middle" class="head">Zone 4</text>
+  <text x="1245" y="148" text-anchor="middle" class="cell">SE at Scale</text>
+
+  <rect x="60" y="170" width="220" height="120" rx="6" ry="6" fill="#fafafa" stroke="#4b5563" stroke-width="1.2"/>
+  <text x="170" y="220" text-anchor="middle" class="row">Ambiguity</text>
+  <text x="170" y="248" text-anchor="middle" class="cell">"let users save"</text>
+  <text x="170" y="266" text-anchor="middle" class="cell">three different impls</text>
+
+  <rect x="285" y="170" width="270" height="120" rx="6" ry="6" fill="#f5f5f5" stroke="#4b5563" stroke-width="1"/>
+  <text x="420" y="195" text-anchor="middle" class="status" fill="#9ca3af">UNCHANGED</text>
+  <text x="420" y="225" text-anchor="middle" class="cell">amplified by AI velocity;</text>
+  <text x="420" y="245" text-anchor="middle" class="cell">same five-word phrase</text>
+  <text x="420" y="263" text-anchor="middle" class="cell">produces different code</text>
+  <text x="420" y="281" text-anchor="middle" class="cell">on different days</text>
+
+  <rect x="560" y="170" width="270" height="120" rx="6" ry="6" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <text x="695" y="195" text-anchor="middle" class="status" fill="#4b5563">PARTIAL</text>
+  <text x="695" y="225" text-anchor="middle" class="cell">written intent contract</text>
+  <text x="695" y="245" text-anchor="middle" class="cell">reduces ambiguity</text>
+  <text x="695" y="263" text-anchor="middle" class="cell">at the product owner</text>
+  <text x="695" y="281" text-anchor="middle" class="cell">layer only</text>
+
+  <rect x="835" y="170" width="270" height="120" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="970" y="195" text-anchor="middle" class="status" fill="#E94E1B">ADDRESSED</text>
+  <text x="970" y="225" text-anchor="middle" class="cell">structured ontology per</text>
+  <text x="970" y="245" text-anchor="middle" class="cell">custodian; agent reads</text>
+  <text x="970" y="263" text-anchor="middle" class="cell">the same definition every</text>
+  <text x="970" y="281" text-anchor="middle" class="cell">team uses</text>
+
+  <rect x="1110" y="170" width="270" height="120" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="1245" y="195" text-anchor="middle" class="status" fill="#E94E1B">SUSTAINED</text>
+  <text x="1245" y="225" text-anchor="middle" class="cell">across multiple products</text>
+  <text x="1245" y="245" text-anchor="middle" class="cell">and teams; cross-product</text>
+  <text x="1245" y="263" text-anchor="middle" class="cell">ontology federation</text>
+  <text x="1245" y="281" text-anchor="middle" class="cell">resolves cross-domain terms</text>
+
+  <rect x="60" y="300" width="220" height="120" rx="6" ry="6" fill="#fafafa" stroke="#4b5563" stroke-width="1.2"/>
+  <text x="170" y="350" text-anchor="middle" class="row">Non-persistence</text>
+  <text x="170" y="378" text-anchor="middle" class="cell">senior eng departs,</text>
+  <text x="170" y="396" text-anchor="middle" class="cell">workaround dies</text>
+
+  <rect x="285" y="300" width="270" height="120" rx="6" ry="6" fill="#f5f5f5" stroke="#4b5563" stroke-width="1"/>
+  <text x="420" y="325" text-anchor="middle" class="status" fill="#9ca3af">UNCHANGED</text>
+  <text x="420" y="355" text-anchor="middle" class="cell">humans forget,</text>
+  <text x="420" y="375" text-anchor="middle" class="cell">agent sessions</text>
+  <text x="420" y="393" text-anchor="middle" class="cell">reset every time</text>
+
+  <rect x="560" y="300" width="270" height="120" rx="6" ry="6" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <text x="695" y="325" text-anchor="middle" class="status" fill="#4b5563">PARTIAL</text>
+  <text x="695" y="355" text-anchor="middle" class="cell">specs persist alongside</text>
+  <text x="695" y="375" text-anchor="middle" class="cell">code but decay under</text>
+  <text x="695" y="393" text-anchor="middle" class="cell">deadline pressure</text>
+
+  <rect x="835" y="300" width="270" height="120" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="970" y="325" text-anchor="middle" class="status" fill="#E94E1B">ADDRESSED</text>
+  <text x="970" y="355" text-anchor="middle" class="cell">graph compounds with</text>
+  <text x="970" y="375" text-anchor="middle" class="cell">every change; KG Sync</text>
+  <text x="970" y="393" text-anchor="middle" class="cell">auto-updates the Code</text>
+  <text x="970" y="411" text-anchor="middle" class="cell">Ontology on every merge</text>
+
+  <rect x="1110" y="300" width="270" height="120" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="1245" y="325" text-anchor="middle" class="status" fill="#E94E1B">SUSTAINED</text>
+  <text x="1245" y="355" text-anchor="middle" class="cell">across multiple products</text>
+  <text x="1245" y="375" text-anchor="middle" class="cell">via cross-product</text>
+  <text x="1245" y="393" text-anchor="middle" class="cell">extensions; custodianship</text>
+  <text x="1245" y="411" text-anchor="middle" class="cell">discipline holds the asset</text>
+
+  <rect x="60" y="430" width="220" height="120" rx="6" ry="6" fill="#fafafa" stroke="#4b5563" stroke-width="1.2"/>
+  <text x="170" y="480" text-anchor="middle" class="row">Non-traceability</text>
+  <text x="170" y="508" text-anchor="middle" class="cell">spec → code → bug,</text>
+  <text x="170" y="526" text-anchor="middle" class="cell">no link</text>
+
+  <rect x="285" y="430" width="270" height="120" rx="6" ry="6" fill="#f5f5f5" stroke="#4b5563" stroke-width="1"/>
+  <text x="420" y="455" text-anchor="middle" class="status" fill="#9ca3af">UNCHANGED</text>
+  <text x="420" y="485" text-anchor="middle" class="cell">no structural link from</text>
+  <text x="420" y="505" text-anchor="middle" class="cell">prompt to commit</text>
+  <text x="420" y="523" text-anchor="middle" class="cell">to incident</text>
+
+  <rect x="560" y="430" width="270" height="120" rx="6" ry="6" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <text x="695" y="455" text-anchor="middle" class="status" fill="#4b5563">PARTIAL</text>
+  <text x="695" y="485" text-anchor="middle" class="cell">spec-to-commit traceability</text>
+  <text x="695" y="505" text-anchor="middle" class="cell">instrumented at the</text>
+  <text x="695" y="523" text-anchor="middle" class="cell">ticket system level</text>
+
+  <rect x="835" y="430" width="270" height="120" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="970" y="455" text-anchor="middle" class="status" fill="#E94E1B">ADDRESSED</text>
+  <text x="970" y="485" text-anchor="middle" class="cell">cross-layer graph links</text>
+  <text x="970" y="505" text-anchor="middle" class="cell">every functional outcome</text>
+  <text x="970" y="523" text-anchor="middle" class="cell">to design components,</text>
+  <text x="970" y="541" text-anchor="middle" class="cell">architecture, and code</text>
+
+  <rect x="1110" y="430" width="270" height="120" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="1245" y="455" text-anchor="middle" class="status" fill="#E94E1B">SUSTAINED</text>
+  <text x="1245" y="485" text-anchor="middle" class="cell">across products;</text>
+  <text x="1245" y="505" text-anchor="middle" class="cell">cross-product impact</text>
+  <text x="1245" y="523" text-anchor="middle" class="cell">analysis follows the</text>
+  <text x="1245" y="541" text-anchor="middle" class="cell">same model</text>
+
+  <rect x="60" y="575" width="170" height="32" rx="6" ry="6" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1"/>
+  <text x="80" y="595" class="legendLabel">UNCHANGED</text>
+  <rect x="245" y="575" width="170" height="32" rx="6" ry="6" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <text x="270" y="595" class="legendLabel">PARTIAL</text>
+  <rect x="430" y="575" width="170" height="32" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="450" y="595" class="legendLabel" fill="#E94E1B">ADDRESSED</text>
+  <rect x="615" y="575" width="170" height="32" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="640" y="595" class="legendLabel" fill="#E94E1B">SUSTAINED</text>
+</svg>

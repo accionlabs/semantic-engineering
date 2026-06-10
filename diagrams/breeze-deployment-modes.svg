@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" width="1400" height="760" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1400" height="760" style="fill:#ffffff"/>
+
+  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">Breeze.AI Deployment Modes</text>
+  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">Three deployment configurations let the client choose where the platform, the graph, and the inference live.</text>
+
+  <!-- Header row labels -->
+  <g transform="translate(40,120)">
+    <rect x="280" y="0" width="280" height="40" rx="8" ry="8" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
+    <text x="420" y="26" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">PLATFORM RUNS</text>
+    <rect x="580" y="0" width="280" height="40" rx="8" ry="8" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
+    <text x="720" y="26" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">GRAPH LIVES</text>
+    <rect x="880" y="0" width="280" height="40" rx="8" ry="8" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
+    <text x="1020" y="26" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">INFERENCE HAPPENS</text>
+  </g>
+
+  <!-- Row 1: SaaS -->
+  <g transform="translate(40,182)">
+    <rect x="0" y="0" width="260" height="140" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="130" y="34" text-anchor="middle" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#111111">SaaS</text>
+    <text x="130" y="58" text-anchor="middle" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Accion-hosted</text>
+    <text x="130" y="96" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Lowest setup overhead.</text>
+    <text x="130" y="114" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Right default for most</text>
+    <text x="130" y="132" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">engagements.</text>
+
+    <g transform="translate(280,0)">
+      <rect x="0" y="0" width="280" height="140" rx="12" ry="12" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Accion's managed</text>
+      <text x="140" y="54" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">infrastructure</text>
+      <g transform="translate(115,76)">
+        <rect x="0" y="0" width="50" height="46" rx="6" ry="6" style="fill:#4b5563"/>
+        <text x="25" y="29" text-anchor="middle" style="font:700 11px Segoe UI,system-ui,sans-serif;fill:#ffffff">cloud</text>
+      </g>
+    </g>
+
+    <g transform="translate(580,0)">
+      <rect x="0" y="0" width="280" height="140" rx="12" ry="12" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Accion's managed</text>
+      <text x="140" y="54" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">graph storage</text>
+      <g transform="translate(115,76)">
+        <rect x="0" y="0" width="50" height="46" rx="6" ry="6" style="fill:#4b5563"/>
+        <text x="25" y="22" text-anchor="middle" style="font:700 10px Segoe UI,system-ui,sans-serif;fill:#ffffff">graph</text>
+        <text x="25" y="36" text-anchor="middle" style="font:700 10px Segoe UI,system-ui,sans-serif;fill:#ffffff">db</text>
+      </g>
+    </g>
+
+    <g transform="translate(880,0)">
+      <rect x="0" y="0" width="280" height="140" rx="12" ry="12" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Cloud LLM providers</text>
+      <text x="140" y="60" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">OpenAI · Anthropic · AWS Bedrock</text>
+      <g transform="translate(102,80)">
+        <rect x="0" y="0" width="76" height="46" rx="6" ry="6" style="fill:#4b5563"/>
+        <text x="38" y="28" text-anchor="middle" style="font:700 11px Segoe UI,system-ui,sans-serif;fill:#ffffff">LLM API</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Row 2: Client-hosted -->
+  <g transform="translate(40,346)">
+    <rect x="0" y="0" width="260" height="140" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="130" y="34" text-anchor="middle" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#111111">Client-hosted</text>
+    <text x="130" y="58" text-anchor="middle" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#4b5563">dedicated tenancy</text>
+    <text x="130" y="96" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">For clients with data</text>
+    <text x="130" y="114" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">sovereignty or contractual</text>
+    <text x="130" y="132" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">constraints.</text>
+
+    <g transform="translate(280,0)">
+      <rect x="0" y="0" width="280" height="140" rx="12" ry="12" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Client's cloud account</text>
+      <text x="140" y="58" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">AWS · Azure · GCP</text>
+      <g transform="translate(115,76)">
+        <rect x="0" y="0" width="50" height="46" rx="6" ry="6" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+        <text x="25" y="29" text-anchor="middle" style="font:700 11px Segoe UI,system-ui,sans-serif;fill:#E94E1B">cloud</text>
+      </g>
+    </g>
+
+    <g transform="translate(580,0)">
+      <rect x="0" y="0" width="280" height="140" rx="12" ry="12" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Client's cloud account</text>
+      <text x="140" y="58" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">dedicated tenancy</text>
+      <g transform="translate(115,76)">
+        <rect x="0" y="0" width="50" height="46" rx="6" ry="6" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+        <text x="25" y="22" text-anchor="middle" style="font:700 10px Segoe UI,system-ui,sans-serif;fill:#E94E1B">graph</text>
+        <text x="25" y="36" text-anchor="middle" style="font:700 10px Segoe UI,system-ui,sans-serif;fill:#E94E1B">db</text>
+      </g>
+    </g>
+
+    <g transform="translate(880,0)">
+      <rect x="0" y="0" width="280" height="140" rx="12" ry="12" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Cloud LLM providers</text>
+      <text x="140" y="58" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">or client-managed inference</text>
+      <g transform="translate(102,80)">
+        <rect x="0" y="0" width="76" height="46" rx="6" ry="6" style="fill:#4b5563"/>
+        <text x="38" y="28" text-anchor="middle" style="font:700 11px Segoe UI,system-ui,sans-serif;fill:#ffffff">LLM API</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Row 3: On-premises -->
+  <g transform="translate(40,510)">
+    <rect x="0" y="0" width="260" height="160" rx="12" ry="12" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+    <text x="130" y="34" text-anchor="middle" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#111111">On-premises</text>
+    <text x="130" y="58" text-anchor="middle" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Gen AI in a Box</text>
+    <text x="130" y="92" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">For highly regulated industries</text>
+    <text x="130" y="110" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">(defense, finance, gov) where</text>
+    <text x="130" y="128" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">the inference must remain inside</text>
+    <text x="130" y="146" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">the client's infrastructure.</text>
+
+    <g transform="translate(280,0)">
+      <rect x="0" y="0" width="280" height="160" rx="12" ry="12" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Client's on-premises</text>
+      <text x="140" y="54" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">infrastructure</text>
+      <g transform="translate(115,82)">
+        <rect x="0" y="0" width="50" height="46" rx="6" ry="6" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+        <text x="25" y="29" text-anchor="middle" style="font:700 11px Segoe UI,system-ui,sans-serif;fill:#E94E1B">on-prem</text>
+      </g>
+    </g>
+
+    <g transform="translate(580,0)">
+      <rect x="0" y="0" width="280" height="160" rx="12" ry="12" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Client's data center</text>
+      <g transform="translate(115,82)">
+        <rect x="0" y="0" width="50" height="46" rx="6" ry="6" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+        <text x="25" y="22" text-anchor="middle" style="font:700 10px Segoe UI,system-ui,sans-serif;fill:#E94E1B">graph</text>
+        <text x="25" y="36" text-anchor="middle" style="font:700 10px Segoe UI,system-ui,sans-serif;fill:#E94E1B">db</text>
+      </g>
+    </g>
+
+    <g transform="translate(880,0)">
+      <rect x="0" y="0" width="280" height="160" rx="12" ry="12" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Local models via</text>
+      <text x="140" y="54" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Gen AI in a Box</text>
+      <g transform="translate(102,82)">
+        <rect x="0" y="0" width="76" height="46" rx="6" ry="6" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+        <text x="38" y="28" text-anchor="middle" style="font:700 11px Segoe UI,system-ui,sans-serif;fill:#E94E1B">local LLM</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Footer -->
+  <text x="700" y="710" text-anchor="middle" style="font:italic 14px Segoe UI,system-ui,sans-serif;fill:#4b5563">The deployment decision is made during the Advise phase based on data sovereignty, compliance, integration, and cost structure.</text>
+</svg>

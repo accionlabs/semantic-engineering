@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 880" width="1400" height="880" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="arr-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#4b5563"/>
+    </marker>
+    <marker id="arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#E94E1B"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="880" style="fill:#ffffff"/>
+
+  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">ASIMOV Architecture</text>
+  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">Three stages, an agent fleet, and two graphs. Source Graph captures the legacy system; Target Graph represents the modern system.</text>
+
+  <!-- Human OUT OF the loop banner -->
+  <g transform="translate(440,108)">
+    <rect x="0" y="0" width="520" height="38" rx="8" ry="8" style="fill:#E94E1B"/>
+    <text x="260" y="25" text-anchor="middle" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#ffffff;letter-spacing:2px">HUMAN OUT OF THE LOOP</text>
+  </g>
+
+  <!-- Target Ontology Configurator (top band) -->
+  <g transform="translate(120,168)">
+    <rect x="0" y="0" width="1160" height="78" rx="12" ry="12" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+    <text x="20" y="28" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:2px">TARGET ONTOLOGY CONFIGURATOR</text>
+    <g transform="translate(20,42)">
+      <rect x="0" y="0" width="260" height="28" rx="6" ry="6" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="14" y="18" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111">Target architecture</text>
+      <rect x="270" y="0" width="260" height="28" rx="6" ry="6" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="284" y="18" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111">Coding guidelines</text>
+      <rect x="540" y="0" width="260" height="28" rx="6" ry="6" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="554" y="18" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111">Security standards</text>
+      <rect x="810" y="0" width="310" height="28" rx="6" ry="6" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="824" y="18" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111">Compliance requirements</text>
+    </g>
+  </g>
+
+  <!-- Three stages: INGESTION (orange-tinted), TRANSFORMATION (orange-tinted), GENERATION (orange-tinted) -->
+  <!-- Stage container backgrounds first -->
+  <g>
+    <!-- Ingestion -->
+    <rect x="80" y="280" width="380" height="380" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <rect x="80" y="280" width="380" height="44" rx="14" ry="14" style="fill:#4b5563"/>
+    <rect x="80" y="312" width="380" height="12" style="fill:#4b5563"/>
+    <text x="270" y="310" text-anchor="middle" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff;letter-spacing:2px">INGESTION</text>
+
+    <!-- Transformation -->
+    <rect x="510" y="280" width="380" height="380" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <rect x="510" y="280" width="380" height="44" rx="14" ry="14" style="fill:#4b5563"/>
+    <rect x="510" y="312" width="380" height="12" style="fill:#4b5563"/>
+    <text x="700" y="310" text-anchor="middle" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff;letter-spacing:2px">TRANSFORMATION</text>
+
+    <!-- Generation -->
+    <rect x="940" y="280" width="380" height="380" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <rect x="940" y="280" width="380" height="44" rx="14" ry="14" style="fill:#4b5563"/>
+    <rect x="940" y="312" width="380" height="12" style="fill:#4b5563"/>
+    <text x="1130" y="310" text-anchor="middle" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff;letter-spacing:2px">GENERATION</text>
+  </g>
+
+  <!-- INGESTION contents -->
+  <g>
+    <!-- Inputs -->
+    <g transform="translate(100,346)">
+      <rect x="0" y="0" width="160" height="60" rx="8" ry="8" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
+      <text x="80" y="24" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Legacy</text>
+      <text x="80" y="44" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Source Code</text>
+    </g>
+    <g transform="translate(280,346)">
+      <rect x="0" y="0" width="160" height="60" rx="8" ry="8" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
+      <text x="80" y="24" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Supporting</text>
+      <text x="80" y="44" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Artifacts</text>
+    </g>
+
+    <!-- Code Ingestor agent -->
+    <g transform="translate(100,430)">
+      <rect x="0" y="0" width="340" height="50" rx="8" ry="8" style="fill:#4b5563"/>
+      <text x="170" y="32" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#ffffff">Code Ingestor</text>
+    </g>
+    <line x1="270" y1="406" x2="270" y2="426" style="stroke:#4b5563;stroke-width:2" marker-end="url(#arr-grey)"/>
+
+    <!-- Source Graph -->
+    <g transform="translate(140,500)">
+      <rect x="0" y="0" width="260" height="48" rx="10" ry="10" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+      <text x="130" y="30" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Source Graph</text>
+    </g>
+    <line x1="270" y1="482" x2="270" y2="498" style="stroke:#E94E1B;stroke-width:2" marker-end="url(#arr-orange)"/>
+
+    <!-- Code Context Enrichment Agent -->
+    <g transform="translate(100,570)">
+      <rect x="0" y="0" width="340" height="50" rx="8" ry="8" style="fill:#4b5563"/>
+      <text x="170" y="22" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#ffffff">Code Context</text>
+      <text x="170" y="40" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#ffffff">Enrichment Agent</text>
+    </g>
+    <line x1="270" y1="550" x2="270" y2="568" style="stroke:#E94E1B;stroke-width:2" marker-end="url(#arr-orange)"/>
+
+    <!-- Enriched Graph (output to next stage) -->
+    <g transform="translate(190,628)">
+      <rect x="0" y="0" width="160" height="22" style="fill:none;stroke:none"/>
+      <text x="80" y="16" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#4b5563">produces Enriched Graph →</text>
+    </g>
+  </g>
+
+  <!-- Arrow Ingestion → Transformation -->
+  <line x1="464" y1="468" x2="506" y2="468" style="stroke:#E94E1B;stroke-width:3" marker-end="url(#arr-orange)"/>
+
+  <!-- TRANSFORMATION contents -->
+  <g>
+    <!-- Enriched Graph (input) -->
+    <g transform="translate(570,346)">
+      <rect x="0" y="0" width="260" height="48" rx="10" ry="10" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+      <text x="130" y="30" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Enriched Graph</text>
+    </g>
+
+    <!-- Design Agent -->
+    <g transform="translate(530,420)">
+      <rect x="0" y="0" width="160" height="58" rx="8" ry="8" style="fill:#4b5563"/>
+      <text x="80" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Design</text>
+      <text x="80" y="44" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
+    </g>
+    <text x="610" y="496" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Re-architecture</text>
+
+    <!-- Code Translation Agent -->
+    <g transform="translate(710,420)">
+      <rect x="0" y="0" width="170" height="58" rx="8" ry="8" style="fill:#4b5563"/>
+      <text x="85" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Code Translation</text>
+      <text x="85" y="44" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
+    </g>
+    <text x="795" y="496" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Code generation</text>
+
+    <line x1="700" y1="394" x2="700" y2="416" style="stroke:#E94E1B;stroke-width:2" marker-end="url(#arr-orange)"/>
+    <line x1="690" y1="449" x2="710" y2="449" style="stroke:#4b5563;stroke-width:2" marker-end="url(#arr-grey)"/>
+
+    <!-- Target Graph -->
+    <g transform="translate(570,520)">
+      <rect x="0" y="0" width="260" height="48" rx="10" ry="10" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+      <text x="130" y="30" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Target Graph</text>
+    </g>
+    <line x1="700" y1="480" x2="700" y2="518" style="stroke:#E94E1B;stroke-width:2" marker-end="url(#arr-orange)"/>
+
+    <!-- Configurator feed arrow from top band -->
+    <line x1="700" y1="248" x2="700" y2="344" style="stroke:#E94E1B;stroke-width:2;stroke-dasharray:4 3" marker-end="url(#arr-orange)"/>
+    <text x="700" y="270" text-anchor="middle" style="font:italic 11px Segoe UI,system-ui,sans-serif;fill:#E94E1B">configurator feeds</text>
+  </g>
+
+  <!-- Arrow Transformation → Generation -->
+  <line x1="894" y1="468" x2="936" y2="468" style="stroke:#E94E1B;stroke-width:3" marker-end="url(#arr-orange)"/>
+
+  <!-- GENERATION contents -->
+  <g>
+    <!-- Test Generation Agent (top) -->
+    <g transform="translate(1000,346)">
+      <rect x="0" y="0" width="260" height="50" rx="8" ry="8" style="fill:#4b5563"/>
+      <text x="130" y="22" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#ffffff">Test Generation</text>
+      <text x="130" y="40" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
+    </g>
+
+    <!-- Code Optimizer -->
+    <g transform="translate(1000,420)">
+      <rect x="0" y="0" width="260" height="50" rx="8" ry="8" style="fill:#4b5563"/>
+      <text x="130" y="32" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Code Optimizer</text>
+    </g>
+
+    <!-- Outputs -->
+    <g transform="translate(1000,494)">
+      <rect x="0" y="0" width="125" height="64" rx="8" ry="8" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="62" y="22" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Target</text>
+      <text x="62" y="40" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Source Code</text>
+    </g>
+    <g transform="translate(1135,494)">
+      <rect x="0" y="0" width="125" height="64" rx="8" ry="8" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:1.5"/>
+      <text x="62" y="22" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Supporting</text>
+      <text x="62" y="40" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Artifacts</text>
+    </g>
+
+    <line x1="1130" y1="472" x2="1130" y2="492" style="stroke:#E94E1B;stroke-width:2" marker-end="url(#arr-orange)"/>
+
+    <!-- Supporting artifacts breakdown -->
+    <text x="1130" y="600" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Test cases · Traceability</text>
+    <text x="1130" y="616" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Documentation · Specs</text>
+    <text x="1130" y="632" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Dashboard · Bots</text>
+  </g>
+
+  <!-- Bottom: expert validation strip -->
+  <g transform="translate(80,700)">
+    <rect x="0" y="0" width="1240" height="140" rx="14" ry="14" style="fill:#ffffff;stroke:#4b5563;stroke-width:2"/>
+    <text x="20" y="32" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:2px">WHERE HUMANS SIT IN THE PROCESS</text>
+
+    <g transform="translate(40,52)">
+      <text x="0" y="20" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Before the pipeline (Analysis &amp; Planning)</text>
+      <text x="0" y="40" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Expert analysis of the legacy estate;</text>
+      <text x="0" y="58" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">ASIMOV agent customization for the path</text>
+    </g>
+    <g transform="translate(440,52)">
+      <text x="0" y="20" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#E94E1B">During the pipeline (Agentic Execution)</text>
+      <text x="0" y="40" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Agents run end to end across Ingestion,</text>
+      <text x="0" y="58" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Transformation, and Generation. No per-step approval.</text>
+    </g>
+    <g transform="translate(840,52)">
+      <text x="0" y="20" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">After the pipeline (Validation &amp; Deployment)</text>
+      <text x="0" y="40" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Expert validation of behavior parity and</text>
+      <text x="0" y="58" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">test coverage; customer review and CI/CD rollout</text>
+    </g>
+  </g>
+</svg>

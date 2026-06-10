@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 760" width="1400" height="760" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1400" height="760" style="fill:#ffffff"/>
+
+  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">Breeze.AI Integration Surface</text>
+  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">A layer on top of the existing engineering toolchain, not a replacement for it.</text>
+
+  <!-- Center: Breeze.AI badge -->
+  <g transform="translate(700,400)">
+    <circle cx="0" cy="0" r="80" style="fill:#E94E1B;stroke:#111111;stroke-width:3"/>
+    <text x="0" y="-8" text-anchor="middle" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#ffffff">Breeze.AI</text>
+    <text x="0" y="14" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">structured-context</text>
+    <text x="0" y="28" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">layer</text>
+  </g>
+
+  <!-- 7 integration domains positioned around the center -->
+  <!-- Lines first (under the boxes) -->
+  <g style="stroke:#E94E1B;stroke-width:2;fill:none">
+    <line x1="700" y1="320" x2="700" y2="200"/>
+    <line x1="772" y1="361" x2="990" y2="220"/>
+    <line x1="780" y1="400" x2="1150" y2="400"/>
+    <line x1="772" y1="439" x2="990" y2="580"/>
+    <line x1="700" y1="480" x2="700" y2="600"/>
+    <line x1="628" y1="439" x2="410" y2="580"/>
+    <line x1="620" y1="400" x2="250" y2="400"/>
+    <line x1="628" y1="361" x2="410" y2="220"/>
+  </g>
+
+  <!-- Top: Version Control -->
+  <g transform="translate(540,116)">
+    <rect x="0" y="0" width="320" height="84" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="160" y="28" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Version Control</text>
+    <text x="160" y="50" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">GitHub · GitLab · Bitbucket</text>
+    <text x="160" y="70" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Per-merge KG sync; PR validation gate</text>
+  </g>
+
+  <!-- Upper-right: CI/CD -->
+  <g transform="translate(980,140)">
+    <rect x="0" y="0" width="320" height="84" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="160" y="28" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">CI/CD Pipelines</text>
+    <text x="160" y="50" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">GitHub Actions · Jenkins · GitLab CI · Azure DevOps</text>
+    <text x="160" y="70" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Validation agent runs as a CI step</text>
+  </g>
+
+  <!-- Right: Ticket Systems -->
+  <g transform="translate(1150,358)">
+    <rect x="0" y="0" width="240" height="84" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="120" y="28" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Ticket Systems</text>
+    <text x="120" y="50" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Jira · Linear · Azure Boards</text>
+    <text x="120" y="70" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Spec linkage and traceability</text>
+  </g>
+
+  <!-- Lower-right: AI Coding Assistants -->
+  <g transform="translate(980,576)">
+    <rect x="0" y="0" width="320" height="84" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="160" y="28" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">AI Coding Assistants</text>
+    <text x="160" y="50" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Claude Code · Cursor · Copilot</text>
+    <text x="160" y="70" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Impact report attached as context</text>
+  </g>
+
+  <!-- Bottom: Test Runners -->
+  <g transform="translate(540,600)">
+    <rect x="0" y="0" width="320" height="84" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="160" y="28" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Test Runners</text>
+    <text x="160" y="50" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Jest · Cypress · Playwright · JUnit</text>
+    <text x="160" y="70" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">BDD scenarios generated for the runner</text>
+  </g>
+
+  <!-- Lower-left: Observability -->
+  <g transform="translate(100,576)">
+    <rect x="0" y="0" width="320" height="84" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="160" y="28" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Observability</text>
+    <text x="160" y="50" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Datadog · Honeycomb · OpenTelemetry</text>
+    <text x="160" y="70" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Agent action audit trail forwarded out</text>
+  </g>
+
+  <!-- Left: Design Tools -->
+  <g transform="translate(10,358)">
+    <rect x="0" y="0" width="240" height="84" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="120" y="28" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Design Tools</text>
+    <text x="120" y="50" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">Figma · Sketch</text>
+    <text x="120" y="70" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Design Ontology extraction and updates</text>
+  </g>
+
+  <!-- Upper-left: Code Repositories Note -->
+  <g transform="translate(100,140)">
+    <rect x="0" y="0" width="320" height="84" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <text x="160" y="28" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#111111">Code Repositories</text>
+    <text x="160" y="50" text-anchor="middle" style="font:12px Segoe UI,system-ui,sans-serif;fill:#4b5563">monorepo or per-product partitioning</text>
+    <text x="160" y="70" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Brownfield extraction; KG build</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="700" y="730" text-anchor="middle" style="font:italic 14px Segoe UI,system-ui,sans-serif;fill:#4b5563">Breeze.AI adds a layer to the existing engineering toolchain. It does not replace the IDE, the test runner, the CI/CD pipeline, the ticket system, or the version control system.</text>
+</svg>

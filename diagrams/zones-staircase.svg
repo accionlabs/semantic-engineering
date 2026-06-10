@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1400 600" xmlns="http://www.w3.org/2000/svg" width="1400" height="600" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .zonenum { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #4b5563; letter-spacing: 2px; }
+      .zonenumAccent { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #E94E1B; letter-spacing: 2px; }
+      .zonename { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 19px; font-weight: 600; fill: #111111; }
+      .adds { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #111111; }
+      .stops { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; font-style: italic; fill: #4b5563; }
+      .floor { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-style: italic; fill: #4b5563; }
+    </style>
+  </defs>
+
+  <text x="700" y="45" text-anchor="middle" class="h1">What Each Zone Adds</text>
+  <text x="700" y="72" text-anchor="middle" class="sub">Each zone keeps what the previous one delivered and adds the response to a failure the previous one could not handle.</text>
+
+  <rect x="80" y="430" width="300" height="100" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="230" y="455" text-anchor="middle" class="zonenum">ZONE 1</text>
+  <text x="230" y="478" text-anchor="middle" class="zonename">Manual / Vibe Coding</text>
+  <text x="230" y="502" text-anchor="middle" class="adds">+ AI velocity (no structure)</text>
+  <text x="230" y="520" text-anchor="middle" class="stops">stops on code review burden + reproducibility</text>
+
+  <rect x="410" y="350" width="300" height="180" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="560" y="375" text-anchor="middle" class="zonenum">ZONE 2</text>
+  <text x="560" y="398" text-anchor="middle" class="zonename">Spec-Driven Development</text>
+  <text x="560" y="425" text-anchor="middle" class="adds">+ written contract per change</text>
+  <text x="560" y="445" text-anchor="middle" class="adds">+ AI generates against the spec</text>
+  <text x="560" y="463" text-anchor="middle" class="adds">+ CI drift detection</text>
+  <text x="560" y="500" text-anchor="middle" class="stops">stops on localized context,</text>
+  <text x="560" y="516" text-anchor="middle" class="stops">spec drift, single-layer coverage</text>
+
+  <rect x="740" y="240" width="300" height="290" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="890" y="265" text-anchor="middle" class="zonenumAccent">ZONE 3</text>
+  <text x="890" y="288" text-anchor="middle" class="zonename">SDD + Semantic Engineering</text>
+  <text x="890" y="315" text-anchor="middle" class="adds">+ four-layer knowledge graph</text>
+  <text x="890" y="335" text-anchor="middle" class="adds">+ Impact Analysis pre-implementation</text>
+  <text x="890" y="355" text-anchor="middle" class="adds">+ PR validation at merge</text>
+  <text x="890" y="375" text-anchor="middle" class="adds">+ KG Sync auto-updates on every merge</text>
+  <text x="890" y="395" text-anchor="middle" class="adds">+ ontology written by each custodian</text>
+  <text x="890" y="415" text-anchor="middle" class="adds">+ three sources of truth clean</text>
+  <text x="890" y="465" text-anchor="middle" class="stops">most enterprise teams stabilize here</text>
+  <text x="890" y="483" text-anchor="middle" class="stops">for several quarters before scaling</text>
+  <text x="890" y="510" text-anchor="middle" class="stops">to portfolio</text>
+
+  <rect x="1070" y="130" width="300" height="400" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="1220" y="155" text-anchor="middle" class="zonenumAccent">ZONE 4</text>
+  <text x="1220" y="178" text-anchor="middle" class="zonename">SE at Scale</text>
+  <text x="1220" y="207" text-anchor="middle" class="adds">+ multiple product graphs</text>
+  <text x="1220" y="227" text-anchor="middle" class="adds">+ cross-product impact reasoning</text>
+  <text x="1220" y="247" text-anchor="middle" class="adds">+ progressive agent autonomy</text>
+  <text x="1220" y="267" text-anchor="middle" class="adds">+ governed agent fleet</text>
+  <text x="1220" y="287" text-anchor="middle" class="adds">+ custodianship as operating mode</text>
+  <text x="1220" y="307" text-anchor="middle" class="adds">+ knowledge asset compounds</text>
+  <text x="1220" y="327" text-anchor="middle" class="adds">+ devs move upstream from per-change loop</text>
+  <text x="1220" y="347" text-anchor="middle" class="adds">+ agents run the per-change loop</text>
+  <text x="1220" y="385" text-anchor="middle" class="stops">an operating mode, not a destination</text>
+  <text x="1220" y="403" text-anchor="middle" class="stops">methodology continues to evolve</text>
+  <text x="1220" y="421" text-anchor="middle" class="stops">aspirational endpoint:</text>
+  <text x="1220" y="437" text-anchor="middle" class="stops">stop writing code, write agents</text>
+
+  <line x1="30" y1="540" x2="1390" y2="540" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="710" y="575" text-anchor="middle" class="floor">center of gravity in 2026: most teams between Zone 1 and Zone 2 · a small number have moved into Zone 3</text>
+</svg>

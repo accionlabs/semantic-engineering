@@ -1,0 +1,76 @@
+<svg viewBox="0 0 1400 760" xmlns="http://www.w3.org/2000/svg" width="1400" height="760" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#E94E1B"/></marker>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .q { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #111111; }
+      .yn { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #4b5563; }
+      .verdict { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #E94E1B; }
+      .verdictGrey { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #4b5563; }
+      .vsub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; }
+      .vsubGrey { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #4b5563; }
+    </style>
+  </defs>
+
+  <text x="700" y="45" text-anchor="middle" class="h1">When SDD Is Genuinely Suitable</text>
+  <text x="700" y="72" text-anchor="middle" class="sub">Four filters. All "yes" means SDD is the right operating mode. Any "no" pushes toward Semantic Engineering.</text>
+
+  <rect x="500" y="110" width="400" height="80" rx="40" ry="40" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="700" y="142" text-anchor="middle" class="q">Start: This is real production work</text>
+  <text x="700" y="170" text-anchor="middle" class="vsub">vibe coding does not fit — see Zone 1 page</text>
+
+  <path d="M 700 190 L 700 220" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+
+  <polygon points="700,225 940,290 700,355 460,290" fill="#ffffff" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="700" y="275" text-anchor="middle" class="q">Q1: Single team,</text>
+  <text x="700" y="300" text-anchor="middle" class="q">single product, single repo?</text>
+  <text x="700" y="325" text-anchor="middle" class="vsubGrey">no cross-team integration points,</text>
+  <text x="700" y="342" text-anchor="middle" class="vsubGrey">no shared services with other teams</text>
+
+  <path d="M 700 355 L 700 385" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="715" y="372" class="yn">YES</text>
+
+  <path d="M 460 290 L 230 290" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="350" y="280" text-anchor="middle" class="yn">NO</text>
+
+  <polygon points="700,390 940,455 700,520 460,455" fill="#ffffff" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="700" y="440" text-anchor="middle" class="q">Q2: One clear owner per layer,</text>
+  <text x="700" y="465" text-anchor="middle" class="q">architect hands-on?</text>
+  <text x="700" y="490" text-anchor="middle" class="vsubGrey">PO, architect, designer triangle</text>
+  <text x="700" y="507" text-anchor="middle" class="vsubGrey">can coordinate verbally between sprints</text>
+
+  <path d="M 700 520 L 700 550" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="715" y="537" class="yn">YES</text>
+
+  <path d="M 460 455 L 230 350" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="320" y="395" text-anchor="middle" class="yn">NO</text>
+
+  <polygon points="700,555 940,620 700,685 460,620" fill="#ffffff" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="700" y="605" text-anchor="middle" class="q">Q3: Codebase small enough to</text>
+  <text x="700" y="630" text-anchor="middle" class="q">hold in one head?</text>
+  <text x="700" y="655" text-anchor="middle" class="vsubGrey">"where does X live" answerable</text>
+  <text x="700" y="672" text-anchor="middle" class="vsubGrey">without a knowledge graph</text>
+
+  <path d="M 700 685 L 700 715" stroke="#E94E1B" stroke-width="1.8" fill="none" marker-end="url(#arrowOrange)"/>
+  <text x="715" y="702" class="yn" fill="#E94E1B">YES</text>
+
+  <path d="M 460 620 L 230 510" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="320" y="560" text-anchor="middle" class="yn">NO</text>
+
+  <rect x="500" y="720" width="400" height="35" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="700" y="744" text-anchor="middle" class="verdict">SDD fits</text>
+
+  <rect x="20" y="260" width="220" height="270" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="130" y="300" text-anchor="middle" class="verdictGrey">Move to Zone 3</text>
+  <text x="130" y="322" text-anchor="middle" class="verdictGrey">SDD + SE</text>
+  <text x="130" y="355" text-anchor="middle" class="vsubGrey">at least one of the answers</text>
+  <text x="130" y="372" text-anchor="middle" class="vsubGrey">above is no:</text>
+  <text x="130" y="402" text-anchor="middle" class="vsub">multi-team or multi-repo</text>
+  <text x="130" y="425" text-anchor="middle" class="vsub">scattered architect/designer</text>
+  <text x="130" y="448" text-anchor="middle" class="vsub">brownfield at scale</text>
+  <text x="130" y="481" text-anchor="middle" class="vsubGrey">spec alone cannot carry</text>
+  <text x="130" y="498" text-anchor="middle" class="vsubGrey">the structural load.</text>
+  <text x="130" y="515" text-anchor="middle" class="vsubGrey">A graph is needed.</text>
+</svg>

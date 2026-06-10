@@ -1,0 +1,90 @@
+<svg viewBox="0 0 1400 620" xmlns="http://www.w3.org/2000/svg" width="1400" height="620" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .axis { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #4b5563; letter-spacing: 1px; }
+      .tick { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #4b5563; }
+      .legend { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #111111; }
+      .legendCode { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #E94E1B; }
+      .anno { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; }
+      .annoSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #4b5563; }
+      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-style: italic; fill: #4b5563; }
+    </style>
+  </defs>
+
+  <text x="700" y="45" text-anchor="middle" class="h1">Why Documentation Does Not Fix It</text>
+  <text x="700" y="72" text-anchor="middle" class="sub">A documentation artifact and the code base diverge on the day of first writing. By month nine they have measurably different views of the system.</text>
+
+  <line x1="120" y1="500" x2="1340" y2="500" stroke="#4b5563" stroke-width="2"/>
+  <line x1="120" y1="500" x2="120" y2="140" stroke="#4b5563" stroke-width="2"/>
+
+  <text x="60" y="155" class="axis">100%</text>
+  <text x="68" y="245" class="axis">75%</text>
+  <text x="68" y="335" class="axis">50%</text>
+  <text x="68" y="425" class="axis">25%</text>
+  <text x="80" y="510" class="axis">0%</text>
+
+  <text x="50" y="320" class="axis" transform="rotate(-90 50 320)" text-anchor="middle">fidelity to code reality</text>
+
+  <line x1="120" y1="155" x2="125" y2="155" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="120" y1="245" x2="125" y2="245" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="120" y1="335" x2="125" y2="335" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="120" y1="425" x2="125" y2="425" stroke="#4b5563" stroke-width="1.5"/>
+
+  <line x1="120" y1="495" x2="120" y2="505" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="323" y1="495" x2="323" y2="505" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="526" y1="495" x2="526" y2="505" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="730" y1="495" x2="730" y2="505" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="933" y1="495" x2="933" y2="505" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="1136" y1="495" x2="1136" y2="505" stroke="#4b5563" stroke-width="1.5"/>
+  <line x1="1340" y1="495" x2="1340" y2="505" stroke="#4b5563" stroke-width="1.5"/>
+
+  <text x="120" y="525" text-anchor="middle" class="tick">Day 1</text>
+  <text x="323" y="525" text-anchor="middle" class="tick">Month 3</text>
+  <text x="526" y="525" text-anchor="middle" class="tick">Month 6</text>
+  <text x="730" y="525" text-anchor="middle" class="tick">Month 9</text>
+  <text x="933" y="525" text-anchor="middle" class="tick">Month 12</text>
+  <text x="1136" y="525" text-anchor="middle" class="tick">Month 15</text>
+  <text x="1340" y="525" text-anchor="middle" class="tick">Month 18</text>
+
+  <text x="730" y="555" text-anchor="middle" class="axis">time since the document was last considered current</text>
+
+  <line x1="120" y1="155" x2="1340" y2="155" stroke="#E94E1B" stroke-width="3"/>
+
+  <path d="M 120 155 Q 220 175 323 195 Q 425 215 526 250 Q 628 285 730 320 Q 833 360 933 400 Q 1035 430 1136 455 Q 1238 475 1340 488" stroke="#4b5563" stroke-width="2.5" fill="none" stroke-dasharray="6,4"/>
+
+  <circle cx="120" cy="155" r="5" fill="#E94E1B"/>
+  <circle cx="120" cy="155" r="5" fill="#4b5563"/>
+
+  <circle cx="323" cy="195" r="4" fill="#4b5563"/>
+  <text x="335" y="180" class="anno">Sprint 4: first PR template skipped</text>
+  <text x="335" y="195" class="annoSub">"will update later" never happens</text>
+
+  <circle cx="526" cy="250" r="4" fill="#4b5563"/>
+  <text x="538" y="232" class="anno">Sprint 9: PO refactors a feature</text>
+  <text x="538" y="247" class="annoSub">spec was correct, no one updates the wiki</text>
+
+  <circle cx="730" cy="320" r="4" fill="#4b5563"/>
+  <text x="742" y="305" class="anno">Sprint 18: senior engineer departs</text>
+  <text x="742" y="320" class="annoSub">tribal context not in any document leaves with her</text>
+
+  <circle cx="933" cy="400" r="4" fill="#4b5563"/>
+  <text x="945" y="385" class="anno">Sprint 26: AI agent reads the wiki as context</text>
+  <text x="945" y="400" class="annoSub">generates code calling endpoints that no longer exist</text>
+
+  <circle cx="1136" cy="455" r="4" fill="#4b5563"/>
+  <text x="1148" y="440" class="anno">Sprint 32: new joiner trained against the wiki</text>
+  <text x="1148" y="455" class="annoSub">learns the wrong system, has to unlearn through archaeology</text>
+
+  <rect x="900" y="135" width="430" height="30" rx="6" ry="6" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.2"/>
+  <line x1="915" y1="150" x2="940" y2="150" stroke="#E94E1B" stroke-width="3"/>
+  <text x="950" y="155" class="legendCode">Code base (always current)</text>
+
+  <rect x="900" y="170" width="430" height="30" rx="6" ry="6" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.2"/>
+  <line x1="915" y1="185" x2="940" y2="185" stroke="#4b5563" stroke-width="2.5" stroke-dasharray="6,4"/>
+  <text x="950" y="190" class="legend">Documentation (decays from day one)</text>
+
+  <text x="700" y="595" text-anchor="middle" class="ital">Adding more text in the same medium produces more material to translate. Same decay applies to all of it.</text>
+</svg>

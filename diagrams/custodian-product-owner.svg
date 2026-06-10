@@ -1,0 +1,63 @@
+<svg viewBox="0 0 1200 580" xmlns="http://www.w3.org/2000/svg" width="1200" height="580" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#E94E1B"/></marker>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 24px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .label { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #4b5563; letter-spacing: 2px; }
+      .chip { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; }
+      .role { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 22px; font-weight: 600; fill: #111111; }
+      .roleSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #111111; }
+      .ont { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 17px; font-weight: 600; fill: #111111; }
+      .ontSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #4b5563; }
+    </style>
+  </defs>
+
+  <text x="600" y="42" text-anchor="middle" class="h1">What the Product Owner Holds</text>
+  <text x="600" y="70" text-anchor="middle" class="sub">Customer reality and business strategy distilled into a coherent product direction.</text>
+
+  <text x="60" y="110" class="label">INPUTS · EXTERNAL, HUMAN-ONLY</text>
+
+  <rect x="60" y="125" width="1080" height="80" rx="10" ry="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="5,3"/>
+
+  <rect x="70" y="145" width="130" height="40" rx="6" ry="6" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1"/>
+  <text x="135" y="170" text-anchor="middle" class="chip">customer convos</text>
+
+  <rect x="225" y="145" width="130" height="40" rx="6" ry="6" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1"/>
+  <text x="290" y="170" text-anchor="middle" class="chip">market signals</text>
+
+  <rect x="380" y="145" width="130" height="40" rx="6" ry="6" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1"/>
+  <text x="445" y="170" text-anchor="middle" class="chip">exec priorities</text>
+
+  <rect x="535" y="145" width="130" height="40" rx="6" ry="6" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1"/>
+  <text x="600" y="170" text-anchor="middle" class="chip">regulatory shifts</text>
+
+  <rect x="690" y="145" width="130" height="40" rx="6" ry="6" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1"/>
+  <text x="755" y="170" text-anchor="middle" class="chip">sales feedback</text>
+
+  <rect x="845" y="145" width="130" height="40" rx="6" ry="6" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1"/>
+  <text x="910" y="170" text-anchor="middle" class="chip">support patterns</text>
+
+  <rect x="1000" y="145" width="130" height="40" rx="6" ry="6" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1"/>
+  <text x="1065" y="170" text-anchor="middle" class="chip">CEO in the room</text>
+
+  <path d="M 600 215 L 600 270" stroke="#4b5563" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="615" y="248" class="ontSub" font-style="italic">integration happens in human conversations</text>
+
+  <text x="60" y="295" class="label">ROLE · STAYS HUMAN</text>
+
+  <rect x="300" y="310" width="600" height="100" rx="12" ry="12" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2.5"/>
+  <text x="600" y="345" text-anchor="middle" class="role">Product Owner</text>
+  <text x="600" y="372" text-anchor="middle" class="roleSub">"An agent can draft a user story from a prompt.</text>
+  <text x="600" y="392" text-anchor="middle" class="roleSub">The prompt itself is the product owner's distilled judgment."</text>
+
+  <path d="M 600 410 L 600 465" stroke="#E94E1B" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+  <text x="615" y="442" class="ontSub" font-style="italic" fill="#E94E1B">codified into a machine-readable medium</text>
+
+  <text x="60" y="490" class="label">OUTPUT · WRITTEN INTO THE GRAPH</text>
+
+  <rect x="200" y="505" width="800" height="60" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="600" y="530" text-anchor="middle" class="ont">Functional Ontology</text>
+  <text x="600" y="552" text-anchor="middle" class="ontSub">personas · outcomes · scenarios · steps · actions</text>
+</svg>
