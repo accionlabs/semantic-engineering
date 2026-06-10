@@ -18,14 +18,14 @@
   <g transform="translate(40,182)">
     <rect x="0" y="0" width="260" height="140" rx="12" ry="12" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
     <text x="130" y="34" text-anchor="middle" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#111111">SaaS</text>
-    <text x="130" y="58" text-anchor="middle" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Accion-hosted</text>
+    <text x="130" y="58" text-anchor="middle" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Accion Labs-hosted</text>
     <text x="130" y="96" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Lowest setup overhead.</text>
     <text x="130" y="114" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Right default for most</text>
     <text x="130" y="132" text-anchor="middle" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">engagements.</text>
 
     <g transform="translate(280,0)">
       <rect x="0" y="0" width="280" height="140" rx="12" ry="12" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Accion's managed</text>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Accion Labs's managed</text>
       <text x="140" y="54" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">infrastructure</text>
       <g transform="translate(115,76)">
         <rect x="0" y="0" width="50" height="46" rx="6" ry="6" style="fill:#4b5563"/>
@@ -35,7 +35,7 @@
 
     <g transform="translate(580,0)">
       <rect x="0" y="0" width="280" height="140" rx="12" ry="12" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Accion's managed</text>
+      <text x="140" y="34" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Accion Labs's managed</text>
       <text x="140" y="54" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">graph storage</text>
       <g transform="translate(115,76)">
         <rect x="0" y="0" width="50" height="46" rx="6" ry="6" style="fill:#4b5563"/>

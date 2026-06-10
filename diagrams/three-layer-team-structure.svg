@@ -212,7 +212,7 @@
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Enablement</text>
         </g>
         <g transform="matrix(1,0,0,1,22,90)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Accion-supplied support</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Accion Labs-supplied support</text>
         </g>
         <g transform="matrix(1,0,0,1,22,118)">
             <path d="M230,8L230,32C230,36.415 226.415,40 222,40L8,40C3.585,40 0,36.415 0,32L0,8C0,3.585 3.585,0 8,0L222,0C226.415,0 230,3.585 230,8Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
