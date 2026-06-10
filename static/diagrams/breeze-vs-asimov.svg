@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" width="1400" height="820" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
+  <rect width="1400" height="820" style="fill:#ffffff"/>
+
+  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">Breeze.AI and ASIMOV: Peer Platforms Under Semantic Engineering</text>
+  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">Same Semantic Engineering principles. Shaped for two different problems.</text>
+
+  <!-- Shared umbrella -->
+  <g transform="translate(280,108)">
+    <rect x="0" y="0" width="840" height="60" rx="14" ry="14" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+    <text x="420" y="38" text-anchor="middle" style="font:700 17px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">SEMANTIC ENGINEERING PRINCIPLES</text>
+  </g>
+
+  <!-- Down lines to the two platforms -->
+  <line x1="500" y1="168" x2="500" y2="200" style="stroke:#E94E1B;stroke-width:2"/>
+  <line x1="900" y1="168" x2="900" y2="200" style="stroke:#E94E1B;stroke-width:2"/>
+
+  <!-- Two platform columns -->
+  <!-- Breeze.AI -->
+  <g transform="translate(80,200)">
+    <rect x="0" y="0" width="620" height="580" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <rect x="0" y="0" width="620" height="80" rx="14" ry="14" style="fill:#4b5563"/>
+    <rect x="0" y="60" width="620" height="20" style="fill:#4b5563"/>
+    <text x="310" y="40" text-anchor="middle" style="font:700 26px Segoe UI,system-ui,sans-serif;fill:#ffffff">Breeze.AI</text>
+    <text x="310" y="64" text-anchor="middle" style="font:italic 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">AI-native SDLC platform</text>
+
+    <!-- Row 1: Problem -->
+    <text x="20" y="118" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">PROBLEM</text>
+    <text x="20" y="142" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Evolving an application across years.</text>
+    <text x="20" y="160" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Open-ended SDLC governance.</text>
+    <line x1="20" y1="184" x2="600" y2="184" style="stroke:#9ca3af;stroke-width:1"/>
+
+    <!-- Row 2: Ontology usage -->
+    <text x="20" y="208" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">ONTOLOGY USAGE</text>
+    <text x="20" y="232" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Full four-layer ontology, all custodians</text>
+    <text x="20" y="250" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">active. Functional + Design + Architecture</text>
+    <text x="20" y="268" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">+ Code, continuously maintained.</text>
+    <line x1="20" y1="292" x2="600" y2="292" style="stroke:#9ca3af;stroke-width:1"/>
+
+    <!-- Row 3: Graph artifact -->
+    <text x="20" y="316" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">GRAPH ARTIFACT</text>
+    <text x="20" y="340" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">One four-layer graph per product.</text>
+    <text x="20" y="358" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">KG Sync Agent keeps it current on</text>
+    <text x="20" y="376" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">every merge.</text>
+    <line x1="20" y1="400" x2="600" y2="400" style="stroke:#9ca3af;stroke-width:1"/>
+
+    <!-- Row 4: Human role (highlighted) -->
+    <text x="20" y="424" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">HUMAN ROLE</text>
+    <g transform="translate(20,438)">
+      <rect x="0" y="0" width="580" height="48" rx="8" ry="8" style="fill:#4b5563"/>
+      <text x="290" y="22" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#ffffff">IN THE LOOP</text>
+      <text x="290" y="40" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">developer reviews per change; gates approve at merge</text>
+    </g>
+    <line x1="20" y1="510" x2="600" y2="510" style="stroke:#9ca3af;stroke-width:1"/>
+
+    <!-- Row 5: Time horizon -->
+    <text x="20" y="534" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">TIME HORIZON</text>
+    <text x="20" y="558" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Years. Continuous operation.</text>
+  </g>
+
+  <!-- ASIMOV -->
+  <g transform="translate(700,200)">
+    <rect x="0" y="0" width="620" height="580" rx="14" ry="14" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+    <rect x="0" y="0" width="620" height="80" rx="14" ry="14" style="fill:#E94E1B"/>
+    <rect x="0" y="60" width="620" height="20" style="fill:#E94E1B"/>
+    <text x="310" y="40" text-anchor="middle" style="font:700 26px Segoe UI,system-ui,sans-serif;fill:#ffffff">ASIMOV</text>
+    <text x="310" y="64" text-anchor="middle" style="font:italic 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">AI-led legacy modernization platform</text>
+
+    <text x="20" y="118" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">PROBLEM</text>
+    <text x="20" y="142" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Replacing a legacy stack while</text>
+    <text x="20" y="160" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">preserving behavioral parity.</text>
+    <line x1="20" y1="184" x2="600" y2="184" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
+
+    <text x="20" y="208" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">ONTOLOGY USAGE</text>
+    <text x="20" y="232" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Subset: Functional and Code primarily;</text>
+    <text x="20" y="250" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Architecture as needed for redesign;</text>
+    <text x="20" y="268" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Design optional (UI re-platforming).</text>
+    <line x1="20" y1="292" x2="600" y2="292" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
+
+    <text x="20" y="316" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">GRAPH ARTIFACT</text>
+    <text x="20" y="340" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Source Graph (legacy) and Target Graph</text>
+    <text x="20" y="358" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">(modern), produced on the project. Target</text>
+    <text x="20" y="376" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Ontology Configurator constrains generation.</text>
+    <line x1="20" y1="400" x2="600" y2="400" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
+
+    <text x="20" y="424" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">HUMAN ROLE</text>
+    <g transform="translate(20,438)">
+      <rect x="0" y="0" width="580" height="48" rx="8" ry="8" style="fill:#E94E1B"/>
+      <text x="290" y="22" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#ffffff">OUT OF THE LOOP</text>
+      <text x="290" y="40" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">agents run end to end; human validates behavioral parity</text>
+    </g>
+    <line x1="20" y1="510" x2="600" y2="510" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
+
+    <text x="20" y="534" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">TIME HORIZON</text>
+    <text x="20" y="558" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Quarters. Finite project with a parity</text>
+    <text x="20" y="576" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">objective.</text>
+  </g>
+</svg>

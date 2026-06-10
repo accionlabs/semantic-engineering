@@ -1,0 +1,324 @@
+---
+title: "The Four-Layer Ontology"
+description: "The four-layer ontology in depth, the aperture criterion that decides what enters it, partition by product, brownfield extraction as rationalization, and the governance framework that keeps the graph healthy."
+weight: 10
+date: 2026-06-09
+lastmod: 2026-06-09
+draft: false
+audience:
+  - cto
+  - architect
+  - tech-lead
+  - chief-architect
+---
+
+The [Semantic Knowledge Graphs](_index.md) is one of the three sources of truth in the Semantic Engineering methodology, and captures the knowledge from the custodians - product owners, architects and UX designers. This page describes the the four ontology layers in operational detail, the inclusion criterion that keeps them sustainable, how we partition and extract them, and the metrics framework that keeps them healthy.
+
+## The Four-Layer Ontology
+
+An application is captured as four cross-linked graphs.
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
+graph TD
+    F[Functional Ontology<br/>Personas, outcomes,<br/>scenarios, steps, actions]
+    D[Design Ontology<br/>Components, molecules,<br/>atoms, templates, flows]
+    A[Architecture Ontology<br/>Services, boundaries,<br/>dependencies, data models]
+    C[Code Ontology<br/>Modules, classes,<br/>functions, endpoints]
+
+    F <--> D
+    F <--> A
+    F <--> C
+    D <--> C
+    A <--> C
+    D <--> A
+
+    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
+    class F,D,A,C accent
+    classDef default rx:10,ry:10;
+```
+
+| Ontology | What it captures | Custodian |
+|---|---|---|
+| Functional | Personas, outcomes, scenarios, steps, actions | Product Owner |
+| Design | Components, molecules, atoms, templates, flows, wireframes | UX Designer and design system owner |
+| Architecture | Services, boundaries, dependencies, data stores, integrations | Architect and tech lead |
+| Code | Modules, classes, functions, endpoints, database schemas | Engineering Team |
+
+### The Functional Ontology in Detail
+
+The Functional Ontology is the layer that exposes whether the product owner is doing the work properly. The structure is simple.
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
+graph LR
+    P[Persona] --> O[Outcome]
+    O --> S[Scenario]
+    S --> St[Steps]
+    St --> A[Actions]
+    classDef default rx:10,ry:10;
+```
+
+| Node type | What it captures | Example |
+|---|---|---|
+| Persona | A named user with a defined relationship to the system | "Saved Search Owner" |
+| Outcome | What this persona is trying to accomplish | "Receive a weekly digest of new matches to my saved search" |
+| Scenario | A starting condition that leads to the outcome | "First-time configuration of weekly alerts" |
+| Steps | The ordered actions that compose the scenario | Open saved search, configure alert frequency, save |
+| Actions | The atomic operations the user performs | Click "Edit", select "Weekly", click "Save" |
+
+The structure matters for governance, not specification. When a product owner says "we want the user to be able to do X", the Functional Ontology forces the question: which persona, which outcome, which scenario? The ontology is not the requirements. It is the shape the requirements have to take so the team and the agent can both reason about them consistently.
+
+### Cross-Layer Traversal
+
+A single Functional action traces through Design (which component renders it), Architecture (which service owns it), and Code (which function implements it, and which database tables it reads or writes).
+
+A real example. A product owner files a user story: "Let users choose how often they receive email alerts for each saved search: daily, weekly, or off." The Impact Analysis Agent traverses the four-layer graph for that user story and produces:
+
+| Layer | What the traversal surfaces |
+|---|---|
+| Functional | Two outcomes modified, two scenarios added, two existing scenarios touched, three actions modified |
+| Design | Three components, three user journeys, one new email template |
+| Architecture | Fourteen architecture nodes touched: services, data stores, queues, infrastructure including a new task family per region |
+| Code | Fifteen specific code-level changes across five distinct repositories |
+| Data | The database column that already exists and supports the change with no DDL required |
+| Cross-layer matrix | One row per affected scenario, linking Functional, Design, Code, and Architecture nodes |
+
+![Cross-layer traversal of one user story through Functional, Design, Architecture, Code, and Data layers](/diagrams/cross-layer-traversal.svg)
+
+The traversal happens before any code is written. The senior developer who used to assemble this context manually now reviews it. Full mechanism in [The Impact Analysis Agent](../the-agents.md#the-impact-analysis-agent).
+
+### Why We Model at Function and Module Level
+
+If an agent has to make a safe, targeted change inside a 1.6 million line application, it needs to know which functions and modules implement the relevant behavior. A repository-level map tells the agent that a repository exists. It does not tell the agent where the logic actually lives. Without code-level nodes, the agent either reparses the repository at runtime (slow, expensive, nondeterministic) or guesses (confidently wrong).
+
+The same principle runs upward. The Functional Ontology has to capture personas, outcomes, and scenarios at a level fine enough to govern individual user stories. The granularity at every layer is determined by the questions the agents that read the graph need to answer.
+
+### Brownfield Extraction
+
+A team adopting the methodology on an existing application does not write all four ontologies by hand. We extract them from the existing code, then enrich.
+
+| Layer | Extraction approach |
+|---|---|
+| Code | AST parsing using open-source parsers; LLM-inferred metadata attached to each node |
+| Architecture | Inferred from code structure; cross-validated with any existing architectural documentation |
+| Functional | Inferred from the enriched code graph, starting from the UI and following code paths |
+| Design | Extracted from component code and design tool wireframes; enriched by browser-automation agents that exercise the application end to end |
+
+The output is a model of the system's actual behavior, not its intended behavior. Documentation usually describes the system as it was originally designed. Specs describe the system as the team wishes it were. Only the knowledge graph describes the system as it actually runs. For a 2M+ LOC application, extraction typically completes in two to three weeks.
+
+### The Validation Gate
+
+Once the four ontologies exist, every change is validated against all four before it can merge. The [PR Validation Agent](../the-agents.md#the-pr-validation-agent) runs the gate on every merge to master. The gate fails if the Functional Ontology shows the change should affect an outcome the code does not touch, the Design Ontology shows a duplicate component being created where an existing one would have served, the Architecture Ontology shows a boundary violation, or the Code Ontology shows a downstream dependency the change breaks.
+
+## Aperture
+
+A common first instinct when adopting the methodology is to put everything into the knowledge graph. Within a few sprints, the maintenance burden has overwhelmed the team and the methodology gets blamed for the failure. The aperture is the inclusion criterion that keeps the graph sustainable.
+
+### The Blast Radius Test
+
+Every decision in a system has a **blast radius**: the set of other decisions, artifacts, and behaviors that have to change if the decision changes. A persona definition, a service boundary, a canonical API contract, a core user journey: these have wide blast radius. The internal algorithm of a utility function, the wording on a single button, a color token used on one page: these have locally contained blast radius.
+
+The aperture admits elements whose change cascades beyond their immediate context. Elements whose change is locally contained stay outside the graph.
+
+![Aperture and blast radius: wide-radius elements enter the graph; locally contained ones stay out](/diagrams/aperture-blast-radius.svg)
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
+graph TD
+    A[Any candidate element]
+    A --> B{Does its change<br/>cascade beyond<br/>local context?}
+    B -->|Yes| C[Enters the knowledge graph]
+    B -->|No| D[Stays in code, config, or local context]
+
+    C --> E[Governed by graph<br/>Changes require deliberate decision]
+    D --> F[Local autonomy applies<br/>No graph-level coordination needed]
+
+    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
+    class C,E accent
+    classDef default rx:10,ry:10;
+```
+
+### High-Aperture and Low-Aperture Elements, by Layer
+
+When a team faces a question of whether a specific element belongs in the graph, the row for that layer is the reference.
+
+**Functional Ontology**
+
+| High-aperture (enters the graph) | Low-aperture (stays local) |
+|---|---|
+| Personas, outcomes, canonical scenarios, core step sequences, named workflows | UI copy, help text, microcopy, one-off variant phrasings, error message wording |
+
+**Design Ontology**
+
+| High-aperture (enters the graph) | Low-aperture (stays local) |
+|---|---|
+| Core journeys, reusable flows, shared components, templates, design system primitives | One-off page-level layout adjustments, local styling overrides, single-use UI variations |
+
+**Architecture Ontology**
+
+| High-aperture (enters the graph) | Low-aperture (stays local) |
+|---|---|
+| Layer boundaries, service types and identities, inter-service relationships, integration contracts, infrastructure topology | Internal service implementations, algorithm choices, in-memory data structures, local configuration values |
+
+**Code Ontology**
+
+| High-aperture (enters the graph) | Low-aperture (stays local) |
+|---|---|
+| Module-to-service mappings, cross-module contracts, externally consumed interfaces, public API endpoints | Function internals, local variable naming, private helper methods, transient logs |
+
+### How the Aperture Matures
+
+A team adopting the methodology should not try to set the aperture at full width from day one.
+
+| Phase | Aperture width | What the team holds in the graph |
+|---|---|---|
+| Day 1 to Sprint 4 | Narrow | Core personas, top three to five outcomes per persona, primary service boundaries, top ten code-level cross-module dependencies |
+| Sprint 4 to Sprint 12 | Widening | Full functional ontology for the most-touched product areas, full design system, full architecture, code ontology for actively-developed modules |
+| Sprint 12 onward | Full operational width | All four layers extracted; verification suite running; rationalization findings flowing back into sprint planning |
+| Mature | Stable | The aperture has reached the natural width for this application. New elements enter when their blast radius warrants it. |
+
+The aperture never reaches maximum width. The mature graph is the one where the team has high confidence that the elements in the graph are the ones that need to be there, and the elements not in the graph are the ones that do not.
+
+### The Decision Rule
+
+1. Default to excluding the element. The graph should not contain anything unless there is a positive reason to include it.
+2. Ask the blast-radius question. If this element changes, how many other things in other parts of the system have to change?
+3. If the answer is "many things across teams or layers", include it.
+4. If the answer is "a few things, all local", exclude it.
+5. If the answer is ambiguous, exclude it for now and revisit.
+
+The default is exclusion. Elements that should have been included will surface when their changes start cascading without graph governance, and the team can add them then with the evidence to justify inclusion.
+
+## Partition by Product
+
+We build one knowledge graph per product or application. Not per repository, and not monolithic across the portfolio. The reason is operational.
+
+![Partition by product with integration-point bridges and three agent variants that handle the partition](/diagrams/partition-by-product.svg)
+
+### The Number That Decides It
+
+A single Impact Analysis query against a 1.6M LOC application graph takes about eight minutes. The query traverses functional, design, architecture, and code nodes, surfaces the cross-layer impact, and produces a structured impact report. Eight minutes is an acceptable agent runtime budget for the spec sprint. A monolithic graph spanning ten such applications does not produce useful results in any reasonable agent runtime budget.
+
+| Partition choice | Why we rejected it |
+|---|---|
+| Per repository | Code-level dependencies between elements would require cross-graph traversal even for trivial questions |
+| Monolithic across portfolio | Cypher query performance degrades sharply as graph complexity grows; queries become slow enough to be unusable |
+| Per product or application | Queries remain efficient. Cross-product reasoning happens through specialized agents that consult multiple graphs in sequence. |
+
+### Cross-Product Reasoning
+
+Partitioning by product does not isolate the graphs. The agent fleet runs three variants of impact analysis to handle the partition.
+
+| Question type | Agent variant | Graphs consulted |
+|---|---|---|
+| What in this product is affected by this change? | Standard Impact Analysis Agent | One product graph |
+| What in other products is affected? | Cross-Product Impact Extension | Originating graph plus each downstream graph reached via integration points |
+| What duplicated capability exists across products? | Portfolio Rationalization Agent | All product graphs filtered by functional-ontology overlap |
+
+Integration points (APIs, events, shared databases, shared libraries) are the bridges between product graphs. If integration is implicit (shared global state, undocumented file-based coupling, ad-hoc HTTP calls without contracts), the cross-product analysis surfaces the gap as a finding and recommends that the integration be made explicit. The expensive cross-product traversal happens at spec time, when the team has the bandwidth to reason about it. The cheap single-product traversal happens at every change, when the team needs the answer immediately.
+
+## Extraction as Rationalization
+
+Knowledge graph extraction does not simply photograph the current state of the application. For applications with significant accumulated technical debt, the extraction process is itself a rationalization opportunity, and we treat it that way on every engagement.
+
+### A Pattern We See Often
+
+One client had divided its products along functional domains rather than technical service boundaries. The decision was organizational: separate teams for each domain, each owning a separate "product" backend. From the user's point of view, the front end was a single unified experience. The backends were treated as multiple products. After four to five years of evolution, the platform had a serious mess. Duplicate capabilities accumulated across the platform. The same outcome was implemented two or three times across "products", with different implementation paths and no shared abstraction.
+
+The org structure was designed around manual development processes, and the code is the outcome of that org structure. When we applied the methodology, the extraction did not produce one graph per "product". It worked across the unified user experience. Duplicate functionality became immediately visible in the Functional Ontology: the same outcome appeared in multiple regions of the graph with different implementation paths. The output of extraction was not a snapshot. It was a structured map of the rationalization work the team needed to do.
+
+### The Four Diagnostic Patterns Extraction Surfaces
+
+![Four diagnostic patterns: duplicate capabilities, split functionality, dead capabilities, misclassified architecture](/diagrams/brownfield-four-patterns.svg)
+
+| Pattern | What it looks like in the graph | What it means in the code |
+|---|---|---|
+| **Duplicate capabilities** | The same functional outcome appears in multiple regions of the graph with different implementation paths | The team has built the same feature two or three times, each time slightly differently, and no one realizes they are duplicates |
+| **Split functionality** | A single functional outcome depends on code modules in multiple repositories without a shared abstraction | Functionality that should live behind one interface is scattered across services, with implicit coordination requirements that nobody documents |
+| **Dead capabilities** | Functional outcomes with no live code paths reaching them | Features that were once shipped but are no longer in use, still carried in the code base |
+| **Misclassified architecture** | Services whose actual code-level dependencies do not match their named bounded context | A service named "billing" that actually owns most of the user-profile logic; an "auth" service that has accumulated reporting functionality nobody knows about |
+
+### How the Patterns Emerge Mechanically
+
+| Pattern | Graph signal that surfaces it |
+|---|---|
+| Duplicate capabilities | The same functional outcome node has multiple distinct sets of incoming edges from code nodes in different modules |
+| Split functionality | A functional outcome has code edges into modules in different repositories without a unifying intermediate node |
+| Dead capabilities | Functional outcome nodes with no incoming edges from code nodes that are still active in the runtime traversal |
+| Misclassified architecture | Service nodes whose actual code-edge density to other services does not match their declared bounded context; community-detection algorithms (Leiden modularity) flag the boundary as leaky |
+
+The verification suite runs these checks during the initial extraction phase. The output is a prioritized backlog of structural improvements that flow back into normal sprint planning. The graph is paid for by the AI productivity case. The rationalization output is value the client did not have to budget for separately.
+
+## Governance and Metrics
+
+A knowledge graph that is not measured will degrade the same way text documentation degrades. We define a measurable notion of semantic health and run verification against it on every merge.
+
+![Governance framework: 29 metrics and 14 verification checks across four cadences (P0 every merge, P1 per release, P2/P3 quarterly)](/diagrams/governance-metrics-framework.svg)
+
+### What Semantic Health Means
+
+| Condition | Why it matters |
+|---|---|
+| The graph reflects the current state of the application | If the graph has drifted from the code, agents that consume the graph produce wrong outputs |
+| The graph's structure satisfies the DAG and connectivity properties the ontology requires | Structural defects produce wrong agent outputs even when the graph is current |
+| The graph has not accumulated dead, duplicate, or misclassified nodes beyond a threshold | Accumulated structural debt degrades query performance and impact-analysis accuracy |
+
+### The 29-Metric Framework
+
+We track twenty-nine graph metrics organized into six categories.
+
+| Category | Purpose | Representative metrics | Run cadence |
+|---|---|---|---|
+| Size and Density | Growth and shape tracking | Node count, edge count, edge density, degree distributions, source and sink count | Per release (P1) |
+| DAG Depth and Reachability | Tier and layering integrity | Longest path length, topological layers, width, reachability density, transitive reduction ratio | Per release (P1) |
+| Connectivity | Fragmentation detection | Weakly connected components, giant WCC fraction | Every merge (P0) |
+| Local Structure | DAG validity; clustering anomalies | Reciprocity, self-loops, clustering coefficient | Every merge (P0) |
+| Community Structure | Bounded-context alignment; architectural drift | Leiden modularity, community count, conductance, spectral eigengap | Quarterly (P2) |
+| Centrality | Critical-node identification | PageRank, HITS (hub and authority), betweenness | Quarterly (P3) |
+
+### The 14 Verification Checks
+
+The verification checks run on every merge and gate the merge if they fail.
+
+| Priority | Checks |
+|---|---|
+| P0 (every merge) | DAG validity, source and sink existence, degree-sum identity, giant component check, self-loop audit, reciprocity check, layered structure validity |
+| P1 (per release) | Edge-type heterogeneity, longest-path plausibility, reachability sanity, transitive-reduction stability, typed-edge DAG checks |
+| P2 (quarterly) | Community-structure checks (Leiden modularity, conductance) |
+| P3 (quarterly) | Centrality-based critical-node identification |
+
+A merge that produces a graph that fails a P0 check is blocked until the underlying defect is fixed.
+
+### Concrete Thresholds
+
+The framework runs to concrete thresholds. The numbers below are what we operate to in production on a 1.6M LOC application.
+
+| Metric | Threshold | What a violation indicates |
+|---|---|---|
+| Giant WCC fraction | Greater than 0.95 | Graph fragmentation; isolated nodes indicate stale or orphaned modules |
+| Transitive reduction ratio | Less than 0.9 triggers review | More than 10% redundant edges; review for cleanup |
+| Community conductance | Greater than 0.3 flags leaky bounded contexts | Service boundaries no longer hold cleanly; architectural drift |
+| Reciprocity, self-loops, cycles | Exactly 0 in a DAG | Structural defect; immediate remediation required |
+| Longest path | Within tier count plus 1 | Layer inversion or unexpected dependency chain |
+| Ontology freshness | Less than or equal to 30 days | Stale beyond 30 days auto-triggers a refresh sprint |
+| Agent retrain trigger | Rework effort up 15% month-over-month, OR AI acceptance below 0.5, OR two or more Sev-1 incidents linked to agent code | The agent's outputs are no longer reliable against the current graph |
+
+### Custodianship Cadence
+
+| Cadence | What runs | Owner |
+|---|---|---|
+| Every merge | The P0 checks. The merge is blocked if a P0 check fails. | Implementation team, automated via CI |
+| Per release | The P1 size, density, and reachability metrics. Telemetry feeds the release retrospective. | Tech Lead, Chief Architect |
+| Quarterly | The P2 community structure and P3 centrality metrics. Output is a prioritized rationalization backlog. | Chief Architect, Ontology Maintainer |
+| Continuously | Ontology freshness check. Refresh sprints scheduled when freshness threshold is breached. | Knowledge Agent Owner |
+
+The metrics framework is what makes the knowledge graph a sustainable asset rather than another stale documentation artifact. The four ontology custodians own the framework; Accion's [Enablement Partnership](../process/enablement-partnership.md) supports them at a chosen tier of managed support.
+
+> **How Accion operationalizes graph operation**
+>
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) maintains the product-partitioned graphs, runs the brownfield extraction, runs the 29-metric framework and 14 verification checks, and runs the three Impact Analysis variants. The [Managed Support tiers](../process/enablement-partnership.md) (Light, Medium, Deep) determine which cadence of metrics review Accion runs alongside the client's custodians.
+
+---
+
+Return to [The Methodology landing](_index.md) for the framing. [The Agents](../the-agents.md) describes the agents that operate on the graph at runtime.

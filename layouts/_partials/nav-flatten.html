@@ -1,0 +1,12 @@
+{{- /*
+  Returns the content tree flattened into a single ordered slice, in the SAME
+  order the Hextra sidebar renders it: depth-first pre-order, ByWeight at each
+  level, honoring sidebar.exclude. Call with the root page (site.Home).
+  Used by components/pager.html so footer prev/next matches the left index.
+*/ -}}
+{{- $out := slice . -}}
+{{- $children := where (union .RegularPages .Sections) "Params.sidebar.exclude" "!=" true -}}
+{{- range $children.ByWeight -}}
+  {{- $out = $out | append (partial "nav-flatten.html" .) -}}
+{{- end -}}
+{{- return $out -}}

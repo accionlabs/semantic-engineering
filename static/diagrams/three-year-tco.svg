@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1400px" height="760px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,700,44)">
+        <text x="-253.945px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(17,17,17);">Three-Y<tspan x="-143.892px -127.207px " y="0px 0px ">ea</tspan>r T<tspan x="-74.399px -56.074px " y="0px 0px ">ot</tspan>al Cost of Ownership</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700,72)">
+        <text x="-367.762px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Conventional cost grows under tech debt drag. SE-driven cost falls as the knowledge asset compounds.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,60,108)">
+        <path d="M0,8L40,8" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:3px;"/>
+        <circle cx="20" cy="8" r="5" style="fill:rgb(75,85,99);"/>
+        <g transform="matrix(1,0,0,1,50,13)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Conventional engagement</text>
+        </g>
+        <path d="M300,8L340,8" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:3px;"/>
+        <circle cx="320" cy="8" r="5" style="fill:rgb(233,78,27);"/>
+        <g transform="matrix(1,0,0,1,350,13)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">SE-driven engagement</text>
+        </g>
+        <rect x="600" y="2" width="14" height="14" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,624,13)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">Knowledge asset value (compounds under SE)</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,120,160)">
+        <path d="M0,0L0,380" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M0,380L1200,380" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <g transform="matrix(-0,-1,1,-0,-90,190)">
+            <text x="-75.145px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Annual cost (relative)</text>
+        </g>
+        <path d="M-5,0L0,0" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,-12,6)">
+            <text x="-26.695px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">150</text>
+        </g>
+        <path d="M-5,95L0,95" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,-12,101)">
+            <text x="-25.516px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">1<tspan x="-17.797px -8.898px " y="0px 0px ">12</tspan></text>
+        </g>
+        <path d="M-5,190L0,190" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,-12,196)">
+            <text x="-17.797px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">75</text>
+        </g>
+        <path d="M-5,285L0,285" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,-12,291)">
+            <text x="-17.797px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">38</text>
+        </g>
+        <path d="M-5,380L0,380" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,-12,386)">
+            <text x="-8.898px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">0</text>
+        </g>
+        <path d="M200,380L200,386" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <path d="M600,380L600,386" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <path d="M1000,380L1000,386" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <g transform="matrix(1,0,0,1,200,408)">
+            <text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Y<tspan x="-13.633px -4.734px " y="0px 0px ">ea</tspan>r 1</text>
+        </g>
+        <g transform="matrix(1,0,0,1,600,408)">
+            <text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Y<tspan x="-13.633px -4.734px " y="0px 0px ">ea</tspan>r 2</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1000,408)">
+            <text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Y<tspan x="-13.633px -4.734px " y="0px 0px ">ea</tspan>r 3</text>
+        </g>
+        <path d="M200,380L200,360L600,280L1000,140L1000,380L200,380Z" style="fill:rgb(253,232,221);fill-opacity:0.85;fill-rule:nonzero;"/>
+        <g transform="matrix(1,0,0,1,800,296)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-BoldOblique', 'Helvetica';font-weight:700;font-style:italic;font-size:16px;fill:rgb(233,78,27);">Knowledge asset value</text>
+        </g>
+        <g transform="matrix(1,0,0,1,800,316)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:rgb(233,78,27);">compounds with every</text>
+        </g>
+        <g transform="matrix(1,0,0,1,800,332)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:rgb(233,78,27);">governed addition</text>
+        </g>
+        <path d="M200,126L600,101L1000,25" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:3px;"/>
+        <circle cx="200" cy="126" r="7" style="fill:rgb(75,85,99);"/>
+        <circle cx="600" cy="101" r="7" style="fill:rgb(75,85,99);"/>
+        <circle cx="1000" cy="25" r="7" style="fill:rgb(75,85,99);"/>
+        <path d="M200,76L600,152L1000,203" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:3px;"/>
+        <circle cx="200" cy="76" r="7" style="fill:rgb(233,78,27);"/>
+        <circle cx="600" cy="152" r="7" style="fill:rgb(233,78,27);"/>
+        <circle cx="1000" cy="203" r="7" style="fill:rgb(233,78,27);"/>
+        <g transform="matrix(1,0,0,1,200,42)">
+            <g transform="matrix(1,0,0,1,-104,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">Higher <tspan x="51.297px 60.5px 69.398px " y="0px 0px 0px ">Yea</tspan>r 1 cost</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-104,16)">
+                <g transform="matrix(16,0,0,16,132.085938,0)">
+                </g>
+                <g transform="matrix(16,0,0,16,136.53125,0)">
+                </g>
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">extraction + agent ﬂeet build</text>
+            </g>
+        </g>
+        <path d="M200,60L200,73" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:1px;stroke-dasharray:3,2;"/>
+        <g transform="matrix(1,0,0,1,890,-12)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Conventional accelerates</text>
+            <g transform="matrix(1,0,0,1,0,16)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">tech debt drag in <tspan x="123.359px 132.562px 141.461px " y="0px 0px 0px ">Yea</tspan>r 3</text>
+            </g>
+        </g>
+        <path d="M1000,22L1000,-2" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1px;stroke-dasharray:3,2;"/>
+        <g transform="matrix(1,0,0,1,880,228)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">SE cost falls</text>
+            <g transform="matrix(1,0,0,1,0,16)">
+                <g transform="matrix(16,0,0,16,44.484375,0)">
+                </g>
+                <g transform="matrix(16,0,0,16,48.929688,0)">
+                </g>
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">agent ﬂeet matures; debt does not accumulate</text>
+            </g>
+        </g>
+        <path d="M1000,206L1000,226" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:1px;stroke-dasharray:3,2;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,60,620)">
+        <path d="M1280,14L1280,106C1280,113.727 1273.727,120 1266,120L14,120C6.273,120 0,113.727 0,106L0,14C0,6.273 6.273,0 14,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,22,34)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">C<tspan x="11.875px 23.749px 37.398px 49.272px 58.491px 68.303px 78.396px 83.162px 94.153px 105.145px 109.911px 119.129px 124.777px 135.769px 146.761px 157.753px 169.627px 174.393px 186.267px 199.033px 212.681px 222.493px 233.485px 245.36px 250.125px 261.117px 273.882px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMULATIVE 3-YEAR COMPARISON</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,60,52)">
+            <g transform="matrix(1,0,0,1,0,32)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(75,85,99);">350</text>
+            </g>
+            <g transform="matrix(1,0,0,1,100,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">C<tspan x="11.795px 24.48px 36.275px 47.187px 58.098px 69.893px 79.907px 84.592px 97.277px 109.072px 119.984px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ONVENTIONAL</tspan></text>
+            </g>
+            <g transform="matrix(1,0,0,1,100,42)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">3-year cumulative cost</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,440,52)">
+            <g transform="matrix(1,0,0,1,0,32)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">280</text>
+            </g>
+            <g transform="matrix(1,0,0,1,100,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">S<tspan x="10.912px 21.824px 27.392px 39.187px 50.981px 55.667px 66.578px 77.49px " y="0px 0px 0px 0px 0px 0px 0px 0px ">E-DRIVEN</tspan></text>
+            </g>
+            <g transform="matrix(1,0,0,1,100,42)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">3-year cumulative cost</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,820,52)">
+            <g transform="matrix(1,0,0,1,0,32)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">−20%</text>
+            </g>
+            <g transform="matrix(1,0,0,1,140,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">TO<tspan x="22.418px 27.103px 36.687px 45.825px 54.963px 69.43px 74.115px 83.254px 95.939px 111.281px 122.192px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px "> −30% LOWER</tspan></text>
+            </g>
+            <g transform="matrix(1,0,0,1,140,42)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">cumulative cost; value compounds</text>
+            </g>
+        </g>
+    </g>
+</svg>

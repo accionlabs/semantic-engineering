@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1400px" height="920px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,700,44)">
+        <text x="-402.247px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:28px;fill:rgb(17,17,17);">Cross-Layer T<tspan x="-215.489px -204.593px " y="0px 0px ">ra</tspan>versal: One User Story Through Four Layers</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700,72)">
+        <text x="-309.474px" y="0px" style="font-family:'Helvetica';font-size:17px;fill:rgb(75,85,99);">The Impact <tspan x="-220.647px -209.308px " y="0px 0px ">An</tspan>alysis <tspan x="-153.552px -142.213px " y="0px 0px ">Ag</tspan>ent surfaces the full blast radius before any code is written.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,220,110)">
+        <path d="M960,14L960,72C960,79.727 953.727,86 946,86L14,86C6.273,86 0,79.727 0,72L0,14C0,6.273 6.273,0 14,0L946,0C953.727,0 960,6.273 960,14Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,20,26)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">U<tspan x="9.518px 18.319px 27.12px 36.638px 40.38px 49.181px 57.023px 67.265px 76.307px 84.88px 88.621px 93.081px 101.881px 111.4px 121.641px 131.16px 140.678px 150.196px 158.267px 162.009px 172.251px 184.651px 194.169px 202.97px 212.488px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">SER STORY (PRODUCT OWNER)</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,60)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:19px;fill:rgb(17,17,17);">&quot;Let users choose how often they receive email alerts for each saved search: daily<tspan x="689.706px 694.984px " y="0px 0px ">, </tspan>weekly<tspan x="756.938px 762.217px " y="0px 0px ">, </tspan>or of<tspan x="805.181px 810.459px " y="0px 0px ">f.</tspan>&quot;</text>
+        </g>
+    </g>
+    <g>
+        <path d="M700,200L700,240" style="fill:none;fill-rule:nonzero;"/>
+        <path d="M703,234L700,240L697,234L703,234Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+        <path d="M700,200L700,235.2" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,420,250)">
+        <path d="M560,14L560,62C560,69.727 553.727,76 546,76L14,76C6.273,76 0,69.727 0,62L0,14C0,6.273 6.273,0 14,0L546,0C553.727,0 560,6.273 560,14Z" style="fill:rgb(75,85,99);stroke:rgb(17,17,17);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,3,16)">
+            <g opacity="0.9">
+                <circle cx="22" cy="22" r="8" style="fill:none;stroke:white;stroke-width:2px;"/>
+                <circle cx="22" cy="22" r="3" style="fill:white;"/>
+                <rect x="20" y="4" width="4" height="6" style="fill:white;"/>
+                <rect x="20" y="34" width="4" height="6" style="fill:white;"/>
+                <rect x="4" y="20" width="6" height="4" style="fill:white;"/>
+                <rect x="34" y="20" width="6" height="4" style="fill:white;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,300,46)">
+            <text x="-251.016px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:white;">Impact <tspan x="-181.729px -167.285px " y="0px 0px ">An</tspan>alysis <tspan x="-94.639px -80.195px " y="0px 0px ">Ag</tspan>ent traverses the four-layer graph</text>
+        </g>
+    </g>
+    <path d="M700,328L700,360" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;"/>
+    <path d="M200,360L200,380M510,360L510,380M820,360L820,380M1130,360L1130,380" style="fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;"/>
+    <path d="M200,360L1130,360" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;"/>
+    <path d="M200,380L196,374L204,374L200,380Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+    <path d="M510,380L506,374L514,374L510,380Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+    <path d="M820,380L816,374L824,374L820,380Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+    <path d="M1130,380L1126,374L1134,374L1130,380Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+    <g transform="matrix(1,0,0,1,60,390)">
+        <path d="M280,12L280,268C280,274.623 274.623,280 268,280L12,280C5.377,280 0,274.623 0,268L0,12C0,5.377 5.377,0 12,0L268,0C274.623,0 280,5.377 280,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M280,12L280,34C280,40.623 274.623,46 268,46L12,46C5.377,46 0,40.623 0,34L0,12C0,5.377 5.377,0 12,0L268,0C274.623,0 280,5.377 280,12Z" style="fill:rgb(75,85,99);"/>
+        <rect x="0" y="34" width="280" height="12" style="fill:rgb(75,85,99);"/>
+        <g transform="matrix(1,0,0,1,140,30)">
+            <text x="-48.024px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:19px;fill:white;">Functional</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,76)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">2</text>
+            <g transform="matrix(1,0,0,1,44,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">OU<tspan x="18.12px 25.51px 34.236px 43.63px 53.686px " y="0px 0px 0px 0px 0px ">TCOME</tspan>S</text>
+            </g>
+            <g transform="matrix(1,0,0,1,44,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">MO<tspan x="19.45px 28.176px 31.57px 38.96px 42.354px " y="0px 0px 0px 0px 0px ">DIFIE</tspan>D</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,136)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">2</text>
+            <g transform="matrix(1,0,0,1,44,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">SC<tspan x="16.79px 24.854px 33.58px 42.306px 51.032px 54.426px 63.82px " y="0px 0px 0px 0px 0px 0px 0px ">ENARIOS</tspan></text>
+            </g>
+            <g transform="matrix(1,0,0,1,44,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">AD<tspan x="17.452px 26.178px 34.242px " y="0px 0px 0px ">DED</tspan></text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,196)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">2</text>
+            <g transform="matrix(1,0,0,1,44,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">EX<tspan x="16.128px 19.522px 27.586px 34.976px 38.37px 47.096px 56.49px 59.884px 67.948px 76.674px 84.738px 93.464px 102.19px 110.916px 114.31px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ISTING SCENARIO</tspan>S</text>
+            </g>
+            <g transform="matrix(1,0,0,1,44,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">T<tspan x="7.179px 16.573px 25.299px 34.025px 42.751px 50.815px " y="0px 0px 0px 0px 0px 0px ">OUCHED</tspan></text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,256)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">3</text>
+            <g transform="matrix(1,0,0,1,44,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">AC<tspan x="17.452px 24.842px 28.236px 37.63px 46.356px " y="0px 0px 0px 0px 0px ">TIONS</tspan></text>
+            </g>
+            <g transform="matrix(1,0,0,1,44,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">MO<tspan x="19.45px 28.176px 31.57px 38.96px 42.354px " y="0px 0px 0px 0px 0px ">DIFIE</tspan>D</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,370,390)">
+        <path d="M280,12L280,268C280,274.623 274.623,280 268,280L12,280C5.377,280 0,274.623 0,268L0,12C0,5.377 5.377,0 12,0L268,0C274.623,0 280,5.377 280,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M280,12L280,34C280,40.623 274.623,46 268,46L12,46C5.377,46 0,40.623 0,34L0,12C0,5.377 5.377,0 12,0L268,0C274.623,0 280,5.377 280,12Z" style="fill:rgb(75,85,99);"/>
+        <rect x="0" y="34" width="280" height="12" style="fill:rgb(75,85,99);"/>
+        <g transform="matrix(1,0,0,1,140,30)">
+            <text x="-31.673px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:19px;fill:white;">Design</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,90)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">3</text>
+            <g transform="matrix(1,0,0,1,44,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">CO<tspan x="18.12px 28.176px 36.24px 45.634px 54.36px 62.424px 71.15px " y="0px 0px 0px 0px 0px 0px 0px ">MPONENT</tspan>S</text>
+            </g>
+            <g transform="matrix(1,0,0,1,44,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">AF<tspan x="16.116px 23.506px 31.57px 40.296px 47.686px " y="0px 0px 0px 0px 0px ">FECTE</tspan>D</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,164)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">3</text>
+            <g transform="matrix(1,0,0,1,44,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">US<tspan x="16.79px " y="0px ">E</tspan>R</text>
+            </g>
+            <g transform="matrix(1,0,0,1,44,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">JO<tspan x="16.128px 24.854px 33.58px 42.306px 50.37px " y="0px 0px 0px 0px 0px ">URNEY</tspan>S</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,238)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">1</text>
+            <g transform="matrix(1,0,0,1,44,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">NE<tspan x="16.79px 28.176px 31.57px 39.634px 49.69px 58.416px 61.81px " y="0px 0px 0px 0px 0px 0px 0px ">W EMAIL</tspan></text>
+            </g>
+            <g transform="matrix(1,0,0,1,44,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">TE<tspan x="15.454px 25.51px 33.574px 40.964px 48.805px 56.195px " y="0px 0px 0px 0px 0px 0px ">MPLATE</tspan></text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,680,390)">
+        <path d="M280,12L280,268C280,274.623 274.623,280 268,280L12,280C5.377,280 0,274.623 0,268L0,12C0,5.377 5.377,0 12,0L268,0C274.623,0 280,5.377 280,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M280,12L280,34C280,40.623 274.623,46 268,46L12,46C5.377,46 0,40.623 0,34L0,12C0,5.377 5.377,0 12,0L268,0C274.623,0 280,5.377 280,12Z" style="fill:rgb(75,85,99);"/>
+        <rect x="0" y="34" width="280" height="12" style="fill:rgb(75,85,99);"/>
+        <g transform="matrix(1,0,0,1,140,30)">
+            <text x="-55.961px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:19px;fill:white;">Architecture</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,100)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">14</text>
+            <g transform="matrix(1,0,0,1,62,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">AR<tspan x="17.452px 26.178px 34.904px 38.298px 45.688px 53.752px 62.478px 69.868px 78.594px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">CHITECTUR</tspan>E</text>
+            </g>
+            <g transform="matrix(1,0,0,1,62,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">NO<tspan x="18.12px 26.846px 34.91px 42.974px 46.368px 53.547px 62.941px 71.667px 80.393px 89.119px 97.183px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">DES TOUCHED</tspan></text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,156)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:rgb(17,17,17);">Services, data stores,</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,178)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:rgb(17,17,17);">queues, infrastructure.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,218)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">One new task family</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,240)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">per geographic region.</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,990,390)">
+        <path d="M280,12L280,268C280,274.623 274.623,280 268,280L12,280C5.377,280 0,274.623 0,268L0,12C0,5.377 5.377,0 12,0L268,0C274.623,0 280,5.377 280,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M280,12L280,34C280,40.623 274.623,46 268,46L12,46C5.377,46 0,40.623 0,34L0,12C0,5.377 5.377,0 12,0L268,0C274.623,0 280,5.377 280,12Z" style="fill:rgb(75,85,99);"/>
+        <rect x="0" y="34" width="280" height="12" style="fill:rgb(75,85,99);"/>
+        <g transform="matrix(1,0,0,1,140,30)">
+            <text x="-23.75px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:19px;fill:white;">Code</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,100)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">15</text>
+            <g transform="matrix(1,0,0,1,62,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">SP<tspan x="16.128px 24.192px 32.918px 36.312px 43.702px " y="0px 0px 0px 0px 0px ">ECIFI</tspan>C</text>
+            </g>
+            <g transform="matrix(1,0,0,1,62,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">CO<tspan x="18.12px 26.846px 34.91px 38.304px 47.03px 55.756px 64.482px 73.208px 82.602px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">DE CHANGE</tspan>S</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,168)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(233,78,27);">5</text>
+            <g transform="matrix(1,0,0,1,44,-4)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">DI<tspan x="12.12px 20.184px 27.574px 30.968px 39.694px " y="0px 0px 0px 0px 0px ">STINC</tspan>T</text>
+            </g>
+            <g transform="matrix(1,0,0,1,44,14)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:rgb(75,85,99);">RE<tspan x="16.79px 24.854px 34.248px 42.312px 45.706px 52.885px 62.279px 71.005px 74.399px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">POSITORIE</tspan>S</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,240)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:rgb(17,17,17);">Modules, functions,</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,262)">
+            <g transform="matrix(14,0,0,14,98.075195,0)">
+            </g>
+            <g transform="matrix(14,0,0,14,101.964844,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:rgb(17,17,17);">endpoints identiﬁed.</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,60,700)">
+        <path d="M595,12L595,118C595,124.623 589.623,130 583,130L12,130C5.377,130 0,124.623 0,118L0,12C0,5.377 5.377,0 12,0L583,0C589.623,0 595,5.377 595,12Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,22,32)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">D<tspan x="10.25px 19.468px 27.128px " y="0px 0px 0px ">ATA</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,64)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">One database column already exists and supports the change.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,92)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">No DDL<tspan x="52.8px 56.968px " y="0px 0px "> r</tspan>equired. No migration. Zero schema risk surfaces in the</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,114)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">impact report before a single line of code is written.</text>
+        </g>
+        <path d="M1210,12L1210,118C1210,124.623 1204.623,130 1198,130L627,130C620.377,130 615,124.623 615,118L615,12C615,5.377 620.377,0 627,0L1198,0C1204.623,0 1210,5.377 1210,12Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,637,32)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">C<tspan x="10.25px 20.501px 31.53px 41.008px 50.486px 55.288px 63.98px 72.945px 82.423px 91.901px 102.151px 106.181px 117.983px 127.201px 135.893px 146.143px 150.173px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ROSS-LAYER MATRIX</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,637,64)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">One row per affected scenario.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,637,92)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">Each row links the Functional outcome, the Design component,</text>
+        </g>
+        <g transform="matrix(1,0,0,1,637,114)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">the <tspan x="24.199px 34.204px " y="0px 0px ">Ar</tspan>chitecture service, and the Code module that implements it.</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,700,880)">
+        <text x="-288.59px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:rgb(75,85,99);">The senior developer who used to assemble this context manually now reviews it.</text>
+    </g>
+</svg>

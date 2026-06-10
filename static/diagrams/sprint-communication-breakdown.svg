@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" width="1400" height="820" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
+    <marker id="arrowGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/></marker>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .role { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: 600; fill: #111111; }
+      .roleSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #4b5563; }
+      .ques { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; font-style: italic; }
+      .cost { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #4b5563; }
+      .center { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 20px; font-weight: 600; fill: #111111; }
+      .centerSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #111111; }
+      .summary { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-style: italic; fill: #E94E1B; font-weight: 600; }
+    </style>
+  </defs>
+
+  <text x="700" y="45" text-anchor="middle" class="h1">A Single Sprint, One Developer's Day</text>
+  <text x="700" y="72" text-anchor="middle" class="sub">Five bilateral threads, each costing context-switch time, each dropping information. None of it captured for the next developer.</text>
+
+  <rect x="80" y="130" width="290" height="130" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="225" y="165" text-anchor="middle" class="role">Product Owner</text>
+  <text x="225" y="195" text-anchor="middle" class="ques">"Which persona is this for?"</text>
+  <text x="225" y="215" text-anchor="middle" class="ques">"What about disabled accounts?"</text>
+  <text x="225" y="245" text-anchor="middle" class="cost">2 paragraphs back · 12 min PO time</text>
+
+  <rect x="555" y="130" width="290" height="130" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="700" y="165" text-anchor="middle" class="role">Architect</text>
+  <text x="700" y="195" text-anchor="middle" class="ques">"Which service owns alert prefs?"</text>
+  <text x="700" y="215" text-anchor="middle" class="ques">"Why was it moved last quarter?"</text>
+  <text x="700" y="245" text-anchor="middle" class="cost">Wiki was wrong · 18 min architect time</text>
+
+  <rect x="1030" y="130" width="290" height="130" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="1175" y="165" text-anchor="middle" class="role">UX Designer</text>
+  <text x="1175" y="195" text-anchor="middle" class="ques">"Toggle, Radio, or Dropdown?"</text>
+  <text x="1175" y="215" text-anchor="middle" class="ques">"For three mutually-exclusive choices?"</text>
+  <text x="1175" y="245" text-anchor="middle" class="cost">30-second DM · would have picked wrong</text>
+
+  <rect x="500" y="380" width="400" height="140" rx="12" ry="12" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2.5"/>
+  <text x="700" y="425" text-anchor="middle" class="center">The Developer</text>
+  <text x="700" y="458" text-anchor="middle" class="centerSub">implementing the saved-search alert</text>
+  <text x="700" y="478" text-anchor="middle" class="centerSub">frequency feature this sprint</text>
+  <text x="700" y="505" text-anchor="middle" class="cost" fill="#E94E1B">composes 5 threads · pays the Manual Translation Tax</text>
+
+  <rect x="80" y="600" width="380" height="130" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="270" y="635" text-anchor="middle" class="role">Original orders-team engineer</text>
+  <text x="270" y="665" text-anchor="middle" class="ques">"What was the 2022 tax workaround?"</text>
+  <text x="270" y="695" text-anchor="middle" class="cost" fill="#9ca3af">left the company 8 months ago</text>
+  <text x="270" y="713" text-anchor="middle" class="cost" fill="#9ca3af">closest collaborator half-remembers</text>
+
+  <rect x="940" y="600" width="380" height="130" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="1130" y="635" text-anchor="middle" class="role">Notifications-team owner</text>
+  <text x="1130" y="665" text-anchor="middle" class="ques">"Does the worker filter by frequency?"</text>
+  <text x="1130" y="695" text-anchor="middle" class="cost" fill="#9ca3af">busy this week · ping again Monday</text>
+  <text x="1130" y="713" text-anchor="middle" class="cost" fill="#9ca3af">answer arrives 3 days later</text>
+
+  <path d="M 225 260 L 555 390" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 700 260 L 700 380" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1175 260 L 850 390" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 270 600 L 555 510" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrowGrey)"/>
+  <path d="M 1130 600 L 850 510" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="5,4" marker-end="url(#arrowGrey)"/>
+
+  <text x="700" y="780" text-anchor="middle" class="summary">Day's coordination total: ~90 minutes asker time, ~50 minutes custodian/peer time. Nothing captured for the next developer who asks the same question.</text>
+</svg>

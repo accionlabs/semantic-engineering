@@ -1,0 +1,45 @@
+{{- /*
+  Project override of Hextra's link render hook.
+  Adds resolution of RELATIVE markdown links (e.g. `the-methodology/_index.md`,
+  `../the-team/custodianship.md`, `manual-translation-tax.md#anchor`) which the
+  stock Hextra hook leaves untouched (it only resolves links starting with "/").
+  Everything else falls back to Hextra's original behaviour.
+*/ -}}
+{{- $dest := .Destination -}}
+{{- $url := urls.Parse $dest -}}
+{{- $isExternal := strings.HasPrefix $dest "http" -}}
+
+{{- /* 1. Relative markdown links: resolve via GetPage. */ -}}
+{{- if and $dest (not $isExternal) (not (hasPrefix $dest "/")) (not (hasPrefix $dest "#")) (strings.Contains $url.Path ".md") -}}
+  {{- with .PageInner.GetPage $url.Path -}}
+    {{- $fragment := cond $url.Fragment (printf "#%s" $url.Fragment) "" -}}
+    {{- $dest = printf "%s%s" .RelPermalink $fragment -}}
+  {{- else -}}
+    {{- warnf "[render-link] unresolved markdown link %q in %q" $dest $.Page.Path -}}
+  {{- end -}}
+
+{{- /* 2. Absolute links: stock Hextra behaviour. */ -}}
+{{- else if and $dest (hasPrefix $dest "/") -}}
+  {{- with or (.PageInner.GetPage $url.Path) (.PageInner.Resources.Get $url.Path) (resources.Get $url.Path) -}}
+    {{- $query := cond $url.RawQuery (printf "?%s" $url.RawQuery) "" -}}
+    {{- $fragment := cond $url.Fragment (printf "#%s" $url.Fragment) "" -}}
+    {{- $dest = printf "%s%s%s" .RelPermalink $query $fragment -}}
+  {{- else -}}
+    {{- $hasBasePrefix := and (ne site.Home.RelPermalink "/") (hasPrefix $dest site.Home.RelPermalink) -}}
+    {{- if not $hasBasePrefix -}}
+      {{- $dest = (relURL (strings.TrimPrefix "/" $dest)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- with . -}}
+<a href="{{ $dest | safeURL }}"
+   {{- with .Title -}}title="{{ . }}"{{- end -}}
+   {{- if $isExternal -}}target="_blank" rel="noopener"{{- end -}}
+>
+  {{- .Text | safeHTML -}}
+  {{- if and .Page.Site.Params.externalLinkDecoration $isExternal -}}
+    {{- partial "utils/icon.html" (dict "name" "arrow-up-right" "attributes" `class="hx:inline hx:rtl:rotate-270 hx:align-baseline" height="1em" aria-hidden="true"`) -}}
+  {{- end -}}
+</a>
+{{- end -}}

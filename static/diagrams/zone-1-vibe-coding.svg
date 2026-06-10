@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1400px" height="850px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,700,28)">
+        <g>
+            <g transform="matrix(1,0,0,1,-188.297,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:rgb(17,17,17);">Zone 1 · Manual / V</text>
+            </g>
+            <g transform="matrix(1,0,0,1,53.98,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:rgb(17,17,17);">ibe Coding</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,700,52)">
+        <g>
+            <g transform="matrix(1,0,0,1,-253.521,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:rgb(75,85,99);">Conversational</text>
+            </g>
+            <g transform="matrix(1,0,0,1,-157.011,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:rgb(75,85,99);">AI use · no formal spec · developer + coding agent iterate together</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,30,82)">
+        <g>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">P</text>
+            <g transform="matrix(1,0,0,1,7.502,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">E<tspan x="7.502px 15.611px 23.113px 26.334px 33.836px 40.72px 48.222px 56.331px 63.215px 66.436px 74.545px 83.266px 91.375px 98.259px 105.761px 113.263px 120.147px 123.368px 126.59px 129.811px 137.92px 146.028px 154.137px 162.246px 165.467px 172.969px 181.078px 184.299px 187.52px 195.629px 198.85px 205.735px 213.843px 221.345px 224.566px 232.675px 240.784px 248.286px 255.17px 263.891px 272px 275.221px 283.33px 291.439px 298.941px 301.721px 304.943px 313.051px 320.553px 328.662px 336.771px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RSISTENT CONTEXT · CARRIED IN THE CUSTODIANS&apos; HEADS</tspan></text>
+            </g>
+        </g>
+    </g>
+    <g id="signals" transform="matrix(1,0,0,1,0,-10)">
+        <g transform="matrix(1,0,0,1,30,100)">
+            <path d="M200,5L200,67C200,69.76 197.76,72 195,72L5,72C2.24,72 0,69.76 0,67L0,5C0,2.24 2.24,0 5,0L195,0C197.76,0 200,2.24 200,5Z" style="fill:rgb(245,245,245);stroke:rgb(156,163,175);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,100,28)">
+                <g transform="matrix(1,0,0,1,-55.996,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Business strategy</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,46)">
+                <g transform="matrix(1,0,0,1,-56.899,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">customer conversations,</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,60)">
+                <g transform="matrix(1,0,0,1,-43.477,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">executive priorities</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,258,100)">
+            <path d="M200,5L200,67C200,69.76 197.76,72 195,72L5,72C2.24,72 0,69.76 0,67L0,5C0,2.24 2.24,0 5,0L195,0C197.76,0 200,2.24 200,5Z" style="fill:rgb(245,245,245);stroke:rgb(156,163,175);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,100,28)">
+                <g transform="matrix(1,0,0,1,-43.364,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">User research</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,46)">
+                <g transform="matrix(1,0,0,1,-61.564,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">interviews, support tickets,</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,60)">
+                <g transform="matrix(1,0,0,1,-31.223,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">NPS patterns</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,486,100)">
+            <path d="M200,5L200,67C200,69.76 197.76,72 195,72L5,72C2.24,72 0,69.76 0,67L0,5C0,2.24 2.24,0 5,0L195,0C197.76,0 200,2.24 200,5Z" style="fill:rgb(245,245,245);stroke:rgb(156,163,175);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,100,28)">
+                <g transform="matrix(1,0,0,1,-36.842,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Compliance</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,46)">
+                <g transform="matrix(1,0,0,1,-38.516,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">regulatory shifts,</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,60)">
+                <g transform="matrix(1,0,0,1,-51.362,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">jurisdiction obligations</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,714,100)">
+            <path d="M200,5L200,67C200,69.76 197.76,72 195,72L5,72C2.24,72 0,69.76 0,67L0,5C0,2.24 2.24,0 5,0L195,0C197.76,0 200,2.24 200,5Z" style="fill:rgb(245,245,245);stroke:rgb(156,163,175);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,100,28)">
+                <g>
+                    <g transform="matrix(1,0,0,1,-53.101,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">V</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-45.141,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">endor contracts</text>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,46)">
+                <g transform="matrix(1,0,0,1,-43.182,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">infrastructure cost,</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,60)">
+                <g transform="matrix(1,0,0,1,-43.474,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">service constraints</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,942,100)">
+            <path d="M200,5L200,67C200,69.76 197.76,72 195,72L5,72C2.24,72 0,69.76 0,67L0,5C0,2.24 2.24,0 5,0L195,0C197.76,0 200,2.24 200,5Z" style="fill:rgb(245,245,245);stroke:rgb(156,163,175);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,100,26)">
+                <g transform="matrix(1,0,0,1,-47.312,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Industry trends</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,44)">
+                <g>
+                    <g transform="matrix(1,0,0,1,-64.674,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">cloud, security</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,1.664,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">, frameworks,</text>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,58)">
+                <g>
+                    <g transform="matrix(1,0,0,1,-52.128,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">accessibility</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,3.115,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">, platforms</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,1170,100)">
+            <path d="M200,5L200,67C200,69.76 197.76,72 195,72L5,72C2.24,72 0,69.76 0,67L0,5C0,2.24 2.24,0 5,0L195,0C197.76,0 200,2.24 200,5Z" style="fill:rgb(245,245,245);stroke:rgb(156,163,175);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,100,28)">
+                <g transform="matrix(1,0,0,1,-55.986,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Product trajectory</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,46)">
+                <g transform="matrix(1,0,0,1,-42.026,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">velocity of change</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,100,60)">
+                <g transform="matrix(1,0,0,1,-19.554,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">per area</text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,30,175)">
+        <path d="M0,0L1340,0L1010,24L330,24L0,0Z" style="fill:rgb(245,245,245);fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1.2px;"/>
+        <g transform="matrix(1,0,0,1,669.9285,17)">
+            <g>
+                <g transform="matrix(1,0,0,1,-96.669,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">I</text>
+                </g>
+                <g transform="matrix(1,0,0,1,-93.469,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">N<tspan x="8.086px 14.949px 22.429px 31.128px 39.215px 47.301px 54.164px 61.644px 69.73px 72.93px 81.016px 88.496px 91.695px 98.557px 106.644px 114.124px 117.323px 125.41px 133.497px 140.977px 147.84px 156.539px 164.626px 167.825px 175.912px 183.999px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">TEGRATED BY THE CUSTODIANS</tspan></text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g id="custodians" transform="matrix(1,0,0,1,0,-10)">
+        <g transform="matrix(1,0,0,1,40,220)">
+            <path d="M240,40C240,62.077 222.077,80 200,80L40,80C17.923,80 0,62.077 0,40C0,17.923 17.923,0 40,0L200,0C222.077,0 240,17.923 240,40Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,120,32)">
+                <g transform="matrix(1,0,0,1,-53.756,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">Product Owner</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,54)">
+                <g transform="matrix(1,0,0,1,-33.631,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:rgb(75,85,99);">holds the why</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,400,220)">
+            <path d="M240,40C240,62.077 222.077,80 200,80L40,80C17.923,80 0,62.077 0,40C0,17.923 17.923,0 40,0L200,0C222.077,0 240,17.923 240,40Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,120,32)">
+                <g transform="matrix(1,0,0,1,-32.509,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">Architect</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,54)">
+                <g transform="matrix(1,0,0,1,-38.83,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:rgb(75,85,99);">holds the where</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,760,220)">
+            <path d="M240,40C240,62.077 222.077,80 200,80L40,80C17.923,80 0,62.077 0,40C0,17.923 17.923,0 40,0L200,0C222.077,0 240,17.923 240,40Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,120,32)">
+                <g transform="matrix(1,0,0,1,-44.597,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">UX Designer</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,54)">
+                <g transform="matrix(1,0,0,1,-53.193,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:rgb(75,85,99);">holds the how-it-looks</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,1120,220)">
+            <path d="M240,40C240,62.077 222.077,80 200,80L40,80C17.923,80 0,62.077 0,40C0,17.923 17.923,0 40,0L200,0C222.077,0 240,17.923 240,40Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,120,32)">
+                <g>
+                    <g transform="matrix(1,0,0,1,-64.46,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">Engineering T</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,34.438,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">eam</text>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,54)">
+                <g transform="matrix(1,0,0,1,-63.288,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:rgb(75,85,99);">holds what-the-code-does</text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-10)">
+        <g transform="matrix(1,0,0,0.783333,0,65)">
+            <g transform="matrix(1,0,0,1.276596,0,-70.212766)">
+                <path d="M162.695,331.611L160,337L157.305,331.611L162.695,331.611Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+                <path d="M160,290L160,332.689" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,0.783333,-37,271)">
+            <g transform="matrix(1,0,0,1.276596,37,-333.191489)">
+                <path d="M126.649,609.588L124,615L121.26,609.633L126.649,609.588Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+                <path d="M123,496C123,496 123.784,589.343 123.964,610.689" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,0.783333,0,65)">
+            <g transform="matrix(1,0,0,1.276596,0,-70.212766)">
+                <path d="M522.695,331.611L520,337L517.305,331.611L522.695,331.611Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+                <path d="M520,290L520,332.689" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,0.783333,0,65)">
+            <g transform="matrix(1,0,0,1.276596,0,-70.212766)">
+                <path d="M882.695,331.611L880,337L877.305,331.611L882.695,331.611Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+                <path d="M880,290L880,332.689" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,0.783333,0,65)">
+            <g transform="matrix(1,0,0,1.276596,0,-70.212766)">
+                <path d="M1242.695,331.611L1240,337L1237.305,331.611L1242.695,331.611Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+                <path d="M1240,290L1240,332.689" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,170,325)">
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10px;fill:rgb(75,85,99);">writes</text>
+    </g>
+    <g transform="matrix(1,0,0,1,530,325)">
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10px;fill:rgb(75,85,99);">writes</text>
+    </g>
+    <g transform="matrix(1,0,0,1,890,325)">
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10px;fill:rgb(75,85,99);">hands off</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1250,325)">
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10px;fill:rgb(75,85,99);">holds</text>
+    </g>
+    <g transform="matrix(1,0,0,1.109677,0,-66.922581)">
+        <path d="M1380,373.012L1380,509.988C1380,514.962 1375.519,519 1370,519L30,519C24.481,519 20,514.962 20,509.988L20,373.012C20,368.038 24.481,364 30,364L1370,364C1375.519,364 1380,368.038 1380,373.012Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;stroke-dasharray:8,4;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,30,354)">
+        <g>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">F</text>
+            <g transform="matrix(1,0,0,1,6.884,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">O<tspan x="8.721px 16.83px 24.939px 28.16px 36.269px 44.99px 53.099px 56.32px 63.204px 66.426px 73.928px 82.036px 85.258px 93.367px 101.475px 108.36px 111.581px 118.464px 126.573px 134.682px 141.566px 149.068px 152.289px 155.511px 158.732px 167.453px 175.562px 183.064px 186.285px 193.787px 201.289px 209.398px 212.619px 220.728px 228.836px 236.338px 243.223px 251.944px 260.053px 263.274px 271.383px 279.492px 282.713px 285.934px 289.155px 297.264px 304.766px 312.875px 320.984px 328.486px 331.707px 339.816px 347.925px 356.033px 363.535px 371.644px 374.865px 382.367px 390.476px 397.978px 405.48px 412.982px 421.091px 429.2px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UR CODIFIED ARTIFACTS · ONE PER CUSTODIAN · DECAY UNDER PRESSURE</tspan></text>
+            </g>
+        </g>
+    </g>
+    <g id="text-artifacts" transform="matrix(1,0,0,1,0,-10)">
+        <g transform="matrix(1,0,0,1,40,376)">
+            <path d="M240,8L240,124C240,128.415 236.415,132 232,132L8,132C3.585,132 0,128.415 0,124L0,8C0,3.585 3.585,0 8,0L232,0C236.415,0 240,3.585 240,8Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,120,26)">
+                <g transform="matrix(1,0,0,1,-41.248,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Prose specs</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,46)">
+                <g transform="matrix(1,0,0,1,-44.93,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">user stories, tickets</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,64)">
+                <g transform="matrix(1,0,0,1,-39.463,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(75,85,99);">ambiguous · drifts</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,94)">
+                <g transform="matrix(1,0,0,1,-58.364,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(156,163,175);">often informal in this zone</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,118)">
+                <g transform="matrix(1,0,0,1,-53.326,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:rgb(156,163,175);">written by Product Owner</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,400,376)">
+            <path d="M240,8L240,124C240,128.415 236.415,132 232,132L8,132C3.585,132 0,128.415 0,124L0,8C0,3.585 3.585,0 8,0L232,0C236.415,0 240,3.585 240,8Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,120,26)">
+                <g transform="matrix(1,0,0,1,-56.407,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Architecture wiki</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,46)">
+                <g transform="matrix(1,0,0,1,-44.646,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">ADRs, design docs</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,64)">
+                <g transform="matrix(1,0,0,1,-71.157,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(75,85,99);">decays under deadline pressure</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,118)">
+                <g>
+                    <g transform="matrix(1,0,0,1,-39.865,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:rgb(156,163,175);">written by</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,2.908,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:rgb(156,163,175);">Architect</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,760,376)">
+            <path d="M240,8L240,124C240,128.415 236.415,132 232,132L8,132C3.585,132 0,128.415 0,124L0,8C0,3.585 3.585,0 8,0L232,0C236.415,0 240,3.585 240,8Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,120,26)">
+                <g transform="matrix(1,0,0,1,-52.11,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Figma handoffs</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,46)">
+                <g transform="matrix(1,0,0,1,-49.901,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">screens, components</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,64)">
+                <g transform="matrix(1,0,0,1,-56.694,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(75,85,99);">no structural enforcement</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,118)">
+                <g>
+                    <g transform="matrix(1,0,0,1,-56.951,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:rgb(156,163,175);">handed of</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,-14.855,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:rgb(156,163,175);">f by UX Designer</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,1120,376)">
+            <path d="M240,8L240,124C240,128.415 236.415,132 232,132L8,132C3.585,132 0,128.415 0,124L0,8C0,3.585 3.585,0 8,0L232,0C236.415,0 240,3.585 240,8Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,120,26)">
+                <g transform="matrix(1,0,0,1,-49.793,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Codebase tacit</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,42)">
+                <g transform="matrix(1,0,0,1,-36.172,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">knowledge</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,62)">
+                <g transform="matrix(1,0,0,1,-77.263,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(75,85,99);">distributed · leaves with departures</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,120,118)">
+                <g>
+                    <g transform="matrix(1,0,0,1,-54.841,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:rgb(156,163,175);">held by Engineering</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,31.61,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:rgb(156,163,175);">Te<tspan x="11.087px " y="0px ">a</tspan>m</text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-10)">
+        <path d="M20,545L1380,545" style="fill:none;fill-rule:nonzero;stroke:rgb(209,213,219);stroke-width:1px;stroke-dasharray:6,4;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,30,558)">
+        <g>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">P</text>
+            <g transform="matrix(1,0,0,1,7.502,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">E<tspan x="7.502px 15.611px 19.439px 27.548px 35.656px 43.765px 51.874px 60.595px 68.097px 71.318px 78.82px 86.929px 93.813px 101.922px 105.143px 112.028px 118.912px 127.633px 138.18px 141.401px 144.623px 147.844px 155.953px 163.455px 170.956px 174.178px 182.287px 190.395px 198.504px 201.726px 209.834px 218.556px 226.058px 234.166px 241.051px 244.272px 247.493px 254.377px 261.879px 269.988px 278.097px 284.981px 292.483px 295.704px 302.588px 311.309px 320.03px 327.532px 334.416px 342.525px 350.027px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">R-CHANGE SDLC FLOW · DEV AND AGENT ITERATE TOGETHER</tspan></text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,179,571)">
+        <g>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">·</text>
+            <g transform="matrix(1,0,0,1,3.221,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:rgb(75,85,99);">M<tspan x="3.221px 12.549px 20.658px 28.767px 36.876px 45.178px 51.869px 55.09px 61.974px 70.083px 78.192px 86.301px 93.803px 101.498px 108.796px 115.68px 118.901px 127.622px 135.731px 139.763px 145.836px 153.945px 161.447px 165.479px 172.17px 180.279px 183.5px 192.012px 195.641px 202.939px 209.823px 213.044px 220.546px 228.048px 235.953px 243.853px 251.162px 254.383px 262.492px 269.994px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ANUAL TRANSLATION TAX PAID AT EVERY READ</tspan></text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,827,574)">
+        <g transform="matrix(1,0,0,1,-249.042,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10.5px;fill:rgb(75,85,99);">mechanism: DMs · peer pings · ad hoc conversations · senior engineer&apos;s memory · bilateral and unrecorded</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-10)">
+        <path d="M224,645L224,719C224,721.76 221.76,724 219,724L49,724C46.24,724 44,721.76 44,719L44,645C44,642.24 46.24,640 49,640L219,640C221.76,640 224,642.24 224,645Z" style="fill:none;stroke:rgb(75,85,99);stroke-opacity:0.25;stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-10)">
+        <path d="M217,639L217,713C217,715.76 214.76,718 212,718L42,718C39.24,718 37,715.76 37,713L37,639C37,636.24 39.24,634 42,634L212,634C214.76,634 217,636.24 217,639Z" style="fill:none;stroke:rgb(75,85,99);stroke-opacity:0.4;stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,30,618)">
+        <path d="M180,5L180,79C180,81.76 177.76,84 175,84L5,84C2.24,84 0,81.76 0,79L0,5C0,2.24 2.24,0 5,0L175,0C177.76,0 180,2.24 180,5Z" style="fill:rgb(250,250,250);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,90,26)">
+            <g transform="matrix(1,0,0,1,-40.454,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Speciﬁcation</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,90,42)">
+            <g transform="matrix(1,0,0,1,-50.02,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">(informal, often verbal)</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,90,58)">
+            <g transform="matrix(1,0,0,1,-29.456,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(156,163,175);">may not exist</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,90,72)">
+            <g transform="matrix(1,0,0,1,-40.017,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(75,85,99);">no formal contract</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-10)">
+        <g transform="matrix(1,0,0,1,0,10)">
+            <path d="M236.5,656.25L244,660L236.5,663.75L236.5,656.25Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <path d="M210,660L238,660" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,246,590)">
+        <g>
+            <path d="M640,6L640,134C640,137.311 637.311,140 634,140L6,140C2.689,140 0,137.311 0,134L0,6C0,2.689 2.689,0 6,0L634,0C637.311,0 640,2.689 640,6Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,-246,-590)">
+                <path d="M885.498,587.63L886,596L879.002,591.38L885.498,587.63Z" style="fill:rgb(75,85,99);"/>
+                <path d="M886,596L886,724C886,727.311 883.311,730 880,730L252,730C248.689,730 246,727.311 246,724L246,596C246,592.689 248.689,590 252,590L880,590C881.093,590 882.117,590.293 883,590.804" style="fill:none;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,320,22)">
+            <g>
+                <g transform="matrix(1,0,0,1,-135.015,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Developer + Coding</text>
+                </g>
+                <g transform="matrix(1,0,0,1,-9.439,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Agent · ad hoc iteration</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,35)">
+            <path d="M260,5L260,85C260,87.76 257.76,90 255,90L5,90C2.24,90 0,87.76 0,85L0,5C0,2.24 2.24,0 5,0L255,0C257.76,0 260,2.24 260,5Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,130,22)">
+                <g transform="matrix(1,0,0,1,-31.43,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Developer</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,130,42)">
+                <g transform="matrix(1,0,0,1,-40.288,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">writes prompt with</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,130,56)">
+                <g transform="matrix(1,0,0,1,-42.517,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">partial context from</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,130,70)">
+                <g transform="matrix(1,0,0,1,-47.646,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">memory + Slack DMs</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,130,84)">
+                <g transform="matrix(1,0,0,1,-54.744,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(75,85,99);">reviews, reﬁnes, accepts</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,360,35)">
+            <path d="M260,5L260,85C260,87.76 257.76,90 255,90L5,90C2.24,90 0,87.76 0,85L0,5C0,2.24 2.24,0 5,0L255,0C257.76,0 260,2.24 260,5Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,130,22)">
+                <g>
+                    <g transform="matrix(1,0,0,1,-42.364,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Coding</text>
+                    </g>
+                    <g transform="matrix(1,0,0,1,5.535,0)">
+                        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Agent</text>
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,130,42)">
+                <g transform="matrix(1,0,0,1,-55.298,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">(Copilot, Claude, Cursor)</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,130,58)">
+                <g transform="matrix(1,0,0,1,-45.859,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">generates code from</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,130,72)">
+                <g transform="matrix(1,0,0,1,-37.524,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">the prompt alone</text>
+                </g>
+            </g>
+            <g transform="matrix(1,0,0,1,130,86)">
+                <g transform="matrix(1,0,0,1,-65.037,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(75,85,99);">no graph · no impact analysis</text>
+                </g>
+            </g>
+        </g>
+        <g>
+            <g transform="matrix(1,0,0,1,-246,-590)">
+                <path d="M597.6,647.3L603,650L597.6,652.7L597.6,647.3Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+                <path d="M528,650L598.68,650" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,-246,-590)">
+                <path d="M533.4,692.7L528,690L533.4,687.3L533.4,692.7Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+                <path d="M603,690L532.32,690" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,320,54)">
+            <g transform="matrix(1,0,0,1,-14.783,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:9.5px;fill:rgb(75,85,99);">prompt</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,320,116)">
+            <g transform="matrix(1,0,0,1,-34.595,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:9.5px;fill:rgb(75,85,99);">code suggestion</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-10)">
+        <g transform="matrix(1,0,0,1,0,10)">
+            <path d="M912.5,656.25L920,660L912.5,663.75L912.5,656.25Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <path d="M886,660L914,660" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,922,618)">
+        <path d="M200,5L200,79C200,81.76 197.76,84 195,84L5,84C2.24,84 0,81.76 0,79L0,5C0,2.24 2.24,0 5,0L195,0C197.76,0 200,2.24 200,5Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+        <g transform="matrix(1,0,0,1,100,26)">
+            <g transform="matrix(1,0,0,1,-44.434,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">Manual review</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,100,46)">
+            <g transform="matrix(1,0,0,1,-46.135,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">no contract to check;</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,100,60)">
+            <g transform="matrix(1,0,0,1,-60.581,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">reviewer reverse-engineers</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,100,74)">
+            <g>
+                <g transform="matrix(1,0,0,1,-39.932,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">intent from the dif</text>
+                </g>
+                <g transform="matrix(1,0,0,1,37.153,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">f</text>
+                </g>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-10)">
+        <g transform="matrix(1,0,0,1,0,10)">
+            <path d="M1148.5,656.25L1156,660L1148.5,663.75L1148.5,656.25Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <path d="M1122,660L1150,660" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,1158,618)">
+        <path d="M210,5L210,79C210,81.76 207.76,84 205,84L5,84C2.24,84 0,81.76 0,79L0,5C0,2.24 2.24,0 5,0L205,0C207.76,0 210,2.24 210,5Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,105,28)">
+            <g transform="matrix(1,0,0,1,-18.75,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">Code</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,105,48)">
+            <g transform="matrix(1,0,0,1,-43.638,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">merged with hidden</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,105,62)">
+            <g transform="matrix(1,0,0,1,-51.968,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:rgb(75,85,99);">defects from translation</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,105,76)">
+            <g transform="matrix(1,0,0,1,-41.138,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:10px;fill:rgb(75,85,99);">no sync · no graph</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-10)">
+        <g transform="matrix(1,0,0,1,0,10)">
+            <path d="M569,584L566,590L563,584L569,584Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <path d="M566,509L566,585.2" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;stroke-dasharray:5,4;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,580,558)">
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10px;fill:rgb(75,85,99);">translate</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,790)">
+        <g>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10.5px;fill:rgb(75,85,99);">L</text>
+            <g transform="matrix(1,0,0,1,6.54,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10.5px;fill:rgb(75,85,99);">E<tspan x="7.129px 15.422px 22.552px 30.261px " y="0px 0px 0px 0px ">GEND</tspan></text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,0,22)">
+            <path d="M0,6L40,6" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
+            <g transform="matrix(1,0,0,1,50,10)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">SDLC ﬂow (per change)</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,220,22)">
+            <path d="M0,6L40,6" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            <g transform="matrix(1,0,0,1,50,10)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">dev</text>
+                <g transform="matrix(1,0,0,1,19.846,0)">
+                    <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:10.5px;fill:rgb(75,85,99);">↔</text>
+                </g>
+                <g transform="matrix(1,0,0,1,30.576,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">agent iteration</text>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,420,22)">
+            <path d="M0,6L40,6" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;stroke-dasharray:5,4;"/>
+            <g transform="matrix(1,0,0,1,50,10)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">translation tax paid</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,620,22)">
+            <path d="M22,1L22,11C22,12.656 20.656,14 19,14L3,14C1.344,14 0,12.656 0,11L0,1C0,-0.656 1.344,-2 3,-2L19,-2C20.656,-2 22,-0.656 22,1Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+            <g transform="matrix(1,0,0,1,32,10)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">red: codiﬁed artifact (decays)</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,880,22)">
+            <path d="M22,1L22,11C22,12.656 20.656,14 19,14L3,14C1.344,14 0,12.656 0,11L0,1C0,-0.656 1.344,-2 3,-2L19,-2C20.656,-2 22,-0.656 22,1Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,32,10)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10.5px;fill:rgb(75,85,99);">purple: coding agent</text>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,120,728)">
+        <g transform="matrix(1,0,0,1,-54.281,0)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:9px;fill:rgb(156,163,175);">multiple changes in parallel</text>
+        </g>
+    </g>
+</svg>

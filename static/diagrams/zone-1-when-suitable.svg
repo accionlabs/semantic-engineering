@@ -1,0 +1,64 @@
+<svg viewBox="0 0 1400 720" xmlns="http://www.w3.org/2000/svg" width="1400" height="720" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
+    <marker id="arrowOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#E94E1B"/></marker>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .q { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #111111; }
+      .yn { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-weight: 700; fill: #4b5563; }
+      .verdict { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #E94E1B; }
+      .verdictGrey { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 18px; font-weight: 700; fill: #4b5563; }
+      .vsub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; }
+      .vsubGrey { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #4b5563; }
+    </style>
+  </defs>
+
+  <text x="700" y="45" text-anchor="middle" class="h1">When Vibe Coding Is Genuinely Suitable</text>
+  <text x="700" y="72" text-anchor="middle" class="sub">Three filters. Any "yes" path means vibe coding is the right tool for this work.</text>
+
+  <rect x="500" y="110" width="400" height="80" rx="40" ry="40" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="700" y="142" text-anchor="middle" class="q">Start: New work coming in</text>
+  <text x="700" y="170" text-anchor="middle" class="vsub">an AI coding tool is in front of you</text>
+
+  <path d="M 700 190 L 700 220" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+
+  <polygon points="700,225 940,300 700,375 460,300" fill="#ffffff" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="700" y="285" text-anchor="middle" class="q">Q1: Is the output</text>
+  <text x="700" y="310" text-anchor="middle" class="q">throwaway or exploratory?</text>
+  <text x="700" y="335" text-anchor="middle" class="vsubGrey">prototype, POC, hackathon,</text>
+  <text x="700" y="352" text-anchor="middle" class="vsubGrey">spike, one-off script</text>
+
+  <path d="M 940 300 L 1130 300" stroke="#E94E1B" stroke-width="1.8" fill="none" marker-end="url(#arrowOrange)"/>
+  <text x="1035" y="290" text-anchor="middle" class="yn" fill="#E94E1B">YES</text>
+
+  <path d="M 700 375 L 700 410" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="715" y="395" class="yn">NO</text>
+
+  <polygon points="700,415 940,485 700,555 460,485" fill="#ffffff" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="700" y="470" text-anchor="middle" class="q">Q2: Solo developer,</text>
+  <text x="700" y="495" text-anchor="middle" class="q">no team coordination?</text>
+  <text x="700" y="520" text-anchor="middle" class="vsubGrey">personal project, learning,</text>
+  <text x="700" y="537" text-anchor="middle" class="vsubGrey">single-developer tool</text>
+
+  <path d="M 940 485 L 1130 485" stroke="#E94E1B" stroke-width="1.8" fill="none" marker-end="url(#arrowOrange)"/>
+  <text x="1035" y="475" text-anchor="middle" class="yn" fill="#E94E1B">YES</text>
+
+  <path d="M 700 555 L 700 590" stroke="#4b5563" stroke-width="1.8" fill="none" marker-end="url(#arrow)"/>
+  <text x="715" y="575" class="yn">NO</text>
+
+  <rect x="500" y="600" width="400" height="90" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="2"/>
+  <text x="700" y="635" text-anchor="middle" class="verdictGrey">Move to Zone 2: SDD</text>
+  <text x="700" y="660" text-anchor="middle" class="vsubGrey">cross-team scope, multiple developers,</text>
+  <text x="700" y="678" text-anchor="middle" class="vsubGrey">long-lived output → vibe coding will accumulate debt</text>
+
+  <rect x="1140" y="265" width="240" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="1260" y="295" text-anchor="middle" class="verdict">Vibe coding fits</text>
+  <text x="1260" y="318" text-anchor="middle" class="vsub">no spec gate needed</text>
+  <text x="1260" y="334" text-anchor="middle" class="vsub">the act is the deliverable</text>
+
+  <rect x="1140" y="450" width="240" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="1260" y="480" text-anchor="middle" class="verdict">Vibe coding fits</text>
+  <text x="1260" y="503" text-anchor="middle" class="vsub">no team coordination cost</text>
+  <text x="1260" y="519" text-anchor="middle" class="vsub">the developer is the consumer</text>
+</svg>

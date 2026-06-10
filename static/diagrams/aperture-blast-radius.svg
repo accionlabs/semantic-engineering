@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1400px" height="820px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,700,44)">
+        <text x="-302.887px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:28px;fill:rgb(17,17,17);">The <tspan x="-246.354px -226.133px " y="0px 0px ">Ap</tspan>erture: Blast Radius Decides Inclusion</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700,72)">
+        <text x="-394.993px" y="0px" style="font-family:'Helvetica';font-size:17px;fill:rgb(75,85,99);">Every decision has a blast radius. Wide-radius decisions enter the graph; locally contained ones stay out.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,110)">
+        <path d="M660,14L660,436C660,443.727 653.727,450 646,450L14,450C6.273,450 0,443.727 0,436L0,14C0,6.273 6.273,0 14,0L646,0C653.727,0 660,6.273 660,14Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,22,34)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">W<tspan x="13.494px 17.664px 28.054px 37.672px 41.841px 52.232px 61.064px 71.454px 81.072px 89.904px 94.073px 104.464px 114.854px 125.244px 129.414px 139.804px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">IDE BLAST RADIUS</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,64)">
+            <g transform="matrix(22,0,0,22,118.604492,0)">
+            </g>
+            <g transform="matrix(22,0,0,22,125.930664,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:22px;fill:rgb(17,17,17);">Persona deﬁnition</text>
+        </g>
+        <g transform="matrix(1,0,0,1,330,200)">
+            <circle cx="0" cy="0" r="58" style="fill:rgb(233,78,27);stroke:rgb(17,17,17);stroke-width:2px;"/>
+            <g transform="matrix(0.901753,0,0,0.901753,0.017126,-1.755917)">
+                <g transform="matrix(1,0,0,1,0,-4)">
+                    <text x="-55.756px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:white;">Saved Search</text>
+                </g>
+                <g transform="matrix(1,0,0,1,0,18)">
+                    <text x="-61.878px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:white;">Owner persona</text>
+                </g>
+            </g>
+        </g>
+        <path d="M284,170L160,120" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,80,100)">
+            <path d="M170,8L170,34C170,38.415 166.415,42 162,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L162,0C166.415,0 170,3.585 170,8Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,85,18)">
+                <text x="-37.207px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">7 Outcomes</text>
+            </g>
+            <g transform="matrix(1,0,0,1,85,34)">
+                <text x="-47.69px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">across personas</text>
+            </g>
+        </g>
+        <path d="M330,142L330,92" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,245,52)">
+            <path d="M170,8L170,34C170,38.415 166.415,42 162,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L162,0C166.415,0 170,3.585 170,8Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,85,18)">
+                <text x="-40.108px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">14 Scenarios</text>
+            </g>
+            <g transform="matrix(1,0,0,1,85,34)">
+                <text x="-53.117px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">touch this persona</text>
+            </g>
+        </g>
+        <path d="M376,170L500,120" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,420,100)">
+            <path d="M180,8L180,34C180,38.415 176.415,42 172,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L172,0C176.415,0 180,3.585 180,8Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,90,18)">
+                <text x="-48.401px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">1<tspan x="-41.882px -34.652px " y="0px 0px ">1 </tspan>Components</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,34)">
+                <text x="-53.469px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">render its journeys</text>
+            </g>
+        </g>
+        <path d="M388,200L500,200" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,440,180)">
+            <path d="M180,8L180,34C180,38.415 176.415,42 172,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L172,0C176.415,0 180,3.585 180,8Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,90,18)">
+                <text x="-32.167px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">6 Services</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,34)">
+                <g transform="matrix(13,0,0,13,20.950439,0)">
+                </g>
+                <g transform="matrix(13,0,0,13,24.562256,0)">
+                </g>
+                <text x="-50.569px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">own its workﬂows</text>
+            </g>
+        </g>
+        <path d="M272,200L160,200" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,40,180)">
+            <path d="M180,8L180,34C180,38.415 176.415,42 172,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L172,0C176.415,0 180,3.585 180,8Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,90,18)">
+                <text x="-40.942px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">4 Public <tspan x="12.042px 21.43px " y="0px 0px ">AP</tspan>Is</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,34)">
+                <text x="-43.723px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">expose its data</text>
+            </g>
+        </g>
+        <path d="M284,232L160,290" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,40,270)">
+            <path d="M190,8L190,34C190,38.415 186.415,42 182,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L182,0C186.415,0 190,3.585 190,8Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,95,18)">
+                <text x="-53.819px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">23 Code modules</text>
+            </g>
+            <g transform="matrix(1,0,0,1,95,34)">
+                <text x="-35.039px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">implement it</text>
+            </g>
+        </g>
+        <path d="M330,258L330,310" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,245,310)">
+            <path d="M170,8L170,34C170,38.415 166.415,42 162,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L162,0C166.415,0 170,3.585 170,8Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,85,18)">
+                <text x="-35.401px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">3 DB tables</text>
+            </g>
+            <g transform="matrix(1,0,0,1,85,34)">
+                <text x="-43.348px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">persist its state</text>
+            </g>
+        </g>
+        <path d="M376,232L500,290" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,430,270)">
+            <path d="M200,8L200,34C200,38.415 196.415,42 192,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L192,0C196.415,0 200,3.585 200,8Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,100,18)">
+                <text x="-41.184px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">2 Cross-team</text>
+            </g>
+            <g transform="matrix(1,0,0,1,100,34)">
+                <text x="-63.959px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">contracts depend on it</text>
+            </g>
+        </g>
+        <path d="M638,393L638,425C638,429.415 634.415,433 630,433L30,433C25.585,433 22,429.415 22,425L22,393C22,388.585 25.585,385 30,385L630,385C634.415,385 638,388.585 638,393Z" style="fill:rgb(233,78,27);"/>
+        <g transform="matrix(1,0,0,1,330,416)">
+            <text x="-170.033px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:white;">Enters the knowledge graph. Governed.</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,720,110)">
+        <path d="M640,14L640,436C640,443.727 633.727,450 626,450L14,450C6.273,450 0,443.727 0,436L0,14C0,6.273 6.273,0 14,0L626,0C633.727,0 640,6.273 640,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,22,34)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">L<tspan x="8.832px 20.001px 30.392px 40.782px 49.614px 57.16px 66.532px 70.702px 81.092px 92.262px 102.652px 110.452px 120.842px 125.012px 135.402px 145.02px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">OCALLY CONTAINED</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,64)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:22px;fill:rgb(17,17,17);">Button position (one page)</text>
+        </g>
+        <g transform="matrix(1,0,0,1,320,200)">
+            <circle cx="0" cy="0" r="58" style="fill:rgb(75,85,99);stroke:rgb(17,17,17);stroke-width:2px;"/>
+            <g transform="matrix(1,0,0,1,0,-17)">
+                <text x="-27.376px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:white;">Button</text>
+                <g transform="matrix(17,0,0,17,33.049561,17)">
+                </g>
+                <text x="-33.05px" y="17px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:white;">position</text>
+            </g>
+            <g transform="matrix(1,0,0,1,0,19)">
+                <text x="-37.312px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:white;">one page</text>
+            </g>
+        </g>
+        <path d="M320,258L320,310" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:2px;stroke-dasharray:4,3;"/>
+        <g transform="matrix(1,0,0,1,235,310)">
+            <path d="M170,8L170,34C170,38.415 166.415,42 162,42L8,42C3.585,42 0,38.415 0,34L0,8C0,3.585 3.585,0 8,0L162,0C166.415,0 170,3.585 170,8Z" style="fill:white;stroke:rgb(156,163,175);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,85,18)">
+                <text x="-20.957px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">1 Page</text>
+            </g>
+            <g transform="matrix(1,0,0,1,85,34)">
+                <text x="-18.786px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">uses it</text>
+            </g>
+        </g>
+        <g opacity="0.3">
+            <g transform="matrix(1,0,0,1,80,120)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(17,17,17);">No outcome change</text>
+            </g>
+            <g transform="matrix(1,0,0,1,80,148)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(17,17,17);">No scenario impact</text>
+            </g>
+            <g transform="matrix(1,0,0,1,480,120)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(17,17,17);">No service touched</text>
+            </g>
+            <g transform="matrix(1,0,0,1,480,148)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(17,17,17);">No <tspan x="19.519px 28.19px " y="0px 0px ">AP</tspan>I af<tspan x="54.698px 58.31px " y="0px 0px ">fe</tspan>cted</text>
+            </g>
+            <g transform="matrix(1,0,0,1,80,262)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(17,17,17);">No cross-team</text>
+            </g>
+            <g transform="matrix(1,0,0,1,80,282)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(17,17,17);">coordination</text>
+            </g>
+            <g transform="matrix(1,0,0,1,480,262)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(17,17,17);">No DB schema</text>
+            </g>
+            <g transform="matrix(1,0,0,1,480,282)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(17,17,17);">touched</text>
+            </g>
+        </g>
+        <path d="M618,393L618,425C618,429.415 614.415,433 610,433L30,433C25.585,433 22,429.415 22,425L22,393C22,388.585 25.585,385 30,385L610,385C614.415,385 618,388.585 618,393Z" style="fill:rgb(75,85,99);"/>
+        <g transform="matrix(1,0,0,1,320,416)">
+            <g transform="matrix(18,0,0,18,1.182129,0)">
+            </g>
+            <g transform="matrix(18,0,0,18,7.17627,0)">
+            </g>
+            <text x="-174.863px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:white;">Stays in code or conﬁg. Local autonomy<tspan x="169.862px " y="0px ">.</tspan></text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,40,590)">
+        <path d="M1320,14L1320,186C1320,193.727 1313.727,200 1306,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L1306,0C1313.727,0 1320,6.273 1320,14Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,30,38)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:rgb(17,17,17);">The decision rule</text>
+        </g>
+        <g transform="matrix(1,0,0,1,30,68)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:rgb(233,78,27);">1.</text>
+            <g transform="matrix(1,0,0,1,24,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">Default to excluding.</text>
+            </g>
+            <g transform="matrix(1,0,0,1,174,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">Nothing enters the graph without a positive reason to include it.</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,30,98)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:rgb(233,78,27);">2.</text>
+            <g transform="matrix(1,0,0,1,24,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">Ask the blast-radius question.</text>
+            </g>
+            <g transform="matrix(1,0,0,1,274,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">If this element changes, how many other things in other parts of the system have to change?</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,30,128)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:rgb(233,78,27);">3.</text>
+            <g transform="matrix(1,0,0,1,24,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">Many things across teams or layers</text>
+            </g>
+            <g transform="matrix(1,0,0,1,320,0)">
+                <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:15px;fill:rgb(17,17,17);">→</text>
+                <text x="14.742px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">include.</text>
+            </g>
+            <g transform="matrix(1,0,0,1,430,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">A<tspan x="10.283px 14.451px " y="0px 0px "> f</tspan>ew things, all local</text>
+            </g>
+            <g transform="matrix(1,0,0,1,612,0)">
+                <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:15px;fill:rgb(17,17,17);">→</text>
+                <text x="14.742px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">exclude.</text>
+            </g>
+            <g transform="matrix(1,0,0,1,710,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:rgb(17,17,17);">Ambiguous</text>
+            </g>
+            <g transform="matrix(1,0,0,1,810,0)">
+                <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:15px;fill:rgb(17,17,17);">→</text>
+                <text x="14.742px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(17,17,17);">exclude for now and revisit.</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,30,158)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:rgb(233,78,27);">4.</text>
+            <g transform="matrix(1,0,0,1,24,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:15px;fill:rgb(17,17,17);">Elements that should have been included will surface when their changes start cascading without graph governance.</text>
+            </g>
+        </g>
+    </g>
+</svg>

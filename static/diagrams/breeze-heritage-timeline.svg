@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 720" width="1400" height="720" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
+  <defs>
+    <marker id="ht-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:#E94E1B"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="720" style="fill:#ffffff"/>
+
+  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">The Heritage of Breeze.AI</text>
+  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">Two roots converged into the methodology and the platform. The platform took the name of its 2017 ancestor.</text>
+
+  <!-- Top root: 2017 Breeze -->
+  <g transform="translate(60,128)">
+    <rect x="0" y="0" width="540" height="200" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <rect x="0" y="0" width="180" height="200" rx="14" ry="14" style="fill:#4b5563"/>
+    <rect x="166" y="0" width="14" height="200" style="fill:#4b5563"/>
+    <text x="90" y="86" text-anchor="middle" style="font:700 36px Segoe UI,system-ui,sans-serif;fill:#ffffff">2017</text>
+    <text x="90" y="120" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">BREEZE</text>
+    <text x="90" y="138" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">role governance</text>
+
+    <text x="200" y="30" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#111111">A manual blueprint</text>
+    <text x="200" y="58" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Codified the minimal governance structure</text>
+    <text x="200" y="76" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">that good product owners, architects, and</text>
+    <text x="200" y="94" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">UX designers needed to produce.</text>
+
+    <text x="200" y="124" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">THE PROBLEM IT HAD</text>
+    <text x="200" y="146" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Operationally heavy. Maintaining the</text>
+    <text x="200" y="164" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">artifacts across hundreds of engagements</text>
+    <text x="200" y="182" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">required continuous coordination.</text>
+  </g>
+
+  <!-- Bottom root: 2022 KG discovery -->
+  <g transform="translate(60,358)">
+    <rect x="0" y="0" width="540" height="200" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
+    <rect x="0" y="0" width="180" height="200" rx="14" ry="14" style="fill:#4b5563"/>
+    <rect x="166" y="0" width="14" height="200" style="fill:#4b5563"/>
+    <text x="90" y="86" text-anchor="middle" style="font:700 36px Segoe UI,system-ui,sans-serif;fill:#ffffff">2022</text>
+    <text x="90" y="120" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">KG CONSTRAINT</text>
+    <text x="90" y="138" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">drug discovery work</text>
+
+    <text x="200" y="30" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#111111">The structural insight</text>
+    <text x="200" y="58" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">The first GenAI project for a pharma leader</text>
+    <text x="200" y="76" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">produced the pattern: constraining a</text>
+    <text x="200" y="94" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">transformer with a knowledge graph turns</text>
+    <text x="200" y="112" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">hallucination into precise, traceable output.</text>
+
+    <text x="200" y="142" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">WHAT IT PROVED</text>
+    <text x="200" y="164" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Structure could make AI output reliable</text>
+    <text x="200" y="182" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">at enterprise scale.</text>
+  </g>
+
+  <!-- Convergence arrows -->
+  <g>
+    <path d="M 620 228 Q 760 228 760 360" style="fill:none;stroke:#E94E1B;stroke-width:3" marker-end="url(#ht-arrow)"/>
+    <path d="M 620 458 Q 760 458 760 360" style="fill:none;stroke:#E94E1B;stroke-width:3" marker-end="url(#ht-arrow)"/>
+    <text x="700" y="160" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B">role-governance</text>
+    <text x="700" y="178" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B">discipline</text>
+    <text x="700" y="528" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B">structural</text>
+    <text x="700" y="546" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B">constraint</text>
+  </g>
+
+  <!-- Convergence node -->
+  <g transform="translate(770,320)">
+    <circle cx="0" cy="40" r="60" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
+    <text x="0" y="35" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#E94E1B">CONVERGE</text>
+    <text x="0" y="55" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#111111">into the methodology</text>
+  </g>
+
+  <!-- Arrow to 2026 outcome -->
+  <line x1="830" y1="360" x2="970" y2="360" style="stroke:#E94E1B;stroke-width:3" marker-end="url(#ht-arrow)"/>
+
+  <!-- 2026 Breeze.AI -->
+  <g transform="translate(980,228)">
+    <rect x="0" y="0" width="380" height="280" rx="14" ry="14" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2.5"/>
+    <rect x="0" y="0" width="380" height="80" rx="14" ry="14" style="fill:#E94E1B"/>
+    <rect x="0" y="60" width="380" height="20" style="fill:#E94E1B"/>
+    <text x="190" y="44" text-anchor="middle" style="font:700 28px Segoe UI,system-ui,sans-serif;fill:#ffffff">2026</text>
+    <text x="190" y="68" text-anchor="middle" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#ffffff">Breeze.AI</text>
+
+    <text x="20" y="108" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#111111">The platform</text>
+    <text x="20" y="134" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">The role-governance discipline</text>
+    <text x="20" y="152" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">preserved in the four-layer ontology.</text>
+    <text x="20" y="178" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">The maintenance burden that defeated</text>
+    <text x="20" y="196" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">the manual version handled by the</text>
+    <text x="20" y="214" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">agent fleet.</text>
+    <text x="20" y="240" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B">KG Sync keeps the graph current on</text>
+    <text x="20" y="258" style="font:italic 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B">every merge.</text>
+  </g>
+
+  <!-- Footer line -->
+  <text x="700" y="620" text-anchor="middle" style="font:italic 15px Segoe UI,system-ui,sans-serif;fill:#4b5563">The platform took the name of its 2017 ancestor because the discipline it operationalizes is the same.</text>
+</svg>

@@ -1,0 +1,109 @@
+<svg viewBox="0 0 1400 720" xmlns="http://www.w3.org/2000/svg" width="1400" height="720" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#E94E1B"/></marker>
+    <marker id="arrow-grey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/></marker>
+    <style>
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .panelTitle { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 20px; font-weight: 600; fill: #111111; }
+      .panelSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
+      .box { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #111111; }
+      .boxSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #4b5563; }
+      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-style: italic; fill: #4b5563; }
+      .verdict { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 16px; font-weight: 600; }
+    </style>
+  </defs>
+
+  <text x="700" y="42" text-anchor="middle" class="h1">Why Structured Context Matters</text>
+  <text x="700" y="68" text-anchor="middle" class="sub">The same agent, the same task. The medium of the context is what changes the outcome.</text>
+
+  <rect x="30" y="100" width="660" height="600" rx="12" ry="12" fill="#fafafa" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="360" y="138" text-anchor="middle" class="panelTitle">Without Semantic Engineering</text>
+  <text x="360" y="158" text-anchor="middle" class="panelSub">Agent operates against text artifacts; humans translate</text>
+
+  <rect x="60" y="185" width="190" height="65" rx="8" ry="8" fill="#ffffff" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="155" y="215" text-anchor="middle" class="box">Wiki / Confluence</text>
+  <text x="155" y="235" text-anchor="middle" class="boxSub">stale, partial</text>
+
+  <rect x="265" y="185" width="190" height="65" rx="8" ry="8" fill="#ffffff" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="360" y="215" text-anchor="middle" class="box">Figma handoff</text>
+  <text x="360" y="235" text-anchor="middle" class="boxSub">design hints</text>
+
+  <rect x="470" y="185" width="190" height="65" rx="8" ry="8" fill="#ffffff" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="565" y="215" text-anchor="middle" class="box">Slack threads</text>
+  <text x="565" y="235" text-anchor="middle" class="boxSub">tribal memory</text>
+
+  <rect x="60" y="270" width="295" height="65" rx="8" ry="8" fill="#ffffff" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="207" y="300" text-anchor="middle" class="box">Codebase tacit knowledge</text>
+  <text x="207" y="320" text-anchor="middle" class="boxSub">scattered across teams, author often gone</text>
+
+  <rect x="370" y="270" width="290" height="65" rx="8" ry="8" fill="#ffffff" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4,3"/>
+  <text x="515" y="300" text-anchor="middle" class="box">Architecture doc</text>
+  <text x="515" y="320" text-anchor="middle" class="boxSub">9 months out of date</text>
+
+  <path d="M 155 250 Q 200 320 290 405" stroke="#9ca3af" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arrow-grey)"/>
+  <path d="M 360 250 L 360 405" stroke="#9ca3af" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arrow-grey)"/>
+  <path d="M 565 250 Q 510 320 430 405" stroke="#9ca3af" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arrow-grey)"/>
+  <path d="M 207 335 L 320 405" stroke="#9ca3af" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arrow-grey)"/>
+  <path d="M 515 335 L 400 405" stroke="#9ca3af" stroke-width="1" fill="none" stroke-dasharray="3,3" marker-end="url(#arrow-grey)"/>
+
+  <rect x="160" y="405" width="400" height="85" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="360" y="440" text-anchor="middle" class="box">Developer + Coding Agent</text>
+  <text x="360" y="463" text-anchor="middle" class="boxSub">reads partial signals,</text>
+  <text x="360" y="478" text-anchor="middle" class="boxSub">fills gaps from memory or guesses</text>
+
+  <text x="360" y="515" text-anchor="middle" class="ital">lossy translation pays the Manual Translation Tax</text>
+
+  <path d="M 360 525 L 360 575" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="160" y="580" width="400" height="85" rx="10" ry="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.5"/>
+  <text x="360" y="615" text-anchor="middle" class="verdict" fill="#9ca3af">Code that looks right and breaks</text>
+  <text x="360" y="635" text-anchor="middle" class="boxSub">hallucinated dependencies, duplicate components,</text>
+  <text x="360" y="650" text-anchor="middle" class="boxSub">cross-team contract violations surface in production</text>
+
+  <rect x="710" y="100" width="660" height="600" rx="12" ry="12" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <text x="1040" y="138" text-anchor="middle" class="panelTitle">With Semantic Engineering</text>
+  <text x="1040" y="158" text-anchor="middle" class="panelSub">Agent queries the structured graph; custodians curate it</text>
+
+  <rect x="730" y="185" width="620" height="225" rx="10" ry="10" fill="#ffffff" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="1040" y="215" text-anchor="middle" class="box">Four-Layer Knowledge Graph</text>
+
+  <rect x="742" y="240" width="140" height="60" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1"/>
+  <text x="812" y="266" text-anchor="middle" class="box">Functional</text>
+  <text x="812" y="285" text-anchor="middle" class="boxSub">personas, outcomes</text>
+
+  <rect x="894" y="240" width="140" height="60" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1"/>
+  <text x="964" y="266" text-anchor="middle" class="box">Architecture</text>
+  <text x="964" y="285" text-anchor="middle" class="boxSub">services, contracts</text>
+
+  <rect x="1046" y="240" width="140" height="60" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1"/>
+  <text x="1116" y="266" text-anchor="middle" class="box">Design</text>
+  <text x="1116" y="285" text-anchor="middle" class="boxSub">components, tokens</text>
+
+  <rect x="1198" y="240" width="140" height="60" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1"/>
+  <text x="1268" y="266" text-anchor="middle" class="box">Code</text>
+  <text x="1268" y="285" text-anchor="middle" class="boxSub">functions, modules</text>
+
+  <path d="M 812 300 C 812 345 964 345 964 300" stroke="#4b5563" stroke-width="1" fill="none"/>
+  <path d="M 964 300 C 964 345 1116 345 1116 300" stroke="#4b5563" stroke-width="1" fill="none"/>
+  <path d="M 1116 300 C 1116 345 1268 345 1268 300" stroke="#4b5563" stroke-width="1" fill="none"/>
+  <path d="M 812 300 C 812 380 1268 380 1268 300" stroke="#4b5563" stroke-width="1" fill="none"/>
+
+  <text x="1040" y="400" text-anchor="middle" class="ital">cross-linked, kept current by KG Sync on every merge</text>
+
+  <path d="M 1040 410 L 1040 425" stroke="#E94E1B" stroke-width="2" fill="none" marker-end="url(#arrow-orange)"/>
+
+  <rect x="840" y="430" width="400" height="85" rx="10" ry="10" fill="#ffffff" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="1040" y="465" text-anchor="middle" class="box">Developer + Coding Agent</text>
+  <text x="1040" y="488" text-anchor="middle" class="boxSub">consume a structured impact report</text>
+  <text x="1040" y="503" text-anchor="middle" class="boxSub">from the agent's four-layer traversal</text>
+
+  <text x="1040" y="540" text-anchor="middle" class="ital">structural validation at the PR gate prevents drift</text>
+
+  <path d="M 1040 550 L 1040 580" stroke="#E94E1B" stroke-width="2" fill="none" marker-end="url(#arrow-orange)"/>
+
+  <rect x="840" y="585" width="400" height="80" rx="10" ry="10" fill="#ffffff" stroke="#E94E1B" stroke-width="1.5"/>
+  <text x="1040" y="618" text-anchor="middle" class="verdict" fill="#E94E1B">Code that fits the system</text>
+  <text x="1040" y="640" text-anchor="middle" class="boxSub">as it actually runs, validated against all four ontologies</text>
+</svg>

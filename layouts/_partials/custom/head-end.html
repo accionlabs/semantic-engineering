@@ -1,0 +1,58 @@
+{{- /* Project custom <head> injection. */ -}}
+
+{{- /* Click-to-zoom for Mermaid diagrams.
+       medium-zoom (Hextra's image zoom) only attaches to <img>; Mermaid renders
+       as inline <svg>, so we give it a lightweight lightbox of its own. */ -}}
+<style>
+  .mermaid { cursor: zoom-in; }
+  #mm-zoom-overlay {
+    position: fixed; inset: 0; z-index: 1000;
+    display: none; align-items: flex-start; justify-content: center;
+    background: rgba(0,0,0,.75); cursor: zoom-out; overflow: auto; padding: 2.5vmin;
+  }
+  #mm-zoom-overlay.mm-open { display: flex; }
+  #mm-zoom-overlay .mm-inner {
+    background: #fff; border-radius: 10px; padding: 1.5rem;
+    box-shadow: 0 12px 48px rgba(0,0,0,.5); margin: auto;
+  }
+  #mm-zoom-overlay .mm-inner svg {
+    width: 92vw; height: auto; max-width: none; display: block;
+  }
+  @media (min-width: 1024px) {
+    #mm-zoom-overlay .mm-inner svg { width: auto; min-width: 70vw; max-width: 92vw; }
+  }
+</style>
+<script>
+  (function () {
+    function ready(fn){ document.readyState !== 'loading' ? fn() : document.addEventListener('DOMContentLoaded', fn); }
+    ready(function () {
+      var diagrams = document.querySelectorAll('pre.mermaid');
+      if (!diagrams.length) return;
+
+      var overlay = document.createElement('div');
+      overlay.id = 'mm-zoom-overlay';
+      var inner = document.createElement('div');
+      inner.className = 'mm-inner';
+      overlay.appendChild(inner);
+      document.body.appendChild(overlay);
+
+      function close(){ overlay.classList.remove('mm-open'); inner.innerHTML = ''; }
+      overlay.addEventListener('click', close);
+      document.addEventListener('keydown', function (e){ if (e.key === 'Escape') close(); });
+
+      diagrams.forEach(function (d) {
+        d.addEventListener('click', function () {
+          var svg = d.querySelector('svg');      // present after Mermaid renders
+          if (!svg) return;
+          var clone = svg.cloneNode(true);
+          clone.removeAttribute('width');
+          clone.removeAttribute('height');
+          clone.style.maxWidth = 'none';
+          inner.innerHTML = '';
+          inner.appendChild(clone);
+          overlay.classList.add('mm-open');
+        });
+      });
+    });
+  })();
+</script>
