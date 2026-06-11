@@ -202,8 +202,10 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,54)">
-                <g transform="matrix(1,0,0,1,-53.193,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:rgb(75,85,99);">holds the how-it-looks</text>
+                <g transform="matrix(1,0,0,1,-62.193,0)">
+                    <g transform="matrix(11,0,0,11,122.294434,0)">
+                    </g>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:rgb(75,85,99);">holds the how-it-behaves</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,74)">
