@@ -1,134 +1,188 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 860" width="1400" height="860" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
-  <rect width="1400" height="860" style="fill:#ffffff"/>
-
-  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">Breeze.AI Architecture Overview</text>
-  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">The four-layer knowledge graph at the center. The agent fleet operates against it. The integration surface plugs it into the client's toolchain.</text>
-
-  <!-- Outer ring: integration surface -->
-  <g>
-    <circle cx="700" cy="466" r="380" style="fill:none;stroke:#9ca3af;stroke-width:2;stroke-dasharray:4 4"/>
-    <!-- Integration domain pill labels around the ring -->
-    <!-- top -->
-    <g transform="translate(700,86)">
-      <rect x="-100" y="0" width="200" height="36" rx="18" ry="18" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="0" y="23" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Version Control</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1400px" height="860px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,700,44)">
+        <text x="-231.218px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(17,17,17);">Breeze.AI <tspan x="-87.253px -65.588px " y="0px 0px ">Ar</tspan>chitecture Overview</text>
     </g>
-    <!-- upper-right -->
-    <g transform="translate(1018,176)">
-      <rect x="-100" y="0" width="200" height="36" rx="18" ry="18" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="0" y="23" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">CI/CD Pipelines</text>
+    <g transform="matrix(1,0,0,1,700,72)">
+        <g transform="matrix(16,0,0,16,-86.011719,0)">
+        </g>
+        <g transform="matrix(16,0,0,16,-81.566406,0)">
+        </g>
+        <text x="-489.543px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The four-layer knowledge graph at the center<tspan x="-171.121px -166.676px -162.512px -152.738px " y="0px 0px 0px 0px ">. Th</tspan>e agent ﬂeet operates against it. <tspan x="88.035px 97.809px " y="0px 0px ">Th</tspan>e integration surface plugs it into the client&apos;s toolchain.</text>
     </g>
-    <!-- right -->
-    <g transform="translate(1108,440)">
-      <rect x="-100" y="0" width="200" height="36" rx="18" ry="18" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="0" y="23" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Ticket Systems</text>
+    <g>
+        <circle cx="700" cy="466" r="380" style="fill:none;stroke:rgb(156,163,175);stroke-width:2px;stroke-dasharray:4,4;"/>
+        <g transform="matrix(1,0,0,1,700,86)">
+            <path d="M100,18C100,27.934 91.934,36 82,36L-82,36C-91.934,36 -100,27.934 -100,18C-100,8.066 -91.934,0 -82,0L82,0C91.934,0 100,8.066 100,18Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,0,23)">
+                <text x="-59.566px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">V<tspan x="-49.77px -40.871px " y="0px 0px ">er</tspan>sion Control</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,1018,176)">
+            <path d="M100,18C100,27.934 91.934,36 82,36L-82,36C-91.934,36 -100,27.934 -100,18C-100,8.066 -91.934,0 -82,0L82,0C91.934,0 100,8.066 100,18Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,0,23)">
+                <text x="-59.125px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">CI/CD Pipelines</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,1108,440)">
+            <path d="M100,18C100,27.934 91.934,36 82,36L-82,36C-91.934,36 -100,27.934 -100,18C-100,8.066 -91.934,0 -82,0L82,0C91.934,0 100,8.066 100,18Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,0,23)">
+                <text x="-58.113px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">T<tspan x="-48.621px -44.176px " y="0px 0px ">ic</tspan>ket Systems</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,1018,720)">
+            <path d="M100,18C100,27.934 91.934,36 82,36L-82,36C-91.934,36 -100,27.934 -100,18C-100,8.066 -91.934,0 -82,0L82,0C91.934,0 100,8.066 100,18Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,0,23)">
+                <text x="-80.16px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">AI Coding <tspan x="-0.762px 10.793px " y="0px 0px ">As</tspan>sistants</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,700,810)">
+            <path d="M100,18C100,27.934 91.934,36 82,36L-82,36C-91.934,36 -100,27.934 -100,18C-100,8.066 -91.934,0 -82,0L82,0C91.934,0 100,8.066 100,18Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,0,23)">
+                <text x="-50.531px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">T<tspan x="-41.938px -33.039px " y="0px 0px ">es</tspan>t Runners</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,382,720)">
+            <path d="M100,18C100,27.934 91.934,36 82,36L-82,36C-91.934,36 -100,27.934 -100,18C-100,8.066 -91.934,0 -82,0L82,0C91.934,0 100,8.066 100,18Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,0,23)">
+                <text x="-50.688px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Observability</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,292,440)">
+            <path d="M100,18C100,27.934 91.934,36 82,36L-82,36C-91.934,36 -100,27.934 -100,18C-100,8.066 -91.934,0 -82,0L82,0C91.934,0 100,8.066 100,18Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,0,23)">
+                <text x="-49.637px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Design T<tspan x="16.746px 26.52px " y="0px 0px ">oo</tspan>ls</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,382,176)">
+            <path d="M100,18C100,27.934 91.934,36 82,36L-82,36C-91.934,36 -100,27.934 -100,18C-100,8.066 -91.934,0 -82,0L82,0C91.934,0 100,8.066 100,18Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,0,23)">
+                <text x="-70.68px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Code Repositories</text>
+            </g>
+        </g>
     </g>
-    <!-- lower-right -->
-    <g transform="translate(1018,720)">
-      <rect x="-100" y="0" width="200" height="36" rx="18" ry="18" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="0" y="23" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">AI Coding Assistants</text>
+    <g>
+        <circle cx="700" cy="466" r="240" style="fill:none;stroke:rgb(233,78,27);stroke-width:1.5px;stroke-dasharray:4,3;"/>
+        <g transform="matrix(1,0,0,1,610,206)">
+            <path d="M180,10L180,50C180,55.519 175.519,60 170,60L10,60C4.481,60 0,55.519 0,50L0,10C0,4.481 4.481,0 10,0L170,0C175.519,0 180,4.481 180,10Z" style="fill:rgb(75,85,99);"/>
+            <g transform="matrix(1,0,0,1,90,26)">
+                <text x="-60.621px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Impact <tspan x="-5.191px 6.363px " y="0px 0px ">An</tspan>alysis</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,46)">
+                <text x="-22.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Agent</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,848,316)">
+            <path d="M180,10L180,50C180,55.519 175.519,60 170,60L10,60C4.481,60 0,55.519 0,50L0,10C0,4.481 4.481,0 10,0L170,0C175.519,0 180,4.481 180,10Z" style="fill:rgb(75,85,99);"/>
+            <g transform="matrix(1,0,0,1,90,26)">
+                <text x="-51.125px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">PR V<tspan x="-14.656px -5.758px " y="0px 0px ">al</tspan>idation</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,46)">
+                <text x="-22.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Agent</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,850,556)">
+            <path d="M180,10L180,50C180,55.519 175.519,60 170,60L10,60C4.481,60 0,55.519 0,50L0,10C0,4.481 4.481,0 10,0L170,0C175.519,0 180,4.481 180,10Z" style="fill:rgb(75,85,99);"/>
+            <g transform="matrix(1,0,0,1,90,26)">
+                <text x="-33.344px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">KG Sync</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,46)">
+                <text x="-22.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Agent</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,610,666)">
+            <path d="M180,10L180,50C180,55.519 175.519,60 170,60L10,60C4.481,60 0,55.519 0,50L0,10C0,4.481 4.481,0 10,0L170,0C175.519,0 180,4.481 180,10Z" style="fill:rgb(75,85,99);"/>
+            <g transform="matrix(1,0,0,1,90,26)">
+                <text x="-61.785px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">BDD Generation</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,46)">
+                <text x="-22.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Agent</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,370,556)">
+            <path d="M180,10L180,50C180,55.519 175.519,60 170,60L10,60C4.481,60 0,55.519 0,50L0,10C0,4.481 4.481,0 10,0L170,0C175.519,0 180,4.481 180,10Z" style="fill:rgb(75,85,99);"/>
+            <g transform="matrix(1,0,0,1,90,26)">
+                <text x="-27.547px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Coding</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,46)">
+                <text x="-22.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Agent</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,369,316)">
+            <path d="M180,10L180,50C180,55.519 175.519,60 170,60L10,60C4.481,60 0,55.519 0,50L0,10C0,4.481 4.481,0 10,0L170,0C175.519,0 180,4.481 180,10Z" style="fill:rgb(75,85,99);"/>
+            <g transform="matrix(1,0,0,1,90,26)">
+                <text x="-60.312px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">T<tspan x="-51.719px -42.82px " y="0px 0px ">es</tspan>t Generation</text>
+            </g>
+            <g transform="matrix(1,0,0,1,90,46)">
+                <text x="-22.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Agent</text>
+            </g>
+        </g>
     </g>
-    <!-- bottom -->
-    <g transform="translate(700,810)">
-      <rect x="-100" y="0" width="200" height="36" rx="18" ry="18" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="0" y="23" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Test Runners</text>
+    <g transform="matrix(1,0,0,1,560,396)">
+        <g transform="matrix(1,0,0,1,-3,-20)">
+            <path d="M280,14L280,166C280,173.727 273.727,180 266,180L14,180C6.273,180 0,173.727 0,166L0,14C0,6.273 6.273,0 14,0L266,0C273.727,0 280,6.273 280,14Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2.5px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,136.88,10)">
+            <text x="-67.37px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">F<tspan x="-57.356px -44.671px -32.876px -21.082px -15.513px -5.5px 4.826px 15.738px 26.65px 38.444px 43.13px 54.924px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">OUR-LAYER KG</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,17,26)">
+            <g transform="matrix(1,0,0,1,0,-6)">
+                <path d="M240,5L240,21C240,23.76 237.76,26 235,26L5,26C2.24,26 0,23.76 0,21L0,5C0,2.24 2.24,0 5,0L235,0C237.76,0 240,2.24 240,5Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            </g>
+            <g transform="matrix(1,0,0,1,120,12)">
+                <text x="-71.152px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Functional Ontology</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,17,54)">
+            <path d="M240,5L240,21C240,23.76 237.76,26 235,26L5,26C2.24,26 0,23.76 0,21L0,5C0,2.24 2.24,0 5,0L235,0C237.76,0 240,2.24 240,5Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,120,18)">
+                <text x="-59.145px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Design Ontology</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,17,88)">
+            <path d="M240,5L240,21C240,23.76 237.76,26 235,26L5,26C2.24,26 0,23.76 0,21L0,5C0,2.24 2.24,0 5,0L235,0C237.76,0 240,2.24 240,5Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,120,18)">
+                <text x="-76.926px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Architecture Ontology</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,17,122)">
+            <path d="M240,5L240,21C240,23.76 237.76,26 235,26L5,26C2.24,26 0,23.76 0,21L0,5C0,2.24 2.24,0 5,0L235,0C237.76,0 240,2.24 240,5Z" style="fill:white;stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,120,18)">
+                <text x="-53.367px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Code Ontology</text>
+            </g>
+        </g>
     </g>
-    <!-- lower-left -->
-    <g transform="translate(382,720)">
-      <rect x="-100" y="0" width="200" height="36" rx="18" ry="18" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="0" y="23" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Observability</text>
+    <g transform="matrix(1,0,0,1,40,118)">
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">O<tspan x="10.307px 19.89px 28.026px 36.892px 46.475px 50.282px 59.865px 63.672px 73.255px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">UTER RING</tspan></text>
+        <g transform="matrix(1,0,0,1,0,20)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Integration surface</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,38)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">(client toolchain)</text>
+        </g>
     </g>
-    <!-- left -->
-    <g transform="translate(292,440)">
-      <rect x="-100" y="0" width="200" height="36" rx="18" ry="18" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="0" y="23" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Design Tools</text>
+    <g transform="matrix(1,0,0,1,1230,118)">
+        <g transform="matrix(1,0,0,1,-1190,78)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">I<tspan x="3.807px 13.39px 22.973px 31.839px 41.422px 45.229px 54.812px 58.619px 68.202px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">NNER RING</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,-1190,98)">
+            <g transform="matrix(16,0,0,16,46.257812,0)">
+            </g>
+            <g transform="matrix(16,0,0,16,50.703125,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Agent ﬂeet</text>
+        </g>
+        <g transform="matrix(1,0,0,1,-1190,116)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">(operates on the graph)</text>
+        </g>
     </g>
-    <!-- upper-left -->
-    <g transform="translate(382,176)">
-      <rect x="-100" y="0" width="200" height="36" rx="18" ry="18" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="0" y="23" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Code Repositories</text>
+    <g transform="matrix(1,0,0,1,40,808)">
+        <g transform="matrix(1,0,0,1,0,-539)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">C<tspan x="9.583px 18.449px 28.032px 36.168px 45.034px " y="0px 0px 0px 0px 0px ">ENTER</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,-519)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The four-layer knowledge graph</text>
+        </g>
     </g>
-  </g>
-
-  <!-- Middle ring: six core agents -->
-  <g>
-    <circle cx="700" cy="466" r="240" style="fill:none;stroke:#E94E1B;stroke-width:1.5;stroke-dasharray:4 3"/>
-    <!-- Six agent boxes evenly spaced on inner ring -->
-    <!-- top -->
-    <g transform="translate(610,206)">
-      <rect x="0" y="0" width="180" height="60" rx="10" ry="10" style="fill:#4b5563"/>
-      <text x="90" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Impact Analysis</text>
-      <text x="90" y="46" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
-    </g>
-    <!-- upper-right -->
-    <g transform="translate(820,316)">
-      <rect x="0" y="0" width="180" height="60" rx="10" ry="10" style="fill:#4b5563"/>
-      <text x="90" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">PR Validation</text>
-      <text x="90" y="46" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
-    </g>
-    <!-- lower-right -->
-    <g transform="translate(820,556)">
-      <rect x="0" y="0" width="180" height="60" rx="10" ry="10" style="fill:#4b5563"/>
-      <text x="90" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">KG Sync</text>
-      <text x="90" y="46" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
-    </g>
-    <!-- bottom -->
-    <g transform="translate(610,666)">
-      <rect x="0" y="0" width="180" height="60" rx="10" ry="10" style="fill:#4b5563"/>
-      <text x="90" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">BDD Generation</text>
-      <text x="90" y="46" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
-    </g>
-    <!-- lower-left -->
-    <g transform="translate(400,556)">
-      <rect x="0" y="0" width="180" height="60" rx="10" ry="10" style="fill:#4b5563"/>
-      <text x="90" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Coding</text>
-      <text x="90" y="46" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
-    </g>
-    <!-- upper-left -->
-    <g transform="translate(400,316)">
-      <rect x="0" y="0" width="180" height="60" rx="10" ry="10" style="fill:#4b5563"/>
-      <text x="90" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Test Generation</text>
-      <text x="90" y="46" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agent</text>
-    </g>
-  </g>
-
-  <!-- Center: Four-layer KG -->
-  <g transform="translate(560,396)">
-    <rect x="0" y="0" width="280" height="180" rx="14" ry="14" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2.5"/>
-    <text x="140" y="30" text-anchor="middle" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">FOUR-LAYER KG</text>
-
-    <g transform="translate(20,46)">
-      <rect x="0" y="0" width="240" height="26" rx="5" ry="5" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
-      <text x="120" y="18" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#111111">Functional Ontology</text>
-    </g>
-    <g transform="translate(20,80)">
-      <rect x="0" y="0" width="240" height="26" rx="5" ry="5" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
-      <text x="120" y="18" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#111111">Design Ontology</text>
-    </g>
-    <g transform="translate(20,114)">
-      <rect x="0" y="0" width="240" height="26" rx="5" ry="5" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
-      <text x="120" y="18" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#111111">Architecture Ontology</text>
-    </g>
-    <g transform="translate(20,148)">
-      <rect x="0" y="0" width="240" height="26" rx="5" ry="5" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
-      <text x="120" y="18" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#111111">Code Ontology</text>
-    </g>
-  </g>
-
-  <!-- Labels for the rings -->
-  <text x="700" y="58" text-anchor="middle" style="font:italic 11px Segoe UI,system-ui,sans-serif;fill:#9ca3af"></text>
-  <g transform="translate(40,118)">
-    <text x="0" y="0" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">OUTER RING</text>
-    <text x="0" y="20" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Integration surface</text>
-    <text x="0" y="38" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">(client toolchain)</text>
-  </g>
-  <g transform="translate(1230,118)">
-    <text x="0" y="0" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">INNER RING</text>
-    <text x="0" y="20" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Agent fleet</text>
-    <text x="0" y="38" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">(operates on the graph)</text>
-  </g>
-  <g transform="translate(40,808)">
-    <text x="0" y="0" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">CENTER</text>
-    <text x="0" y="20" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">The four-layer knowledge graph</text>
-  </g>
 </svg>
