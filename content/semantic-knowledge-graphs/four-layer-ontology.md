@@ -54,8 +54,8 @@ The Functional Ontology is the layer that exposes whether the product owner is d
 graph LR
     P[Persona] --> O[Outcome]
     O --> S[Scenario]
-    S --> St[Steps]
-    St --> A[Actions]
+    S --> St[Step]
+    St --> A[Action]
     classDef default rx:10,ry:10;
 ```
 
@@ -64,10 +64,107 @@ graph LR
 | Persona | A named user with a defined relationship to the system | "Saved Search Owner" |
 | Outcome | What this persona is trying to accomplish | "Receive a weekly digest of new matches to my saved search" |
 | Scenario | A starting condition that leads to the outcome | "First-time configuration of weekly alerts" |
-| Steps | The ordered actions that compose the scenario | Open saved search, configure alert frequency, save |
-| Actions | The atomic operations the user performs | Click "Edit", select "Weekly", click "Save" |
+| Step | An ordered unit of work within the scenario | Open saved search, configure alert frequency, save |
+| Action | The atomic operation the user performs | Click "Edit", select "Weekly", click "Save" |
 
 The structure matters for governance, not specification. When a product owner says "we want the user to be able to do X", the Functional Ontology forces the question: which persona, which outcome, which scenario? The ontology is not the requirements. It is the shape the requirements have to take so the team and the agent can both reason about them consistently.
+
+### The Design Ontology in Detail
+
+The Design Ontology is the layer that exposes whether the UX designer and the design system owner are maintaining a coherent interface. The structure follows the atomic-design model on the component side, with a parallel journey hierarchy that links the user experience back to the Functional Ontology.
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
+graph LR
+    UJ[User Journey] --> FL[Flow]
+    FL --> PG[Page]
+    PG --> TP[Template]
+    TP --> OR[Organism]
+    OR --> ML[Molecule]
+    ML --> AT[Atom]
+    classDef default rx:10,ry:10;
+```
+
+| Node type | What it captures | Example |
+|---|---|---|
+| User Journey | A persona's end-to-end experience that crosses multiple flows | "First-time onboarding for a Saved Search Owner" |
+| Flow | An ordered sequence of pages that delivers a Functional Scenario | "Configure weekly alerts" |
+| Page | A composed screen the user lands on | "Saved Searches list", "Alert configuration drawer" |
+| Template | A reusable page-level layout pattern | "Two-column settings layout with right-side preview" |
+| Organism | A composed UI block that delivers a discrete user task | "Alert frequency selector with preview" |
+| Molecule | A group of atoms that work together as a small functional unit | "Labelled dropdown with helper text" |
+| Atom | The smallest reusable UI primitive | "Button", "Input", "Badge", "Color token" |
+
+The Design Ontology connects to the Functional Ontology along the journey side: every User Journey maps to a Functional Persona and Outcome, every Flow maps to a Functional Scenario, every Page maps to a Functional Step. The atomic-design side governs reuse: when a product owner asks for a feature that needs a new control, the ontology surfaces the existing molecules or organisms that already deliver that affordance, so the team composes rather than duplicates. Drift between Figma and the running UI shows up as Design Ontology nodes that no Page actually renders, or rendered components that no Design Ontology node describes.
+
+### The Architecture Ontology in Detail
+
+The Architecture Ontology is the layer that exposes whether the architect is keeping the system's structural decisions current. The structure is an eight-layer blueprint rather than a deep hierarchy. Each layer contains per-product component nodes with relationships to layers above and below.
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
+graph TD
+    UX[User Experience]
+    AG[API Gateway]
+    SV[Services]
+    AI[Agents]
+    EQ[Event Queue]
+    DL[Data Lake]
+    OB[Observability]
+    IN[Infrastructure]
+    UX --> AG --> SV
+    SV --> AI
+    SV --> EQ
+    SV --> DL
+    SV --> OB
+    SV --> IN
+    classDef default rx:10,ry:10;
+```
+
+| Layer | What it captures | Example |
+|---|---|---|
+| User Experience | The frontend applications, mobile clients, and external-facing surfaces | "Web app", "iOS client", "Customer portal" |
+| API Gateway | The contract layer between clients and services | "Public REST gateway", "BFF for mobile" |
+| Services | The owned business-logic units behind the gateway | "Saved Search Service", "Notification Service" |
+| Agents | The intelligent agents that read graphs and produce outputs | "Impact Analysis Agent", "PR Validation Agent" |
+| Event Queue | The asynchronous coordination layer between services | "Alert delivery topic", "Search-indexed event stream" |
+| Data Lake | The persistent stores: relational, document, search, blob | "Postgres primary", "Elasticsearch index", "S3 archive" |
+| Observability | The monitoring, logging, and tracing layer | "Metrics pipeline", "Distributed trace store", "Alert routing" |
+| Infrastructure | The deployment and runtime substrate | "Kubernetes cluster", "Region topology", "Secrets manager" |
+
+The eight layers are fixed; the per-product component nodes inside each layer are not. A small product may have two services and no Event Queue; an enterprise product may have forty services across three regions. The ontology captures what is present and how the components connect across layers. The architect uses the ontology to answer questions like: when this contract changes, which services have to update? When this region fails over, which downstream consumers feel it? When a new agent gets added to the fleet, where does it sit and what does it depend on? Boundary violations (a User Experience node calling a Service directly past the API Gateway, a Service writing to another Service's Data Lake) surface as graph-shape violations during PR validation.
+
+### The Code Ontology in Detail
+
+The Code Ontology is the layer that exposes whether the engineering team has the implementation surface under structural control. The structure is auto-generated from the actual source using AST parsers, then enriched with LLM-inferred metadata.
+
+```mermaid
+%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
+graph LR
+    FL[File] --> CL[Class]
+    CL --> FN[Function]
+    FN --> ST[Statement]
+    FL --> AP[API Endpoint]
+    classDef default rx:10,ry:10;
+```
+
+| Node type | What it captures | Example |
+|---|---|---|
+| File | A source file in the repository, with language and module attribution | `services/saved-search/charge.ts` |
+| Class | A class, interface, or module-scoped type defined in a file | `class AlertScheduler` |
+| Function | A function, method, or arrow function with signature and call sites | `function scheduleWeeklyAlert(savedSearchId, userId)` |
+| Statement | A captured statement body for the call-graph and impact analysis | The body of `scheduleWeeklyAlert`, retained so downstream agents can reason about behavior |
+| API Endpoint | A route exposed by the file (REST, GraphQL, gRPC, or message-queue consumer) | `POST /alerts/configure` |
+
+The Code Ontology bridges the Architecture Ontology and the implementation surface. Each File node carries a module attribution that links it to a Service node in the Architecture Ontology. Each API Endpoint node carries a route signature that links it to an API Gateway contract. Each Function node carries call-graph edges that let the Impact Analysis Agent trace a Functional Action down to the specific lines that implement it. The captured statement bodies are what make the impact analysis precise rather than approximate: the agent reads behavior, not just structure.
+
+The Code Ontology is extracted by AST parsers across the supported language set (currently TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl). The parsers run on every merge to master, so the Code Ontology stays current as a side effect of the implementation sprint cadence covered in [Implementation Sprint](../process/implementation-sprint.md).
+
+### Citations at Every Layer
+
+Every node in every layer carries a citation: a link back to the source document, Figma frame, Jira ticket, design brief, or code file that justifies the node's existence. The citation is required at the time the node is created. A node without a citation does not enter the graph.
+
+The discipline matters for two reasons. First, it makes the graph audit-grade: any element in the graph can be traced back to the artifact that produced it. Second, it lets the graph be diffed against its sources: when a Jira ticket changes, the agents know which nodes to re-validate; when a Figma frame moves, the agents know which Design nodes need to follow.
 
 ### Cross-Layer Traversal
 

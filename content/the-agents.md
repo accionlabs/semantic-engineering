@@ -355,7 +355,7 @@ Given a Functional Ontology with the structure:
 - Persona: Saved Search Owner
 - Outcome: Receive a weekly digest of new matches
 - Scenario: First-time configuration of weekly alerts
-- Steps: Open saved search → Configure alert frequency → Save
+- Step: Open saved search → Configure alert frequency → Save
 
 The agent generates:
 
