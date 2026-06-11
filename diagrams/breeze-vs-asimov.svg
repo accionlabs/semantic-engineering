@@ -1,97 +1,217 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" width="1400" height="820" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
-  <rect width="1400" height="820" style="fill:#ffffff"/>
-
-  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">Breeze.AI and ASIMOV: Peer Platforms Under Semantic Engineering</text>
-  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">Same Semantic Engineering principles. Shaped for two different problems.</text>
-
-  <!-- Shared umbrella -->
-  <g transform="translate(280,108)">
-    <rect x="0" y="0" width="840" height="60" rx="14" ry="14" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
-    <text x="420" y="38" text-anchor="middle" style="font:700 17px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">SEMANTIC ENGINEERING PRINCIPLES</text>
-  </g>
-
-  <!-- Down lines to the two platforms -->
-  <line x1="500" y1="168" x2="500" y2="200" style="stroke:#E94E1B;stroke-width:2"/>
-  <line x1="900" y1="168" x2="900" y2="200" style="stroke:#E94E1B;stroke-width:2"/>
-
-  <!-- Two platform columns -->
-  <!-- Breeze.AI -->
-  <g transform="translate(80,200)">
-    <rect x="0" y="0" width="620" height="580" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
-    <rect x="0" y="0" width="620" height="80" rx="14" ry="14" style="fill:#4b5563"/>
-    <rect x="0" y="60" width="620" height="20" style="fill:#4b5563"/>
-    <text x="310" y="40" text-anchor="middle" style="font:700 26px Segoe UI,system-ui,sans-serif;fill:#ffffff">Breeze.AI</text>
-    <text x="310" y="64" text-anchor="middle" style="font:italic 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">AI-native SDLC platform</text>
-
-    <!-- Row 1: Problem -->
-    <text x="20" y="118" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">PROBLEM</text>
-    <text x="20" y="142" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Evolving an application across years.</text>
-    <text x="20" y="160" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Open-ended SDLC governance.</text>
-    <line x1="20" y1="184" x2="600" y2="184" style="stroke:#9ca3af;stroke-width:1"/>
-
-    <!-- Row 2: Ontology usage -->
-    <text x="20" y="208" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">ONTOLOGY USAGE</text>
-    <text x="20" y="232" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Full four-layer ontology, all custodians</text>
-    <text x="20" y="250" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">active. Functional + Design + Architecture</text>
-    <text x="20" y="268" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">+ Code, continuously maintained.</text>
-    <line x1="20" y1="292" x2="600" y2="292" style="stroke:#9ca3af;stroke-width:1"/>
-
-    <!-- Row 3: Graph artifact -->
-    <text x="20" y="316" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">GRAPH ARTIFACT</text>
-    <text x="20" y="340" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">One four-layer graph per product.</text>
-    <text x="20" y="358" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">KG Sync Agent keeps it current on</text>
-    <text x="20" y="376" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">every merge.</text>
-    <line x1="20" y1="400" x2="600" y2="400" style="stroke:#9ca3af;stroke-width:1"/>
-
-    <!-- Row 4: Human role (highlighted) -->
-    <text x="20" y="424" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">HUMAN ROLE</text>
-    <g transform="translate(20,438)">
-      <rect x="0" y="0" width="580" height="48" rx="8" ry="8" style="fill:#4b5563"/>
-      <text x="290" y="22" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#ffffff">IN THE LOOP</text>
-      <text x="290" y="40" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">developer reviews per change; gates approve at merge</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1400px" height="820px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,700,44)">
+        <text x="-485.42px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(17,17,17);">Breeze.AI and <tspan x="-279.785px -258.12px " y="0px 0px ">AS</tspan>IMOV<tspan x="-163.081px -153.091px " y="0px 0px ">: </tspan>Peer Platforms Under Semantic Engineering</text>
     </g>
-    <line x1="20" y1="510" x2="600" y2="510" style="stroke:#9ca3af;stroke-width:1"/>
-
-    <!-- Row 5: Time horizon -->
-    <text x="20" y="534" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:1.5px">TIME HORIZON</text>
-    <text x="20" y="558" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Years. Continuous operation.</text>
-  </g>
-
-  <!-- ASIMOV -->
-  <g transform="translate(700,200)">
-    <rect x="0" y="0" width="620" height="580" rx="14" ry="14" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
-    <rect x="0" y="0" width="620" height="80" rx="14" ry="14" style="fill:#E94E1B"/>
-    <rect x="0" y="60" width="620" height="20" style="fill:#E94E1B"/>
-    <text x="310" y="40" text-anchor="middle" style="font:700 26px Segoe UI,system-ui,sans-serif;fill:#ffffff">ASIMOV</text>
-    <text x="310" y="64" text-anchor="middle" style="font:italic 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">AI-led legacy modernization platform</text>
-
-    <text x="20" y="118" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">PROBLEM</text>
-    <text x="20" y="142" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Replacing a legacy stack while</text>
-    <text x="20" y="160" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">preserving behavioral parity.</text>
-    <line x1="20" y1="184" x2="600" y2="184" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
-
-    <text x="20" y="208" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">ONTOLOGY USAGE</text>
-    <text x="20" y="232" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Subset: Functional and Code primarily;</text>
-    <text x="20" y="250" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Architecture as needed for redesign;</text>
-    <text x="20" y="268" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Design optional (UI re-platforming).</text>
-    <line x1="20" y1="292" x2="600" y2="292" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
-
-    <text x="20" y="316" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">GRAPH ARTIFACT</text>
-    <text x="20" y="340" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Source Graph (legacy) and Target Graph</text>
-    <text x="20" y="358" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">(modern), produced on the project. Target</text>
-    <text x="20" y="376" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Ontology Configurator constrains generation.</text>
-    <line x1="20" y1="400" x2="600" y2="400" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
-
-    <text x="20" y="424" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">HUMAN ROLE</text>
-    <g transform="translate(20,438)">
-      <rect x="0" y="0" width="580" height="48" rx="8" ry="8" style="fill:#E94E1B"/>
-      <text x="290" y="22" text-anchor="middle" style="font:700 15px Segoe UI,system-ui,sans-serif;fill:#ffffff">OUT OF THE LOOP</text>
-      <text x="290" y="40" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">agents run end to end; human validates behavioral parity</text>
+    <g transform="matrix(1,0,0,1,700,72)">
+        <text x="-264px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Same Semantic Engineering principles. Shaped for two dif<tspan x="148.391px 152.836px " y="0px 0px ">fe</tspan>rent problems.</text>
     </g>
-    <line x1="20" y1="510" x2="600" y2="510" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
-
-    <text x="20" y="534" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">TIME HORIZON</text>
-    <text x="20" y="558" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Quarters. Finite project with a parity</text>
-    <text x="20" y="576" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">objective.</text>
-  </g>
+    <g transform="matrix(1,0,0,1,280,108)">
+        <g transform="matrix(1,-0,-0,1,-280,-108)">
+            <use xlink:href="#_Image1" x="278.877" y="106.877" width="843px" height="63px"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-20,0)">
+        <path d="M500,168L500,200" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+    </g>
+    <path d="M900,168L900,200" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,80,200)">
+        <g transform="matrix(1,0,0,1,-20,0)">
+            <path d="M620,14L620,566C620,573.727 613.727,580 606,580L14,580C6.273,580 0,573.727 0,566L0,14C0,6.273 6.273,0 14,0L606,0C613.727,0 620,6.273 620,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-20,0)">
+            <path d="M620,14L620,66C620,73.727 613.727,80 606,80L14,80C6.273,80 0,73.727 0,66L0,14C0,6.273 6.273,0 14,0L606,0C613.727,0 620,6.273 620,14Z" style="fill:rgb(75,85,99);"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-20,0)">
+            <rect x="0" y="60" width="620" height="20" style="fill:rgb(75,85,99);"/>
+        </g>
+        <g transform="matrix(1,0,0,1,290,40)">
+            <text x="-54.691px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:white;">Breeze.AI</text>
+        </g>
+        <g transform="matrix(1,0,0,1,290,64)">
+            <text x="-86.254px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">AI-native SDLC platform</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,118)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">P<tspan x="8.866px 18.449px 28.756px 38.339px 46.475px 55.341px " y="0px 0px 0px 0px 0px 0px ">ROBLEM</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,142)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Evolving an application across years.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,160)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Open-ended SDLC governance.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,-20,0)">
+            <path d="M20,184L600,184" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,0,208)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">O<tspan x="10.307px 19.89px 27.797px 38.104px 46.24px 56.547px 66.854px 75.491px 79.298px 88.881px 97.747px 107.33px 117.637px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">NTOLOGY USAGE</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,232)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Full four-layer ontology<tspan x="161.562px 166.008px " y="0px 0px ">, </tspan>all custodians</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,250)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">active. Functional + Design + <tspan x="209.906px 220.578px " y="0px 0px ">Ar</tspan>chitecture</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,268)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">+ Code, continuously maintained.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,-20,0)">
+            <path d="M20,292L600,292" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,0,316)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">G<tspan x="10.307px 19.89px 29.473px 38.339px 47.922px 51.253px 60.836px 70.419px 78.555px 82.362px 89.787px 99.37px 108.953px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RAPH ARTIFACT</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,340)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">One four-layer graph per product.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,358)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">KG Sync <tspan x="66.703px 77.375px " y="0px 0px ">Ag</tspan>ent keeps it current on</text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,376)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">every merge.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,-20,0)">
+            <path d="M20,400L600,400" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,0,424)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">H<tspan x="9.583px 19.166px 30.19px 39.774px 49.357px 53.164px 62.747px 73.054px 81.19px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMAN ROLE</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,438)">
+            <path d="M580,8L580,40C580,44.415 576.415,48 572,48L8,48C3.585,48 0,44.415 0,40L0,8C0,3.585 3.585,0 8,0L572,0C576.415,0 580,3.585 580,8Z" style="fill:rgb(75,85,99);"/>
+            <g transform="matrix(1,0,0,1,290,22)">
+                <text x="-41.53px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:white;">IN THE LOOP</text>
+            </g>
+            <g transform="matrix(1,0,0,1,290,40)">
+                <text x="-195.672px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">developer reviews per change; gates approve at merge</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,-20,0)">
+            <path d="M20,510L600,510" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,0,534)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">T<tspan x="8.136px 11.943px 22.967px 31.833px 35.64px 45.223px 55.53px 65.113px 68.92px 77.055px 87.362px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">IME HORIZON</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,0,558)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Y<tspan x="9.203px 18.102px " y="0px 0px ">ea</tspan>rs. Continuous operation.</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,700,200)">
+        <g transform="matrix(1,0,0,1,20,0)">
+            <path d="M620,14L620,566C620,573.727 613.727,580 606,580L14,580C6.273,580 0,573.727 0,566L0,14C0,6.273 6.273,0 14,0L606,0C613.727,0 620,6.273 620,14Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,20,0)">
+            <path d="M620,14L620,66C620,73.727 613.727,80 606,80L14,80C6.273,80 0,73.727 0,66L0,14C0,6.273 6.273,0 14,0L606,0C613.727,0 620,6.273 620,14Z" style="fill:rgb(233,78,27);"/>
+        </g>
+        <g transform="matrix(1,0,0,1,20,0)">
+            <rect x="0" y="60" width="620" height="20" style="fill:rgb(233,78,27);"/>
+        </g>
+        <g transform="matrix(1,0,0,1,330,40)">
+            <text x="-47.338px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:white;">ASIMOV</text>
+        </g>
+        <g transform="matrix(1,0,0,1,330,64)">
+            <text x="-129.84px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">AI-led legacy modernization platform</text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,118)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">P<tspan x="8.866px 18.449px 28.756px 38.339px 46.475px 55.341px " y="0px 0px 0px 0px 0px 0px ">ROBLEM</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,142)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Replacing a legacy stack while</text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,160)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">preserving behavioral parity<tspan x="195.367px " y="0px ">.</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,0)">
+            <clipPath id="_clip2">
+                <rect x="20" y="183.5" width="580" height="1"/>
+            </clipPath>
+            <g clip-path="url(#_clip2)">
+                <g transform="matrix(1,-0,-0,1,-720,-200)">
+                    <use xlink:href="#_Image3" x="740" y="383.5" width="580px" height="1px"/>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,40,208)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">O<tspan x="10.307px 19.89px 27.797px 38.104px 46.24px 56.547px 66.854px 75.491px 79.298px 88.881px 97.747px 107.33px 117.637px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">NTOLOGY USAGE</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,232)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Subset: Functional and Code primarily;</text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,250)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Architecture as needed for redesign;</text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,268)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Design optional (UI re-platforming).</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,0)">
+            <clipPath id="_clip4">
+                <rect x="20" y="291.5" width="580" height="1"/>
+            </clipPath>
+            <g clip-path="url(#_clip4)">
+                <g transform="matrix(1,-0,-0,1,-720,-200)">
+                    <use xlink:href="#_Image3" x="740" y="491.5" width="580px" height="1px"/>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,40,316)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">G<tspan x="10.307px 19.89px 29.473px 38.339px 47.922px 51.253px 60.836px 70.419px 78.555px 82.362px 89.787px 99.37px 108.953px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RAPH ARTIFACT</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,340)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Source Graph (legacy) and <tspan x="196.266px 204.266px 213.164px " y="0px 0px 0px ">Tar</tspan>get Graph</text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,358)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">(modern), produced on the project. <tspan x="250.523px 258.523px 267.422px " y="0px 0px 0px ">Tar</tspan>get</text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,376)">
+            <g transform="matrix(16,0,0,16,97.835938,0)">
+            </g>
+            <g transform="matrix(16,0,0,16,102.28125,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Ontology Conﬁgurator constrains generation.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,20,0)">
+            <clipPath id="_clip5">
+                <rect x="20" y="399.5" width="580" height="1"/>
+            </clipPath>
+            <g clip-path="url(#_clip5)">
+                <g transform="matrix(1,-0,-0,1,-720,-200)">
+                    <use xlink:href="#_Image3" x="740" y="599.5" width="580px" height="1px"/>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,40,424)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">H<tspan x="9.583px 19.166px 30.19px 39.774px 49.357px 53.164px 62.747px 73.054px 81.19px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMAN ROLE</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,438)">
+            <path d="M580,8L580,40C580,44.415 576.415,48 572,48L8,48C3.585,48 0,44.415 0,40L0,8C0,3.585 3.585,0 8,0L572,0C576.415,0 580,3.585 580,8Z" style="fill:rgb(233,78,27);"/>
+            <g transform="matrix(1,0,0,1,290,22)">
+                <text x="-59.582px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:white;">OUT OF THE LOOP</text>
+            </g>
+            <g transform="matrix(1,0,0,1,290,40)">
+                <text x="-201.465px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">agents run end to end; human validates behavioral parity</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,20,0)">
+            <clipPath id="_clip6">
+                <rect x="20" y="509.5" width="580" height="1"/>
+            </clipPath>
+            <g clip-path="url(#_clip6)">
+                <g transform="matrix(1,-0,-0,1,-720,-200)">
+                    <use xlink:href="#_Image3" x="740" y="709.5" width="580px" height="1px"/>
+                </g>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,40,534)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">T<tspan x="8.136px 11.943px 22.967px 31.833px 35.64px 45.223px 55.53px 65.113px 68.92px 77.055px 87.362px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">IME HORIZON</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,40,558)">
+            <g transform="matrix(16,0,0,16,320.132812,0)">
+            </g>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Quarters. Finite project with a parity objective</text>
+        </g>
+    </g>
+    <defs>
+        <image id="_Image1" width="843px" height="63px" xlink:href="data:image/png;base64,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"/>
+        <image id="_Image3" width="580px" height="1px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAkQAAAABCAYAAAA/6rGsAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAHUlEQVRIiWN86SedxjAKRsEoGAWjYBSMglEwggEApM0BuunAD/sAAAAASUVORK5CYII="/>
+    </defs>
 </svg>
