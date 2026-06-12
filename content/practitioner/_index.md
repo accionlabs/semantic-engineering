@@ -1,6 +1,6 @@
 ---
 title: "Practitioner"
-description: "Accion Labs as the originating and primary practitioner of Semantic Engineering. About the firm, the platforms (Breeze.AI and ASIMOV), the engagement model, services, and named case studies."
+description: "Accion Labs as the originating and primary practitioner of Semantic Engineering. About the firm, the platforms (Breeze.AI and ASIMOV), the engagement model, and services."
 weight: 50
 date: 2026-06-04
 lastmod: 2026-06-05

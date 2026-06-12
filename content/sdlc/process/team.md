@@ -334,6 +334,12 @@ The effort-based model is familiar to procurement. It maps to existing professio
 
 It also has a limitation: it bills for the work that produces the asset rather than for the asset itself. The compounding asset (the knowledge graph) is delivered alongside the effort, but the procurement frame is the effort rather than the graph.
 
+A second limitation surfaces when the work itself stops being effort-shaped. From a recent conversation with the engagement lead at an SDD-mature client, asked how productivity gets reported to leadership:
+
+> "Estimation is a bad problem because the entire leadership is agile focused. They understand story points but SDD does not have a story point. We are juxtaposing historical data: sprint velocity for past five sprints, and after using SDD, how many story points we have been able to deliver. It is not ideal."
+
+The team writes effectively no code by hand. The reported metric is sprint velocity superimposed on agent output as a comparison number. The effort frame still works for procurement, but it has begun to describe the work less and less accurately. The deliverable-based model below is the structural response.
+
 ### Phase 2: Deliverable-Based Engagement
 
 As ontology and semantic engineering vocabulary becomes standardized, the deliverables themselves become well-defined and well-understood. At that point the engagement frame shifts from "the semantic engineer's contribution" to "the knowledge graph for this product domain", and from "the agent developer's contribution" to "the validated agent fleet".

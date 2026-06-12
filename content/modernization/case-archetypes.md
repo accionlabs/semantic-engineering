@@ -15,7 +15,7 @@ audience:
 
 This page covers the legacy modernization instantiation. The continuous SDLC archetypes are on [Case Archetypes: Continuous SDLC](../sdlc/case-archetypes.md).
 
-The case studies below illustrate the breadth of legacy stacks the methodology has modernized. The list is representative rather than exhaustive. The five-stage modernization lifecycle and the per-language adapters in the [modernization agent fleet](agents.md) extend across legacy stacks beyond those shown here. Named versions of these engagements, with logos and engagement team attribution, are on the [ASIMOV page](../practitioner/asimov.md) where client permissions allow.
+The case studies below illustrate the breadth of legacy stacks the methodology has modernized. The list is representative rather than exhaustive. The five-stage modernization lifecycle and the per-language adapters in the [modernization agent fleet](agents.md) extend across legacy stacks beyond those shown here.
 
 Delivery duration on any specific engagement depends on the organization's path-to-production process and the modules selected for migration. Effort and time outcomes are reported below; cost outcomes are framed engagement by engagement.
 

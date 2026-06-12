@@ -64,6 +64,26 @@ The architect updated her artifact. The PO updated her artifact. Neither of them
 
 **Specs become the new bottleneck.** Once the team has hit the three ceilings above, the obvious fix is to make the specs richer. Bring the architect into spec review. Bring the designer into spec review. Make sure every spec covers all the angles the agent needs. We have watched several teams attempt this. It does work, in a sense: the specs get more accurate and AI-generated code gets more reliable. But the throughput collapses. The PO can write specs at the rate she can think; the architect can review them at the rate she has free time, which is not much because she is also fielding the Slack DMs from Zone 1; the designer is in the same boat. The team's senior people end up spending their week in spec authoring and review meetings while the implementation engineers wait for input. The bottleneck moves from typing to thinking, and the operating model is not configured to absorb the shift. The cost structure no longer aligns with FTE-based estimation, because the work the team needs is no longer the work the team is staffed for.
 
+### From the Field: An SDD-Mature Engagement at the Ceiling
+
+The following observations come from a recent conversation with the engagement lead at a long-running SDD practice that has reached the ceiling in operation. PRs on this engagement touch 300 to 400 files and 30,000 lines of code, and a typical review cycle now runs over two weeks. The lead describes the operating model in his own terms.
+
+> "SDD is waterfall reimagined. SDD forces people to work sixteen to eighteen hours a day because the amount and volume of code is so much. Once the spec is thrashed out, you are on your own. You talk to Claude. Claude talks to you. You are logged in a room and working for hours and hours."
+
+On the talent envelope the ceiling forces:
+
+> "Bottom thirty to forty percent will struggle with SDD. There is no place to hide. It is between you and Claude as a developer."
+
+On the open problem the team has not yet solved:
+
+> "Governance becomes very challenging as complexity and team count grow."
+
+The conclusion captured back to the team in the same conversation:
+
+> "Code generation is the easy bit of the whole problem. The real problem is managing QA and governance."
+
+The full case is in [SDD at the Governance Ceiling](../case-archetypes.md#sdd-at-the-governance-ceiling).
+
 ## The Pattern
 
 The four conditions compound. A team can survive one. A team that hits two or three at the same time will not survive without changing the substrate.
