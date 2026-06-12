@@ -1,7 +1,7 @@
 ---
 title: "Practitioner"
 description: "Accion Labs as the originating and primary practitioner of Semantic Engineering. About the firm, the platforms (Breeze.AI and ASIMOV), the engagement model, services, and named case studies."
-weight: 80
+weight: 50
 date: 2026-06-04
 lastmod: 2026-06-05
 draft: false
@@ -45,13 +45,13 @@ The workshop requires no infrastructure change, no system access beyond what is 
 
 ### Why Accion Labs as the Enabler
 
-The [Enablement Partnership](../process/enablement-partnership.md) frames our role over multi-year engagements as enabling partner rather than vendor or custodian. The client's four custodians own the knowledge asset; we provide customization, setup, and managed support under codified engagement principles. The enablement relationship operates under explicit firewalls when we enable the same methodology for competing clients. The offboarding doctrine makes the exit real, which is what makes the entry decision easy.
+The [Enablement Partnership](../sdlc/process/enablement-partnership.md) frames our role over multi-year engagements as enabling partner rather than vendor or custodian. The client's four custodians own the knowledge asset; we provide customization, setup, and managed support under codified engagement principles. The enablement relationship operates under explicit firewalls when we enable the same methodology for competing clients. The offboarding doctrine makes the exit real, which is what makes the entry decision easy.
 
 This is the relational frame we propose for engagements that exceed the workshop or the initial twelve-week foundation.
 
 ### What This Section Does Not Cover
 
-This section is about Accion Labs as the methodology's operator. It does not advocate for the methodology. The methodology advocacy is in [The Manual Translation Tax](../manual-translation-tax.md), [Zones of AI-Assisted SDLC](../zones-of-ai-assisted-sdlc/_index.md), and [The Methodology](../semantic-knowledge-graphs/_index.md). Readers who want the case for the methodology should start there. Readers who have decided the methodology is what they need, and are evaluating Accion Labs as the partner to operate it, will find what they need in this section.
+This section is about Accion Labs as the methodology's operator. It does not advocate for the methodology. The methodology advocacy is in [The Manual Translation Tax](../sdlc/translation-tax.md), [Zones of AI-Assisted SDLC](../sdlc/zones/_index.md), and [The Methodology](../sdlc/methodology.md). Readers who want the case for the methodology should start there. Readers who have decided the methodology is what they need, and are evaluating Accion Labs as the partner to operate it, will find what they need in this section.
 
 ---
 
@@ -74,28 +74,7 @@ Accion Labs is the AI-first, platform-led innovation engineering company that or
 
 ### AI Evolution Timeline
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph LR
-    A[2017<br/>Breeze framework<br/>Manual blueprint for PO,<br/>architect, UX designer]
-    B[2019<br/>ML Exploration<br/>Early ML across customer engagements]
-    C[2021<br/>NLP & Vision<br/>Domain-specific extraction at production scale]
-    D[Q1 2022<br/>First GenAI project starts<br/>Drug discovery for pharma leader]
-    E[Q3 2022<br/>Drug discovery deployed<br/>Knowledge graph constraint pattern proven]
-    F[2024<br/>Agentic AI<br/>Multi-agent orchestration patterns]
-    G[2025-26<br/>Semantic Engineering<br/>Methodology formalized; Breeze.AI platform; commercial practice]
-
-    A --> B
-    B --> C
-    C --> D
-    D --> E
-    E --> F
-    F --> G
-
-    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
-    class G accent
-    classDef default rx:10,ry:10;
-```
+![Accion Labs AI evolution timeline from the 2017 Breeze framework to the 2025-26 Semantic Engineering methodology](/diagrams/ai-evolution-timeline.svg)
 
 The methodology has two roots that converged. The 2017 Breeze framework codified the minimal governance structure that good product owners, architects, and UX designers needed to produce. The first GenAI project in 2022 (drug discovery for a pharma leader, started Q1 and deployed Q3) produced the structural insight that constraining a transformer model with a knowledge graph turns confident hallucination into precise, traceable output. The convergence became Semantic Engineering. The platform that operationalizes it took the name of its 2017 ancestor: Breeze.AI. The full origin narrative is in [Origins](../about/origins.md).
 
@@ -120,7 +99,7 @@ Our internal operating model for AI engagements has six elements that align to t
 |---|---|
 | L1: Strategy & Enterprise Intelligence | AI roadmap and readiness, enterprise knowledge curation, durable enterprise intelligence (powered by ECL and KAPS) |
 | L2: Agentic AI & Autonomous Ops | Multi-agent orchestration, governed skill engineering, autonomous enterprise operations (powered by SPEX and Semantic KG) |
-| L3: Software Engineering & Modernization | AI-native software engineering, AI-led legacy modernization, sustainable AI economics, SaaS agentification (powered by ASIMOV and Breeze.AI) |
+| L3: Software Engineering & Modernization | agentic SDLC, agentic legacy modernization, sustainable AI economics, SaaS agentification (powered by ASIMOV and Breeze.AI) |
 | L4: Platforms & Ecosystem | AI platforms (Open AI, Microsoft Foundry, AWS Bedrock, Loti AI), Cloud platforms, Data platforms, Business apps, Automation (powered by Gen AI in a Box) |
 | Cross-cutting: AI Governance & Compliance | Spans all four layers |
 
@@ -156,7 +135,7 @@ The technical implementations we bring to a Semantic Engineering engagement. Eac
 | Platform | What it does | When it engages |
 |---|---|---|
 | [Breeze.AI](breeze-ai.md) | The AI-native SDLC platform. Operates the full four-layer knowledge graph plus the agent fleet (Impact Analysis, PR Validation, BDD Generation, KG Sync, Extraction). Developer is in the loop on per-change decisions. | When the engagement is ongoing SDLC governance and evolution of a live application. |
-| [ASIMOV](asimov.md) | The AI-led legacy modernization platform. Builds on Semantic Engineering principles. Three-stage agent pipeline (Ingestion → Transformation → Generation) anchored on a Source Graph and a Target Ontology Configurator. Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Fully agentic, humans outside the loop. Up to 4× faster than manual modernization. | When the engagement scope is replacing a legacy system (COBOL, Delphi, VB.NET, older Java, ASP.NET) with a modern stack (Java 21, .NET 8, React 18, Angular 19) while preserving behavior. |
+| [ASIMOV](asimov.md) | The agentic legacy modernization platform. Builds on Semantic Engineering principles. Five-pillar architecture across the legacy modernization lifecycle: AGIE (Discover), ASF (Document, with BRD / Gherkin / Playwright / chatbot extraction), AMM (Migrate), AVF (Validate, with four named gates: Architecture, Design, Standards, Functional), Maintain. Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Five engagement modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain / Operate). Humans validate at SME annotation and Expert Review; everything between is agentic. Track record: 15M+ LOC modernized across 10+ programs over 3+ years. Up to 4× faster than manual modernization. | When the engagement scope is replacing a legacy system (COBOL, Delphi, VB.NET, older Java, ASP.Net) with a modern stack (.NET 8/10, Java 21, React 19, Spring MVC, Angular 19) while preserving behavior. |
 
 ### Other Accion Labs Platforms Referenced in the Methodology
 
@@ -180,7 +159,7 @@ Beyond the two SDLC-focused platforms above, several other platforms appear in t
 | BDD Generation Agent | Breeze.AI |
 | KG Sync Agent | Breeze.AI |
 | Brownfield extraction | Breeze.AI |
-| AI-led legacy modernization | ASIMOV (peer platform built on Semantic Engineering principles) |
+| Agentic legacy modernization | ASIMOV (peer platform built on Semantic Engineering principles) |
 | Governance and metrics framework | Breeze.AI |
 | Enablement operational tooling | Breeze.AI plus engagement-team workflows |
 
@@ -205,98 +184,44 @@ The depth coverage of each platform lives on its own page.
 
 ---
 
-## Engagement Model
+## Engagement Models
 
-Our engagement model has four phases. Each phase has a defined set of activities, participants, and deliverables. The phases align to the [Three-Phase Rollout](#three-phase-rollout) below and to the [managed support tiers](../process/enablement-partnership.md).
+We offer two distinct engagement models, one per use case. Continuous software engineering engagements run on a four-phase model (Advise, Launch, Scale, Optimize) shaped for ongoing custodianship over years. Legacy modernization engagements run on a five-mode model shaped for a bounded project with a defined target.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph LR
-    A[Advise<br/>2 to 4 weeks]
-    L[Launch<br/>12 weeks]
-    S[Scale<br/>Quarters]
-    O[Optimize<br/>Continuous]
+| Engagement model | Shape | When it applies |
+|---|---|---|
+| **[Continuous SDLC](../sdlc/engagement-model.md)**: Advise / Launch / Scale / Optimize | Years of continuous operation under the four-layer ontology with the [Enablement Partnership](../sdlc/process/enablement-partnership.md) frame | Live applications evolving under custodianship; greenfield, brownfield, or anywhere in between |
+| **[Legacy Modernization](../modernization/engagement-model.md)**: five engagement modes | Bounded project sized to one of five entry points (Documentation Only through Maintain / Operate) | Replacing a legacy stack with a defined modern target while preserving behavior |
 
-    A --> L
-    L --> S
-    S --> O
+The two engagement models do not overlap during an engagement. A client engagement that includes both modernization and ongoing SDLC governance uses the modernization model for the bounded migration project and then transitions to the continuous SDLC model once the modernized system is in live operation, at the hand-over from the [Maintain mode](../modernization/engagement-modes/_index.md#mode-5-maintain-operate-and-convergence).
 
-    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
-    class S,O accent
-    classDef default rx:10,ry:10;
-```
+The full treatment of each model is on its own page:
 
-### Advise
+- [SDLC Engagement Model](../sdlc/engagement-model.md): four phases with activities, participants, deliverables, managed-support-tier mappings, and pricing per phase.
+- [Modernization Engagement Model](../modernization/engagement-model.md): five engagement modes with deliverables, durations, pricing per mode, and the comparison to the SDLC phases.
 
-**Duration.** Two to four weeks.
+### Continuous SDLC Engagement Model
 
-**Objective.** Diagnose the client's current zone in the [Zones of AI-Assisted SDLC](../zones-of-ai-assisted-sdlc/_index.md), identify the friction the team is bumping against, and produce a scoped roadmap for the next transition.
+The continuous SDLC engagement model has four phases. The full treatment is on [the SDLC Engagement Model page](../sdlc/engagement-model.md). A short reminder follows.
 
-**Activities.** AI readiness assessment, use-case discovery and prioritization, platform evaluation (Breeze.AI versus ASIMOV versus both), twelve-week SE Foundation roadmap scoping, team composition recommendation under the fractional allocation model, ROI modeling.
+| Phase | Duration | What it produces |
+|---|---|---|
+| Advise | Two to four weeks | Roadmap, prioritized use cases, platform recommendation, scoped plan |
+| Launch | About twelve weeks | Working MVP, four ontologies in production, agent fleet deployed, first Zone 3 workstream |
+| Scale | Quarters to years | Methodology extended across the portfolio, multi-agent rollout, enablement layer in place |
+| Optimize | Continuous | Steady-state operation, governance audits, rationalization cycles, refresh sprints |
 
-**Participants.** CxO sponsors (CTO, CIO, or VP Engineering), business stakeholders for the priority workstream, Accion Labs AI strategists and lead architects.
+### Legacy Modernization Engagement Model
 
-**Deliverables.** AI roadmap for the engagement, prioritized use case backlog, platform recommendation, scoped Phase 2 plan with phase gates and acceptance criteria.
+The legacy modernization engagement model has five entry modes. The full treatment is on [the Modernization Engagement Model page](../modernization/engagement-model.md). A short reminder follows.
 
-The Advise phase requires no infrastructure change and no system access beyond what is already in place. The phase typically begins with the [two-day deep-dive workshop](#services) and continues into a more detailed scoping conversation that produces the Launch phase plan.
-
-### Launch
-
-**Duration.** About twelve weeks.
-
-**Objective.** Build the four-layer knowledge graph for the highest-priority product, deploy the agent fleet, establish the validation gate at PR merge, and reach a sustainable Zone 3 operating model for the first workstream.
-
-**Activities.** Proof-of-value builds (the first demo against the live graph), agent fleet prototyping, data pipeline setup for KG sync, integration architecture with the client's existing toolchain (CI/CD, ticket system, design tools), brownfield extraction (if applicable) or Functional Ontology authoring (if greenfield).
-
-**Participants.** Product owners from the priority workstream, Accion Labs engineering pods (Semantic Engineers, Agent Developers), client IT team, Forward-Deployed Engineer for the workstream (Accion Labs-provided or jointly identified).
-
-**Deliverables.** Working proof-of-value or MVP, architecture blueprint for the integration, success metrics baseline, all four ontologies passing the P0 verification suite, Impact Analysis Agent deployed in pre-implementation mode, PR Validation Agent deployed, KG Sync Agent operating.
-
-### Scale
-
-**Duration.** Quarters to years, depending on portfolio scope.
-
-**Objective.** Extend the methodology across the portfolio. Deploy progressive autonomy on pattern-based work. Establish the enablement partnership as the operating mode.
-
-**Activities.** Production deployment of the methodology across additional workstreams, multi-agent rollout, performance tuning of the agent fleet, redundancy and recovery patterns, Forward-Deployed Engineer program expansion.
-
-**Participants.** Engineering leads across the portfolio, DevOps and MLOps teams, Accion Labs delivery team, enablement layer beginning to form (Chief Architect, Ontology Maintainer).
-
-**Deliverables.** Production systems operating under the methodology across the portfolio, CI/CD pipelines integrated with the agent fleet, monitoring dashboards for graph health and agent performance, first Cross-Product Impact Extension agents in production.
-
-### Optimize
-
-**Duration.** Continuous.
-
-**Objective.** Steady-state operation. The methodology is in production. The custodianship discipline holds the engagement across years.
-
-**Activities.** Continuous improvement of agent prompts and ontology shape, model retraining and drift tracking, cost optimization (model routing, token usage), governance audits (quarterly), rationalization cycles (quarterly), refresh sprints (triggered by freshness thresholds).
-
-**Participants.** Managed services team, client operations team, Accion Labs's enablement layer (Chief Architect, Ontology Maintainer, Knowledge Agent Owner), AI governance board.
-
-**Deliverables.** Optimization reports (quarterly), SLA compliance reporting, ROI realization metrics, rationalization backlog flowing into the product roadmap, enablement audit trail.
-
-### How the Phases Map to Managed Support Tiers
-
-| Engagement phase | Typical managed support tier |
-|---|---|
-| Advise | None (pre-engagement) |
-| Launch | Light Governance |
-| Scale | Light Governance or Medium Curation, depending on engagement complexity |
-| Optimize | Medium Curation or Deep Operations, depending on the client's chosen mode |
-
-The managed support tier choice is made during Advise and refined during Launch as the engagement complexity becomes visible. See [The Enablement Partnership](../process/enablement-partnership.md) for the tier details.
-
-### Pricing Across the Phases
-
-| Phase | Typical pricing model |
-|---|---|
-| Advise | Fixed-price workshop or short-term engagement |
-| Launch | Time-and-materials with milestone-based deliverables; mostly fractional allocation |
-| Scale | Time-and-materials transitioning to outcome-based as the engagement matures |
-| Optimize | Outcome-based pricing tied to the enablement SLA |
-
-The full treatment of the engagement-shape evolution is in [Engagement Model Evolution](../process/team.md#engagement-model-evolution).
+| Mode | Duration | Suitable when |
+|---|---|---|
+| Documentation Only | Two to six weeks | Legacy continues to run; priority is preserving institutional knowledge |
+| Discovery + Documentation | Four to ten weeks | Considering modernization; needs defensible baseline of system understanding |
+| Migration Readiness | Six to twelve weeks | Modernization is planned; needs rigorous foundation before execution |
+| Full Modernization | Quarters to years | Committed to replacing legacy stack with defined modern target |
+| Maintain / Operate / Convergence | Continuous after Full Modernization | Modernization complete; client wants knowledge graph operated as living asset |
 
 ---
 
@@ -306,20 +231,7 @@ The Advise / Launch / Scale / Optimize engagement model above describes the comm
 
 The methodology is rolled out in weeks. The operating model that delivers the full value is a change-management exercise that runs across quarters. Both are real, both worth doing, and the two are not the same effort.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph LR
-    P1[Phase 1<br/>SDD Adoption<br/>4 to 6 sprints]
-    P2[Phase 2<br/>SE Foundation<br/>12 weeks]
-    P3[Phase 3<br/>SE at Scale<br/>Quarters to years]
-
-    P1 --> P2
-    P2 --> P3
-
-    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
-    class P3 accent
-    classDef default rx:10,ry:10;
-```
+![Three-Phase Rollout: SDD Adoption, SE Foundation, SE at Scale](/diagrams/three-phase-rollout.svg)
 
 ### Phase 1: SDD Adoption
 
@@ -468,7 +380,7 @@ The output is the answer to "what would Semantic Engineering find in our code ba
 
 ### Enablement Tiers
 
-See [The Enablement Partnership](../process/enablement-partnership.md) for the full treatment.
+See [The Enablement Partnership](../sdlc/process/enablement-partnership.md) for the full treatment.
 
 | Tier              | Engagement shape                                                                                                                                               | Indicative monthly hours                |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
@@ -478,7 +390,7 @@ See [The Enablement Partnership](../process/enablement-partnership.md) for the f
 
 ### The Enablement Layer and the Wider Specialist Pool
 
-The Enablement Layer (the bottom layer of the [layered team structure](../process/team.md#layered-team-structure-in-depth)) is staffed by named roles that support the client's custodians. Additional deep specialists engage at trigger points to support the workstream. Both sets share the same staffing pattern: specialists are engaged at the moments their judgment creates value, sized to the deliverable rather than to a calendar quarter. See [Fractional Allocation](../process/team.md#fractional-allocation).
+The Enablement Layer (the bottom layer of the [layered team structure](../sdlc/process/team.md#layered-team-structure-in-depth)) is staffed by named roles that support the client's custodians. Additional deep specialists engage at trigger points to support the workstream. Both sets share the same staffing pattern: specialists are engaged at the moments their judgment creates value, sized to the deliverable rather than to a calendar quarter. See [Fractional Allocation](../sdlc/process/team.md#fractional-allocation).
 
 | Role | Where it sits | Typical engagement pattern |
 |---|---|---|
@@ -495,7 +407,7 @@ We field the specialist pool from across active client engagements. The pool mod
 
 ### Forward-Deployed Engineer Program
 
-A named offering distinct from the specialist pool. The FDE program backfills missing coverage in the custodianship layer of the [layered team structure](../process/team.md#layered-team-structure-in-depth) at the client. When the client cannot staff all four ontology custodian roles fluently, FDEs play one or more of the roles for that workstream alongside the client's existing custodians.
+A named offering distinct from the specialist pool. The FDE program backfills missing coverage in the custodianship layer of the [layered team structure](../sdlc/process/team.md#layered-team-structure-in-depth) at the client. When the client cannot staff all four ontology custodian roles fluently, FDEs play one or more of the roles for that workstream alongside the client's existing custodians.
 
 | Element | What the program does |
 |---|---|

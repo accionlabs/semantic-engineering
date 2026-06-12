@@ -1,9 +1,9 @@
 ---
-title: "Process"
-description: "The Semantic Engineering operating model. How the structured substrate is used through the spec sprint and the implementation sprint, how the two coordinate, and how the operating mode scales from one product to a portfolio."
+title: "Process: Continuous SDLC Operating Model"
+description: "The operating model that delivers continuous SDLC under Semantic Engineering. Spec sprints and implementation sprints running staggered. Layered team structure. Enablement partnership across years."
 weight: 50
 date: 2026-06-09
-lastmod: 2026-06-09
+lastmod: 2026-06-12
 draft: false
 section: true
 audience:
@@ -11,15 +11,15 @@ audience:
   - vp-engineering
   - tech-lead
   - product-owner
+  - architect
+  - chief-architect
 ---
 
-[Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md) covers the structural substrate: the four-layer ontology, the aperture, the three sources of truth, the asset that compounds. This section covers how the substrate gets used in practice. A spec sprint produces well-formed specifications and refreshes the graph. An implementation sprint consumes those specs through a per-change SDLC flow operated by the agent fleet. A layered team runs both. The client's four custodians own the asset; Accion Labs's enablement partnership supports them across years.
-
-The picture this section maps to is [Zone 3](../zones-of-ai-assisted-sdlc/_index.md#zone-3-sdd-plus-semantic-engineering) at single-product scale and [Zone 4](../zones-of-ai-assisted-sdlc/_index.md#zone-4-se-at-scale) at portfolio scale.
+This is the operating model that delivers continuous SDLC. It is sprint-cadenced, custodian-owned, and runs continuously across years. The parallel operating model for legacy modernization is on the [Modernization Process](../../modernization/process/_index.md) section.
 
 ## The Structured Landscape
 
-The diagram below pairs with the manual landscape from the [Manual Translation Tax](../manual-translation-tax.md) page. External signals are unchanged. Custodians are unchanged. The medium they output to flips: from red text artifacts that have to be translated by every reader, to green machine-readable ontologies that the agent reads directly.
+The diagram below pairs with the manual landscape from the [Manual Translation Tax](../translation-tax.md) page. External signals are unchanged. Custodians are unchanged. The medium they output to flips: from red text artifacts that have to be translated by every reader, to green machine-readable ontologies that the agent reads directly.
 
 ![The Structured Landscape: persistent context above, per-change SDLC flow below](/diagrams/structured-landscape.svg)
 
@@ -58,14 +58,14 @@ The full treatment of the layered structure, the fractional allocation model tha
 
 Zone 3 is single-product Semantic Engineering: one knowledge graph, one product, the per-change SDLC flow operated by the agent fleet, the spec sprint workshop running ahead of the implementation sprint. Most enterprise teams that adopt SE stabilize here for several quarters.
 
-Zone 4 is the operating mode at portfolio scale. Multiple products operate under their own knowledge graphs. Cross-product reasoning happens through the Cross-Product Impact Extension and the Portfolio Rationalization Agent (both in the [agent fleet](../the-agents.md)). The client's four custodians continue to own the four ontologies; the Engineering Team's custodianship expands to include the agent fleet. Accion Labs's [enablement partnership](enablement-partnership.md) supports the custodians under codified engagement principles. The developer moves upstream from the per-change loop into custodianship of the agent fleet. The agents run the loop.
+Zone 4 is the operating mode at portfolio scale. Multiple products operate under their own knowledge graphs. Cross-product reasoning happens through the Cross-Product Impact Extension and the Portfolio Rationalization Agent (both in the [agent fleet](../agents.md)). The client's four custodians continue to own the four ontologies; the Engineering Team's custodianship expands to include the agent fleet. Accion Labs's [enablement partnership](enablement-partnership.md) supports the custodians under codified engagement principles. The developer moves upstream from the per-change loop into custodianship of the agent fleet. The agents run the loop.
 
 [The Enablement Partnership](enablement-partnership.md) is the engagement frame for Accion Labs's role beneath the custodianship and implementation layers. It is what makes the long-term engagement work for both the enabling partner and the enterprise that owns the asset.
 
-> **How Accion Labs operationalizes the process**
+> **How Accion Labs operationalizes the continuous SDLC operating model**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the per-change SDLC flow, the four-ontology validation gate, and the agent fleet. The [ASIMOV platform](../practitioner/asimov.md) is the peer platform that applies the same Semantic Engineering principles to AI-led legacy modernization, with a focused subset of the ontologies and a fully agentic flow. The [engagement model](../practitioner/_index.md#engagement-model) staffs the operating model across Advise, Launch, Scale, and Optimize phases.
+> The [Breeze.AI platform](../../practitioner/breeze-ai.md) implements the per-change SDLC flow, the four-ontology validation gate, and the agent fleet. The [Engagement Model](../engagement-model.md) staffs the operating model across Advise, Launch, Scale, and Optimize phases.
 
 ---
 
-[Spec Sprint](spec-sprint.md) and [Implementation Sprint](implementation-sprint.md) cover the two cadences in depth. [Team](team.md) covers the operating model that runs both. [The Enablement Partnership](enablement-partnership.md) is the engagement frame for the long-term partnership.
+[Spec Sprint](spec-sprint.md) and [Implementation Sprint](implementation-sprint.md) cover the two SDLC cadences in depth. [Team](team.md) covers the operating model that runs both. [The Enablement Partnership](enablement-partnership.md) is the engagement frame for the long-term partnership. The parallel operating model for legacy modernization is on the [Modernization Process](../../modernization/process/_index.md) section.

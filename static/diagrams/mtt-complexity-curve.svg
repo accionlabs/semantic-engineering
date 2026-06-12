@@ -1,147 +1,147 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="1400px" height="680px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+<svg viewBox="0 0 1400 680" preserveAspectRatio="xMidYMid meet" width="1400px" height="680px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,45)">
-        <text x="-380.955px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:rgb(17,17,17);">How the Manual T<tspan x="-161.376px -151.258px " y="0px 0px ">ra</tspan>nslation T<tspan x="-15.939px -1.479px " y="0px 0px ">ax</tspan> Scales with W<tspan x="193.127px 209.009px " y="0px 0px ">or</tspan>k Complexity</text>
+        <text x="-380.955px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:var(--se-text,#111111);">How the Manual T<tspan x="-161.376px -151.258px " y="0px 0px ">ra</tspan>nslation T<tspan x="-15.939px -1.479px " y="0px 0px ">ax</tspan> Scales with W<tspan x="193.127px 209.009px " y="0px 0px ">or</tspan>k Complexity</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-487.053px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(75,85,99);">MTT grows faster than complexity. Each zone of methodology is sized for a complexity range. Use the wrong zone and the tax becomes crushing.</text>
+        <text x="-487.053px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">MTT grows faster than complexity. Each zone of methodology is sized for a complexity range. Use the wrong zone and the tax becomes crushing.</text>
     </g>
-    <rect x="100" y="120" width="310" height="380" style="fill:rgb(250,250,250);"/>
-    <rect x="410" y="120" width="310" height="380" style="fill:rgb(245,245,245);"/>
-    <rect x="720" y="120" width="310" height="380" style="fill:rgb(253,232,221);fill-opacity:0.5;"/>
-    <rect x="1030" y="120" width="310" height="380" style="fill:rgb(253,232,221);"/>
+    <rect x="100" y="120" width="310" height="380" style="fill:var(--se-panel-fill-alt,#fafafa);"/>
+    <rect x="410" y="120" width="310" height="380" style="fill:var(--se-panel-fill,#f5f5f5);"/>
+    <rect x="720" y="120" width="310" height="380" style="fill:var(--se-accent-fill,#FDE8DD);fill-opacity:0.5;"/>
+    <rect x="1030" y="120" width="310" height="380" style="fill:var(--se-accent-fill,#FDE8DD);"/>
     <g transform="matrix(1,0,0,1,254.9025,140)">
-        <text x="0px" y="0px" text-anchor="middle" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">ZONE 1</text>
+        <text x="0px" y="0px" text-anchor="middle" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">ZONE 1</text>
     </g>
     <g transform="matrix(1,0,0,1,564.9025,140)">
-        <text x="0px" y="0px" text-anchor="middle" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(75,85,99);">ZONE 2</text>
+        <text x="0px" y="0px" text-anchor="middle" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">ZONE 2</text>
     </g>
     <g transform="matrix(1,0,0,1,874.9025,140)">
-        <text x="0px" y="0px" text-anchor="middle" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">ZONE 3</text>
+        <text x="0px" y="0px" text-anchor="middle" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">ZONE 3</text>
     </g>
     <g transform="matrix(1,0,0,1,1184.9025,140)">
-        <text x="0px" y="0px" text-anchor="middle" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">ZONE 4</text>
+        <text x="0px" y="0px" text-anchor="middle" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">ZONE 4</text>
     </g>
-    <path d="M100,500L1340,500" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;"/>
-    <path d="M100,500L100,120" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:2px;"/>
+    <path d="M100,500L1340,500" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+    <path d="M100,500L100,120" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,60,135)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">M<tspan x="11.802px 20.494px " y="0px 0px ">TT</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">M<tspan x="11.802px 20.494px " y="0px 0px ">TT</tspan></text>
     </g>
     <g transform="matrix(1,0,0,1,44.737305,200)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">crushing</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">crushing</text>
     </g>
     <g transform="matrix(1,0,0,1,58.45459,295)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">heavy</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">heavy</text>
     </g>
     <g transform="matrix(1,0,0,1,22,395)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">manageable</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">manageable</text>
     </g>
     <g transform="matrix(1,0,0,1,38.624512,495)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">negligible</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">negligible</text>
     </g>
-    <path d="M100,200L105,200" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
-    <path d="M100,295L105,295" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
-    <path d="M100,395L105,395" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
-    <path d="M100,200L1340,200" style="fill:none;fill-rule:nonzero;stroke:rgb(209,213,219);stroke-width:1px;stroke-dasharray:3,3;"/>
-    <path d="M100,295L1340,295" style="fill:none;fill-rule:nonzero;stroke:rgb(209,213,219);stroke-width:1px;stroke-dasharray:3,3;"/>
-    <path d="M100,395L1340,395" style="fill:none;fill-rule:nonzero;stroke:rgb(209,213,219);stroke-width:1px;stroke-dasharray:3,3;"/>
-    <path d="M410,500L410,120" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;stroke-dasharray:4,3;"/>
-    <path d="M720,500L720,120" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;stroke-dasharray:4,3;"/>
-    <path d="M1030,500L1030,120" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;stroke-dasharray:4,3;"/>
-    <path d="M410,500L410,505" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
-    <path d="M720,500L720,505" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
-    <path d="M1030,500L1030,505" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
-    <path d="M1340,500L1340,505" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+    <path d="M100,200L105,200" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <path d="M100,295L105,295" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <path d="M100,395L105,395" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <path d="M100,200L1340,200" style="fill:none;fill-rule:nonzero;stroke:var(--se-grid,#d1d5db);stroke-width:1px;stroke-dasharray:3,3;"/>
+    <path d="M100,295L1340,295" style="fill:none;fill-rule:nonzero;stroke:var(--se-grid,#d1d5db);stroke-width:1px;stroke-dasharray:3,3;"/>
+    <path d="M100,395L1340,395" style="fill:none;fill-rule:nonzero;stroke:var(--se-grid,#d1d5db);stroke-width:1px;stroke-dasharray:3,3;"/>
+    <path d="M410,500L410,120" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;stroke-dasharray:4,3;"/>
+    <path d="M720,500L720,120" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;stroke-dasharray:4,3;"/>
+    <path d="M1030,500L1030,120" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;stroke-dasharray:4,3;"/>
+    <path d="M410,500L410,505" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <path d="M720,500L720,505" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <path d="M1030,500L1030,505" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <path d="M1340,500L1340,505" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,255,525)">
-        <text x="-59.124px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Throwaway / POC</text>
+        <text x="-59.124px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Throwaway / POC</text>
     </g>
     <g transform="matrix(1,0,0,1,255,542)">
-        <text x="-74.587px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(75,85,99);">solo dev<tspan x="-30.776px -27.442px " y="0px 0px ">, </tspan>throwaway scripts,</text>
+        <text x="-74.587px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">solo dev<tspan x="-30.776px -27.442px " y="0px 0px ">, </tspan>throwaway scripts,</text>
     </g>
     <g transform="matrix(1,0,0,1,255,558)">
-        <text x="-52.699px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(75,85,99);">prototypes, learning</text>
+        <text x="-52.699px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">prototypes, learning</text>
     </g>
     <g transform="matrix(1,0,0,1,565,525)">
-        <text x="-71.176px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Single team / product</text>
+        <text x="-71.176px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Single team / product</text>
     </g>
     <g transform="matrix(1,0,0,1,565,542)">
-        <text x="-97.731px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(75,85,99);">one repo, one PO/architect/designer<tspan x="94.397px " y="0px ">,</tspan></text>
+        <text x="-97.731px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">one repo, one PO/architect/designer<tspan x="94.397px " y="0px ">,</tspan></text>
     </g>
     <g transform="matrix(1,0,0,1,565,558)">
-        <text x="-56.364px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(75,85,99);">tacit knowledge fresh</text>
+        <text x="-56.364px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">tacit knowledge fresh</text>
     </g>
     <g transform="matrix(1,0,0,1,875,525)">
         <g transform="matrix(14,0,0,14,47.441406,0)">
         </g>
         <g transform="matrix(14,0,0,14,52.103516,0)">
         </g>
-        <text x="-76.221px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Multi-team / brownﬁeld</text>
+        <text x="-76.221px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Multi-team / brownﬁeld</text>
     </g>
     <g transform="matrix(1,0,0,1,875,542)">
         <g transform="matrix(12,0,0,12,46.001953,0)">
         </g>
         <g transform="matrix(12,0,0,12,49.335938,0)">
         </g>
-        <text x="-104.713px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(75,85,99);">cross-team contracts, brownﬁeld depth,</text>
+        <text x="-104.713px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">cross-team contracts, brownﬁeld depth,</text>
     </g>
     <g transform="matrix(1,0,0,1,875,558)">
-        <text x="-66.703px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(75,85,99);">specs alone cannot carry</text>
+        <text x="-66.703px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">specs alone cannot carry</text>
     </g>
     <g transform="matrix(1,0,0,1,1185,525)">
-        <text x="-81.669px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(17,17,17);">Portfolio / cross-product</text>
+        <text x="-81.669px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Portfolio / cross-product</text>
     </g>
     <g transform="matrix(1,0,0,1,1185,542)">
-        <text x="-91.043px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(75,85,99);">multiple products, multiple graphs,</text>
+        <text x="-91.043px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">multiple products, multiple graphs,</text>
     </g>
     <g transform="matrix(1,0,0,1,1185,558)">
-        <text x="-64.696px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:rgb(75,85,99);">multi-year custodianship</text>
+        <text x="-64.696px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">multi-year custodianship</text>
     </g>
     <g transform="matrix(1,0,0,1,699.93,595)">
-        <text x="-79.552px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">W<tspan x="-66.198px -55.169px -44.918px -34.668px -30.638px -20.388px -9.358px 2.444px 11.922px 20.613px 30.091px 39.569px 43.599px 52.291px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ORK COMPLEXITY</tspan></text>
-        <text x="65.552px" y="0px" style="font-family:'LucidaGrande-Bold', 'Lucida Grande', sans-serif;font-weight:600;font-size:14px;fill:rgb(75,85,99);">→</text>
+        <text x="-79.552px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="-66.198px -55.169px -44.918px -34.668px -30.638px -20.388px -9.358px 2.444px 11.922px 20.613px 30.091px 39.569px 43.599px 52.291px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ORK COMPLEXITY</tspan></text>
+        <text x="65.552px" y="0px" style="font-family:'LucidaGrande-Bold', 'Lucida Grande', sans-serif;font-weight:600;font-size:14px;fill:var(--se-text-secondary,#4b5563);">→</text>
     </g>
-    <path d="M100,485C166.667,480.333 218.333,475.333 255,470C305,462.667 356.667,452.667 410,440C463.333,421.333 515,401.333 565,380C618.333,350 670,320 720,290C773.333,260 825,235 875,215C928.333,201.667 980,191.667 1030,185C1083.333,180.333 1135,177 1185,175C1238.333,173.667 1290,172.667 1340,172" style="fill:none;fill-rule:nonzero;stroke:rgb(17,17,17);stroke-width:3px;"/>
-    <circle cx="255" cy="470" r="5" style="fill:rgb(17,17,17);"/>
-    <circle cx="565" cy="380" r="5" style="fill:rgb(17,17,17);"/>
-    <circle cx="875" cy="215" r="5" style="fill:rgb(17,17,17);"/>
-    <circle cx="1185" cy="175" r="5" style="fill:rgb(17,17,17);"/>
+    <path d="M100,485C166.667,480.333 218.333,475.333 255,470C305,462.667 356.667,452.667 410,440C463.333,421.333 515,401.333 565,380C618.333,350 670,320 720,290C773.333,260 825,235 875,215C928.333,201.667 980,191.667 1030,185C1083.333,180.333 1135,177 1185,175C1238.333,173.667 1290,172.667 1340,172" style="fill:none;fill-rule:nonzero;stroke:var(--se-text,#111111);stroke-width:3px;"/>
+    <circle cx="255" cy="470" r="5" style="fill:var(--se-text,#111111);"/>
+    <circle cx="565" cy="380" r="5" style="fill:var(--se-text,#111111);"/>
+    <circle cx="875" cy="215" r="5" style="fill:var(--se-text,#111111);"/>
+    <circle cx="1185" cy="175" r="5" style="fill:var(--se-text,#111111);"/>
     <g transform="matrix(1,0,0,1,450,450)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">vibe coding</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text,#111111);">vibe coding</text>
     </g>
     <g transform="matrix(1,0,0,1,450,467)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:12px;fill:rgb(75,85,99);">begins to break here</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">begins to break here</text>
     </g>
-    <path d="M410,440L445,445" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;stroke-dasharray:2,2;"/>
+    <path d="M410,440L445,445" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;stroke-dasharray:2,2;"/>
     <g transform="matrix(1,0,0,1,755,338)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">SDD ceiling</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text,#111111);">SDD ceiling</text>
     </g>
     <g transform="matrix(1,0,0,1,755,355)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:12px;fill:rgb(75,85,99);">four conditions surface</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">four conditions surface</text>
     </g>
-    <path d="M720,290L750,335" style="fill:none;fill-rule:nonzero;stroke:rgb(156,163,175);stroke-width:1px;stroke-dasharray:2,2;"/>
+    <path d="M720,290L750,335" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;stroke-dasharray:2,2;"/>
     <g transform="matrix(1,0,0,1,1065,235)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(233,78,27);">single-product</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-accent,#E94E1B);">single-product</text>
     </g>
     <g transform="matrix(1,0,0,1,1065,252)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(233,78,27);">SE settles here</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-accent,#E94E1B);">SE settles here</text>
     </g>
-    <path d="M1030,185L1060,230" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:1px;stroke-dasharray:2,2;"/>
+    <path d="M1030,185L1060,230" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:1px;stroke-dasharray:2,2;"/>
     <g transform="matrix(1,0,0,1,1215,200)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(233,78,27);">SE at Scale</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-accent,#E94E1B);">SE at Scale</text>
     </g>
     <g transform="matrix(1,0,0,1,1215,217)">
-        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(233,78,27);">sustains across products</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-accent,#E94E1B);">sustains across products</text>
     </g>
-    <path d="M1340,623L1340,657C1340,661.415 1336.415,665 1332,665L108,665C103.585,665 100,661.415 100,657L100,623C100,618.585 103.585,615 108,615L1332,615C1336.415,615 1340,618.585 1340,623Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+    <path d="M1340,623L1340,657C1340,661.415 1336.415,665 1332,665L108,665C103.585,665 100,661.415 100,657L100,623C100,618.585 103.585,615 108,615L1332,615C1336.415,615 1340,618.585 1340,623Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,720,640)">
-        <text x="-453.298px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:rgb(233,78,27);">Each zone is the right methodology for its complexity range. Using a lower-zone methodology beyond its range means the team pays the tax in full.</text>
+        <text x="-453.298px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:var(--se-accent,#E94E1B);">Each zone is the right methodology for its complexity range. Using a lower-zone methodology beyond its range means the team pays the tax in full.</text>
     </g>
     <g transform="matrix(1,0,0,1,720,658)">
         <g transform="matrix(14,0,0,14,241.26416,0)">
         </g>
         <g transform="matrix(14,0,0,14,245.153809,0)">
         </g>
-        <text x="-256.043px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:rgb(233,78,27);">Using a higher-zone methodology below its range means overhead without beneﬁt.</text>
+        <text x="-256.043px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:var(--se-accent,#E94E1B);">Using a higher-zone methodology below its range means overhead without beneﬁt.</text>
     </g>
 </svg>

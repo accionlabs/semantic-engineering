@@ -1,135 +1,135 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="1400px" height="760px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+<svg viewBox="0 0 1400 760" preserveAspectRatio="xMidYMid meet" width="1400px" height="760px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,44)">
-        <text x="-209.224px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(17,17,17);">Breeze.AI Integration Surface</text>
+        <text x="-209.224px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Breeze.AI Integration Surface</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-267.281px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">A<tspan x="-257.484px -253.039px " y="0px 0px "> l</tspan>ayer on top of the existing engineering toolchain, not a replacement for it.</text>
+        <text x="-267.281px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="-257.484px -253.039px " y="0px 0px "> l</tspan>ayer on top of the existing engineering toolchain, not a replacement for it.</text>
     </g>
     <g transform="matrix(1,0,0,1,700,400)">
-        <circle cx="0" cy="0" r="80" style="fill:rgb(233,78,27);stroke:rgb(17,17,17);stroke-width:3px;"/>
+        <circle cx="0" cy="0" r="80" style="fill:var(--se-accent,#E94E1B);stroke:var(--se-text,#111111);stroke-width:3px;"/>
         <g transform="matrix(1,0,0,1,0,-8)">
-            <text x="-36.461px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">Breeze.AI</text>
+            <text x="-36.461px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">Breeze.AI</text>
         </g>
         <g transform="matrix(1,0,0,1,0,14)">
-            <text x="-64.027px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">structured-context</text>
+            <text x="-64.027px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">structured-context</text>
         </g>
         <g transform="matrix(1,0,0,1,0,28)">
-            <text x="-17.34px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">layer</text>
+            <text x="-17.34px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">layer</text>
         </g>
     </g>
     <g>
-        <path d="M700,320L700,200" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
-        <path d="M772,361L990,220" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
-        <path d="M780,400L1150,400" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
-        <path d="M772,439L990,580" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
-        <path d="M700,480L700,600" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
-        <path d="M628,439L410,580" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
-        <path d="M620,400L250,400" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
-        <path d="M628,361L410,220" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <path d="M700,320L700,200" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M772,361L990,220" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M780,400L1150,400" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M772,439L990,580" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M700,480L700,600" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M628,439L410,580" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M620,400L250,400" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M628,361L410,220" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     </g>
     <g transform="matrix(1,0,0,1,540,116)">
-        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-59.566px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">V<tspan x="-49.77px -40.871px " y="0px 0px ">er</tspan>sion Control</text>
+            <text x="-59.566px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">V<tspan x="-49.77px -40.871px " y="0px 0px ">er</tspan>sion Control</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
-            <text x="-76.953px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">GitHub · GitLab · Bitbucket</text>
+            <text x="-76.953px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">GitHub · GitLab · Bitbucket</text>
         </g>
         <g transform="matrix(1,0,0,1,160,70)">
-            <text x="-113.439px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(233,78,27);">Per-merge KG sync; PR validation gate</text>
+            <text x="-113.439px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Per-merge KG sync; PR validation gate</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,980,140)">
-        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-59.125px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">CI/CD Pipelines</text>
+            <text x="-59.125px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">CI/CD Pipelines</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
-            <text x="-150.655px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">GitHub <tspan x="-107.294px -98.624px " y="0px 0px ">Ac</tspan>tions · Jenkins · GitLab CI · <tspan x="66.124px 74.794px " y="0px 0px ">Az</tspan>ure DevOps</text>
+            <text x="-150.655px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">GitHub <tspan x="-107.294px -98.624px " y="0px 0px ">Ac</tspan>tions · Jenkins · GitLab CI · <tspan x="66.124px 74.794px " y="0px 0px ">Az</tspan>ure DevOps</text>
         </g>
         <g transform="matrix(1,0,0,1,160,70)">
-            <text x="-97.081px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(233,78,27);">V<tspan x="-89.369px -82.139px " y="0px 0px ">al</tspan>idation agent runs as a CI step</text>
+            <text x="-97.081px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">V<tspan x="-89.369px -82.139px " y="0px 0px ">al</tspan>idation agent runs as a CI step</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,1150,358)">
-        <path d="M240,12L240,72C240,78.623 234.623,84 228,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L228,0C234.623,0 240,5.377 240,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M240,12L240,72C240,78.623 234.623,84 228,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L228,0C234.623,0 240,5.377 240,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,120,28)">
-            <text x="-58.113px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">T<tspan x="-48.621px -44.176px " y="0px 0px ">ic</tspan>ket Systems</text>
+            <text x="-58.113px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">T<tspan x="-48.621px -44.176px " y="0px 0px ">ic</tspan>ket Systems</text>
         </g>
         <g transform="matrix(1,0,0,1,120,50)">
-            <text x="-78.403px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">Jira · Linear · <tspan x="-0.359px 8.312px " y="0px 0px ">Az</tspan>ure Boards</text>
+            <text x="-78.403px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Jira · Linear · <tspan x="-0.359px 8.312px " y="0px 0px ">Az</tspan>ure Boards</text>
         </g>
         <g transform="matrix(1,0,0,1,120,70)">
-            <text x="-82.745px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(233,78,27);">Spec linkage and traceability</text>
+            <text x="-82.745px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Spec linkage and traceability</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,980,576)">
-        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-80.16px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">AI Coding <tspan x="-0.762px 10.793px " y="0px 0px ">As</tspan>sistants</text>
+            <text x="-80.16px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">AI Coding <tspan x="-0.762px 10.793px " y="0px 0px ">As</tspan>sistants</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
-            <text x="-88.515px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">Claude Code · Cursor · Copilot</text>
+            <text x="-88.515px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Claude Code · Cursor · Copilot</text>
         </g>
         <g transform="matrix(1,0,0,1,160,70)">
-            <text x="-96.469px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(233,78,27);">Impact report attached as context</text>
+            <text x="-96.469px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Impact report attached as context</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,540,600)">
-        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-50.531px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">T<tspan x="-41.938px -33.039px " y="0px 0px ">es</tspan>t Runners</text>
+            <text x="-50.531px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">T<tspan x="-41.938px -33.039px " y="0px 0px ">es</tspan>t Runners</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
-            <text x="-96.805px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">Jest · Cypress · Playwright · JUnit</text>
+            <text x="-96.805px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Jest · Cypress · Playwright · JUnit</text>
         </g>
         <g transform="matrix(1,0,0,1,160,70)">
-            <text x="-115.258px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(233,78,27);">BDD scenarios generated for the runner</text>
+            <text x="-115.258px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">BDD scenarios generated for the runner</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,100,576)">
-        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-50.688px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Observability</text>
+            <text x="-50.688px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Observability</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
-            <text x="-114.169px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">Datadog · Honeycomb · OpenT<tspan x="64.321px 71.551px " y="0px 0px ">el</tspan>emetry</text>
+            <text x="-114.169px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Datadog · Honeycomb · OpenT<tspan x="64.321px 71.551px " y="0px 0px ">el</tspan>emetry</text>
         </g>
         <g transform="matrix(1,0,0,1,160,70)">
-            <text x="-105.869px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(233,78,27);">Agent action audit trail forwarded out</text>
+            <text x="-105.869px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Agent action audit trail forwarded out</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,10,358)">
-        <path d="M240,12L240,72C240,78.623 234.623,84 228,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L228,0C234.623,0 240,5.377 240,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M240,12L240,72C240,78.623 234.623,84 228,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L228,0C234.623,0 240,5.377 240,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,120,28)">
-            <text x="-49.637px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Design T<tspan x="16.746px 26.52px " y="0px 0px ">oo</tspan>ls</text>
+            <text x="-49.637px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Design T<tspan x="16.746px 26.52px " y="0px 0px ">oo</tspan>ls</text>
         </g>
         <g transform="matrix(1,0,0,1,120,50)">
-            <text x="-43.348px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">Figma · Sketch</text>
+            <text x="-43.348px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Figma · Sketch</text>
         </g>
         <g transform="matrix(1,0,0,1,120,70)">
-            <text x="-115.629px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(233,78,27);">Design Ontology extraction and updates</text>
+            <text x="-115.629px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Design Ontology extraction and updates</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,100,140)">
-        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-70.68px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Code Repositories</text>
+            <text x="-70.68px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Code Repositories</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
-            <text x="-105.504px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">monorepo or per-product partitioning</text>
+            <text x="-105.504px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">monorepo or per-product partitioning</text>
         </g>
         <g transform="matrix(1,0,0,1,160,70)">
             <g transform="matrix(13,0,0,13,-52.028564,0)">
             </g>
             <g transform="matrix(13,0,0,13,-48.416748,0)">
             </g>
-            <text x="-88.877px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:rgb(233,78,27);">Brownﬁeld extraction; KG build</text>
+            <text x="-88.877px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Brownﬁeld extraction; KG build</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,700,730)">
-        <text x="-607.879px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Breeze.AI adds a layer to the existing engineering toolchain. It does not replace the IDE, the test runner<tspan x="123.246px 127.691px " y="0px 0px ">, </tspan>the CI/CD pipeline, the ticket system, or the version control system.</text>
+        <text x="-607.879px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Breeze.AI adds a layer to the existing engineering toolchain. It does not replace the IDE, the test runner<tspan x="123.246px 127.691px " y="0px 0px ">, </tspan>the CI/CD pipeline, the ticket system, or the version control system.</text>
     </g>
 </svg>

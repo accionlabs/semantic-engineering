@@ -1,15 +1,15 @@
-<svg viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" width="1400" height="820" preserveAspectRatio="xMidYMid meet">
+<svg viewBox="0 0 1400 820" xmlns="http://www.w3.org/2000/svg" width="1400" height="820" preserveAspectRatio="xMidYMid meet" class="se-svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--se-text-secondary,#4b5563)"/></marker>
     <style>
-      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
-      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
-      .label { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #4b5563; letter-spacing: 2px; }
-      .input { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; }
-      .role { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 19px; font-weight: 600; fill: #111111; }
-      .ont { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-weight: 600; fill: #111111; }
-      .ontSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #4b5563; }
-      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-style: italic; fill: #4b5563; }
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: var(--se-text,#111111); }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: var(--se-text-secondary,#4b5563); }
+      .label { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: var(--se-text-secondary,#4b5563); letter-spacing: 2px; }
+      .input { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: var(--se-text,#111111); }
+      .role { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 19px; font-weight: 600; fill: var(--se-text,#111111); }
+      .ont { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-weight: 600; fill: var(--se-text,#111111); }
+      .ontSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: var(--se-text-secondary,#4b5563); }
+      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; font-style: italic; fill: var(--se-text-secondary,#4b5563); }
     </style>
   </defs>
 
@@ -18,7 +18,7 @@
 
   <text x="80" y="115" class="label">EXTERNAL HUMAN-ONLY INPUTS</text>
 
-  <rect x="80" y="135" width="295" height="200" rx="10" ry="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <rect x="80" y="135" width="295" height="200" rx="10" ry="10" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.2" stroke-dasharray="5,3"/>
   <text x="227" y="162" text-anchor="middle" class="input" font-weight="600">customer conversations</text>
   <text x="227" y="187" text-anchor="middle" class="input">market signals</text>
   <text x="227" y="212" text-anchor="middle" class="input">executive priority calls</text>
@@ -27,7 +27,7 @@
   <text x="227" y="287" text-anchor="middle" class="input">support-ticket patterns</text>
   <text x="227" y="316" text-anchor="middle" class="ital">CEO walking into a room</text>
 
-  <rect x="395" y="135" width="295" height="200" rx="10" ry="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <rect x="395" y="135" width="295" height="200" rx="10" ry="10" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.2" stroke-dasharray="5,3"/>
   <text x="542" y="162" text-anchor="middle" class="input" font-weight="600">compliance phone calls</text>
   <text x="542" y="187" text-anchor="middle" class="input">vendor contracts</text>
   <text x="542" y="212" text-anchor="middle" class="input">team operational maturity</text>
@@ -36,7 +36,7 @@
   <text x="542" y="287" text-anchor="middle" class="input">product trajectory rooms</text>
   <text x="542" y="316" text-anchor="middle" class="ital">board meets in six weeks</text>
 
-  <rect x="710" y="135" width="295" height="200" rx="10" ry="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <rect x="710" y="135" width="295" height="200" rx="10" ry="10" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.2" stroke-dasharray="5,3"/>
   <text x="857" y="162" text-anchor="middle" class="input" font-weight="600">in-truck-cab field interviews</text>
   <text x="857" y="187" text-anchor="middle" class="input">usability test body language</text>
   <text x="857" y="212" text-anchor="middle" class="input">NPS dip interpretation</text>
@@ -45,7 +45,7 @@
   <text x="857" y="287" text-anchor="middle" class="input">industry-trend tracking</text>
   <text x="857" y="316" text-anchor="middle" class="ital">jaw clenched on every save</text>
 
-  <rect x="1025" y="135" width="295" height="200" rx="10" ry="10" fill="#ffffff" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="5,3"/>
+  <rect x="1025" y="135" width="295" height="200" rx="10" ry="10" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.2" stroke-dasharray="5,3"/>
   <text x="1172" y="162" text-anchor="middle" class="input" font-weight="600">codebase-evolution judgment</text>
   <text x="1172" y="187" text-anchor="middle" class="input">refactor sequencing calls</text>
   <text x="1172" y="212" text-anchor="middle" class="input">edge-case recognition</text>
@@ -54,63 +54,63 @@
   <text x="1172" y="287" text-anchor="middle" class="input">stewardship across teams</text>
   <text x="1172" y="316" text-anchor="middle" class="ital">"this will hurt in two years"</text>
 
-  <path d="M 227 335 L 227 365" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 542 335 L 542 365" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 857 335 L 857 365" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 1172 335 L 1172 365" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 227 335 L 227 365" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 542 335 L 542 365" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 857 335 L 857 365" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1172 335 L 1172 365" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
   <text x="80" y="395" class="label">CUSTODIAN ROLES (HUMAN)</text>
 
-  <rect x="80" y="410" width="295" height="130" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <rect x="80" y="410" width="295" height="130" rx="10" ry="10" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="2"/>
   <text x="227" y="445" text-anchor="middle" class="role">Product Owner</text>
   <text x="227" y="475" text-anchor="middle" class="input">integrates customer reality</text>
   <text x="227" y="495" text-anchor="middle" class="input">and business strategy into</text>
   <text x="227" y="515" text-anchor="middle" class="input">a coherent product direction</text>
 
-  <rect x="395" y="410" width="295" height="130" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <rect x="395" y="410" width="295" height="130" rx="10" ry="10" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="2"/>
   <text x="542" y="445" text-anchor="middle" class="role">Architect</text>
   <text x="542" y="475" text-anchor="middle" class="input">balances present-day constraints</text>
   <text x="542" y="495" text-anchor="middle" class="input">against the product's projected</text>
   <text x="542" y="515" text-anchor="middle" class="input">trajectory of change</text>
 
-  <rect x="710" y="410" width="295" height="130" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <rect x="710" y="410" width="295" height="130" rx="10" ry="10" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="2"/>
   <text x="857" y="445" text-anchor="middle" class="role">UX Designer</text>
   <text x="857" y="475" text-anchor="middle" class="input">reads granular user needs</text>
   <text x="857" y="495" text-anchor="middle" class="input">and maps them into</text>
   <text x="857" y="515" text-anchor="middle" class="input">product experiences</text>
 
-  <rect x="1025" y="410" width="295" height="130" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="2"/>
+  <rect x="1025" y="410" width="295" height="130" rx="10" ry="10" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="2"/>
   <text x="1172" y="445" text-anchor="middle" class="role">Engineering Team</text>
   <text x="1172" y="475" text-anchor="middle" class="input">applies implementation judgment</text>
   <text x="1172" y="495" text-anchor="middle" class="input">and stewards the codebase</text>
   <text x="1172" y="515" text-anchor="middle" class="input">patterns over years</text>
 
-  <path d="M 227 540 L 227 580" stroke="#E94E1B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 542 540 L 542 580" stroke="#E94E1B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 857 540 L 857 580" stroke="#E94E1B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 1172 540 L 1172 580" stroke="#E94E1B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 227 540 L 227 580" stroke="var(--se-accent,#E94E1B)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 542 540 L 542 580" stroke="var(--se-accent,#E94E1B)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 857 540 L 857 580" stroke="var(--se-accent,#E94E1B)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1172 540 L 1172 580" stroke="var(--se-accent,#E94E1B)" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
 
   <text x="80" y="610" class="label">CODIFIED OUTPUT (MACHINE-READABLE)</text>
 
-  <rect x="80" y="625" width="295" height="105" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="80" y="625" width="295" height="105" rx="10" ry="10" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="227" y="655" text-anchor="middle" class="ont">Functional Ontology</text>
   <text x="227" y="680" text-anchor="middle" class="ontSub">personas, outcomes, scenarios,</text>
   <text x="227" y="698" text-anchor="middle" class="ontSub">steps, actions</text>
   <text x="227" y="717" text-anchor="middle" class="ital">written into the graph</text>
 
-  <rect x="395" y="625" width="295" height="105" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="395" y="625" width="295" height="105" rx="10" ry="10" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="542" y="655" text-anchor="middle" class="ont">Architecture Ontology</text>
   <text x="542" y="680" text-anchor="middle" class="ontSub">services, boundaries,</text>
   <text x="542" y="698" text-anchor="middle" class="ontSub">dependencies, contracts</text>
   <text x="542" y="717" text-anchor="middle" class="ital">written into the graph</text>
 
-  <rect x="710" y="625" width="295" height="105" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="710" y="625" width="295" height="105" rx="10" ry="10" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="857" y="655" text-anchor="middle" class="ont">Design Ontology</text>
   <text x="857" y="680" text-anchor="middle" class="ontSub">components, flows,</text>
   <text x="857" y="698" text-anchor="middle" class="ontSub">templates, tokens</text>
   <text x="857" y="717" text-anchor="middle" class="ital">written into the graph</text>
 
-  <rect x="1025" y="625" width="295" height="105" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="1025" y="625" width="295" height="105" rx="10" ry="10" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="1172" y="655" text-anchor="middle" class="ont">Code Ontology</text>
   <text x="1172" y="680" text-anchor="middle" class="ontSub">modules, classes,</text>
   <text x="1172" y="698" text-anchor="middle" class="ontSub">functions, endpoints</text>

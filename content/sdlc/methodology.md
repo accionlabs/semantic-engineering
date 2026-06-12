@@ -1,7 +1,7 @@
 ---
 title: "The Four-Layer Ontology"
 description: "The four-layer ontology in depth, the aperture criterion that decides what enters it, partition by product, brownfield extraction as rationalization, and the governance framework that keeps the graph healthy."
-weight: 10
+weight: 30
 date: 2026-06-09
 lastmod: 2026-06-09
 draft: false
@@ -12,52 +12,25 @@ audience:
   - chief-architect
 ---
 
-The [Semantic Knowledge Graphs](_index.md) is one of the three sources of truth in the Semantic Engineering methodology, and captures the knowledge from the custodians - product owners, architects and UX designers. This page describes the the four ontology layers in operational detail, the inclusion criterion that keeps them sustainable, how we partition and extract them, and the metrics framework that keeps them healthy.
+The [Semantic Knowledge Graphs](methodology.md) is one of the three sources of truth in the Semantic Engineering methodology, and captures the knowledge from the custodians - product owners, architects and UX designers. This page describes the the four ontology layers in operational detail, the inclusion criterion that keeps them sustainable, how we partition and extract them, and the metrics framework that keeps them healthy.
 
 ## The Four-Layer Ontology
 
 An application is captured as four cross-linked graphs.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph TD
-    F[Functional Ontology<br/>Personas, outcomes,<br/>scenarios, steps, actions]
-    D[Design Ontology<br/>Components, molecules,<br/>atoms, templates, flows]
-    A[Architecture Ontology<br/>Services, boundaries,<br/>dependencies, data models]
-    C[Code Ontology<br/>Modules, classes,<br/>functions, endpoints]
+![The four-layer ontology with cross-layer relationships and the custodian role per layer](/diagrams/four-layer-ontology-relationships.svg)
 
-    F <--> D
-    F <--> A
-    F <--> C
-    D <--> C
-    A <--> C
-    D <--> A
+| Ontology     | What it captures                                              | Custodian                           |
+| ------------ | ------------------------------------------------------------- | ----------------------------------- |
+| Functional   | Personas, outcomes, scenarios, steps, actions                 | Product Owner                       |
+| Design       | Components, molecules, atoms, templates, flows, wireframes    | UX Designer and design system owner |
+| Architecture | Services, boundaries, dependencies, data stores, integrations | Architect and tech lead             |
+| Code         | Modules, classes, functions, endpoints, database schemas      | Engineering Team                    |
 
-    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
-    class F,D,A,C accent
-    classDef default rx:10,ry:10;
-```
-
-| Ontology | What it captures | Custodian |
-|---|---|---|
-| Functional | Personas, outcomes, scenarios, steps, actions | Product Owner |
-| Design | Components, molecules, atoms, templates, flows, wireframes | UX Designer and design system owner |
-| Architecture | Services, boundaries, dependencies, data stores, integrations | Architect and tech lead |
-| Code | Modules, classes, functions, endpoints, database schemas | Engineering Team |
-
+![The four ontology hierarchies in detail: Functional, Design, Architecture, and Code](/diagrams/four-ontology-hierarchies.svg)
 ### The Functional Ontology in Detail
 
 The Functional Ontology is the layer that exposes whether the product owner is doing the work properly. The structure is simple.
-
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph LR
-    P[Persona] --> O[Outcome]
-    O --> S[Scenario]
-    S --> St[Step]
-    St --> A[Action]
-    classDef default rx:10,ry:10;
-```
 
 | Node type | What it captures | Example |
 |---|---|---|
@@ -73,17 +46,6 @@ The structure matters for governance, not specification. When a product owner sa
 
 The Design Ontology is the layer that exposes whether the UX designer and the design system owner are maintaining a coherent interface. The structure follows the atomic-design model on the component side, with a parallel journey hierarchy that links the user experience back to the Functional Ontology.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph LR
-    UJ[User Journey] --> FL[Flow]
-    FL --> PG[Page]
-    PG --> TP[Template]
-    TP --> OR[Organism]
-    OR --> ML[Molecule]
-    ML --> AT[Atom]
-    classDef default rx:10,ry:10;
-```
 
 | Node type | What it captures | Example |
 |---|---|---|
@@ -101,25 +63,6 @@ The Design Ontology connects to the Functional Ontology along the journey side: 
 
 The Architecture Ontology is the layer that exposes whether the architect is keeping the system's structural decisions current. The structure is an eight-layer blueprint rather than a deep hierarchy. Each layer contains per-product component nodes with relationships to layers above and below.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph TD
-    UX[User Experience]
-    AG[API Gateway]
-    SV[Services]
-    AI[Agents]
-    EQ[Event Queue]
-    DL[Data Lake]
-    OB[Observability]
-    IN[Infrastructure]
-    UX --> AG --> SV
-    SV --> AI
-    SV --> EQ
-    SV --> DL
-    SV --> OB
-    SV --> IN
-    classDef default rx:10,ry:10;
-```
 
 | Layer | What it captures | Example |
 |---|---|---|
@@ -138,15 +81,6 @@ The eight layers are fixed; the per-product component nodes inside each layer ar
 
 The Code Ontology is the layer that exposes whether the engineering team has the implementation surface under structural control. The structure is auto-generated from the actual source using AST parsers, then enriched with LLM-inferred metadata.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph LR
-    FL[File] --> CL[Class]
-    CL --> FN[Function]
-    FN --> ST[Statement]
-    FL --> AP[API Endpoint]
-    classDef default rx:10,ry:10;
-```
 
 | Node type | What it captures | Example |
 |---|---|---|
@@ -158,7 +92,7 @@ graph LR
 
 The Code Ontology bridges the Architecture Ontology and the implementation surface. Each File node carries a module attribution that links it to a Service node in the Architecture Ontology. Each API Endpoint node carries a route signature that links it to an API Gateway contract. Each Function node carries call-graph edges that let the Impact Analysis Agent trace a Functional Action down to the specific lines that implement it. The captured statement bodies are what make the impact analysis precise rather than approximate: the agent reads behavior, not just structure.
 
-The Code Ontology is extracted by AST parsers across the supported language set (currently TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl). The parsers run on every merge to master, so the Code Ontology stays current as a side effect of the implementation sprint cadence covered in [Implementation Sprint](../process/implementation-sprint.md).
+The Code Ontology is extracted by AST parsers across the supported language set (currently TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl). The parsers run on every merge to master, so the Code Ontology stays current as a side effect of the implementation sprint cadence covered in [Implementation Sprint](process/implementation-sprint.md).
 
 ### Citations at Every Layer
 
@@ -183,7 +117,7 @@ A real example. A product owner files a user story: "Let users choose how often 
 
 ![Cross-layer traversal of one user story through Functional, Design, Architecture, Code, and Data layers](/diagrams/cross-layer-traversal.svg)
 
-The traversal happens before any code is written. The senior developer who used to assemble this context manually now reviews it. Full mechanism in [The Impact Analysis Agent](../the-agents.md#the-impact-analysis-agent).
+The traversal happens before any code is written. The senior developer who used to assemble this context manually now reviews it. Full mechanism in [The Impact Analysis Agent](agents.md#the-impact-analysis-agent).
 
 ### Why We Model at Function and Module Level
 
@@ -206,7 +140,7 @@ The output is a model of the system's actual behavior, not its intended behavior
 
 ### The Validation Gate
 
-Once the four ontologies exist, every change is validated against all four before it can merge. The [PR Validation Agent](../the-agents.md#the-pr-validation-agent) runs the gate on every merge to master. The gate fails if the Functional Ontology shows the change should affect an outcome the code does not touch, the Design Ontology shows a duplicate component being created where an existing one would have served, the Architecture Ontology shows a boundary violation, or the Code Ontology shows a downstream dependency the change breaks.
+Once the four ontologies exist, every change is validated against all four before it can merge. The [PR Validation Agent](agents.md#the-pr-validation-agent) runs the gate on every merge to master. The gate fails if the Functional Ontology shows the change should affect an outcome the code does not touch, the Design Ontology shows a duplicate component being created where an existing one would have served, the Architecture Ontology shows a boundary violation, or the Code Ontology shows a downstream dependency the change breaks.
 
 ## Aperture
 
@@ -220,21 +154,7 @@ The aperture admits elements whose change cascades beyond their immediate contex
 
 ![Aperture and blast radius: wide-radius elements enter the graph; locally contained ones stay out](/diagrams/aperture-blast-radius.svg)
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph TD
-    A[Any candidate element]
-    A --> B{Does its change<br/>cascade beyond<br/>local context?}
-    B -->|Yes| C[Enters the knowledge graph]
-    B -->|No| D[Stays in code, config, or local context]
-
-    C --> E[Governed by graph<br/>Changes require deliberate decision]
-    D --> F[Local autonomy applies<br/>No graph-level coordination needed]
-
-    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
-    class C,E accent
-    classDef default rx:10,ry:10;
-```
+![The blast radius test: a single rule decides what enters the knowledge graph](/diagrams/blast-radius-decision-tree.svg)
 
 ### High-Aperture and Low-Aperture Elements, by Layer
 
@@ -410,12 +330,12 @@ The framework runs to concrete thresholds. The numbers below are what we operate
 | Quarterly | The P2 community structure and P3 centrality metrics. Output is a prioritized rationalization backlog. | Chief Architect, Ontology Maintainer |
 | Continuously | Ontology freshness check. Refresh sprints scheduled when freshness threshold is breached. | Knowledge Agent Owner |
 
-The metrics framework is what makes the knowledge graph a sustainable asset rather than another stale documentation artifact. The four ontology custodians own the framework; Accion Labs's [Enablement Partnership](../process/enablement-partnership.md) supports them at a chosen tier of managed support.
+The metrics framework is what makes the knowledge graph a sustainable asset rather than another stale documentation artifact. The four ontology custodians own the framework; Accion Labs's [Enablement Partnership](process/enablement-partnership.md) supports them at a chosen tier of managed support.
 
 > **How Accion Labs operationalizes graph operation**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) maintains the product-partitioned graphs, runs the brownfield extraction, runs the 29-metric framework and 14 verification checks, and runs the three Impact Analysis variants. The [Managed Support tiers](../process/enablement-partnership.md) (Light, Medium, Deep) determine which cadence of metrics review Accion Labs runs alongside the client's custodians.
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) maintains the product-partitioned graphs, runs the brownfield extraction, runs the 29-metric framework and 14 verification checks, and runs the three Impact Analysis variants. The [Managed Support tiers](process/enablement-partnership.md) (Light, Medium, Deep) determine which cadence of metrics review Accion Labs runs alongside the client's custodians.
 
 ---
 
-Return to [The Methodology landing](_index.md) for the framing. [The Agents](../the-agents.md) describes the agents that operate on the graph at runtime.
+Return to [The Methodology landing](methodology.md) for the framing. [The Agents](agents.md) describes the agents that operate on the graph at runtime.

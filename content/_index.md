@@ -1,9 +1,9 @@
 ---
-title: AI-led SDLC, powered by Semantic Engineering
-description: How we build AI into enterprise software delivery at Accion Labs. The methodology, the platform, the operating model.
+title: Agentic Software Engineering and Modernization, powered by Semantic Engineering
+description: Executive overview of Semantic Engineering, the methodology Accion Labs developed for agentic software engineering and legacy modernization. The shared problem, the universal principles, and how they instantiate across greenfield, brownfield, and legacy modernization work.
 weight: 1
 date: 2026-06-04
-lastmod: 2026-06-05
+lastmod: 2026-06-12
 draft: false
 section: false
 type: docs
@@ -18,104 +18,125 @@ audience:
   - analyst
 ---
 
-This site documents the methodology we developed at Accion Labs for AI-assisted software delivery, the platform we built to operationalize it, and the operating model we run engagements under.
+Semantic Engineering is the methodology we developed at Accion Labs for running AI agents reliably inside enterprise software work. It treats the knowledge an agent needs as a queryable graph, constrains generation through that graph, and governs the graph through named ownership and validation gates so it stays honest as the work proceeds. The same principles apply whether the team is building new software, evolving live software, or modernizing legacy software.
 
 ![Semantic Engineering at a Glance](/diagrams/hero-semantic-engineering-at-a-glance.svg)
 
-## The Problem We Set Out to Solve
+This page is the executive overview. Each section links to a deep dive in the topic area it summarizes. If you want to jump straight to a use case, the two anchor sections are [Agentic Software Engineering (SDLC)](sdlc/_index.md) and [Agentic Legacy Modernization](modernization/_index.md). If you want a guided diagnosis of which use case fits the work in front of you, start with the Self-assessment.
 
-AI coding assistants do well on small, contained tasks where the change is local and a single prompt can carry the relevant context. On a large enterprise codebase the situation is different.
+## The Shared Problem
 
-In large enterprise applications, human developers need to use their tacit knowledge of several external factors such as cross team contracts, design system guidelines, reusable components and libraries available in the enterprise, predefined data models of master data entities, previous technical debt in the architecture, and so on. We also have roles in the enterprise that act as custodians for this additional context - product owners, architects and designers who provide guidance as and when required to the developers. None of this tacit knowledge is visible to an agent, and none of the custodians of the additional context are available for consultation to the agent until we explicitly provide it in some way. Creating large context files would be cumbersome and expensive. We need a more efficient way for agents to be provided only the specific information required for the current task at hand rather than throw the entire enterprise landscape at it.
+Enterprise software work is hard because the knowledge that holds a system together lives in heads, decaying documents, and code that is opaque without interpretation. In a typical enterprise application, four roles carry that tacit knowledge:
 
-Bigger context windows and newer models do not change this requirement. The agent needs structured context it can query, not more raw text to wade through.
+- the **product owner** holds the *why* (personas, outcomes, scenarios, rejected proposals)
+- the **architect** holds the *where* (service boundaries, source-of-truth databases, integration contracts)
+- the **UX designer** holds the *how it looks and behaves* (components, interaction patterns, state handling)
+- the **engineering team** collectively holds the *what the code actually does* (live functions, retry policies, active feature flags, dead utilities)
 
-## How We Solved It
+No single human holds the whole picture and no document does either. AI coding assistants do well on small, contained tasks but break against this complexity because they have no structured way to query the system's actual state. Bigger context windows do not fix this. The agent needs structured context it can read against, not more raw text to wade through.
 
-![Why Structured Context Matters: agent without a graph vs agent with a graph](/diagrams/before-after-structured-context.svg)
+Every use case in a typical enterprise portfolio hits the same wall. Greenfield work needs the new application to fit a landscape it has not yet been built into. Brownfield work needs to reason about dependencies inside the live application as it evolves. Legacy modernization needs to honor years of accumulated behavior while replacing the stack that produced it. The complexity differs by use case, but the structural gap is the same.
 
-The way we provide that selective context is by building a structured representation of the application that an agent can query for only the parts relevant to the change at hand. We model the application as a knowledge graph across four connected layers: functional (what the system does, typically the domain of the product owner), design (how the software behaves and looks, typically the domain of the designer), architecture (how is the application organized, typically the domain of an architect), and code (what is actually built, across all repositories of the product, stewarded collectively by the engineering team). When a development task is proposed, say in a user story, the agent traverses the graph and pulls only the relevant nodes. Which functional outcomes will be affected. Which design components are touched. Which architectural services and code modules need to change. Which database tables and integration points are in scope. The custodians of the knowledge graph are the four roles that own those domains: the product owner, the architect, the UX designer, and the engineering team. The agent gets the precise context the task at hand requires. After the change is merged, the same traversal verifies that the implementation matches what the spec asked for.
+The full problem treatment is in [The Manual Translation Tax](sdlc/translation-tax.md) for continuous SDLC and [The Modernization Translation Tax](modernization/translation-tax.md) for legacy modernization.
 
-We call the methodology Semantic Engineering. The platform we built to operationalize it is Breeze.AI. The full structural treatment is in [The Methodology](semantic-knowledge-graphs/_index.md).
+## The Methodology
 
-## How We Arrived At This
+Semantic Engineering responds to the structural gap with four universal principles that hold across every use case.
 
-![The Path to Semantic Engineering: 2017 Breeze framework to 2025-26 methodology and ASIMOV](/diagrams/origins-timeline.svg)
-
-Before Gen AI came on the scene, our challenge was to arrive at some standardization and quality control of the critical roles that define the true value of the product - product owners (or business analysts), software architects and experience designers primarily. 
-
-We created a repository of guidelines and templates each role could use, and newer practitioners could be trained against. For product owners it defined persona definitions, outcome specifications, and scenarios. For architects it defined service decompositions, entity definitions, and integration patterns. For UX designers it defined design systems, component libraries, journey maps, and quantitative user metrics. These got ratified and rationalized across multiple product design and development engagements with customers in disparate domains and industries. In 2017, we formalized these guidelines and templates into an internal framework that we called Breeze. The framework has been used for every software engineering engagement of Accion Labs since then. But using it was a lot of manual work. Maintaining the artifacts by hand across hundreds of engagements was the discipline that slipped first under deadline pressure, and we accepted that as a cost of doing business.
-
-Gen AI first came into Accion Labs in Q1 2022, when we were working with a drug discovery application for a pharma leader. What we needed was something better than NLP to parse through extensive text. Transformer models were already available even though Chat GPT was not yet released. They did provide much better context understanding than conventional NLP. But the models were naive and hallucinated extensively, providing decision pathways that did not exist in the validated pharmaceutical research, which made the technology unusable in its early form. We fixed it by building a decision tree of the validated pathways and giving the tree to the model as constrained options, so it could only pick from real pathways rather than invent its own. This methodology did work to provide much better results grounded in the knowledge graph. 
-
-As the foundation models became more proficient, we found that grounding them with a knowledge graph continued to provide more reliable results. Meanwhile, as AI started playing a major role in software engineering, we started evaluating how our Breeze guidelines and templates could be converted into the four graph ontologies, and created custom agents that could populate and query the graph. We named this framework after its 2017 ancestor: Breeze.AI.
-
-While brownfield software engineering projects used the Breeze.AI framework and ontologies, we could further optimize the ontologies for a frequent use case in software engineering - fully automated legacy application modernization, where we only modernize the technology but keep functional parity with the legacy application. Considering the number of clients and organizations who were struggling with this problem, we created another set of agents and ontologies for legacy modernization and called it ASIMOV (**A**gentic **S**oftware **I**ntelligence for **M**igration, **O**ptimization & **V**alidation).
-
-At Accion Labs, we have documented and shared  the entire evolution of Semantic Engineering in our Innovation Summit with customers and partners, and are now practicing it across the board with all customer engagements... or to be more precise, with those customers that allow us to do so.
-
-The full origin story is in [Origins](about/origins.md).
-
-## Where Most Teams Are Today
-
-With the speed at which Gen AI is progressing, and the inevitable hype caused by dramatic media memes and statements by leaders across the technology industry, most teams we talk to seem to lack a clear understanding of exactly how Gen AI can be used. Most of the public material focuses on simple use cases, and the remarkable experience of using a coding agent for the first time is truly a thrill to any software engineer. But little do they realize that while code generation may have got significanly accelerated, dropping the technology into a complex enterprise environment is anything but easy. 
-
-The work that teams take through AI-assisted SDLC falls into four zones of complexity. Each zone is best served by a different zone of process. The same team will use different zones for different work, and most teams have a dominant zone they operate at today.
-
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph LR
-    M[Zone 1<br/>Vibe Coding<br/>No specification]
-    S[Zone 2<br/>Spec-Driven Development<br/>Written contract per change]
-    SE[Zone 3<br/>SDD plus Semantic Engineering<br/>Knowledge graph added]
-    SC[Zone 4<br/>SE at Scale<br/>Write agents, not code]
-
-    M --> S
-    S --> SE
-    SE --> SC
-
-    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
-    class SE,SC accent
-    classDef default rx:10,ry:10;
-```
-
-Most of the work that we see today calls for Zone 1 or Zone 2 process. A small share of work has crossed into Zone 3 complexity. Zone 4 work appears at portfolio scale in a handful of mature programs.
-
-| If the work in front of you fits this zone | Start here |
+| Principle | What it means |
 |---|---|
-| Zone 1 work: AI tools in use, no written contract per change | [The Manual Translation Tax](manual-translation-tax.md) → [From Manual to SDD](zones-of-ai-assisted-sdlc/zone-1-manual-vibe-coding.md#from-manual-to-sdd) |
-| Zone 2 work: SDD discipline in place, hitting cross-team or brownfield walls | [The Methodology](semantic-knowledge-graphs/_index.md) → [From SDD to SE](zones-of-ai-assisted-sdlc/zone-2-spec-driven-development.md#from-sdd-to-se) |
-| Zone 3 work: knowledge graph in place for one product, scaling | [The Team](process/team.md) → [Three-Phase Rollout](practitioner/_index.md#three-phase-rollout) |
-| Not sure which zone of process fits | [Self-assessment](self-assessment.md) |
+| **Structured representation as the substrate** | Encode the knowledge the agent needs as a queryable graph with explicit nodes and relationships. The agent queries the graph for the slice each task needs. |
+| **Agent constraint through the graph** | Agents generate only against what the graph asserts. They cannot invent capabilities the graph does not contain. Generation is bounded by what is declared. |
+| **Named ownership of the substrate** | Each part of the graph has a named human custodian who is accountable for keeping it honest. Decay is treated as ownership failure, not a tooling problem. |
+| **Validation gates that produce machine-verifiable evidence** | Quality is enforced by gates that emit pass or fail evidence against the graph. The gates run automatically and produce artifacts the team can audit. |
 
-## What This Site Contains
+The principles are universal. The shape of the graph and the rhythm of the operating model differ by use case because the questions each use case asks are different. The next section shows how the same principles instantiate across the three use cases the enterprise portfolio actually contains.
 
-The routing table above takes you to the page most relevant to the zone of process the work in front of you calls for. The site as a whole is organized into the sections below, in the reading order we would walk a new client engagement through.
+## One Methodology, Three Use Cases
 
-| Section | What you will find |
-|---|---|
-| [The Manual Translation Tax](manual-translation-tax.md) | The Manual Translation Tax that every team pays. Four custodians who hold the tacit knowledge. The structural response in two paired diagrams: the manual landscape and the structured landscape. |
-| [Zones of AI-Assisted SDLC](zones-of-ai-assisted-sdlc/_index.md) | The four zones of process matched to four zones of work complexity. The conditions under which each zone starts to break down. How each zone addresses specific components of the Manual Translation Tax. |
-| [The Methodology](semantic-knowledge-graphs/_index.md) | The four ontologies we use to capture an application. How we keep the graph efficient. How we govern it as it changes. |
-| [The Agents](the-agents.md) | The agents that operate on the graph at runtime. Impact analysis before a change, validation on merge, BDD generation, KG sync. How they earn autonomy over time. |
-| [The Team](process/team.md) | The operating model that makes this work. Spec sprints, fractional allocation, the layered team structure, the enablement partnership. |
-| [Case Archetypes](case-archetypes.md) | Two real engagements walked end to end. One brownfield at 2M LOC, one greenfield that grew into complexity. |
-| [Practitioner](practitioner/_index.md) | How we engage commercially. The platforms (Breeze.AI, ASIMOV), the engagement model, the services. |
-| [Resources](resources/_index.md) | Glossary of methodology terminology with links into the depth pages. |
-| [About](about/_index.md) | Origins, copyright, governance of the methodology. |
+The three use cases collapse into two graph models on the question of whether the target is fixed or moving. Greenfield and brownfield both have a moving target and share the four-layer ontology of a live application, curated continuously by the four custodians. Legacy modernization has a fixed delivery target and uses a different ontology shape sized for the bounded scope of the work. The same four custodian roles govern the modernization ontologies; the target state itself is defined and governed by the Product Owner, Architect, UX Designer, and Engineering Team rather than handed over as a static input.
+
+![One Methodology, Three Use Cases](/diagrams/methodology-three-use-cases.svg)
+
+The four-layer ontology and the Source-state / Target-state / specification format are two instantiations of the same methodology. The diagram below contrasts the two graph models directly.
+
+![Two Knowledge Graph Models](/diagrams/two-graph-models.svg)
+
+A side-by-side view of the three use cases against the dimensions that matter most:
+
+| Dimension | Greenfield | Brownfield | Legacy Modernization |
+|---|---|---|---|
+| **Target state** | Discovered incrementally as the product grows | Existing live application, evolving incrementally | Target Blueprint chosen up front, fixed |
+| **Scope** | New application built into the enterprise landscape | Live application maintained and extended | Bounded project that replaces a legacy stack |
+| **Graph model** | Four-layer ontology, built up live | Four-layer ontology, extracted then curated | Source-state + Target-state + specification format |
+| **Custodians** | Product Owner, Architect, UX Designer, Engineering Team | Product Owner, Architect, UX Designer, Engineering Team | Product Owner, Architect, UX Designer, Engineering Team (same four roles, lower cadence) |
+| **Agent mode** | Spec-aware development at every PR | Impact-aware change against the live graph | Migration under parity contract with four validation gates |
+| **Cadence** | Continuous (spec sprint + implementation sprint) | Continuous (same two-sprint operating model) | Five-phase delivery, bounded, then Maintain mode |
+| **Anchor section** | [Agentic Software Engineering (SDLC)](sdlc/_index.md) | [Agentic Software Engineering (SDLC)](sdlc/_index.md) | [Agentic Legacy Modernization](modernization/_index.md) |
+
+When a modernization completes and the client wants ongoing SDLC governance on the modern system, the modernization graph converts to the four-layer ontology and the engagement continues under the continuous SDLC instantiation. The methodology covers both halves of that lifecycle.
+
+## Topic by Topic: How the Methodology Stays Consistent
+
+The site is organized so a reader can walk either use case end to end across the same six topics. The table below shows how each topic instantiates on each side, with deep-dive links per cell.
+
+| Topic | Continuous SDLC | Legacy Modernization |
+|---|---|---|
+| **Translation Tax** (the problem) | [Manual Translation Tax](sdlc/translation-tax.md): the daily cost of converting tacit knowledge into action across four custodians. | [Modernization Translation Tax](modernization/translation-tax.md): reverse-engineering cost, lost context, validation vacuum, knowledge disappearance. |
+| **Methodology** (graph model) | [Four-Layer Ontology](sdlc/methodology.md): Functional, Design, Architecture, Code. Curated live by the four custodians. | [Ontologies for Legacy Modernization](modernization/methodology.md): Source-state decomposed from legacy code, Target-state defined by the same four custodians from a target blueprint, specification format bridges the two. |
+| **Agents** (the fleet) | [The SDLC Agent Fleet](sdlc/agents.md): impact analysis, BDD generation, KG sync, validation on merge. Earn autonomy over time. | [The Modernization Agent Fleet](modernization/agents.md): nine named agents across Discover, Document, Migrate, Validate, Maintain. Progressive autonomy per engagement. |
+| **Process** (the operating model) | [Continuous SDLC Operating Model](sdlc/process/_index.md): spec sprint and implementation sprint, fractional allocation, layered team, enablement partnership across years. | [Modernization Operating Model](modernization/process/_index.md): five-phase delivery, SME tuning loop, expert review pattern, enablement frame sized for a bounded project. |
+| **Engagement Model** | [SDLC Engagement Model](sdlc/engagement-model.md): Advise, Launch, Scale, Optimize. Pricing per phase. Three-Phase Rollout aligns to methodology phases. | [Modernization Engagement Model](modernization/engagement-model.md): five entry modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain / Operate). Pricing per mode. |
+| **Case Archetypes** | [SDLC Case Archetypes](sdlc/case-archetypes.md): two real engagements end to end, one brownfield at 2M LOC, one greenfield grown into complexity. | [Modernization Case Archetypes](modernization/case-archetypes.md): seven anonymized case studies across ASP.Net, COBOL, Delphi, VB.NET, ASP Forms, and Java migrations across multiple industries. |
+
+The structural response is the same in both columns. The shape of the response differs because the work asks different questions.
+
+## Two Platforms, One Methodology
+
+The methodology is operationalized by two production platforms. Each one is sized for the use case it serves.
+
+![Breeze.AI versus ASIMOV](/diagrams/breeze-vs-asimov.svg)
+
+| Platform | Use case | Operationalizes |
+|---|---|---|
+| **[Breeze.AI](practitioner/breeze-ai.md)** | Continuous SDLC (greenfield and brownfield) | Four-layer ontology storage, the SDLC agent fleet, integration surface, deployment modes, governance metrics. |
+| **[ASIMOV](practitioner/asimov.md)** | Legacy Modernization | Five pillars (AGIE, ASF, AMM, AVF, Maintain) across the modernization lifecycle. Four validation gates. Bounded delivery pipeline at scale. |
+
+The platforms are peers under the same methodology. They differ in graph shape and operating cadence because the use cases differ. They share the same principles, the same enablement discipline, and the same governance posture.
 
 ## Numbers from Real Engagements
 
-Before you decide where to start, here are the outcomes we have measured on engagements running under this methodology. Each one is grounded in a specific engagement context. Anonymized full walkthroughs are in [Case Archetypes](case-archetypes.md). Named versions are in the [Practitioner section](practitioner/_index.md#named-case-studies) where we have publication permission.
+Outcomes measured on engagements running under this methodology. Anonymized walkthroughs are in the case archetype pages linked above.
 
-| Number                                                                   | Context                                                                                                                       |
-| ------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
-| **2 to 3 weeks** to extract a 2M+ LOC codebase into the four-layer graph | Brownfield extraction on a Node.js, TypeScript and React application                                                          |
-| **8 minutes** for an impact analysis agent to analyze a 1.6M LOC graph   | The number that determines why we partition the graph by product rather than build one monolithic graph across the enterprise |
-| **53%** design component reuse in the first sprint                       | First sprint under SE-governed UI development on a greenfield workstream                                                      |
-| **23%** defect rate reduction against the team's pre-SE baseline         | Same codebase, same team, before and after                                                                                    |
-| **93.4%** test coverage with zero manual BDD overhead                    | BDD scenarios generated from the Functional Ontology rather than authored by hand                                             |
-| **81%** lower five-year TCO with on-premises AI deployment               | For engagements where model inference must remain inside the client's infrastructure                                          |
+**Continuous SDLC engagements under Breeze.AI:**
+
+| Number | Context |
+|---|---|
+| **2 to 3 weeks** to extract a 2M+ LOC codebase into the four-layer graph | Brownfield extraction on a Node.js, TypeScript and React application |
+| **8 minutes** for an impact analysis agent to analyze a 1.6M LOC graph | The number that determines why we partition the graph by product |
+| **53%** design component reuse in the first sprint | First sprint under SE-governed UI development on a greenfield workstream |
+| **23%** defect rate reduction against the team's pre-SE baseline | Same codebase, same team, before and after |
+| **93.4%** test coverage with zero manual BDD overhead | BDD scenarios generated automatically from the Functional Ontology |
+| **81%** lower five-year TCO with on-premises AI deployment | For engagements where model inference must remain inside the client's infrastructure |
+
+**Legacy modernization engagements under ASIMOV:**
+
+| Number | Context |
+|---|---|
+| **15M+ LOC** modernized across 10+ programs | Across ASP.Net, COBOL, Delphi, ASP Forms, VB.NET, and custom proprietary stacks |
+| **Up to 4×** faster than manual modernization | Indicative on a 1M LOC standalone codebase |
+| **Up to 70%** migration time reduction | Indicative on a 1M LOC standalone codebase |
+| **2.1M LOC Java 8 to Java 21 in ~3.5 months** | Inventory and warehouse platform; deprecated APIs automatically detected and replaced |
+| **3M LOC Delphi to cloud-native .NET 8** | European education-technology provider with 80%+ market share; ~60% effort reduction versus manual |
+| **600K LOC COBOL on AS400 to .NET 8 microservices** | Global specialty insurance and risk management provider |
+
+## How We Arrived Here
+
+Semantic Engineering started in 2017 as Breeze, an internal framework of role-based guidelines and templates for product owners, architects, and UX designers. When Gen AI entered our work in 2022 on a pharma drug-discovery engagement, we found that grounding models with a knowledge graph kept hallucinations under control. We converted the Breeze guidelines into ontologies, built agent fleets around them, and named the resulting SDLC platform Breeze.AI in tribute to its 2017 ancestor. The legacy modernization shape of work demanded a different graph model and a different agent fleet, which became ASIMOV.
+
+![Origins Timeline](/diagrams/origins-timeline.svg)
+
+The full origin story is in [Origins](about/origins.md).
 
 ## What We Believe
 
@@ -127,9 +148,20 @@ Every choice in the methodology traces back to this commitment. The four ontolog
 
 Snowflake's semantic layer, Microsoft's knowledge graph integrations in Fabric, and Palantir's ontology positioning have all shipped or matured in the last twelve months. The market is converging on what we concluded in 2022: enterprise AI needs structured context to operate at scale, and a knowledge graph is the practical way to provide it.
 
-Beyond the commercial vendors, open-source projects like Graphify have started building knowledge-graph context layers around code. The technical direction is broadly consistent with what we have been building. These efforts today focus primarily on the Code layer of what we treat as a four-layer ontology: extracting structure from the codebase, mapping module and function dependencies, and providing a queryable substrate the agent can read against. That work matters and we welcome it. The Functional, Design, and Architecture layers, the cross-layer relationships that let an impact report on a user story trace all the way to the affected database tables, the enablement partnership that keeps the graph healthy over years, and the operating model that makes the methodology run at enterprise scale are not yet part of these efforts. We expect open-source to fill in over time, and we will be glad when it does.
+Beyond the commercial vendors, open-source projects like Graphify have started building knowledge-graph context layers around code. The technical direction is broadly consistent with what we have been building. These efforts today focus primarily on the Code layer of what we treat as a four-layer ontology. The Functional, Design, and Architecture layers, the cross-layer relationships, the enablement partnership that keeps the graph healthy over years, and the operating model that makes the methodology run at enterprise scale are not yet part of these efforts. We expect open-source to fill in over time, and we will be glad when it does.
 
-The convergence makes our conversations with clients easier. We spend less time explaining why knowledge graphs matter and more time on what to do with them. We expect the broader industry to keep moving in this direction. The mechanics of each vendor's and project's implementation differ, but the underlying conclusion is the same.
+## Where to Go Next
+
+| If you want to...                                                     | Go to                                                   |
+| --------------------------------------------------------------------- | ------------------------------------------------------- |
+| Diagnose which use case and entry point fits the work in front of you | Self-assessment                   |
+| Walk the continuous SDLC instantiation end to end                     | [Agentic Software Engineering (SDLC)](sdlc/_index.md)   |
+| Walk the legacy modernization instantiation end to end                | [Agentic Legacy Modernization](modernization/_index.md) |
+| Understand how Accion Labs engage commercially                        | [Practitioner](practitioner/_index.md)                  |
+| See the SDLC platform that operationalizes continuous work            | [Breeze.AI](practitioner/breeze-ai.md)                  |
+| See the modernization platform that operationalizes legacy work       | [ASIMOV](practitioner/asimov.md)                        |
+| Look up methodology terminology                                       | [Resources / Glossary](resources/_index.md)             |
+| Read the origin story and how the methodology evolved                 | [About / Origins](about/_index.md)                      |
 
 ## About the Methodology
 

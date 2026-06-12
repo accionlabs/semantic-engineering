@@ -1,57 +1,182 @@
 {{- /* Project custom <head> injection. */ -}}
 
-{{- /* Click-to-zoom for Mermaid diagrams.
-       medium-zoom (Hextra's image zoom) only attaches to <img>; Mermaid renders
-       as inline <svg>, so we give it a lightweight lightbox of its own. */ -}}
-<style>
-  .mermaid { cursor: zoom-in; }
-  #mm-zoom-overlay {
-    position: fixed; inset: 0; z-index: 1000;
-    display: none; align-items: flex-start; justify-content: center;
-    background: rgba(0,0,0,.75); cursor: zoom-out; overflow: auto; padding: 2.5vmin;
-  }
-  #mm-zoom-overlay.mm-open { display: flex; }
-  #mm-zoom-overlay .mm-inner {
-    background: #fff; border-radius: 10px; padding: 1.5rem;
-    box-shadow: 0 12px 48px rgba(0,0,0,.5); margin: auto;
-  }
-  #mm-zoom-overlay .mm-inner svg {
-    width: 92vw; height: auto; max-width: none; display: block;
-  }
-  @media (min-width: 1024px) {
-    #mm-zoom-overlay .mm-inner svg { width: auto; min-width: 70vw; max-width: 92vw; }
-  }
-</style>
+{{- /* Canonical SVG diagram stylesheet. Variables flip on prefers-color-scheme
+       and on Hextra's .dark/.light theme-toggle classes. */ -}}
+<link rel="stylesheet" href="{{ "css/se-diagrams.css" | relURL }}">
+
+{{- /* Unified click-to-zoom for inline diagrams (Mermaid and SE SVG diagrams).
+       Mimics Hextra's native medium-zoom UX: the diagram smoothly scales
+       from its current position to fit the viewport, with a soft backdrop
+       fade. Click / Escape / scroll / resize dismisses with reverse animation.
+
+       Why a custom handler:
+       Hextra's medium-zoom library only attaches to <img> tags. Mermaid
+       renders to inline <svg>, and our render-image hook inlines diagram
+       SVGs into <figure class="se-diagram"> wrappers. Both need a custom
+       zoom that matches the same look and feel. */ -}}
 <script>
   (function () {
     function ready(fn){ document.readyState !== 'loading' ? fn() : document.addEventListener('DOMContentLoaded', fn); }
+
+    // Get the SVG element the click should zoom for a given clickable wrapper.
+    // SE diagrams: figure.se-diagram > svg
+    // Mermaid: pre.mermaid (Mermaid injects an svg after rendering)
+    function findSvg(wrapper) {
+      return wrapper.querySelector('svg');
+    }
+
+    var zoomedClone = null;       // the cloned <svg> appended to <body>
+    var zoomedOriginal = null;    // the original <svg> (hidden during zoom)
+    var zoomedWrapper = null;     // the clickable wrapper
+    var backdrop = null;
+
+    function ensureBackdrop() {
+      if (backdrop) return backdrop;
+      backdrop = document.createElement('div');
+      backdrop.id = 'se-zoom-bg';
+      backdrop.addEventListener('click', closeZoom);
+      document.body.appendChild(backdrop);
+      return backdrop;
+    }
+
+    // Compute the rectangle the clone should grow to (centered in viewport).
+    function computeTargetRect(svgRect) {
+      var margin = 48;
+      var vw = window.innerWidth  - margin * 2;
+      var vh = window.innerHeight - margin * 2;
+      var ratio = svgRect.width / svgRect.height;
+      var targetW, targetH;
+      if (ratio > vw / vh) {
+        targetW = vw;
+        targetH = targetW / ratio;
+      } else {
+        targetH = vh;
+        targetW = targetH * ratio;
+      }
+      return {
+        width:  targetW,
+        height: targetH,
+        left:   (window.innerWidth  - targetW) / 2,
+        top:    (window.innerHeight - targetH) / 2
+      };
+    }
+
+    function openZoom(wrapper) {
+      if (zoomedClone) return;
+      var svg = findSvg(wrapper);
+      if (!svg) return;
+
+      var rect = svg.getBoundingClientRect();
+      if (!rect.width || !rect.height) return;
+
+      // Clone the SVG and append to body with fixed positioning at the
+      // current location. Appending to body sidesteps overflow:hidden on
+      // any parent (Mermaid's pre.mermaid has it from Hextra typography).
+      var clone = svg.cloneNode(true);
+      clone.removeAttribute('id');
+      clone.style.position = 'fixed';
+      clone.style.top    = rect.top    + 'px';
+      clone.style.left   = rect.left   + 'px';
+      clone.style.width  = rect.width  + 'px';
+      clone.style.height = rect.height + 'px';
+      clone.style.margin = '0';
+      clone.style.maxWidth = 'none';
+      clone.style.zIndex = '1001';
+      clone.style.cursor = 'zoom-out';
+      clone.style.transition = 'top 300ms cubic-bezier(0.2,0,0.2,1),' +
+                               'left 300ms cubic-bezier(0.2,0,0.2,1),' +
+                               'width 300ms cubic-bezier(0.2,0,0.2,1),' +
+                               'height 300ms cubic-bezier(0.2,0,0.2,1)';
+      clone.classList.add('se-zoom-clone');
+      // A click on the clone itself closes the zoom. Without this, the clone
+      // sits on top of the backdrop and absorbs clicks aimed at the diagram,
+      // which is the most natural target for the user to click.
+      clone.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        closeZoom();
+      });
+      document.body.appendChild(clone);
+
+      // Hide the original so the page layout stays where it was
+      svg.style.visibility = 'hidden';
+      wrapper.classList.add('se-zoom-source');
+
+      ensureBackdrop().classList.add('se-zoom-active');
+
+      // Trigger transition on the next frame to the computed target rect.
+      var target = computeTargetRect(rect);
+      requestAnimationFrame(function () {
+        clone.style.top    = target.top    + 'px';
+        clone.style.left   = target.left   + 'px';
+        clone.style.width  = target.width  + 'px';
+        clone.style.height = target.height + 'px';
+      });
+
+      zoomedClone = clone;
+      zoomedOriginal = svg;
+      zoomedWrapper = wrapper;
+    }
+
+    function closeZoom() {
+      if (!zoomedClone) return;
+      var clone = zoomedClone;
+      var original = zoomedOriginal;
+      var wrapper = zoomedWrapper;
+
+      // Animate the clone back to the original's current position
+      var rect = original.getBoundingClientRect();
+      clone.style.top    = rect.top    + 'px';
+      clone.style.left   = rect.left   + 'px';
+      clone.style.width  = rect.width  + 'px';
+      clone.style.height = rect.height + 'px';
+      if (backdrop) backdrop.classList.remove('se-zoom-active');
+
+      var cleanup = function () {
+        clone.removeEventListener('transitionend', cleanup);
+        if (clone.parentNode) clone.parentNode.removeChild(clone);
+        if (original) original.style.visibility = '';
+        if (wrapper) wrapper.classList.remove('se-zoom-source');
+      };
+      clone.addEventListener('transitionend', cleanup);
+      // Fallback in case transitionend doesn't fire
+      setTimeout(cleanup, 350);
+
+      zoomedClone = null;
+      zoomedOriginal = null;
+      zoomedWrapper = null;
+    }
+
+    function handleClick(wrapper) {
+      return function (e) {
+        // If something inside was clicked while zoomed, close instead of re-open
+        if (zoomedClone) { closeZoom(); return; }
+        // Don't hijack text-selection clicks on labels inside the SVG
+        if (e.target.closest('a')) return;
+        e.preventDefault();
+        openZoom(wrapper);
+      };
+    }
+
     ready(function () {
-      var diagrams = document.querySelectorAll('pre.mermaid');
-      if (!diagrams.length) return;
+      var wrappers = document.querySelectorAll('figure.se-diagram, pre.mermaid');
+      if (!wrappers.length) return;
 
-      var overlay = document.createElement('div');
-      overlay.id = 'mm-zoom-overlay';
-      var inner = document.createElement('div');
-      inner.className = 'mm-inner';
-      overlay.appendChild(inner);
-      document.body.appendChild(overlay);
+      wrappers.forEach(function (w) {
+        w.style.cursor = 'zoom-in';
+        w.addEventListener('click', handleClick(w));
+      });
 
-      function close(){ overlay.classList.remove('mm-open'); inner.innerHTML = ''; }
-      overlay.addEventListener('click', close);
-      document.addEventListener('keydown', function (e){ if (e.key === 'Escape') close(); });
-
-      diagrams.forEach(function (d) {
-        d.addEventListener('click', function () {
-          var svg = d.querySelector('svg');      // present after Mermaid renders
-          if (!svg) return;
-          var clone = svg.cloneNode(true);
-          clone.removeAttribute('width');
-          clone.removeAttribute('height');
-          clone.style.maxWidth = 'none';
-          inner.innerHTML = '';
-          inner.appendChild(clone);
-          overlay.classList.add('mm-open');
-        });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && zoomedClone) closeZoom();
+      });
+      // Dismiss on scroll, like medium-zoom does
+      var lastScrollY = window.scrollY;
+      window.addEventListener('scroll', function () {
+        if (zoomedClone && Math.abs(window.scrollY - lastScrollY) > 40) closeZoom();
+        lastScrollY = window.scrollY;
+      }, { passive: true });
+      window.addEventListener('resize', function () {
+        if (zoomedClone) closeZoom();
       });
     });
   })();

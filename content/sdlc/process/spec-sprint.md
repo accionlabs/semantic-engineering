@@ -65,7 +65,7 @@ The implementation sprint uses all of this. Engineers do not have to discover an
 
 The spec sprint is the natural home for cross-product impact analysis. When a proposed change affects multiple product knowledge graphs, the spec sprint is where the architect runs the cross-product extension, examines results across product graphs, and decides whether to modify the API contract, the architecture, or the design system to keep the change tractable.
 
-Doing cross-product reconciliation during the implementation sprint is too late. By the time engineers are coding, the architectural decisions need to already be made. The spec sprint is when those decisions get made. The graph partitioning (one graph per product, with cross-product extensions) is designed around this cadence. See [Partition by Product](../semantic-knowledge-graphs/four-layer-ontology.md#partition-by-product) for the structural rationale.
+Doing cross-product reconciliation during the implementation sprint is too late. By the time engineers are coding, the architectural decisions need to already be made. The spec sprint is when those decisions get made. The graph partitioning (one graph per product, with cross-product extensions) is designed around this cadence. See [Partition by Product](../methodology.md#partition-by-product) for the structural rationale.
 
 ## When the Spec Sprint Is Not Necessary
 
@@ -77,26 +77,12 @@ The spec sprint is not necessary in every context. The threshold is operational 
 | Single product but growing past one person's mental capacity, multiple workstreams converging, design system drift surfacing | Yes. The spec sprint becomes worth its own cadence. |
 | Multiple products with integration points, multiple teams working concurrently, brownfield reality at scale | Yes, and the spec sprint becomes the most consequential meeting on the engineering calendar. |
 
-A team adopting the methodology should not impose spec sprints prematurely. They should adopt them when the work crosses the complexity threshold that separates Zone 2 from Zone 3 in the [Zones of AI-Assisted SDLC](../zones-of-ai-assisted-sdlc/_index.md).
+A team adopting the methodology should not impose spec sprints prematurely. They should adopt them when the work crosses the complexity threshold that separates Zone 2 from Zone 3 in the [Zones of AI-Assisted SDLC](../zones/_index.md).
 
 ## The Spec Sprint and the Implementation Sprint Together
 
 The two cadences run staggered, with the spec sprint always one or two sprints ahead of the implementation sprint it feeds.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-gantt
-    title Spec Sprint feeding Implementation Sprint
-    dateFormat YYYY-MM-DD
-    axisFormat %b %d
-    section Spec
-    Spec Sprint 1 :s1, 2026-06-01, 14d
-    Spec Sprint 2 :s2, 2026-06-15, 14d
-    Spec Sprint 3 :s3, 2026-06-29, 14d
-    section Implementation
-    Implementation Sprint 1 :i1, after s1, 14d
-    Implementation Sprint 2 :i2, after s2, 14d
-```
 
 The Spec Sprint team often fractionalizes across two or three workstreams. The Product Owner is per-workstream, but the Architect, UX Designer, and Engineering Team representative may rotate across spec sprints for different workstreams. This is what makes the fractional allocation model work in practice. The same Architect contributes to spec sprints for three workstreams across a quarter, sized to the cadence rather than to a full-time allocation.
 
@@ -104,7 +90,7 @@ The two backlogs (spec sprint and implementation sprint) can live in the same pl
 
 > **How Accion Labs supports the spec sprint adoption**
 >
-> Accion Labs's [Forward-Deployed Engineer program](team.md#forward-deployed-engineers) staffs the spec sprint with the role profile that makes it work. The [two-day deep-dive workshop](../practitioner/_index.md#services) includes a session on diagnosing whether the client's complexity has crossed the threshold where spec sprints become worth the cadence change.
+> Accion Labs's [Forward-Deployed Engineer program](team.md#forward-deployed-engineers) staffs the spec sprint with the role profile that makes it work. The [two-day deep-dive workshop](../../practitioner/_index.md#services) includes a session on diagnosing whether the client's complexity has crossed the threshold where spec sprints become worth the cadence change.
 
 ---
 

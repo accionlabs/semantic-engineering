@@ -1,169 +1,169 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="1400px" height="720px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+<svg viewBox="0 0 1400 720" preserveAspectRatio="xMidYMid meet" width="1400px" height="720px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,44)">
-        <text x="-181.714px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(17,17,17);">The Heritage of Breeze.AI</text>
+        <text x="-181.714px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Heritage of Breeze.AI</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-386.758px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">T<tspan x="-377.859px -366.305px " y="0px 0px ">wo</tspan> roots converged into the methodology and the platform. <tspan x="43.445px 53.219px " y="0px 0px ">Th</tspan>e platform took the name of its 2017 ancestor<tspan x="382.312px " y="0px ">.</tspan></text>
+        <text x="-386.758px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-377.859px -366.305px " y="0px 0px ">wo</tspan> roots converged into the methodology and the platform. <tspan x="43.445px 53.219px " y="0px 0px ">Th</tspan>e platform took the name of its 2017 ancestor<tspan x="382.312px " y="0px ">.</tspan></text>
     </g>
     <g transform="matrix(1,0,0,1,60,128)">
-        <path d="M540,14L540,186C540,193.727 533.727,200 526,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L526,0C533.727,0 540,6.273 540,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
-        <path d="M180,14L180,186C180,193.727 173.727,200 166,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L166,0C173.727,0 180,6.273 180,14Z" style="fill:rgb(75,85,99);"/>
-        <rect x="166" y="0" width="14" height="200" style="fill:rgb(75,85,99);"/>
+        <path d="M540,14L540,186C540,193.727 533.727,200 526,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L526,0C533.727,0 540,6.273 540,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+        <path d="M180,14L180,186C180,193.727 173.727,200 166,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L166,0C173.727,0 180,6.273 180,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
+        <rect x="166" y="0" width="14" height="200" style="fill:var(--se-text-secondary,#4b5563);"/>
         <g transform="matrix(1,0,0,1,90,86)">
-            <text x="-17.797px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">2017</text>
+            <text x="-17.797px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">2017</text>
         </g>
         <g transform="matrix(1,0,0,1,90,120)">
-            <text x="-32.449px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">BREEZE</text>
+            <text x="-32.449px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">BREEZE</text>
         </g>
         <g transform="matrix(1,0,0,1,90,138)">
-            <text x="-57.371px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">role governance</text>
+            <text x="-57.371px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">role governance</text>
         </g>
         <g transform="matrix(1,0,0,1,200,30)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">A<tspan x="10.969px 15.414px " y="0px 0px "> m</tspan>anual blueprint</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">A<tspan x="10.969px 15.414px " y="0px 0px "> m</tspan>anual blueprint</text>
         </g>
         <g transform="matrix(1,0,0,1,200,58)">
             <g transform="matrix(16,0,0,16,32.90625,0)">
             </g>
             <g transform="matrix(16,0,0,16,37.351562,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Codiﬁed the minimal governance structure</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Codiﬁed the minimal governance structure</text>
         </g>
         <g transform="matrix(1,0,0,1,200,76)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">that good product owners, architects, and</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">that good product owners, architects, and</text>
         </g>
         <g transform="matrix(1,0,0,1,200,94)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">UX designers needed to produce.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">UX designers needed to produce.</text>
         </g>
         <g transform="matrix(1,0,0,1,200,124)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">T<tspan x="8.136px 17.719px 26.585px 30.392px 39.258px 48.841px 59.148px 68.731px 76.867px 85.733px 96.757px 100.564px 104.37px 112.506px 116.313px 125.896px 135.48px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE PROBLEM IT HAD</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 17.719px 26.585px 30.392px 39.258px 48.841px 59.148px 68.731px 76.867px 85.733px 96.757px 100.564px 104.37px 112.506px 116.313px 125.896px 135.48px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE PROBLEM IT HAD</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,200,146)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Operationally heavy<tspan x="140.234px 144.68px " y="0px 0px ">. </tspan>Maintaining the</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Operationally heavy<tspan x="140.234px 144.68px " y="0px 0px ">. </tspan>Maintaining the</text>
         </g>
         <g transform="matrix(1,0,0,1,200,164)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">artifacts across hundreds of engagements</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">artifacts across hundreds of engagements</text>
         </g>
         <g transform="matrix(1,0,0,1,200,182)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">required continuous coordination.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">required continuous coordination.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,358)">
-        <path d="M540,14L540,186C540,193.727 533.727,200 526,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L526,0C533.727,0 540,6.273 540,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
-        <path d="M180,14L180,186C180,193.727 173.727,200 166,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L166,0C173.727,0 180,6.273 180,14Z" style="fill:rgb(75,85,99);"/>
-        <rect x="166" y="0" width="14" height="200" style="fill:rgb(75,85,99);"/>
+        <path d="M540,14L540,186C540,193.727 533.727,200 526,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L526,0C533.727,0 540,6.273 540,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+        <path d="M180,14L180,186C180,193.727 173.727,200 166,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L166,0C173.727,0 180,6.273 180,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
+        <rect x="166" y="0" width="14" height="200" style="fill:var(--se-text-secondary,#4b5563);"/>
         <g transform="matrix(1,0,0,1,90,86)">
-            <text x="-17.797px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">2022</text>
+            <text x="-17.797px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">2022</text>
         </g>
         <g transform="matrix(1,0,0,1,90,120)">
-            <text x="-66.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:white;">KG CONSTRAINT</text>
+            <text x="-66.664px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">KG CONSTRAINT</text>
         </g>
         <g transform="matrix(1,0,0,1,90,138)">
-            <text x="-71.137px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">drug discovery work</text>
+            <text x="-71.137px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">drug discovery work</text>
         </g>
         <g transform="matrix(1,0,0,1,200,30)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">The structural insight</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">The structural insight</text>
         </g>
         <g transform="matrix(1,0,0,1,200,58)">
             <g transform="matrix(16,0,0,16,32.015625,0)">
             </g>
             <g transform="matrix(16,0,0,16,36.460938,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The ﬁrst GenAI project for a pharma leader</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The ﬁrst GenAI project for a pharma leader</text>
         </g>
         <g transform="matrix(1,0,0,1,200,76)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">produced the pattern: constraining a</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">produced the pattern: constraining a</text>
         </g>
         <g transform="matrix(1,0,0,1,200,94)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">transformer with a knowledge graph turns</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">transformer with a knowledge graph turns</text>
         </g>
         <g transform="matrix(1,0,0,1,200,112)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">hallucination into precise, traceable output.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">hallucination into precise, traceable output.</text>
         </g>
         <g transform="matrix(1,0,0,1,200,142)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(233,78,27);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.231px 76.814px 87.121px 95.987px 104.853px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT PROVED</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.231px 76.814px 87.121px 95.987px 104.853px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT PROVED</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,200,164)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Structure could make <tspan x="154.75px 165.422px " y="0px 0px ">AI</tspan> output reliable</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Structure could make <tspan x="154.75px 165.422px " y="0px 0px ">AI</tspan> output reliable</text>
         </g>
         <g transform="matrix(1,0,0,1,200,182)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">at enterprise scale.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">at enterprise scale.</text>
         </g>
     </g>
     <g>
-        <path d="M768.445,341.733L760,360L750.454,342.284L768.445,341.733Z" style="fill:rgb(233,78,27);fill-rule:nonzero;"/>
-        <path d="M620,228C708.098,228 754.618,267.202 759.559,345.607" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:3px;"/>
-        <path d="M749.997,377.462L760,360L767.968,378.48L749.997,377.462Z" style="fill:rgb(233,78,27);fill-rule:nonzero;"/>
-        <path d="M620,458C706.216,458 752.611,430.126 759.186,374.377" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:3px;"/>
+        <path d="M768.445,341.733L760,360L750.454,342.284L768.445,341.733Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+        <path d="M620,228C708.098,228 754.618,267.202 759.559,345.607" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:3px;"/>
+        <path d="M749.997,377.462L760,360L767.968,378.48L749.997,377.462Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+        <path d="M620,458C706.216,458 752.611,430.126 759.186,374.377" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:3px;"/>
         <g transform="matrix(1,0,0,1,630,196)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">role-governance</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">role-governance</text>
         </g>
         <g transform="matrix(1,0,0,1,630,214)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">discipline</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">discipline</text>
         </g>
         <g transform="matrix(1,0,0,1,634,479)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">structural</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">structural</text>
         </g>
         <g transform="matrix(1,0,0,1,634,497)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">constraint</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">constraint</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,770,320)">
-        <circle cx="0" cy="40" r="60" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <circle cx="0" cy="40" r="60" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,0,35)">
-            <text x="-45.785px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">CONVERGE</text>
+            <text x="-45.785px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">CONVERGE</text>
         </g>
         <g transform="matrix(1,0,0,1,0,55)">
-            <text x="-26.242px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">into the</text>
-            <text x="-45.809px" y="16px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">methodology</text>
+            <text x="-26.242px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">into the</text>
+            <text x="-45.809px" y="16px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">methodology</text>
         </g>
     </g>
     <g>
         <path d="M830,360L970,360" style="fill:none;fill-rule:nonzero;"/>
-        <path d="M952,351L970,360L952,369L952,351Z" style="fill:rgb(233,78,27);fill-rule:nonzero;"/>
-        <path d="M830,360L955.6,360" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:3px;"/>
+        <path d="M952,351L970,360L952,369L952,351Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+        <path d="M830,360L955.6,360" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:3px;"/>
     </g>
     <g transform="matrix(1,0,0,1,980,228)">
-        <path d="M380,14L380,266C380,273.727 373.727,280 366,280L14,280C6.273,280 0,273.727 0,266L0,14C0,6.273 6.273,0 14,0L366,0C373.727,0 380,6.273 380,14Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2.5px;"/>
-        <path d="M380,14L380,66C380,73.727 373.727,80 366,80L14,80C6.273,80 0,73.727 0,66L0,14C0,6.273 6.273,0 14,0L366,0C373.727,0 380,6.273 380,14Z" style="fill:rgb(233,78,27);"/>
-        <rect x="0" y="60" width="380" height="20" style="fill:rgb(233,78,27);"/>
+        <path d="M380,14L380,266C380,273.727 373.727,280 366,280L14,280C6.273,280 0,273.727 0,266L0,14C0,6.273 6.273,0 14,0L366,0C373.727,0 380,6.273 380,14Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2.5px;"/>
+        <path d="M380,14L380,66C380,73.727 373.727,80 366,80L14,80C6.273,80 0,73.727 0,66L0,14C0,6.273 6.273,0 14,0L366,0C373.727,0 380,6.273 380,14Z" style="fill:var(--se-accent,#E94E1B);"/>
+        <rect x="0" y="60" width="380" height="20" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,190,44)">
-            <text x="-17.797px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">2026</text>
+            <text x="-17.797px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">2026</text>
         </g>
         <g transform="matrix(1,0,0,1,190,68)">
-            <text x="-35.129px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Breeze.AI</text>
+            <text x="-35.129px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Breeze.AI</text>
         </g>
         <g transform="matrix(1,0,0,1,20,108)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">The platform</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">The platform</text>
         </g>
         <g transform="matrix(1,0,0,1,20,134)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The role-governance discipline</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The role-governance discipline</text>
         </g>
         <g transform="matrix(1,0,0,1,20,152)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">preserved in the four-layer ontology<tspan x="250.516px " y="0px ">.</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">preserved in the four-layer ontology<tspan x="250.516px " y="0px ">.</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,20,178)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The maintenance burden that defeated</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The maintenance burden that defeated</text>
         </g>
         <g transform="matrix(1,0,0,1,20,196)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">the manual version handled by the</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">the manual version handled by the</text>
         </g>
         <g transform="matrix(1,0,0,1,20,214)">
             <g transform="matrix(16,0,0,16,44.484375,0)">
             </g>
             <g transform="matrix(16,0,0,16,48.929688,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">agent ﬂeet.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">agent ﬂeet.</text>
         </g>
         <g transform="matrix(1,0,0,1,20,240)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">KG Sync keeps the graph current on</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">KG Sync keeps the graph current on</text>
         </g>
         <g transform="matrix(1,0,0,1,20,258)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">every merge.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">every merge.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,700,620)">
-        <text x="-358.422px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The platform took the name of its 2017 ancestor because the discipline it operationalizes is the same.</text>
+        <text x="-358.422px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The platform took the name of its 2017 ancestor because the discipline it operationalizes is the same.</text>
     </g>
 </svg>

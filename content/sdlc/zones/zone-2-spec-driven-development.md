@@ -103,7 +103,7 @@ Semantic Engineering is additive to SDD. The specification remains the canonical
 | Single-layer coverage | Each of the four layers has its own ontology with its own validation. Design system enforcement is structural. Architecture boundaries are checked at merge. |
 | Specs becoming the bottleneck | Specs are produced on their own cadence (the spec sprint), validated by the Impact Analysis Agent against the graph, and consumed by the implementation sprint as input. The bottleneck moves from sequential to parallel. |
 
-The mechanism is consistent across all four. Add structure where the spec alone is failing. Let the agent consume the structure as additional context. Validate every change against the structure at merge time. The structure is the knowledge graph. The depth treatment of the substrate is in [Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md). The operating model that runs the substrate is in [Process](../process/_index.md).
+The mechanism is consistent across all four. Add structure where the spec alone is failing. Let the agent consume the structure as additional context. Validate every change against the structure at merge time. The structure is the knowledge graph. The depth treatment of the substrate is in [Semantic Knowledge Graphs](../methodology.md). The operating model that runs the substrate is in [Process](../process/_index.md).
 
 ### What Stays the Same
 
@@ -121,12 +121,12 @@ The SDD-to-SE transition changes what the team produces and how the team is comp
 
 **How the team is composed.** The transition has two phases with different team shapes. The first is an **upfront investment**: a team of semantic engineers (typically provided by Accion Labs) extracts the four-layer knowledge graph from the existing codebase, design system, and product documentation. For a 2M+ LOC application this typically completes in two to three weeks. The deliverable of this phase is the populated graph, the verification suite passing on it, and the agent fleet wired up against it. Once the graph is in place, the team shape shifts to **ongoing custody**: the four custodians take over each layer of the graph: the product owner for the Functional Ontology, the architect for the Architecture Ontology, the UX designer for the Design Ontology, and the engineering team for the Code Ontology. Each custodian is assigned at least on a fractional basis per workstream to review and update their layer of the graph as the product evolves: participating in the spec sprint, reading the impact reports that touch their ontology, and extending it when their domain changes. The materialized view of the graph keeps the re-entry cost low, so the same custodian can cover more than one workstream at the same depth of judgment. The staffing pattern is **fractional allocation**: specialists engaged at the moments their judgment creates value, sized to the deliverable rather than to a calendar quarter.
 
-Both shifts are developed in [Team](../process/team.md). The adoption playbook with phase gates and team composition is in [Three-Phase Rollout](../practitioner/_index.md#three-phase-rollout).
+Both shifts are developed in [Team](../process/team.md). The adoption playbook with phase gates and team composition is in [Three-Phase Rollout](../../practitioner/_index.md#three-phase-rollout).
 
 > **How Accion Labs operationalizes this**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the four-layer knowledge graph, the brownfield extraction process, and the Impact Analysis Agent. The [ASIMOV platform](../practitioner/asimov.md) is the peer platform that applies the same Semantic Engineering principles to AI-led legacy modernization, with a focused subset of the ontologies and a fully agentic flow.
+> The [Breeze.AI platform](../../practitioner/breeze-ai.md) implements the four-layer knowledge graph, the brownfield extraction process, and the Impact Analysis Agent. The [ASIMOV platform](../../practitioner/asimov.md) is the peer agentic platform that applies the same Semantic Engineering principles to legacy modernization, with a focused subset of the ontologies and a fully agentic flow.
 
 ---
 
-Next: [Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md) covers the substrate that Zone 3 introduces. [Process](../process/_index.md) covers the operating model that runs on top of the substrate.
+Next: [Semantic Knowledge Graphs](../methodology.md) covers the substrate that Zone 3 introduces. [Process](../process/_index.md) covers the operating model that runs on top of the substrate.

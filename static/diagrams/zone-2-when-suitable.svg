@@ -1,179 +1,179 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="1000px" height="760px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+<svg viewBox="0 0 1000 760" preserveAspectRatio="xMidYMid meet" width="1000px" height="760px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,500,45)">
-        <text x="-201.532px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:rgb(17,17,17);">When SDD Is Genuinely Suitable</text>
+        <text x="-201.532px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:var(--se-text,#111111);">When SDD Is Genuinely Suitable</text>
     </g>
     <g transform="matrix(1,0,0,1,500,72)">
         <g transform="matrix(15,0,0,15,-325.825195,0)">
         </g>
         <g transform="matrix(15,0,0,15,-321.657715,0)">
         </g>
-        <text x="-360.835px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:rgb(75,85,99);">Four ﬁlters. <tspan x="-282.473px -272.468px " y="0px 0px ">Al</tspan>l &quot;yes&quot; means SDD is the right operating mode. <tspan x="46.67px 56.675px " y="0px 0px ">An</tspan>y &quot;no&quot; pushes toward Semantic Engineering.</text>
+        <text x="-360.835px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">Four ﬁlters. <tspan x="-282.473px -272.468px " y="0px 0px ">Al</tspan>l &quot;yes&quot; means SDD is the right operating mode. <tspan x="46.67px 56.675px " y="0px 0px ">An</tspan>y &quot;no&quot; pushes toward Semantic Engineering.</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
-        <path d="M900,150C900,172.077 882.077,190 860,190L540,190C517.923,190 500,172.077 500,150C500,127.923 517.923,110 540,110L860,110C882.077,110 900,127.923 900,150Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <path d="M900,150C900,172.077 882.077,190 860,190L540,190C517.923,190 500,172.077 500,150C500,127.923 517.923,110 540,110L860,110C882.077,110 900,127.923 900,150Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     </g>
     <g transform="matrix(1,0,0,1,324,120)">
-        <text x="-129.797px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Start: This is real production work</text>
+        <text x="-129.797px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Start: This is real production work</text>
     </g>
     <g transform="matrix(1,0,0,1,324,148)">
         <g transform="matrix(13,0,0,13,-2.523193,0)">
         </g>
         <g transform="matrix(13,0,0,13,1.088623,0)">
         </g>
-        <text x="-125.388px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(17,17,17);">vibe coding does not ﬁt — see Zone 1 page</text>
+        <text x="-125.388px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text,#111111);">vibe coding does not ﬁt — see Zone 1 page</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
         <g transform="matrix(1,-0,-0,1,376,22)">
-            <path d="M329.4,187.2L324,198L318.6,187.2L329.4,187.2Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
-            <path d="M324,168L324,189.36" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            <path d="M329.4,187.2L324,198L318.6,187.2L329.4,187.2Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M324,168L324,189.36" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
-        <path d="M700,225L940,290L700,355L460,290L700,225Z" style="fill:white;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <path d="M700,225L940,290L700,355L460,290L700,225Z" style="fill:var(--se-box-fill,#ffffff);fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     </g>
     <g transform="matrix(1,0,0,1,324,235)">
-        <text x="-62.684px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Q1: Single team,</text>
+        <text x="-62.684px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Q1: Single team,</text>
     </g>
     <g transform="matrix(1,0,0,1,324,260)">
-        <text x="-107.121px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">single product, single repo?</text>
+        <text x="-107.121px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">single product, single repo?</text>
     </g>
     <g transform="matrix(1,0,0,1,324,279)">
-        <text x="-94.298px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">no cross-team integration points,</text>
+        <text x="-94.298px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">no cross-team integration points,</text>
     </g>
     <g transform="matrix(1,0,0,1,324,296)">
-        <text x="-104.048px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">no shared services with other teams</text>
+        <text x="-104.048px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">no shared services with other teams</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
         <g transform="matrix(1,-0,-0,1,376,22)">
-            <path d="M329.4,352.2L324,363L318.6,352.2L329.4,352.2Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
-            <path d="M324,333L324,354.36" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            <path d="M329.4,352.2L324,363L318.6,352.2L329.4,352.2Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M324,333L324,354.36" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,339,350)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">YES</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">YES</text>
     </g>
     <g transform="matrix(-1,0,0,1,1025,-21)">
         <g transform="matrix(-1,0,0,1,1025,21)">
-            <path d="M717.243,327.515L728,333L717.158,338.315L717.243,327.515Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
-            <path d="M565,269L615.083,270.272L670.788,332.551C670.788,332.551 703.373,332.807 719.36,332.932" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            <path d="M717.243,327.515L728,333L717.158,338.315L717.243,327.515Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M565,269L615.083,270.272L670.788,332.551C670.788,332.551 703.373,332.807 719.36,332.932" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,584,264)">
-        <text x="-10.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">NO</text>
+        <text x="-10.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">NO</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
-        <path d="M700,390L940,455L700,520L460,455L700,390Z" style="fill:white;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <path d="M700,390L940,455L700,520L460,455L700,390Z" style="fill:var(--se-box-fill,#ffffff);fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     </g>
     <g transform="matrix(1,0,0,1,324,413)">
-        <text x="-115.168px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Q2: One clear owner per layer<tspan x="110.723px " y="0px ">,</tspan></text>
+        <text x="-115.168px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Q2: One clear owner per layer<tspan x="110.723px " y="0px ">,</tspan></text>
     </g>
     <g transform="matrix(1,0,0,1,324,431)">
-        <text x="-76.453px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">architect hands-on?</text>
+        <text x="-76.453px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">architect hands-on?</text>
     </g>
     <g transform="matrix(1,0,0,1,324,446)">
-        <text x="-89.239px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">PO, architect, designer triangle</text>
+        <text x="-89.239px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">PO, architect, designer triangle</text>
     </g>
     <g transform="matrix(1,0,0,1,324,463)">
-        <text x="-114.175px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">can coordinate verbally between sprints</text>
+        <text x="-114.175px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">can coordinate verbally between sprints</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
         <g transform="matrix(1,-0,-0,1,376,22)">
-            <path d="M329.4,517.2L324,528L318.6,517.2L329.4,517.2Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
-            <path d="M324,498L324,519.36" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            <path d="M329.4,517.2L324,528L318.6,517.2L329.4,517.2Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M324,498L324,519.36" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,339,515)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">YES</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">YES</text>
     </g>
     <g transform="matrix(-1,0,0,1,1025,-21)">
         <g transform="matrix(-1,0,0,1,1025,21)">
-            <path d="M719.2,428.6L730,434L719.2,439.4L719.2,428.6Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
-            <path d="M565,434L721.36,434" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            <path d="M719.2,428.6L730,434L719.2,439.4L719.2,428.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M565,434L721.36,434" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,591,429)">
-        <text x="-10.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">NO</text>
+        <text x="-10.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">NO</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
-        <path d="M700,555L940,620L700,685L460,620L700,555Z" style="fill:white;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <path d="M700,555L940,620L700,685L460,620L700,555Z" style="fill:var(--se-box-fill,#ffffff);fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     </g>
     <g transform="matrix(1,0,0,1,324,579)">
-        <text x="-117.352px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Q3: Codebase small enough to</text>
+        <text x="-117.352px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Q3: Codebase small enough to</text>
     </g>
     <g transform="matrix(1,0,0,1,324,597)">
-        <text x="-68.441px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">hold in one head?</text>
+        <text x="-68.441px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">hold in one head?</text>
     </g>
     <g transform="matrix(1,0,0,1,324,616)">
-        <text x="-90.968px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">&quot;where does X live&quot; answerable</text>
+        <text x="-90.968px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">&quot;where does X live&quot; answerable</text>
     </g>
     <g transform="matrix(1,0,0,1,324,633)">
-        <text x="-77.33px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">without a knowledge graph</text>
+        <text x="-77.33px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">without a knowledge graph</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
         <g transform="matrix(1,-0,-0,1,376,22)">
-            <path d="M329.4,682.2L324,693L318.6,682.2L329.4,682.2Z" style="fill:rgb(233,78,27);fill-rule:nonzero;"/>
-            <path d="M324,663L324,684.36" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:1.8px;"/>
+            <path d="M329.4,682.2L324,693L318.6,682.2L329.4,682.2Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+            <path d="M324,663L324,684.36" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:1.8px;"/>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,339,680)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(233,78,27);">YES</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">YES</text>
     </g>
     <g transform="matrix(-1,0,0,1,1025,-21)">
         <g transform="matrix(-1,0,0,1,1025,21)">
-            <path d="M719.134,507.733L730,513L719.267,518.532L719.134,507.733Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
-            <path d="M565,599L611.525,598.23L681.295,513.599C681.295,513.599 707.368,513.278 721.361,513.106" style="fill:none;fill-rule:nonzero;stroke:rgb(75,85,99);stroke-width:1.8px;"/>
+            <path d="M719.134,507.733L730,513L719.267,518.532L719.134,507.733Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M565,599L611.525,598.23L681.295,513.599C681.295,513.599 707.368,513.278 721.361,513.106" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,587,594)">
-        <text x="-10.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:rgb(75,85,99);">NO</text>
+        <text x="-10.5px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">NO</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
-        <path d="M900,730L900,745C900,750.519 895.519,755 890,755L510,755C504.481,755 500,750.519 500,745L500,730C500,724.481 504.481,720 510,720L890,720C895.519,720 900,724.481 900,730Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <path d="M900,730L900,745C900,750.519 895.519,755 890,755L510,755C504.481,755 500,750.519 500,745L500,730C500,724.481 504.481,720 510,720L890,720C895.519,720 900,724.481 900,730Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     </g>
     <g transform="matrix(1,0,0,1,324,722)">
         <g transform="matrix(18,0,0,18,8.002441,0)">
         </g>
         <g transform="matrix(18,0,0,18,13.996582,0)">
         </g>
-        <text x="-35.002px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:rgb(233,78,27);">SDD ﬁts</text>
+        <text x="-35.002px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">SDD ﬁts</text>
     </g>
     <g transform="matrix(1,0,0,1,711,39)">
-        <path d="M240,270L240,520C240,525.519 235.519,530 230,530L30,530C24.481,530 20,525.519 20,520L20,270C20,264.481 24.481,260 30,260L230,260C235.519,260 240,264.481 240,270Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+        <path d="M240,270L240,520C240,525.519 235.519,530 230,530L30,530C24.481,530 20,525.519 20,520L20,270C20,264.481 24.481,260 30,260L230,260C235.519,260 240,264.481 240,270Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     </g>
     <g transform="matrix(1,0,0,1,841,339)">
-        <text x="-65.505px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:rgb(75,85,99);">Move to Zone 3</text>
+        <text x="-65.505px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">Move to Zone 3</text>
     </g>
     <g transform="matrix(1,0,0,1,841,361)">
-        <text x="-41.265px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:rgb(75,85,99);">SDD + SE</text>
+        <text x="-41.265px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">SDD + SE</text>
     </g>
     <g transform="matrix(1,0,0,1,841,394)">
-        <text x="-77.686px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">at least one of the answers</text>
+        <text x="-77.686px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">at least one of the answers</text>
     </g>
     <g transform="matrix(1,0,0,1,841,411)">
-        <text x="-35.052px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">above is no:</text>
+        <text x="-35.052px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">above is no:</text>
     </g>
     <g transform="matrix(1,0,0,1,841,441)">
-        <text x="-74.753px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">multi-team or multi-repo</text>
+        <text x="-74.753px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">multi-team or multi-repo</text>
     </g>
     <g transform="matrix(1,0,0,1,841,464)">
-        <text x="-86.703px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">scattered architect/designer</text>
+        <text x="-86.703px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">scattered architect/designer</text>
     </g>
     <g transform="matrix(1,0,0,1,841,487)">
         <g transform="matrix(13,0,0,13,-19.522217,0)">
         </g>
         <g transform="matrix(13,0,0,13,-15.193115,0)">
         </g>
-        <text x="-58.516px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:rgb(17,17,17);">brownﬁeld at scale</text>
+        <text x="-58.516px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">brownﬁeld at scale</text>
     </g>
     <g transform="matrix(1,0,0,1,841,520)">
-        <text x="-69.012px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">spec alone cannot carry</text>
+        <text x="-69.012px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">spec alone cannot carry</text>
     </g>
     <g transform="matrix(1,0,0,1,841,537)">
-        <text x="-53.473px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">the structural load.</text>
+        <text x="-53.473px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">the structural load.</text>
     </g>
     <g transform="matrix(1,0,0,1,841,554)">
-        <text x="-54.212px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:rgb(75,85,99);">A<tspan x="-46.252px -42.64px " y="0px 0px "> g</tspan>raph is needed.</text>
+        <text x="-54.212px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="-46.252px -42.64px " y="0px 0px "> g</tspan>raph is needed.</text>
     </g>
 </svg>

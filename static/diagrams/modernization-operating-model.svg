@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1400 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,700,36)">
+        <text x="-179.332px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">Modernization Operating Model</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700,58)">
+        <text x="-308.566px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Five sequential stages · two iteration loops · humans validate at the SME annotation and the Expert Review</text>
+    </g>
+    <g transform="matrix(1,0,0,1,40,100)">
+        <path d="M0,0L220,0L250,40L220,80L0,80L30,40L0,0Z" style="fill:var(--se-accent-fill,#FDE8DD);fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,125,32)">
+            <text x="-33.465px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Discovery</text>
+        </g>
+        <g transform="matrix(1,0,0,1,125,50)">
+            <text x="-35.537px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">&amp; <tspan x="-22.049px -11.939px " y="0px 0px ">An</tspan>alysis</text>
+        </g>
+        <g transform="matrix(1,0,0,1,124.945,100)">
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 1</tspan></text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,308,100)">
+        <path d="M0,0L220,0L250,40L220,80L0,80L30,40L0,0Z" style="fill:var(--se-accent-fill,#FDE8DD);fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,125,32)">
+            <text x="-69.614px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Ontology Generation</text>
+        </g>
+        <g transform="matrix(1,0,0,1,125,50)">
+            <text x="-45.507px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">&amp; Enrichment</text>
+        </g>
+        <g transform="matrix(1,0,0,1,124.945,100)">
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 2</tspan></text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,576,100)">
+        <path d="M0,0L220,0L250,40L220,80L0,80L30,40L0,0Z" style="fill:var(--se-accent-fill,#FDE8DD);fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:3px;"/>
+        <g transform="matrix(1,0,0,1,125,32)">
+            <text x="-48.487px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">MVP<tspan x="-18.396px -14.506px " y="0px 0px "> M</tspan>igration</text>
+        </g>
+        <g transform="matrix(1,0,0,1,125,50)">
+            <g transform="matrix(11,0,0,11,-4.581543,0)">
+            </g>
+            <g transform="matrix(11,0,0,11,-1.525391,0)">
+            </g>
+            <text x="-52.288px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text,#111111);">one identiﬁed module</text>
+        </g>
+        <g transform="matrix(1,0,0,1,124.945,100)">
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 3</tspan></text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,844,100)">
+        <path d="M0,0L220,0L250,40L220,80L0,80L30,40L0,0Z" style="fill:var(--se-accent-fill,#FDE8DD);fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:3px;"/>
+        <g transform="matrix(1,0,0,1,125,32)">
+            <text x="-56.01px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Scaled Migration</text>
+        </g>
+        <g transform="matrix(1,0,0,1,125,50)">
+            <text x="-46.468px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text,#111111);">remaining modules</text>
+        </g>
+        <g transform="matrix(1,0,0,1,124.945,100)">
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 4</tspan></text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,1112,100)">
+        <path d="M0,0L220,0L250,40L220,80L0,80L30,40L0,0Z" style="fill:var(--se-accent-fill,#FDE8DD);fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <g transform="matrix(1,0,0,1,125,28)">
+            <text x="-57.046px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">UA<tspan x="-37.857px -30.857px -26.968px " y="0px 0px 0px ">T, </tspan>Deployment</text>
+        </g>
+        <g transform="matrix(1,0,0,1,125,46)">
+            <text x="-49.4px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">&amp; Maintenance</text>
+        </g>
+        <g transform="matrix(1,0,0,1,124.945,100)">
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 5</tspan></text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M1364,254L1364,446C1364,453.727 1357.727,460 1350,460L590,460C582.273,460 576,453.727 576,446L576,254C576,246.273 582.273,240 590,240L1350,240C1357.727,240 1364,246.273 1364,254Z" style="fill:none;stroke:var(--se-accent,#E94E1B);stroke-width:1.8px;stroke-dasharray:6,4;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,826,273)">
+        <text x="-186.167px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text,#111111);">T<tspan x="-178.11px -166.443px " y="0px 0px ">wo</tspan> iteration loops in parallel across Stages 3 and 4</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M970,298L970,432C970,436.415 966.415,440 962,440L608,440C603.585,440 600,436.415 600,432L600,298C600,293.585 603.585,290 608,290L962,290C966.415,290 970,293.585 970,298Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,641,315)">
+        <text x="-97.002px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Migration-V<tspan x="-31.664px -24.99px " y="0px 0px ">al</tspan>idation iteration loop</text>
+    </g>
+    <g transform="matrix(1,0,0,1,641,331)">
+        <text x="-133.297px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">automated · per migration candidate · minutes to hours</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M770,352L770,380C770,383.311 767.311,386 764,386L626,386C622.689,386 620,383.311 620,380L620,352C620,348.689 622.689,346 626,346L764,346C767.311,346 770,348.689 770,352Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,551,373)">
+        <text x="-44.358px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text,#111111);">Migration agents</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M950,352L950,380C950,383.311 947.311,386 944,386L806,386C802.689,386 800,383.311 800,380L800,352C800,348.689 802.689,346 806,346L944,346C947.311,346 950,348.689 950,352Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,731,373)">
+        <text x="-55.699px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text,#111111);">Four validation gates</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <g transform="matrix(1,-0,-0,1,144,-3)">
+            <path d="M644,363L656,369L644,375L644,363Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+            <path d="M626,369L646.4,369" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <g transform="matrix(1,-0,-0,1,144,-3)">
+            <path d="M545,401L551,389L557,401L545,401Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+            <path d="M731,389L731,413L551,413L551,398.6" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,641,433)">
+        <text x="-90.498px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">re-generation until all four gates pass</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M1340,298L1340,432C1340,436.415 1336.415,440 1332,440L998,440C993.585,440 990,436.415 990,432L990,298C990,293.585 993.585,290 998,290L1332,290C1336.415,290 1340,293.585 1340,298Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1021,315)">
+        <text x="-47.323px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:var(--se-text,#111111);">SME tuning loop</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1021,331)">
+        <text x="-106.992px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">human-driven · per module · typically weeks</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M1160,352L1160,384C1160,387.311 1157.311,390 1154,390L1016,390C1012.689,390 1010,387.311 1010,384L1010,352C1010,348.689 1012.689,346 1016,346L1154,346C1157.311,346 1160,348.689 1160,352Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text,#111111);stroke-width:1.5px;stroke-dasharray:3,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,941,371)">
+        <text x="-39.421px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text,#111111);">Product Owner</text>
+    </g>
+    <g transform="matrix(1,0,0,1,941,385)">
+        <text x="-25.835px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">+ <tspan x="-16.957px -9.62px " y="0px 0px ">Ar</tspan>chitect</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M1330,352L1330,384C1330,387.311 1327.311,390 1324,390L1186,390C1182.689,390 1180,387.311 1180,384L1180,352C1180,348.689 1182.689,346 1186,346L1324,346C1327.311,346 1330,348.689 1330,352Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1111,371)">
+        <text x="-41.689px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text,#111111);">Agent prompt &amp;</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1111,385)">
+        <g transform="matrix(11,0,0,11,-30.271484,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-27.215332,0)">
+        </g>
+        <text x="-48.007px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">conﬁguration tuning</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <g transform="matrix(1,-0,-0,1,144,-3)">
+            <path d="M1026.4,366.2L1036,371L1026.4,375.8L1026.4,366.2Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M1016,371L1028.32,371" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;stroke-dasharray:5,4;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-733,171)">
+        <g transform="matrix(1,-0,-0,1,733,-171)">
+            <path d="M481.906,467.648L492,464L488.861,474.264L481.906,467.648Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M414,546C414,546 469.159,488.013 486.707,469.565" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;stroke-dasharray:5,4;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <g transform="matrix(1,-0,-0,1,144,-3)">
+            <path d="M936.2,402.6L941,393L945.8,402.6L936.2,402.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M1111,393L1111,415L941,415L941,400.68" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;stroke-dasharray:5,4;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,1021,433)">
+        <g transform="matrix(11,0,0,11,53.203369,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,56.259521,0)">
+        </g>
+        <text x="-117.399px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">feedback drives engagement-speciﬁc calibration</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,28)">
+        <path d="M560,300L560,380C560,385.519 555.519,390 550,390L330,390C324.481,390 320,385.519 320,380L320,300C320,294.481 324.481,290 330,290L550,290C555.519,290 560,294.481 560,300Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text,#111111);stroke-width:1.5px;stroke-dasharray:3,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,296,337)">
+        <text x="-42.265px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text,#111111);">SME <tspan x="-15.775px -7.831px " y="0px 0px ">An</tspan>notation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,296,353)">
+        <text x="-53.81px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">by the four custodians</text>
+    </g>
+    <g transform="matrix(1,0,0,1,296,369)">
+        <text x="-53.818px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">before Stage 3 begins</text>
+    </g>
+    <g transform="matrix(1,0,0,1,296,389)">
+        <text x="-80.701px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">Retain · Modify · Replace · Retire</text>
+    </g>
+    <g transform="matrix(1,0,0,1,295.945,409)">
+        <text x="-78.982px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">H<tspan x="-70.928px -62.874px -53.601px -45.547px -37.494px -34.327px -27.692px -19.638px -12.808px -9.642px -1.588px 5.654px 12.484px 15.65px 24.316px 32.37px 35.536px 42.983px 51.649px 54.815px 62.869px 69.698px 72.864px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMAN VALIDATION POINT 1</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M560,550L560,630C560,635.519 555.519,640 550,640L330,640C324.481,640 320,635.519 320,630L320,550C320,544.481 324.481,540 330,540L550,540C555.519,540 560,544.481 560,550Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text,#111111);stroke-width:1.5px;stroke-dasharray:3,3;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,296,569)">
+        <text x="-37.6px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text,#111111);">Expert Review</text>
+    </g>
+    <g transform="matrix(1,0,0,1,296,587)">
+        <text x="-64.818px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">at each gate-pass iteration</text>
+    </g>
+    <g transform="matrix(1,0,0,1,296,603)">
+        <text x="-65.734px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">at each module completion</text>
+    </g>
+    <g transform="matrix(1,0,0,1,296,619)">
+        <text x="-30.881px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">at hand-over</text>
+    </g>
+    <g transform="matrix(1,0,0,1,295.945,637)">
+        <text x="-78.982px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">H<tspan x="-70.928px -62.874px -53.601px -45.547px -37.494px -34.327px -27.692px -19.638px -12.808px -9.642px -1.588px 5.654px 12.484px 15.65px 24.316px 32.37px 35.536px 42.983px 51.649px 54.815px 62.869px 69.698px 72.864px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMAN VALIDATION POINT 2</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <path d="M1340,550L1340,630C1340,635.519 1335.519,640 1330,640L710,640C704.481,640 700,635.519 700,630L700,550C700,544.481 704.481,540 710,540L1330,540C1335.519,540 1340,544.481 1340,550Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,876,569)">
+        <text x="-137.335px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Hand-over to continuous SDLC operating model</text>
+    </g>
+    <g transform="matrix(1,0,0,1,876,589)">
+        <g transform="matrix(11,0,0,11,-41.416504,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-38.360352,0)">
+        </g>
+        <text x="-238.632px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">Source-state ontology + annotated speciﬁcation seed the four-layer ontology on the modern stack.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,876,607)">
+        <text x="-149.201px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">The same four custodians continue under the sprint cadence.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,876,627)">
+        <text x="-191.697px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">The engagement transitions from bounded modernization to continuous SDLC.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <g transform="matrix(1,-0,-0,1,144,-3)">
+            <path d="M445.2,362.6L456,368L445.2,373.4L445.2,362.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M417,368L447.36,368" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-144,3)">
+        <g transform="matrix(1,-0,-0,1,144,-3)">
+            <path d="M881.4,532.2L876,543L870.6,532.2L881.4,532.2Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M1023,443L1023,503L876,503L876,534.36" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+        </g>
+    </g>
+</svg>

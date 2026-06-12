@@ -1,142 +1,109 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="1400" height="700" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
-  <defs>
-    <marker id="phase-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="9" markerHeight="9" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" style="fill:#4b5563"/>
-    </marker>
-  </defs>
-  <rect width="1400" height="700" style="fill:#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 620" width="1400" height="620" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif" class="se-svg">
+  <style>
+.phase { fill:var(--se-accent-fill,#FDE8DD); stroke:var(--se-accent,#E94E1B); stroke-width:2; }
+    .phaseLast { fill:var(--se-accent-fill,#FDE8DD); stroke:var(--se-accent,#E94E1B); stroke-width:2; }
+    .detail { fill:var(--se-box-fill,#ffffff); stroke:var(--se-text-secondary,#4b5563); stroke-width:1.2; }
+    .h1 { font-size:22px; font-weight:700; fill:var(--se-text,#111111); }
+    .sub { font-size:12px; fill:var(--se-text-secondary,#4b5563); }
+    .phaseTitle { font-size:15px; font-weight:700; fill:var(--se-text,#111111); }
+    .phaseSub { font-size:11px; fill:var(--se-text,#111111); }
+    .bullet { font-size:11px; fill:var(--se-text,#111111); }
+    .ileg { font-size:11px; font-weight:700; fill:var(--se-accent,#E94E1B); }
+  </style>
+<text x="700" y="38" text-anchor="middle" class="h1">ASIMOV Five-Phase Delivery</text>
+  <text x="700" y="60" text-anchor="middle" class="sub">Discovery and analysis · graph generation · MVP migration · scaled migration · UAT and deployment</text>
 
-  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">ASIMOV Four-Phase Delivery</text>
-  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">Expert work brackets the agentic execution. Humans set up the pipeline, validate its output, and own the cutover.</text>
-
-  <!-- Four phase cards -->
-  <g transform="translate(40,118)">
+  <!-- 5 phase chevrons -->
+  <g transform="translate(40,100)">
     <!-- Phase 1 -->
-    <g>
-      <rect x="0" y="0" width="320" height="380" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
-      <rect x="0" y="0" width="320" height="60" rx="14" ry="14" style="fill:#4b5563"/>
-      <rect x="0" y="46" width="320" height="14" style="fill:#4b5563"/>
-      <text x="22" y="38" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#ffffff;letter-spacing:2px">PHASE 01</text>
-      <text x="22" y="92" style="font:700 19px Segoe UI,system-ui,sans-serif;fill:#111111">Analysis &amp; Planning</text>
-
-      <text x="22" y="128" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">WHAT HAPPENS</text>
-      <text x="22" y="148" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Expert analysis of the legacy</text>
-      <text x="22" y="166" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">estate, scope definition,</text>
-      <text x="22" y="184" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">ASIMOV agent customization</text>
-      <text x="22" y="202" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">for the source language and</text>
-      <text x="22" y="220" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">target stack.</text>
-
-      <text x="22" y="262" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">HUMAN ROLE</text>
-      <g transform="translate(22,275)">
-        <rect x="0" y="0" width="276" height="30" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-        <text x="138" y="20" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Expert Analysis</text>
-      </g>
-      <g transform="translate(22,313)">
-        <rect x="0" y="0" width="276" height="30" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-        <text x="138" y="20" text-anchor="middle" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#111111">Agent Customization</text>
-      </g>
-    </g>
-
-    <!-- Arrow -->
-    <line x1="324" y1="240" x2="354" y2="240" style="stroke:#4b5563;stroke-width:2.5" marker-end="url(#phase-arrow)"/>
-
-    <!-- Phase 2 -->
-    <g transform="translate(360,0)">
-      <rect x="0" y="0" width="320" height="380" rx="14" ry="14" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2.5"/>
-      <rect x="0" y="0" width="320" height="60" rx="14" ry="14" style="fill:#E94E1B"/>
-      <rect x="0" y="46" width="320" height="14" style="fill:#E94E1B"/>
-      <text x="22" y="38" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#ffffff;letter-spacing:2px">PHASE 02</text>
-      <text x="22" y="92" style="font:700 19px Segoe UI,system-ui,sans-serif;fill:#111111">Design &amp; Deployment</text>
-
-      <text x="22" y="128" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">WHAT HAPPENS</text>
-      <text x="22" y="148" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">The full ASIMOV pipeline runs</text>
-      <text x="22" y="166" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">end to end: Ingestion →</text>
-      <text x="22" y="184" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Transformation → Generation.</text>
-      <text x="22" y="202" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Source code, test cases,</text>
-      <text x="22" y="220" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">supporting artifacts produced.</text>
-
-      <text x="22" y="262" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">HUMAN ROLE</text>
-      <g transform="translate(22,275)">
-        <rect x="0" y="0" width="276" height="68" rx="6" ry="6" style="fill:#E94E1B"/>
-        <text x="138" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#ffffff">Agentic Execution</text>
-        <text x="138" y="50" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">human OUT OF the loop</text>
-      </g>
-    </g>
-
-    <line x1="684" y1="240" x2="714" y2="240" style="stroke:#4b5563;stroke-width:2.5" marker-end="url(#phase-arrow)"/>
-
-    <!-- Phase 3 -->
-    <g transform="translate(720,0)">
-      <rect x="0" y="0" width="320" height="380" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
-      <rect x="0" y="0" width="320" height="60" rx="14" ry="14" style="fill:#4b5563"/>
-      <rect x="0" y="46" width="320" height="14" style="fill:#4b5563"/>
-      <text x="22" y="38" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#ffffff;letter-spacing:2px">PHASE 03</text>
-      <text x="22" y="92" style="font:700 19px Segoe UI,system-ui,sans-serif;fill:#111111">Testing &amp; Validation</text>
-
-      <text x="22" y="128" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">WHAT HAPPENS</text>
-      <text x="22" y="148" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">Test Generation Agent</text>
-      <text x="22" y="166" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">produces the test suite from</text>
-      <text x="22" y="184" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">the Source Graph. Behavior</text>
-      <text x="22" y="202" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">equivalence with the legacy</text>
-      <text x="22" y="220" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">verified end to end.</text>
-
-      <text x="22" y="262" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">HUMAN ROLE</text>
-      <g transform="translate(22,275)">
-        <rect x="0" y="0" width="276" height="68" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-        <text x="138" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Expert Validation</text>
-        <text x="138" y="50" text-anchor="middle" style="font:italic 12px Segoe UI,system-ui,sans-serif;fill:#4b5563">of the parity report and coverage</text>
-      </g>
-    </g>
-
-    <line x1="1044" y1="240" x2="1074" y2="240" style="stroke:#4b5563;stroke-width:2.5" marker-end="url(#phase-arrow)"/>
-
-    <!-- Phase 4 -->
-    <g transform="translate(1080,0)">
-      <rect x="0" y="0" width="240" height="380" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
-      <rect x="0" y="0" width="240" height="60" rx="14" ry="14" style="fill:#4b5563"/>
-      <rect x="0" y="46" width="240" height="14" style="fill:#4b5563"/>
-      <text x="22" y="38" style="font:700 16px Segoe UI,system-ui,sans-serif;fill:#ffffff;letter-spacing:2px">PHASE 04</text>
-      <text x="22" y="92" style="font:700 19px Segoe UI,system-ui,sans-serif;fill:#111111">Deployment</text>
-
-      <text x="22" y="128" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">WHAT HAPPENS</text>
-      <text x="22" y="148" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">CI/CD automation,</text>
-      <text x="22" y="166" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">controlled rollout in</text>
-      <text x="22" y="184" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">waves, customer</text>
-      <text x="22" y="202" style="font:13px Segoe UI,system-ui,sans-serif;fill:#4b5563">review and sign-off.</text>
-
-      <text x="22" y="262" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">HUMAN ROLE</text>
-      <g transform="translate(22,275)">
-        <rect x="0" y="0" width="196" height="68" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-        <text x="98" y="26" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">Customer Review</text>
-        <text x="98" y="46" text-anchor="middle" style="font:700 14px Segoe UI,system-ui,sans-serif;fill:#111111">&amp; Deployment</text>
-      </g>
-    </g>
+    <polygon class="phase" points="0,0 220,0 250,40 220,80 0,80 30,40"/>
+    <text x="125" y="35" text-anchor="middle" class="phaseTitle">Discovery</text>
+    <text x="125" y="56" text-anchor="middle" class="phaseTitle">&amp; Analysis</text>
+  </g>
+  <g transform="translate(308,100)">
+    <polygon class="phase" points="0,0 220,0 250,40 220,80 0,80 30,40"/>
+    <text x="125" y="32" text-anchor="middle" class="phaseTitle">Code Graph</text>
+    <text x="125" y="50" text-anchor="middle" class="phaseTitle">Generation</text>
+    <text x="125" y="68" text-anchor="middle" class="phaseTitle">&amp; Enrichment</text>
+  </g>
+  <g transform="translate(576,100)">
+    <polygon class="phase" points="0,0 220,0 250,40 220,80 0,80 30,40"/>
+    <text x="125" y="32" text-anchor="middle" class="phaseTitle">MVP · One Module</text>
+    <text x="125" y="52" text-anchor="middle" class="phaseSub">Iterative Migration</text>
+  </g>
+  <g transform="translate(844,100)">
+    <polygon class="phase" points="0,0 220,0 250,40 220,80 0,80 30,40"/>
+    <text x="125" y="32" text-anchor="middle" class="phaseTitle">Scaled Migration</text>
+    <text x="125" y="52" text-anchor="middle" class="phaseSub">Iterative Migration</text>
+  </g>
+  <g transform="translate(1112,100)">
+    <polygon class="phase" points="0,0 220,0 250,40 220,80 0,80 30,40"/>
+    <text x="125" y="35" text-anchor="middle" class="phaseTitle">UAT &amp;</text>
+    <text x="125" y="56" text-anchor="middle" class="phaseTitle">Deployment</text>
   </g>
 
-  <!-- Bottom band: human role across phases -->
-  <g transform="translate(40,520)">
-    <rect x="0" y="0" width="1320" height="140" rx="14" ry="14" style="fill:#ffffff;stroke:#4b5563;stroke-width:2"/>
-    <text x="20" y="32" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#4b5563;letter-spacing:2px">WHEN THE HUMAN IS IN AND OUT</text>
+  <!-- Detail panels -->
+  <!-- Phase 1 details -->
+  <rect class="detail" x="40" y="220" width="250" height="340" rx="8"/>
+  <text x="56" y="245" class="bullet">• AI-driven deep analysis of</text>
+  <text x="56" y="262" class="bullet">  source code &amp; supporting</text>
+  <text x="56" y="279" class="bullet">  artifacts</text>
+  <text x="56" y="306" class="bullet">• Comprehensive Analysis</text>
+  <text x="56" y="323" class="bullet">  Report &amp; migration</text>
+  <text x="56" y="340" class="bullet">  recommendations</text>
+  <text x="56" y="367" class="bullet">• Detailed migration plan</text>
+  <text x="56" y="384" class="bullet">  with target architecture</text>
+  <text x="56" y="401" class="bullet">  and designs</text>
+  <text x="56" y="428" class="bullet">• MVP module identification</text>
 
-    <!-- Track -->
-    <line x1="40" y1="98" x2="1280" y2="98" style="stroke:#9ca3af;stroke-width:2"/>
+  <!-- Phase 2 details -->
+  <rect class="detail" x="308" y="220" width="250" height="340" rx="8"/>
+  <text x="324" y="245" class="bullet">• Knowledge graph creation</text>
+  <text x="324" y="262" class="bullet">  with automated ingestion</text>
+  <text x="324" y="279" class="bullet">  of source code, target</text>
+  <text x="324" y="296" class="bullet">  architecture, and designs</text>
+  <text x="324" y="313" class="bullet">  into graph database</text>
+  <text x="324" y="340" class="bullet">• AI-driven enrichment of</text>
+  <text x="324" y="357" class="bullet">  the knowledge graph</text>
 
-    <!-- Phase markers on track -->
-    <g transform="translate(168,98)">
-      <circle cx="0" cy="0" r="14" style="fill:#4b5563"/>
-      <text x="0" y="36" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#111111">Human IN</text>
-    </g>
-    <g transform="translate(528,98)">
-      <circle cx="0" cy="0" r="14" style="fill:#E94E1B"/>
-      <text x="0" y="36" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#E94E1B">Human OUT</text>
-    </g>
-    <g transform="translate(888,98)">
-      <circle cx="0" cy="0" r="14" style="fill:#4b5563"/>
-      <text x="0" y="36" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#111111">Human IN</text>
-    </g>
-    <g transform="translate(1188,98)">
-      <circle cx="0" cy="0" r="14" style="fill:#4b5563"/>
-      <text x="0" y="36" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#111111">Human IN</text>
-    </g>
-  </g>
+  <!-- Phase 3 details -->
+  <rect class="detail" x="576" y="220" width="250" height="340" rx="8"/>
+  <text x="592" y="245" class="bullet">• Customization &amp;</text>
+  <text x="592" y="262" class="bullet">  configuration of AI agents</text>
+  <text x="592" y="279" class="bullet">  (frontend, backend, services)</text>
+  <text x="592" y="306" class="bullet">• Agent-driven migration of</text>
+  <text x="592" y="323" class="bullet">  MVP module code</text>
+  <text x="592" y="350" class="bullet">• Technical &amp; Functional</text>
+  <text x="592" y="367" class="bullet">  SME feedback</text>
+  <text x="592" y="394" class="bullet">• Tune AI agents for</text>
+  <text x="592" y="411" class="bullet">  iterative improvement</text>
+  <text x="592" y="428" class="bullet">  based on feedback</text>
+  <text x="592" y="455" class="ileg">↻ Iterates until gates pass</text>
+
+  <!-- Phase 4 details -->
+  <rect class="detail" x="844" y="220" width="250" height="340" rx="8"/>
+  <text x="860" y="245" class="bullet">• Agent-driven migration of</text>
+  <text x="860" y="262" class="bullet">  remaining modules</text>
+  <text x="860" y="289" class="bullet">• Deployment and testing</text>
+  <text x="860" y="306" class="bullet">  of migrated app code</text>
+  <text x="860" y="333" class="bullet">• Technical &amp; Functional</text>
+  <text x="860" y="350" class="bullet">  SME feedback</text>
+  <text x="860" y="377" class="bullet">• Tune AI agents for</text>
+  <text x="860" y="394" class="bullet">  iterative improvement</text>
+  <text x="860" y="411" class="bullet">  across wider estate</text>
+  <text x="860" y="438" class="ileg">↻ Iterates per module</text>
+
+  <!-- Phase 5 details -->
+  <rect class="detail" x="1112" y="220" width="250" height="340" rx="8"/>
+  <text x="1128" y="245" class="bullet">• Deployment and UAT</text>
+  <text x="1128" y="262" class="bullet">  testing of migrated app</text>
+  <text x="1128" y="289" class="bullet">• Technical &amp; Functional</text>
+  <text x="1128" y="306" class="bullet">  SME feedback</text>
+  <text x="1128" y="333" class="bullet">• UAT fixes based on</text>
+  <text x="1128" y="350" class="bullet">  feedback</text>
+  <text x="1128" y="377" class="bullet">• Generation of technical</text>
+  <text x="1128" y="394" class="bullet">  documentation for the</text>
+  <text x="1128" y="411" class="bullet">  migrated application code</text>
+
+  <text x="700" y="595" text-anchor="middle" class="sub" font-style="italic">SME tuning loop runs throughout MVP and Scaled phases. AVF gates enforce quality continuously, not at the end.</text>
 </svg>

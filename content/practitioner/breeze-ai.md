@@ -26,7 +26,7 @@ Breeze.AI is what Breeze became once AI could do the maintenance work humans had
 
 ![Breeze.AI architecture overview: the four-layer knowledge graph at the center, six core agents on the inner ring (Impact Analysis, PR Validation, KG Sync, BDD Generation, Coding, Test Generation), the integration surface on the outer ring (version control, CI/CD, ticket systems, design tools, AI coding assistants, test runners, observability)](/diagrams/breeze-architecture-overview.svg)
 
-Breeze.AI is the production implementation of every methodology element described in [Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md), [The Agents](../the-agents.md), and [The Team](../process/team.md).
+Breeze.AI is the production implementation of every methodology element described in [Semantic Knowledge Graphs](../sdlc/methodology.md), [The Agents](../sdlc/agents.md), and [The Team](../sdlc/process/team.md).
 
 | Methodology element | Breeze.AI implementation |
 |---|---|
@@ -154,8 +154,8 @@ Breeze.AI is licensed as part of the Accion Labs engagement.
 | Phase 2 (SE Foundation) | Full platform deployment for the first workstream |
 | Phase 3 (SE at Scale) | Full platform deployment across the portfolio |
 
-The engagement frame evolves over the lifecycle. See [Engagement Model Evolution](../process/team.md#engagement-model-evolution). Early-stage engagements typically use an effort-based engagement with platform access included. Mature engagements move to a deliverable-based engagement where the platform plus the enablement hours plus the graph-health SLA are framed as an integrated outcome.
+The engagement frame evolves over the lifecycle. See [Engagement Model Evolution](../sdlc/process/team.md#engagement-model-evolution). Early-stage engagements typically use an effort-based engagement with platform access included. Mature engagements move to a deliverable-based engagement where the platform plus the enablement hours plus the graph-health SLA are framed as an integrated outcome.
 
 ---
 
-[ASIMOV](asimov.md) is the peer platform that applies Semantic Engineering principles to AI-led legacy modernization. [Engagement Model](_index.md#engagement-model) describes the Advise / Launch / Scale / Optimize phases under which Breeze.AI is deployed.
+[ASIMOV](asimov.md) is the peer agentic platform that applies Semantic Engineering principles to legacy modernization. [Engagement Model](_index.md#engagement-model) describes the Advise / Launch / Scale / Optimize phases under which Breeze.AI is deployed.

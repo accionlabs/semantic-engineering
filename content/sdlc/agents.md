@@ -1,7 +1,7 @@
 ---
 title: "The Agents"
 description: "The agent fleet that operates on the knowledge graph. Topology, the Impact Analysis Agent, validation and sync agents, and the progressive autonomy discipline."
-weight: 60
+weight: 40
 date: 2026-06-04
 lastmod: 2026-06-05
 draft: false
@@ -13,7 +13,7 @@ audience:
   - chief-information-security-officer
 ---
 
-This section walks the fleet of agents that operate on the four-layer graph: how they orchestrate, what each one does, and how they earn the autonomy they exercise.
+Semantic Engineering operationalizes two agent fleets, one per use case. This page covers the continuous SDLC fleet in depth. The modernization fleet (which runs as a bounded pipeline across the five modernization stages) is covered on [The Modernization Agent Fleet](../modernization/agents.md). The two fleets share the same underlying principles ("Why the Agents Work" below applies to both); they differ in topology because the work is different.
 
 ## Why the Agents Work
 
@@ -26,57 +26,29 @@ The agents in this section share four properties that make them reliable enough 
 | Variance bounded to implementation detail | Two runs of the same agent against the same spec produce different code in the small details. The structural elements (which service, which components, which tables) are constrained explicitly by the impact report. The remaining variance is acceptable. |
 | Named human owner | Every agent has a named owner. The owner reviews outputs and approves writes to systems of record. No agent writes directly to a governed ontology node without human approval. |
 
+These four properties apply to both fleets. They are what make agentic execution reliable enough for production engineering whether the work is continuous SDLC or bounded modernization.
+
 ## The Aspirational Endpoint
 
 We want to stop writing code entirely and write only agents. The team operates the agent fleet, the agents operate on the knowledge graph, and the implementation step becomes the agent's job rather than the engineer's. We are not there yet everywhere. We are implementing it on selected workstreams where the team has the bandwidth to redesign the operating model alongside.
 
-At that operating mode (Zone 4 in [Zones of AI-Assisted SDLC](zones-of-ai-assisted-sdlc/_index.md#zone-4-se-at-scale)), the Engineering Team's role evolves. They continue to steward the Code Ontology, and they also become the custodians of the agent fleet itself: overseeing the agents from Impact Analysis through PR Validation, approving Promotion Agreements that move agents to higher autonomy levels, and reviewing the audit trail. The bottom custodial layer in the Zone 4 diagram is this evolved role.
+At that operating mode (Zone 4 in [Zones of AI-Assisted SDLC](zones/_index.md#zone-4-se-at-scale)), the Engineering Team's role evolves. They continue to steward the Code Ontology, and they also become the custodians of the agent fleet itself: overseeing the agents from Impact Analysis through PR Validation, approving Promotion Agreements that move agents to higher autonomy levels, and reviewing the audit trail. The bottom custodial layer in the Zone 4 diagram is this evolved role.
 
 The methodology is rolled out faster than the operating model. The operating model is what unlocks the aspirational endpoint. [The Team](process/team.md) covers that side.
 
 > **How Accion Labs operationalizes the agent fleet**
 >
-> The [Breeze.AI platform](practitioner/breeze-ai.md) implements the agent fleet described in this section. Each agent in production has a named human owner from Accion Labs's engagement team.
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the agent fleet described in this section. Each agent in production has a named human owner from Accion Labs's engagement team.
 
-## Agent Fleet Topology
+## The SDLC Agent Fleet
 
-The agent fleet is the runtime layer that turns the knowledge graph into a working system. A small number of specialized agents, each with a defined responsibility and a named human owner, orchestrated through a two-level pattern. The fleet is small by design. Six to eight agents cover the operating model. Adding more agents adds operational surface area without adding leverage. We resist agent proliferation.
+The SDLC agent fleet is the runtime layer that turns the four-layer knowledge graph into a working system in the continuous SDLC instantiation. A small number of specialized agents, each with a defined responsibility and a named human owner, orchestrated through a two-level pattern. The fleet is small by design. Six to eight agents cover the operating model. Adding more agents adds operational surface area without adding leverage. We resist agent proliferation.
+
+### Agent Fleet Topology
 
 ### The Fleet at a Glance
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-graph TD
-    subgraph "Orchestration Layer"
-        O[Top-Level Orchestrator]
-        S[Sub-Orchestrators per workstream]
-    end
-
-    subgraph "Read Agents (consume the graph)"
-        IA[Impact Analysis Agent]
-        BDD[BDD Generation Agent]
-    end
-
-    subgraph "Write Agents (update the graph)"
-        SYNC[KG Sync Agent]
-        EXT[Extraction Agents]
-    end
-
-    subgraph "Gate Agents (validate at boundaries)"
-        PR[PR Validation Agent]
-    end
-
-    O --> S
-    S --> IA
-    S --> BDD
-    S --> SYNC
-    S --> EXT
-    S --> PR
-
-    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
-    class O accent
-    classDef default rx:10,ry:10;
-```
+![The SDLC agent fleet: orchestration, read agents, write agents, and gate agents](/diagrams/sdlc-agent-fleet.svg)
 
 | Agent class | Purpose | Reads from | Writes to |
 |---|---|---|---|
@@ -116,25 +88,7 @@ The owner reviews the agent's outputs, approves writes to systems of record, and
 
 A new user story arrives.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-sequenceDiagram
-    participant PO as Product Owner
-    participant TL as Top Orchestrator
-    participant SL as Workstream Sub-Orchestrator
-    participant IA as Impact Analysis Agent
-    participant KG as Knowledge Graph
-    participant FDE as Forward-Deployed Engineer
-
-    PO->>TL: Submit user story (spec)
-    TL->>SL: Route to workstream sub-orchestrator
-    SL->>IA: Dispatch Impact Analysis
-    IA->>KG: Traverse four-layer graph
-    KG-->>IA: Return cross-layer impact
-    IA->>SL: Impact report
-    SL->>FDE: Forward to spec sprint for review
-    FDE->>PO: Refined spec plus impact report
-```
+![Sequence diagram of how a user-story request flows through the agent fleet, traverses the graph, and returns to the human](/diagrams/sdlc-agent-request-flow.svg)
 
 The same pattern applies to other requests. The orchestrator decides which agents to dispatch. The agents traverse the graph. The owners review and approve. The team consumes the output.
 
@@ -201,30 +155,7 @@ When the implementation is merged to the master branch, the same agent reruns th
 
 The knowledge graph is updated continuously as part of the merge process, so the next analysis runs against current reality.
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-flowchart LR
-    S[New Specification<br/>User Story / Change Request]
-    KG[(Knowledge Graph<br/>4 Layer Ontology)]
-    PRE[Pre Implementation<br/>Impact Report]
-    DEV[Development<br/>Human or Agent]
-    PR[Pull Request<br/>Merged to Master]
-    POST[Post Implementation<br/>Verification Report]
-    SYNC[KG Sync<br/>Auto Update]
-
-    S --> KG
-    KG --> PRE
-    PRE --> DEV
-    DEV --> PR
-    PR --> POST
-    KG --> POST
-    PR --> SYNC
-    SYNC --> KG
-
-    classDef accent fill:#FDE8DD,stroke:#E94E1B,stroke-width:2px,color:#111111,rx:10,ry:10;
-    class KG accent
-    classDef default rx:10,ry:10;
-```
+![End-to-end flow: spec to PR to verification and KG sync](/diagrams/sdlc-pr-and-kg-sync-flow.svg)
 
 ### A Worked Example
 
@@ -271,7 +202,7 @@ Senior engineers spend their time on judgment, not context assembly. The senior 
 
 > **How Accion Labs operationalizes the Impact Analysis Agent**
 >
-> The [Breeze.AI platform](practitioner/breeze-ai.md) runs the Impact Analysis Agent in both pre and post implementation modes against the four-layer knowledge graph. For cross-product changes, the Cross-Product Impact Extension consults multiple product graphs in sequence. See [Partition by Product](semantic-knowledge-graphs/four-layer-ontology.md#partition-by-product).
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the Impact Analysis Agent in both pre and post implementation modes against the four-layer knowledge graph. For cross-product changes, the Cross-Product Impact Extension consults multiple product graphs in sequence. See [Partition by Product](methodology.md#partition-by-product).
 
 ## The PR Validation Agent
 
@@ -338,7 +269,7 @@ The cost of a single production incident traceable to a structural violation typ
 
 > **How Accion Labs operationalizes the PR Validation Agent**
 >
-> The [Breeze.AI platform](practitioner/breeze-ai.md) runs the PR Validation Agent in the client's CI/CD pipeline. The agent's configuration is owned by the workstream's Tech Lead. The override audit trail is reviewed by the engagement's Chief Architect on a quarterly cadence.
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the PR Validation Agent in the client's CI/CD pipeline. The agent's configuration is owned by the workstream's Tech Lead. The override audit trail is reviewed by the engagement's Chief Architect on a quarterly cadence.
 
 ## The BDD Generation Agent
 
@@ -421,7 +352,7 @@ For non-functional testing, the team continues to use the same patterns they use
 
 > **How Accion Labs operationalizes the BDD Generation Agent**
 >
-> The [Breeze.AI platform](practitioner/breeze-ai.md) runs the BDD Generation Agent against the client's Functional Ontology. Generated scenarios are committed to the test suite repository with the Tech Lead as the named approver for diffs.
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the BDD Generation Agent against the client's Functional Ontology. Generated scenarios are committed to the test suite repository with the Tech Lead as the named approver for diffs.
 
 ## The KG Sync Agent
 
@@ -444,25 +375,6 @@ The Code Ontology is the highest-frequency update. Every merge changes code. The
 
 ### The Update Flow
 
-```mermaid
-%%{init: {"theme":"base","themeVariables":{"primaryColor":"#f5f5f5","primaryTextColor":"#111111","primaryBorderColor":"#4b5563","lineColor":"#4b5563","secondaryColor":"#ffffff","tertiaryColor":"#FDE8DD","clusterBkg":"#fafafa","clusterBorder":"#9ca3af","edgeLabelBackground":"#ffffff","actorBkg":"#f5f5f5","actorBorder":"#4b5563","actorTextColor":"#111111","noteBkgColor":"#FDE8DD","noteBorderColor":"#E94E1B","signalColor":"#4b5563","signalTextColor":"#111111","sectionBkgColor":"#f5f5f5","altSectionBkgColor":"#ffffff","taskBkgColor":"#9ca3af","taskBorderColor":"#4b5563","taskTextColor":"#111111","gridColor":"#d1d5db","activeTaskBkgColor":"#FDE8DD","activeTaskBorderColor":"#E94E1B"}}}%%
-flowchart LR
-    PR[PR Merged to Master]
-    PARSE[Parse changed files]
-    UPDATE[Update Code Ontology]
-    CASCADE[Cascade to other layers if structural]
-    VALIDATE[Run P0 verification suite]
-    COMMIT[Commit graph update]
-    NOTIFY[Notify ontology owners of structural changes]
-
-    PR --> PARSE
-    PARSE --> UPDATE
-    UPDATE --> CASCADE
-    CASCADE --> VALIDATE
-    VALIDATE --> COMMIT
-    COMMIT --> NOTIFY
-    classDef default rx:10,ry:10;
-```
 
 The flow is automatic for non-structural changes (a new function in an existing module, a bug fix that does not change interfaces). Structural changes (a new service, a new bounded context, a new design system primitive) trigger a notification to the relevant ontology owner for review before the graph update commits.
 
@@ -497,7 +409,7 @@ Sync falling behind is rare in practice. Per-merge sync on a 1.6M LOC applicatio
 
 > **How Accion Labs operationalizes the KG Sync Agent**
 >
-> The [Breeze.AI platform](practitioner/breeze-ai.md) runs the KG Sync Agent as part of the client's CI/CD pipeline. Sync is triggered automatically on every merge to master. The Ontology Maintainer from the Accion Labs engagement team owns the agent's operational health.
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the KG Sync Agent as part of the client's CI/CD pipeline. Sync is triggered automatically on every merge to master. The Ontology Maintainer from the Accion Labs engagement team owns the agent's operational health.
 
 ## Progressive Autonomy
 
@@ -587,8 +499,8 @@ The levels shift over time as evidence accumulates. The promotion path for each 
 
 > **How Accion Labs operationalizes progressive autonomy**
 >
-> The [Breeze.AI platform](practitioner/breeze-ai.md) implements the five autonomy levels and the Promotion Agreement workflow. The Engagement Council reviews promotion decisions on a quarterly cadence as part of the [enablement engagement](process/enablement-partnership.md).
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the five autonomy levels and the Promotion Agreement workflow. The Engagement Council reviews promotion decisions on a quarterly cadence as part of the [enablement engagement](process/enablement-partnership.md).
 
 ---
 
-[The Team](process/team.md) covers the operating model that makes the agent fleet sustainable at enterprise scale.
+[The Team](process/team.md) covers the operating model that makes the SDLC agent fleet sustainable at enterprise scale. [The Modernization Agent Fleet](../modernization/agents.md) covers the equivalent fleet for legacy modernization, which runs a bounded pipeline rather than a continuous loop.

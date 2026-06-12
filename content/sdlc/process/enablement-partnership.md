@@ -94,7 +94,7 @@ The offboarding doctrine is the answer to the vendor lock-in concern long-term e
 
 The engagement principles above frame Accion Labs's role across the partnership. The client's four custodians own the four ontologies throughout.
 
-At [Zone 4](../zones-of-ai-assisted-sdlc/_index.md#zone-4-se-at-scale), the agent fleet becomes a second asset class that needs custodianship. The client's Engineering Team's role evolves to absorb this: they continue to be the custodian of the Code Ontology, and they also become the custodian of the agents that operate on the graph.
+At [Zone 4](../zones/_index.md#zone-4-se-at-scale), the agent fleet becomes a second asset class that needs custodianship. The client's Engineering Team's role evolves to absorb this: they continue to be the custodian of the Code Ontology, and they also become the custodian of the agents that operate on the graph.
 
 The agent-custodial span runs from Impact Analysis through PR Validation: the four agents where developer judgment is on the loop even when the agents are autonomous. Specification (PO authors via the Functional Ontology) is upstream of the span. KG Sync (automatic post-merge) is downstream. The Engineering Team's day-to-day in this mode includes:
 
@@ -104,7 +104,7 @@ The agent-custodial span runs from Impact Analysis through PR Validation: the fo
 - Catching the edge cases where the impact report missed something
 - Calibrating the policies that govern agent behavior
 
-This pairs with the four ontology custodians at the top of the team structure. Accion Labs's enablement layer (Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers) supports the Engineering Team here just as it supports the other three custodians. See [Progressive Autonomy](../the-agents.md#progressive-autonomy) for the agent-side discipline that pairs with the human side here.
+This pairs with the four ontology custodians at the top of the team structure. Accion Labs's enablement layer (Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers) supports the Engineering Team here just as it supports the other three custodians. See [Progressive Autonomy](../agents.md#progressive-autonomy) for the agent-side discipline that pairs with the human side here.
 
 ## Why Services Firms Have Not Historically Filled This Role
 
@@ -120,8 +120,8 @@ The engagement frame shifts in two phases. Phase 1: effort-based engagement for 
 
 > **How Accion Labs operationalizes the partnership**
 >
-> The [engagement model](../practitioner/_index.md#engagement-model) includes the enablement contract as a named deliverable. The [services catalog](../practitioner/_index.md#services) describes the three tiers (Light, Medium, Deep) with engagement shape and deliverables. The Engagement Council operates as a named body within Accion Labs, with charter, membership, and quarterly review meetings visible to clients.
+> The [engagement model](../../practitioner/_index.md#engagement-model) includes the enablement contract as a named deliverable. The [services catalog](../../practitioner/_index.md#services) describes the three tiers (Light, Medium, Deep) with engagement shape and deliverables. The Engagement Council operates as a named body within Accion Labs, with charter, membership, and quarterly review meetings visible to clients.
 
 ---
 
-[Team](team.md) covers the layered structure where the enablement roles sit beneath the custodianship layer. [Engagement Model Evolution](team.md#engagement-model-evolution) covers the engagement-shape shift the methodology enables.
+[Team](team.md) covers the layered structure where the enablement roles sit beneath the custodianship layer. [Engagement Model Evolution](team.md#engagement-model-evolution) covers the engagement-shape shift the methodology enables. The parallel enablement frame for legacy modernization (which is bounded rather than continuous) is on [The Modernization Enablement Frame](../../modernization/process/enablement-frame.md).

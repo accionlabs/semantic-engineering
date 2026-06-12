@@ -22,17 +22,17 @@ A specification enters the flow from the left, one of many flowing through in pa
 | Stage | What runs | What it produces |
 |---|---|---|
 | 1. Spec pulled from backlog | The product owner (via the implementation sprint backlog in Jira or equivalent) | An impact-analyzed spec, validated in the prior spec sprint, ready for the implementation team |
-| 2. Impact Analysis Agent | The [Impact Analysis Agent](../the-agents.md#the-impact-analysis-agent) traverses the four-layer graph for the spec | A pre-implementation impact report: which functional outcomes are touched, which design components, which architecture services, which code modules and database tables |
+| 2. Impact Analysis Agent | The [Impact Analysis Agent](../agents.md#the-impact-analysis-agent) traverses the four-layer graph for the spec | A pre-implementation impact report: which functional outcomes are touched, which design components, which architecture services, which code modules and database tables |
 | 3. Coding Agent | A coding agent generates code under the impact report's structural plan | A draft implementation, scoped to the impact report's surface |
 | 4. Developer review (Zone 3) or autonomous execution (Zone 4) | At Zone 3, the developer reviews and refines. At Zone 4, the agent runs the loop and the developer reviews the agent's audit trail. | Code ready for PR |
-| 5. PR Validation Agent | The [PR Validation Agent](../the-agents.md#the-pr-validation-agent) checks the merge against all four ontologies | Pass or fail. A failing merge is blocked until the underlying structural violation is fixed. |
-| 6. Code merge + KG Sync | The merge lands. The [KG Sync Agent](../the-agents.md#the-kg-sync-agent) updates the Code Ontology. | Updated graph. The next spec sprint runs against the current graph. |
+| 5. PR Validation Agent | The [PR Validation Agent](../agents.md#the-pr-validation-agent) checks the merge against all four ontologies | Pass or fail. A failing merge is blocked until the underlying structural violation is fixed. |
+| 6. Code merge + KG Sync | The merge lands. The [KG Sync Agent](../agents.md#the-kg-sync-agent) updates the Code Ontology. | Updated graph. The next spec sprint runs against the current graph. |
 
 The implementation sprint does not run impact analysis on the spec it receives, because it has already been done in the spec sprint. When the implementation sprint's Impact Analysis Agent (running for verification) detects a spec missing context that only the custodians can supply, the spec is pushed back to the spec sprint backlog. The implementation team does not block on it. They pull the next spec from the backlog.
 
 ## The Three Sources of Truth in Operation
 
-The flow uses all three sources of truth (covered in [Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md#three-sources-of-truth)) together.
+The flow uses all three sources of truth (covered in [Semantic Knowledge Graphs](../methodology.md#three-sources-of-truth)) together.
 
 | Step | Source consulted | Question answered |
 |---|---|---|
@@ -46,17 +46,17 @@ After the change is merged, the same Impact Analysis Agent can rerun the analysi
 
 ## Zone 4: Agents Run the Loop
 
-At Zone 3, the developer is in the per-change loop, reviewing the coding agent's output and applying implementation judgment. At [Zone 4](../zones-of-ai-assisted-sdlc/_index.md#zone-4-se-at-scale), the agents run the loop and the developer moves upstream.
+At Zone 3, the developer is in the per-change loop, reviewing the coding agent's output and applying implementation judgment. At [Zone 4](../zones/_index.md#zone-4-se-at-scale), the agents run the loop and the developer moves upstream.
 
 ![Zone 4: Agentic SE at Scale](/diagrams/zone-4-agentic-se.svg)
 
 The diagram shows the operating picture at Zone 4. Three custodial layers stack vertically. At the top, the four ontology custodians (PO, Architect, Designer, Engineering Team) keep the four-layer knowledge graph current. In the middle, the per-change SDLC flow runs through a six-stage agent fleet: Specification (PO extends the Functional Ontology), Impact Analysis Agent, Coding Agent (autonomous), Test Generation Agent, PR Validation Agent, and Code merge with KG Sync. At the bottom, a new custodial layer appears: the Engineering Team as custodian of the agent fleet, stewarding the four agents from Impact Analysis through PR Validation.
 
-The Engineering Team's day-to-day in this mode includes approving Promotion Agreements that move agents to higher autonomy levels, reviewing the agent audit trail on a defined cadence, refining agent prompts when failure patterns emerge, catching the edge cases where the impact report missed something, and calibrating the policies that govern agent behavior. [Progressive Autonomy](../the-agents.md#progressive-autonomy) covers the agent-side discipline. [Engineering Team's Custodianship of the Agent Fleet](enablement-partnership.md#engineering-teams-custodianship-of-the-agent-fleet-zone-4-evolution) covers the human-side discipline that pairs with it.
+The Engineering Team's day-to-day in this mode includes approving Promotion Agreements that move agents to higher autonomy levels, reviewing the agent audit trail on a defined cadence, refining agent prompts when failure patterns emerge, catching the edge cases where the impact report missed something, and calibrating the policies that govern agent behavior. [Progressive Autonomy](../agents.md#progressive-autonomy) covers the agent-side discipline. [Engineering Team's Custodianship of the Agent Fleet](enablement-partnership.md#engineering-teams-custodianship-of-the-agent-fleet-zone-4-evolution) covers the human-side discipline that pairs with it.
 
 ## What Changes for the Implementation Team
 
-The shift from Zone 3 to Zone 4 is gradual. The agent fleet does not become autonomous overnight. Each agent earns higher autonomy through demonstrated evidence, governed by [Progressive Autonomy](../the-agents.md#progressive-autonomy) and Promotion Agreements.
+The shift from Zone 3 to Zone 4 is gradual. The agent fleet does not become autonomous overnight. Each agent earns higher autonomy through demonstrated evidence, governed by [Progressive Autonomy](../agents.md#progressive-autonomy) and Promotion Agreements.
 
 | Dimension | Zone 3 | Zone 4 |
 |---|---|---|
@@ -78,8 +78,8 @@ The implementation sprint does not govern the knowledge graph. Graph governance 
 
 > **How Accion Labs operationalizes the implementation sprint**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the Impact Analysis, Coding, Test Generation, PR Validation, and KG Sync agents that operate the per-change SDLC flow. The [engagement model](../practitioner/_index.md#engagement-model) staffs the implementation team and the Zone 4 custodial role evolution.
+> The [Breeze.AI platform](../../practitioner/breeze-ai.md) runs the Impact Analysis, Coding, Test Generation, PR Validation, and KG Sync agents that operate the per-change SDLC flow. The [engagement model](../../practitioner/_index.md#engagement-model) staffs the implementation team and the Zone 4 custodial role evolution.
 
 ---
 
-[Spec Sprint](spec-sprint.md) is the cadence that feeds the implementation sprint. [Team](team.md) covers the operating model that staffs both sprints. [The Agents](../the-agents.md) describes each agent in the per-change SDLC flow in detail.
+[Spec Sprint](spec-sprint.md) is the cadence that feeds the implementation sprint. [Team](team.md) covers the operating model that staffs both sprints. [The Agents](../agents.md) describes each agent in the per-change SDLC flow in detail.

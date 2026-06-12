@@ -1,9 +1,9 @@
 ---
-title: "Case Archetypes"
-description: "Anonymized engagement anchors that demonstrate the methodology working in real enterprise contexts. Brownfield enterprise modernization and greenfield growing into complexity."
+title: "Case Archetypes: Continuous SDLC"
+description: "Anonymized engagement anchors that demonstrate the continuous SDLC instantiation of Semantic Engineering. Live application evolution and greenfield growing into complexity."
 weight: 70
 date: 2026-06-04
-lastmod: 2026-06-05
+lastmod: 2026-06-11
 draft: false
 audience:
   - cto
@@ -13,9 +13,11 @@ audience:
   - procurement
 ---
 
-We have applied the same methodology across engagements that differ on every meaningful axis: industry, scale, starting context, tech stack, and the specific dimension of complexity that triggered the move to Semantic Engineering. The methodology generalizes because the failure modes it addresses generalize. Whether the trigger is a 2 million line legacy code base that has accumulated decades of implicit behavior, or a clean greenfield workstream that has grown past the point where its design system can govern itself, the structural response is the same.
+This page covers the continuous SDLC instantiation. The legacy modernization case studies are on [Case Archetypes: Legacy Modernization](../modernization/case-archetypes.md).
 
-This section presents two anonymized archetypes. Named versions, with logos and engagement team attribution, live in the [Practitioner section](practitioner/_index.md#named-case-studies) where client permissions allow.
+We have applied the same methodology across continuous SDLC engagements that differ on every meaningful axis: industry, scale, starting context, tech stack, and the specific dimension of complexity that triggered the move to Semantic Engineering. The methodology generalizes because the failure modes it addresses generalize. Whether the trigger is a 2 million line live code base that has accumulated decades of implicit behavior, or a clean greenfield workstream that has grown past the point where its design system can govern itself, the structural response is the same.
+
+This page presents two anonymized SDLC archetypes. Named versions, with logos and engagement team attribution, live in the [Practitioner section](../practitioner/_index.md#named-case-studies) where client permissions allow.
 
 ## The Archetypes
 
@@ -108,13 +110,13 @@ This archetype is the canonical reference for the methodology's full deployment.
 
 The technical archetype focuses on the deployment of the methodology. The operating-model transition that runs alongside is in [Layered Team Structure in Depth](process/team.md#layered-team-structure-in-depth). The custodial structure that holds the engagement across years is in [The Enablement Partnership](process/enablement-partnership.md).
 
-The named version of this archetype, where client permissions allow, is Hubexo. See the [Practitioner section](practitioner/_index.md#named-case-studies).
+The named version of this archetype, where client permissions allow, is Hubexo. See the [Practitioner section](../practitioner/_index.md#named-case-studies).
 
 ## Greenfield Growing into Complexity
 
 A utility management and billing platform. Multifamily, single-family, commercial, and student housing. A long-standing client engagement with prior cloud and data platform modernization delivered before the Semantic Engineering work began. The current engagement focus: a Single Family Activation workstream within the larger multi-workstream brownfield platform. React, TypeScript, Figma-driven UI workflow, custom component library.
 
-This is the more common pattern. A project begins as a manageable greenfield, applies SDD discipline successfully through its early phase, and then crosses a complexity threshold that makes Semantic Engineering adoption the natural next step. The methodology was not introduced from Day 1. It was introduced when the SDD ceiling conditions described in [Zone 2: Spec-Driven Development](zones-of-ai-assisted-sdlc/zone-2-spec-driven-development.md) started to surface: design system drift, cross-workstream coordination friction, and AI-generated outputs that were plausibly correct but structurally inconsistent with the existing codebase.
+This is the more common pattern. A project begins as a manageable greenfield, applies SDD discipline successfully through its early phase, and then crosses a complexity threshold that makes Semantic Engineering adoption the natural next step. The methodology was not introduced from Day 1. It was introduced when the SDD ceiling conditions described in [Zone 2: Spec-Driven Development](zones/zone-2-spec-driven-development.md) started to surface: design system drift, cross-workstream coordination friction, and AI-generated outputs that were plausibly correct but structurally inconsistent with the existing codebase.
 
 ### Project Shape
 
@@ -168,8 +170,8 @@ SE adoption can be staged by ontology. A team does not have to deploy all four o
 
 The Design Ontology alone is a high-leverage entry point for UI-heavy workstreams. Component reuse percentages in the 50%+ range from sprint one are achievable without the broader four-ontology investment. For teams not yet ready for full SE deployment, the Design Ontology is the lowest-friction first step.
 
-The named version of this archetype, where client permissions allow, is Conservice. See the [Practitioner section](practitioner/_index.md#named-case-studies).
+The named version of this archetype, where client permissions allow, is Conservice. See the [Practitioner section](../practitioner/_index.md#named-case-studies).
 
 ---
 
-The two archetypes together show that the methodology generalizes across very different starting conditions. The failure modes it addresses are universal. The structural response is the same regardless of context. The next step depends on what the team's specific starting context demands. The [Practitioner section](practitioner/_index.md) covers how we engage.
+The two archetypes together show that the methodology generalizes across very different starting conditions. The failure modes it addresses are universal. The structural response is the same regardless of context. The next step depends on what the team's specific starting context demands. The [Practitioner section](../practitioner/_index.md) covers how we engage.

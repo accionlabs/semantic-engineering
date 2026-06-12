@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1500 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,750,34)">
+        <text x="-340.266px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:24px;fill:var(--se-text,#111111);">The <tspan x="-291.82px -274.488px " y="0px 0px ">An</tspan>notation Discipline: Retain / Modify / Replace / Retire</text>
+    </g>
+    <g transform="matrix(1,0,0,1,750,58)">
+        <text x="-383.589px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);">Every Source-state module receives exactly one of four annotations from the custodians. <tspan x="129.943px 137.884px " y="0px 0px ">Th</tspan>e annotation becomes the parity contract.</text>
+    </g>
+    <path d="M1460,102L1460,134C1460,140.623 1454.623,146 1448,146L52,146C45.377,146 40,140.623 40,134L40,102C40,95.377 45.377,90 52,90L1448,90C1454.623,90 1460,95.377 1460,102Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,750,116)">
+        <text x="-86.832px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:16px;fill:var(--se-text,#111111);">A<tspan x="-75.871px -71.426px " y="0px 0px "> S</tspan>ource-state module</text>
+    </g>
+    <g transform="matrix(1,0,0,1,750,134)">
+        <text x="-281.087px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);">e.g. credit-card duplicate-check paragraph, statement-printing subroutine, card-holder-ID validator</text>
+    </g>
+    <g>
+        <path d="M214.8,170.4L210,180L205.2,170.4L214.8,170.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+        <path d="M210,146L210,172.32" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        <g transform="matrix(1,0,0,1,38,1)">
+            <g transform="matrix(1,-0,-0,1,-38,-1)">
+                <path d="M582.8,171.4L578,181L573.2,171.4L582.8,171.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+                <path d="M578,147L578,173.32" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,-29,1)">
+            <g transform="matrix(1,-0,-0,1,29,-1)">
+                <path d="M930.8,171.4L926,181L921.2,171.4L930.8,171.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+                <path d="M926,147L926,173.32" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+            </g>
+        </g>
+        <path d="M1294.8,170.4L1290,180L1285.2,170.4L1294.8,170.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+        <path d="M1290,146L1290,172.32" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    </g>
+    <path d="M380,204L380,616C380,623.727 373.727,630 366,630L74,630C66.273,630 60,623.727 60,616L60,204C60,196.273 66.273,190 74,190L366,190C373.727,190 380,196.273 380,204Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,220,220)">
+        <text x="-36.479px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:20px;fill:var(--se-text,#111111);">RET<tspan x="2.036px 16.479px " y="0px 0px ">AI</tspan>N</text>
+    </g>
+    <g transform="matrix(1,0,0,1,220,244)">
+        <text x="-65.729px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">behavior preserved exactly</text>
+    </g>
+    <path d="M80,262L360,262" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,80,290)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">M<tspan x="9.273px 16.72px 24.774px 32.828px 35.994px 44.048px " y="0px 0px 0px 0px 0px 0px ">EANING</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,312)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">The legacy module&apos;s behavior is</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,328)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">preserved in the modern equivalent.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,346)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Structural shape may change (e.g.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,362)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">paragraph to class, subroutine to</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,378)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">method) but functional behavior</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,394)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">must match.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,424)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 14.276px 21.105px 28.552px 36.606px 43.435px 46.602px 55.268px 63.322px 66.079px 74.133px 82.799px 90.246px 98.3px 105.129px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">FFECT ON AGENTS</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,446)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Migration agents generate the</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,462)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">modern equivalent; functional</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,478)">
+        <g transform="matrix(12,0,0,12,100.060547,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,103.394531,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">validation gate veriﬁes parity<tspan x="150.521px " y="0px ">.</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,510)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 14.894px 22.948px 32.221px 39.668px 46.497px " y="0px 0px 0px 0px 0px 0px ">XAMPLE</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,534)">
+        <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Card-holder<tspan x="63.146px 67.143px " y="0px 0px ">-I</tspan>D validation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,552)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">COBOL<tspan x="38.103px 41.159px " y="0px 0px "> s</tspan>ubroutine becomes a</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,568)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">.NET<tspan x="24.857px 27.914px " y="0px 0px "> m</tspan>ethod; same input domain,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,584)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">same outputs, same edge cases.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,80,608)">
+        <g transform="matrix(11,0,0,11,101.304199,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,104.360352,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">V<tspan x="6.521px 12.638px " y="0px 0px ">al</tspan>idation replay conﬁrms parity<tspan x="154.269px " y="0px ">.</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,28,1)">
+        <path d="M710,204L710,616C710,623.727 703.727,630 696,630L404,630C396.273,630 390,623.727 390,616L390,204C390,196.273 396.273,190 404,190L696,190C703.727,190 710,196.273 710,204Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,578,221)">
+        <text x="-38.887px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:20px;fill:var(--se-text,#111111);">MODIFY</text>
+    </g>
+    <g transform="matrix(1,0,0,1,578,245)">
+        <g transform="matrix(11,0,0,11,30.88916,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,33.945312,0)">
+        </g>
+        <text x="-82.86px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">behavior changes in deﬁned ways</text>
+    </g>
+    <g transform="matrix(1,0,0,1,28,1)">
+        <path d="M410,262L690,262" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,438,291)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">M<tspan x="9.273px 16.72px 24.774px 32.828px 35.994px 44.048px " y="0px 0px 0px 0px 0px 0px ">EANING</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,313)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">The legacy module&apos;s behavior is</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,329)">
+        <g transform="matrix(12,0,0,12,78.064453,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,81.398438,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">changing in deﬁned ways during</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,345)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">the modernization. <tspan x="101.842px 109.172px " y="0px 0px ">Th</tspan>e Product</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,361)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Owner captures what changes in</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,377)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">the annotation.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,413)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 14.276px 21.105px 28.552px 36.606px 43.435px 46.602px 55.268px 63.322px 66.079px 74.133px 82.799px 90.246px 98.3px 105.129px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">FFECT ON AGENTS</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,435)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Migration agents generate a</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,451)">
+        <g transform="matrix(12,0,0,12,136.083984,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,139.417969,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">modern equivalent that reﬂects</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,467)">
+        <g transform="matrix(12,0,0,12,46.025391,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,49.359375,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">the modiﬁcation. Functional gate</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,483)">
+        <g transform="matrix(12,0,0,12,138.75,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,142.083984,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">validates against the modiﬁed</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,499)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">contract, not the legacy<tspan x="123.182px " y="0px ">.</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,529)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 14.894px 22.948px 32.221px 39.668px 46.497px " y="0px 0px 0px 0px 0px 0px ">XAMPLE</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,553)">
+        <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Card-holder<tspan x="63.146px 67.143px " y="0px 0px ">-I</tspan>D validation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,571)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Behavior retained but additional</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,587)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">CVV check added per new compliance</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,603)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">policy<tspan x="27.307px 30.363px 32.812px 40.149px " y="0px 0px 0px 0px ">. An</tspan>notation captures the</text>
+    </g>
+    <g transform="matrix(1,0,0,1,438,619)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">delta from legacy<tspan x="82.946px " y="0px ">.</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,54,0)">
+        <path d="M1040,204L1040,616C1040,623.727 1033.727,630 1026,630L734,630C726.273,630 720,623.727 720,616L720,204C720,196.273 726.273,190 734,190L1026,190C1033.727,190 1040,196.273 1040,204Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,934,220)">
+        <text x="-47.783px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:20px;fill:var(--se-text,#111111);">REPLACE</text>
+    </g>
+    <g transform="matrix(1,0,0,1,934,244)">
+        <text x="-71.747px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">a dif<tspan x="-51.154px -48.098px " y="0px 0px ">fe</tspan>rent solution takes over</text>
+    </g>
+    <g transform="matrix(1,0,0,1,54,0)">
+        <path d="M740,262L1020,262" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,794,290)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">M<tspan x="9.273px 16.72px 24.774px 32.828px 35.994px 44.048px " y="0px 0px 0px 0px 0px 0px ">EANING</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,312)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">The legacy module is being</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,328)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">replaced by a dif<tspan x="87.838px 91.172px " y="0px 0px ">fe</tspan>rent solution:</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,344)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">a modern library<tspan x="85.811px 89.145px " y="0px 0px ">, </tspan>a SaaS subscription,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,360)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">an existing service in the target.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,376)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">The legacy implementation is not</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,392)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">migrated.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,424)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 14.276px 21.105px 28.552px 36.606px 43.435px 46.602px 55.268px 63.322px 66.079px 74.133px 82.799px 90.246px 98.3px 105.129px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">FFECT ON AGENTS</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,446)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Migration agents do not generate</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,462)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">a migration; they wire the target</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,478)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">architecture to the replacement</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,494)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">and validate the integration.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,524)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 14.894px 22.948px 32.221px 39.668px 46.497px " y="0px 0px 0px 0px 0px 0px ">XAMPLE</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,548)">
+        <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Duplicate-check logic</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,566)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">COBOL<tspan x="38.103px 41.159px " y="0px 0px "> d</tspan>uplicate-check paragraph</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,582)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">retired in favor of the modern fraud-</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,598)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">detection library<tspan x="76.833px 79.89px 82.339px 89.676px " y="0px 0px 0px 0px ">. Ag</tspan>ent wires the</text>
+    </g>
+    <g transform="matrix(1,0,0,1,794,614)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">target service to the library <tspan x="132.059px 139.396px " y="0px 0px ">AP</tspan>I.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,81,-1)">
+        <path d="M1370,204L1370,616C1370,623.727 1363.727,630 1356,630L1064,630C1056.273,630 1050,623.727 1050,616L1050,204C1050,196.273 1056.273,190 1064,190L1356,190C1363.727,190 1370,196.273 1370,204Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1291,219)">
+        <text x="-36.67px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:20px;fill:var(--se-text,#111111);">RETIRE</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1291,243)">
+        <text x="-81.638px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">function eliminated, no equivalent</text>
+    </g>
+    <g transform="matrix(1,0,0,1,81,-1)">
+        <path d="M1070,262L1350,262" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,289)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">M<tspan x="9.273px 16.72px 24.774px 32.828px 35.994px 44.048px " y="0px 0px 0px 0px 0px 0px ">EANING</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,311)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">The legacy module&apos;s function is</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,327)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">being eliminated. <tspan x="93.844px 101.174px " y="0px 0px ">Th</tspan>e modern</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,343)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">system will not have an equivalent.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,377)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 14.276px 21.105px 28.552px 36.606px 43.435px 46.602px 55.268px 63.322px 66.079px 74.133px 82.799px 90.246px 98.3px 105.129px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">FFECT ON AGENTS</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,399)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Migration agents do not generate</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,415)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">a migration. Source-state nodes</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,431)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">are documented in the technical</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,447)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">artifacts as retired so the audit</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,463)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">trail is preserved.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,497)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 14.894px 22.948px 32.221px 39.668px 46.497px " y="0px 0px 0px 0px 0px 0px ">XAMPLE</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,521)">
+        <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Statement-printing subroutine</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,539)">
+        <g transform="matrix(11,0,0,11,144.906738,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,147.962891,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Legacy paper-statement workﬂow</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,555)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">ending; statements going digital-</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,571)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">only<tspan x="19.363px 22.419px " y="0px 0px ">. </tspan>Subroutine has no successor</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,587)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">in the modern system; the legacy</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1151,603)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">code is documented and dropped.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,750,668)">
+        <text x="-313.849px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">The annotation discipline is governed: every Source-state module must receive an annotation before migration begins.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,750,688)">
+        <text x="-188.467px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Modules that have not been annotated cannot enter the migration loop.</text>
+    </g>
+</svg>

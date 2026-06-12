@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1200 220" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,600,30)">
+        <text x="-97.236px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:20px;fill:var(--se-text,#111111);">Three-Phase Rollout</text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,52)">
+        <text x="-151.755px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Methodology phases inside the commercial engagement.</text>
+    </g>
+    <path d="M380,94L380,166C380,173.727 373.727,180 366,180L74,180C66.273,180 60,173.727 60,166L60,94C60,86.273 66.273,80 74,80L366,80C373.727,80 380,86.273 380,94Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,219.93,113)">
+        <text x="-30.375px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">P<tspan x="-20.897px -10.647px -0.396px 9.081px 18.559px 22.589px " y="0px 0px 0px 0px 0px 0px ">HASE 1</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,220,138)">
+        <text x="-57.284px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:17px;fill:var(--se-text,#111111);">SDD <tspan x="-17.299px -5.022px " y="0px 0px ">Ad</tspan>option</text>
+    </g>
+    <g transform="matrix(1,0,0,1,220,160)">
+        <text x="-73.594px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="-62.484px -58.488px " y="0px 0px ">ri</tspan>tten contract per change</text>
+    </g>
+    <g transform="matrix(1,0,0,1,220,174)">
+        <text x="-34.351px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">4 to 6 sprints</text>
+    </g>
+    <path d="M760,94L760,166C760,173.727 753.727,180 746,180L454,180C446.273,180 440,173.727 440,166L440,94C440,86.273 446.273,80 454,80L746,80C753.727,80 760,86.273 760,94Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,599.93,113)">
+        <text x="-30.375px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">P<tspan x="-20.897px -10.647px -0.396px 9.081px 18.559px 22.589px " y="0px 0px 0px 0px 0px 0px ">HASE 2</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,138)">
+        <text x="-59.965px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:17px;fill:var(--se-text,#111111);">SE Foundation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,160)">
+        <text x="-71.388px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Knowledge graph stood up</text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,174)">
+        <text x="-25.348px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">12 weeks</text>
+    </g>
+    <path d="M1140,94L1140,166C1140,173.727 1133.727,180 1126,180L834,180C826.273,180 820,173.727 820,166L820,94C820,86.273 826.273,80 834,80L1126,80C1133.727,80 1140,86.273 1140,94Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,979.93,113)">
+        <text x="-30.375px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">P<tspan x="-20.897px -10.647px -0.396px 9.081px 18.559px 22.589px " y="0px 0px 0px 0px 0px 0px ">HASE 3</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,980,138)">
+        <text x="-45.833px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:17px;fill:var(--se-text,#111111);">SE at Scale</text>
+    </g>
+    <g transform="matrix(1,0,0,1,980,160)">
+        <text x="-74.707px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Portfolio-wide custodianship</text>
+    </g>
+    <g transform="matrix(1,0,0,1,980,174)">
+        <text x="-46.351px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Quarters to years</text>
+    </g>
+    <path d="M429.2,124.6L440,130L429.2,135.4L429.2,124.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M380,130L431.36,130" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    <path d="M809.2,124.6L820,130L809.2,135.4L809.2,124.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M760,130L811.36,130" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    <g transform="matrix(1,0,0,1,600,208)">
+        <text x="-150.417px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Each phase locks in the maturity that the next phase requires.</text>
+    </g>
+</svg>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1600 850" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,629,35)">
+        <g transform="matrix(30,0,0,30,235.825195,0)">
+        </g>
+        <text x="-227.49px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:30px;fill:var(--se-text,#111111);">End-to-End Flow: Spec → PR →</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1030,35)">
+        <g transform="matrix(30,0,0,30,-111.665039,0)">
+        </g>
+        <g transform="matrix(30,0,0,30,-101.674805,0)">
+        </g>
+        <text x="-166.714px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:30px;fill:var(--se-text,#111111);">V<tspan x="-148.359px -131.675px " y="0px 0px ">er</tspan>iﬁcation → KG Sync</text>
+    </g>
+    <g transform="matrix(1,0,0,1,800,60)">
+        <text x="-353.828px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Operations are numbered. <tspan x="-162.898px -153.125px " y="0px 0px ">Th</tspan>e Knowledge Graph (center) is read at steps 2 and 5, written at step 6.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <circle cx="140" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,140,115)">
+        <text x="-4.449px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M240,232L240,288C240,294.623 234.623,300 228,300L52,300C45.377,300 40,294.623 40,288L40,232C40,225.377 45.377,220 52,220L228,220C234.623,220 240,225.377 240,232Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,140,179)">
+        <g transform="matrix(14,0,0,14,10.124023,0)">
+        </g>
+        <g transform="matrix(14,0,0,14,14.786133,0)">
+        </g>
+        <text x="-59.903px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">New Speciﬁcation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,140,199)">
+        <text x="-30.564px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">user story or</text>
+    </g>
+    <g transform="matrix(1,0,0,1,140,215)">
+        <text x="-37.917px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">change request</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <circle cx="400" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,400,115)">
+        <text x="-4.449px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">2</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M500,232L500,288C500,294.623 494.623,300 488,300L312,300C305.377,300 300,294.623 300,288L300,232C300,225.377 305.377,220 312,220L488,220C494.623,220 500,225.377 500,232Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,400,179)">
+        <text x="-65.345px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Pre-Implementation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,400,199)">
+        <text x="-26.893px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">cross-layer</text>
+    </g>
+    <g transform="matrix(1,0,0,1,400,215)">
+        <text x="-32.095px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">impact report</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <circle cx="660" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,660,115)">
+        <text x="-4.449px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">3</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M760,232L760,288C760,294.623 754.623,300 748,300L572,300C565.377,300 560,294.623 560,288L560,232C560,225.377 565.377,220 572,220L748,220C754.623,220 760,225.377 760,232Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,660,179)">
+        <text x="-43.955px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Development</text>
+    </g>
+    <g transform="matrix(1,0,0,1,660,199)">
+        <text x="-23.235px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">human or</text>
+    </g>
+    <g transform="matrix(1,0,0,1,660,215)">
+        <text x="-30.886px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">agent author</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <circle cx="920" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,920,115)">
+        <text x="-4.449px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">4</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M1020,232L1020,288C1020,294.623 1014.623,300 1008,300L832,300C825.377,300 820,294.623 820,288L820,232C820,225.377 825.377,220 832,220L1008,220C1014.623,220 1020,225.377 1020,232Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,920,175)">
+        <text x="-42.396px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Pull Request</text>
+    </g>
+    <g transform="matrix(1,0,0,1,920,195)">
+        <text x="-43.1px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">merged to master</text>
+    </g>
+    <g transform="matrix(1,0,0,1,919.95,216)">
+        <text x="-44.211px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:var(--se-accent,#E94E1B);">G<tspan x="-36.333px -29.753px -23.545px -16.775px -13.896px -6.575px 1.304px 8.625px 15.947px 23.269px 30.59px 37.541px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ATE BOUNDARY</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <circle cx="1180" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1180,115)">
+        <text x="-4.449px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">5</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M1280,232L1280,288C1280,294.623 1274.623,300 1268,300L1092,300C1085.377,300 1080,294.623 1080,288L1080,232C1080,225.377 1085.377,220 1092,220L1268,220C1274.623,220 1280,225.377 1280,232Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1180,179)">
+        <text x="-69.228px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Post-Implementation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1180,199)">
+        <g transform="matrix(11,0,0,11,-8.564209,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-5.508057,0)">
+        </g>
+        <text x="-26.289px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">veriﬁcation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1180,215)">
+        <text x="-14.368px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">report</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <circle cx="1440" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1440,115)">
+        <text x="-4.449px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">6</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M1540,232L1540,288C1540,294.623 1534.623,300 1528,300L1352,300C1345.377,300 1340,294.623 1340,288L1340,232C1340,225.377 1345.377,220 1352,220L1528,220C1534.623,220 1540,225.377 1540,232Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1440,179)">
+        <text x="-29.176px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">KG Sync</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1440,199)">
+        <text x="-36.69px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Code Ontology</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1440,215)">
+        <text x="-29.358px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">auto-update</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M291.9,184.95L300,189L291.9,193.05L291.9,184.95Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M240,189L293.52,189" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M551.9,184.95L560,189L551.9,193.05L551.9,184.95Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M500,189L553.52,189" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M811.9,184.95L820,189L811.9,193.05L811.9,184.95Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M760,189L813.52,189" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M1071.9,184.95L1080,189L1071.9,193.05L1071.9,184.95Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M1020,189L1073.52,189" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M1331.9,184.95L1340,189L1331.9,193.05L1331.9,184.95Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M1280,189L1333.52,189" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M1400,450L1400,550C1400,561.038 1391.038,570 1380,570L220,570C208.962,570 200,561.038 200,550L200,450C200,438.962 208.962,430 220,430L1380,430C1391.038,430 1400,438.962 1400,450Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,800,395)">
+        <text x="-77.005px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-text,#111111);">Knowledge Graph</text>
+    </g>
+    <g transform="matrix(1,0,0,1,800,419)">
+        <text x="-182.8px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);">Four-Layer Ontology · Functional · Design · <tspan x="70.808px 79.479px " y="0px 0px ">Ar</tspan>chitecture · Code</text>
+    </g>
+    <g transform="matrix(1,0,0,1,799.945,445)">
+        <text x="-70.206px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">T<tspan x="-63.377px -55.323px -47.876px -44.71px -36.656px -27.99px -19.936px -13.107px -9.94px -1.887px 6.167px 14.833px 22.887px 30.334px 33.092px 41.146px 48.593px 56.04px 63.487px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE CONTINUOUS ASSET</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,800,469)">
+        <text x="-214.309px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">read on the way in (step 2) · audited at the gate (step 5) · written on the way out (step 6)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M395.5,238L400,229L404.5,238L395.5,238Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+            <path d="M400,359L400,236.2" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,412,299)">
+        <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-accent,#E94E1B);">2a · read impact</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M1175.5,238L1180,229L1184.5,238L1175.5,238Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+            <path d="M1180,359L1180,236.2" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,1192,299)">
+        <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-accent,#E94E1B);">5a · audit against graph</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M1410.131,431.229L1401,427L1409.861,422.233L1410.131,431.229Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+            <path d="M1440,229L1437.793,425.899C1437.793,425.899 1418.907,426.464 1408.197,426.785" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,1452,299)">
+        <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-accent,#E94E1B);">6f · commit writeback</text>
+    </g>
+    <g transform="matrix(1,0,0,1,799.935,559)">
+        <text x="-184.939px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">S<tspan x="-176.138px -168.067px -159.266px -150.7px -146.958px -139.598px -135.856px -131.397px -127.656px -118.137px -107.896px -104.154px -95.353px -86.552px -77.034px -67.516px -63.774px -54.973px -45.455px -35.936px -31.477px -23.406px -15.336px -5.094px 7.306px 11.048px 15.507px 20.696px 28.767px 36.838px 44.198px 47.94px 55.3px 59.759px 64.218px 71.578px 76.767px 80.509px 87.869px 95.229px 102.589px 107.778px 115.138px 118.88px 127.681px 137.199px 140.941px 152.63px 159.99px 165.179px 173.25px 180.61px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">TEP 6 · KG SYNC SUB-FLOW (runs after every PR merge)</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M250,670L250,718C250,723.519 245.519,728 240,728L60,728C54.481,728 50,723.519 50,718L50,670C50,664.481 54.481,660 60,660L240,660C245.519,660 250,664.481 250,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,70,613)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">6a</text>
+    </g>
+    <g transform="matrix(1,0,0,1,150,629)">
+        <g transform="matrix(13,0,0,13,35.042236,0)">
+        </g>
+        <g transform="matrix(13,0,0,13,39.371338,0)">
+        </g>
+        <text x="-61.055px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Parse changed ﬁles</text>
+    </g>
+    <g transform="matrix(1,0,0,1,150,645)">
+        <text x="-44.841px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">extract <tspan x="-9.381px -2.044px 5.293px 11.814px 14.87px " y="0px 0px 0px 0px 0px ">AST n</tspan>odes</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M480,670L480,718C480,723.519 475.519,728 470,728L290,728C284.481,728 280,723.519 280,718L280,670C280,664.481 284.481,660 290,660L470,660C475.519,660 480,664.481 480,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,300,613)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">6b</text>
+    </g>
+    <g transform="matrix(1,0,0,1,380,629)">
+        <text x="-70.415px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Update Code Ontology</text>
+    </g>
+    <g transform="matrix(1,0,0,1,380,645)">
+        <g transform="matrix(11,0,0,11,-62.049561,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-58.993408,0)">
+        </g>
+        <text x="-62.05px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">ﬁle · class · function · <tspan x="44.32px 51.656px " y="0px 0px ">AP</tspan>I</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M730,670L730,718C730,723.519 725.519,728 720,728L520,728C514.481,728 510,723.519 510,718L510,670C510,664.481 514.481,660 520,660L720,660C725.519,660 730,664.481 730,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,530,613)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">6c</text>
+    </g>
+    <g transform="matrix(1,0,0,1,620,629)">
+        <text x="-64.302px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Cascade if structural</text>
+    </g>
+    <g transform="matrix(1,0,0,1,620,645)">
+        <text x="-83.472px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">propagate to other ontology layers</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M960,670L960,718C960,723.519 955.519,728 950,728L770,728C764.481,728 760,723.519 760,718L760,670C760,664.481 764.481,660 770,660L950,660C955.519,660 960,664.481 960,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,780,613)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">6d</text>
+    </g>
+    <g transform="matrix(1,0,0,1,860,629)">
+        <text x="-39.368px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Run P0 suite</text>
+    </g>
+    <g transform="matrix(1,0,0,1,860,645)">
+        <g transform="matrix(11,0,0,11,-38.218018,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-35.161865,0)">
+        </g>
+        <text x="-55.943px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">veriﬁcation, fast subset</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M1190,670L1190,718C1190,723.519 1185.519,728 1180,728L1000,728C994.481,728 990,723.519 990,718L990,670C990,664.481 994.481,660 1000,660L1180,660C1185.519,660 1190,664.481 1190,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1010,613)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">6e</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1090,629)">
+        <text x="-67.168px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Commit graph update</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1090,645)">
+        <text x="-44.631px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">atomic transaction</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M1450,670L1450,718C1450,723.519 1445.519,728 1440,728L1230,728C1224.481,728 1220,723.519 1220,718L1220,670C1220,664.481 1224.481,660 1230,660L1440,660C1445.519,660 1450,664.481 1450,670Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.8px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1240,613)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">6f</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1335,629)">
+        <text x="-54.533px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Notify custodians</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1335,645)">
+        <g transform="matrix(11,0,0,11,-57.776855,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-54.720703,0)">
+        </g>
+        <text x="-57.777px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">ﬂag structural cascades</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M272.8,619.4L280,623L272.8,626.6L272.8,619.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M250,623L274.24,623" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M502.8,619.4L510,623L502.8,626.6L502.8,619.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M480,623L504.24,623" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M752.8,619.4L760,623L752.8,626.6L752.8,619.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M730,623L754.24,623" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M982.8,619.4L990,623L982.8,626.6L982.8,619.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M960,623L984.24,623" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M1212.8,619.4L1220,623L1212.8,626.6L1212.8,619.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M1190,623L1214.24,623" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M153.6,581.8L150,589L146.4,581.8L153.6,581.8Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M1540,185L1575,184L1576,570L150,569L150,583.24" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;stroke-dasharray:5,4;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <g transform="matrix(1,-0,-0,1,-0,71)">
+            <path d="M1447.272,429.452L1440,426L1447.125,422.254L1447.272,429.452Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M1450,624L1488,625L1489,425C1489,425 1458.708,425.618 1445.759,425.882" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;stroke-dasharray:5,4;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,800,709)">
+        <text x="-366.22px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">The Knowledge Graph anchors the loop: read at step 2 to inform development, audited at step 5 against the merge, written back at step 6.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,800,733)">
+        <text x="-278.496px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Steps 1-4 produce the merge. Step 5 audits it. Step 6 keeps the graph honest. The cycle repeats per PR.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M60,844L60,856C60,858.208 58.208,860 56,860L44,860C41.792,860 40,858.208 40,856L40,844C40,841.792 41.792,840 44,840L56,840C58.208,840 60,841.792 60,844Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,68,784)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Main operation (numbered)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M300,844L300,856C300,858.208 298.208,860 296,860L284,860C281.792,860 280,858.208 280,856L280,844C280,841.792 281.792,840 284,840L296,840C298.208,840 300,841.792 300,844Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,308,784)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Knowledge graph / structural cascade</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M600,850L640,850" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,650,784)">
+        <g transform="matrix(11,0,0,11,55.042969,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,58.099121,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Sequential ﬂow</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M820,850L860,850" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,870,784)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Graph read / write</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-71)">
+        <path d="M1040,850L1080,850" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;stroke-dasharray:5,4;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1090,784)">
+        <g transform="matrix(11,0,0,11,23.235352,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,26.291504,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Sub-ﬂow drill-down</text>
+    </g>
+</svg>

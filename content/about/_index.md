@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: "About the methodology. Copyright and trademark posture, governance of the methodology, press and analyst contact. (Origins is on its own page because of length.)"
-weight: 110
+weight: 90
 date: 2026-06-04
 lastmod: 2026-06-05
 draft: false
@@ -216,7 +216,7 @@ The Editorial Board's decisions are recorded in the change log with the reasonin
 
 The Editorial Board is structurally separated from Accion Labs's commercial account teams. Editorial decisions are not influenced by client requests, account-level commercial pressure, or sales conversations. The independence is what protects the methodology from drift toward whatever is convenient for the largest client.
 
-This separation is part of the [The Enablement Partnership](../process/enablement-partnership.md) discipline's Duty of Loyalty. The methodology serves practitioners and clients broadly; it does not serve any individual client at the expense of the methodology's integrity.
+This separation is part of the [The Enablement Partnership](../sdlc/process/enablement-partnership.md) discipline's Duty of Loyalty. The methodology serves practitioners and clients broadly; it does not serve any individual client at the expense of the methodology's integrity.
 
 ### How to Audit the Methodology's Governance
 

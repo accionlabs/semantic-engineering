@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="1400px" height="900px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+<svg viewBox="0 0 1400 900" preserveAspectRatio="xMidYMid meet" width="1400px" height="900px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,44)">
         <g transform="matrix(30,0,0,30,-122.512207,0)">
         </g>
         <g transform="matrix(30,0,0,30,-112.521973,0)">
         </g>
-        <text x="-302.527px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(17,17,17);">The FDE Proﬁle and the Substitute Pattern</text>
+        <text x="-302.527px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The FDE Proﬁle and the Substitute Pattern</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-404.812px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Part architect, part product owner<tspan x="-169.133px -164.688px " y="0px 0px ">, </tspan>part designer<tspan x="-67.727px -63.281px -59.117px -49.344px " y="0px 0px 0px 0px ">. Th</tspan>e single-person FDE is aspirational. <tspan x="216.281px 226.055px " y="0px 0px ">Th</tspan>e substitute is the norm.</text>
+        <text x="-404.812px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Part architect, part product owner<tspan x="-169.133px -164.688px " y="0px 0px ">, </tspan>part designer<tspan x="-67.727px -63.281px -59.117px -49.344px " y="0px 0px 0px 0px ">. Th</tspan>e single-person FDE is aspirational. <tspan x="216.281px 226.055px " y="0px 0px ">Th</tspan>e substitute is the norm.</text>
     </g>
     <g transform="matrix(1,0,0,1,699.84,103)">
-        <text x="-229.903px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">T<tspan x="-219.81px -207.935px -196.943px -192.178px -181.186px -169.311px -156.546px -146.453px -141.687px -132.469px -121.477px -116.712px -100.392px -95.908px -85.814px -73.94px -62.065px -51.073px -40.081px -35.316px -23.441px -10.676px 2.972px 13.964px 24.956px 35.05px 46.041px 57.916px 69.791px 74.556px 85.548px 96.54px 101.305px 114.953px 126.828px 137.82px 147.632px 152.397px 165.163px 176.155px 187.146px 199.021px 208.24px 219.231px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE PROFILE — THREE COMPETENCIES MUST OVERLAP</tspan></text>
+        <text x="-229.903px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-219.81px -207.935px -196.943px -192.178px -181.186px -169.311px -156.546px -146.453px -141.687px -132.469px -121.477px -116.712px -100.392px -95.908px -85.814px -73.94px -62.065px -51.073px -40.081px -35.316px -23.441px -10.676px 2.972px 13.964px 24.956px 35.05px 46.041px 57.916px 69.791px 74.556px 85.548px 96.54px 101.305px 114.953px 126.828px 137.82px 147.632px 152.397px 165.163px 176.155px 187.146px 199.021px 208.24px 219.231px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE PROFILE — THREE COMPETENCIES MUST OVERLAP</tspan></text>
     </g>
     <g transform="matrix(1,0,0,1,700,340)">
         <g transform="matrix(1,-0,-0,1,-700,-340)">
@@ -20,168 +20,168 @@
         </g>
     </g>
     <g transform="matrix(1,0,0,1,699.84,617)">
-        <text x="-315.916px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">T<tspan x="-305.823px -293.948px -282.956px -278.191px -267.199px -255.324px -244.332px -233.34px -223.247px -218.482px -208.388px -196.514px -186.42px -175.428px -170.663px -160.851px -151.039px -140.945px -130.852px -119.86px -107.985px -96.11px -91.345px -75.025px -70.26px -54.838px -42.964px -31.972px -20.097px -15.332px -3.457px 9.308px 14.074px 25.065px 29.831px 41.705px 54.471px 63.689px 74.681px 79.446px 90.438px 101.43px 113.305px 124.297px 137.062px 148.937px 153.702px 165.577px 178.342px 189.334px 200.326px 212.2px 223.192px 227.083px 238.075px 247.293px 255.925px 260.41px 270.503px 282.378px 294.252px 305.244px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE SUBSTITUTE PATTERN — WHEN NO SINGLE PERSON COVERS ALL THREE</tspan></text>
+        <text x="-315.916px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-305.823px -293.948px -282.956px -278.191px -267.199px -255.324px -244.332px -233.34px -223.247px -218.482px -208.388px -196.514px -186.42px -175.428px -170.663px -160.851px -151.039px -140.945px -130.852px -119.86px -107.985px -96.11px -91.345px -75.025px -70.26px -54.838px -42.964px -31.972px -20.097px -15.332px -3.457px 9.308px 14.074px 25.065px 29.831px 41.705px 54.471px 63.689px 74.681px 79.446px 90.438px 101.43px 113.305px 124.297px 137.062px 148.937px 153.702px 165.577px 178.342px 189.334px 200.326px 212.2px 223.192px 227.083px 238.075px 247.293px 255.925px 260.41px 270.503px 282.378px 294.252px 305.244px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE SUBSTITUTE PATTERN — WHEN NO SINGLE PERSON COVERS ALL THREE</tspan></text>
     </g>
     <g transform="matrix(1,0,0,1,60,620)">
         <g transform="matrix(1,0,0,1,0,14)">
-            <path d="M400,14L400,226C400,233.727 393.727,240 386,240L14,240C6.273,240 0,233.727 0,226L0,14C0,6.273 6.273,0 14,0L386,0C393.727,0 400,6.273 400,14Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+            <path d="M400,14L400,226C400,233.727 393.727,240 386,240L14,240C6.273,240 0,233.727 0,226L0,14C0,6.273 6.273,0 14,0L386,0C393.727,0 400,6.273 400,14Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
         </g>
         <g transform="matrix(1,0,0,1,0,14)">
-            <path d="M60,14L60,46C60,53.727 53.727,60 46,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L46,0C53.727,0 60,6.273 60,14Z" style="fill:rgb(233,78,27);"/>
+            <path d="M60,14L60,46C60,53.727 53.727,60 46,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L46,0C53.727,0 60,6.273 60,14Z" style="fill:var(--se-accent,#E94E1B);"/>
         </g>
         <g transform="matrix(1,0,0,1,0,14)">
-            <rect x="44" y="0" width="16" height="60" style="fill:rgb(233,78,27);"/>
+            <rect x="44" y="0" width="16" height="60" style="fill:var(--se-accent,#E94E1B);"/>
         </g>
         <g transform="matrix(1,0,0,1,30,54)">
-            <text x="-4.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">1</text>
+            <text x="-4.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">1</text>
         </g>
         <g transform="matrix(1,0,0,1,76,50)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Single-person FDE</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Single-person FDE</text>
         </g>
         <g transform="matrix(1,0,0,1,75,71)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:rgb(75,85,99);">The aspirational ideal. Rare.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-text-secondary,#4b5563);">The aspirational ideal. Rare.</text>
         </g>
         <g transform="matrix(1,0,0,1,139,92)">
-            <circle cx="60" cy="30" r="26" style="fill:white;stroke:rgb(233,78,27);stroke-width:2.5px;"/>
-            <circle cx="60" cy="22" r="9" style="fill:rgb(233,78,27);"/>
-            <path d="M42,42C54,34 66,34 78,42L78,50L42,50L42,42Z" style="fill:rgb(233,78,27);fill-rule:nonzero;"/>
+            <circle cx="60" cy="30" r="26" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:2.5px;"/>
+            <circle cx="60" cy="22" r="9" style="fill:var(--se-accent,#E94E1B);"/>
+            <path d="M42,42C54,34 66,34 78,42L78,50L42,50L42,42Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
             <g transform="matrix(1,0,0,1,60,84)">
-                <text x="-20px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">Amol</text>
+                <text x="-20px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Amol</text>
             </g>
             <g transform="matrix(1,0,0,1,60,105)">
-                <text x="-80.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">All three competencies</text>
+                <text x="-80.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">All three competencies</text>
             </g>
             <g transform="matrix(1,0,0,1,60,121)">
-                <text x="-41.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">in one mind</text>
+                <text x="-41.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">in one mind</text>
             </g>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,500,620)">
         <g transform="matrix(1,0,0,1,0,14)">
-            <path d="M400,14L400,226C400,233.727 393.727,240 386,240L14,240C6.273,240 0,233.727 0,226L0,14C0,6.273 6.273,0 14,0L386,0C393.727,0 400,6.273 400,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+            <path d="M400,14L400,226C400,233.727 393.727,240 386,240L14,240C6.273,240 0,233.727 0,226L0,14C0,6.273 6.273,0 14,0L386,0C393.727,0 400,6.273 400,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         </g>
         <g transform="matrix(1,0,0,1,0,14)">
-            <path d="M60,14L60,46C60,53.727 53.727,60 46,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L46,0C53.727,0 60,6.273 60,14Z" style="fill:rgb(75,85,99);"/>
+            <path d="M60,14L60,46C60,53.727 53.727,60 46,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L46,0C53.727,0 60,6.273 60,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
         </g>
         <g transform="matrix(1,0,0,1,0,14)">
-            <rect x="44" y="0" width="16" height="60" style="fill:rgb(75,85,99);"/>
+            <rect x="44" y="0" width="16" height="60" style="fill:var(--se-text-secondary,#4b5563);"/>
         </g>
         <g transform="matrix(1,0,0,1,30,54)">
-            <text x="-4.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">2</text>
+            <text x="-4.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">2</text>
         </g>
         <g transform="matrix(1,0,0,1,76,50)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">T<tspan x="8.898px 20.453px " y="0px 0px ">wo</tspan>-person substitute</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">T<tspan x="8.898px 20.453px " y="0px 0px ">wo</tspan>-person substitute</text>
         </g>
         <g transform="matrix(1,0,0,1,75,71)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:rgb(75,85,99);">Common. One hybrid + one specialist.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Common. One hybrid + one specialist.</text>
         </g>
         <g transform="matrix(1,0,0,1,59,92)">
-            <circle cx="60" cy="30" r="26" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
-            <circle cx="60" cy="22" r="9" style="fill:rgb(75,85,99);"/>
-            <path d="M42,42C54,34 66,34 78,42L78,50L42,50L42,42Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <circle cx="60" cy="30" r="26" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:2.5px;"/>
+            <circle cx="60" cy="22" r="9" style="fill:var(--se-text-secondary,#4b5563);"/>
+            <path d="M42,42C54,34 66,34 78,42L78,50L42,50L42,42Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
             <g transform="matrix(1,0,0,1,60,84)">
-                <text x="-61.355px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Architect-Product</text>
+                <text x="-61.355px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Architect-Product</text>
             </g>
             <g transform="matrix(1,0,0,1,60,100)">
-                <text x="-21.789px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">hybrid</text>
+                <text x="-21.789px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">hybrid</text>
             </g>
             <g transform="matrix(1,0,0,1,60,123)">
-                <text x="-84.273px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Boundaries + outcomes</text>
+                <text x="-84.273px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Boundaries + outcomes</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,199,152)">
-            <text x="-4.672px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">+</text>
+            <text x="-4.672px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">+</text>
         </g>
         <g transform="matrix(1,0,0,1,219,92)">
-            <circle cx="60" cy="30" r="26" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
-            <circle cx="60" cy="22" r="9" style="fill:rgb(75,85,99);"/>
-            <path d="M42,42C54,34 66,34 78,42L78,50L42,50L42,42Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <circle cx="60" cy="30" r="26" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:2.5px;"/>
+            <circle cx="60" cy="22" r="9" style="fill:var(--se-text-secondary,#4b5563);"/>
+            <path d="M42,42C54,34 66,34 78,42L78,50L42,50L42,42Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
             <g transform="matrix(1,0,0,1,60,84)">
-                <text x="-32.016px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Designer</text>
+                <text x="-32.016px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Designer</text>
             </g>
             <g transform="matrix(1,0,0,1,60,100)">
-                <text x="-55.145px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">who ships code</text>
+                <text x="-55.145px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">who ships code</text>
             </g>
             <g transform="matrix(1,0,0,1,60,123)">
-                <text x="-47.582px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Components,</text>
-                <text x="-52.461px" y="16px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">not wireframes</text>
+                <text x="-47.582px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Components,</text>
+                <text x="-52.461px" y="16px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">not wireframes</text>
             </g>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,940,620)">
         <g transform="matrix(1,0,0,1,0,14)">
-            <path d="M400,14L400,226C400,233.727 393.727,240 386,240L14,240C6.273,240 0,233.727 0,226L0,14C0,6.273 6.273,0 14,0L386,0C393.727,0 400,6.273 400,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+            <path d="M400,14L400,226C400,233.727 393.727,240 386,240L14,240C6.273,240 0,233.727 0,226L0,14C0,6.273 6.273,0 14,0L386,0C393.727,0 400,6.273 400,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         </g>
         <g transform="matrix(1,0,0,1,0,14)">
-            <path d="M60,14L60,46C60,53.727 53.727,60 46,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L46,0C53.727,0 60,6.273 60,14Z" style="fill:rgb(75,85,99);"/>
+            <path d="M60,14L60,46C60,53.727 53.727,60 46,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L46,0C53.727,0 60,6.273 60,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
         </g>
         <g transform="matrix(1,0,0,1,0,14)">
-            <rect x="44" y="0" width="16" height="60" style="fill:rgb(75,85,99);"/>
+            <rect x="44" y="0" width="16" height="60" style="fill:var(--se-text-secondary,#4b5563);"/>
         </g>
         <g transform="matrix(1,0,0,1,30,54)">
-            <text x="-4.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">3</text>
+            <text x="-4.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">3</text>
         </g>
         <g transform="matrix(1,0,0,1,76,50)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Three-person substitute</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Three-person substitute</text>
         </g>
         <g transform="matrix(1,0,0,1,75,71)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:rgb(75,85,99);">Realistic for most engagements.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Realistic for most engagements.</text>
         </g>
         <g transform="matrix(1,0,0,1,19,92)">
-            <circle cx="40" cy="30" r="22" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
-            <circle cx="40" cy="24" r="7" style="fill:rgb(75,85,99);"/>
-            <path d="M26,40C35.333,33.333 44.667,33.333 54,40L54,48L26,48L26,40Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <circle cx="40" cy="30" r="22" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:2.5px;"/>
+            <circle cx="40" cy="24" r="7" style="fill:var(--se-text-secondary,#4b5563);"/>
+            <path d="M26,40C35.333,33.333 44.667,33.333 54,40L54,48L26,48L26,40Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
             <g transform="matrix(1,0,0,1,40,76)">
-                <text x="-27.57px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Product</text>
+                <text x="-27.57px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Product</text>
             </g>
             <g transform="matrix(1,0,0,1,40,91)">
-                <text x="-23.562px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Owner</text>
+                <text x="-23.562px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Owner</text>
             </g>
             <g transform="matrix(1,0,0,1,40,113)">
-                <text x="-48.031px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Deep product</text>
+                <text x="-48.031px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Deep product</text>
             </g>
             <g transform="matrix(1,0,0,1,40,127)">
-                <text x="-38.238px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">mechanics</text>
+                <text x="-38.238px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">mechanics</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,139,148)">
-            <text x="-4.672px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">+</text>
+            <text x="-4.672px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">+</text>
         </g>
         <g transform="matrix(1,0,0,1,149,92)">
-            <circle cx="40" cy="30" r="22" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
-            <circle cx="40" cy="24" r="7" style="fill:rgb(75,85,99);"/>
-            <path d="M26,40C35.333,33.333 44.667,33.333 54,40L54,48L26,48L26,40Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <circle cx="40" cy="30" r="22" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:2.5px;"/>
+            <circle cx="40" cy="24" r="7" style="fill:var(--se-text-secondary,#4b5563);"/>
+            <path d="M26,40C35.333,33.333 44.667,33.333 54,40L54,48L26,48L26,40Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
             <g transform="matrix(1,0,0,1,40,76)">
-                <text x="-28.91px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Solution</text>
+                <text x="-28.91px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Solution</text>
             </g>
             <g transform="matrix(1,0,0,1,40,91)">
-                <text x="-31.121px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Architect</text>
+                <text x="-31.121px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Architect</text>
             </g>
             <g transform="matrix(1,0,0,1,40,113)">
-                <text x="-47.367px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Boundaries +</text>
+                <text x="-47.367px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Boundaries +</text>
             </g>
             <g transform="matrix(1,0,0,1,40,127)">
-                <text x="-32.457px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">contracts</text>
+                <text x="-32.457px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">contracts</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,269,148)">
-            <text x="-4.672px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">+</text>
+            <text x="-4.672px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">+</text>
         </g>
         <g transform="matrix(1,0,0,1,279,92)">
-            <circle cx="40" cy="30" r="22" style="fill:white;stroke:rgb(75,85,99);stroke-width:2.5px;"/>
-            <circle cx="40" cy="24" r="7" style="fill:rgb(75,85,99);"/>
-            <path d="M26,40C35.333,33.333 44.667,33.333 54,40L54,48L26,48L26,40Z" style="fill:rgb(75,85,99);fill-rule:nonzero;"/>
+            <circle cx="40" cy="30" r="22" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:2.5px;"/>
+            <circle cx="40" cy="24" r="7" style="fill:var(--se-text-secondary,#4b5563);"/>
+            <path d="M26,40C35.333,33.333 44.667,33.333 54,40L54,48L26,48L26,40Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
             <g transform="matrix(1,0,0,1,40,76)">
-                <text x="-11.113px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">UX</text>
+                <text x="-11.113px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">UX</text>
             </g>
             <g transform="matrix(1,0,0,1,40,91)">
-                <text x="-32.016px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Designer</text>
+                <text x="-32.016px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Designer</text>
             </g>
             <g transform="matrix(1,0,0,1,40,113)">
-                <text x="-41.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Component</text>
+                <text x="-41.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Component</text>
             </g>
             <g transform="matrix(1,0,0,1,40,127)">
-                <text x="-30.688px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">designer</text>
+                <text x="-30.688px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">designer</text>
             </g>
         </g>
     </g>

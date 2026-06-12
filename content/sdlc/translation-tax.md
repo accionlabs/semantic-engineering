@@ -1,7 +1,7 @@
 ---
 title: "The Manual Translation Tax"
 description: "The structural cost the team pays every day converting unstructured knowledge into action. Four custodians who hold the tacit knowledge. Three components of the tax. The stake-in-the-ground on what stays human. The structural response in two diagrams."
-weight: 20
+weight: 10
 date: 2026-06-04
 lastmod: 2026-06-06
 draft: false
@@ -15,7 +15,7 @@ audience:
 
 The home page named the gap between what AI coding assistants do well and what they struggle with on enterprise codebases, and pointed at the four roles whose tacit knowledge holds enterprise software together: the product owner, the architect, the UX designer, and the engineering team. This page expands on that arc. We start with what those four custodians actually know that the code does not show. Then we explain why that knowledge is so costly to operate without, using the structural lens we have named the Manual Translation Tax. Then we put the stake in the ground on what stays human. Then we show the structural response in a second diagram that pairs with the first.
 
-The companion to this page is [Zones of AI-Assisted SDLC](zones-of-ai-assisted-sdlc/_index.md), which describes the four zones of process matched to four zones of work complexity, with each zone addressing a subset of the Manual Translation Tax as the complexity rises.
+The companion to this page is [Zones of AI-Assisted SDLC](zones/_index.md), which describes the four zones of process matched to four zones of work complexity, with each zone addressing a subset of the Manual Translation Tax as the complexity rises.
 
 ## What the Custodians Know That the Code Does Not Show
 
@@ -49,7 +49,7 @@ This is the situation any AI coding agent walks into. The agent does not have ac
 
 Bigger context windows do not change this. We can feed an agent the entire codebase plus the entire wiki and it still does not have the architect's mental model of what is current. We can feed it the entire backlog and it still does not have the product owner's understanding of which features were deferred for strategic reasons. We can feed it the entire design system documentation and it still does not have the designer's judgment about which component is right for this case. The volume is not the problem. The shape is the problem. The agent needs structured context it can query for the parts that apply to the current task, not more text it has to wade through.
 
-What the agent actually needs is a structured representation of what the four custodians know, in a form it can query for exactly the part that applies to the current task. That representation is the four-layer knowledge graph, walked through in detail in [The Methodology](semantic-knowledge-graphs/_index.md).
+What the agent actually needs is a structured representation of what the four custodians know, in a form it can query for exactly the part that applies to the current task. That representation is the four-layer knowledge graph, walked through in detail in [The Methodology](methodology.md).
 
 ### The Landscape Today
 
@@ -63,7 +63,7 @@ The companion diagram further down on this page (the Structured Landscape) repla
 
 ## The Manual Translation Tax: The Cost, Named
 
-The Manual Translation Tax is what we call the cost the team pays every day converting unstructured knowledge into action. We have used the term in client engagements and methodology briefings for several years; it is a trademark of Accion Labs in the context of software delivery methodology. See [Copyright and Trademark](about/_index.md#copyright-and-trademark) for the broader trademark posture. The knowledge lives in prose specs, ticket descriptions, wiki pages, architecture documents, code comments, Figma files, Slack threads, and the memory of senior engineers. The action is the next decision, the next line of code, the next review comment, the next deployment. Between the two sits a translation step that someone has to perform. Every translation costs time and introduces error.
+The Manual Translation Tax is what we call the cost the team pays every day converting unstructured knowledge into action. We have used the term in client engagements and methodology briefings for several years; it is a trademark of Accion Labs in the context of software delivery methodology. See [Copyright and Trademark](../about/_index.md#copyright-and-trademark) for the broader trademark posture. The knowledge lives in prose specs, ticket descriptions, wiki pages, architecture documents, code comments, Figma files, Slack threads, and the memory of senior engineers. The action is the next decision, the next line of code, the next review comment, the next deployment. Between the two sits a translation step that someone has to perform. Every translation costs time and introduces error.
 
 Five examples of what the tax looks like on a typical engineering team.
 
@@ -162,7 +162,7 @@ Above the granular-needs layer, the same pattern compounds at strategic scale. B
 
 ![What the Engineering Team holds: distributed codebase knowledge extracted into the Code Ontology, plus three judgments that stay human](/diagrams/custodian-engineering-team.svg)
 
-The engineering team is the fourth custodian, and its case has a different shape from the other three. The other three custodians' inputs are upstream of any system: customer conversations, executive priorities, vendor contracts, design research. The engineering team's input is the codebase itself, which is in a system. The brownfield extraction process described in [The Methodology](semantic-knowledge-graphs/_index.md) takes what the engineering team collectively knows about the current code and makes it machine-readable in the Code Ontology. The Code Ontology is the structured version of the distributed tacit knowledge the team carries today, and it solves the distribution problem directly: a question that previously required Slacking three people across two teams now resolves against a single graph the agent can traverse in seconds.
+The engineering team is the fourth custodian, and its case has a different shape from the other three. The other three custodians' inputs are upstream of any system: customer conversations, executive priorities, vendor contracts, design research. The engineering team's input is the codebase itself, which is in a system. The brownfield extraction process described in [The Methodology](methodology.md) takes what the engineering team collectively knows about the current code and makes it machine-readable in the Code Ontology. The Code Ontology is the structured version of the distributed tacit knowledge the team carries today, and it solves the distribution problem directly: a question that previously required Slacking three people across two teams now resolves against a single graph the agent can traverse in seconds.
 
 The engineering team's role does not end with extraction. Three judgments stay with humans on the team, regardless of how complete the Code Ontology becomes.
 
@@ -210,8 +210,10 @@ The knowledge graph holds the Functional, Architecture, Design, and Code ontolog
 
 In the diagram, the specification is the yellow box on the left of the SDLC flow (one of many flowing through in parallel). The knowledge graph is the green container above. The ticket system is implicit but maintained in the team's existing tooling; the Impact Analysis Agent correlates spec, ticket, and graph to produce its impact report.
 
-The misuse pattern most teams hit at Zone 2 is treating the spec as a substitute for the other two. Drift problem follows. We cover this in detail in [The Methodology](semantic-knowledge-graphs/_index.md#three-sources-of-truth).
+The misuse pattern most teams hit at Zone 2 is treating the spec as a substitute for the other two. Drift problem follows. We cover this in detail in [The Methodology](methodology.md#three-sources-of-truth).
 
 ---
 
-The four custodians, the Manual Translation Tax they pay every day, the structural response that gives them a machine-readable medium, and the three sources of truth that organize the response: together these are the conceptual picture of Semantic Engineering. The companion page, [Zones of AI-Assisted SDLC](zones-of-ai-assisted-sdlc/_index.md), describes the four zones of process matched to four zones of work complexity. Each zone explicitly addresses a subset of the Manual Translation Tax components named above, with the unaddressed components becoming the ceiling that drives work into the next zone.
+The four custodians, the Manual Translation Tax they pay every day, the structural response that gives them a machine-readable medium, and the three sources of truth that organize the response: together these are the conceptual picture of Semantic Engineering for continuous SDLC. The companion page, [Zones of AI-Assisted SDLC](zones/_index.md), describes the four zones of process matched to four zones of work complexity. Each zone explicitly addresses a subset of the Manual Translation Tax components named above, with the unaddressed components becoming the ceiling that drives work into the next zone.
+
+The parallel page for legacy modernization is [The Modernization Translation Tax](../modernization/translation-tax.md), which covers the modernization version of the same structural problem (with the reverse-engineering, lost-context, validation-vacuum, and knowledge-disappearance components) and how the modernization methodology addresses each.

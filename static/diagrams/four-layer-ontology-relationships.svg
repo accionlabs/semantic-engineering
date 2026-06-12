@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg class="se-svg" width="100%" height="100%" viewBox="0 0 1200 580" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+    <g transform="matrix(1,0,0,1,600,32)">
+        <text x="-119.448px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:20px;fill:var(--se-text,#111111);">The Four-Layer Ontology</text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,54)">
+        <text x="-277.345px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Each layer is owned by a custodian. Every layer connects to every other layer for cross-layer traceability<tspan x="274.011px " y="0px ">.</tspan></text>
+    </g>
+    <path d="M780,104L780,176C780,183.727 773.727,190 766,190L434,190C426.273,190 420,183.727 420,176L420,104C420,96.273 426.273,90 434,90L766,90C773.727,90 780,96.273 780,104Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,600,120)">
+        <text x="-82.63px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Functional Ontology</text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,142)">
+        <text x="-85.374px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Personas, outcomes, scenarios,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,158)">
+        <text x="-36.686px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">steps, actions</text>
+    </g>
+    <g transform="matrix(1,0,0,1,599.945,178)">
+        <text x="-50.463px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">P<tspan x="-43.017px -34.963px -26.297px -18.243px -10.189px -2.135px 4.694px 7.86px 16.527px 27.019px 35.073px 42.52px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RODUCT OWNER</tspan></text>
+    </g>
+    <path d="M440,254L440,326C440,333.727 433.727,340 426,340L94,340C86.273,340 80,333.727 80,326L80,254C80,246.273 86.273,240 94,240L426,240C433.727,240 440,246.273 440,254Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,260,270)">
+        <text x="-68px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Design Ontology</text>
+    </g>
+    <g transform="matrix(1,0,0,1,260,292)">
+        <text x="-66.032px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Components, molecules,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,260,308)">
+        <g transform="matrix(12,0,0,12,35.349609,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,38.683594,0)">
+        </g>
+        <text x="-62.689px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">atoms, templates, ﬂows</text>
+    </g>
+    <g transform="matrix(1,0,0,1,259.945,328)">
+        <text x="-38.446px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">U<tspan x="-30.392px -22.945px -19.779px -11.725px -4.278px 3.169px 6.335px 15.001px 23.055px 30.502px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">X DESIGNER</tspan></text>
+    </g>
+    <path d="M1120,254L1120,326C1120,333.727 1113.727,340 1106,340L774,340C766.273,340 760,333.727 760,326L760,254C760,246.273 766.273,240 774,240L1106,240C1113.727,240 1120,246.273 1120,254Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,940,270)">
+        <text x="-89.731px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Architecture Ontology</text>
+    </g>
+    <g transform="matrix(1,0,0,1,940,292)">
+        <text x="-57.697px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Services, boundaries,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,940,308)">
+        <text x="-73.386px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">dependencies, data models</text>
+    </g>
+    <g transform="matrix(1,0,0,1,939.945,328)">
+        <text x="-32.215px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">A<tspan x="-24.162px -16.108px -8.054px 0px 3.166px 9.995px 17.442px 25.496px " y="0px 0px 0px 0px 0px 0px 0px 0px ">RCHITECT</tspan></text>
+    </g>
+    <path d="M780,414L780,486C780,493.727 773.727,500 766,500L434,500C426.273,500 420,493.727 420,486L420,414C420,406.273 426.273,400 434,400L766,400C773.727,400 780,406.273 780,414Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,600,430)">
+        <text x="-60.911px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Code Ontology</text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,452)">
+        <text x="-47.687px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Modules, classes,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,600,468)">
+        <text x="-53.37px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">functions, endpoints</text>
+    </g>
+    <g transform="matrix(1,0,0,1,599.945,488)">
+        <text x="-56.44px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="-48.993px -40.939px -32.273px -29.107px -21.053px -13.606px -6.159px 1.895px 5.061px 13.115px 21.781px 24.947px 31.776px 39.223px 47.277px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">NGINEERING TEAM</tspan></text>
+    </g>
+    <path d="M310.655,241.292L300,240L307.426,232.251L310.655,241.292Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M440,190C440,190 335.901,227.178 307.233,237.417" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M892.574,232.251L900,240L889.345,241.292L892.574,232.251Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M760,190C760,190 864.099,227.178 892.767,237.417" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M604.8,390.4L600,400L595.2,390.4L604.8,390.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M600,190L600,392.32" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M573.067,391.806L580,400L569.285,400.63L573.067,391.806Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M440,340C440,340 544.522,384.795 572.941,396.975" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M630.715,400.63L620,400L626.933,391.806L630.715,400.63Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M760,340C760,340 655.478,384.795 627.059,396.975" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M750.4,285.2L760,290L750.4,294.8L750.4,285.2Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M440,290L752.32,290" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <g transform="matrix(1,0,0,1,600,540)">
+        <text x="-301.337px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Cross-layer relationships are how an impact report can trace a user<tspan x="26.165px 29.828px " y="0px 0px ">-s</tspan>tory change all the way to the affected code endpoints.</text>
+    </g>
+</svg>

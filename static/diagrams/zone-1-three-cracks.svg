@@ -1,91 +1,91 @@
-<svg viewBox="0 0 1400 600" xmlns="http://www.w3.org/2000/svg" width="1400" height="600" preserveAspectRatio="xMidYMid meet">
+<svg viewBox="0 0 1400 600" xmlns="http://www.w3.org/2000/svg" width="1400" height="600" preserveAspectRatio="xMidYMid meet" class="se-svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
-    <marker id="arrowGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/></marker>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--se-text-secondary,#4b5563)"/></marker>
+    <marker id="arrowGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--se-panel-stroke,#9ca3af)"/></marker>
     <style>
-      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
-      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
-      .crack { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 19px; font-weight: 700; fill: #E94E1B; }
-      .crackSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #111111; }
-      .iblk { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #111111; font-weight: 600; }
-      .iblkSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #4b5563; }
-      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-style: italic; fill: #4b5563; }
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: var(--se-text,#111111); }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: var(--se-text-secondary,#4b5563); }
+      .crack { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 19px; font-weight: 700; fill: var(--se-accent,#E94E1B); }
+      .crackSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: var(--se-text,#111111); }
+      .iblk { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: var(--se-text,#111111); font-weight: 600; }
+      .iblkSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: var(--se-text-secondary,#4b5563); }
+      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-style: italic; fill: var(--se-text-secondary,#4b5563); }
     </style>
   </defs>
 
   <text x="700" y="45" text-anchor="middle" class="h1">Where Vibe Coding Stops Working</text>
   <text x="700" y="72" text-anchor="middle" class="sub">Three cracks teams hit, repeatedly, once AI lifts implementation speed without changing the medium.</text>
 
-  <rect x="20" y="110" width="440" height="450" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="20" y="110" width="440" height="450" rx="14" ry="14" fill="var(--se-panel-fill-alt,#fafafa)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="240" y="148" text-anchor="middle" class="crack">Crack 1: Code Review</text>
   <text x="240" y="175" text-anchor="middle" class="crackSub">PR size grows 4x. Reviewer has no contract</text>
   <text x="240" y="192" text-anchor="middle" class="crackSub">to verify against. Has to reverse-engineer intent.</text>
 
-  <rect x="80" y="225" width="320" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <rect x="80" y="225" width="320" height="80" rx="10" ry="10" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="1.5"/>
   <text x="240" y="252" text-anchor="middle" class="iblk">30 modified files</text>
   <text x="240" y="275" text-anchor="middle" class="iblkSub">PR description: "implement the alert</text>
   <text x="240" y="293" text-anchor="middle" class="iblkSub">frequency feature per the ticket"</text>
 
-  <path d="M 240 305 L 240 340" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 240 305 L 240 340" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="80" y="345" width="320" height="80" rx="10" ry="10" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <rect x="80" y="345" width="320" height="80" rx="10" ry="10" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1"/>
   <text x="240" y="372" text-anchor="middle" class="iblk">Reviewer reads ticket → spec → code</text>
   <text x="240" y="395" text-anchor="middle" class="iblkSub">tries to reconstruct the intent</text>
   <text x="240" y="412" text-anchor="middle" class="iblkSub">from the diff alone</text>
 
-  <path d="M 240 425 L 240 460" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 240 425 L 240 460" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="80" y="465" width="320" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="240" y="492" text-anchor="middle" class="iblk" fill="#9ca3af">Code review gets slower, not faster</text>
+  <rect x="80" y="465" width="320" height="80" rx="10" ry="10" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="240" y="492" text-anchor="middle" class="iblk" fill="var(--se-panel-stroke,#9ca3af)">Code review gets slower, not faster</text>
   <text x="240" y="515" text-anchor="middle" class="ital">"with AI, review takes longer than</text>
   <text x="240" y="532" text-anchor="middle" class="ital">it used to before we adopted AI"</text>
 
-  <rect x="480" y="110" width="440" height="450" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="480" y="110" width="440" height="450" rx="14" ry="14" fill="var(--se-panel-fill-alt,#fafafa)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="700" y="148" text-anchor="middle" class="crack">Crack 2: Reproducibility</text>
   <text x="700" y="175" text-anchor="middle" class="crackSub">Same prompt, different implementation.</text>
   <text x="700" y="192" text-anchor="middle" class="crackSub">Internal consistency dies a thousand small deaths.</text>
 
-  <rect x="540" y="225" width="320" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <rect x="540" y="225" width="320" height="80" rx="10" ry="10" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="1.5"/>
   <text x="700" y="252" text-anchor="middle" class="iblk">Day 1: "debounced search input"</text>
   <text x="700" y="275" text-anchor="middle" class="iblkSub">agent produces a hook,</text>
   <text x="700" y="293" text-anchor="middle" class="iblkSub">300ms delay, uses lodash</text>
 
-  <path d="M 700 305 L 700 340" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 700 305 L 700 340" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
   <text x="715" y="328" class="ital">two months later, different page</text>
 
-  <rect x="540" y="345" width="320" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <rect x="540" y="345" width="320" height="80" rx="10" ry="10" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="1.5"/>
   <text x="700" y="372" text-anchor="middle" class="iblk">Day 60: "debounced search input"</text>
   <text x="700" y="395" text-anchor="middle" class="iblkSub">agent produces a custom impl,</text>
   <text x="700" y="412" text-anchor="middle" class="iblkSub">500ms delay, uses setTimeout</text>
 
-  <path d="M 700 425 L 700 460" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 700 425 L 700 460" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="540" y="465" width="320" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="700" y="492" text-anchor="middle" class="iblk" fill="#9ca3af">Two debounce behaviors in production</text>
+  <rect x="540" y="465" width="320" height="80" rx="10" ry="10" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="700" y="492" text-anchor="middle" class="iblk" fill="var(--se-panel-stroke,#9ca3af)">Two debounce behaviors in production</text>
   <text x="700" y="515" text-anchor="middle" class="ital">multiply across thousands of small decisions;</text>
   <text x="700" y="532" text-anchor="middle" class="ital">codebase loses internal consistency</text>
 
-  <rect x="940" y="110" width="440" height="450" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="940" y="110" width="440" height="450" rx="14" ry="14" fill="var(--se-panel-fill-alt,#fafafa)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="1160" y="148" text-anchor="middle" class="crack">Crack 3: Post-Incident</text>
   <text x="1160" y="175" text-anchor="middle" class="crackSub">Bug surfaces in production. No audit trail</text>
   <text x="1160" y="192" text-anchor="middle" class="crackSub">from the bug back to the intent that produced it.</text>
 
-  <rect x="1000" y="225" width="320" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5"/>
+  <rect x="1000" y="225" width="320" height="80" rx="10" ry="10" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.5"/>
   <text x="1160" y="252" text-anchor="middle" class="iblk">Production breaks</text>
   <text x="1160" y="275" text-anchor="middle" class="iblkSub">traced to a PR from</text>
   <text x="1160" y="293" text-anchor="middle" class="iblkSub">six weeks ago</text>
 
-  <path d="M 1160 305 L 1160 340" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1160 305 L 1160 340" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="1000" y="345" width="320" height="80" rx="10" ry="10" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <rect x="1000" y="345" width="320" height="80" rx="10" ry="10" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1"/>
   <text x="1160" y="372" text-anchor="middle" class="iblk">Team looks for the trail</text>
   <text x="1160" y="395" text-anchor="middle" class="iblkSub">PR description: one sentence.</text>
   <text x="1160" y="412" text-anchor="middle" class="iblkSub">Reviewer comments: three messages.</text>
 
-  <path d="M 1160 425 L 1160 460" stroke="#4b5563" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1160 425 L 1160 460" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="1000" y="465" width="320" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="1160" y="492" text-anchor="middle" class="iblk" fill="#9ca3af">Cannot answer "what was this</text>
-  <text x="1160" y="515" text-anchor="middle" class="iblk" fill="#9ca3af">change supposed to do?"</text>
+  <rect x="1000" y="465" width="320" height="80" rx="10" ry="10" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="1160" y="492" text-anchor="middle" class="iblk" fill="var(--se-panel-stroke,#9ca3af)">Cannot answer "what was this</text>
+  <text x="1160" y="515" text-anchor="middle" class="iblk" fill="var(--se-panel-stroke,#9ca3af)">change supposed to do?"</text>
   <text x="1160" y="535" text-anchor="middle" class="ital">cannot prevent next similar incident</text>
 </svg>

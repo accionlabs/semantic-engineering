@@ -1,0 +1,32 @@
+{{- /*
+  Project image render hook.
+  When the source is a local SVG (path under /diagrams/ and ends in .svg),
+  inline its content so that the canonical /css/se-diagrams.css cascades
+  into the SVG and theming follows the site's light/dark mode.
+
+  For any other image source (raster files, external URLs, non-/diagrams SVGs),
+  fall back to a plain <img> tag with the standard alt/title attributes.
+*/ -}}
+{{- $src       := .Destination -}}
+{{- $isSvg     := hasSuffix (lower $src) ".svg" -}}
+{{- $isLocal   := hasPrefix $src "/" -}}
+{{- $inDiagDir := or (hasPrefix $src "/diagrams/") (hasPrefix $src "diagrams/") -}}
+
+{{- if and $isSvg $isLocal $inDiagDir -}}
+  {{- $relPath  := strings.TrimPrefix "/" $src -}}
+  {{- $diskPath := printf "static/%s" $relPath -}}
+  {{- $svg      := "" -}}
+  {{- if (fileExists $diskPath) -}}
+    {{- $svg = (readFile $diskPath) -}}
+  {{- end -}}
+  {{- if $svg -}}
+    <figure class="se-diagram" role="img"{{ with .PlainText }} aria-label="{{ . }}"{{ end }}>
+      {{- $svg | safeHTML -}}
+      {{- with .Title -}}<figcaption>{{ . }}</figcaption>{{- end -}}
+    </figure>
+  {{- else -}}
+    <img src="{{ $src | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy"/>
+  {{- end -}}
+{{- else -}}
+  <img src="{{ $src | safeURL }}" alt="{{ .PlainText }}"{{ with .Title }} title="{{ . }}"{{ end }} loading="lazy"/>
+{{- end -}}

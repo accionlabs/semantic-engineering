@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1600 720" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,800,34)">
+        <text x="-309.375px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:24px;fill:var(--se-text,#111111);">The Five Engagement Modes of Legacy Modernization</text>
+    </g>
+    <g transform="matrix(1,0,0,1,800,58)">
+        <text x="-321.547px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);">Entry points sized to what the client is ready to commit to. Clients enter at any mode and may stop at any mode.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,42,-26)">
+        <circle cx="120" cy="130" r="20" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,162,109)">
+        <text x="-3.893px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-box-fill,#ffffff);">1</text>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M280,184L280,336C280,343.727 273.727,350 266,350L54,350C46.273,350 40,343.727 40,336L40,184C40,176.273 46.273,170 54,170L266,170C273.727,170 280,176.273 280,184Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,164,166)">
+        <text x="-73.337px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Documentation Only</text>
+    </g>
+    <g transform="matrix(1,0,0,1,164,192)">
+        <text x="-79.025px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Functional + technical docs from</text>
+    </g>
+    <g transform="matrix(1,0,0,1,164,208)">
+        <text x="-74.29px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">the legacy code. No migration.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,163.945,236)">
+        <text x="-54.399px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">T<tspan x="-47.57px -40.123px -32.676px -29.51px -21.456px -13.402px -6.772px -3.605px 4.448px 12.502px 20.556px 27.794px 34.623px 37.789px 46.455px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL DURATION</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,164,254)">
+        <text x="-33.686px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">2 to 6 weeks</text>
+    </g>
+    <g transform="matrix(1,0,0,1,163.945,282)">
+        <text x="-16.968px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">W<tspan x="-6.476px 1.578px 9.025px " y="0px 0px 0px ">HEN</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,164,300)">
+        <text x="-76.423px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">SMEs are leaving; legacy stays</text>
+    </g>
+    <g transform="matrix(1,0,0,1,49,-24)">
+        <circle cx="420" cy="130" r="20" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,469,111)">
+        <text x="-3.893px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-box-fill,#ffffff);">2</text>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M580,184L580,336C580,343.727 573.727,350 566,350L354,350C346.273,350 340,343.727 340,336L340,184C340,176.273 346.273,170 354,170L566,170C573.727,170 580,176.273 580,184Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,464,166)">
+        <text x="-51.273px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Discovery and</text>
+    </g>
+    <g transform="matrix(1,0,0,1,464,182)">
+        <text x="-54.584px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Documentation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,464,206)">
+        <text x="-82.852px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Dependency map, business rules,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,464,222)">
+        <g transform="matrix(11,0,0,11,-43.248047,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-40.191895,0)">
+        </g>
+        <text x="-84.82px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">process ﬂows + SME review packs</text>
+    </g>
+    <g transform="matrix(1,0,0,1,463.945,246)">
+        <text x="-54.399px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">T<tspan x="-47.57px -40.123px -32.676px -29.51px -21.456px -13.402px -6.772px -3.605px 4.448px 12.502px 20.556px 27.794px 34.623px 37.789px 46.455px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL DURATION</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,464,264)">
+        <text x="-37.022px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">4 to 10 weeks</text>
+    </g>
+    <g transform="matrix(1,0,0,1,463.945,288)">
+        <text x="-16.968px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">W<tspan x="-6.476px 1.578px 9.025px " y="0px 0px 0px ">HEN</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,464,306)">
+        <text x="-65.425px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Considering modernization</text>
+    </g>
+    <g transform="matrix(1,0,0,1,42,-26)">
+        <circle cx="720" cy="130" r="20" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,762,109)">
+        <text x="-3.893px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-box-fill,#ffffff);">3</text>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M880,184L880,336C880,343.727 873.727,350 866,350L654,350C646.273,350 640,343.727 640,336L640,184C640,176.273 646.273,170 654,170L866,170C873.727,170 880,176.273 880,184Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,764,166)">
+        <text x="-73.348px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Migration Readiness</text>
+    </g>
+    <g transform="matrix(1,0,0,1,764,192)">
+        <text x="-64.507px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Module-level scope, target</text>
+    </g>
+    <g transform="matrix(1,0,0,1,764,208)">
+        <text x="-60.108px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">mapping, R<tspan x="-4.055px 2.664px " y="0px 0px ">TM</tspan>, risk view</text>
+    </g>
+    <g transform="matrix(1,0,0,1,763.945,236)">
+        <text x="-54.399px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">T<tspan x="-47.57px -40.123px -32.676px -29.51px -21.456px -13.402px -6.772px -3.605px 4.448px 12.502px 20.556px 27.794px 34.623px 37.789px 46.455px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL DURATION</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,764,254)">
+        <text x="-37.022px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">6 to 12 weeks</text>
+    </g>
+    <g transform="matrix(1,0,0,1,763.945,282)">
+        <text x="-16.968px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">W<tspan x="-6.476px 1.578px 9.025px " y="0px 0px 0px ">HEN</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,764,300)">
+        <text x="-78.584px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Decision taken; need foundation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,42,-28)">
+        <circle cx="1020" cy="130" r="22" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1062,107)">
+        <text x="-3.893px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-box-fill,#ffffff);">4</text>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M1180,184L1180,336C1180,343.727 1173.727,350 1166,350L954,350C946.273,350 940,343.727 940,336L940,184C940,176.273 946.273,170 954,170L1166,170C1173.727,170 1180,176.273 1180,184Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1064,166)">
+        <text x="-66.244px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Full Modernization</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1064,192)">
+        <text x="-66.964px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">End-to-end agentic pipeline</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1064,208)">
+        <text x="-68.79px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">across the 5 stages, 4 gates</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1063.945,236)">
+        <text x="-54.399px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">T<tspan x="-47.57px -40.123px -32.676px -29.51px -21.456px -13.402px -6.772px -3.605px 4.448px 12.502px 20.556px 27.794px 34.623px 37.789px 46.455px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL DURATION</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,1064,254)">
+        <text x="-46.351px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Quarters to years</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1063.945,282)">
+        <text x="-16.968px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">W<tspan x="-6.476px 1.578px 9.025px " y="0px 0px 0px ">HEN</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,1064,300)">
+        <text x="-64.499px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Committed to replacement</text>
+    </g>
+    <g transform="matrix(1,0,0,1,82,-27)">
+        <circle cx="1320" cy="130" r="20" style="fill:var(--se-accent,#E94E1B);"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1402,108)">
+        <text x="-3.893px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-box-fill,#ffffff);">5</text>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M1560,184L1560,336C1560,343.727 1553.727,350 1546,350L1254,350C1246.273,350 1240,343.727 1240,336L1240,184C1240,176.273 1246.273,170 1254,170L1546,170C1553.727,170 1560,176.273 1560,184Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1404,166)">
+        <text x="-80.431px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Maintain, Operate, and</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1404,182)">
+        <text x="-47.516px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Convergence</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1404,206)">
+        <text x="-80.722px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Living knowledge graph, change-</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1404,222)">
+        <text x="-70.622px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">impact support, convergence</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1403.945,246)">
+        <text x="-54.399px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">T<tspan x="-47.57px -40.123px -32.676px -29.51px -21.456px -13.402px -6.772px -3.605px 4.448px 12.502px 20.556px 27.794px 34.623px 37.789px 46.455px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL DURATION</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,1404,264)">
+        <text x="-30.354px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Continuous</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1403.945,288)">
+        <text x="-16.968px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">W<tspan x="-6.476px 1.578px 9.025px " y="0px 0px 0px ">HEN</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,1404,306)">
+        <text x="-58.392px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Modernization complete</text>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M280,260L340,260" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M580,260L640,260" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M880,260L940,260" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M1180,260L1240,260" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    </g>
+    <g>
+        <g transform="matrix(1,0,0,1,4,-30)">
+            <g transform="matrix(1,-0,-0,1,-4,30)">
+                <path d="M168.5,381L164,390L159.5,381L168.5,381Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+                <path d="M164,320L164,382.8" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;stroke-dasharray:4.286,4.286;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,4,-30)">
+            <g transform="matrix(1,-0,-0,1,-4,30)">
+                <path d="M468.5,381L464,390L459.5,381L468.5,381Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+                <path d="M464,320L464,382.8" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;stroke-dasharray:4.286,4.286;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,4,-30)">
+            <g transform="matrix(1,-0,-0,1,-4,30)">
+                <path d="M768.5,381L764,390L759.5,381L768.5,381Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+                <path d="M764,320L764,382.8" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;stroke-dasharray:4.286,4.286;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,4,-30)">
+            <g transform="matrix(1,-0,-0,1,-4,30)">
+                <path d="M1068.5,381L1064,390L1059.5,381L1068.5,381Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+                <path d="M1064,320L1064,382.8" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;stroke-dasharray:4.286,4.286;"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,4,-30)">
+            <g transform="matrix(1,-0,-0,1,-4,30)">
+                <path d="M1408.5,381L1404,390L1399.5,381L1408.5,381Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+                <path d="M1404,320L1404,382.8" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;stroke-dasharray:4.286,4.286;"/>
+            </g>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M1560,442L1560,482C1560,488.623 1554.623,494 1548,494L52,494C45.377,494 40,488.623 40,482L40,442C40,435.377 45.377,430 52,430L1548,430C1554.623,430 1560,435.377 1560,442Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,803.935,426)">
+        <text x="-253.653px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">C<tspan x="-244.135px -236.064px -232.322px -223.521px -214.003px -205.932px -202.19px -191.231px -182.906px -174.34px -170.599px -161.798px -153.962px -143.72px -135.154px -131.894px -123.341px -115.27px -112.011px -102.493px -92.974px -84.408px -80.667px -69.707px -59.466px -49.947px -41.147px -37.405px -32.946px -29.204px -18.962px -9.444px -5.702px 3.099px 12.617px 22.859px 33.101px 42.619px 51.42px 60.221px 69.022px 72.763px 80.599px 90.841px 94.583px 102.654px 112.172px 120.973px 124.715px 134.233px 143.034px 151.835px 159.906px 163.648px 176.048px 185.566px 194.367px 203.885px 207.627px 217.145px 225.946px 235.464px 244.982px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">LIENT MAY STOP AT ANY MODE · OR PROGRESS TO THE NEXT WHEN READY</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,804,448)">
+        <g transform="matrix(11,0,0,11,-16.416748,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,-13.360596,0)">
+        </g>
+        <text x="-303.76px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Many clients stay at Documentation Only or Discovery indeﬁnitely<tspan x="13.946px 17.002px " y="0px 0px ">. </tspan>Most who reach Full Modernization continue into Maintain.</text>
+    </g>
+    <g transform="matrix(1,0,0,1,804,500)">
+        <text x="-163.748px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">T<tspan x="-155.969px -150.521px " y="0px 0px ">ra</tspan>nslation T<tspan x="-77.663px -69.877px " y="0px 0px ">ax</tspan> Components <tspan x="30.721px 40.831px " y="0px 0px ">Ad</tspan>dressed by Mode</text>
+    </g>
+    <g>
+        <g transform="matrix(1,0,0,1,294,538)">
+            <text x="-20.669px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Mode 1</text>
+        </g>
+        <g transform="matrix(1,0,0,1,294,552)">
+            <text x="-20.562px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:var(--se-text-secondary,#4b5563);">Doc Only</text>
+        </g>
+        <g transform="matrix(1,0,0,1,514,538)">
+            <text x="-20.669px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Mode 2</text>
+        </g>
+        <g transform="matrix(1,0,0,1,514,552)">
+            <text x="-21.948px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:var(--se-text-secondary,#4b5563);">Discovery</text>
+        </g>
+        <g transform="matrix(1,0,0,1,734,538)">
+            <text x="-20.669px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Mode 3</text>
+        </g>
+        <g transform="matrix(1,0,0,1,734,552)">
+            <text x="-23.625px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:var(--se-text-secondary,#4b5563);">Readiness</text>
+        </g>
+        <g transform="matrix(1,0,0,1,954,538)">
+            <text x="-20.669px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Mode 4</text>
+        </g>
+        <g transform="matrix(1,0,0,1,954,552)">
+            <text x="-20.562px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:var(--se-text-secondary,#4b5563);">Full Mod.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1174,538)">
+            <text x="-20.669px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Mode 5</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1174,552)">
+            <text x="-18.899px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:10px;fill:var(--se-text-secondary,#4b5563);">Maintain</text>
+        </g>
+    </g>
+    <g>
+        <g transform="matrix(1,0,0,1,44,580)">
+            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-text,#111111);">Reverse-engineering tax</text>
+        </g>
+        <g transform="matrix(1,0,0,1,44,610)">
+            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-text,#111111);">Lost-context tax</text>
+        </g>
+        <g transform="matrix(1,0,0,1,44,640)">
+            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-text,#111111);">V<tspan x="6.73px 12.848px " y="0px 0px ">al</tspan>idation-vacuum tax</text>
+        </g>
+        <g transform="matrix(1,0,0,1,44,670)">
+            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-text,#111111);">Knowledge-disappearance tax</text>
+        </g>
+    </g>
+    <g>
+        <g transform="matrix(1,0,0,1,294,582)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,514,582)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,734,582)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,954,582)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1174,582)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,294,612)">
+            <text x="-7.785px" y="0px" style="font-family:'AppleSDGothicNeo-Bold', 'Apple SD Gothic Neo';font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">◐</text>
+        </g>
+        <g transform="matrix(1,0,0,1,514,612)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,734,612)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,954,612)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1174,612)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,294,642)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">○</text>
+        </g>
+        <g transform="matrix(1,0,0,1,514,642)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">○</text>
+        </g>
+        <g transform="matrix(1,0,0,1,734,642)">
+            <text x="-7.785px" y="0px" style="font-family:'AppleSDGothicNeo-Bold', 'Apple SD Gothic Neo';font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">◐</text>
+        </g>
+        <g transform="matrix(1,0,0,1,954,642)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1174,642)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,294,672)">
+            <text x="-7.785px" y="0px" style="font-family:'AppleSDGothicNeo-Bold', 'Apple SD Gothic Neo';font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">◐</text>
+        </g>
+        <g transform="matrix(1,0,0,1,514,672)">
+            <text x="-7.785px" y="0px" style="font-family:'AppleSDGothicNeo-Bold', 'Apple SD Gothic Neo';font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">◐</text>
+        </g>
+        <g transform="matrix(1,0,0,1,734,672)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,954,672)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1174,672)">
+            <text x="-5.436px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,4,-30)">
+        <path d="M225,556L225,710" style="fill:none;fill-rule:nonzero;stroke:var(--se-grid,#d1d5db);stroke-width:1px;"/>
+    </g>
+    <g>
+        <g transform="matrix(1,0,0,1,1304,582)">
+            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-accent,#E94E1B);">●</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1334,585)">
+            <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Closed</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1304,612)">
+            <text x="0px" y="0px" style="font-family:'AppleSDGothicNeo-Bold', 'Apple SD Gothic Neo';font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">◐</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1334,615)">
+            <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Partial</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1304,642)">
+            <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-text-secondary,#4b5563);">○</text>
+        </g>
+        <g transform="matrix(1,0,0,1,1334,645)">
+            <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Not addressed</text>
+        </g>
+    </g>
+</svg>

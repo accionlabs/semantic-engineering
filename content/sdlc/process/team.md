@@ -36,7 +36,7 @@ In our client conversations we set the expectation early: the methodology can be
 
 > **How Accion Labs supports the team transition**
 >
-> The [engagement model](../practitioner/_index.md#engagement-model) covers Advise, Launch, Scale, and Optimize phases. The Forward-Deployed Engineer program is a named offer in [Practitioner services](../practitioner/_index.md#services). Managed support tiers (Light Governance, Medium Curation, Deep Operations) are described on the [Enablement Partnership](enablement-partnership.md) page.
+> The [engagement model](../../practitioner/_index.md#engagement-model) covers Advise, Launch, Scale, and Optimize phases. The Forward-Deployed Engineer program is a named offer in [Practitioner services](../../practitioner/_index.md#services). Managed support tiers (Light Governance, Medium Curation, Deep Operations) are described on the [Enablement Partnership](enablement-partnership.md) page.
 
 ---
 
@@ -312,7 +312,7 @@ In our client conversations we set the expectation early: the methodology can be
 
 > **How Accion Labs operationalizes the FDE program**
 >
-> Accion Labs's [Forward-Deployed Engineer program](../practitioner/_index.md#services) is a named offer. The program identifies candidates inside the client's top accounts, grooms them over two to three quarters, and mandates them to the spec sprint cadence with delivery manager support.
+> Accion Labs's [Forward-Deployed Engineer program](../../practitioner/_index.md#services) is a named offer. The program identifies candidates inside the client's top accounts, grooms them over two to three quarters, and mandates them to the spec sprint cadence with delivery manager support.
 
 ---
 
@@ -367,8 +367,8 @@ The cumulative cost over three years is typically lower for the SE-driven engage
 
 > **How Accion Labs frames the engagement conversation**
 >
-> The [two-day deep-dive workshop](../practitioner/_index.md#services) includes a session on the engagement frame. The workshop output describes both an effort-based engagement option and a deliverable-based engagement option, with the trade-offs explained. The client chooses the frame that matches their procurement environment.
+> The [two-day deep-dive workshop](../../practitioner/_index.md#services) includes a session on the engagement frame. The workshop output describes both an effort-based engagement option and a deliverable-based engagement option, with the trade-offs explained. The client chooses the frame that matches their procurement environment.
 
 ---
 
-[The Enablement Partnership](enablement-partnership.md) is the engagement frame that supports the custodianship layer across years. [Case Archetypes](../case-archetypes.md) walks two real engagements that ran under this operating model.
+[The Enablement Partnership](enablement-partnership.md) is the engagement frame that supports the custodianship layer across years. [Case Archetypes: Continuous SDLC](../case-archetypes.md) walks two real engagements that ran under this operating model.

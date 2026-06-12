@@ -1,7 +1,7 @@
 ---
 title: "Zones of AI-Assisted SDLC"
 description: "The four zones of process matched to four zones of work complexity, from manual / vibe coding to Spec-Driven Development to SDD plus Semantic Engineering to SE at Scale. Each zone addresses a subset of the Manual Translation Tax as complexity rises."
-weight: 30
+weight: 20
 date: 2026-06-04
 lastmod: 2026-06-09
 draft: false
@@ -14,7 +14,7 @@ audience:
   - cio
 ---
 
-The companion to this section is [The Manual Translation Tax](../manual-translation-tax.md), which sets up the problem. This section is about which process to use for which work. The Manual Translation Tax scales with the complexity of the work being done, and the right process to handle it changes as that complexity rises. The four zones below are each sized for a complexity range. The question this section answers is which zone of process fits the work in front of you.
+The companion to this section is [The Manual Translation Tax](../translation-tax.md), which sets up the problem. This section is about which process to use for which work. The Manual Translation Tax scales with the complexity of the work being done, and the right process to handle it changes as that complexity rises. The four zones below are each sized for a complexity range. The question this section answers is which zone of process fits the work in front of you.
 
 ## How the Manual Translation Tax Scales with Work Complexity
 
@@ -39,7 +39,6 @@ Each zone of process is sized for a complexity range. Each zone keeps what the p
 
 Most enterprise work in 2026 sits in the Zone 1 to Zone 2 complexity zone. Most enterprise teams use AI coding tools at the individual-developer level for small contained work, with isolated SDD discipline on specific workstreams. A growing minority have made SDD their standard for single-team work. A small number are operating at Zone 3 for the workstreams that need it.
 
-If you are not sure which process fits the work in front of you, [take the self-assessment](../self-assessment.md).
 
 ### The Detailed Mapping by MTT Component
 
@@ -67,7 +66,7 @@ Zone 2 fails at the four ceilings that surface when work crosses team boundaries
 
 **The right process when the work spans multiple teams or hits brownfield depth on a single product.** A knowledge graph of the application sits alongside the per-change specifications. The graph captures four connected layers: Functional (the product owner's), Architecture (the architect's), Design (the designer's), and Code (the engineering team's). Every change runs through pre-implementation impact analysis. Every merge updates the graph automatically. The four custodians write into structured ontologies that the agent reads directly. The Manual Translation Tax collapses because the medium changes from text artifacts to machine-readable ontologies.
 
-The structural substrate is in [Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md). The operating model that runs the substrate is in [Process](../process/_index.md). The two together are what Zone 3 looks like in practice.
+The structural substrate is in [Semantic Knowledge Graphs](../methodology.md). The operating model that runs the substrate is in [Process](../process/_index.md). The two together are what Zone 3 looks like in practice.
 
 ## Zone 4: SE at Scale
 
@@ -94,4 +93,3 @@ The methodology itself rolls out in weeks. The operating model that delivers its
 
 ---
 
-[Zone 1: Manual / Vibe Coding](zone-1-manual-vibe-coding.md) and [Zone 2: Spec-Driven Development](zone-2-spec-driven-development.md) are where most teams are today. [Semantic Knowledge Graphs](../semantic-knowledge-graphs/_index.md) and [Process](../process/_index.md) are where teams arrive at Zone 3 and Zone 4. The [Self-Assessment](../self-assessment.md) is a six-question diagnostic that recommends a starting point.

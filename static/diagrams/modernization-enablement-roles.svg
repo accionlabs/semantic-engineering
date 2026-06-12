@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 760" width="1500" height="760" preserveAspectRatio="xMidYMid meet" class="se-svg">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:var(--se-arrow,#4b5563);"/>
+    </marker>
+    <marker id="aro" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:var(--se-accent,#E94E1B);"/>
+    </marker>
+  </defs>
+
+  <text x="750" y="34" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text,#111111);">The Modernization Enablement Frame</text>
+  <text x="750" y="58" text-anchor="middle" style="font-size:12px;fill:var(--se-text-secondary,#4b5563);">Client custodians govern the ontologies. The implementing partner runs the agentic pipeline. Both persist into ongoing operation if the engagement transitions.</text>
+
+  <!-- =====================================================================
+       BAND 1: Client side (custodians)
+       ===================================================================== -->
+  <text x="80" y="100" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">CLIENT SIDE  ·  CUSTODIANS</text>
+  <text x="80" y="118" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">The four custodian roles own the modernization ontologies through the engagement and continue into ongoing operation of the modernized system.</text>
+
+  <rect x="40"   y="140" width="340" height="140" rx="14" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
+  <text x="210"  y="168" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--se-text,#111111);">Product Owner</text>
+  <text x="210"  y="192" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Parity contract: Retain / Modify /</text>
+  <text x="210"  y="208" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Replace / Retire per module</text>
+  <text x="210"  y="234" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">DURING</text>
+  <text x="210"  y="252" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">specification annotation, functional</text>
+  <text x="210"  y="266" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">gate review, UAT validation</text>
+
+  <rect x="395"  y="140" width="340" height="140" rx="14" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
+  <text x="565"  y="168" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--se-text,#111111);">Architect</text>
+  <text x="565"  y="192" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Target architecture, standards,</text>
+  <text x="565"  y="208" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">integration boundaries</text>
+  <text x="565"  y="234" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">DURING</text>
+  <text x="565"  y="252" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">target blueprint, standards gate,</text>
+  <text x="565"  y="266" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">architecture gate review</text>
+
+  <rect x="750"  y="140" width="340" height="140" rx="14" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
+  <text x="920"  y="168" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--se-text,#111111);">UX Designer</text>
+  <text x="920"  y="192" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Target design system, interaction</text>
+  <text x="920"  y="208" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">patterns where UI is in scope</text>
+  <text x="920"  y="234" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">DURING</text>
+  <text x="920"  y="252" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">target blueprint, design gate</text>
+  <text x="920"  y="266" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">review</text>
+
+  <rect x="1105" y="140" width="360" height="140" rx="14" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
+  <text x="1285" y="168" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--se-text,#111111);">Engineering Team</text>
+  <text x="1285" y="192" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Source code interpretation +</text>
+  <text x="1285" y="208" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">target code standards</text>
+  <text x="1285" y="234" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">DURING</text>
+  <text x="1285" y="252" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">ingestion review, code-level</text>
+  <text x="1285" y="266" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Retain/Modify/Replace input, UAT</text>
+
+  <!-- =====================================================================
+       BAND 2: Implementing partner side
+       ===================================================================== -->
+  <text x="80" y="330" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">IMPLEMENTING PARTNER SIDE  ·  DELIVERY ROLES</text>
+  <text x="80" y="348" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Roles run the agentic pipeline during the bounded engagement. They hand over cleanly when the modernization completes.</text>
+
+  <rect x="40"   y="370" width="340" height="140" rx="14" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
+  <text x="210"  y="398" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--se-text,#111111);">Modernization Expert</text>
+  <text x="210"  y="422" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Runs the agent fleet, performs the</text>
+  <text x="210"  y="438" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">per-iteration Expert Review</text>
+  <text x="210"  y="464" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">SCOPE</text>
+  <text x="210"  y="482" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Engagement-specific tuning, agent</text>
+  <text x="210"  y="496" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">configuration, gate calibration</text>
+
+  <rect x="395"  y="370" width="340" height="140" rx="14" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
+  <text x="565"  y="398" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--se-text,#111111);">Engagement Chief Architect</text>
+  <text x="565"  y="422" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Validation oversight across the four</text>
+  <text x="565"  y="438" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">AVF gates</text>
+  <text x="565"  y="464" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">SCOPE</text>
+  <text x="565"  y="482" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Architecture and standards gates,</text>
+  <text x="565"  y="496" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">target blueprint partnership</text>
+
+  <rect x="750"  y="370" width="340" height="140" rx="14" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
+  <text x="920"  y="398" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--se-text,#111111);">Ontology Engineers</text>
+  <text x="920"  y="422" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Source-state and Target-state</text>
+  <text x="920"  y="438" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">ontology build and curation</text>
+  <text x="920"  y="464" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">SCOPE</text>
+  <text x="920"  y="482" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Graph schemas, enrichment passes,</text>
+  <text x="920"  y="496" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">specification format management</text>
+
+  <rect x="1105" y="370" width="360" height="140" rx="14" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
+  <text x="1285" y="398" text-anchor="middle" style="font-size:16px;font-weight:700;fill:var(--se-text,#111111);">Deployment Engineering</text>
+  <text x="1285" y="422" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">UAT, cutover, parallel-run windows,</text>
+  <text x="1285" y="438" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">traffic-shifting</text>
+  <text x="1285" y="464" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">SCOPE</text>
+  <text x="1285" y="482" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Stage 5 deployment and</text>
+  <text x="1285" y="496" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">production hand-over</text>
+
+  <!-- Pairing lines between client custodians and partner roles -->
+  <g style="stroke:var(--se-accent,#E94E1B);stroke-width:1.4;fill:none;stroke-dasharray:5,5;">
+    <path d="M210,280 L210,370"/>
+    <path d="M565,280 L565,370"/>
+    <path d="M920,280 L920,370"/>
+    <path d="M1285,280 L1285,370"/>
+  </g>
+  <text x="750" y="328" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-accent,#E94E1B);">Each custodian role pairs with the implementing-partner role doing the corresponding gate review.</text>
+
+  <!-- =====================================================================
+       BAND 3: Lifetime and transition
+       ===================================================================== -->
+  <rect x="40"   y="560" width="1425" height="100" rx="14" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1;"/>
+  <text x="60" y="588" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">LIFETIME  ·  WHAT PERSISTS AFTER MODERNIZATION</text>
+
+  <text x="80" y="616" style="font-size:12px;fill:var(--se-text,#111111);"><tspan style="font-weight:700;">Custodians (orange):</tspan> continue into ongoing operation. If the engagement transitions to continuous SDLC,</text>
+  <text x="80" y="634" style="font-size:12px;fill:var(--se-text,#111111);">the same four custodians take over the four-layer ontology under the sprint cadence.</text>
+
+  <text x="800" y="616" style="font-size:12px;fill:var(--se-text,#111111);"><tspan style="font-weight:700;">Partner delivery roles (white):</tspan> close at hand-over unless the engagement transitions; the agent</text>
+  <text x="800" y="634" style="font-size:12px;fill:var(--se-text,#111111);">configurations and tuning history are delivered as artifacts at hand-over per the offboarding doctrine.</text>
+
+  <text x="750" y="710" text-anchor="middle" style="font-size:12px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">The custodial position is the continuity. The partner roles are the bounded delivery muscle.</text>
+</svg>

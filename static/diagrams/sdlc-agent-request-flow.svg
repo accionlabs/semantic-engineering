@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 660" width="1400" height="660" preserveAspectRatio="xMidYMid meet" class="se-svg">
+  <defs>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:var(--se-arrow,#4b5563);"/>
+    </marker>
+    <marker id="arSolid" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" style="fill:var(--se-accent,#E94E1B);"/>
+    </marker>
+  </defs>
+
+  <text x="700" y="32" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text,#111111);">How a Request Flows Through the Fleet</text>
+  <text x="700" y="56" text-anchor="middle" style="font-size:12px;fill:var(--se-text-secondary,#4b5563);">A user story is routed through orchestration, traverses the graph, and returns to the human as a refined spec with an impact report.</text>
+
+  <!-- Lane headers -->
+  <g style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">
+    <text x="115"  y="100" text-anchor="middle">Product Owner</text>
+    <text x="315"  y="100" text-anchor="middle">Top-Level</text>
+    <text x="315"  y="118" text-anchor="middle">Orchestrator</text>
+    <text x="515"  y="100" text-anchor="middle">Workstream</text>
+    <text x="515"  y="118" text-anchor="middle">Sub-Orchestrator</text>
+    <text x="715"  y="100" text-anchor="middle">Impact Analysis</text>
+    <text x="715"  y="118" text-anchor="middle">Agent</text>
+    <text x="915"  y="100" text-anchor="middle">Knowledge</text>
+    <text x="915"  y="118" text-anchor="middle">Graph</text>
+    <text x="1170" y="100" text-anchor="middle">Forward-Deployed</text>
+    <text x="1170" y="118" text-anchor="middle">Engineer</text>
+  </g>
+
+  <!-- Lifelines -->
+  <g style="stroke:var(--se-grid,#d1d5db);stroke-width:1;stroke-dasharray:4,4;">
+    <line x1="115"  y1="135" x2="115"  y2="600"/>
+    <line x1="315"  y1="135" x2="315"  y2="600"/>
+    <line x1="515"  y1="135" x2="515"  y2="600"/>
+    <line x1="715"  y1="135" x2="715"  y2="600"/>
+    <line x1="915"  y1="135" x2="915"  y2="600"/>
+    <line x1="1170" y1="135" x2="1170" y2="600"/>
+  </g>
+
+  <!-- Messages (top to bottom) -->
+  <!-- 1: PO -> TL: submit user story -->
+  <path d="M115,170 L307,170" marker-end="url(#ar)" style="stroke:var(--se-arrow,#4b5563);stroke-width:1.8;fill:none;"/>
+  <text x="211" y="162" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--se-text,#111111);">Submit user story (spec)</text>
+
+  <!-- 2: TL -> SL: route to workstream -->
+  <path d="M315,220 L507,220" marker-end="url(#ar)" style="stroke:var(--se-arrow,#4b5563);stroke-width:1.8;fill:none;"/>
+  <text x="415" y="212" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--se-text,#111111);">Route to workstream sub-orchestrator</text>
+
+  <!-- 3: SL -> IA: dispatch -->
+  <path d="M515,270 L707,270" marker-end="url(#ar)" style="stroke:var(--se-arrow,#4b5563);stroke-width:1.8;fill:none;"/>
+  <text x="615" y="262" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--se-text,#111111);">Dispatch Impact Analysis</text>
+
+  <!-- 4: IA -> KG: traverse -->
+  <path d="M715,320 L907,320" marker-end="url(#arSolid)" style="stroke:var(--se-accent,#E94E1B);stroke-width:2;fill:none;"/>
+  <text x="815" y="312" text-anchor="middle" style="font-size:12px;font-weight:700;fill:var(--se-accent,#E94E1B);">Traverse four-layer graph</text>
+
+  <!-- 5: KG -> IA: return cross-layer impact (dashed return) -->
+  <path d="M915,365 L723,365" marker-end="url(#arSolid)" style="stroke:var(--se-accent,#E94E1B);stroke-width:2;fill:none;stroke-dasharray:6,4;"/>
+  <text x="815" y="357" text-anchor="middle" style="font-size:12px;font-weight:700;fill:var(--se-accent,#E94E1B);">Cross-layer impact</text>
+
+  <!-- 6: IA -> SL: impact report -->
+  <path d="M715,410 L523,410" marker-end="url(#ar)" style="stroke:var(--se-arrow,#4b5563);stroke-width:1.8;fill:none;"/>
+  <text x="615" y="402" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--se-text,#111111);">Impact report</text>
+
+  <!-- 7: SL -> FDE: forward for spec sprint -->
+  <path d="M515,460 L1162,460" marker-end="url(#ar)" style="stroke:var(--se-arrow,#4b5563);stroke-width:1.8;fill:none;"/>
+  <text x="838" y="452" text-anchor="middle" style="font-size:12px;font-weight:600;fill:var(--se-text,#111111);">Forward to spec sprint for FDE review</text>
+
+  <!-- 8: FDE -> PO: refined spec plus impact report -->
+  <path d="M1170,510 L123,510" marker-end="url(#arSolid)" style="stroke:var(--se-accent,#E94E1B);stroke-width:2;fill:none;"/>
+  <text x="646" y="502" text-anchor="middle" style="font-size:12px;font-weight:700;fill:var(--se-accent,#E94E1B);">Refined spec plus impact report</text>
+
+  <text x="700" y="582" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Dashed return lines indicate response messages. Orange messages cross the boundary between agent execution and the knowledge graph.</text>
+  <text x="700" y="610" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">The Forward-Deployed Engineer is the human-in-the-loop on the merge boundary; everything before that is agentic.</text>
+</svg>
