@@ -1,145 +1,253 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 740" width="1400" height="740" preserveAspectRatio="xMidYMid meet" font-family="Segoe UI, system-ui, sans-serif">
-  <defs>
-    <marker id="cap-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-      <path d="M0,0 L10,5 L0,10 z" style="fill:#4b5563"/>
-    </marker>
-  </defs>
-  <rect width="1400" height="740" style="fill:#ffffff"/>
-
-  <text x="700" y="44" text-anchor="middle" style="font:600 28px Segoe UI,system-ui,sans-serif;fill:#111111">Three Core Capabilities of ASIMOV</text>
-  <text x="700" y="72" text-anchor="middle" style="font:17px Segoe UI,system-ui,sans-serif;fill:#4b5563">Same architecture and the same agentic execution. Only the Target Ontology Configurator and per-language adapters differ.</text>
-
-  <!-- Capability 1: Legacy System Renewal -->
-  <g transform="translate(40,120)">
-    <rect x="0" y="0" width="430" height="500" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
-    <rect x="0" y="0" width="430" height="60" rx="14" ry="14" style="fill:#4b5563"/>
-    <rect x="0" y="46" width="430" height="14" style="fill:#4b5563"/>
-    <text x="22" y="38" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff">01</text>
-    <text x="80" y="38" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff">Legacy System Renewal</text>
-
-    <!-- Icon: bridge from old to new -->
-    <g transform="translate(135,82)">
-      <rect x="0" y="0" width="50" height="60" rx="6" ry="6" style="fill:#9ca3af"/>
-      <text x="25" y="35" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">old</text>
-      <line x1="55" y1="30" x2="105" y2="30" style="stroke:#E94E1B;stroke-width:3" marker-end="url(#cap-arrow)"/>
-      <rect x="110" y="0" width="50" height="60" rx="6" ry="6" style="fill:#E94E1B"/>
-      <text x="135" y="35" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">new</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 1400 740" preserveAspectRatio="xMidYMid meet" width="1400px" height="740px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,700,44)">
+        <text x="-248.665px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three Core Capabilities of <tspan x="130.32px 151.985px " y="0px 0px ">AS</tspan>IMOV</text>
     </g>
-
-    <text x="22" y="180" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">WHAT IT COVERS</text>
-    <text x="22" y="206" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">End-to-end transformation of legacy</text>
-    <text x="22" y="224" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">codebases into modern, reliable stacks.</text>
-    <text x="22" y="242" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Breaks free from obsolete platforms;</text>
-    <text x="22" y="260" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">reduces technical debt; positions for</text>
-    <text x="22" y="278" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">long-term innovation and scalability.</text>
-
-    <line x1="22" y1="306" x2="408" y2="306" style="stroke:#9ca3af;stroke-width:1"/>
-
-    <text x="22" y="334" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">TYPICAL EXAMPLES</text>
-    <g transform="translate(22,352)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111"><tspan font-weight="700">COBOL</tspan> on mainframe → <tspan font-weight="700">Java</tspan> on cloud</text>
+    <g transform="matrix(1,0,0,1,700,72)">
+        <g transform="matrix(16,0,0,16,140.503906,0)">
+        </g>
+        <g transform="matrix(16,0,0,16,144.949219,0)">
+        </g>
+        <text x="-439.098px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Same architecture and the same agentic execution. Only the <tspan x="-6.246px 1.754px 10.652px " y="0px 0px 0px ">Tar</tspan>get Ontology Conﬁgurator and per-language adapters dif<tspan x="416.855px 421.301px 430.199px 434.652px " y="0px 0px 0px 0px ">fer.</tspan></text>
     </g>
-    <g transform="translate(22,392)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111"><tspan font-weight="700">Delphi</tspan> → <tspan font-weight="700">C# / .NET 8</tspan> plus React</text>
+    <g transform="matrix(1,0,0,1,40,120)">
+        <path d="M430,14L430,486C430,493.727 423.727,500 416,500L14,500C6.273,500 0,493.727 0,486L0,14C0,6.273 6.273,0 14,0L416,0C423.727,0 430,6.273 430,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+        <path d="M430,14L430,46C430,53.727 423.727,60 416,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L416,0C423.727,0 430,6.273 430,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
+        <rect x="0" y="46" width="430" height="14" style="fill:var(--se-text-secondary,#4b5563);"/>
+        <g transform="matrix(1,0,0,1,22,38)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">01</text>
+        </g>
+        <g transform="matrix(1,0,0,1,80,38)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">Legacy System Renewal</text>
+        </g>
+        <g transform="matrix(1,0,0,1,135,82)">
+            <path d="M50,6L50,54C50,57.311 47.311,60 44,60L6,60C2.689,60 0,57.311 0,54L0,6C0,2.689 2.689,0 6,0L44,0C47.311,0 50,2.689 50,6Z" style="fill:var(--se-panel-stroke,#9ca3af);"/>
+            <g transform="matrix(1,0,0,1,25,35)">
+                <text x="-10.676px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">old</text>
+            </g>
+            <path d="M55,30L105,30" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:3px;"/>
+            <path d="M160,6L160,54C160,57.311 157.311,60 154,60L116,60C112.689,60 110,57.311 110,54L110,6C110,2.689 112.689,0 116,0L154,0C157.311,0 160,2.689 160,6Z" style="fill:var(--se-accent,#E94E1B);"/>
+            <g transform="matrix(1,0,0,1,135,35)">
+                <text x="-14.676px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">new</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,180)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.948px 78.255px 87.121px 95.987px 105.57px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT COVERS</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,206)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">End-to-end transformation of legacy</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,224)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">codebases into modern, reliable stacks.</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,242)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Breaks free from obsolete platforms;</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,260)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">reduces technical debt; positions for</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,278)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">long-term innovation and scalability<tspan x="248.734px " y="0px ">.</tspan></text>
+        </g>
+        <path d="M22,306L408,306" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
+        <g transform="matrix(1,0,0,1,22,334)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 17.002px 25.868px 29.675px 39.258px 48.841px 56.748px 60.555px 69.421px 78.287px 87.87px 98.894px 107.76px 115.896px 124.762px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL EXAMPLES</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,352)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">COBOL</text>
+                <text x="62.219px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">on mainframe</text>
+                <text x="164.484px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="180.21px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Java</text>
+                <text x="220.249px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">on cloud</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,392)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Delphi</text>
+                <text x="53.336px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="69.061px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">C# / .NET 8</text>
+                <text x="157.085px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">plus React</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,432)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">VB.NET</text>
+                <text x="63.117px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="78.843px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">.NET Core / .NET 8</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,472)">
+            <rect x="0" y="0" width="386" height="14" style="fill:none;"/>
+        </g>
     </g>
-    <g transform="translate(22,432)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111"><tspan font-weight="700">VB.NET</tspan> → <tspan font-weight="700">.NET Core / .NET 8</tspan></text>
+    <g transform="matrix(1,0,0,1,485,120)">
+        <path d="M430,14L430,486C430,493.727 423.727,500 416,500L14,500C6.273,500 0,493.727 0,486L0,14C0,6.273 6.273,0 14,0L416,0C423.727,0 430,6.273 430,14Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M430,14L430,46C430,53.727 423.727,60 416,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L416,0C423.727,0 430,6.273 430,14Z" style="fill:var(--se-accent,#E94E1B);"/>
+        <rect x="0" y="46" width="430" height="14" style="fill:var(--se-accent,#E94E1B);"/>
+        <g transform="matrix(1,0,0,1,22,38)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">02</text>
+        </g>
+        <g transform="matrix(1,0,0,1,80,38)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">Scalable <tspan x="77.388px 90.387px " y="0px 0px ">Ar</tspan>chitecture Redesign</text>
+        </g>
+        <g transform="matrix(1,0,0,1,135,82)">
+            <path d="M50,6L50,54C50,57.311 47.311,60 44,60L6,60C2.689,60 0,57.311 0,54L0,6C0,2.689 2.689,0 6,0L44,0C47.311,0 50,2.689 50,6Z" style="fill:var(--se-text-secondary,#4b5563);"/>
+            <g transform="matrix(1,0,0,1,25,35)">
+                <text x="-20.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">mono</text>
+            </g>
+            <path d="M55,30L105,30" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:3px;"/>
+            <g transform="matrix(1,0,0,1,110,0)">
+                <path d="M22,4L22,18C22,20.208 20.208,22 18,22L4,22C1.792,22 0,20.208 0,18L0,4C0,1.792 1.792,0 4,0L18,0C20.208,0 22,1.792 22,4Z" style="fill:var(--se-accent,#E94E1B);"/>
+                <path d="M50,4L50,18C50,20.208 48.208,22 46,22L32,22C29.792,22 28,20.208 28,18L28,4C28,1.792 29.792,0 32,0L46,0C48.208,0 50,1.792 50,4Z" style="fill:var(--se-accent,#E94E1B);"/>
+                <path d="M22,42L22,56C22,58.208 20.208,60 18,60L4,60C1.792,60 0,58.208 0,56L0,42C0,39.792 1.792,38 4,38L18,38C20.208,38 22,39.792 22,42Z" style="fill:var(--se-accent,#E94E1B);"/>
+                <path d="M50,42L50,56C50,58.208 48.208,60 46,60L32,60C29.792,60 28,58.208 28,56L28,42C28,39.792 29.792,38 32,38L46,38C48.208,38 50,39.792 50,42Z" style="fill:var(--se-accent,#E94E1B);"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,180)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.948px 78.255px 87.121px 95.987px 105.57px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT COVERS</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,206)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Structured path to a modern modular</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,224)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">design. Intelligent analysis and guided</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,242)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">transformation move the application</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,260)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">from monolith to microservices, or from</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,278)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">tightly coupled to modular<tspan x="181.453px " y="0px ">.</tspan></text>
+        </g>
+        <clipPath id="_clip1">
+            <rect x="22" y="305.5" width="386" height="1"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g transform="matrix(1,-0,-0,1,-485,-120)">
+                <use xlink:href="#_Image2" x="507" y="425.5" width="386px" height="1px"/>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,334)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 17.002px 25.868px 29.675px 39.258px 48.841px 56.748px 60.555px 69.421px 78.287px 87.87px 98.894px 107.76px 115.896px 124.762px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL EXAMPLES</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,352)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">.NET 4.5 monolith</text>
+                <text x="139.562px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="155.288px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">.NET Core 8</text>
+                <text x="250.421px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">microservices</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,392)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">ASP<tspan x="30.836px 35.281px " y="0px 0px ">.N</tspan>ET 4.5</text>
+                <text x="98.414px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="114.139px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">.NET Core 10</text>
+                <text x="218.171px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">+ React 19</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,432)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">VB.NET<tspan x="57.508px 61.953px " y="0px 0px "> t</tspan>ightly coupled</text>
+                <text x="168.688px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="184.413px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">.NET Core modular</text>
+            </g>
+        </g>
     </g>
-    <g transform="translate(22,472)">
-      <rect x="0" y="0" width="386" height="14" style="fill:none"/>
+    <g transform="matrix(1,0,0,1,930,120)">
+        <path d="M430,14L430,486C430,493.727 423.727,500 416,500L14,500C6.273,500 0,493.727 0,486L0,14C0,6.273 6.273,0 14,0L416,0C423.727,0 430,6.273 430,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+        <path d="M430,14L430,46C430,53.727 423.727,60 416,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L416,0C423.727,0 430,6.273 430,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
+        <rect x="0" y="46" width="430" height="14" style="fill:var(--se-text-secondary,#4b5563);"/>
+        <g transform="matrix(1,0,0,1,22,38)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">03</text>
+        </g>
+        <g transform="matrix(1,0,0,1,80,38)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">AI-Guided Upgrades</text>
+        </g>
+        <g transform="matrix(1,0,0,1,135,82)">
+            <path d="M40,24L40,56C40,58.208 38.208,60 36,60L4,60C1.792,60 0,58.208 0,56L0,24C0,21.792 1.792,20 4,20L36,20C38.208,20 40,21.792 40,24Z" style="fill:var(--se-panel-stroke,#9ca3af);"/>
+            <g transform="matrix(1,0,0,1,20,44)">
+                <text x="-9.271px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v<tspan x="-3.729px -0.117px " y="0px 0px ">.N</tspan></text>
+            </g>
+            <path d="M95,14L95,56C95,58.208 93.208,60 91,60L59,60C56.792,60 55,58.208 55,56L55,14C55,11.792 56.792,10 59,10L91,10C93.208,10 95,11.792 95,14Z" style="fill:var(--se-panel-stroke,#9ca3af);"/>
+            <g transform="matrix(1,0,0,1,75,40)">
+                <text x="-16.682px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v<tspan x="-11.14px -7.528px " y="0px 0px ">.N</tspan>+1</text>
+            </g>
+            <path d="M150,4L150,56C150,58.208 148.208,60 146,60L114,60C111.792,60 110,58.208 110,56L110,4C110,1.792 111.792,0 114,0L146,0C148.208,0 150,1.792 150,4Z" style="fill:var(--se-accent,#E94E1B);"/>
+            <g transform="matrix(1,0,0,1,130,35)">
+                <text x="-16.317px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v<tspan x="-10.775px -7.163px " y="0px 0px ">.N</tspan>+x</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,180)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.948px 78.255px 87.121px 95.987px 105.57px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT COVERS</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,206)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Rapid version upgrades within a</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,224)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">technology family<tspan x="122.438px 126.883px 130.453px 141.125px " y="0px 0px 0px 0px ">. Au</tspan>tomated code</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,242)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">scanning, dependency mapping,</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,260)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">compatibility recommendations. Keeps</text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,278)">
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">systems secure, compliant, performant.</text>
+        </g>
+        <path d="M22,306L408,306" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
+        <g transform="matrix(1,0,0,1,22,334)">
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 17.002px 25.868px 29.675px 39.258px 48.841px 56.748px 60.555px 69.421px 78.287px 87.87px 98.894px 107.76px 115.896px 124.762px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL EXAMPLES</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,22,352)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Java 8</text>
+                <text x="53.383px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="69.108px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Java 21</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,392)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Angular 0</text>
+                <text x="78.234px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="93.96px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Angular 16</text>
+                <text x="181.093px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">(+)</text>
+            </g>
+        </g>
+        <g transform="matrix(1,0,0,1,22,432)">
+            <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+            <g transform="matrix(1,0,0,1,14,22)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Struts</text>
+                <text x="50.672px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
+                <text x="66.397px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Spring MVC</text>
+            </g>
+        </g>
     </g>
-  </g>
-
-  <!-- Capability 2: Scalable Architecture Redesign -->
-  <g transform="translate(485,120)">
-    <rect x="0" y="0" width="430" height="500" rx="14" ry="14" style="fill:#FDE8DD;stroke:#E94E1B;stroke-width:2"/>
-    <rect x="0" y="0" width="430" height="60" rx="14" ry="14" style="fill:#E94E1B"/>
-    <rect x="0" y="46" width="430" height="14" style="fill:#E94E1B"/>
-    <text x="22" y="38" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff">02</text>
-    <text x="80" y="38" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff">Scalable Architecture Redesign</text>
-
-    <!-- Icon: monolith fragmenting into microservices -->
-    <g transform="translate(135,82)">
-      <rect x="0" y="0" width="50" height="60" rx="6" ry="6" style="fill:#4b5563"/>
-      <text x="25" y="35" text-anchor="middle" style="font:700 11px Segoe UI,system-ui,sans-serif;fill:#ffffff">mono</text>
-      <line x1="55" y1="30" x2="105" y2="30" style="stroke:#E94E1B;stroke-width:3" marker-end="url(#cap-arrow)"/>
-      <g transform="translate(110,0)">
-        <rect x="0" y="0" width="22" height="22" rx="4" ry="4" style="fill:#E94E1B"/>
-        <rect x="28" y="0" width="22" height="22" rx="4" ry="4" style="fill:#E94E1B"/>
-        <rect x="0" y="38" width="22" height="22" rx="4" ry="4" style="fill:#E94E1B"/>
-        <rect x="28" y="38" width="22" height="22" rx="4" ry="4" style="fill:#E94E1B"/>
-      </g>
+    <g transform="matrix(1,0,0,1,700,680)">
+        <text x="-584.839px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">All three run through the same Ingestion</text>
+        <text x="-295.776px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text-secondary,#4b5563);">→</text>
+        <text x="-280.332px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);"><tspan x="-280.332px -271.145px -265.816px " y="0px 0px 0px ">Tra</tspan>nsformation</text>
+        <text x="-168.879px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text-secondary,#4b5563);">→</text>
+        <g transform="matrix(16,0,0,16,200.557344,0)">
+        </g>
+        <g transform="matrix(16,0,0,16,205.002656,0)">
+        </g>
+        <text x="-153.154px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Generation pipeline, with the <tspan x="53.807px 61.807px 70.706px " y="0px 0px 0px ">Tar</tspan>get Ontology Conﬁgurator and per-language adapters tuned to the path.</text>
     </g>
-
-    <text x="22" y="180" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">WHAT IT COVERS</text>
-    <text x="22" y="206" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Structured path to a modern modular</text>
-    <text x="22" y="224" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">design. Intelligent analysis and guided</text>
-    <text x="22" y="242" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">transformation move the application</text>
-    <text x="22" y="260" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">from monolith to microservices, or from</text>
-    <text x="22" y="278" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">tightly coupled to modular.</text>
-
-    <line x1="22" y1="306" x2="408" y2="306" style="stroke:#E94E1B;stroke-width:1;opacity:0.4"/>
-
-    <text x="22" y="334" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">TYPICAL EXAMPLES</text>
-    <g transform="translate(22,352)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111"><tspan font-weight="700">.NET 4.5 monolith</tspan> → <tspan font-weight="700">.NET Core 8</tspan> microservices</text>
-    </g>
-    <g transform="translate(22,392)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111"><tspan font-weight="700">ASP.NET 4.5</tspan> → <tspan font-weight="700">.NET Core 10</tspan> + React 19</text>
-    </g>
-    <g transform="translate(22,432)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#E94E1B;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111">VB.NET tightly coupled → <tspan font-weight="700">.NET Core modular</tspan></text>
-    </g>
-  </g>
-
-  <!-- Capability 3: AI-Guided Upgrades -->
-  <g transform="translate(930,120)">
-    <rect x="0" y="0" width="430" height="500" rx="14" ry="14" style="fill:#f5f5f5;stroke:#4b5563;stroke-width:2"/>
-    <rect x="0" y="0" width="430" height="60" rx="14" ry="14" style="fill:#4b5563"/>
-    <rect x="0" y="46" width="430" height="14" style="fill:#4b5563"/>
-    <text x="22" y="38" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff">03</text>
-    <text x="80" y="38" style="font:700 18px Segoe UI,system-ui,sans-serif;fill:#ffffff">AI-Guided Upgrades</text>
-
-    <!-- Icon: version stepping up -->
-    <g transform="translate(135,82)">
-      <rect x="0" y="20" width="40" height="40" rx="4" ry="4" style="fill:#9ca3af"/>
-      <text x="20" y="44" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">v.N</text>
-      <rect x="55" y="10" width="40" height="50" rx="4" ry="4" style="fill:#9ca3af"/>
-      <text x="75" y="40" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">v.N+1</text>
-      <rect x="110" y="0" width="40" height="60" rx="4" ry="4" style="fill:#E94E1B"/>
-      <text x="130" y="35" text-anchor="middle" style="font:700 12px Segoe UI,system-ui,sans-serif;fill:#ffffff">v.N+x</text>
-    </g>
-
-    <text x="22" y="180" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">WHAT IT COVERS</text>
-    <text x="22" y="206" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">Rapid version upgrades within a</text>
-    <text x="22" y="224" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">technology family. Automated code</text>
-    <text x="22" y="242" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">scanning, dependency mapping,</text>
-    <text x="22" y="260" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">compatibility recommendations. Keeps</text>
-    <text x="22" y="278" style="font:14px Segoe UI,system-ui,sans-serif;fill:#111111">systems secure, compliant, performant.</text>
-
-    <line x1="22" y1="306" x2="408" y2="306" style="stroke:#9ca3af;stroke-width:1"/>
-
-    <text x="22" y="334" style="font:700 13px Segoe UI,system-ui,sans-serif;fill:#E94E1B;letter-spacing:1.5px">TYPICAL EXAMPLES</text>
-    <g transform="translate(22,352)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111"><tspan font-weight="700">Java 8</tspan> → <tspan font-weight="700">Java 21</tspan></text>
-    </g>
-    <g transform="translate(22,392)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111"><tspan font-weight="700">Angular 0</tspan> → <tspan font-weight="700">Angular 16</tspan> (+)</text>
-    </g>
-    <g transform="translate(22,432)">
-      <rect x="0" y="0" width="386" height="32" rx="6" ry="6" style="fill:#ffffff;stroke:#4b5563;stroke-width:1.5"/>
-      <text x="14" y="22" style="font:13px Segoe UI,system-ui,sans-serif;fill:#111111"><tspan font-weight="700">Struts</tspan> → <tspan font-weight="700">Spring MVC</tspan></text>
-    </g>
-  </g>
-
-  <!-- Bottom note -->
-  <text x="700" y="680" text-anchor="middle" style="font:italic 14px Segoe UI,system-ui,sans-serif;fill:#4b5563">All three run through the same Ingestion → Transformation → Generation pipeline, with the Target Ontology Configurator and per-language adapters tuned to the path.</text>
+    <defs>
+        <image id="_Image2" width="386px" height="1px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAABCAYAAADTqalLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAGElEQVQ4jWN86SedxjAKRsEoGAWjYMQCAGiyAbosh8KbAAAAAElFTkSuQmCC"/>
+    </defs>
 </svg>

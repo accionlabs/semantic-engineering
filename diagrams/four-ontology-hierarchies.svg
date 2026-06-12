@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1400 760" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,700,32)">
+        <text x="-207.201px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:22px;fill:var(--se-text,#111111);">The Four Ontology Hierarchies in Detail</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700,56)">
+        <text x="-339.97px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Each ontology is a structured node hierarchy<tspan x="-103.392px -100.058px -96.94px -89.61px " y="0px 0px 0px 0px ">. Th</tspan>e hierarchies are how custodians articulate intent in a form the agents can read.</text>
+    </g>
+    <path d="M1360,104L1360,196C1360,203.727 1353.727,210 1346,210L54,210C46.273,210 40,203.727 40,196L40,104C40,96.273 46.273,90 54,90L1346,90C1353.727,90 1360,96.273 1360,104Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,60,118)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">F<tspan x="8.692px 18.942px 29.192px 39.443px 48.135px 52.164px 63.194px 73.444px 83.695px 92.133px 96.163px 107.193px 117.443px 125.882px 136.912px 145.603px 156.633px 167.663px 176.888px 180.917px 184.947px 189.749px 193.779px 197.808px 207.286px 212.874px 221.566px 230.258px 238.95px 246.876px 251.678px 255.708px 266.737px 277.767px 286.459px 294.385px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UNCTIONAL ONTOLOGY  ·  Product Owner</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,60,138)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The why: who uses the system, what outcomes they need, which scenarios drive each outcome</text>
+    </g>
+    <path d="M260,166L260,188C260,193.519 255.519,198 250,198L110,198C104.481,198 100,193.519 100,188L100,166C100,160.481 104.481,156 110,156L250,156C255.519,156 260,160.481 260,166Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,180,182)">
+        <text x="-25.651px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Persona</text>
+    </g>
+    <path d="M500,166L500,188C500,193.519 495.519,198 490,198L350,198C344.481,198 340,193.519 340,188L340,166C340,160.481 344.481,156 350,156L490,156C495.519,156 500,160.481 500,166Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,420,182)">
+        <text x="-28.171px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Outcome</text>
+    </g>
+    <path d="M740,166L740,188C740,193.519 735.519,198 730,198L590,198C584.481,198 580,193.519 580,188L580,166C580,160.481 584.481,156 590,156L730,156C735.519,156 740,160.481 740,166Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,660,182)">
+        <text x="-27.457px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Scenario</text>
+    </g>
+    <path d="M980,166L980,188C980,193.519 975.519,198 970,198L830,198C824.481,198 820,193.519 820,188L820,166C820,160.481 824.481,156 830,156L970,156C975.519,156 980,160.481 980,166Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,900,182)">
+        <text x="-14.085px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Step</text>
+    </g>
+    <path d="M1220,166L1220,188C1220,193.519 1215.519,198 1210,198L1070,198C1064.481,198 1060,193.519 1060,188L1060,166C1060,160.481 1064.481,156 1070,156L1210,156C1215.519,156 1220,160.481 1220,166Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1140,182)">
+        <text x="-20.22px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Action</text>
+    </g>
+    <path d="M332.8,174.4L340,178L332.8,181.6L332.8,174.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M260,178L334.24,178" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M572.8,174.4L580,178L572.8,181.6L572.8,174.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M500,178L574.24,178" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M812.8,174.4L820,178L812.8,181.6L812.8,174.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M740,178L814.24,178" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M1052.8,174.4L1060,178L1052.8,181.6L1052.8,174.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M980,178L1054.24,178" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M1360,244L1360,336C1360,343.727 1353.727,350 1346,350L54,350C46.273,350 40,343.727 40,336L40,244C40,236.273 46.273,230 54,230L1346,230C1353.727,230 1360,236.273 1360,244Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,60,258)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">D<tspan x="10.25px 19.728px 29.206px 33.236px 44.265px 54.516px 58.545px 69.575px 79.825px 88.264px 99.294px 107.986px 119.015px 130.045px 139.27px 143.3px 147.329px 152.131px 156.161px 160.191px 170.441px 179.919px 183.949px 194.199px 202.125px 210.051px 214.081px 222.773px 231.464px 239.39px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ESIGN ONTOLOGY  ·  UX Designer</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,60,278)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The how it looks and behaves: from the user journey down to the atomic design tokens</text>
+    </g>
+    <path d="M200,306L200,328C200,333.519 195.519,338 190,338L90,338C84.481,338 80,333.519 80,328L80,306C80,300.481 84.481,296 90,296L190,296C195.519,296 200,300.481 200,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,140,322)">
+        <text x="-38.35px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">User Journey</text>
+    </g>
+    <path d="M360,306L360,328C360,333.519 355.519,338 350,338L270,338C264.481,338 260,333.519 260,328L260,306C260,300.481 264.481,296 270,296L350,296C355.519,296 360,300.481 360,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,310,322)">
+        <text x="-13.664px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Flow</text>
+    </g>
+    <path d="M520,306L520,328C520,333.519 515.519,338 510,338L430,338C424.481,338 420,333.519 420,328L420,306C420,300.481 424.481,296 430,296L510,296C515.519,296 520,300.481 520,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,470,322)">
+        <text x="-14.341px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Page</text>
+    </g>
+    <path d="M700,306L700,328C700,333.519 695.519,338 690,338L590,338C584.481,338 580,333.519 580,328L580,306C580,300.481 584.481,296 590,296L690,296C695.519,296 700,300.481 700,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,640,322)">
+        <text x="-25.896px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">T<tspan x="-19.456px -12.782px " y="0px 0px ">em</tspan>plate</text>
+    </g>
+    <path d="M880,306L880,328C880,333.519 875.519,338 870,338L770,338C764.481,338 760,333.519 760,328L760,306C760,300.481 764.481,296 770,296L870,296C875.519,296 880,300.481 880,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,820,322)">
+        <text x="-28.008px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Organism</text>
+    </g>
+    <path d="M1060,306L1060,328C1060,333.519 1055.519,338 1050,338L950,338C944.481,338 940,333.519 940,328L940,306C940,300.481 944.481,296 950,296L1050,296C1055.519,296 1060,300.481 1060,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1000,322)">
+        <text x="-25.673px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Molecule</text>
+    </g>
+    <path d="M1220,306L1220,328C1220,333.519 1215.519,338 1210,338L1130,338C1124.481,338 1120,333.519 1120,328L1120,306C1120,300.481 1124.481,296 1130,296L1210,296C1215.519,296 1220,300.481 1220,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1170,322)">
+        <text x="-15.331px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Atom</text>
+    </g>
+    <path d="M252.8,314.4L260,318L252.8,321.6L252.8,314.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M200,318L254.24,318" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M412.8,314.4L420,318L412.8,321.6L412.8,314.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M360,318L414.24,318" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M572.8,314.4L580,318L572.8,321.6L572.8,314.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M520,318L574.24,318" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M752.8,314.4L760,318L752.8,321.6L752.8,314.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M700,318L754.24,318" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M932.8,314.4L940,318L932.8,321.6L932.8,314.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M880,318L934.24,318" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M1112.8,314.4L1120,318L1112.8,321.6L1112.8,314.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M1060,318L1114.24,318" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+    <path d="M1360,384L1360,536C1360,543.727 1353.727,550 1346,550L54,550C46.273,550 40,543.727 40,536L40,384C40,376.273 46.273,370 54,370L1346,370C1353.727,370 1360,376.273 1360,384Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,60,398)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">A<tspan x="10.25px 20.501px 30.751px 41.001px 45.031px 53.723px 63.201px 73.451px 82.143px 92.393px 102.644px 112.121px 116.151px 127.181px 137.431px 145.87px 156.9px 165.591px 176.621px 187.651px 196.876px 200.905px 204.935px 209.737px 213.767px 217.277px 227.527px 233.115px 241.041px 249.733px 253.763px 258.565px 266.491px 274.417px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RCHITECTURE ONTOLOGY  ·  Architect</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,60,418)">
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The where: services, integration boundaries, infrastructure layers, dependency map</text>
+    </g>
+    <path d="M240,448L240,470C240,475.519 235.519,480 230,480L110,480C104.481,480 100,475.519 100,470L100,448C100,442.481 104.481,438 110,438L230,438C235.519,438 240,442.481 240,448Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,170,464)">
+        <text x="-47.027px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">User Experience</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-6.333333,0)">
+        <path d="M420,448L420,470C420,475.519 415.519,480 410,480L290,480C284.481,480 280,475.519 280,470L280,448C280,442.481 284.481,438 290,438L410,438C415.519,438 420,442.481 420,448Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,343.763346,464)">
+        <text x="-36.349px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">API Gateway</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-12.666667,0)">
+        <path d="M600,448L600,470C600,475.519 595.519,480 590,480L470,480C464.481,480 460,475.519 460,470L460,448C460,442.481 464.481,438 470,438L590,438C595.519,438 600,442.481 600,448Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,517.406576,464)">
+        <text x="-24.688px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Services</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-39,0)">
+        <path d="M780,448L780,470C780,475.519 775.519,480 770,480L670,480C664.481,480 660,475.519 660,470L660,448C660,442.481 664.481,438 670,438L770,438C775.519,438 780,442.481 780,448Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,681.290039,464)">
+        <text x="-20.335px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Agents</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-25.333333,0)">
+        <path d="M920,448L920,470C920,475.519 915.519,480 910,480L810,480C804.481,480 800,475.519 800,470L800,448C800,442.481 804.481,438 810,438L910,438C915.519,438 920,442.481 920,448Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,834.46964,464)">
+        <text x="-36.677px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Event Queue</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-11.666667,0)">
+        <path d="M1060,448L1060,470C1060,475.519 1055.519,480 1050,480L950,480C944.481,480 940,475.519 940,470L940,448C940,442.481 944.481,438 950,438L1050,438C1055.519,438 1060,442.481 1060,448Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,988.139236,464)">
+        <text x="-28.348px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Data Lake</text>
+    </g>
+    <g transform="matrix(1,0,0,1,422,-54)">
+        <path d="M820,502L820,524C820,529.519 815.519,534 810,534L670,534C664.481,534 660,529.519 660,524L660,502C660,496.481 664.481,492 670,492L810,492C815.519,492 820,496.481 820,502Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,1161.835937,464)">
+        <text x="-38.016px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Observability</text>
+    </g>
+    <g transform="matrix(7.125,0,0,1,-5884,-1)">
+        <path d="M1000,502L1000,524C1000,529.519 999.371,534 998.596,534L841.404,534C840.629,534 840,529.519 840,524L840,502C840,496.481 840.629,492 841.404,492L998.596,492C999.371,492 1000,496.481 1000,502Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:0.29px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,670.829341,516)">
+        <text x="-39.009px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Infrastructure</text>
+    </g>
+    <path d="M1360,584L1360,676C1360,683.727 1353.727,690 1346,690L54,690C46.273,690 40,683.727 40,676L40,584C40,576.273 46.273,570 54,570L1346,570C1353.727,570 1360,576.273 1360,584Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,60,598)">
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">C<tspan x="10.25px 21.28px 31.53px 41.008px 45.038px 56.068px 66.318px 74.757px 85.786px 94.478px 105.508px 116.537px 125.762px 129.792px 133.822px 138.624px 142.653px 146.683px 156.161px 164.853px 173.544px 177.574px 186.266px 194.192px 202.118px 207.706px 211.736px 220.428px 229.12px 233.149px 240.802px 248.728px 256.654px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ODE ONTOLOGY  ·  Engineering Team</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,60,618)">
+        <g transform="matrix(11,0,0,11,163.877441,0)">
+        </g>
+        <g transform="matrix(11,0,0,11,166.933594,0)">
+        </g>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The what the code actually does: ﬁle structure down to statements, plus boundary endpoints</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-8)">
+        <path d="M220,646L220,668C220,673.519 215.519,678 210,678L110,678C104.481,678 100,673.519 100,668L100,646C100,640.481 104.481,636 110,636L210,636C215.519,636 220,640.481 220,646Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,160,654)">
+        <text x="-11.197px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">File</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-8)">
+        <path d="M400,646L400,668C400,673.519 395.519,678 390,678L290,678C284.481,678 280,673.519 280,668L280,646C280,640.481 284.481,636 290,636L390,636C395.519,636 400,640.481 400,646Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,340,654)">
+        <text x="-17.345px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Class</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-8)">
+        <path d="M580,646L580,668C580,673.519 575.519,678 570,678L470,678C464.481,678 460,673.519 460,668L460,646C460,640.481 464.481,636 470,636L570,636C575.519,636 580,640.481 580,646Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,520,654)">
+        <text x="-27.438px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Function</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-8)">
+        <path d="M760,646L760,668C760,673.519 755.519,678 750,678L650,678C644.481,678 640,673.519 640,668L640,646C640,640.481 644.481,636 650,636L750,636C755.519,636 760,640.481 760,646Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,700,654)">
+        <text x="-31.424px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Statement</text>
+    </g>
+    <g transform="matrix(1,0,0,1,-71,-9)">
+        <path d="M1060,646L1060,668C1060,673.519 1055.519,678 1050,678L910,678C904.481,678 900,673.519 900,668L900,646C900,640.481 904.481,636 910,636L1050,636C1055.519,636 1060,640.481 1060,646Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,909,653)">
+        <text x="-40.8px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">API Endpoint</text>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-8)">
+        <g transform="matrix(1,-0,-0,1,-0,8)">
+            <path d="M272.8,645.4L280,649L272.8,652.6L272.8,645.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M220,649L274.24,649" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-8)">
+        <g transform="matrix(1,-0,-0,1,-0,8)">
+            <path d="M452.8,645.4L460,649L452.8,652.6L452.8,645.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M400,649L454.24,649" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-8)">
+        <g transform="matrix(1,-0,-0,1,-0,8)">
+            <path d="M632.8,645.4L640,649L632.8,652.6L632.8,645.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M580,649L634.24,649" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0,-8)">
+        <g transform="matrix(1,-0,-0,1,-0,8)">
+            <path d="M821.743,647.517L829,651L821.859,654.716L821.743,647.517Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+            <path d="M220,660L240,660L239.534,676.126L794,677L794.045,651.567C794.045,651.567 813.316,651.254 823.241,651.093" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;stroke-dasharray:4,4;"/>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,700,730)">
+        <text x="-314.268px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Structural hierarchies that the ingestion agents extract from the live system and that the custodians curate as the system evolves.</text>
+    </g>
+</svg>

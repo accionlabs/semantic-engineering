@@ -1,244 +1,244 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="1400px" height="780px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+<svg viewBox="0 0 1400 780" preserveAspectRatio="xMidYMid meet" width="1400px" height="780px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,44)">
-        <text x="-321.731px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(17,17,17);">Fractional <tspan x="-171.13px -149.465px " y="0px 0px ">Al</tspan>location: Where the W<tspan x="173.342px 191.667px " y="0px 0px ">or</tspan>k Moves</text>
+        <text x="-321.731px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Fractional <tspan x="-171.13px -149.465px " y="0px 0px ">Al</tspan>location: Where the W<tspan x="173.342px 191.667px " y="0px 0px ">or</tspan>k Moves</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-491.914px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">AI compresses coding ef<tspan x="-317px -312.555px " y="0px 0px ">fo</tspan>rt. Upstream specialist work expands. <tspan x="-33.617px -23.844px " y="0px 0px ">Th</tspan>e materialized graph lets the same specialists cover more workstreams.</text>
+        <text x="-491.914px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">AI compresses coding ef<tspan x="-317px -312.555px " y="0px 0px ">fo</tspan>rt. Upstream specialist work expands. <tspan x="-33.617px -23.844px " y="0px 0px ">Th</tspan>e materialized graph lets the same specialists cover more workstreams.</text>
     </g>
     <g transform="matrix(1,0,0,1,280,118)">
-        <rect x="0" y="0" width="14" height="14" style="fill:rgb(75,85,99);"/>
+        <rect x="0" y="0" width="14" height="14" style="fill:var(--se-text-secondary,#4b5563);"/>
         <g transform="matrix(1,0,0,1,22,12)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Implementation</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Implementation</text>
         </g>
-        <rect x="160" y="0" width="14" height="14" style="fill:rgb(156,163,175);"/>
+        <rect x="160" y="0" width="14" height="14" style="fill:var(--se-panel-stroke,#9ca3af);"/>
         <g transform="matrix(1,0,0,1,182,12)">
             <g transform="matrix(16,0,0,16,40.023438,0)">
             </g>
             <g transform="matrix(16,0,0,16,44.46875,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Speciﬁcation</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Speciﬁcation</text>
         </g>
-        <rect x="304" y="0" width="14" height="14" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:1.5px;"/>
+        <rect x="304" y="0" width="14" height="14" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
         <g transform="matrix(1,0,0,1,326,12)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Design</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Design</text>
         </g>
-        <rect x="406" y="0" width="14" height="14" style="fill:rgb(233,78,27);"/>
+        <rect x="406" y="0" width="14" height="14" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,428,12)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Architecture</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Architecture</text>
         </g>
-        <rect x="552" y="0" width="14" height="14" style="fill:rgb(17,17,17);"/>
+        <rect x="552" y="0" width="14" height="14" style="fill:var(--se-text,#111111);"/>
         <g transform="matrix(1,0,0,1,574,12)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Data + Ontology</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Data + Ontology</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,160)">
         <g transform="matrix(1,0,0,1,0,22)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">P<tspan x="10.912px 22.707px 33.618px 39.187px 50.098px 54.784px 59.469px 74.811px 87.496px 99.291px 110.202px 119.341px 132.026px 142.938px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RE-AI WORKLOAD</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">P<tspan x="10.912px 22.707px 33.618px 39.187px 50.098px 54.784px 59.469px 74.811px 87.496px 99.291px 110.202px 119.341px 132.026px 142.938px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RE-AI WORKLOAD</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,0,46)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Big implementation chunk. Upstream specialist work small or one-of<tspan x="479.914px 484.359px " y="0px 0px ">f.</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Big implementation chunk. Upstream specialist work small or one-of<tspan x="479.914px 484.359px " y="0px 0px ">f.</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,0,68)">
-            <rect x="0" y="0" width="896" height="80" style="fill:rgb(75,85,99);"/>
+            <rect x="0" y="0" width="896" height="80" style="fill:var(--se-text-secondary,#4b5563);"/>
             <g transform="matrix(1,0,0,1,448,46)">
-                <text x="-54.695px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Implementation</text>
+                <text x="-54.695px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Implementation</text>
             </g>
             <g transform="matrix(1,0,0,1,448,64)">
-                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">70%</text>
+                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">70%</text>
             </g>
-            <rect x="896" y="0" width="128" height="80" style="fill:rgb(156,163,175);"/>
+            <rect x="896" y="0" width="128" height="80" style="fill:var(--se-panel-stroke,#9ca3af);"/>
             <g transform="matrix(1,0,0,1,960,46)">
-                <text x="-18.234px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Spec</text>
+                <text x="-18.234px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Spec</text>
             </g>
             <g transform="matrix(1,0,0,1,960,64)">
-                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">10%</text>
+                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">10%</text>
             </g>
-            <rect x="1024" y="0" width="128" height="80" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:1px;"/>
+            <rect x="1024" y="0" width="128" height="80" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1px;"/>
             <g transform="matrix(1,0,0,1,1088,46)">
-                <text x="-24.902px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Design</text>
+                <text x="-24.902px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Design</text>
             </g>
             <g transform="matrix(1,0,0,1,1088,64)">
-                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">10%</text>
+                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">10%</text>
             </g>
-            <rect x="1152" y="0" width="64" height="80" style="fill:rgb(233,78,27);"/>
+            <rect x="1152" y="0" width="64" height="80" style="fill:var(--se-accent,#E94E1B);"/>
             <g transform="matrix(1,0,0,1,1184,46)">
-                <text x="-16.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Arch</text>
+                <text x="-16.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Arch</text>
             </g>
             <g transform="matrix(1,0,0,1,1184,64)">
-                <text x="-11.562px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">5%</text>
+                <text x="-11.562px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">5%</text>
             </g>
-            <rect x="1216" y="0" width="64" height="80" style="fill:rgb(17,17,17);"/>
+            <rect x="1216" y="0" width="64" height="80" style="fill:var(--se-text,#111111);"/>
             <g transform="matrix(1,0,0,1,1248,46)">
-                <text x="-16.898px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Data</text>
+                <text x="-16.898px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Data</text>
             </g>
             <g transform="matrix(1,0,0,1,1248,64)">
-                <text x="-11.562px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">5%</text>
+                <text x="-11.562px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">5%</text>
             </g>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,328)">
         <g transform="matrix(1,0,0,1,0,22)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">A<tspan x="10.912px 15.597px 21.165px 32.077px 42.989px 53.901px 58.586px 69.498px 79.512px 90.423px 102.218px 106.903px 122.245px 134.93px 146.725px 157.637px 166.775px 179.461px 190.373px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">I-ASSISTED WORKLOAD</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">A<tspan x="10.912px 15.597px 21.165px 32.077px 42.989px 53.901px 58.586px 69.498px 79.512px 90.423px 102.218px 106.903px 122.245px 134.93px 146.725px 157.637px 166.775px 179.461px 190.373px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">I-ASSISTED WORKLOAD</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,0,46)">
             <g transform="matrix(16,0,0,16,249,0)">
             </g>
             <g transform="matrix(16,0,0,16,253.445312,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Implementation compresses. Speciﬁcation, design, architecture, and data all expand and become continuous.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Implementation compresses. Speciﬁcation, design, architecture, and data all expand and become continuous.</text>
         </g>
         <g transform="matrix(1,0,0,1,0,68)">
-            <rect x="0" y="0" width="384" height="80" style="fill:rgb(75,85,99);"/>
+            <rect x="0" y="0" width="384" height="80" style="fill:var(--se-text-secondary,#4b5563);"/>
             <g transform="matrix(1,0,0,1,192,46)">
-                <text x="-54.695px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Implementation</text>
+                <text x="-54.695px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Implementation</text>
             </g>
             <g transform="matrix(1,0,0,1,192,64)">
-                <text x="-67.137px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">30% (compressed)</text>
+                <text x="-67.137px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">30% (compressed)</text>
             </g>
-            <rect x="384" y="0" width="320" height="80" style="fill:rgb(156,163,175);"/>
+            <rect x="384" y="0" width="320" height="80" style="fill:var(--se-panel-stroke,#9ca3af);"/>
             <g transform="matrix(1,0,0,1,544,46)">
                 <g transform="matrix(16,0,0,16,-5.335938,0)">
                 </g>
                 <g transform="matrix(16,0,0,16,-0.890625,0)">
                 </g>
-                <text x="-45.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Speciﬁcation</text>
+                <text x="-45.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Speciﬁcation</text>
             </g>
             <g transform="matrix(1,0,0,1,544,64)">
-                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">25%</text>
+                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">25%</text>
             </g>
-            <rect x="704" y="0" width="256" height="80" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:1px;"/>
+            <rect x="704" y="0" width="256" height="80" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1px;"/>
             <g transform="matrix(1,0,0,1,832,46)">
-                <text x="-24.902px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Design</text>
+                <text x="-24.902px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Design</text>
             </g>
             <g transform="matrix(1,0,0,1,832,64)">
-                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">20%</text>
+                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">20%</text>
             </g>
-            <rect x="960" y="0" width="192" height="80" style="fill:rgb(233,78,27);"/>
+            <rect x="960" y="0" width="192" height="80" style="fill:var(--se-accent,#E94E1B);"/>
             <g transform="matrix(1,0,0,1,1056,46)">
-                <text x="-42.684px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Architecture</text>
+                <text x="-42.684px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Architecture</text>
             </g>
             <g transform="matrix(1,0,0,1,1056,64)">
-                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">15%</text>
+                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">15%</text>
             </g>
-            <rect x="1152" y="0" width="128" height="80" style="fill:rgb(17,17,17);"/>
+            <rect x="1152" y="0" width="128" height="80" style="fill:var(--se-text,#111111);"/>
             <g transform="matrix(1,0,0,1,1216,46)">
-                <text x="-16.898px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">Data</text>
+                <text x="-16.898px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Data</text>
             </g>
             <g transform="matrix(1,0,0,1,1216,64)">
-                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">10%</text>
+                <text x="-16.012px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">10%</text>
             </g>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,488)">
-        <path d="M384,0L384,-20" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;"/>
-        <path d="M896,0L896,-180" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:2px;stroke-dasharray:2,2;"/>
+        <path d="M384,0L384,-20" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+        <path d="M896,0L896,-180" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;stroke-dasharray:2,2;"/>
         <g transform="matrix(1,0,0,1,640,14)">
-            <text x="-234.043px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Implementation boundary shifts left by ~40 percentage points</text>
+            <text x="-234.043px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Implementation boundary shifts left by ~40 percentage points</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,540)">
-        <path d="M1280,14L1280,206C1280,213.727 1273.727,220 1266,220L14,220C6.273,220 0,213.727 0,206L0,14C0,6.273 6.273,0 14,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M1280,14L1280,206C1280,213.727 1273.727,220 1266,220L14,220C6.273,220 0,213.727 0,206L0,14C0,6.273 6.273,0 14,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,22,32)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(233,78,27);">F<tspan x="10.013px 21.808px 32.72px 44.515px 54.528px 59.213px 71.899px 83.693px 94.605px 103.158px 107.843px 118.755px 129.667px 140.579px 152.373px 157.059px 167.971px 177.109px 181.794px 192.706px 202.72px 213.632px 218.317px 229.229px 241.023px 253.709px 264.621px 277.306px 288.218px 292.028px 301.76px 311.493px 315.897px 325.91px 337.705px 342.39px 355.075px 367.761px 378.673px 390.467px 395.153px 406.064px 418.75px 423.435px 435.23px 445.243px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RACTIONAL SPECIALISTS ENGAGE AT TRIGGER POINTS</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">F<tspan x="10.013px 21.808px 32.72px 44.515px 54.528px 59.213px 71.899px 83.693px 94.605px 103.158px 107.843px 118.755px 129.667px 140.579px 152.373px 157.059px 167.971px 177.109px 181.794px 192.706px 202.72px 213.632px 218.317px 229.229px 241.023px 253.709px 264.621px 277.306px 288.218px 292.028px 301.76px 311.493px 315.897px 325.91px 337.705px 342.39px 355.075px 367.761px 378.673px 390.467px 395.153px 406.064px 418.75px 423.435px 435.23px 445.243px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RACTIONAL SPECIALISTS ENGAGE AT TRIGGER POINTS</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,22,56)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Sized to the deliverable, not to a calendar quarter<tspan x="348.68px 353.125px " y="0px 0px ">. </tspan>Continuous re-engagement across the lifecycle, with low re-entry cost thanks to the materialized graph.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Sized to the deliverable, not to a calendar quarter<tspan x="348.68px 353.125px " y="0px 0px ">. </tspan>Continuous re-engagement across the lifecycle, with low re-entry cost thanks to the materialized graph.</text>
         </g>
         <g transform="matrix(1,0,0,1,22,86)">
             <g>
-                <path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+                <path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
                 <g transform="matrix(1,0,0,1,14,24)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Semantic Engineer</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Semantic Engineer</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,44)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Ontology design</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology design</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,60)">
                     <g transform="matrix(16,0,0,16,45.351562,0)">
                     </g>
                     <g transform="matrix(16,0,0,16,49.796875,0)">
                     </g>
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Brownﬁeld extraction</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Brownﬁeld extraction</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,76)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Cross-layer linking</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Cross-layer linking</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,96)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Specialist depth</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Specialist depth</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,250,0)">
-                <path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+                <path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
                 <g transform="matrix(1,0,0,1,14,24)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Agent Developer</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Agent Developer</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,44)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Impact <tspan x="51.586px 62.258px " y="0px 0px ">An</tspan>alysis <tspan x="114.734px 125.406px " y="0px 0px ">Ag</tspan>ent</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Impact <tspan x="51.586px 62.258px " y="0px 0px ">An</tspan>alysis <tspan x="114.734px 125.406px " y="0px 0px ">Ag</tspan>ent</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,60)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">PR V<tspan x="36.164px 45.062px " y="0px 0px ">al</tspan>idation <tspan x="99.336px 110.008px " y="0px 0px ">Ag</tspan>ent</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">PR V<tspan x="36.164px 45.062px " y="0px 0px ">al</tspan>idation <tspan x="99.336px 110.008px " y="0px 0px ">Ag</tspan>ent</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,76)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">KG Sync <tspan x="66.703px 77.375px " y="0px 0px ">Ag</tspan>ent</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">KG Sync <tspan x="66.703px 77.375px " y="0px 0px ">Ag</tspan>ent</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,96)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Specialist depth</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Specialist depth</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,500,0)">
-                <path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+                <path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
                 <g transform="matrix(1,0,0,1,14,24)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Data <tspan x="37.367px 48.039px " y="0px 0px ">Ar</tspan>chitect</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Data <tspan x="37.367px 48.039px " y="0px 0px ">Ar</tspan>chitect</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,44)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Data model design</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Data model design</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,60)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Data ontology curation</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Data ontology curation</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,76)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Agentic-context data layer</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Agentic-context data layer</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,96)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Specialist depth</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Specialist depth</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,750,0)">
-                <path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+                <path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
                 <g transform="matrix(1,0,0,1,14,24)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">DevOps <tspan x="61.367px 72.039px " y="0px 0px ">Ar</tspan>chitect</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">DevOps <tspan x="61.367px 72.039px " y="0px 0px ">Ar</tspan>chitect</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,44)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">CI/CD ontology gates</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">CI/CD ontology gates</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,60)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Deploy architecture</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Deploy architecture</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,76)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Pipeline governance</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Pipeline governance</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,96)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Specialist depth</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Specialist depth</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,1000,0)">
-                <path d="M236,10L236,100C236,105.519 231.519,110 226,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L226,0C231.519,0 236,4.481 236,10Z" style="fill:white;stroke:rgb(75,85,99);stroke-width:1.5px;"/>
+                <path d="M236,10L236,100C236,105.519 231.519,110 226,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L226,0C231.519,0 236,4.481 236,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
                 <g transform="matrix(1,0,0,1,14,24)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">UX <tspan x="25.797px 36.469px " y="0px 0px ">Ar</tspan>chitect</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">UX <tspan x="25.797px 36.469px " y="0px 0px ">Ar</tspan>chitect</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,44)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Design system curation</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Design system curation</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,60)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Component governance</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Component governance</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,76)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">AI-reliable UI primitives</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">AI-reliable UI primitives</text>
                 </g>
                 <g transform="matrix(1,0,0,1,14,96)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Specialist depth</text>
+                    <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Specialist depth</text>
                 </g>
             </g>
         </g>

@@ -1,48 +1,48 @@
-<svg viewBox="0 0 1400 660" xmlns="http://www.w3.org/2000/svg" width="1400" height="660" preserveAspectRatio="xMidYMid meet">
+<svg viewBox="0 0 1400 660" xmlns="http://www.w3.org/2000/svg" width="1400" height="660" preserveAspectRatio="xMidYMid meet" class="se-svg">
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
-    <marker id="arrowGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#9ca3af"/></marker>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--se-text-secondary,#4b5563)"/></marker>
+    <marker id="arrowGrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="var(--se-panel-stroke,#9ca3af)"/></marker>
     <style>
-      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
-      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
-      .ptitle { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 20px; font-weight: 700; fill: #E94E1B; }
-      .pdef { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; }
-      .iblk { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: #111111; font-weight: 600; }
-      .iblkSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #4b5563; }
-      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-style: italic; fill: #4b5563; }
-      .footer { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-style: italic; fill: #E94E1B; font-weight: 600; }
+      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: var(--se-text,#111111); }
+      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: var(--se-text-secondary,#4b5563); }
+      .ptitle { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 20px; font-weight: 700; fill: var(--se-accent,#E94E1B); }
+      .pdef { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: var(--se-text,#111111); }
+      .iblk { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; fill: var(--se-text,#111111); font-weight: 600; }
+      .iblkSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: var(--se-text-secondary,#4b5563); }
+      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-style: italic; fill: var(--se-text-secondary,#4b5563); }
+      .footer { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-style: italic; fill: var(--se-accent,#E94E1B); font-weight: 600; }
     </style>
   </defs>
 
   <text x="700" y="45" text-anchor="middle" class="h1">The Three Components of the Manual Translation Tax</text>
   <text x="700" y="72" text-anchor="middle" class="sub">Each component is independent of how disciplined the team is or how good its tools are.</text>
 
-  <rect x="20" y="110" width="440" height="450" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="20" y="110" width="440" height="450" rx="14" ry="14" fill="var(--se-panel-fill-alt,#fafafa)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="240" y="148" text-anchor="middle" class="ptitle">Ambiguity</text>
   <text x="240" y="175" text-anchor="middle" class="pdef">The same five-word phrase produces</text>
   <text x="240" y="192" text-anchor="middle" class="pdef">different code on different days.</text>
 
-  <rect x="80" y="220" width="320" height="55" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <rect x="80" y="220" width="320" height="55" rx="8" ry="8" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="1.5"/>
   <text x="240" y="243" text-anchor="middle" class="iblk">"let users save the search"</text>
   <text x="240" y="262" text-anchor="middle" class="iblkSub">five-word product owner phrase</text>
 
-  <path d="M 240 275 L 100 320" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 240 275 L 240 320" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 240 275 L 380 320" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 240 275 L 100 320" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 240 275 L 240 320" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 240 275 L 380 320" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="40" y="330" width="120" height="90" rx="8" ry="8" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <rect x="40" y="330" width="120" height="90" rx="8" ry="8" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1"/>
   <text x="100" y="354" text-anchor="middle" class="iblk">Frontend dev</text>
   <text x="100" y="375" text-anchor="middle" class="iblkSub">persist to</text>
   <text x="100" y="391" text-anchor="middle" class="iblkSub">localStorage</text>
   <text x="100" y="408" text-anchor="middle" class="iblkSub">restore on visit</text>
 
-  <rect x="180" y="330" width="120" height="90" rx="8" ry="8" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <rect x="180" y="330" width="120" height="90" rx="8" ry="8" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1"/>
   <text x="240" y="354" text-anchor="middle" class="iblk">Backend dev</text>
   <text x="240" y="375" text-anchor="middle" class="iblkSub">store in DB</text>
   <text x="240" y="391" text-anchor="middle" class="iblkSub">syncs across</text>
   <text x="240" y="408" text-anchor="middle" class="iblkSub">devices</text>
 
-  <rect x="320" y="330" width="120" height="90" rx="8" ry="8" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <rect x="320" y="330" width="120" height="90" rx="8" ry="8" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1"/>
   <text x="380" y="354" text-anchor="middle" class="iblk">QA engineer</text>
   <text x="380" y="375" text-anchor="middle" class="iblkSub">confirmation</text>
   <text x="380" y="391" text-anchor="middle" class="iblkSub">toast on save</text>
@@ -53,31 +53,31 @@
   <text x="240" y="525" text-anchor="middle" class="iblkSub">The same phrase fed to an AI agent twice</text>
   <text x="240" y="542" text-anchor="middle" class="iblkSub">produces two equally reasonable, different outputs.</text>
 
-  <rect x="480" y="110" width="440" height="450" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="480" y="110" width="440" height="450" rx="14" ry="14" fill="var(--se-panel-fill-alt,#fafafa)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="700" y="148" text-anchor="middle" class="ptitle">Non-persistence</text>
   <text x="700" y="175" text-anchor="middle" class="pdef">Knowledge resets at every handoff.</text>
   <text x="700" y="192" text-anchor="middle" class="pdef">Every conversation starts from zero.</text>
 
-  <line x1="540" y1="280" x2="860" y2="280" stroke="#4b5563" stroke-width="2"/>
-  <line x1="540" y1="275" x2="540" y2="285" stroke="#4b5563" stroke-width="2"/>
-  <line x1="700" y1="275" x2="700" y2="285" stroke="#4b5563" stroke-width="2"/>
-  <line x1="860" y1="275" x2="860" y2="285" stroke="#4b5563" stroke-width="2"/>
+  <line x1="540" y1="280" x2="860" y2="280" stroke="var(--se-text-secondary,#4b5563)" stroke-width="2"/>
+  <line x1="540" y1="275" x2="540" y2="285" stroke="var(--se-text-secondary,#4b5563)" stroke-width="2"/>
+  <line x1="700" y1="275" x2="700" y2="285" stroke="var(--se-text-secondary,#4b5563)" stroke-width="2"/>
+  <line x1="860" y1="275" x2="860" y2="285" stroke="var(--se-text-secondary,#4b5563)" stroke-width="2"/>
 
   <text x="540" y="265" text-anchor="middle" class="iblk">Sprint 1</text>
   <text x="700" y="265" text-anchor="middle" class="iblk">Senior eng departs</text>
   <text x="860" y="265" text-anchor="middle" class="iblk">Sprint 12</text>
 
-  <rect x="520" y="305" width="180" height="105" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <rect x="520" y="305" width="180" height="105" rx="8" ry="8" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="1.5"/>
   <text x="610" y="328" text-anchor="middle" class="iblk">Knowledge held</text>
   <text x="610" y="352" text-anchor="middle" class="iblkSub">2022 tax workaround,</text>
   <text x="610" y="370" text-anchor="middle" class="iblkSub">forked email library,</text>
   <text x="610" y="388" text-anchor="middle" class="iblkSub">retired feature flags,</text>
   <text x="610" y="403" text-anchor="middle" class="iblkSub">cron-job stop-gaps</text>
 
-  <path d="M 700 357 L 720 357" stroke="#4b5563" stroke-width="1.2" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
+  <path d="M 700 357 L 720 357" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.2" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
 
-  <rect x="720" y="305" width="180" height="105" rx="8" ry="8" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="810" y="328" text-anchor="middle" class="iblk" fill="#9ca3af">Rediscovered painfully</text>
+  <rect x="720" y="305" width="180" height="105" rx="8" ry="8" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="810" y="328" text-anchor="middle" class="iblk" fill="var(--se-panel-stroke,#9ca3af)">Rediscovered painfully</text>
   <text x="810" y="352" text-anchor="middle" class="iblkSub">usually after production</text>
   <text x="810" y="370" text-anchor="middle" class="iblkSub">breaks. Each item costs</text>
   <text x="810" y="388" text-anchor="middle" class="iblkSub">an outage + post-mortem +</text>
@@ -88,30 +88,30 @@
   <text x="700" y="515" text-anchor="middle" class="iblkSub">Every conversation is a fresh archaeology dig</text>
   <text x="700" y="532" text-anchor="middle" class="iblkSub">over the same code base.</text>
 
-  <rect x="940" y="110" width="440" height="450" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
+  <rect x="940" y="110" width="440" height="450" rx="14" ry="14" fill="var(--se-panel-fill-alt,#fafafa)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.5"/>
   <text x="1160" y="148" text-anchor="middle" class="ptitle">Non-traceability</text>
   <text x="1160" y="175" text-anchor="middle" class="pdef">No structural link from intent through</text>
   <text x="1160" y="192" text-anchor="middle" class="pdef">design and architecture to code.</text>
 
-  <rect x="960" y="225" width="110" height="60" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <rect x="960" y="225" width="110" height="60" rx="8" ry="8" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="1.5"/>
   <text x="1015" y="248" text-anchor="middle" class="iblk">Intent</text>
   <text x="1015" y="268" text-anchor="middle" class="iblkSub">alerts → weekly</text>
 
-  <path d="M 1070 255 L 1105 255" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1070 255 L 1105 255" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="1105" y="225" width="110" height="60" rx="8" ry="8" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
+  <rect x="1105" y="225" width="110" height="60" rx="8" ry="8" style="fill:var(--se-box-fill,#ffffff)" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1"/>
   <text x="1160" y="248" text-anchor="middle" class="iblk">Code change</text>
   <text x="1160" y="268" text-anchor="middle" class="iblkSub">PR merged</text>
 
-  <path d="M 1215 255 L 1250 255" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 1215 255 L 1250 255" stroke="var(--se-text-secondary,#4b5563)" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
 
-  <rect x="1250" y="225" width="110" height="60" rx="8" ry="8" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5"/>
+  <rect x="1250" y="225" width="110" height="60" rx="8" ry="8" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.5"/>
   <text x="1305" y="248" text-anchor="middle" class="iblk">Ship</text>
   <text x="1305" y="268" text-anchor="middle" class="iblkSub">3 weeks later</text>
 
-  <path d="M 1305 285 L 1305 320" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrowGrey)"/>
+  <path d="M 1305 285 L 1305 320" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrowGrey)"/>
 
-  <rect x="960" y="330" width="400" height="135" rx="8" ry="8" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.2"/>
+  <rect x="960" y="330" width="400" height="135" rx="8" ry="8" fill="var(--se-panel-fill,#f5f5f5)" stroke="var(--se-panel-stroke,#9ca3af)" stroke-width="1.2"/>
   <text x="1170" y="355" text-anchor="middle" class="iblk">Customers report bug</text>
   <text x="1170" y="378" text-anchor="middle" class="iblkSub">A separate daily-worker in a different repo iterated</text>
   <text x="1170" y="395" text-anchor="middle" class="iblkSub">over all saved searches without filtering on frequency.</text>
@@ -123,7 +123,7 @@
   <text x="1170" y="512" text-anchor="middle" class="ital">depends on this concept" before changing it.</text>
   <text x="1170" y="538" text-anchor="middle" class="iblkSub">Two days of investigation to find the cause.</text>
 
-  <rect x="60" y="585" width="1280" height="55" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
+  <rect x="60" y="585" width="1280" height="55" rx="10" ry="10" fill="var(--se-accent-fill,#FDE8DD)" stroke="var(--se-accent,#E94E1B)" stroke-width="1.5"/>
   <text x="700" y="610" text-anchor="middle" class="footer">These three attributes apply to all knowledge in the manual process,</text>
   <text x="700" y="632" text-anchor="middle" class="footer">including the tacit codebase knowledge distributed across teams.</text>
 </svg>

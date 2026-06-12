@@ -1,131 +1,256 @@
-<svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" width="1400" height="900" preserveAspectRatio="xMidYMid meet">
-  <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/></marker>
-    <style>
-      .h1 { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 26px; font-weight: 600; fill: #111111; }
-      .sub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; fill: #4b5563; }
-      .ceil { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 20px; font-weight: 700; fill: #E94E1B; }
-      .ceilSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 14px; fill: #111111; }
-      .iblk { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #111111; }
-      .iblkSub { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 12px; fill: #4b5563; }
-      .ital { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 13px; font-style: italic; fill: #4b5563; }
-      .footer { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; font-style: italic; fill: #E94E1B; font-weight: 600; }
-    </style>
-  </defs>
-
-  <text x="700" y="45" text-anchor="middle" class="h1">The Four SDD Ceilings</text>
-  <text x="700" y="72" text-anchor="middle" class="sub">SDD raises the floor of AI-assisted engineering. It hits four ceilings at enterprise scale.</text>
-
-  <rect x="40" y="110" width="650" height="370" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
-  <text x="365" y="148" text-anchor="middle" class="ceil">Localized context</text>
-  <text x="365" y="175" text-anchor="middle" class="ceilSub">The spec is local to one team's view. Cross-team contracts are invisible.</text>
-
-  <rect x="75" y="200" width="280" height="100" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
-  <text x="215" y="225" text-anchor="middle" class="iblk">Team A spec</text>
-  <text x="215" y="248" text-anchor="middle" class="iblkSub">alert-frequency feature</text>
-  <text x="215" y="265" text-anchor="middle" class="iblkSub">approved by team A tech lead</text>
-  <text x="215" y="285" text-anchor="middle" class="iblkSub">writes to notification-preferences table</text>
-
-  <rect x="375" y="200" width="280" height="100" rx="10" ry="10" fill="#f5f5f5" stroke="#4b5563" stroke-width="1.5"/>
-  <text x="515" y="225" text-anchor="middle" class="iblk">Team B migration (parallel)</text>
-  <text x="515" y="248" text-anchor="middle" class="iblkSub">refactoring the same table</text>
-  <text x="515" y="265" text-anchor="middle" class="iblkSub">dropping 2 columns team A needs</text>
-  <text x="515" y="285" text-anchor="middle" class="iblkSub">team A PO never saw the migration</text>
-
-  <path d="M 215 305 L 365 360" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
-  <path d="M 515 305 L 365 360" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
-
-  <rect x="125" y="370" width="480" height="90" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="365" y="397" text-anchor="middle" class="iblk" fill="#9ca3af">Both PRs merge in the same week</text>
-  <text x="365" y="420" text-anchor="middle" class="iblkSub">integration breaks Friday afternoon</text>
-  <text x="365" y="438" text-anchor="middle" class="iblkSub">production hotfix takes the weekend</text>
-  <text x="365" y="455" text-anchor="middle" class="ital">no place in SDD for either architect to look across boundary</text>
-
-  <rect x="710" y="110" width="650" height="370" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
-  <text x="1035" y="148" text-anchor="middle" class="ceil">Spec drift</text>
-  <text x="1035" y="175" text-anchor="middle" class="ceilSub">The custodians update their slices. No structural link maintains the connection.</text>
-
-  <line x1="780" y1="240" x2="1290" y2="240" stroke="#4b5563" stroke-width="2"/>
-  <line x1="780" y1="235" x2="780" y2="245" stroke="#4b5563" stroke-width="2"/>
-  <line x1="930" y1="235" x2="930" y2="245" stroke="#4b5563" stroke-width="2"/>
-  <line x1="1140" y1="235" x2="1140" y2="245" stroke="#4b5563" stroke-width="2"/>
-  <line x1="1290" y1="235" x2="1290" y2="245" stroke="#4b5563" stroke-width="2"/>
-
-  <text x="780" y="223" text-anchor="middle" class="iblk">Sprint 3</text>
-  <text x="930" y="223" text-anchor="middle" class="iblk">Sprint 5</text>
-  <text x="1140" y="223" text-anchor="middle" class="iblk">Sprint 8</text>
-  <text x="1290" y="223" text-anchor="middle" class="iblk">Sprint 11</text>
-
-  <rect x="750" y="260" width="270" height="80" rx="8" ry="8" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
-  <text x="885" y="285" text-anchor="middle" class="iblk">PO spec written</text>
-  <text x="885" y="303" text-anchor="middle" class="iblkSub">assumes alert prefs live in</text>
-  <text x="885" y="320" text-anchor="middle" class="iblkSub">saved-search service</text>
-
-  <path d="M 1020 300 L 1050 300" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
-
-  <rect x="1055" y="260" width="270" height="80" rx="8" ry="8" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5"/>
-  <text x="1190" y="285" text-anchor="middle" class="iblk">Architect refactor</text>
-  <text x="1190" y="303" text-anchor="middle" class="iblkSub">moves alert prefs to notification</text>
-  <text x="1190" y="320" text-anchor="middle" class="iblkSub">service; wiki updated, spec not</text>
-
-  <path d="M 1190 340 L 1190 380" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-
-  <rect x="850" y="385" width="370" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="1035" y="412" text-anchor="middle" class="iblk" fill="#9ca3af">New spec in Sprint 8 reads old spec</text>
-  <text x="1035" y="430" text-anchor="middle" class="iblkSub">repeats the saved-search assumption</text>
-  <text x="1035" y="448" text-anchor="middle" class="iblkSub">writes to a table notification reads but never writes back</text>
-
-  <rect x="40" y="500" width="650" height="370" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
-  <text x="365" y="538" text-anchor="middle" class="ceil">Single-layer coverage</text>
-  <text x="365" y="565" text-anchor="middle" class="ceilSub">SDD captures the PO's intent. Architecture and design are invisible.</text>
-
-  <rect x="75" y="590" width="280" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
-  <text x="215" y="615" text-anchor="middle" class="iblk">Spec: "configuration form"</text>
-  <text x="215" y="635" text-anchor="middle" class="iblkSub">for daily / weekly / off frequency</text>
-  <text x="215" y="652" text-anchor="middle" class="iblkSub">acceptance criteria + scope</text>
-
-  <path d="M 215 670 L 215 705" stroke="#4b5563" stroke-width="1.2" fill="none" marker-end="url(#arrow)"/>
-
-  <rect x="75" y="710" width="280" height="80" rx="10" ry="10" fill="#ffffff" stroke="#4b5563" stroke-width="1"/>
-  <text x="215" y="735" text-anchor="middle" class="iblk">Agent picks Dropdown</text>
-  <text x="215" y="755" text-anchor="middle" class="iblkSub">most common in training data,</text>
-  <text x="215" y="772" text-anchor="middle" class="iblkSub">inline labels, saved-search service</text>
-
-  <rect x="375" y="590" width="280" height="190" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="515" y="615" text-anchor="middle" class="iblk" fill="#9ca3af">Should have been SegmentedControl</text>
-  <text x="515" y="640" text-anchor="middle" class="iblkSub">per the Design Ontology rule:</text>
-  <text x="515" y="657" text-anchor="middle" class="iblkSub">"3 mutually-exclusive choices,</text>
-  <text x="515" y="674" text-anchor="middle" class="iblkSub">equal weight: SegmentedControl"</text>
-  <text x="515" y="710" text-anchor="middle" class="iblkSub">Should have routed via notification</text>
-  <text x="515" y="727" text-anchor="middle" class="iblkSub">service per the Architecture Ontology.</text>
-  <text x="515" y="760" text-anchor="middle" class="ital">designer + architect noticed too late</text>
-
-  <rect x="710" y="500" width="650" height="370" rx="14" ry="14" fill="#fafafa" stroke="#4b5563" stroke-width="1.5"/>
-  <text x="1035" y="538" text-anchor="middle" class="ceil">Specs become the bottleneck</text>
-  <text x="1035" y="565" text-anchor="middle" class="ceilSub">Make specs richer. Senior people drown in review. Engineers wait.</text>
-
-  <rect x="750" y="590" width="200" height="80" rx="10" ry="10" fill="#FDE8DD" stroke="#E94E1B" stroke-width="1.5"/>
-  <text x="850" y="618" text-anchor="middle" class="iblk">PO writes spec</text>
-  <text x="850" y="640" text-anchor="middle" class="iblkSub">at the rate she can</text>
-  <text x="850" y="657" text-anchor="middle" class="iblkSub">think them through</text>
-
-  <rect x="975" y="590" width="200" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5"/>
-  <text x="1075" y="618" text-anchor="middle" class="iblk">Architect reviews</text>
-  <text x="1075" y="640" text-anchor="middle" class="iblkSub">at the rate she has</text>
-  <text x="1075" y="657" text-anchor="middle" class="iblkSub">free time (not much)</text>
-
-  <rect x="1200" y="590" width="135" height="80" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5"/>
-  <text x="1267" y="618" text-anchor="middle" class="iblk">Designer</text>
-  <text x="1267" y="640" text-anchor="middle" class="iblkSub">same boat</text>
-  <text x="1267" y="657" text-anchor="middle" class="iblkSub">as architect</text>
-
-  <path d="M 850 670 L 1042 705" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <path d="M 1075 670 L 1042 705" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-  <path d="M 1267 670 L 1042 705" stroke="#9ca3af" stroke-width="1.5" fill="none" stroke-dasharray="4,3" marker-end="url(#arrow)"/>
-
-  <rect x="800" y="710" width="490" height="100" rx="10" ry="10" fill="#f5f5f5" stroke="#9ca3af" stroke-width="1.5" stroke-dasharray="5,3"/>
-  <text x="1045" y="735" text-anchor="middle" class="iblk" fill="#9ca3af">Senior people in review meetings all week</text>
-  <text x="1045" y="758" text-anchor="middle" class="iblkSub">Implementation engineers wait for input</text>
-  <text x="1045" y="775" text-anchor="middle" class="iblkSub">Bottleneck moves from typing to thinking</text>
-  <text x="1045" y="797" text-anchor="middle" class="ital">operating model is not configured to absorb the shift</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1400 900" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,700,45)">
+        <text x="-140.842px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:var(--se-text,#111111);">The Four SDD Ceilings</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700,72)">
+        <g transform="matrix(15,0,0,15,-180.106201,0)">
+        </g>
+        <g transform="matrix(15,0,0,15,-175.938721,0)">
+        </g>
+        <text x="-285.143px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">SDD raises the ﬂoor of <tspan x="-130.902px -120.897px " y="0px 0px ">AI</tspan>-assisted engineering. It hits four ceilings at enterprise scale.</text>
+    </g>
+    <path d="M690,124L690,466C690,473.727 683.727,480 676,480L54,480C46.273,480 40,473.727 40,466L40,124C40,116.273 46.273,110 54,110L676,110C683.727,110 690,116.273 690,124Z" style="fill:var(--se-panel-fill-alt,#fafafa);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,365,148)">
+        <text x="-83.906px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:var(--se-accent,#E94E1B);">Localized context</text>
+    </g>
+    <g transform="matrix(1,0,0,1,365,175)">
+        <text x="-222.708px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text,#111111);">The spec is local to one team&apos;s view<tspan x="0.191px 4.081px " y="0px 0px ">. </tspan>Cross-team contracts are invisible.</text>
+    </g>
+    <path d="M355,210L355,290C355,295.519 350.519,300 345,300L85,300C79.481,300 75,295.519 75,290L75,210C75,204.481 79.481,200 85,200L345,200C350.519,200 355,204.481 355,210Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,215,225)">
+        <text x="-39.146px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">T<tspan x="-32.164px -24.934px " y="0px 0px ">ea</tspan>m <tspan x="-3.009px 5.903px 9.515px " y="0px 0px 0px ">A s</tspan>pec</text>
+    </g>
+    <g transform="matrix(1,0,0,1,215,248)">
+        <text x="-60.366px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">alert-frequency feature</text>
+    </g>
+    <g transform="matrix(1,0,0,1,215,265)">
+        <text x="-79.061px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">approved by team <tspan x="19.676px 27.023px 30.357px " y="0px 0px 0px ">A t</tspan>ech lead</text>
+    </g>
+    <g transform="matrix(1,0,0,1,215,285)">
+        <g transform="matrix(12,0,0,12,-33.691406,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,-30.357422,0)">
+        </g>
+        <text x="-101.051px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">writes to notiﬁcation-preferences table</text>
+    </g>
+    <path d="M655,210L655,290C655,295.519 650.519,300 645,300L385,300C379.481,300 375,295.519 375,290L375,210C375,204.481 379.481,200 385,200L645,200C650.519,200 655,204.481 655,210Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,515,225)">
+        <text x="-83.316px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">T<tspan x="-76.334px -69.104px " y="0px 0px ">ea</tspan>m B migration (parallel)</text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,248)">
+        <text x="-69.372px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">refactoring the same table</text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,265)">
+        <text x="-90.398px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">dropping 2 columns team <tspan x="47.021px 54.369px 57.703px " y="0px 0px 0px ">A n</tspan>eeds</text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,285)">
+        <text x="-94.052px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">team <tspan x="-64.696px -57.349px -54.015px " y="0px 0px 0px ">A P</tspan>O never saw the migration</text>
+    </g>
+    <path d="M359.479,354.141L365,360L357.001,360.901L359.479,354.141Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M215,305C215,305 332.737,348.17 359.592,358.017" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.2px;"/>
+    <path d="M372.999,360.901L365,360L370.521,354.141L372.999,360.901Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M515,305C515,305 397.263,348.17 370.408,358.017" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.2px;"/>
+    <path d="M605,380L605,450C605,455.519 600.519,460 595,460L135,460C129.481,460 125,455.519 125,450L125,380C125,374.481 129.481,370 135,370L595,370C600.519,370 605,374.481 605,380Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;stroke-dasharray:5,3;"/>
+    <g transform="matrix(1,0,0,1,365,397)">
+        <text x="-105.841px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-panel-stroke,#9ca3af);">Both PRs merge in the same week</text>
+    </g>
+    <g transform="matrix(1,0,0,1,365,420)">
+        <text x="-93.053px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">integration breaks Friday afternoon</text>
+    </g>
+    <g transform="matrix(1,0,0,1,365,438)">
+        <g transform="matrix(12,0,0,12,-19.672852,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,-16.338867,0)">
+        </g>
+        <text x="-95.728px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">production hotﬁx takes the weekend</text>
+    </g>
+    <g transform="matrix(1,0,0,1,365,455)">
+        <text x="-171.615px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-text-secondary,#4b5563);">no place in SDD for either architect to look across boundary</text>
+    </g>
+    <path d="M1360,124L1360,466C1360,473.727 1353.727,480 1346,480L724,480C716.273,480 710,473.727 710,466L710,124C710,116.273 716.273,110 724,110L1346,110C1353.727,110 1360,116.273 1360,124Z" style="fill:var(--se-panel-fill-alt,#fafafa);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1035,148)">
+        <text x="-46.118px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:var(--se-accent,#E94E1B);">Spec drift</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1035,175)">
+        <text x="-243.182px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text,#111111);">The custodians update their slices. No structural link maintains the connection.</text>
+    </g>
+    <path d="M780,240L1290,240" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+    <path d="M780,235L780,245" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+    <path d="M930,235L930,245" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+    <path d="M1140,235L1140,245" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+    <path d="M1290,235L1290,245" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,780,223)">
+        <text x="-24.197px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Sprint 3</text>
+    </g>
+    <g transform="matrix(1,0,0,1,930,223)">
+        <text x="-24.197px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Sprint 5</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1140,223)">
+        <text x="-24.197px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Sprint 8</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1290,223)">
+        <text x="-27.457px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Sprint 1<tspan x="20.227px " y="0px ">1</tspan></text>
+    </g>
+    <path d="M1020,268L1020,332C1020,336.415 1016.415,340 1012,340L758,340C753.585,340 750,336.415 750,332L750,268C750,263.585 753.585,260 758,260L1012,260C1016.415,260 1020,263.585 1020,268Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,885,285)">
+        <text x="-49.125px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">PO spec written</text>
+    </g>
+    <g transform="matrix(1,0,0,1,885,303)">
+        <text x="-69.36px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">assumes alert prefs live in</text>
+    </g>
+    <g transform="matrix(1,0,0,1,885,320)">
+        <text x="-56.689px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">saved-search service</text>
+    </g>
+    <path d="M1042.8,296.4L1050,300L1042.8,303.6L1042.8,296.4Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M1020,300L1044.24,300" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.2px;"/>
+    <path d="M1325,268L1325,332C1325,336.415 1321.415,340 1317,340L1063,340C1058.585,340 1055,336.415 1055,332L1055,268C1055,263.585 1058.585,260 1063,260L1317,260C1321.415,260 1325,263.585 1325,268Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1190,285)">
+        <text x="-54.184px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Architect refactor</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1190,303)">
+        <g transform="matrix(12,0,0,12,45.017578,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,48.351562,0)">
+        </g>
+        <text x="-83.039px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">moves alert prefs to notiﬁcation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1190,320)">
+        <text x="-81.709px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">service; wiki updated, spec not</text>
+    </g>
+    <path d="M1190,340L1190,380" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;stroke-dasharray:4,3;"/>
+    <path d="M1220,395L1220,455C1220,460.519 1215.519,465 1210,465L860,465C854.481,465 850,460.519 850,455L850,395C850,389.481 854.481,385 860,385L1210,385C1215.519,385 1220,389.481 1220,395Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;stroke-dasharray:5,3;"/>
+    <g transform="matrix(1,0,0,1,1035,412)">
+        <text x="-110.897px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-panel-stroke,#9ca3af);">New spec in Sprint 8 reads old spec</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1035,430)">
+        <text x="-100.055px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">repeats the saved-search assumption</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1035,448)">
+        <g transform="matrix(12,0,0,12,-40.68457,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,-37.350586,0)">
+        </g>
+        <text x="-147.407px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">writes to a table notiﬁcation reads but never writes back</text>
+    </g>
+    <path d="M690,514L690,856C690,863.727 683.727,870 676,870L54,870C46.273,870 40,863.727 40,856L40,514C40,506.273 46.273,500 54,500L676,500C683.727,500 690,506.273 690,514Z" style="fill:var(--se-panel-fill-alt,#fafafa);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,365,538)">
+        <text x="-103.384px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:var(--se-accent,#E94E1B);">Single-layer coverage</text>
+    </g>
+    <g transform="matrix(1,0,0,1,365,565)">
+        <text x="-209.115px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text,#111111);">SDD captures the PO&apos;s intent. <tspan x="-19.677px -10.339px " y="0px 0px ">Ar</tspan>chitecture and design are invisible.</text>
+    </g>
+    <path d="M355,600L355,660C355,665.519 350.519,670 345,670L85,670C79.481,670 75,665.519 75,660L75,600C75,594.481 79.481,590 85,590L345,590C350.519,590 355,594.481 355,600Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,215,615)">
+        <g transform="matrix(13,0,0,13,-15.155029,0)">
+        </g>
+        <g transform="matrix(13,0,0,13,-10.825928,0)">
+        </g>
+        <text x="-83.443px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Spec: &quot;conﬁguration form&quot;</text>
+    </g>
+    <g transform="matrix(1,0,0,1,215,635)">
+        <text x="-83.933px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">for daily / weekly / of<tspan x="24.565px 27.899px " y="0px 0px ">f </tspan>frequency</text>
+    </g>
+    <g transform="matrix(1,0,0,1,215,652)">
+        <text x="-73.207px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">acceptance criteria + scope</text>
+    </g>
+    <path d="M218.6,697.8L215,705L211.4,697.8L218.6,697.8Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M215,670L215,699.24" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.2px;"/>
+    <path d="M355,720L355,780C355,785.519 350.519,790 345,790L85,790C79.481,790 75,785.519 75,780L75,720C75,714.481 79.481,710 85,710L345,710C350.519,710 355,714.481 355,720Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1px;"/>
+    <g transform="matrix(1,0,0,1,215,735)">
+        <text x="-70.78px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Agent picks Dropdown</text>
+    </g>
+    <g transform="matrix(1,0,0,1,215,755)">
+        <text x="-80.37px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">most common in training data,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,215,772)">
+        <text x="-91.377px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">inline labels, saved-search service</text>
+    </g>
+    <path d="M655,600L655,770C655,775.519 650.519,780 645,780L385,780C379.481,780 375,775.519 375,770L375,600C375,594.481 379.481,590 385,590L645,590C650.519,590 655,594.481 655,600Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;stroke-dasharray:5,3;"/>
+    <g transform="matrix(1,0,0,1,515,615)">
+        <text x="-115.569px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-panel-stroke,#9ca3af);">Should have been SegmentedControl</text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,640)">
+        <text x="-78.044px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">per the Design Ontology rule:</text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,657)">
+        <text x="-79.828px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">&quot;3 mutually-exclusive choices,</text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,674)">
+        <text x="-89.186px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">equal weight: SegmentedControl&quot;</text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,710)">
+        <g transform="matrix(12,0,0,12,53.707031,0)">
+        </g>
+        <g transform="matrix(12,0,0,12,57.041016,0)">
+        </g>
+        <text x="-91.729px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">Should have routed via notiﬁcation</text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,727)">
+        <text x="-99.609px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">service per the <tspan x="-18.229px -10.225px " y="0px 0px ">Ar</tspan>chitecture Ontology<tspan x="96.275px " y="0px ">.</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,515,760)">
+        <text x="-102.8px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-text-secondary,#4b5563);">designer + architect noticed too late</text>
+    </g>
+    <path d="M1360,514L1360,856C1360,863.727 1353.727,870 1346,870L724,870C716.273,870 710,863.727 710,856L710,514C710,506.273 716.273,500 724,500L1346,500C1353.727,500 1360,506.273 1360,514Z" style="fill:var(--se-panel-fill-alt,#fafafa);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1035,538)">
+        <text x="-140.601px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:20px;fill:var(--se-accent,#E94E1B);">Specs become the bottleneck</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1035,565)">
+        <text x="-205.444px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text,#111111);">Make specs richer<tspan x="-92.617px -88.727px " y="0px 0px ">. </tspan>Senior people drown in review<tspan x="101.948px 105.837px " y="0px 0px ">. </tspan>Engineers wait.</text>
+    </g>
+    <path d="M950,600L950,660C950,665.519 945.519,670 940,670L760,670C754.481,670 750,665.519 750,660L750,600C750,594.481 754.481,590 760,590L940,590C945.519,590 950,594.481 950,600Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,850,618)">
+        <text x="-46.604px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">PO writes spec</text>
+    </g>
+    <g transform="matrix(1,0,0,1,850,640)">
+        <text x="-49.699px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">at the rate she can</text>
+    </g>
+    <g transform="matrix(1,0,0,1,850,657)">
+        <text x="-49.696px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">think them through</text>
+    </g>
+    <path d="M1175,600L1175,660C1175,665.519 1170.519,670 1165,670L985,670C979.481,670 975,665.519 975,660L975,600C975,594.481 979.481,590 985,590L1165,590C1170.519,590 1175,594.481 1175,600Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1075,618)">
+        <text x="-53.831px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Architect reviews</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1075,640)">
+        <text x="-49.699px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">at the rate she has</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1075,657)">
+        <text x="-53.684px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">free time (not much)</text>
+    </g>
+    <path d="M1335,600L1335,660C1335,665.519 1330.519,670 1325,670L1210,670C1204.481,670 1200,665.519 1200,660L1200,600C1200,594.481 1204.481,590 1210,590L1325,590C1330.519,590 1335,594.481 1335,600Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1267,618)">
+        <text x="-27.815px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Designer</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1267,640)">
+        <text x="-28.017px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">same boat</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1267,657)">
+        <text x="-30.68px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">as architect</text>
+    </g>
+    <path d="M1033.953,698.959L1042,705L1032.339,707.813L1033.953,698.959Z" style="fill:var(--se-panel-stroke,#9ca3af);fill-rule:nonzero;"/>
+    <path d="M850,670C850,670 1000.235,697.387 1034.917,703.709" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;stroke-dasharray:4,3;"/>
+    <path d="M1051.448,701.539L1042,705L1044.9,695.365L1051.448,701.539Z" style="fill:var(--se-panel-stroke,#9ca3af);fill-rule:nonzero;"/>
+    <path d="M1075,670C1075,670 1056.145,689.998 1046.939,699.761" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;stroke-dasharray:4,3;"/>
+    <path d="M1051.585,708.063L1042,705L1050.201,699.17L1051.585,708.063Z" style="fill:var(--se-panel-stroke,#9ca3af);fill-rule:nonzero;"/>
+    <path d="M1267,670C1267,670 1087.379,697.941 1049.114,703.893" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;stroke-dasharray:4,3;"/>
+    <path d="M1290,720L1290,800C1290,805.519 1285.519,810 1280,810L810,810C804.481,810 800,805.519 800,800L800,720C800,714.481 804.481,710 810,710L1280,710C1285.519,710 1290,714.481 1290,720Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;stroke-dasharray:5,3;"/>
+    <g transform="matrix(1,0,0,1,1045,735)">
+        <text x="-129.686px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-panel-stroke,#9ca3af);">Senior people in review meetings all week</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1045,758)">
+        <text x="-104.725px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">Implementation engineers wait for input</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1045,775)">
+        <text x="-107.719px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">Bottleneck moves from typing to thinking</text>
+    </g>
+    <g transform="matrix(1,0,0,1,1045,797)">
+        <g transform="matrix(13,0,0,13,2.891357,0)">
+        </g>
+        <g transform="matrix(13,0,0,13,6.503174,0)">
+        </g>
+        <text x="-149.592px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-text-secondary,#4b5563);">operating model is not conﬁgured to absorb the shift</text>
+    </g>
 </svg>

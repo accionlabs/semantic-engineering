@@ -1,118 +1,118 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="1400px" height="780px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
+<svg viewBox="0 0 1400 780" preserveAspectRatio="xMidYMid meet" width="1400px" height="780px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,44)">
-        <text x="-328.33px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:rgb(17,17,17);">The Offboarding Doctrine: Four Commitments</text>
+        <text x="-328.33px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Offboarding Doctrine: Four Commitments</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-380.805px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The exit is real. <tspan x="-268.156px -258.383px " y="0px 0px ">Th</tspan>e asset transfers cleanly<tspan x="-78.141px -73.695px -69.531px -59.758px " y="0px 0px 0px 0px ">. Th</tspan>e of<tspan x="-24.453px -20.008px " y="0px 0px ">fb</tspan>oarding doctrine is what makes the entry decision easy<tspan x="376.359px " y="0px ">.</tspan></text>
+        <text x="-380.805px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The exit is real. <tspan x="-268.156px -258.383px " y="0px 0px ">Th</tspan>e asset transfers cleanly<tspan x="-78.141px -73.695px -69.531px -59.758px " y="0px 0px 0px 0px ">. Th</tspan>e of<tspan x="-24.453px -20.008px " y="0px 0px ">fb</tspan>oarding doctrine is what makes the entry decision easy<tspan x="376.359px " y="0px ">.</tspan></text>
     </g>
     <g transform="matrix(1,0,0,1,60,108)">
-        <path d="M320,14L320,106C320,113.727 313.727,120 306,120L14,120C6.273,120 0,113.727 0,106L0,14C0,6.273 6.273,0 14,0L306,0C313.727,0 320,6.273 320,14Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
+        <path d="M320,14L320,106C320,113.727 313.727,120 306,120L14,120C6.273,120 0,113.727 0,106L0,14C0,6.273 6.273,0 14,0L306,0C313.727,0 320,6.273 320,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,159.92,36)">
             <g transform="matrix(16,0,0,16,56.354688,0)">
             </g>
-            <text x="-56.355px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">A<tspan x="-44.64px -32.925px -21.211px -16.605px -4px 7.715px 12.32px 22.253px 33.968px 45.683px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">CCION LABS</tspan></text>
+            <text x="-56.355px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">A<tspan x="-44.64px -32.925px -21.211px -16.605px -4px 7.715px 12.32px 22.253px 33.968px 45.683px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">CCION LABS</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,160,62)">
             <g transform="matrix(16,0,0,16,-55.136719,0)">
             </g>
             <g transform="matrix(16,0,0,16,-50.691406,0)">
             </g>
-            <text x="-87.152px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The ﬁrm holding custody</text>
+            <text x="-87.152px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The ﬁrm holding custody</text>
         </g>
         <g transform="matrix(1,0,0,1,160,84)">
-            <text x="-106.75px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">at the end of the engagement.</text>
+            <text x="-106.75px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">at the end of the engagement.</text>
         </g>
         <g transform="matrix(1,0,0,1,160,104)">
-            <text x="-77.383px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Hands the asset over<tspan x="72.938px " y="0px ">.</tspan></text>
+            <text x="-77.383px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Hands the asset over<tspan x="72.938px " y="0px ">.</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,320,0)">
             <g>
                 <path d="M40,60L600,60" style="fill:none;fill-rule:nonzero;"/>
                 <g transform="matrix(1,-0,-0,1,-380,-108)">
-                    <path d="M950,153L980,168L950,183L950,153Z" style="fill:rgb(233,78,27);fill-rule:nonzero;"/>
-                    <path d="M420,168L956,168" style="fill:none;fill-rule:nonzero;stroke:rgb(233,78,27);stroke-width:5px;"/>
+                    <path d="M950,153L980,168L950,183L950,153Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+                    <path d="M420,168L956,168" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:5px;"/>
                 </g>
             </g>
-            <path d="M460,32L460,88C460,94.623 454.623,100 448,100L192,100C185.377,100 180,94.623 180,88L180,32C180,25.377 185.377,20 192,20L448,20C454.623,20 460,25.377 460,32Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+            <path d="M460,32L460,88C460,94.623 454.623,100 448,100L192,100C185.377,100 180,94.623 180,88L180,32C180,25.377 185.377,20 192,20L448,20C454.623,20 460,25.377 460,32Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
             <g transform="matrix(1,0,0,1,319.92,52)">
-                <text x="-46.341px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">H<tspan x="-34.627px -22.912px -11.197px 0.518px 13.123px 23.955px 34.787px " y="0px 0px 0px 0px 0px 0px 0px ">ANDOVER</tspan></text>
+                <text x="-46.341px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">H<tspan x="-34.627px -22.912px -11.197px 0.518px 13.123px 23.955px 34.787px " y="0px 0px 0px 0px 0px 0px 0px ">ANDOVER</tspan></text>
             </g>
             <g transform="matrix(1,0,0,1,320,78)">
-                <text x="-89.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(17,17,17);">Four commitments below</text>
+                <text x="-89.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Four commitments below</text>
             </g>
         </g>
-        <path d="M1280,14L1280,106C1280,113.727 1273.727,120 1266,120L974,120C966.273,120 960,113.727 960,106L960,14C960,6.273 966.273,0 974,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:rgb(253,232,221);stroke:rgb(233,78,27);stroke-width:2px;"/>
+        <path d="M1280,14L1280,106C1280,113.727 1273.727,120 1266,120L974,120C966.273,120 960,113.727 960,106L960,14C960,6.273 966.273,0 974,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,1119.92,36)">
-            <text x="-93.448px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">C<tspan x="-81.733px -71.8px -67.194px -56.362px -44.648px -34.714px -30.109px -20.176px -13.789px -9.184px 1.648px 13.363px 25.077px 36.792px 47.624px 58.456px 69.288px 81.893px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">LIENT or SUCCESSOR</tspan></text>
+            <text x="-93.448px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">C<tspan x="-81.733px -71.8px -67.194px -56.362px -44.648px -34.714px -30.109px -20.176px -13.789px -9.184px 1.648px 13.363px 25.077px 36.792px 47.624px 58.456px 69.288px 81.893px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">LIENT or SUCCESSOR</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,1120,62)">
-            <text x="-79.34px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The client&apos;s own team,</text>
+            <text x="-79.34px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The client&apos;s own team,</text>
         </g>
         <g transform="matrix(1,0,0,1,1120,84)">
-            <text x="-80.488px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">or a successor vendor<tspan x="76.043px " y="0px ">.</tspan></text>
+            <text x="-80.488px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">or a successor vendor<tspan x="76.043px " y="0px ">.</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,1120,104)">
-            <text x="-68.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">T<tspan x="-60.93px -52.031px " y="0px 0px ">ak</tspan>es the asset on.</text>
+            <text x="-68.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-60.93px -52.031px " y="0px 0px ">ak</tspan>es the asset on.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,266)">
-        <path d="M630,12L630,178C630,184.623 624.623,190 618,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L618,0C624.623,0 630,5.377 630,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
-        <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:rgb(233,78,27);"/>
-        <rect x="106" y="0" width="14" height="190" style="fill:rgb(233,78,27);"/>
+        <path d="M630,12L630,178C630,184.623 624.623,190 618,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L618,0C624.623,0 630,5.377 630,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+        <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
+        <rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,59.84,36)">
-            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 1</tspan></text>
+            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 1</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,36,68)">
-            <circle cx="24" cy="14" r="7" style="fill:white;"/>
+            <circle cx="24" cy="14" r="7" style="fill:var(--se-box-fill,#ffffff);"/>
             <g transform="matrix(1,0,0,1,-1,0)">
-                <circle cx="6" cy="46" r="7" style="fill:white;"/>
+                <circle cx="6" cy="46" r="7" style="fill:var(--se-box-fill,#ffffff);"/>
             </g>
             <g transform="matrix(1,0,0,1,2,0)">
-                <circle cx="42" cy="46" r="7" style="fill:white;"/>
+                <circle cx="42" cy="46" r="7" style="fill:var(--se-box-fill,#ffffff);"/>
             </g>
-            <circle cx="24" cy="78" r="7" style="fill:white;"/>
+            <circle cx="24" cy="78" r="7" style="fill:var(--se-box-fill,#ffffff);"/>
             <path d="M24,21L6,39" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:2px;"/>
             <path d="M24,21L42,39" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:2px;"/>
             <path d="M6,53L24,71" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:2px;"/>
             <path d="M42,53L24,71" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:2px;"/>
         </g>
         <g transform="matrix(1,0,0,1,146,40)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">The graph is exportable</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">The graph is exportable</text>
         </g>
         <g transform="matrix(1,0,0,1,146,78)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The four-layer knowledge graph is</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The four-layer knowledge graph is</text>
         </g>
         <g transform="matrix(1,0,0,1,146,98)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">delivered in a format the client&apos;s</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">delivered in a format the client&apos;s</text>
         </g>
         <g transform="matrix(1,0,0,1,146,118)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">team or a successor vendor can operate.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">team or a successor vendor can operate.</text>
         </g>
         <g transform="matrix(1,0,0,1,146,158)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Format: open, documented, queryable.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Format: open, documented, queryable.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,710,266)">
-        <path d="M630,12L630,178C630,184.623 624.623,190 618,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L618,0C624.623,0 630,5.377 630,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
-        <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:rgb(233,78,27);"/>
-        <rect x="106" y="0" width="14" height="190" style="fill:rgb(233,78,27);"/>
+        <path d="M630,12L630,178C630,184.623 624.623,190 618,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L618,0C624.623,0 630,5.377 630,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+        <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
+        <rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,59.84,36)">
-            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 2</tspan></text>
+            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 2</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,36,68)">
             <circle cx="20" cy="46" r="14" style="fill:none;stroke:white;stroke-width:2.5px;"/>
-            <circle cx="20" cy="46" r="5" style="fill:white;"/>
-            <rect x="18" y="28" width="4" height="6" style="fill:white;"/>
-            <rect x="18" y="58" width="4" height="6" style="fill:white;"/>
-            <rect x="0" y="44" width="6" height="4" style="fill:white;"/>
-            <rect x="34" y="44" width="6" height="4" style="fill:white;"/>
+            <circle cx="20" cy="46" r="5" style="fill:var(--se-box-fill,#ffffff);"/>
+            <rect x="18" y="28" width="4" height="6" style="fill:var(--se-box-fill,#ffffff);"/>
+            <rect x="18" y="58" width="4" height="6" style="fill:var(--se-box-fill,#ffffff);"/>
+            <rect x="0" y="44" width="6" height="4" style="fill:var(--se-box-fill,#ffffff);"/>
+            <rect x="34" y="44" width="6" height="4" style="fill:var(--se-box-fill,#ffffff);"/>
             <circle cx="50" cy="22" r="10" style="fill:none;stroke:white;stroke-width:2px;"/>
-            <circle cx="50" cy="22" r="3" style="fill:white;"/>
+            <circle cx="50" cy="22" r="3" style="fill:var(--se-box-fill,#ffffff);"/>
         </g>
         <g transform="matrix(1,0,0,1,146,40)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">The agents are reproducible</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">The agents are reproducible</text>
         </g>
         <g transform="matrix(1,0,0,1,146,78)">
             <g transform="matrix(16,0,0,16,76.5,0)">
@@ -123,86 +123,86 @@
             </g>
             <g transform="matrix(16,0,0,16,198.726562,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The agent ﬂeet&apos;s prompt deﬁnitions,</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The agent ﬂeet&apos;s prompt deﬁnitions,</text>
         </g>
         <g transform="matrix(1,0,0,1,146,98)">
             <g transform="matrix(16,0,0,16,25.796875,0)">
             </g>
             <g transform="matrix(16,0,0,16,30.242188,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">conﬁguration, and operational history</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">conﬁguration, and operational history</text>
         </g>
         <g transform="matrix(1,0,0,1,146,118)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">are delivered alongside the graph.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">are delivered alongside the graph.</text>
         </g>
         <g transform="matrix(1,0,0,1,146,158)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Includes: audit trails + promotion records.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Includes: audit trails + promotion records.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,476)">
-        <path d="M630,12L630,178C630,184.623 624.623,190 618,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L618,0C624.623,0 630,5.377 630,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
-        <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:rgb(233,78,27);"/>
-        <rect x="106" y="0" width="14" height="190" style="fill:rgb(233,78,27);"/>
+        <path d="M630,12L630,178C630,184.623 624.623,190 618,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L618,0C624.623,0 630,5.377 630,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+        <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
+        <rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,59.84,36)">
-            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 3</tspan></text>
+            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 3</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,40,68)">
             <path d="M40,9L40,63C40,64.656 38.656,66 37,66L3,66C1.344,66 0,64.656 0,63L0,9C0,7.344 1.344,6 3,6L37,6C38.656,6 40,7.344 40,9Z" style="fill:none;stroke:white;stroke-width:2.5px;"/>
-            <path d="M30,2L30,12C30,13.104 29.104,14 28,14L12,14C10.896,14 10,13.104 10,12L10,2C10,0.896 10.896,0 12,0L28,0C29.104,0 30,0.896 30,2Z" style="fill:white;"/>
+            <path d="M30,2L30,12C30,13.104 29.104,14 28,14L12,14C10.896,14 10,13.104 10,12L10,2C10,0.896 10.896,0 12,0L28,0C29.104,0 30,0.896 30,2Z" style="fill:var(--se-box-fill,#ffffff);"/>
             <path d="M8,26L32,26" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:2px;"/>
             <path d="M8,38L32,38" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:2px;"/>
             <path d="M8,50L24,50" style="fill:none;fill-rule:nonzero;stroke:white;stroke-width:2px;"/>
         </g>
         <g transform="matrix(1,0,0,1,146,40)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">The governance framework is documented</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">The governance framework is documented</text>
         </g>
         <g transform="matrix(1,0,0,1,146,78)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The 29-metric framework, the 14</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The 29-metric framework, the 14</text>
         </g>
         <g transform="matrix(1,0,0,1,146,98)">
             <g transform="matrix(16,0,0,16,25.78125,0)">
             </g>
             <g transform="matrix(16,0,0,16,30.226562,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">veriﬁcation checks, and the thresholds</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">veriﬁcation checks, and the thresholds</text>
         </g>
         <g transform="matrix(1,0,0,1,146,118)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">the client&apos;s graph operates to are delivered.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">the client&apos;s graph operates to are delivered.</text>
         </g>
         <g transform="matrix(1,0,0,1,146,158)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Includes: P0–P3 cadence playbook.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Includes: P0–P3 cadence playbook.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,710,476)">
-        <path d="M630,12L630,178C630,184.623 624.623,190 618,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L618,0C624.623,0 630,5.377 630,12Z" style="fill:rgb(245,245,245);stroke:rgb(75,85,99);stroke-width:2px;"/>
-        <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:rgb(233,78,27);"/>
-        <rect x="106" y="0" width="14" height="190" style="fill:rgb(233,78,27);"/>
+        <path d="M630,12L630,178C630,184.623 624.623,190 618,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L618,0C624.623,0 630,5.377 630,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
+        <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
+        <rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,59.84,36)">
-            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:white;">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 4</tspan></text>
+            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 4</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,36,68)">
-            <circle cx="18" cy="20" r="8" style="fill:white;"/>
-            <path d="M6,50C14,36.667 22,36.667 30,50L30,60L6,60L6,50Z" style="fill:white;fill-rule:nonzero;"/>
-            <circle cx="40" cy="20" r="8" style="fill:white;"/>
-            <path d="M28,50C36,36.667 44,36.667 52,50L52,60L28,60L28,50Z" style="fill:white;fill-rule:nonzero;"/>
+            <circle cx="18" cy="20" r="8" style="fill:var(--se-box-fill,#ffffff);"/>
+            <path d="M6,50C14,36.667 22,36.667 30,50L30,60L6,60L6,50Z" style="fill:var(--se-box-fill,#ffffff);fill-rule:nonzero;"/>
+            <circle cx="40" cy="20" r="8" style="fill:var(--se-box-fill,#ffffff);"/>
+            <path d="M28,50C36,36.667 44,36.667 52,50L52,60L28,60L28,50Z" style="fill:var(--se-box-fill,#ffffff);fill-rule:nonzero;"/>
         </g>
         <g transform="matrix(1,0,0,1,146,40)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(17,17,17);">The enablement roles are transitionable</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">The enablement roles are transitionable</text>
         </g>
         <g transform="matrix(1,0,0,1,146,78)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">A<tspan x="9.797px 14.242px " y="0px 0px "> p</tspan>laybook is delivered for the client to</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="9.797px 14.242px " y="0px 0px "> p</tspan>laybook is delivered for the client to</text>
         </g>
         <g transform="matrix(1,0,0,1,146,98)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">recruit and onboard their own Chief <tspan x="253.492px 264.164px " y="0px 0px ">Ar</tspan>chitect,</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">recruit and onboard their own Chief <tspan x="253.492px 264.164px " y="0px 0px ">Ar</tspan>chitect,</text>
         </g>
         <g transform="matrix(1,0,0,1,146,118)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">Ontology Maintainer<tspan x="142.312px 146.758px " y="0px 0px ">, </tspan>and KG <tspan x="209.031px 219.703px " y="0px 0px ">Ag</tspan>ent Owner<tspan x="301.539px " y="0px ">.</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology Maintainer<tspan x="142.312px 146.758px " y="0px 0px ">, </tspan>and KG <tspan x="209.031px 219.703px " y="0px 0px ">Ag</tspan>ent Owner<tspan x="301.539px " y="0px ">.</tspan></text>
         </g>
         <g transform="matrix(1,0,0,1,146,158)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:rgb(233,78,27);">Or for a successor vendor to operate them.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Or for a successor vendor to operate them.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,700,720)">
-        <text x="-351.77px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:rgb(75,85,99);">The relationship continues because the custodian adds value, not because departure is impractical.</text>
+        <text x="-351.77px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The relationship continues because the custodian adds value, not because departure is impractical.</text>
     </g>
 </svg>

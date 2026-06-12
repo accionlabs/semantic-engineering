@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1400 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
+    <g transform="matrix(1,0,0,1,700,32)">
+        <text x="-208.014px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:24px;fill:var(--se-text,#111111);">When a Client Engages Both Models</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700,54)">
+        <g transform="matrix(13,0,0,13,-47.696289,0)">
+        </g>
+        <g transform="matrix(13,0,0,13,-44.084473,0)">
+        </g>
+        <text x="-251.488px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);">Modernization engagement modes ﬂow into the continuous SDLC phases at hand-over<tspan x="247.876px " y="0px ">.</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,379.94,92)">
+        <text x="-120.296px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">M<tspan x="-110.18px -100.726px -91.94px -83.816px -75.03px -66.244px -62.79px -55.34px -47.444px -39.994px -36.54px -27.086px -18.3px -14.846px -6.722px 2.064px 11.518px 20.304px 29.758px 37.882px 47.998px 56.122px 64.908px 72.358px 75.812px 85.928px 95.382px 104.168px 112.292px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ODERNIZATION ENGAGEMENT MODES</tspan></text>
+    </g>
+    <g transform="matrix(1,0,0,1,1089.94,92)">
+        <text x="-85.934px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">C<tspan x="-77.148px -67.694px -58.908px -51.458px -48.004px -39.218px -30.432px -20.978px -12.192px -4.068px -0.614px 7.51px 16.296px 23.746px 32.532px 35.986px 44.11px 52.896px 61.682px 69.806px 77.93px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ONTINUOUS SDLC PHASES</tspan></text>
+    </g>
+    <path d="M200,122L200,178C200,184.623 194.623,190 188,190L52,190C45.377,190 40,184.623 40,178L40,122C40,115.377 45.377,110 52,110L188,110C194.623,110 200,115.377 200,122Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,120,142)">
+        <text x="-54.36px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Documentation Only</text>
+    </g>
+    <g transform="matrix(1,0,0,1,120,158)">
+        <text x="-5.335px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">or</text>
+    </g>
+    <g transform="matrix(1,0,0,1,120,174)">
+        <text x="-26.338px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text,#111111);">Discovery</text>
+    </g>
+    <path d="M390,122L390,178C390,184.623 384.623,190 378,190L242,190C235.377,190 230,184.623 230,178L230,122C230,115.377 235.377,110 242,110L378,110C384.623,110 390,115.377 390,122Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,310,148)">
+        <text x="-29.247px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Migration</text>
+    </g>
+    <g transform="matrix(1,0,0,1,310,166)">
+        <text x="-32.516px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Readiness</text>
+    </g>
+    <path d="M580,122L580,178C580,184.623 574.623,190 568,190L432,190C425.377,190 420,184.623 420,178L420,122C420,115.377 425.377,110 432,110L568,110C574.623,110 580,115.377 580,122Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,500,148)">
+        <text x="-11.553px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Full</text>
+    </g>
+    <g transform="matrix(1,0,0,1,500,166)">
+        <text x="-44.053px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Modernization</text>
+    </g>
+    <path d="M770,122L770,178C770,184.623 764.623,190 758,190L622,190C615.377,190 610,184.623 610,178L610,122C610,115.377 615.377,110 622,110L758,110C764.623,110 770,115.377 770,122Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,690,148)">
+        <text x="-29.974px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Maintain /</text>
+    </g>
+    <g transform="matrix(1,0,0,1,690,166)">
+        <text x="-24.565px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Operate</text>
+    </g>
+    <path d="M950,122L950,178C950,184.623 944.623,190 938,190L832,190C825.377,190 820,184.623 820,178L820,122C820,115.377 825.377,110 832,110L938,110C944.623,110 950,115.377 950,122Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,885,156)">
+        <text x="-21.315px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Advise</text>
+    </g>
+    <path d="M1110,122L1110,178C1110,184.623 1104.623,190 1098,190L992,190C985.377,190 980,184.623 980,178L980,122C980,115.377 985.377,110 992,110L1098,110C1104.623,110 1110,115.377 1110,122Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
+    <g transform="matrix(1,0,0,1,1045,156)">
+        <text x="-23.112px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Launch</text>
+    </g>
+    <path d="M1260,122L1260,178C1260,184.623 1254.623,190 1248,190L1152,190C1145.377,190 1140,184.623 1140,178L1140,122C1140,115.377 1145.377,110 1152,110L1248,110C1254.623,110 1260,115.377 1260,122Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,1200,156)">
+        <text x="-16.986px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Scale</text>
+    </g>
+    <path d="M1390,122L1390,178C1390,184.623 1384.623,190 1378,190L1302,190C1295.377,190 1290,184.623 1290,178L1290,122C1290,115.377 1295.377,110 1302,110L1378,110C1384.623,110 1390,115.377 1390,122Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <g transform="matrix(1,0,0,1,1340,156)">
+        <text x="-27.447px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Optimize</text>
+    </g>
+    <path d="M219.2,144.6L230,150L219.2,155.4L219.2,144.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M200,150L221.36,150" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    <path d="M409.2,144.6L420,150L409.2,155.4L409.2,144.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M390,150L411.36,150" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    <path d="M599.2,144.6L610,150L599.2,155.4L599.2,144.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M580,150L601.36,150" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    <path d="M808,144L820,150L808,156L808,144Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
+    <path d="M770,150L810.4,150" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
+    <path d="M969.2,144.6L980,150L969.2,155.4L969.2,144.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M950,150L971.36,150" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    <path d="M1129.2,144.6L1140,150L1129.2,155.4L1129.2,144.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M1110,150L1131.36,150" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    <path d="M1279.2,144.6L1290,150L1279.2,155.4L1279.2,144.6Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
+    <path d="M1260,150L1281.36,150" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.8px;"/>
+    <g transform="matrix(1,0,0,1,795,220)">
+        <text x="-160.608px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Hand-over: knowledge graph + custodians transfer here</text>
+    </g>
+    <g transform="matrix(1,0,0,1,700,250)">
+        <text x="-161.513px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:13px;fill:var(--se-text-secondary,#4b5563);">Scale and Optimize are the value-compounding phases.</text>
+    </g>
+</svg>

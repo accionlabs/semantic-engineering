@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 720" width="1500" height="720" preserveAspectRatio="xMidYMid meet" class="se-svg">
+  <text x="750" y="34" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text,#111111);">Team Composition Across the Modernization Engagement</text>
+  <text x="750" y="58" text-anchor="middle" style="font-size:12px;fill:var(--se-text-secondary,#4b5563);">Filled dots show full engagement. Half dots show review-only / cadence engagement. Open dots show on-call. The five stages have distinct involvement profiles.</text>
+
+  <!-- =====================================================================
+       Top row: Stage labels (column headers)
+       Each text carries its full style inline so editors render it correctly.
+       ===================================================================== -->
+  <text x="510"  y="110" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">STAGE 1</text>
+  <text x="690"  y="110" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">STAGE 2</text>
+  <text x="870"  y="110" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">STAGE 3</text>
+  <text x="1050" y="110" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">STAGE 4</text>
+  <text x="1230" y="110" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);letter-spacing:1px;">STAGE 5</text>
+
+  <text x="510"  y="128" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Discovery</text>
+  <text x="690"  y="128" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Documentation</text>
+  <text x="870"  y="128" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">MVP Migration</text>
+  <text x="1050" y="128" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Scaled Migration</text>
+  <text x="1230" y="128" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">UAT / Deployment</text>
+
+  <!-- Header separator -->
+  <line x1="40" y1="140" x2="1410" y2="140" style="stroke:var(--se-grid,#d1d5db);stroke-width:1.2;"/>
+
+  <!-- =====================================================================
+       Body rows. Each dot text element carries font-size, font-weight,
+       text-anchor, and fill inline so editors render them.
+       ===================================================================== -->
+
+  <!-- Row 1: Modernization Expert (partner side) -->
+  <rect x="40" y="158" width="1370" height="60" rx="6" style="fill:var(--se-panel-fill,#f5f5f5);stroke:none;"/>
+  <text x="60" y="186" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Modernization Expert</text>
+  <text x="60" y="204" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">partner side</text>
+  <text x="510"  y="200" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="690"  y="200" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="870"  y="200" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="1050" y="200" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="1230" y="200" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+
+  <!-- Row 2: Chief Architect (partner side) -->
+  <text x="60" y="246" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Engagement Chief Architect</text>
+  <text x="60" y="264" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">partner side</text>
+  <text x="510"  y="260" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="690"  y="260" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="870"  y="260" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="1050" y="260" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="1230" y="260" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+
+  <!-- Row 3: Ontology Engineers (partner side) -->
+  <rect x="40" y="278" width="1370" height="60" rx="6" style="fill:var(--se-panel-fill,#f5f5f5);stroke:none;"/>
+  <text x="60" y="306" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Ontology Engineers</text>
+  <text x="60" y="324" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">partner side</text>
+  <text x="510"  y="320" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="690"  y="320" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="870"  y="320" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="1050" y="320" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="1230" y="320" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">○</text>
+
+  <!-- Row 4: Product Owner (custodian) -->
+  <text x="60" y="366" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);">Product Owner</text>
+  <text x="60" y="384" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">client-side custodian</text>
+  <text x="510"  y="380" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="690"  y="380" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="870"  y="380" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="1050" y="380" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="1230" y="380" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+
+  <!-- Row 5: Architect (custodian) -->
+  <rect x="40" y="398" width="1370" height="60" rx="6" style="fill:var(--se-panel-fill,#f5f5f5);stroke:none;"/>
+  <text x="60" y="426" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);">Architect</text>
+  <text x="60" y="444" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">client-side custodian</text>
+  <text x="510"  y="440" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="690"  y="440" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="870"  y="440" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="1050" y="440" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="1230" y="440" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+
+  <!-- Row 6: UX Designer (custodian) -->
+  <text x="60" y="486" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);">UX Designer</text>
+  <text x="60" y="504" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">client-side custodian</text>
+  <text x="510"  y="500" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="690"  y="500" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="870"  y="500" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="1050" y="500" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="1230" y="500" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">○</text>
+
+  <!-- Row 7: Engineering Team (custodian) -->
+  <rect x="40" y="518" width="1370" height="60" rx="6" style="fill:var(--se-panel-fill,#f5f5f5);stroke:none;"/>
+  <text x="60" y="546" style="font-size:13px;font-weight:700;fill:var(--se-accent,#E94E1B);">Engineering Team</text>
+  <text x="60" y="564" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">client-side custodian</text>
+  <text x="510"  y="560" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="690"  y="560" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="870"  y="560" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="1050" y="560" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="1230" y="560" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+
+  <!-- Row 8: Deployment Engineering (partner side) -->
+  <text x="60" y="606" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Deployment Engineering</text>
+  <text x="60" y="624" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">partner side</text>
+  <text x="510"  y="620" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">○</text>
+  <text x="690"  y="620" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">○</text>
+  <text x="870"  y="620" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">○</text>
+  <text x="1050" y="620" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="1230" y="620" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+
+  <!-- =====================================================================
+       Legend
+       ===================================================================== -->
+  <line x1="40" y1="660" x2="1410" y2="660" style="stroke:var(--se-grid,#d1d5db);stroke-width:1;"/>
+
+  <text x="60"   y="688" style="font-size:18px;font-weight:700;fill:var(--se-accent,#E94E1B);">●</text>
+  <text x="80"   y="691" style="font-size:12px;fill:var(--se-text-secondary,#4b5563);">Full engagement at this stage</text>
+
+  <text x="380"  y="688" style="font-size:18px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">◐</text>
+  <text x="400"  y="691" style="font-size:12px;fill:var(--se-text-secondary,#4b5563);">Review-only or cadence engagement</text>
+
+  <text x="780"  y="688" style="font-size:18px;font-weight:700;fill:var(--se-text-secondary,#4b5563);">○</text>
+  <text x="800"  y="691" style="font-size:12px;fill:var(--se-text-secondary,#4b5563);">On-call / not actively engaged</text>
+
+  <text x="1100" y="691" style="font-size:12px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Orange labels = client-side custodians</text>
+</svg>

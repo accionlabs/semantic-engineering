@@ -1,0 +1,394 @@
+/* =========================================================================
+   Semantic Engineering — canonical diagram stylesheet
+   -------------------------------------------------------------------------
+   All site SVG diagrams use the class names defined below. Colors are driven
+   by CSS variables so that light and dark mode switch the entire diagram
+   palette with no change to the SVG files themselves.
+
+   The Hugo render-image hook inlines /diagrams/*.svg into each page so that
+   these styles cascade into the SVG content. Standalone .svg files opened
+   directly will fall back to their browser default colors (intentional).
+
+   Theme switching: variables flip on
+     - @media (prefers-color-scheme: dark)   — OS preference
+     - html.dark, body.dark                  — Hextra theme toggle
+   ========================================================================= */
+
+:root {
+  --se-text:            #111111;
+  --se-text-secondary:  #4b5563;
+  --se-accent:          #E94E1B;
+  --se-accent-fill:     #FDE8DD;
+  --se-panel-fill:      #f5f5f5;
+  --se-panel-fill-alt:  #fafafa;
+  --se-panel-stroke:    #9ca3af;
+  --se-box-fill:        #ffffff;
+  --se-box-stroke:      #4b5563;
+  --se-human-stroke:    #111111;
+  --se-arrow:           #4b5563;
+  --se-grid:            #d1d5db;
+  --se-on-accent:       #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --se-text:            #e5e7eb;
+    --se-text-secondary:  #9ca3af;
+    --se-accent:          #FF7A4D;
+    --se-accent-fill:     #3d1a0c;
+    --se-panel-fill:      #1f2937;
+    --se-panel-fill-alt:  #111827;
+    --se-panel-stroke:    #4b5563;
+    --se-box-fill:        #111827;
+    --se-box-stroke:      #9ca3af;
+    --se-human-stroke:    #e5e7eb;
+    --se-arrow:           #9ca3af;
+    --se-grid:            #374151;
+    --se-on-accent:       #ffffff;
+  }
+}
+
+/* Hextra theme toggle: when the user picks dark mode manually,
+   .dark is applied on <html>. Override prefers-color-scheme. */
+html.dark,
+body.dark,
+.dark {
+  --se-text:            #e5e7eb;
+  --se-text-secondary:  #9ca3af;
+  --se-accent:          #FF7A4D;
+  --se-accent-fill:     #3d1a0c;
+  --se-panel-fill:      #1f2937;
+  --se-panel-fill-alt:  #111827;
+  --se-panel-stroke:    #4b5563;
+  --se-box-fill:        #111827;
+  --se-box-stroke:      #9ca3af;
+  --se-human-stroke:    #e5e7eb;
+  --se-arrow:           #9ca3af;
+  --se-grid:            #374151;
+  --se-on-accent:       #ffffff;
+}
+
+/* Hextra theme toggle: when the user explicitly picks light mode,
+   .light is applied. Reset back to light defaults so it wins over OS-dark. */
+html.light,
+body.light,
+.light {
+  --se-text:            #111111;
+  --se-text-secondary:  #4b5563;
+  --se-accent:          #E94E1B;
+  --se-accent-fill:     #FDE8DD;
+  --se-panel-fill:      #f5f5f5;
+  --se-panel-fill-alt:  #fafafa;
+  --se-panel-stroke:    #9ca3af;
+  --se-box-fill:        #ffffff;
+  --se-box-stroke:      #4b5563;
+  --se-human-stroke:    #111111;
+  --se-arrow:           #4b5563;
+  --se-grid:            #d1d5db;
+  --se-on-accent:       #ffffff;
+}
+
+/* Wrapper inserted by the render-image hook */
+.se-diagram {
+  margin: 1.5rem 0;
+  width: 100%;
+  text-align: center;
+  cursor: zoom-in;
+}
+.se-diagram > svg {
+  /* Force responsive sizing even when the SVG carries explicit width/height
+     attributes from an SVG editor export. !important wins against attribute
+     presentation hints in browsers that don't fully honor height:auto here. */
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+.se-diagram > svg:not([viewBox]) {
+  /* Safety net for editor exports that lost viewBox while keeping width/height. */
+  width: auto !important;
+  height: auto !important;
+}
+
+/* ---------- Unified zoom (medium-zoom style) ----------
+   Backdrop element only. The diagram SVG itself is animated in place via
+   transform from the inline script in head-end.html. */
+
+#se-zoom-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms cubic-bezier(0.2, 0, 0.2, 1);
+}
+#se-zoom-bg.se-zoom-active {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: zoom-out;
+}
+@media (prefers-color-scheme: dark) {
+  #se-zoom-bg { background: rgba(15, 23, 42, 0.95); }
+}
+html.dark #se-zoom-bg,
+body.dark #se-zoom-bg,
+.dark #se-zoom-bg {
+  background: rgba(15, 23, 42, 0.95);
+}
+html.light #se-zoom-bg,
+body.light #se-zoom-bg,
+.light #se-zoom-bg {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Mermaid diagrams are also zoomable. Match the wrapper cursor. */
+pre.mermaid { cursor: zoom-in; }
+.se-zoom-source { z-index: 1001; position: relative; }
+
+/* ============================================================
+   Mermaid theming via the same --se-* variables.
+   ------------------------------------------------------------
+   Mermaid renders inline SVG and paints colors through inline
+   style="fill:...;stroke:..." attributes that come from each
+   diagram's themeVariables init block. Inline styles outrank
+   regular CSS, so the overrides below all need !important to
+   take effect. Once they do, Mermaid diagrams flip light/dark
+   in lockstep with the SE diagram set, with no per-diagram
+   init-block changes needed.
+
+   Selectors are written defensively because Mermaid's class
+   names vary slightly across diagram types (flowchart, seq,
+   gantt) and across Mermaid versions.
+   ============================================================ */
+
+/* Container */
+.mermaid svg {
+  background: transparent !important;
+}
+
+/* Default node shape: rect, polygon (decision), circle, ellipse, stadium */
+.mermaid .node rect,
+.mermaid .node polygon,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node path {
+  fill: var(--se-panel-fill, #f5f5f5) !important;
+  stroke: var(--se-box-stroke, #4b5563) !important;
+}
+
+/* Node labels — both SVG <text> and HTML inside <foreignObject> */
+.mermaid .node text,
+.mermaid .label text,
+.mermaid .nodeLabel,
+.mermaid .label foreignObject div,
+.mermaid .label foreignObject span,
+.mermaid .node .label foreignObject {
+  color: var(--se-text, #111111) !important;
+  fill: var(--se-text, #111111) !important;
+}
+
+/* Edges (connecting lines) */
+.mermaid .edgePath path,
+.mermaid path.flowchart-link,
+.mermaid .flowchart-link,
+.mermaid line.messageLine0,
+.mermaid line.messageLine1,
+.mermaid .relation {
+  stroke: var(--se-arrow, #4b5563) !important;
+}
+
+/* Edge labels (text floating on an edge).
+   Mermaid renders these as a small <rect class="labelBkg"> behind a
+   <foreignObject> that contains <div><span><p>label</p></span></div>.
+   The labelBkg uses fill (SVG); the foreignObject content uses CSS
+   background-color (HTML). Both need overriding. The HTML content is
+   typically given a labelBkg-coloured background inline by Mermaid, so
+   !important is required to win. */
+.mermaid .edgeLabel rect,
+.mermaid .edgeLabel > rect,
+.mermaid g.edgeLabel rect,
+.mermaid .labelBkg,
+.mermaid rect.labelBkg,
+.mermaid .label-container,
+.mermaid .edgeLabel .label-container {
+  fill: var(--se-box-fill, #ffffff) !important;
+  stroke: none !important;
+}
+/* foreignObject HTML body of the edge label */
+.mermaid .edgeLabel,
+.mermaid .edgeLabel div,
+.mermaid .edgeLabel span,
+.mermaid .edgeLabel p,
+.mermaid .edgeLabel foreignObject,
+.mermaid .edgeLabel foreignObject *,
+.mermaid .edgeLabel xhtml\:div,
+.mermaid .edge-label {
+  background-color: var(--se-box-fill, #ffffff) !important;
+  color: var(--se-text, #111111) !important;
+  fill: var(--se-text, #111111) !important;
+}
+
+/* Cluster / subgraph */
+.mermaid .cluster rect {
+  fill: var(--se-panel-fill-alt, #fafafa) !important;
+  stroke: var(--se-panel-stroke, #9ca3af) !important;
+}
+.mermaid .cluster text,
+.mermaid .cluster .nodeLabel,
+.mermaid .cluster foreignObject div,
+.mermaid .cluster foreignObject span {
+  fill: var(--se-text-secondary, #4b5563) !important;
+  color: var(--se-text-secondary, #4b5563) !important;
+}
+
+/* Arrow heads (markers at the end of edges). Mermaid generates suffixed IDs
+   per diagram, so target by id-prefix and by descendant marker paths. */
+.mermaid marker path,
+.mermaid [id^="flowchart-pointEnd"],
+.mermaid [id^="flowchart-pointStart"],
+.mermaid [id^="flowchart-circleEnd"],
+.mermaid [id^="flowchart-circleStart"],
+.mermaid [id^="flowchart-crossEnd"],
+.mermaid [id^="flowchart-crossStart"],
+.mermaid .marker,
+.mermaid .marker path {
+  fill: var(--se-arrow, #4b5563) !important;
+  stroke: var(--se-arrow, #4b5563) !important;
+}
+
+/* "Accent" class for highlighted nodes. The existing init blocks all define
+   a `.classDef accent fill:#FDE8DD,stroke:#E94E1B,...` and apply it via
+   `class N accent`. Mermaid puts that on the <g class="node accent ..."> wrapper. */
+.mermaid .node.accent rect,
+.mermaid .node.accent polygon,
+.mermaid .node.accent circle,
+.mermaid .node.accent ellipse,
+.mermaid .node.accent path {
+  fill: var(--se-accent-fill, #FDE8DD) !important;
+  stroke: var(--se-accent, #E94E1B) !important;
+}
+
+/* Fallback for Mermaid versions that bake classDef colors as inline styles
+   without preserving the .accent class on the wrapper element. We match
+   the rect/polygon by the inline style fingerprint instead. Substring match
+   against the literal #FDE8DD / #E94E1B / #f5f5f5 in the style attribute
+   catches the cases where the class-based selector above misses. */
+.mermaid rect[style*="FDE8DD"],
+.mermaid rect[style*="fde8dd"],
+.mermaid rect[style*="rgb(253, 232, 221)"],
+.mermaid rect[style*="rgb(253,232,221)"],
+.mermaid polygon[style*="FDE8DD"],
+.mermaid polygon[style*="fde8dd"],
+.mermaid polygon[style*="rgb(253, 232, 221)"],
+.mermaid polygon[style*="rgb(253,232,221)"],
+.mermaid circle[style*="FDE8DD"],
+.mermaid ellipse[style*="FDE8DD"] {
+  fill: var(--se-accent-fill, #FDE8DD) !important;
+}
+.mermaid rect[style*="E94E1B"],
+.mermaid rect[style*="e94e1b"],
+.mermaid rect[style*="rgb(233, 78, 27)"],
+.mermaid rect[style*="rgb(233,78,27)"],
+.mermaid polygon[style*="E94E1B"],
+.mermaid polygon[style*="rgb(233, 78, 27)"] {
+  stroke: var(--se-accent, #E94E1B) !important;
+}
+.mermaid rect[style*="#f5f5f5"],
+.mermaid rect[style*="rgb(245, 245, 245)"],
+.mermaid rect[style*="rgb(245,245,245)"],
+.mermaid polygon[style*="#f5f5f5"],
+.mermaid polygon[style*="rgb(245, 245, 245)"] {
+  fill: var(--se-panel-fill, #f5f5f5) !important;
+}
+.mermaid rect[style*="#fafafa"],
+.mermaid rect[style*="rgb(250, 250, 250)"] {
+  fill: var(--se-panel-fill-alt, #fafafa) !important;
+}
+.mermaid rect[style*="#FDE8DD"][style*="E94E1B"],
+.mermaid polygon[style*="#FDE8DD"][style*="E94E1B"] {
+  /* When both accent fill and stroke colors are on the same rect, this
+     compound match ensures both flip together with no ambiguity. */
+  fill: var(--se-accent-fill, #FDE8DD) !important;
+  stroke: var(--se-accent, #E94E1B) !important;
+}
+
+/* Sequence diagram actors / notes */
+.mermaid .actor {
+  fill: var(--se-panel-fill, #f5f5f5) !important;
+  stroke: var(--se-box-stroke, #4b5563) !important;
+}
+.mermaid text.actor,
+.mermaid .actor-line {
+  fill: var(--se-text, #111111) !important;
+  stroke: var(--se-arrow, #4b5563) !important;
+}
+.mermaid .noteText,
+.mermaid .note rect {
+  fill: var(--se-accent-fill, #FDE8DD) !important;
+  stroke: var(--se-accent, #E94E1B) !important;
+}
+
+/* Gantt / task chart */
+.mermaid .section0, .mermaid .section1,
+.mermaid .section2, .mermaid .section3 {
+  fill: var(--se-panel-fill, #f5f5f5) !important;
+}
+.mermaid .task,
+.mermaid .task0, .mermaid .task1, .mermaid .task2, .mermaid .task3 {
+  fill: var(--se-panel-stroke, #9ca3af) !important;
+  stroke: var(--se-box-stroke, #4b5563) !important;
+}
+.mermaid .activeTask,
+.mermaid .active0, .mermaid .active1, .mermaid .active2, .mermaid .active3 {
+  fill: var(--se-accent-fill, #FDE8DD) !important;
+  stroke: var(--se-accent, #E94E1B) !important;
+}
+.mermaid .grid .tick line {
+  stroke: var(--se-grid, #d1d5db) !important;
+}
+
+/* Root font on every diagram SVG. The !important rules below force Segoe UI
+   even when an SVG editor (Affinity, Illustrator, etc.) has re-exported the
+   file with inline style="font-family:'Helvetica'..." attributes baked in.
+   The Affinity round-trip strips the SVG <style> block and inserts those
+   inline declarations on every <text>/<tspan>, so this is the only place we
+   can correct it consistently. */
+.se-svg {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+.se-svg text,
+.se-svg tspan {
+  font-family: 'Segoe UI', system-ui, sans-serif !important;
+}
+
+/* ---------- Containers and shapes ---------- */
+.se-panel       { fill: var(--se-panel-fill);     stroke: var(--se-panel-stroke); stroke-width: 1; }
+.se-panel-alt   { fill: var(--se-panel-fill-alt); stroke: var(--se-panel-stroke); stroke-width: 1; }
+.se-pillar      { fill: var(--se-accent-fill);    stroke: var(--se-accent);       stroke-width: 2; }
+.se-box         { fill: var(--se-box-fill);       stroke: var(--se-box-stroke);   stroke-width: 1.5; }
+.se-box-strong  { fill: var(--se-box-fill);       stroke: var(--se-human-stroke); stroke-width: 1.5; }
+.se-graph       { fill: var(--se-panel-fill);     stroke: var(--se-box-stroke);   stroke-width: 1.5; stroke-dasharray: 4,3; }
+.se-custodian   { fill: var(--se-box-fill);       stroke: var(--se-human-stroke); stroke-width: 1.5; stroke-dasharray: 3,3; }
+.se-chip        { fill: var(--se-box-fill);       stroke: var(--se-accent);       stroke-width: 1.5; }
+
+/* ---------- Text ---------- */
+.se-h1            { font-size: 22px; font-weight: 700; fill: var(--se-text); }
+.se-h2            { font-size: 17px; font-weight: 700; fill: var(--se-text); }
+.se-h3            { font-size: 14px; font-weight: 600; fill: var(--se-text); }
+.se-lbl           { font-size: 12px; fill: var(--se-text); }
+.se-lblw          { font-size: 12px; font-weight: 600; fill: var(--se-text); }
+.se-sub           { font-size: 11px; fill: var(--se-text-secondary); }
+.se-small         { font-size: 10px; fill: var(--se-text-secondary); }
+.se-accent-text   { font-size: 11px; font-weight: 700; fill: var(--se-accent); letter-spacing: 1px; }
+.se-human-text    { font-size: 11px; font-weight: 700; fill: var(--se-text); }
+
+/* ---------- Arrows ---------- */
+.se-arrow         { stroke: var(--se-arrow);  stroke-width: 1.8; fill: none; }
+.se-arrow-accent  { stroke: var(--se-accent); stroke-width: 2;   fill: none; }
+.se-arrow-dashed  { stroke: var(--se-arrow);  stroke-width: 1.6; fill: none; stroke-dasharray: 5,4; }
+
+/* ---------- Marker fills (paint inside <marker> heads) ---------- */
+.se-marker        { fill: var(--se-arrow); }
+.se-marker-accent { fill: var(--se-accent); }
