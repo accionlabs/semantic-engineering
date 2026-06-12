@@ -2966,6 +2966,11 @@
 &lt;/table>
 &lt;p>The effort-based model is familiar to procurement. It maps to existing professional services contracting patterns. It does not require the client to commit to outcomes the methodology has not yet demonstrated in their specific context.&lt;/p>
 &lt;p>It also has a limitation: it bills for the work that produces the asset rather than for the asset itself. The compounding asset (the knowledge graph) is delivered alongside the effort, but the procurement frame is the effort rather than the graph.&lt;/p>
+&lt;p>A second limitation surfaces when the work itself stops being effort-shaped. From a recent conversation with the engagement lead at an SDD-mature client, asked how productivity gets reported to leadership:&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Estimation is a bad problem because the entire leadership is agile focused. They understand story points but SDD does not have a story point. We are juxtaposing historical data: sprint velocity for past five sprints, and after using SDD, how many story points we have been able to deliver. It is not ideal.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The team writes effectively no code by hand. The reported metric is sprint velocity superimposed on agent output as a comparison number. The effort frame still works for procurement, but it has begun to describe the work less and less accurately. The deliverable-based model below is the structural response.&lt;/p>
 &lt;h3>Phase 2: Deliverable-Based Engagement&lt;span class="hx:absolute hx:-mt-20" id="phase-2-deliverable-based-engagement">&lt;/span>
 &lt;a href="#phase-2-deliverable-based-engagement" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>As ontology and semantic engineering vocabulary becomes standardized, the deliverables themselves become well-defined and well-understood. At that point the engagement frame shifts from &amp;ldquo;the semantic engineer&amp;rsquo;s contribution&amp;rdquo; to &amp;ldquo;the knowledge graph for this product domain&amp;rdquo;, and from &amp;ldquo;the agent developer&amp;rsquo;s contribution&amp;rdquo; to &amp;ldquo;the validated agent fleet&amp;rdquo;.&lt;/p>
 &lt;p>Clients commit to the asset with quality and currency guarantees, rather than to the effort that produces it.&lt;/p>

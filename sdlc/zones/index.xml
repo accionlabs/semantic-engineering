@@ -2124,6 +2124,24 @@
 &lt;p>The architect updated her artifact. The PO updated her artifact. Neither of them had a structural way to see that the architect&amp;rsquo;s update broke the assumptions in the PO&amp;rsquo;s earlier spec. Spec drift is what happens when the three custodians maintain their own slices and nobody maintains the connection between them.&lt;/p>
 &lt;p>&lt;strong>Single-layer coverage.&lt;/strong> SDD tools like AWS Kiro, GitHub Spec Kit, and Tessl capture functional intent, which is the product owner&amp;rsquo;s contribution. They do not structurally capture the architecture (the architect&amp;rsquo;s contribution) or the design system (the designer&amp;rsquo;s contribution). A spec says &amp;ldquo;add a configuration form for alert preferences with daily, weekly, and off options&amp;rdquo;. The agent generates the form, picks a Dropdown because that is what the model has seen most often in training, places the API call in the saved-search service because the spec mentioned saved searches, and uses inline labels because the spec did not specify visual treatment. The form ships. The designer notices in a sprint demo that the Dropdown should have been a SegmentedControl, that the team has a guideline against inline labels for short option sets, and that the visual treatment violates two design tokens. The architect notices the API call should have gone through the notification service. Both noticed too late. Their context was not in the spec the agent read because the spec captures only the PO&amp;rsquo;s layer.&lt;/p>
 &lt;p>&lt;strong>Specs become the new bottleneck.&lt;/strong> Once the team has hit the three ceilings above, the obvious fix is to make the specs richer. Bring the architect into spec review. Bring the designer into spec review. Make sure every spec covers all the angles the agent needs. We have watched several teams attempt this. It does work, in a sense: the specs get more accurate and AI-generated code gets more reliable. But the throughput collapses. The PO can write specs at the rate she can think; the architect can review them at the rate she has free time, which is not much because she is also fielding the Slack DMs from Zone 1; the designer is in the same boat. The team&amp;rsquo;s senior people end up spending their week in spec authoring and review meetings while the implementation engineers wait for input. The bottleneck moves from typing to thinking, and the operating model is not configured to absorb the shift. The cost structure no longer aligns with FTE-based estimation, because the work the team needs is no longer the work the team is staffed for.&lt;/p>
+&lt;h3>From the Field: An SDD-Mature Engagement at the Ceiling&lt;span class="hx:absolute hx:-mt-20" id="from-the-field-an-sdd-mature-engagement-at-the-ceiling">&lt;/span>
+&lt;a href="#from-the-field-an-sdd-mature-engagement-at-the-ceiling" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>The following observations come from a recent conversation with the engagement lead at a long-running SDD practice that has reached the ceiling in operation. PRs on this engagement touch 300 to 400 files and 30,000 lines of code, and a typical review cycle now runs over two weeks. The lead describes the operating model in his own terms.&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;SDD is waterfall reimagined. SDD forces people to work sixteen to eighteen hours a day because the amount and volume of code is so much. Once the spec is thrashed out, you are on your own. You talk to Claude. Claude talks to you. You are logged in a room and working for hours and hours.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>On the talent envelope the ceiling forces:&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Bottom thirty to forty percent will struggle with SDD. There is no place to hide. It is between you and Claude as a developer.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>On the open problem the team has not yet solved:&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Governance becomes very challenging as complexity and team count grow.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The conclusion captured back to the team in the same conversation:&lt;/p>
+&lt;blockquote>
+&lt;p>&amp;ldquo;Code generation is the easy bit of the whole problem. The real problem is managing QA and governance.&amp;rdquo;&lt;/p>
+&lt;/blockquote>
+&lt;p>The full case is in &lt;a href="https://accionlabs.github.io/semantic-engineering/sdlc/case-archetypes/#sdd-at-the-governance-ceiling">SDD at the Governance Ceiling&lt;/a>.&lt;/p>
 &lt;h2>The Pattern&lt;span class="hx:absolute hx:-mt-20" id="the-pattern">&lt;/span>
 &lt;a href="#the-pattern" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The four conditions compound. A team can survive one. A team that hits two or three at the same time will not survive without changing the substrate.&lt;/p>
 &lt;table>
