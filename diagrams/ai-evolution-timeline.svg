@@ -1,18 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 480" width="1600" height="480" preserveAspectRatio="xMidYMid meet" class="se-svg">
-  <text x="800" y="36" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text,#111111);">Accion Labs AI Evolution Timeline</text>
-  <text x="800" y="60" text-anchor="middle" style="font-size:12px;fill:var(--se-text-secondary,#4b5563);">From the 2017 Breeze framework to the 2025-26 Semantic Engineering methodology and commercial practice</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 480" width="1800" height="480" preserveAspectRatio="xMidYMid meet" class="se-svg">
+  <text x="900" y="36" text-anchor="middle" style="font-size:22px;font-weight:700;fill:var(--se-text,#111111);">Accion Labs AI Evolution Timeline</text>
+  <text x="900" y="60" text-anchor="middle" style="font-size:12px;fill:var(--se-text-secondary,#4b5563);">From the 2017 Breeze framework to the 2025-26 naming of the Semantic Engineering methodology</text>
 
   <!-- horizontal axis line -->
-  <line x1="80" y1="200" x2="1520" y2="200" style="stroke:var(--se-grid,#d1d5db);stroke-width:2;"/>
+  <line x1="80" y1="200" x2="1720" y2="200" style="stroke:var(--se-grid,#d1d5db);stroke-width:2;"/>
 
-  <!-- 7 milestone dots and connectors -->
+  <!-- 8 milestone dots -->
   <circle cx="160"  cy="200" r="10" style="fill:var(--se-accent,#E94E1B);stroke:var(--se-accent,#E94E1B);"/>
   <circle cx="370"  cy="200" r="10" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:2.5;"/>
   <circle cx="580"  cy="200" r="10" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:2.5;"/>
   <circle cx="800"  cy="200" r="10" style="fill:var(--se-accent,#E94E1B);stroke:var(--se-accent,#E94E1B);"/>
   <circle cx="1020" cy="200" r="10" style="fill:var(--se-accent,#E94E1B);stroke:var(--se-accent,#E94E1B);"/>
-  <circle cx="1240" cy="200" r="10" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:2.5;"/>
-  <circle cx="1460" cy="200" r="14" style="fill:var(--se-accent,#E94E1B);stroke:var(--se-accent,#E94E1B);"/>
+  <circle cx="1240" cy="200" r="10" style="fill:var(--se-accent,#E94E1B);stroke:var(--se-accent,#E94E1B);"/>
+  <circle cx="1460" cy="200" r="10" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:2.5;"/>
+  <circle cx="1680" cy="200" r="14" style="fill:var(--se-accent,#E94E1B);stroke:var(--se-accent,#E94E1B);"/>
 
   <!-- Year labels (above the line) -->
   <text x="160"  y="170" text-anchor="middle" style="font-size:14px;font-weight:700;fill:var(--se-accent,#E94E1B);">2017</text>
@@ -20,10 +21,11 @@
   <text x="580"  y="170" text-anchor="middle" style="font-size:14px;font-weight:700;fill:var(--se-accent,#E94E1B);">2021</text>
   <text x="800"  y="170" text-anchor="middle" style="font-size:14px;font-weight:700;fill:var(--se-accent,#E94E1B);">Q1 2022</text>
   <text x="1020" y="170" text-anchor="middle" style="font-size:14px;font-weight:700;fill:var(--se-accent,#E94E1B);">Q3 2022</text>
-  <text x="1240" y="170" text-anchor="middle" style="font-size:14px;font-weight:700;fill:var(--se-accent,#E94E1B);">2024</text>
-  <text x="1460" y="170" text-anchor="middle" style="font-size:15px;font-weight:700;fill:var(--se-accent,#E94E1B);">2025-26</text>
+  <text x="1240" y="170" text-anchor="middle" style="font-size:14px;font-weight:700;fill:var(--se-accent,#E94E1B);">2023</text>
+  <text x="1460" y="170" text-anchor="middle" style="font-size:14px;font-weight:700;fill:var(--se-accent,#E94E1B);">2024</text>
+  <text x="1680" y="170" text-anchor="middle" style="font-size:15px;font-weight:700;fill:var(--se-accent,#E94E1B);">2025-26</text>
 
-  <!-- Milestone cards (below the line) -->
+  <!-- 2017 Breeze framework -->
   <rect x="60"   y="230" width="200" height="140" rx="12" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
   <text x="160" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Breeze framework</text>
   <text x="160" y="282" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Manual blueprint for</text>
@@ -32,6 +34,7 @@
   <text x="160" y="340" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Internal across every</text>
   <text x="160" y="356" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">customer engagement</text>
 
+  <!-- 2019 ML Exploration -->
   <rect x="270"  y="230" width="200" height="140" rx="12" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
   <text x="370" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">ML Exploration</text>
   <text x="370" y="282" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Early ML adopted across</text>
@@ -39,6 +42,7 @@
   <text x="370" y="324" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Classification, recommendations,</text>
   <text x="370" y="340" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">forecasting at the workload edges</text>
 
+  <!-- 2021 NLP and Vision -->
   <rect x="480"  y="230" width="200" height="140" rx="12" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
   <text x="580" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">NLP and Vision</text>
   <text x="580" y="282" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Domain-specific extraction</text>
@@ -46,6 +50,7 @@
   <text x="580" y="324" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Document understanding,</text>
   <text x="580" y="340" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">visual quality inspection</text>
 
+  <!-- Q1 2022 First GenAI project -->
   <rect x="700"  y="230" width="200" height="180" rx="12" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
   <text x="800" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">First GenAI project</text>
   <text x="800" y="282" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Drug discovery for</text>
@@ -56,30 +61,43 @@
   <text x="800" y="372" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">grounding pattern</text>
   <text x="800" y="396" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);">SE PATTERN BORN</text>
 
+  <!-- Q3 2022 Drug discovery deployed -->
   <rect x="920"  y="230" width="200" height="160" rx="12" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
   <text x="1020" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Drug discovery deployed</text>
   <text x="1020" y="282" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Knowledge graph constraint</text>
   <text x="1020" y="298" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">pattern proven in production</text>
   <text x="1020" y="324" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Validated pathways tree</text>
   <text x="1020" y="340" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">replaced free-form NLP</text>
-  <text x="1020" y="376" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);">METHODOLOGY VALIDATED</text>
+  <text x="1020" y="376" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);">PATTERN VALIDATED</text>
 
-  <rect x="1140" y="230" width="200" height="140" rx="12" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
-  <text x="1240" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Agentic AI</text>
-  <text x="1240" y="282" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Multi-agent orchestration</text>
-  <text x="1240" y="298" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">patterns mature</text>
-  <text x="1240" y="324" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Specialized agents per</text>
-  <text x="1240" y="340" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">ontology layer</text>
+  <!-- 2023 KAPS (NEW) -->
+  <rect x="1140" y="230" width="200" height="180" rx="12" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
+  <text x="1240" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">KAPS</text>
+  <text x="1240" y="282" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Knowledge and Analytics</text>
+  <text x="1240" y="298" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Platform productized</text>
+  <text x="1240" y="324" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">KG-grounded approach</text>
+  <text x="1240" y="340" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">in commercial use across</text>
+  <text x="1240" y="356" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">customer engagements</text>
+  <text x="1240" y="396" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);">METHODOLOGY IN PRACTICE</text>
 
-  <rect x="1360" y="230" width="220" height="200" rx="12" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
-  <text x="1470" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Semantic Engineering</text>
-  <text x="1470" y="278" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Methodology formalized</text>
-  <text x="1470" y="296" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Breeze.AI platform</text>
-  <text x="1470" y="312" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">ASIMOV platform</text>
-  <text x="1470" y="328" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Commercial practice</text>
-  <text x="1470" y="358" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">15M+ LOC modernized</text>
-  <text x="1470" y="374" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Innovation Summit shared</text>
-  <text x="1470" y="408" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);">CURRENT</text>
+  <!-- 2024 Agentic AI -->
+  <rect x="1360" y="230" width="200" height="140" rx="12" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-box-stroke,#4b5563);stroke-width:1.5;"/>
+  <text x="1460" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Agentic AI</text>
+  <text x="1460" y="282" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Multi-agent orchestration</text>
+  <text x="1460" y="298" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">patterns mature</text>
+  <text x="1460" y="324" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Specialized agents per</text>
+  <text x="1460" y="340" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">ontology layer</text>
 
-  <text x="800" y="468" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Filled circles mark the foundational milestones; outlined circles mark continuations along the same arc.</text>
+  <!-- 2025-26 Methodology Named (RENAMED) -->
+  <rect x="1570" y="230" width="220" height="200" rx="12" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2;"/>
+  <text x="1680" y="256" text-anchor="middle" style="font-size:13px;font-weight:700;fill:var(--se-text,#111111);">Methodology Named</text>
+  <text x="1680" y="278" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">Term Semantic Engineering</text>
+  <text x="1680" y="294" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">coined; methodology</text>
+  <text x="1680" y="310" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">formalized; commercial</text>
+  <text x="1680" y="326" text-anchor="middle" style="font-size:11px;fill:var(--se-text-secondary,#4b5563);">practice rolled out</text>
+  <text x="1680" y="356" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">15M+ LOC modernized</text>
+  <text x="1680" y="372" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Innovation Summit shared</text>
+  <text x="1680" y="408" text-anchor="middle" style="font-size:11px;font-weight:700;fill:var(--se-accent,#E94E1B);">NAME COINED</text>
+
+  <text x="900" y="468" text-anchor="middle" style="font-size:11px;font-style:italic;fill:var(--se-text-secondary,#4b5563);">Filled circles mark the foundational milestones; outlined circles mark continuations along the same arc.</text>
 </svg>
