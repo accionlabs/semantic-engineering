@@ -15,6 +15,10 @@ What it fixes
    `fill:var(--se-box-fill,#ffffff)` so dark mode flips them too.
 5. Collapses accidentally-nested `var(--se-X, var(--se-X, #hex))` artifacts
    that earlier passes can produce.
+6. Flattens positional-kerning `<tspan>` elements that the editor emitted to
+   preserve Helvetica letter-spacing. The site CSS forces Segoe UI, so those
+   hardcoded x positions land in the wrong places and produce visibly garbled
+   text. Flattening restores natural layout under the substituted font.
 
 Usage
 -----
@@ -235,6 +239,61 @@ def ensure_text_fill(text: str) -> tuple[str, int]:
     return ''.join(out), fixed
 
 
+_TSPAN_PAT = re.compile(r'<tspan\b([^>]*)>([^<]*)</tspan>', re.DOTALL)
+_TSPAN_X_PAT = re.compile(r'\bx="([^"]*)"')
+_TSPAN_Y_PAT = re.compile(r'\by="([^"]*)"')
+_TSPAN_ATTR_NAME_PAT = re.compile(r'\b([\w:-]+)\s*=')
+_TSPAN_ZERO_PAT = re.compile(r'-?0(?:\.0+)?(?:px)?')
+
+
+def flatten_kerning_tspans(text: str) -> tuple[str, int]:
+    """Strip positional-kerning <tspan> elements.
+
+    Affinity Designer (and similar editors) preserve the source font's
+    per-glyph kerning by wrapping character runs in tspans with explicit x
+    coordinates and an all-zero y attribute, e.g.
+
+        dif<tspan x="-41.567px -38.511px " y="0px 0px ">fe</tspan>rs
+
+    These hardcoded x positions correspond to Helvetica metrics. When the
+    site CSS forces Segoe UI to override Helvetica, the positions land in
+    the wrong places and produce visibly garbled text (overlapping or
+    skipping glyphs). Flattening the tspans restores natural layout under
+    the substituted font.
+
+    A tspan is treated as a kerning tspan when ALL of:
+      * It has both x and y attributes
+      * Every value in the y attribute is zero (with optional 'px')
+      * It carries no other attributes (no style, class, etc.)
+
+    Tspans with non-zero y, with style/class, or without explicit positioning
+    are left alone (they may be legitimate line wraps or styled fragments).
+
+    Returns (text, count) where count is the number of tspans flattened.
+    """
+    count = 0
+
+    def maybe_flatten(m: re.Match) -> str:
+        nonlocal count
+        attrs = m.group(1)
+        content = m.group(2)
+        x_m = _TSPAN_X_PAT.search(attrs)
+        y_m = _TSPAN_Y_PAT.search(attrs)
+        if not (x_m and y_m):
+            return m.group(0)
+        y_vals = y_m.group(1).split()
+        if not y_vals or not all(_TSPAN_ZERO_PAT.fullmatch(v) for v in y_vals):
+            return m.group(0)
+        # Reject if any attribute besides x and y is present.
+        attr_names = set(_TSPAN_ATTR_NAME_PAT.findall(attrs))
+        if attr_names - {'x', 'y'}:
+            return m.group(0)
+        count += 1
+        return content
+
+    return _TSPAN_PAT.sub(maybe_flatten, text), count
+
+
 def merge_double_style_attrs(text: str) -> tuple[str, int]:
     """If an element ends up with two `style="..."` attributes after the white
     substitution, merge them into one semicolon-joined attribute."""
@@ -315,6 +374,7 @@ def process_file(path: Path, dry_run: bool = False) -> dict | None:
     text, n_collapsed = collapse_nested_vars(text)
     text, n_merged = merge_double_style_attrs(text)
     text, n_text_fills = ensure_text_fill(text)
+    text, n_kern_tspans = flatten_kerning_tspans(text)
     text, class_added = ensure_root_class(text)
     text, viewbox_added = ensure_viewbox(text)
 
@@ -329,6 +389,7 @@ def process_file(path: Path, dry_run: bool = False) -> dict | None:
         'nested_vars_collapsed': n_collapsed,
         'double_styles_merged': n_merged,
         'text_fills_added': n_text_fills,
+        'kern_tspans_flattened': n_kern_tspans,
         'class_added': class_added,
         'viewbox_added': viewbox_added,
     }
@@ -385,6 +446,7 @@ def main(argv: list[str] | None = None) -> int:
         'nested_vars_collapsed': 0,
         'double_styles_merged':  0,
         'text_fills_added':      0,
+        'kern_tspans_flattened': 0,
         'classes_added':         0,
         'viewboxes_added':       0,
         'errors':                0,
@@ -406,6 +468,7 @@ def main(argv: list[str] | None = None) -> int:
         totals['nested_vars_collapsed'] += stats['nested_vars_collapsed']
         totals['double_styles_merged']  += stats['double_styles_merged']
         totals['text_fills_added']      += stats['text_fills_added']
+        totals['kern_tspans_flattened'] += stats['kern_tspans_flattened']
         totals['classes_added']         += int(stats['class_added'])
         totals['viewboxes_added']       += int(stats['viewbox_added'])
 
@@ -423,6 +486,8 @@ def main(argv: list[str] | None = None) -> int:
                 tags.append(f"{stats['double_styles_merged']} merged-style")
             if stats['text_fills_added']:
                 tags.append(f"{stats['text_fills_added']} +text-fill")
+            if stats['kern_tspans_flattened']:
+                tags.append(f"{stats['kern_tspans_flattened']} kern-tspans")
             note = '(dry-run)' if args.dry_run else ''
             print(f"  fixed {stats['path']}  [{', '.join(tags)}] {note}")
         elif not args.quiet:
@@ -437,6 +502,7 @@ def main(argv: list[str] | None = None) -> int:
     print(f"  nested var() collapsed:  {totals['nested_vars_collapsed']}")
     print(f"  double style= merged:    {totals['double_styles_merged']}")
     print(f"  text fills added:        {totals['text_fills_added']}")
+    print(f"  kern tspans flattened:   {totals['kern_tspans_flattened']}")
     print(f"  class=\"se-svg\" added:    {totals['classes_added']}")
     print(f"  viewBox added:           {totals['viewboxes_added']}")
     if totals['errors']:

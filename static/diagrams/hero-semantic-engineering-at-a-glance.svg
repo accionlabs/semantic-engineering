@@ -2,17 +2,17 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 1200 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,600,40)">
-        <text x="-241.743px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Semantic Engineering at a Glance</text>
+        <text x="-241.743px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111)">Semantic Engineering at a Glance</text>
     </g>
     <g transform="matrix(1,0,0,1,600,68)">
-        <text x="-319.278px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-312.778px -305.548px " y="0px 0px ">ac</tspan>it knowledge becomes a structured substrate that agents can query selectively<tspan x="150.182px 153.794px " y="0px 0px ">, </tspan>governed so it stays honest.</text>
+        <text x="-319.278px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Tacit knowledge becomes a structured substrate that agents can query selectively, governed so it stays honest.</text>
     </g>
     <g transform="matrix(1,0,0,1,60,108)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">U<tspan x="8.054px 16.108px 23.555px 30.384px 38.438px 46.492px 54.545px 61.375px 69.428px 77.482px 84.929px 92.983px 96.149px 104.203px 112.257px 120.923px 131.415px 138.245px 145.692px 153.745px 162.412px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">NSTRUCTURED KNOWLEDGE</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">UNSTRUCTURED KNOWLEDGE</text>
     </g>
     <path d="M305,132L305,192C305,197.519 300.519,202 295,202L70,202C64.481,202 60,197.519 60,192L60,132C60,126.481 64.481,122 70,122L295,122C300.519,122 305,126.481 305,132Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text,#111111);stroke-width:1.5px;stroke-dasharray:3,3;"/>
     <g transform="matrix(1,0,0,1,182,146)">
-        <text x="-67.746px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text,#111111);">T<tspan x="-61.837px -55.72px " y="0px 0px ">ac</tspan>it Knowledge in Heads</text>
+        <text x="-67.746px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text,#111111);">Tacit Knowledge in Heads</text>
     </g>
     <g transform="matrix(1,0,0,1,182,166)">
         <text x="-65.723px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">domain experts, architects,</text>
@@ -25,7 +25,7 @@
     </g>
     <path d="M565,132L565,192C565,197.519 560.519,202 555,202L330,202C324.481,202 320,197.519 320,192L320,132C320,126.481 324.481,122 330,122L555,122C560.519,122 565,126.481 565,132Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,442,146)">
-        <text x="-80.261px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Source Code &amp; <tspan x="23.468px 33.578px " y="0px 0px ">Ar</tspan>tifacts</text>
+        <text x="-80.261px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Source Code &amp; Artifacts</text>
     </g>
     <g transform="matrix(1,0,0,1,442,166)">
         <text x="-53.195px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">authoritative record of</text>
@@ -72,7 +72,7 @@
     <path d="M606,263L600,275L594,263L606,263Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
     <path d="M600,242L600,265.4" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,615,262)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">E<tspan x="7.447px 15.501px 23.555px 32.221px 40.275px 47.722px 55.775px 58.942px 62.108px 70.162px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">NCODED INT</tspan>O</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">ENCODED INTO</text>
     </g>
     <path d="M1140,299L1140,491C1140,498.727 1133.727,505 1126,505L74,505C66.273,505 60,498.727 60,491L60,299C60,291.273 66.273,285 74,285L1126,285C1133.727,285 1140,291.273 1140,299Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,600,312)">
@@ -155,27 +155,27 @@
     <g transform="matrix(1,0,0,1,1035,408)">
         <text x="-41.282px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">the graph honest</text>
     </g>
-    <g transform="matrix(1,0,0,1,600,455)">
-        <text x="-232.066px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:11px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="-225.331px -222.275px " y="0px 0px "> m</tspan>achine-readable substrate that captures the knowledge the agents need to do reliable work.</text>
+    <g transform="matrix(1,0,0,1,600,467)">
+        <text x="-232.066px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:11px;fill:var(--se-text-secondary,#4b5563);">A machine-readable substrate that captures the knowledge the agents need to do reliable work.</text>
     </g>
-    <g transform="matrix(1,0,0,1,600,478)">
+    <g transform="matrix(1,0,0,1,600,490)">
         <g transform="matrix(11,0,0,11,-161.841797,0)">
         </g>
         <g transform="matrix(11,0,0,11,-158.785645,0)">
         </g>
-        <text x="-209.532px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">The speciﬁc shape of the graph dif<tspan x="-41.567px -38.511px " y="0px 0px ">fe</tspan>rs by use case. <tspan x="44.446px 51.165px " y="0px 0px ">Th</tspan>e methodology stays the same.</text>
+        <text x="-209.532px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">The specific shape of the graph differs by use case. The methodology stays the same.</text>
     </g>
     <path d="M606,538L600,550L594,538L606,538Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
     <path d="M600,515L600,540.4" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,615,540)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">Q<tspan x="8.666px 16.72px 24.167px 32.221px 35.387px 42.834px 50.888px 54.054px 62.108px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">UERIED BY</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">QUERIED BY</text>
     </g>
     <g transform="matrix(1,0,0,1,60,572)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">A<tspan x="8.054px 16.72px 24.167px 32.221px 39.05px 42.216px 49.045px 55.875px 63.322px 70.768px 77.598px 80.764px 83.93px 87.096px 94.543px 101.372px 109.426px 117.48px 125.534px 132.363px 140.417px 148.471px 155.918px 159.084px 167.138px 175.804px 183.858px 191.305px 198.134px 206.188px 214.242px 217.408px 225.462px 232.908px 236.075px 244.741px 252.188px 260.242px 267.688px 275.742px 282.985px 289.814px 292.98px 301.647px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">GENT FLEET · STRUCTURE CONSTRAINS GENERATION</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">AGENT FLEET · STRUCTURE CONSTRAINS GENERATION</text>
     </g>
     <path d="M305,595L305,655C305,660.519 300.519,665 295,665L70,665C64.481,665 60,660.519 60,655L60,595C60,589.481 64.481,585 70,585L295,585C300.519,585 305,589.481 305,595Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,182,610)">
-        <text x="-54.206px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Analysis <tspan x="6.757px 16.868px " y="0px 0px ">Ag</tspan>ents</text>
+        <text x="-54.206px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Analysis Agents</text>
     </g>
     <g transform="matrix(1,0,0,1,182,628)">
         <text x="-61.757px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">traverse the graph for the</text>
@@ -192,7 +192,7 @@
     </g>
     <path d="M565,595L565,655C565,660.519 560.519,665 555,665L330,665C324.481,665 320,660.519 320,655L320,595C320,589.481 324.481,585 330,585L555,585C560.519,585 565,589.481 565,595Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,442,610)">
-        <text x="-62.364px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Generation <tspan x="14.916px 25.026px " y="0px 0px ">Ag</tspan>ents</text>
+        <text x="-62.364px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Generation Agents</text>
     </g>
     <g transform="matrix(1,0,0,1,442,628)">
         <text x="-58.701px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">produce code, specs, or</text>
@@ -205,7 +205,7 @@
     </g>
     <path d="M825,595L825,655C825,660.519 820.519,665 815,665L590,665C584.481,665 580,660.519 580,655L580,595C580,589.481 584.481,585 590,585L815,585C820.519,585 825,589.481 825,595Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,702,610)">
-        <text x="-58.478px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">V<tspan x="-49.906px -42.12px " y="0px 0px ">al</tspan>idation <tspan x="11.03px 21.14px " y="0px 0px ">Ag</tspan>ents</text>
+        <text x="-58.478px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Validation Agents</text>
     </g>
     <g transform="matrix(1,0,0,1,702,628)">
         <text x="-76.748px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">check output against the graph,</text>
@@ -222,7 +222,7 @@
     </g>
     <path d="M1140,595L1140,655C1140,660.519 1135.519,665 1130,665L850,665C844.481,665 840,660.519 840,655L840,595C840,589.481 844.481,585 850,585L1130,585C1135.519,585 1140,589.481 1140,595Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,990,610)">
-        <text x="-93.488px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Sync &amp; Maintenance <tspan x="46.04px 56.15px " y="0px 0px ">Ag</tspan>ents</text>
+        <text x="-93.488px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Sync &amp; Maintenance Agents</text>
     </g>
     <g transform="matrix(1,0,0,1,990,628)">
         <text x="-71.852px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">keep the graph current as the</text>
@@ -239,20 +239,20 @@
         <path d="M600,675L600,700.4" style="fill:none;fill-rule:nonzero;stroke:rgb(102,102,102);stroke-width:2px;stroke-linejoin:round;stroke-miterlimit:2;"/>
     </g>
     <g transform="matrix(1,0,0,1,615,700)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">P<tspan x="7.447px 15.501px 24.167px 32.221px 40.275px 48.328px " y="0px 0px 0px 0px 0px 0px ">RODUCE</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">PRODUCE</text>
     </g>
-    <path d="M1140,734L1140,776C1140,783.727 1133.727,790 1126,790L74,790C66.273,790 60,783.727 60,776L60,734C60,726.273 66.273,720 74,720L1126,720C1133.727,720 1140,726.273 1140,734Z" style="fill:var(--se-text,#111111);"/>
+    <path d="M1140,734L1140,776C1140,783.727 1133.727,790 1126,790L74,790C66.273,790 60,783.727 60,776L60,734C60,726.273 66.273,720 74,720L1126,720C1133.727,720 1140,726.273 1140,734Z"/>
     <g transform="matrix(1,0,0,1,600,746)">
         <g transform="matrix(14,0,0,14,-24.476074,0)">
         </g>
         <g transform="matrix(14,0,0,14,-19.813965,0)">
         </g>
-        <text x="-50.172px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-box-fill,#ffffff);">V<tspan x="-41.6px -33.814px " y="0px 0px ">er</tspan>iﬁed Output</text>
+        <text x="-50.172px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Veriﬁed Output</text>
     </g>
     <g transform="matrix(1,0,0,1,600,765)">
-        <text x="-304.511px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-box-fill,#ffffff);">Code, documentation, migrated systems, and decisions produced under structural constraint and validated against the graph.</text>
+        <text x="-304.511px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">Code, documentation, migrated systems, and decisions produced under structural constraint and validated against the graph.</text>
     </g>
     <g transform="matrix(1,0,0,1,600,781)">
-        <text x="-286.677px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-box-fill,#ffffff);">Auditable. <tspan x="-234.889px -228.572px -224.909px " y="0px 0px 0px ">Tra</tspan>ceable. Governed. <tspan x="-126.038px -119.319px " y="0px 0px ">Th</tspan>e knowledge graph grows with every cycle and remains an asset of the enterprise.</text>
+        <text x="-286.677px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">Auditable. Traceable. Governed. The knowledge graph grows with every cycle and remains an asset of the enterprise.</text>
     </g>
 </svg>
