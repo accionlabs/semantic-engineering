@@ -392,3 +392,20 @@ pre.mermaid { cursor: zoom-in; }
 /* ---------- Marker fills (paint inside <marker> heads) ---------- */
 .se-marker        { fill: var(--se-arrow); }
 .se-marker-accent { fill: var(--se-accent); }
+
+/* ---------- Hero diagram: "Verified Output" inverse panel ----------
+   The panel at the bottom of hero-semantic-engineering-at-a-glance.svg
+   inverts the theme to anchor the diagram's terminal output. Affinity
+   strips inline styles on round-trip and rewrites text fills back to
+   var(--se-text), which leaves the box black in both modes and the text
+   illegible in light mode. These rules win over whatever the inline
+   styles say because they use !important on attribute selectors that
+   survive editor round-trips (Affinity preserves element IDs). */
+.se-svg #se-hero-verified-output-bg {
+  fill: var(--se-text, #111111) !important;
+}
+.se-svg #se-hero-verified-output-title,
+.se-svg #se-hero-verified-output-line-1,
+.se-svg #se-hero-verified-output-line-2 {
+  fill: var(--se-box-fill, #ffffff) !important;
+}
