@@ -132,7 +132,7 @@ Outcomes measured on engagements running under this methodology. Anonymized walk
 
 ## How We Arrived Here
 
-Semantic Engineering started in 2017 as Breeze, an internal framework of role-based guidelines and templates for product owners, architects, and UX designers. When Gen AI entered our work in 2022 on a pharma drug-discovery engagement, we found that grounding models with a knowledge graph kept hallucinations under control. We converted the Breeze guidelines into ontologies, built agent fleets around them, and named the resulting SDLC platform Breeze.AI in tribute to its 2017 ancestor. The legacy modernization shape of work demanded a different graph model and a different agent fleet, which became ASIMOV.
+Semantic Engineering started in 2017 as Breeze, an internal framework of role-based guidelines and templates for product owners, architects, and UX designers. When Gen AI entered our work in 2022 on a pharma drug-discovery engagement, we found that grounding models with a knowledge graph kept hallucinations under control. In 2023 we productized the knowledge-graph approach as KAPS and rolled it out across customer engagements, so the methodology was in commercial use well before it had a name. By 2024 we had converted the Breeze guidelines into the four-layer ontologies and built agent fleets around them, naming the resulting SDLC platform Breeze.AI in tribute to its 2017 ancestor. The legacy modernization shape of work demanded a different graph model and a different agent fleet, which became ASIMOV. The discipline took the name Semantic Engineering in 2025.
 
 ![Origins Timeline](/diagrams/origins-timeline.svg)
 

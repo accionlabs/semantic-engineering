@@ -23,7 +23,7 @@ Our claim to operate the methodology rests on three things. The firm originated 
 
 | Section                                     | What it covers                                                                                                                             |
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| [About Accion Labs](#about-accion-labs)     | The firm: company facts, AI evolution timeline from the 2017 Breeze framework through 2026 Semantic Engineering, AI Operating Model        |
+| [About Accion Labs](#about-accion-labs)     | The firm: company facts, AI evolution timeline from the 2017 Breeze framework through the 2023 KAPS commercial practice to the 2025 naming of the methodology, AI Operating Model        |
 | [Platforms](#platforms)                     | The production implementations of the methodology: Breeze.AI (the four-layer KG plus agent fleet), ASIMOV (automated legacy modernization) |
 | [Engagement Model](#engagement-model)       | Advise, Launch, Scale, Optimize phases with activities, participants, deliverables                                                         |
 | [Three-Phase Rollout](#three-phase-rollout) | The methodology phases inside the engagement: SDD Adoption, SE Foundation, SE at Scale                                                     |
@@ -74,9 +74,9 @@ Accion Labs is the AI-first, platform-led innovation engineering company that or
 
 ### AI Evolution Timeline
 
-![Accion Labs AI evolution timeline from the 2017 Breeze framework to the 2025-26 Semantic Engineering methodology](/diagrams/ai-evolution-timeline.svg)
+![Accion Labs AI evolution timeline from the 2017 Breeze framework through the 2023 KAPS commercial practice to the 2025 naming of the Semantic Engineering methodology](/diagrams/ai-evolution-timeline.svg)
 
-The methodology has two roots that converged. The 2017 Breeze framework codified the minimal governance structure that good product owners, architects, and UX designers needed to produce. The first GenAI project in 2022 (drug discovery for a pharma leader, started Q1 and deployed Q3) produced the structural insight that constraining a transformer model with a knowledge graph turns confident hallucination into precise, traceable output. The convergence became Semantic Engineering. The platform that operationalizes it took the name of its 2017 ancestor: Breeze.AI. The full origin narrative is in [Origins](../about/origins.md).
+The methodology has two roots that converged. The 2017 Breeze framework codified the minimal governance structure that good product owners, architects, and UX designers needed to produce. The first GenAI project in 2022 (drug discovery for a pharma leader, started Q1 and deployed Q3) produced the structural insight that constraining a transformer model with a knowledge graph turns confident hallucination into precise, traceable output. In 2023 that insight was productized as KAPS, our Knowledge and Analytics Platform, and the KG-grounded approach moved into commercial use across customer engagements while the discipline was still unnamed. By 2024 the 2017 Breeze guidelines had been converted into the four-layer ontologies, the agent fleets that operate on them had been built, and the SDLC platform took the name of its 2017 ancestor: Breeze.AI. The discipline took the name Semantic Engineering in 2025. The full origin narrative is in [Origins](../about/origins.md).
 
 ### Core Capabilities
 

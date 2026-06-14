@@ -40,6 +40,12 @@ The structural insight: the combination of a large language model and a structur
 
 This insight predated the term "Semantic Engineering" by years. The team continued refining the pattern across customer engagements without yet naming the discipline.
 
+## Productizing the KG Approach: KAPS, 2023
+
+Between the 2022 drug-discovery moment and the 2025 naming, the knowledge-graph approach was already in commercial use. In 2023 the team productized it as KAPS, the Knowledge and Analytics Platform, and rolled it out across customer engagements. KAPS implemented the structural insight from drug discovery in a reusable form: ingest the domain knowledge into a graph, ground the LLM against the graph, and let the structure constrain what the model could produce.
+
+By the end of 2023, KAPS was the de-facto methodology across the AI engagements the firm ran. The discipline did not yet have its current name. The practitioners ran the pattern; the term Semantic Engineering came later. This matters for the story because it locates the methodology in commercial practice well before the marketing language existed. The methodology was proven in production for two years before it became a brand.
+
 ## The Convergence
 
 The two investments converged when AI matured. The structural insight from drug discovery (knowledge graphs constrain hallucination) and the role insight from Breeze (each role has a minimal governance structure) combined into a single discipline.
@@ -48,7 +54,7 @@ The four-layer ontology emerged as the formal version of Breeze's per-role minim
 
 The agent fleet that operates on the four-layer ontology is what made the discipline sustainable. The maintenance burden that defeated Breeze's manual blueprint is now handled by the KG Sync Agent. The drift problem that defeated text documentation is prevented structurally. The team's senior practitioners stop being the bottleneck because their context-assembly work lives in the system through the Impact Analysis Agent.
 
-The convergence happened gradually between 2022 and 2025. By 2025, the discipline was formal enough to be named. The methodology took the name Semantic Engineering. The platform that operationalizes it took the name of its 2017 ancestor: Breeze.AI. The continuity in the name reflects the continuity in the substance. Breeze.AI is what Breeze became once AI could do the maintenance work humans had been doing by hand.
+The convergence happened gradually between 2022 and 2025. KAPS operationalized the approach commercially in 2023; Breeze.AI and ASIMOV brought it to the SDLC and modernization shapes of work in 2024. By 2025 the discipline was formal enough to give a name to. The methodology took the name Semantic Engineering at that point. The platform that operationalizes it took the name of its 2017 ancestor: Breeze.AI. The continuity in the name reflects the continuity in the substance. Breeze.AI is what Breeze became once AI could do the maintenance work humans had been doing by hand.
 
 ## What Each Investment Contributed
 
