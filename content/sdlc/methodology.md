@@ -12,7 +12,7 @@ audience:
   - chief-architect
 ---
 
-The [Semantic Knowledge Graphs](methodology.md) is one of the three sources of truth in the Semantic Engineering methodology, and captures the knowledge from the custodians - product owners, architects and UX designers. This page describes the the four ontology layers in operational detail, the inclusion criterion that keeps them sustainable, how we partition and extract them, and the metrics framework that keeps them healthy.
+The Semantic Knowledge Graph is one of the [three sources of truth](process/_index.md#three-sources-of-truth) in the Semantic Engineering methodology, and captures the knowledge from the custodians - product owners, architects and UX designers. This page describes the four ontology layers in operational detail, the inclusion criterion that keeps them sustainable, how we partition and extract them, and the metrics framework that keeps them healthy.
 
 ## The Four-Layer Ontology
 

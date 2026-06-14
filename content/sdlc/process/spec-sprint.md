@@ -67,17 +67,18 @@ The spec sprint is the natural home for cross-product impact analysis. When a pr
 
 Doing cross-product reconciliation during the implementation sprint is too late. By the time engineers are coding, the architectural decisions need to already be made. The spec sprint is when those decisions get made. The graph partitioning (one graph per product, with cross-product extensions) is designed around this cadence. See [Partition by Product](../methodology.md#partition-by-product) for the structural rationale.
 
-## When the Spec Sprint Is Not Necessary
+## When the Spec Sprint Is Worth a Separate Cadence
 
-The spec sprint is not necessary in every context. The threshold is operational complexity, and complexity is context-specific.
+The spec sprint cadence is most consequential at the higher zones, where the four-ontology knowledge graph and the Impact Analysis Agent are part of what the spec sprint produces. The cadence itself, separated from the agent and graph machinery, applies across a wider range of contexts than just Zone 3+. A lighter form of the discipline is a useful Zone 2 best practice and can be introduced before the team has committed to the full SE structure.
 
-| Context | Spec sprint necessary? |
-|---|---|
-| Small greenfield team, single product, single repo, no cross-team dependencies, one person can hold the full context | Not yet. The conventional sprint cadence with spec authorship at the start works. |
-| Single product but growing past one person's mental capacity, multiple workstreams converging, design system drift surfacing | Yes. The spec sprint becomes worth its own cadence. |
-| Multiple products with integration points, multiple teams working concurrently, brownfield reality at scale | Yes, and the spec sprint becomes the most consequential meeting on the engineering calendar. |
+| Context | Spec sprint cadence | Notes |
+|---|---|---|
+| Small greenfield team, single product, single repo, no cross-team dependencies, one person can hold the full context | Not yet | The conventional sprint cadence with spec authorship at the start works. A separate cadence adds overhead without payback. |
+| SDD team with single product growing past one person's capacity, early ceiling signals appearing | Yes, in lighter form | Four-role human review running ahead of implementation. No graph, no Impact Analysis Agent, no four-ontology gates. See [Spec Sprint Cadence as a Zone 2 Best Practice](../zones/zone-2-spec-driven-development.md#spec-sprint-cadence-as-a-zone-2-best-practice). |
+| Single product crossed into multi-team coordination, brownfield reality, agent-assisted development at scale | Yes, in full SE form | Spec sprint produces impact-analyzed specs plus refreshed knowledge graph. Agent participation included. |
+| Multi-product portfolio with cross-product integration points, multiple custodian groups | Yes, full SE form plus cross-product reconciliation | The spec sprint becomes the most consequential coordination meeting on the engineering calendar. |
 
-A team adopting the methodology should not impose spec sprints prematurely. They should adopt them when the work crosses the complexity threshold that separates Zone 2 from Zone 3 in the [Zones of AI-Assisted SDLC](../zones/_index.md).
+A team should adopt the lighter Zone 2 form when the SDD ceiling starts producing signals, and graduate to the full SE form when the complexity crosses the threshold described in [Zones of AI-Assisted SDLC](../zones/_index.md). The two-form framing avoids both the wasted overhead of adopting the full SE structure too early and the cost of deferring the cadence discipline until complexity has clearly overwhelmed the team.
 
 ## The Spec Sprint and the Implementation Sprint Together
 

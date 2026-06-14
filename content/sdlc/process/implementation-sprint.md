@@ -32,7 +32,7 @@ The implementation sprint does not run impact analysis on the spec it receives, 
 
 ## The Three Sources of Truth in Operation
 
-The flow uses all three sources of truth (covered in [Semantic Knowledge Graphs](../methodology.md#three-sources-of-truth)) together.
+The flow uses all three sources of truth (covered in [Three Sources of Truth](_index.md#three-sources-of-truth) on the Process landing) together.
 
 | Step | Source consulted | Question answered |
 |---|---|---|

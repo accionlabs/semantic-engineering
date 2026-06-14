@@ -25,6 +25,26 @@ The diagram below pairs with the manual landscape from the [Manual Translation T
 
 The top half is the persistent context the methodology maintains: the four custodians curate the four ontologies on an ongoing basis as the world changes. The bottom half is the per-change SDLC flow: a specification arrives on the left (one of many flowing through in parallel), the Impact Analysis Agent reads the spec plus the graph and emits an impact report, the developer and the coding agent both consume the report, code is produced, the PR Validation Agent checks it against the graph at merge, and the KG Sync Agent updates the Code Ontology on every merge. The graph feeds context into the Impact Analysis Agent and validation rules into the PR Validation Agent. The KG Sync Agent loops back into the Code Ontology so the graph stays current.
 
+## Three Sources of Truth
+
+The operating model rests on a clean separation between three sources of truth. Many programs conflate progress tracking with intent tracking with state tracking. The structured landscape keeps them apart, each with a defined scope and a defined consumer.
+
+| Source of truth for... | System | Scope | Primary consumer |
+|---|---|---|---|
+| Intent for a specific change | Specification | Local: one feature, one user story, one change request | Implementation team, AI agents |
+| Progress, ownership, sprint status | Ticket system (Jira, Linear, or equivalent) | Global: program-wide ticket flow and team accountability | Engineering managers, product leaders |
+| Application state, structure, behavior | [Knowledge Graph](../methodology.md) | Global: the full application as it actually runs today | AI agents, the custodianship team, anyone asking "what does this system actually do" |
+
+The specification carries intent for a specific change: title, acceptance criteria, out-of-scope items, brief "why now", references to related work. It does not carry application state (the graph carries that), the team that owns the work (the ticket carries that), the sprint the work is scheduled for (the ticket again), or the architectural decisions that govern how the change should be implemented (those belong in the Architecture Ontology).
+
+The ticket system carries program-wide progress: which user stories are in flight, completed, or planned, which team owns each ticket, which sprint each ticket belongs to, dependencies between tickets, and time tracking. It does not hold the full spec, the application's architecture, or the current state of the code.
+
+The knowledge graph holds the Functional, Architecture, Design, and Code ontologies and the cross-layer relationships linking nodes across all four. It does not hold the intent for a specific in-flight change, the team that owns a workstream, or the history of who decided what. The detailed treatment of the graph itself is on [The Four-Layer Ontology](../methodology.md).
+
+In the structured-landscape diagram above, the specification is the yellow box on the left of the SDLC flow (one of many flowing through in parallel). The knowledge graph is the green container above. The ticket system is implicit but maintained in the team's existing tooling; the Impact Analysis Agent correlates spec, ticket, and graph to produce its impact report.
+
+The misuse pattern most teams hit at Zone 2 is treating the spec as a substitute for the other two. Drift follows. The spec accretes architectural decisions that belong in the graph, or sprint metadata that belongs in the ticket, and stops being readable as intent. The separation matters because it is what lets the Impact Analysis Agent in the implementation sprint pull each piece from where it lives and compose the report cleanly. The end-to-end use of all three sources in the per-change flow is in [Implementation Sprint](implementation-sprint.md#the-three-sources-of-truth-in-operation).
+
 ## The Two Sprints
 
 Specification authorship runs ahead of implementation. Two sprint cycles run staggered, each with its own backlog, with a feedback loop between them.

@@ -192,25 +192,11 @@ The diagram below pairs with the manual landscape above. The external signals ar
 
 The top half of the diagram is the persistent context the methodology maintains: the four custodians curate the four ontologies on an ongoing basis as the world changes. The bottom half is the per-change SDLC flow: a specification arrives on the left (one of many flowing through in parallel), the Impact Analysis Agent reads the spec plus the graph and emits an impact report, the developer and the coding agent both consume the report, code is produced, the PR Validation Agent checks it against the graph at merge, and the KG Sync Agent updates the Code Ontology on every merge. The graph feeds context into the Impact Analysis Agent and validation rules into the PR Validation Agent. The KG Sync Agent loops back into the Code Ontology so the graph stays current.
 
-### The Three Sources of Truth
+### Three Sources of Truth
 
-Many programs conflate progress tracking with intent tracking with state tracking. The structured landscape separates them cleanly into three sources of truth, each with a defined scope and a defined consumer.
+The structured landscape rests on a clean separation between three sources of truth: intent (the specification), progress (the ticket system), and state (the knowledge graph). Each has a defined scope and a defined consumer. Confusing them is what produces drift: a spec that accretes architectural decisions stops being readable as intent; a ticket asked to carry state goes stale on every change; a graph carrying intent for a single in-flight change loses its value as the persistent record of how the system actually runs.
 
-| Source of truth for... | System | Scope | Primary consumer |
-|---|---|---|---|
-| Intent for a specific change | Specification | Local: one feature, one user story, one change request | Implementation team, AI agents |
-| Progress, ownership, sprint status | Ticket system (Jira, Linear, or equivalent) | Global: program-wide ticket flow and team accountability | Engineering managers, product leaders |
-| Application state, structure, behavior | Knowledge Graph | Global: the full application as it actually runs today | AI agents, the custodianship team, anyone asking "what does this system actually do" |
-
-The specification carries intent for a specific change: title, acceptance criteria, out-of-scope items, brief "why now", references to related work. It does not carry application state (the graph carries that), the team that owns the work (the ticket carries that), the sprint the work is scheduled for (the ticket again), or the architectural decisions that govern how the change should be implemented (those belong in the Architecture Ontology).
-
-The ticket system carries program-wide progress: which user stories are in flight, completed, or planned, which team owns each ticket, which sprint each ticket belongs to, dependencies between tickets, and time tracking. It does not hold the full spec, the application's architecture, or the current state of the code.
-
-The knowledge graph holds the Functional, Architecture, Design, and Code ontologies and the cross-layer relationships linking nodes across all four. It does not hold the intent for a specific in-flight change, the team that owns a workstream, or the history of who decided what.
-
-In the diagram, the specification is the yellow box on the left of the SDLC flow (one of many flowing through in parallel). The knowledge graph is the green container above. The ticket system is implicit but maintained in the team's existing tooling; the Impact Analysis Agent correlates spec, ticket, and graph to produce its impact report.
-
-The misuse pattern most teams hit at Zone 2 is treating the spec as a substitute for the other two. Drift problem follows. We cover this in detail in [The Methodology](methodology.md#three-sources-of-truth).
+The full treatment of the three sources, including the detail of what each does and does not hold, and how they compose in the per-change flow, is in [Three Sources of Truth](process/_index.md#three-sources-of-truth) on the Process landing.
 
 ---
 

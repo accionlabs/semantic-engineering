@@ -1,9 +1,9 @@
 ---
 title: "Zone 2: Spec-Driven Development"
-description: "Written specifications as the contract AI agents generate against. Where this zone is genuinely suitable, the four ceilings it hits at enterprise scale, and the transition to Semantic Engineering."
+description: "Spec-Driven Development as a complete operating mode. The contexts where SDD is the right destination, the practitioner playbook (constitution, toolkit, spec format, pod structure, async workflow, validation, review discipline, engineering constraints), the spec sprint cadence as a Zone 2 best practice, and the ceiling conditions teams encounter when complexity grows past SDD's reach."
 weight: 20
 date: 2026-06-09
-lastmod: 2026-06-09
+lastmod: 2026-06-13
 draft: false
 audience:
   - cto
@@ -46,11 +46,191 @@ SDD is the right operating mode for a substantial set of contexts. For these tea
 
 Examples that fit the pattern: a five-engineer startup shipping a single B2B product where the founding architect is still hands-on; a platform team inside a larger company maintaining one well-bounded internal service where the team owns the entire stack; a greenfield rebuild where the original system's complexity has been deliberately left behind and the new system is small enough that one architect can hold its current shape.
 
+## How to Practice SDD Well
+
+Teams that adopt SDD well stay in SDD productively for years. SDD is a complete operating mode for the contexts it fits, with its own discipline, its own tooling stack, and its own engineering rhythm. The practices below are what mature commercial SDD looks like in the field: an explicit constitution, a custom toolkit that enforces it, a structured spec that the agent acts against, small feature pods that own each workstream end to end, and a review discipline that makes the AI-generated output trustworthy at merge time.
+
+The detail in this section is drawn from a conversation with the engagement lead at an SDD-mature practice that has rewritten more than a million lines of legacy code under SDD over five to six months and ships features under the model continuously. Quoted material is anonymized; the practices are what the team built over four versions of their internal SDD discipline.
+
+### The Constitution
+
+The first artifact a mature SDD practice produces is a written constitution. It captures how the team practices SDD: who initiates what, the contract between the product owner and the agent, the contract between the architect and the dev lead, the coding standards the generated code must follow, the conventions for prompting, and the boundaries the team has decided are non-negotiable.
+
+> From the engagement lead at a mature SDD practice:
+>
+> "We wrote the constitution as to what should be done and what should not be done, and how a dev lead should interact with an architect, how an architect should interact with a PO, and how they all should interact with the agent."
+
+The constitution is versioned. The team that anchored this section went through four versions over six months as the practice matured. New engineers join by reading the constitution before they start. New tooling integrations get designed against it. When something fails, the constitution is the first thing that gets updated.
+
+What the constitution captures:
+
+| Area | What it codifies |
+|---|---|
+| Roles and ownership | Who owns the spec, who owns the review, who owns the agent prompting, who breaks ties |
+| Contracts between roles | What the architect commits to give the dev lead, what the PO commits to give the architect, what the engineer commits to validate before merging |
+| Coding standards | The design patterns, principles, and idioms the generated code must follow (SOLID, event-driven architecture, framework conventions, etc.) |
+| Constraints | What the agent must never do: bypass the spec, reach beyond declared scope, mix concerns the architecture forbids |
+| Prompting conventions | The expected structure for prompts, the supervisor skills that wrap them, the patterns that have worked and the ones that have failed |
+| Boundary cases | How to handle spec ambiguity, how to handle agent refusals, how to handle drift between spec and implementation |
+
+The constitution by itself does not enforce itself. The team needs a toolkit that puts it in the engineer's hands at the moment of work. That is the next section.
+
+### The Toolkit: Plugins, Slash Commands, and Supervisor Skills
+
+In a mature SDD practice the constitution lands in the engineer's coding environment as a custom plugin or extension package, exposing the team's conventions through slash commands, supervisor skills, and a configured agent setup. A typical toolkit includes:
+
+| Component | What it does |
+|---|---|
+| Slash commands | Shortcuts that invoke common SDD workflows: drafting a spec, running the interview flow, requesting impact assessment, asking the agent to enforce a specific convention |
+| Supervisor skills | Pre-configured skills that wrap the agent and keep it deterministic. The agent receives the team's constraints automatically on every invocation, so it cannot bypass them by accident |
+| Interview templates | Question sets the agent runs through with the PO when drafting a spec, covering edge cases, observability, security, scalability, and other quality attributes the spec needs to address |
+| Code review prompts | Structured prompts the dev lead and architect use during review, so the same review questions get asked consistently across features |
+| Boilerplate scaffolding | Project-template scaffolds aligned to the team's architecture so generated code lands in the right place from the start |
+
+> "The plugin offers slash commands and enforces conventions, guardrails, and consistent prompting patterns. Under the hood, supervisor skills make the agent deterministic. It does not forget the constraints."
+
+The toolkit is what makes the constitution operational. Without it, practitioners have to remember to apply the constitution every time they engage the agent, and the discipline drifts. With it, the constitution becomes the default behaviour.
+
+### The Spec: Interview Flow, Structure, Living Document
+
+In SDD the spec is the single source of truth for a change. Code is generated against it, reviewed against it, tested against it. The spec carries more weight than in conventional practice because no one is hand-writing the code that backs it. If the spec is wrong, the wrong thing gets built.
+
+**The interview flow.** Spec authoring starts with an interview rather than a blank document. The PO works through a structured set of questions (driven by the toolkit's interview template) covering what the change is for, who the persona is, what the must-haves are, what is explicitly out of scope, what nice-to-haves exist, and what cross-cutting concerns (observability, resilience, security, scalability, performance) apply. The interview surfaces ambiguity early. The output is a spec the team can sign off against.
+
+> "The interview flow lets the agent ask questions to cover edge cases, architecture, and monitoring when crafting specs. Even if I am not thinking about it, it is making sure that all these edge cases are covered."
+
+**The structure.** A mature SDD spec follows a consistent format the team has converged on. The sections that matter most in commercial practice:
+
+| Section | What goes in it |
+|---|---|
+| Must Haves | The acceptance criteria. What the change must do for it to be considered complete |
+| Do Not Haves | What is explicitly out of scope. The hardest section to get right and the most important for keeping the agent inside boundaries |
+| Nice to Haves | What the team would do with unlimited time, separated cleanly so the agent does not silently include them |
+| Personas | Who the change is for. Cross-references to the team's persona definitions so the agent reasons against shared definitions |
+| Technical context | Existing systems the change must integrate with, data model touchpoints, architectural decisions that constrain the implementation |
+| Cross-cutting concerns | Observability, resilience, security, scalability, performance requirements specific to this change |
+| Validation criteria | How QA will verify the change. Specific scenarios, not "test it thoroughly" |
+| Open questions | What is undecided, who can decide it, by when |
+
+**The living document.** The spec is not frozen at sign-off. As the team learns more during implementation (the agent surfaces a constraint, the architect realizes a contract was wrong, QA finds an untestable assertion), the spec gets amended. The team treats the spec as the running record of what the change is committing to deliver. Where the spec fails: if QA cannot find a way to verify it, the spec goes back to the drawing board before any code is generated against it.
+
+### The Pod: Small Feature Teams That Own End to End
+
+Mature SDD practices organize around small feature pods rather than large standing teams. Each pod owns one feature from spec authoring through deployment. The pod composition is consistent:
+
+| Role | What they do |
+|---|---|
+| Product Owner | Drafts the spec, owns the interview, signs off on the final version, handles spec amendments during build |
+| Architect | Sets technical context, reviews architectural fit, breaks technical ties. Often shared across pods in the same domain |
+| Dev Lead | Owns the implementation. Drives the agent, reviews generated code, decides when the build is ready for QA. One per pod |
+| QA Lead | Validates the spec before generation, builds the test scenarios, runs the QA pass on generated output. One per pod |
+
+The architect is typically shared across pods because architectural decisions span features. The dev lead and QA lead are usually pod-dedicated for the feature lifecycle, since holding a feature's full context is the work. A team running five features in parallel runs five pods. Coordination between pods happens through the shared architect and the constitution, not through a single team meeting.
+
+### The Async Workflow
+
+Mature SDD practices run asynchronously. The model is closer to project execution than to daily-standup agile.
+
+| Ceremony | What it does | Cadence |
+|---|---|---|
+| Spec drafting | The PO works through the interview flow and produces a draft spec | Async, owner-driven |
+| Async review | Architect, dev lead, QA lead comment on the spec via the repo or chat | Async, 24 to 72 hour turnaround |
+| Sign-off ceremony | A short synchronous session where the four roles align and sign the spec | One-time per spec, similar to a kickoff |
+| Generation | The agent generates code against the signed spec | Async, three to four days for a substantial change |
+| Review iteration | The dev lead and architect review the generated output, iterate the agent prompts where needed | Async, often two weeks or more on substantial PRs |
+| QA pass | QA validates the implementation against the spec scenarios | Async, typically a few days |
+| Deploy | When the feature is QA-validated, deploy on the team's CI/CD pipeline | Per feature, not per sprint |
+
+> "It is an async process, so we do not meet synchronously on a daily basis. We have a couple of chat channels where we communicate. There is a sign-off session when the spec is ready, which is traditionally similar to a project kickoff. No one is coding until all four stakeholders give a go-ahead."
+
+The async-first model is intentional. Most of the work is independent (the PO drafting, the agent generating, the dev lead reviewing). Standups would introduce more overhead than they would resolve. The signal-rich moments (spec sign-off, generation completion, review completion) become the synchronous touchpoints, and everything else flows through the repo and the chat channel.
+
+### Validation: Spec-First QA, BDD, and Automation
+
+QA in SDD starts before any code is generated. The QA lead reads the spec and asks: is everything in it verifiable? If a must-have cannot be tested, the spec is not done. This shifts QA from "find the bugs in the code" to "find the bugs in the spec before code is written against it."
+
+> "The QA lead would start with the spec. Instead of testing the code, they would first test whether everything is verifiable in terms of whatever is written in the spec. Once the spec is approved, the verification cycle kicks in."
+
+Once the spec is sign-off-ready and the agent has generated code, three things run in parallel:
+
+- BDD scenarios written from the spec's must-haves, often produced by the agent and refined by the QA lead. The scenarios become the executable acceptance criteria
+- Automation frameworks (Playwright for browser, MCP for backend integration, the team's existing unit-test frameworks) run the scenarios continuously
+- The QA lead remains the human in the loop, deciding when an implementation is ready to ship even when all automated tests pass
+
+This approach makes the spec a measurable contract. Either the implementation satisfies the spec or it does not. Either the spec is verifiable or it needs amending.
+
+### Code Generation and Review
+
+The team prompts the agent against the signed spec, the constitution, the supervisor skills, and the existing codebase context. The agent generates code over hours or days depending on the size of the change. Three to four days is a typical generation timeline for a substantial feature change in commercial practice.
+
+Review is the hardest part of mature SDD. PRs in commercial use can touch 300 to 400 files and 30,000 lines. Review cycles can run two weeks or more. The team needs a structured review approach that scales to that volume:
+
+| Review element | How mature teams handle it |
+|---|---|
+| Scope per generation | Reduce scope so the output is human-reviewable. Mature teams break features into smaller agent prompts to keep generation outputs in a reviewable range |
+| Architectural review | The architect reviews structural decisions: service boundaries, data flow, dependency direction, integration patterns |
+| Implementation review | The dev lead reviews implementation quality: idiom adherence, error handling, observability hooks, performance attributes |
+| Spec-conformance review | The dev lead and QA lead check the implementation against the spec, surfacing any divergence as either a spec amendment or an implementation fix |
+| Iteration | When review finds issues, the agent is re-prompted with the issues as context, rather than the engineer fixing the code by hand. This keeps the constitution and the spec as the single source of truth |
+
+The agent is the writer. The human is the editor. The editor's job is non-trivial and requires the discipline the constitution articulates.
+
+### Engineering Constraints: Standards, Security, and Quality
+
+Mature SDD practices treat the agent as a junior engineer who needs explicit standards to work to. The agent receives the team's coding standards, the architectural patterns, the security requirements, and the quality attributes on every invocation through the supervisor skills.
+
+What the agent receives:
+
+| Constraint area | What the team enforces |
+|---|---|
+| Design principles | SOLID, separation of concerns, dependency inversion, explicit error handling |
+| Architectural patterns | The patterns the team has standardized on (event-driven, hexagonal, repository, etc.) |
+| Security baseline | Input validation, secret handling, auth and authorization patterns, the team's threat model assumptions |
+| Observability | What gets logged, what gets metricized, what gets traced. Required on every external call and every domain event |
+| Test coverage | What categories of test must accompany a feature (unit, integration, contract, end-to-end), enforced at PR validation |
+
+Static and dynamic security scanning are integrated into the CI pipeline. SAST tools (SonarQube and similar) run on every PR for static analysis. DAST tools (Snyk and similar) run for dynamic scanning. These are gates on every merge, not periodic audits.
+
+> "We treat the agent as an engineering graduate. We have told it to use all the SOLID principles, all the design patterns, and event-driven architecture where applicable. As soon as it starts a task, all these things are fed in, so it does not have to be repeated each time."
+
+### What Mature SDD Buys You
+
+Practiced this way, SDD produces measurable operational gains the team can stand on for as long as the work fits the contexts SDD addresses well:
+
+- Reduced rework and bugs because the spec is the verified contract
+- Improved delivery predictability and revenue visibility
+- Cross-functional alignment at the spec sign-off rather than during integration
+- Engineering discipline encoded in tooling rather than tribal memory
+- Knowledge captured in the constitution and the spec history, which survives team turnover
+
+A mature SDD practice rebuilt more than a million lines of legacy code in five to six months under this model. SDD is not a transitional phase for teams whose complexity profile fits it. It is the operating mode.
+
+## Spec Sprint Cadence as a Zone 2 Best Practice
+
+The two-sprint cadence (specification work running ahead of implementation work) is associated with the [Semantic Engineering process](../process/_index.md), but the cadence itself is independent of the knowledge graph. SDD teams that adopt a lighter form of the spec sprint discipline see measurable benefit even without the graph, the Impact Analysis Agent, or the four-ontology validation gates that come with Zone 3. The cadence discipline applies at Zone 2 before the team has committed to the full SE structure.
+
+In standard SDD practice, specification authorship and implementation get compressed into one timebox. Most teams accept the resulting quality cost on both activities as a fact of life. The Zone 2 spec sprint relieves that compression without yet committing to the structural depth of SE.
+
+| Element | Lighter Zone 2 form | Full SE spec sprint (Zone 3+) |
+|---|---|---|
+| Cadence | Runs one or two sprints ahead of implementation | Same: runs one or two sprints ahead |
+| Participants | PO, Architect, UX Designer, Engineering tech lead | Same four roles, formalized as ontology custodians |
+| Output | Reviewed, scoped, prioritized specification with cross-functional alignment | Impact-analyzed specification plus refreshed knowledge graph |
+| Impact analysis | Human-driven by the four participants | Impact Analysis Agent runs against the graph |
+| Cross-team reconciliation | Architect reviews known cross-team touchpoints from memory | Cross-product extension run by the architect against multiple product graphs |
+| Validation before implementation pulls | Spec freeze after four-role sign-off | Spec freeze after agent and custodian sign-off |
+
+The Zone 2 spec sprint produces the same operational benefit as the SE version on a smaller surface. Implementation engineers consume a known plan rather than discovering structural issues mid-sprint. The team's senior people get a dedicated cadence to think before the work starts. Cross-functional alignment happens in a working session rather than in scattered review comments.
+
+A team should adopt this lighter discipline when the early signals of the SDD ceiling appear (cross-team integration surprises, AI-generated outputs diverging from team conventions, spec authoring eating into implementation time) but the work complexity does not yet justify the full SE adoption. The discipline becomes the bridge between Zone 2 in its compressed form and the [readiness criteria](#readiness-criteria-to-move-to-zone-3) for Zone 3.
+
+The canonical treatment of the spec sprint, including the full SE form, is on the [Spec Sprint](../process/spec-sprint.md) page.
+
 ## When This Zone Stops Working
 
 ![The four SDD ceilings: localized context, spec drift, single-layer coverage, specs as bottleneck](/diagrams/zone-2-four-ceilings.svg)
 
-SDD raises the floor. It does not change the medium. The spec is still text, and the spec captures one custodian's view (the product owner's). The four ceiling conditions appear in roughly the order below.
+SDD is the right operating mode for the contexts described above, and many teams will rightly stay in SDD for years. For teams whose complexity profile grows past those contexts, SDD has a ceiling. The spec is still text, and the spec captures one custodian's view (the product owner's). The four ceiling conditions appear in roughly the order below.
 
 **Localized context.** A team-A product owner writes a spec for an alert frequency feature. The spec is reviewed by the team-A tech lead, approved, and handed to the AI agent. The agent generates code that adds a write to a shared notification-preferences table. Team B has been migrating that table to a new schema for six weeks and has a PR open that drops two columns the team-A change relies on. Team B's architect never saw team A's spec. Team A's PO never saw team B's migration plan. Both PRs merge in the same week, integration breaks on a Friday afternoon, and the production hotfix takes the weekend. The spec was correct against team A's local view. There was no place in the SDD workflow for either architect to look across the boundary, because the architects' view is not part of the spec.
 
@@ -110,7 +290,9 @@ The team is ready to extend SDD with SE when at least three of the following hol
 
 ## From SDD to SE
 
-Once an SDD discipline is in place, the addition of a structured knowledge graph is what carries the team to Semantic Engineering. The relationship between SDD and SE is straightforward: SE is a strict superset of SDD. Every team that has adopted SDD reaches SE faster because the spec authorship habits transfer directly. The ontology becomes the additional shared artifact the specs feed into and are validated against.
+This section is for teams whose complexity profile has crossed the SDD ceiling and that need to keep operating beyond it. Teams whose contexts stay inside the patterns SDD addresses well do not need to make this move. SDD remains the right operating mode for them indefinitely.
+
+For teams that do need to extend SDD, the addition of a structured knowledge graph is what carries the team to Semantic Engineering. SE is a strict superset of SDD. The spec authorship habits transfer directly. The ontology becomes the additional shared artifact the specs feed into and are validated against.
 
 ### What the Knowledge Graph Adds
 

@@ -168,7 +168,7 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 **Five Engagement Modes (ASIMOV).** The five entry modes for engaging ASIMOV. Documentation Only (functional and technical docs, test scenarios, traceability from the legacy code; no migration). Discovery + Documentation (application inventory, dependency maps, business rules, process flows, SME review packs, plus documentation). Migration Readiness (migration scope, as-is versus delta classification, target mapping, sequencing, risk and complexity, requirements traceability matrix). Full Modernization (the end-to-end pipeline AGIE → ASF → AMM → AVF → Maintain). Maintain / Operate and Convergence (operational knowledge base, lifecycle documentation, change-impact support, overlap analysis, consolidation opportunities, convergence blueprint). Distinct from Breeze.AI's Advise / Launch / Scale / Optimize phase model. See [The ASIMOV Engagement Model](../practitioner/asimov.md#the-asimov-engagement-model).
 
-**Three Sources of Truth.** The clean separation of intent (specification), progress (ticket system), and state (knowledge graph). The misuse of any one to carry the load of the others is what produces drift. See [Three Sources of Truth](../sdlc/methodology.md#three-sources-of-truth).
+**Three Sources of Truth.** The clean separation of intent (specification), progress (ticket system), and state (knowledge graph). The misuse of any one to carry the load of the others is what produces drift. See [Three Sources of Truth](../sdlc/process/_index.md#three-sources-of-truth).
 
 **Translation Tax.** See Manual Translation Tax above. The methodology uses "Manual Translation Tax" as the primary, trademarked term for this phenomenon.
 
