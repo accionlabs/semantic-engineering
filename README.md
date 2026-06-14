@@ -1,161 +1,238 @@
+# Semantic Engineering Site
+
+The public site documenting **Accion Labs' Semantic Engineering** approach to AI-led
+software delivery — the methodology, the platform (Breeze.AI / ASIMOV), and the
+operating model we run engagements under.
+
+- **Live site:** https://accionlabs.github.io/semantic-engineering/
+- **Built with:** [Hugo](https://gohugo.io/) (static site generator) + the
+  [Hextra](https://imfing.github.io/hextra/) theme
+- **Source of truth:** the Markdown in `content/` and the SVGs in `static/diagrams/`
+- **Publishing:** every push to `main` triggers a GitHub Actions build that deploys
+  to the `gh-pages` branch, which GitHub Pages serves.
+
+Content is plain Markdown, so you can edit it in any editor (VS Code, Obsidian,
+Cowork, etc.). You do **not** need to be a developer to update copy — see
+[Making content changes](#making-content-changes).
+
 ---
-title: "Semantic Engineering Site: Content Conventions"
-description: "How this content tree is structured, edited, and published"
-status: Living document
+
+## Contents
+
+- [Repository layout](#repository-layout)
+- [Prerequisites](#prerequisites)
+- [Run the site locally](#run-the-site-locally)
+- [Making content changes](#making-content-changes)
+- [Editing diagrams](#editing-diagrams) ← **read this before touching any SVG**
+- [Committing and publishing](#committing-and-publishing)
+- [How it deploys](#how-it-deploys)
+- [Troubleshooting](#troubleshooting)
+
 ---
 
-# Semantic Engineering Site: Content Conventions
-
-This folder holds the markdown source for the public Semantic Engineering site. The same files are edited in Obsidian and published with Hugo. The conventions below keep both environments working without translation steps.
-
-## Folder Structure (v2: domain-first)
+## Repository layout
 
 ```
 semantic-engineering-site/
-├── _index.md                          Home page (Hugo section root)
-├── smarter-products/                  Outcome group
-│   ├── _index.md                      Outcome landing
-│   └── sdlc/                          Domain sub-site
-│       ├── _index.md                  Domain landing
-│       ├── the-problem.md
-│       ├── what-se-produces.md
-│       ├── the-ontology.md
-│       ├── transformation-journey.md  The SDD-to-SE evolution applied to SDLC
-│       ├── impact-analysis-agent.md   Domain-specific depth
-│       ├── brownfield-extraction.md   Domain-specific depth
-│       ├── portfolio-rationalization.md Domain-specific depth
-│       ├── case-archetypes.md
-│       └── how-accion-delivers.md
-├── smarter-processes/                 Outcome group
-│   ├── _index.md
-│   ├── operations/
+├── content/                  Markdown pages (the actual site content)
+│   ├── _index.md             Home page
+│   ├── sdlc/                 "Smarter SDLC" track (Breeze.AI)
 │   │   ├── _index.md
-│   │   ├── the-problem.md
-│   │   ├── what-se-produces.md
-│   │   ├── the-ontology.md
-│   │   ├── transformation-journey.md  Tribal Knowledge → Runbook-driven → SE-governed
-│   │   ├── managed-services-pattern.md
-│   │   ├── case-archetypes.md
-│   │   └── how-accion-delivers.md
-│   └── business-process-automation/
-│       └── (same template)
-├── smarter-people/                    Outcome group
-│   ├── _index.md
-│   ├── knowledge/
-│   │   └── (same template)
-│   └── capabilities-and-ip/
-│       └── (same template)
-├── foundations/                       Shared methodology spine
-│   ├── _index.md                      Foundations landing with reading paths
-│   ├── philosophy.md                  From Bible Part I
-│   ├── transformation-pattern.md      The general Manual → Disciplined → SE pattern
-│   ├── aperture.md                    From Bible Part II
-│   ├── ontology-framework.md          From Bible Part III
-│   ├── enterprise-brain.md            From Bible Part IV
-│   ├── agent-fleet.md                 From Bible Part VI
-│   ├── progressive-autonomy.md        From Bible Part VII
-│   ├── prompt-governance.md           From Bible Part VIII
-│   ├── domain-ai.md                   From Bible Part IX
-│   ├── enterprise-governance.md       From Bible Part X
-│   ├── business.md                    From Bible Part XI
-│   ├── people-and-organization.md     From Bible Part XII (expanded with fractional skills)
-│   ├── adoption-framework.md          From Bible Part XIII
-│   ├── evolving-frontier.md           From Bible Part XIV
-│   └── custodianship.md               From Bible Part XV
-├── practitioner/                      Accion as the methodology's primary practitioner
-│   ├── _index.md
-│   ├── platforms/
-│   ├── architecture-patterns.md
-│   ├── engagement-model.md
-│   └── case-archetypes/
-├── resources/                         Papers, talks, glossary, downloads, community
-│   └── _index.md
-└── about/                             Origins, copyright, governance, contact
-    └── _index.md
+│   │   ├── methodology.md  agents.md  case-archetypes.md  ...
+│   │   ├── zones/           the maturity zones
+│   │   └── process/         spec sprint, implementation sprint, team, ...
+│   ├── modernization/        "Legacy Modernization" track (ASIMOV)
+│   │   ├── _index.md
+│   │   ├── engagement-modes/  process/  ...
+│   ├── practitioner/         Breeze.AI, ASIMOV, contact
+│   ├── resources/            glossary, etc.
+│   └── about/                origins, copyright
+├── static/
+│   ├── diagrams/             All site SVG diagrams (referenced from Markdown)
+│   ├── images/               logo.svg, logo-dark.svg
+│   ├── css/se-diagrams.css   Theming variables for inline SVG diagrams
+│   └── favicon.*             Favicon set
+├── layouts/                  Project-specific theme overrides (render hooks, etc.)
+├── scripts/fix-svg.py        Post-export repair for SVG diagrams (see below)
+├── hugo.yaml                 Site configuration
+├── serve.sh                  Start the local dev server
+├── commit.sh                 Stage + commit + push helper
+└── .github/workflows/        The deploy workflow
 ```
 
-### Why Domain-First
-
-A methodology-first IA forces every reader to translate from abstract concepts to their own context before the content becomes useful. A domain-first IA lets a CTO with an SDLC problem read about SDLC, a VP Operations read about Operations, and a CKO read about Knowledge, each in their own language. The shared methodology that makes all of this work lives in Foundations and is surfaced from every domain page where readers want depth.
-
-The outcome triad (Smarter Products / Processes / People) is the top-level navigation, with each outcome containing one or more domains. The mapping is clean: each domain belongs to exactly one outcome.
-
-| Outcome | Domains |
-|---|---|
-| Smarter Products | SDLC |
-| Smarter Processes | Operations, Business Process Automation |
-| Smarter People | Knowledge, Capabilities and IP |
-
-## Frontmatter Conventions
-
-Every page carries Hugo-compatible YAML frontmatter at the top. Obsidian reads the same frontmatter and uses it for metadata.
-
-```yaml
 ---
-title: "Human-readable page title"
-description: "One-sentence summary for SEO, social cards, and listings"
-weight: 10            # ordering within the parent section (10, 20, 30 ...)
-date: 2026-06-02      # creation date
-lastmod: 2026-06-02   # last modified date
-draft: false          # true while in progress; false when ready to publish
-audience:             # one or more: cto, cio, analyst, practitioner
-  - cto
-  - practitioner
-part: "II"            # Roman numeral for methodology spine pages
-related:              # related pages (use relative paths)
-  - "/methodology/philosophy/"
-  - "/transformation/journey-stages/"
----
+
+## Prerequisites
+
+You need two tools installed (one-time setup). On macOS with
+[Homebrew](https://brew.sh/):
+
+```bash
+brew install hugo go
 ```
 
-Section index files (`_index.md`) include an additional `section: true` flag in the frontmatter so Hugo treats them as section landing pages.
+- **Hugo (extended)** — `hugo version` should report `extended` and `>= 0.128`.
+  (CI uses 0.148.1.)
+- **Go** — required because the Hextra theme is pulled in as a Hugo Module.
+- **Python 3** — only needed if you edit diagrams (for `fix-svg.py`); it ships
+  with macOS.
 
-## Markdown Conventions
+You also need **git** and access to the `accionlabs/semantic-engineering` repo.
+Clone it once:
 
-The conventions below keep the content readable in Obsidian and clean in Hugo.
+```bash
+git clone https://github.com/accionlabs/semantic-engineering.git
+cd semantic-engineering
+```
 
-| Element | Convention |
-|---|---|
-| Links | Standard markdown links with relative paths: `[text](../methodology/philosophy.md)`. Both Obsidian and Hugo handle these correctly. Avoid wikilinks. |
-| Headings | One H1 per page (the page title). H2 for major sections, H3 for subsections. Avoid H4 and deeper unless absolutely required. |
-| Lists | Always preceded by a blank line. Use `-` for bullets. Numbered lists only for ordered sequences. |
-| Tables | Used liberally for comparisons, role descriptions, and any structured data. Always include a header row. |
-| Mermaid | Use ```mermaid fenced blocks. Hugo's default renderer and Obsidian's mermaid plugin both render these correctly. |
-| Pull quotes | Use blockquote (`>`) syntax. Both environments render these as visual emphasis blocks. |
-| Sidebar callouts | Use blockquote with a bold lead: `> **How Accion operationalizes this**`. Hugo theme can style these specially via a custom render hook. |
-| Code | Use fenced code blocks with language identifiers (`bash`, `typescript`, `yaml`, etc.). |
-| Emphasis | Use `**bold**` for terms being introduced. Avoid italics for emphasis; reserve them for proper nouns and titles. |
-| Em-dashes | Not used anywhere. Sentences are written without them. |
-| Contrast statements | Not used. Avoid the "this is X, not Y" pattern. Frame contrasts through positive description. |
+---
 
-## Voice and Treatment Rules
+## Run the site locally
 
-The site speaks in the methodology's voice. The rules below apply to every page in `/methodology/`, `/transformation/`, `/outcomes/`, and `/domains/`. The `/practitioner/` section is the only place where Accion is the subject.
+From the repo root:
 
-| Rule | Why |
-|---|---|
-| Third-person methodology voice ("Semantic Engineering treats...", "The methodology produces...") | Establishes the methodology as the object of attention |
-| **No meta-narration about the page or the document itself.** Avoid sections like "Why This Chapter Exists Now", "What Comes Next", "What This Chapter Established", "How This Page Is Maintained", "What This Section Covers". Pages speak directly to the substance. Cross-references to other pages happen inline or via a one-line "Continue to" link at the end. | The reader is here for the methodology, not for documentation about the documentation |
-| **No contrast statements.** Avoid the "This is X. This is not Y" pattern and its variants ("It is not A. It is not B. The answer is C"). Frame contrasts through positive description. When a comparison is necessary, prefer parallel structure or a table over negation. | Author preference. Negation patterns read as defensive and add length without clarity. |
-| **No em-dashes.** Use periods, commas, parentheses, or colons. | Author preference |
-| Accion-specific platform names (Breeze.AI, ASIMOV, ECL, KAPS, SPEX, Semantic KG) appear only in `/practitioner/`, with sidebar callouts from spine pages pointing to them | Keeps methodology pages neutral and durable |
-| Named clients (Hubexo, Conservice, WHO, Abbott, Orion, Apex, Cision) are anonymized to engagement archetypes throughout methodology and domain content. Logos and full named studies live in `/practitioner/case-archetypes/` | Matches the white paper direction in the existing client briefing |
-| Sidebar callout pattern from spine to practitioner: `> **How Accion operationalizes this** > > Accion's [platform name] implements the [methodology element] described above. See the [Platforms page](/practitioner/platforms/) for details. | Single click from methodology depth to commercial implementation |
+```bash
+./serve.sh
+```
 
-## Hugo Build Notes
+Then open **http://localhost:1313/semantic-engineering/** in your browser.
 
-When this content is wired to Hugo:
+`serve.sh` stops any previous server, clears the build cache, and starts Hugo's
+dev server with live-reload. **Leave it running** while you edit — the browser
+refreshes automatically when you change content, diagrams, or styles. Press
+**Ctrl-C** to stop it.
 
-- The top-level `_index.md` becomes the site home (`/`)
-- Each subfolder with an `_index.md` becomes a Hugo section
-- The `weight` field orders pages within their section
-- Page bundles can be added later for pages that carry their own images
-- A custom render hook for blockquotes can detect the "**How Accion operationalizes this**" pattern and style it as a distinct sidebar callout
+> The site lives under the `/semantic-engineering/` path (matching the published
+> URL), so open the link above — plain `localhost:1313/` will 404.
 
-## Editing Workflow
+---
 
-1. Edit in Obsidian directly. The vault is configured to recognize this folder as part of the workspace.
-2. Mermaid diagrams render live in Obsidian preview.
-3. Cross-references use relative paths, so renaming a page requires updating links in any page that references it.
-4. Frontmatter `draft: true` keeps a page out of the published site while letting Obsidian render it.
-5. When publishing to Hugo, copy this folder to the Hugo project's `content/` directory; the structure is one-to-one.
+## Making content changes
+
+1. Start the local server (`./serve.sh`).
+2. Edit the relevant `.md` file under `content/`. Each page begins with a small
+   frontmatter block:
+
+   ```yaml
+   ---
+   title: "The Methodology"
+   weight: 20          # controls order in the left sidebar (lower = higher)
+   ---
+
+   Body text in Markdown...
+   ```
+
+   - **Don't** start the body with an `# H1` that repeats the title — the theme
+     renders the `title:` as the page heading automatically.
+   - **`weight`** sets the left-sidebar order within a section.
+3. Watch the change in the browser, then [commit and publish](#committing-and-publishing).
+
+Internal links between pages use normal relative Markdown links, e.g.
+`[The Agents](agents.md)` or `[Origins](about/origins.md#some-heading)` — the build
+resolves them to the right URLs.
+
+---
+
+## Editing diagrams
+
+Diagrams are **SVG files** in `static/diagrams/`, referenced from Markdown like:
+
+```markdown
+![Semantic Engineering at a Glance](/diagrams/hero-semantic-engineering-at-a-glance.svg)
+```
+
+They're authored in a vector editor (Affinity Designer / Illustrator / Inkscape).
+The site themes diagrams with CSS variables (so they adapt to light/dark mode and
+the site font). **A vector editor strips that theming on export** — it bakes colors
+to literal values, drops the styling class, and adds per-letter kerning that breaks
+under the site's font.
+
+### ⚠️ Always run `fix-svg.py` after editing any SVG
+
+After you export/overwrite an SVG in `static/diagrams/`, run:
+
+```bash
+# Repair every diagram (safe to run repeatedly — it's a no-op on already-fixed files)
+python3 scripts/fix-svg.py
+
+# ...or just the one you changed
+python3 scripts/fix-svg.py static/diagrams/breeze-vs-asimov.svg
+
+# Preview what it would change without writing
+python3 scripts/fix-svg.py --dry-run
+```
+
+This restores the theming variables, re-adds the `se-svg` class, ensures a
+`viewBox` (so the diagram scales), flips hardcoded white fills for dark mode, and
+flattens the kerning spans so text renders correctly. **If you skip this step, the
+diagram will look wrong (off colors, broken dark mode, or garbled text).**
+
+### Diagram editing checklist
+
+1. Edit the artwork in your vector tool.
+2. **Export/overwrite** the `.svg` directly into `static/diagrams/` (in Affinity,
+   that's **File → Export → SVG**, *not* just ⌘S — a plain Save updates the native
+   `.afdesign`, not the SVG).
+3. Run `python3 scripts/fix-svg.py`.
+4. Check it in the local site (`./serve.sh`), in **both light and dark mode**.
+   Click the diagram — it should zoom.
+5. [Commit and publish](#committing-and-publishing).
+
+> Tip: browsers cache SVGs aggressively. If a diagram looks unchanged after editing,
+> hard-refresh (**⌘⇧R**), or open DevTools → Network → **Disable cache** while iterating.
+
+---
+
+## Committing and publishing
+
+When you're happy with your changes, publish them with:
+
+```bash
+./commit.sh "short description of what changed"
+```
+
+This stages everything (new files, edits, deletions), commits, syncs with the
+remote, and pushes to `main`. The push triggers an automatic rebuild and deploy —
+your changes appear on the live site a minute or two later.
+
+If you prefer to do it by hand, the equivalent is:
+
+```bash
+git add -A
+git commit -m "short description of what changed"
+git pull --rebase origin main
+git push origin main
+```
+
+---
+
+## How it deploys
+
+- Pushing to **`main`** runs `.github/workflows/hugo.yml`.
+- The workflow builds the site with Hugo and pushes the output to the **`gh-pages`**
+  branch; GitHub Pages serves that branch.
+- No manual step is needed — just push to `main`.
+- You can watch builds under the repo's **Actions** tab.
+
+> The deploy uses a branch-based publish (rather than the default GitHub-Pages
+> OIDC deploy) because of org security policy. Don't switch the workflow to the
+> `actions/deploy-pages` approach — it fails with a 401 in this org.
+
+---
+
+## Troubleshooting
+
+- **Page is unstyled / CSS missing locally** — usually happens after editing
+  `hugo.yaml` while the server is running. Restart it: `./serve.sh`.
+- **A diagram looks wrong (colors, dark mode, garbled text)** — you forgot to run
+  `python3 scripts/fix-svg.py` after editing the SVG.
+- **A diagram or favicon won't update in the browser** — it's cached. Hard-refresh
+  (**⌘⇧R**).
+- **Search shows old titles locally** — the search index is cached in your browser;
+  hard-refresh. (It's always correct on the deployed site.)
+- **Broken internal links** — the build prints `render-link unresolved` warnings in
+  the server log for `.md` links that point to moved/removed pages. Fix the link
+  target in the Markdown.
+- **`./commit.sh` push rejected / merge conflict** — someone (or a web edit) changed
+  the remote. The script rebases automatically; if it reports a conflict, resolve the
+  flagged file, then `git rebase --continue` and `git push`.
