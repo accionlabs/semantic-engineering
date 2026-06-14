@@ -241,18 +241,18 @@
     <g transform="matrix(1,0,0,1,615,700)">
         <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">PRODUCE</text>
     </g>
-    <path d="M1140,734L1140,776C1140,783.727 1133.727,790 1126,790L74,790C66.273,790 60,783.727 60,776L60,734C60,726.273 66.273,720 74,720L1126,720C1133.727,720 1140,726.273 1140,734Z"/>
+    <path id="se-hero-verified-output-bg" d="M1140,734L1140,776C1140,783.727 1133.727,790 1126,790L74,790C66.273,790 60,783.727 60,776L60,734C60,726.273 66.273,720 74,720L1126,720C1133.727,720 1140,726.273 1140,734Z" style="fill:var(--se-text,#111111);"/>
     <g transform="matrix(1,0,0,1,600,746)">
         <g transform="matrix(14,0,0,14,-24.476074,0)">
         </g>
         <g transform="matrix(14,0,0,14,-19.813965,0)">
         </g>
-        <text x="-50.172px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Veriﬁed Output</text>
+        <text id="se-hero-verified-output-title" x="-50.172px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-box-fill,#ffffff);">Verified Output</text>
     </g>
     <g transform="matrix(1,0,0,1,600,765)">
-        <text x="-304.511px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">Code, documentation, migrated systems, and decisions produced under structural constraint and validated against the graph.</text>
+        <text id="se-hero-verified-output-line-1" x="-304.511px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-box-fill,#ffffff);">Code, documentation, migrated systems, and decisions produced under structural constraint and validated against the graph.</text>
     </g>
     <g transform="matrix(1,0,0,1,600,781)">
-        <text x="-286.677px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">Auditable. Traceable. Governed. The knowledge graph grows with every cycle and remains an asset of the enterprise.</text>
+        <text id="se-hero-verified-output-line-2" x="-286.677px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-box-fill,#ffffff);">Auditable. Traceable. Governed. The knowledge graph grows with every cycle and remains an asset of the enterprise.</text>
     </g>
 </svg>
