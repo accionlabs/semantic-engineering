@@ -423,31 +423,40 @@
 &lt;h2>Cross-Product Reconciliation Lives in the Spec Sprint&lt;span class="hx:absolute hx:-mt-20" id="cross-product-reconciliation-lives-in-the-spec-sprint">&lt;/span>
 &lt;a href="#cross-product-reconciliation-lives-in-the-spec-sprint" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The spec sprint is the natural home for cross-product impact analysis. When a proposed change affects multiple product knowledge graphs, the spec sprint is where the architect runs the cross-product extension, examines results across product graphs, and decides whether to modify the API contract, the architecture, or the design system to keep the change tractable.&lt;/p>
 &lt;p>Doing cross-product reconciliation during the implementation sprint is too late. By the time engineers are coding, the architectural decisions need to already be made. The spec sprint is when those decisions get made. The graph partitioning (one graph per product, with cross-product extensions) is designed around this cadence. See &lt;a href="https://accionlabs.github.io/semantic-engineering/sdlc/methodology/#partition-by-product">Partition by Product&lt;/a> for the structural rationale.&lt;/p>
-&lt;h2>When the Spec Sprint Is Not Necessary&lt;span class="hx:absolute hx:-mt-20" id="when-the-spec-sprint-is-not-necessary">&lt;/span>
-&lt;a href="#when-the-spec-sprint-is-not-necessary" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The spec sprint is not necessary in every context. The threshold is operational complexity, and complexity is context-specific.&lt;/p>
+&lt;h2>When the Spec Sprint Is Worth a Separate Cadence&lt;span class="hx:absolute hx:-mt-20" id="when-the-spec-sprint-is-worth-a-separate-cadence">&lt;/span>
+&lt;a href="#when-the-spec-sprint-is-worth-a-separate-cadence" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The spec sprint cadence is most consequential at the higher zones, where the four-ontology knowledge graph and the Impact Analysis Agent are part of what the spec sprint produces. The cadence itself, separated from the agent and graph machinery, applies across a wider range of contexts than just Zone 3+. A lighter form of the discipline is a useful Zone 2 best practice and can be introduced before the team has committed to the full SE structure.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
 &lt;th>Context&lt;/th>
-&lt;th>Spec sprint necessary?&lt;/th>
+&lt;th>Spec sprint cadence&lt;/th>
+&lt;th>Notes&lt;/th>
 &lt;/tr>
 &lt;/thead>
 &lt;tbody>
 &lt;tr>
 &lt;td>Small greenfield team, single product, single repo, no cross-team dependencies, one person can hold the full context&lt;/td>
-&lt;td>Not yet. The conventional sprint cadence with spec authorship at the start works.&lt;/td>
+&lt;td>Not yet&lt;/td>
+&lt;td>The conventional sprint cadence with spec authorship at the start works. A separate cadence adds overhead without payback.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Single product but growing past one person&amp;rsquo;s mental capacity, multiple workstreams converging, design system drift surfacing&lt;/td>
-&lt;td>Yes. The spec sprint becomes worth its own cadence.&lt;/td>
+&lt;td>SDD team with single product growing past one person&amp;rsquo;s capacity, early ceiling signals appearing&lt;/td>
+&lt;td>Yes, in lighter form&lt;/td>
+&lt;td>Four-role human review running ahead of implementation. No graph, no Impact Analysis Agent, no four-ontology gates. See &lt;a href="https://accionlabs.github.io/semantic-engineering/sdlc/zones/zone-2-spec-driven-development/#spec-sprint-cadence-as-a-zone-2-best-practice">Spec Sprint Cadence as a Zone 2 Best Practice&lt;/a>.&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Multiple products with integration points, multiple teams working concurrently, brownfield reality at scale&lt;/td>
-&lt;td>Yes, and the spec sprint becomes the most consequential meeting on the engineering calendar.&lt;/td>
+&lt;td>Single product crossed into multi-team coordination, brownfield reality, agent-assisted development at scale&lt;/td>
+&lt;td>Yes, in full SE form&lt;/td>
+&lt;td>Spec sprint produces impact-analyzed specs plus refreshed knowledge graph. Agent participation included.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Multi-product portfolio with cross-product integration points, multiple custodian groups&lt;/td>
+&lt;td>Yes, full SE form plus cross-product reconciliation&lt;/td>
+&lt;td>The spec sprint becomes the most consequential coordination meeting on the engineering calendar.&lt;/td>
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>A team adopting the methodology should not impose spec sprints prematurely. They should adopt them when the work crosses the complexity threshold that separates Zone 2 from Zone 3 in the &lt;a href="https://accionlabs.github.io/semantic-engineering/sdlc/zones/">Zones of AI-Assisted SDLC&lt;/a>.&lt;/p>
+&lt;p>A team should adopt the lighter Zone 2 form when the SDD ceiling starts producing signals, and graduate to the full SE form when the complexity crosses the threshold described in &lt;a href="https://accionlabs.github.io/semantic-engineering/sdlc/zones/">Zones of AI-Assisted SDLC&lt;/a>. The two-form framing avoids both the wasted overhead of adopting the full SE structure too early and the cost of deferring the cadence discipline until complexity has clearly overwhelmed the team.&lt;/p>
 &lt;h2>The Spec Sprint and the Implementation Sprint Together&lt;span class="hx:absolute hx:-mt-20" id="the-spec-sprint-and-the-implementation-sprint-together">&lt;/span>
 &lt;a href="#the-spec-sprint-and-the-implementation-sprint-together" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The two cadences run staggered, with the spec sprint always one or two sprints ahead of the implementation sprint it feeds.&lt;/p>
 &lt;p>The Spec Sprint team often fractionalizes across two or three workstreams. The Product Owner is per-workstream, but the Architect, UX Designer, and Engineering Team representative may rotate across spec sprints for different workstreams. This is what makes the fractional allocation model work in practice. The same Architect contributes to spec sprints for three workstreams across a quarter, sized to the cadence rather than to a full-time allocation.&lt;/p>
@@ -812,7 +821,7 @@
 &lt;/table>
 &lt;p>The implementation sprint does not run impact analysis on the spec it receives, because it has already been done in the spec sprint. When the implementation sprint&amp;rsquo;s Impact Analysis Agent (running for verification) detects a spec missing context that only the custodians can supply, the spec is pushed back to the spec sprint backlog. The implementation team does not block on it. They pull the next spec from the backlog.&lt;/p>
 &lt;h2>The Three Sources of Truth in Operation&lt;span class="hx:absolute hx:-mt-20" id="the-three-sources-of-truth-in-operation">&lt;/span>
-&lt;a href="#the-three-sources-of-truth-in-operation" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The flow uses all three sources of truth (covered in &lt;a href="https://accionlabs.github.io/semantic-engineering/sdlc/methodology/#three-sources-of-truth">Semantic Knowledge Graphs&lt;/a>) together.&lt;/p>
+&lt;a href="#the-three-sources-of-truth-in-operation" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The flow uses all three sources of truth (covered in &lt;a href="https://accionlabs.github.io/semantic-engineering/sdlc/process/#three-sources-of-truth">Three Sources of Truth&lt;/a> on the Process landing) together.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
