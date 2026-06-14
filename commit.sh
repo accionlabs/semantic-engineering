@@ -1,20 +1,27 @@
 #!/usr/bin/env bash
 #
-# commit.sh — stage all changes, commit, sync with the remote, and push.
+# commit.sh — publish changes to the Semantic Engineering site.
+#
+# Publishing model:
+#   * The maintainer (OWNER) publishes directly: commit straight to main, which
+#     triggers the deploy.
+#   * Everyone else gets a branch + a pull request addressed to the maintainer.
+#     Their changes go live only after the maintainer approves and merges.
+#
+# This script is a convenience. The real enforcement is the branch-protection
+# rule on `main` (only the maintainer can push/merge to main) — so even if this
+# script is bypassed, contributors still cannot publish directly.
 #
 # Usage:
 #   ./commit.sh "your commit message"
 #   ./commit.sh                       # uses a timestamped default message
-#
-# After pushing to main, GitHub Actions rebuilds and deploys to:
-#   https://accionlabs.github.io/semantic-engineering/
 
 set -euo pipefail
 
-# Always run from the directory this script lives in.
 cd "$(dirname "$0")"
 
-BRANCH="main"
+OWNER="bijoor"   # GitHub login allowed to publish directly. Others open PRs.
+BASE="main"
 
 # Commit message: all arguments joined, or a timestamped default.
 if [ "$#" -gt 0 ]; then
@@ -23,10 +30,20 @@ else
   MSG="Update site content ($(date '+%Y-%m-%d %H:%M'))"
 fi
 
+# GitHub CLI is needed to know who you are and (for contributors) to open the PR.
+if ! command -v gh >/dev/null 2>&1; then
+  echo "GitHub CLI (gh) is required."
+  echo "Install it from https://cli.github.com/ then run: gh auth login"
+  exit 1
+fi
+ME="$(gh api user --jq .login 2>/dev/null || true)"
+if [ -z "$ME" ]; then
+  echo "You're not logged in to GitHub. Run: gh auth login"
+  exit 1
+fi
+
 # Stage everything: new files, edits, and deletions.
 git add -A
-
-# Bail out cleanly if there is nothing to commit.
 if git diff --cached --quiet; then
   echo "Nothing to commit — working tree is clean."
   exit 0
@@ -36,17 +53,35 @@ echo "Staged changes:"
 git status --short
 echo
 
-git commit -m "$MSG"
-echo "Committed: $(git rev-parse --short HEAD)"
-echo
+if [ "$ME" = "$OWNER" ]; then
+  # ---- Maintainer: publish directly to main ----
+  git commit -m "$MSG"
+  echo "Committed: $(git rev-parse --short HEAD)"
+  echo "Syncing with origin/$BASE ..."
+  git pull --rebase origin "$BASE"
+  echo "Pushing ..."
+  git push origin "$BASE"
+  echo
+  echo "Done. The deploy workflow will rebuild → https://accionlabs.github.io/semantic-engineering/"
+else
+  # ---- Contributor: open a pull request for the maintainer to review ----
+  BR="contrib/${ME}-$(date '+%Y%m%d-%H%M%S')"
+  echo "You don't have publish rights on this site."
+  echo "Opening a pull request for @$OWNER to review and merge ..."
+  echo
 
-# Pull in any remote changes first (e.g. the workflow file edited via the web
-# editor), rebasing this commit on top, so the push isn't rejected.
-echo "Syncing with origin/$BRANCH ..."
-git pull --rebase origin "$BRANCH"
+  git switch -c "$BR"
+  git commit -m "$MSG"
+  git push -u origin "$BR"
 
-echo "Pushing ..."
-git push origin "$BRANCH"
+  gh pr create \
+    --base "$BASE" \
+    --head "$BR" \
+    --title "$MSG" \
+    --body "Submitted via commit.sh by @$ME. Requires @$OWNER's review — it goes live only after approval and merge." \
+    --reviewer "$OWNER"
 
-echo
-echo "Done. The deploy workflow will rebuild → https://accionlabs.github.io/semantic-engineering/"
+  echo
+  echo "Pull request opened. Your changes publish only after @$OWNER approves and merges it."
+  echo "For your next edit, switch back to $BASE first:  git switch $BASE && git pull"
+fi

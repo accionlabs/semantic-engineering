@@ -185,23 +185,37 @@ diagram will look wrong (off colors, broken dark mode, or garbled text).**
 
 ## Committing and publishing
 
-When you're happy with your changes, publish them with:
+When you're happy with your changes, run:
 
 ```bash
 ./commit.sh "short description of what changed"
 ```
 
-This stages everything (new files, edits, deletions), commits, syncs with the
-remote, and pushes to `main`. The push triggers an automatic rebuild and deploy —
-your changes appear on the live site a minute or two later.
+**Who can publish:** the site is publish-protected. Only the **maintainer**
+(`@bijoor`) can update the live site directly — `main` is branch-protected so all
+other changes must go through a pull request the maintainer approves. `commit.sh`
+handles this automatically based on who you are:
 
-If you prefer to do it by hand, the equivalent is:
+- **Maintainer** → commits straight to `main`, which triggers the deploy. Changes
+  are live in a minute or two.
+- **Everyone else** → the script creates a branch, pushes it, and opens a **pull
+  request** addressed to the maintainer. Your changes go live only after the
+  maintainer approves and merges it. (You'll get the PR link in the output.)
+  For your next edit, switch back to `main` first: `git switch main && git pull`.
+
+`commit.sh` needs the [GitHub CLI](https://cli.github.com/) (`gh`) installed and
+authenticated (`gh auth login`) so it can identify you and open PRs.
+
+If you'd rather do it by hand:
 
 ```bash
-git add -A
-git commit -m "short description of what changed"
-git pull --rebase origin main
-git push origin main
+# Maintainer (direct):
+git add -A && git commit -m "message" && git pull --rebase origin main && git push origin main
+
+# Contributor (pull request):
+git switch -c my-change && git add -A && git commit -m "message"
+git push -u origin my-change
+gh pr create --base main --reviewer bijoor
 ```
 
 ---
