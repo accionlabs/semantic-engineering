@@ -1,8 +1,9 @@
+#Dockerfile
 FROM nginx:1.27-alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-RUN mkdir -p /usr/share/nginx/html/semantic-engineering
+RUN mkdir -p /usr/share/nginx/html/semantic-engineering     
 
 COPY . /usr/share/nginx/html/semantic-engineering/
 
