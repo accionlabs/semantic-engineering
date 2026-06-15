@@ -50,8 +50,8 @@ metadata:
 spec:
   ports:
     - name: 'http'
-      port: 8080
-      targetPort: 8080
+      port: 80
+      targetPort: 80
   selector:
     app: ${MICROSERVICE_NAME}
   type: ClusterIP
@@ -75,6 +75,6 @@ spec:
               service:
                 name: ${MICROSERVICE_NAME}
                 port:
-                  number: 8080
+                  number: 80
             path: ${ENV_CONTEXT_PATH}
             pathType: ImplementationSpecific
