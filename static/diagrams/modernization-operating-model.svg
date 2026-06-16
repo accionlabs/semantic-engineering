@@ -13,10 +13,10 @@
             <text x="-33.465px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Discovery</text>
         </g>
         <g transform="matrix(1,0,0,1,125,50)">
-            <text x="-35.537px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">&amp; <tspan x="-22.049px -11.939px " y="0px 0px ">An</tspan>alysis</text>
+            <text x="-35.537px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">&amp; Analysis</text>
         </g>
         <g transform="matrix(1,0,0,1,124.945,100)">
-            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 1</tspan></text>
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">STAGE 1</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,308,100)">
@@ -28,13 +28,13 @@
             <text x="-45.507px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">&amp; Enrichment</text>
         </g>
         <g transform="matrix(1,0,0,1,124.945,100)">
-            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 2</tspan></text>
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">STAGE 2</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,576,100)">
         <path d="M0,0L220,0L250,40L220,80L0,80L30,40L0,0Z" style="fill:var(--se-accent-fill,#FDE8DD);fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:3px;"/>
         <g transform="matrix(1,0,0,1,125,32)">
-            <text x="-48.487px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">MVP<tspan x="-18.396px -14.506px " y="0px 0px "> M</tspan>igration</text>
+            <text x="-48.487px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">MVP Migration</text>
         </g>
         <g transform="matrix(1,0,0,1,125,50)">
             <g transform="matrix(11,0,0,11,-4.581543,0)">
@@ -44,7 +44,7 @@
             <text x="-52.288px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text,#111111);">one identiﬁed module</text>
         </g>
         <g transform="matrix(1,0,0,1,124.945,100)">
-            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 3</tspan></text>
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">STAGE 3</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,844,100)">
@@ -56,32 +56,32 @@
             <text x="-46.468px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text,#111111);">remaining modules</text>
         </g>
         <g transform="matrix(1,0,0,1,124.945,100)">
-            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 4</tspan></text>
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">STAGE 4</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,1112,100)">
         <path d="M0,0L220,0L250,40L220,80L0,80L30,40L0,0Z" style="fill:var(--se-accent-fill,#FDE8DD);fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,125,28)">
-            <text x="-57.046px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">UA<tspan x="-37.857px -30.857px -26.968px " y="0px 0px 0px ">T, </tspan>Deployment</text>
+            <text x="-57.046px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">UAT, Deployment</text>
         </g>
         <g transform="matrix(1,0,0,1,125,46)">
             <text x="-49.4px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">&amp; Maintenance</text>
         </g>
         <g transform="matrix(1,0,0,1,124.945,100)">
-            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">S<tspan x="-16.011px -9.993px -1.939px 6.727px 14.174px 17.34px " y="0px 0px 0px 0px 0px 0px ">TAGE 5</tspan></text>
+            <text x="-23.458px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">STAGE 5</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,-144,3)">
         <path d="M1364,254L1364,446C1364,453.727 1357.727,460 1350,460L590,460C582.273,460 576,453.727 576,446L576,254C576,246.273 582.273,240 590,240L1350,240C1357.727,240 1364,246.273 1364,254Z" style="fill:none;stroke:var(--se-accent,#E94E1B);stroke-width:1.8px;stroke-dasharray:6,4;"/>
     </g>
     <g transform="matrix(1,0,0,1,826,273)">
-        <text x="-186.167px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text,#111111);">T<tspan x="-178.11px -166.443px " y="0px 0px ">wo</tspan> iteration loops in parallel across Stages 3 and 4</text>
+        <text x="-186.167px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Two iteration loops in parallel across Stages 3 and 4</text>
     </g>
     <g transform="matrix(1,0,0,1,-144,3)">
         <path d="M970,298L970,432C970,436.415 966.415,440 962,440L608,440C603.585,440 600,436.415 600,432L600,298C600,293.585 603.585,290 608,290L962,290C966.415,290 970,293.585 970,298Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     </g>
     <g transform="matrix(1,0,0,1,641,315)">
-        <text x="-97.002px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Migration-V<tspan x="-31.664px -24.99px " y="0px 0px ">al</tspan>idation iteration loop</text>
+        <text x="-97.002px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Migration-Validation iteration loop</text>
     </g>
     <g transform="matrix(1,0,0,1,641,331)">
         <text x="-133.297px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">automated · per migration candidate · minutes to hours</text>
@@ -129,7 +129,7 @@
         <text x="-39.421px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text,#111111);">Product Owner</text>
     </g>
     <g transform="matrix(1,0,0,1,941,385)">
-        <text x="-25.835px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">+ <tspan x="-16.957px -9.62px " y="0px 0px ">Ar</tspan>chitect</text>
+        <text x="-25.835px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">+ Architect</text>
     </g>
     <g transform="matrix(1,0,0,1,-144,3)">
         <path d="M1330,352L1330,384C1330,387.311 1327.311,390 1324,390L1186,390C1182.689,390 1180,387.311 1180,384L1180,352C1180,348.689 1182.689,346 1186,346L1324,346C1327.311,346 1330,348.689 1330,352Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
@@ -173,7 +173,7 @@
         <path d="M560,300L560,380C560,385.519 555.519,390 550,390L330,390C324.481,390 320,385.519 320,380L320,300C320,294.481 324.481,290 330,290L550,290C555.519,290 560,294.481 560,300Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text,#111111);stroke-width:1.5px;stroke-dasharray:3,3;"/>
     </g>
     <g transform="matrix(1,0,0,1,296,337)">
-        <text x="-42.265px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text,#111111);">SME <tspan x="-15.775px -7.831px " y="0px 0px ">An</tspan>notation</text>
+        <text x="-42.265px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text,#111111);">SME Annotation</text>
     </g>
     <g transform="matrix(1,0,0,1,296,353)">
         <text x="-53.81px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">by the four custodians</text>
@@ -185,7 +185,7 @@
         <text x="-80.701px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">Retain · Modify · Replace · Retire</text>
     </g>
     <g transform="matrix(1,0,0,1,295.945,409)">
-        <text x="-78.982px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">H<tspan x="-70.928px -62.874px -53.601px -45.547px -37.494px -34.327px -27.692px -19.638px -12.808px -9.642px -1.588px 5.654px 12.484px 15.65px 24.316px 32.37px 35.536px 42.983px 51.649px 54.815px 62.869px 69.698px 72.864px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMAN VALIDATION POINT 1</tspan></text>
+        <text x="-78.982px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">HUMAN VALIDATION POINT 1</text>
     </g>
     <g transform="matrix(1,0,0,1,-144,3)">
         <path d="M560,550L560,630C560,635.519 555.519,640 550,640L330,640C324.481,640 320,635.519 320,630L320,550C320,544.481 324.481,540 330,540L550,540C555.519,540 560,544.481 560,550Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text,#111111);stroke-width:1.5px;stroke-dasharray:3,3;"/>
@@ -203,7 +203,7 @@
         <text x="-30.881px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">at hand-over</text>
     </g>
     <g transform="matrix(1,0,0,1,295.945,637)">
-        <text x="-78.982px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">H<tspan x="-70.928px -62.874px -53.601px -45.547px -37.494px -34.327px -27.692px -19.638px -12.808px -9.642px -1.588px 5.654px 12.484px 15.65px 24.316px 32.37px 35.536px 42.983px 51.649px 54.815px 62.869px 69.698px 72.864px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMAN VALIDATION POINT 2</tspan></text>
+        <text x="-78.982px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">HUMAN VALIDATION POINT 2</text>
     </g>
     <g transform="matrix(1,0,0,1,-144,3)">
         <path d="M1340,550L1340,630C1340,635.519 1335.519,640 1330,640L710,640C704.481,640 700,635.519 700,630L700,550C700,544.481 704.481,540 710,540L1330,540C1335.519,540 1340,544.481 1340,550Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>

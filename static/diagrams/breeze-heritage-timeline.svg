@@ -5,7 +5,7 @@
         <text x="-181.714px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Heritage of Breeze.AI</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-386.758px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-377.859px -366.305px " y="0px 0px ">wo</tspan> roots converged into the methodology and the platform. <tspan x="43.445px 53.219px " y="0px 0px ">Th</tspan>e platform took the name of its 2017 ancestor<tspan x="382.312px " y="0px ">.</tspan></text>
+        <text x="-386.758px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Two roots converged into the methodology and the platform. The platform took the name of its 2017 ancestor.</text>
     </g>
     <g transform="matrix(1,0,0,1,60,128)">
         <path d="M540,14L540,186C540,193.727 533.727,200 526,200L14,200C6.273,200 0,193.727 0,186L0,14C0,6.273 6.273,0 14,0L526,0C533.727,0 540,6.273 540,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
@@ -21,7 +21,7 @@
             <text x="-57.371px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">role governance</text>
         </g>
         <g transform="matrix(1,0,0,1,200,30)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">A<tspan x="10.969px 15.414px " y="0px 0px "> m</tspan>anual blueprint</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">A manual blueprint</text>
         </g>
         <g transform="matrix(1,0,0,1,200,58)">
             <g transform="matrix(16,0,0,16,32.90625,0)">
@@ -37,10 +37,10 @@
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">UX designers needed to produce.</text>
         </g>
         <g transform="matrix(1,0,0,1,200,124)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 17.719px 26.585px 30.392px 39.258px 48.841px 59.148px 68.731px 76.867px 85.733px 96.757px 100.564px 104.37px 112.506px 116.313px 125.896px 135.48px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE PROBLEM IT HAD</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">THE PROBLEM IT HAD</text>
         </g>
         <g transform="matrix(1,0,0,1,200,146)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Operationally heavy<tspan x="140.234px 144.68px " y="0px 0px ">. </tspan>Maintaining the</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Operationally heavy. Maintaining the</text>
         </g>
         <g transform="matrix(1,0,0,1,200,164)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">artifacts across hundreds of engagements</text>
@@ -82,10 +82,10 @@
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">hallucination into precise, traceable output.</text>
         </g>
         <g transform="matrix(1,0,0,1,200,142)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.231px 76.814px 87.121px 95.987px 104.853px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT PROVED</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">WHAT IT PROVED</text>
         </g>
         <g transform="matrix(1,0,0,1,200,164)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Structure could make <tspan x="154.75px 165.422px " y="0px 0px ">AI</tspan> output reliable</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Structure could make AI output reliable</text>
         </g>
         <g transform="matrix(1,0,0,1,200,182)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">at enterprise scale.</text>
@@ -141,7 +141,7 @@
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The role-governance discipline</text>
         </g>
         <g transform="matrix(1,0,0,1,20,152)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">preserved in the four-layer ontology<tspan x="250.516px " y="0px ">.</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">preserved in the four-layer ontology.</text>
         </g>
         <g transform="matrix(1,0,0,1,20,178)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The maintenance burden that defeated</text>

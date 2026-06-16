@@ -15,7 +15,7 @@
             <circle cx="0" cy="0" r="84" style="fill:none;stroke:white;stroke-width:2px;"/>
         </g>
         <g transform="matrix(1,0,0,1,-0.16,29)">
-            <text x="-55.674px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">E<tspan x="-44.682px -32.808px -21.816px -10.824px -1.606px 9.386px 23.034px 34.026px 45.901px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">NABLEMENT</tspan></text>
+            <text x="-55.674px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">ENABLEMENT</text>
         </g>
         <g transform="matrix(1,0,0,1,0,60)">
             <text x="-26.672px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-box-fill,#ffffff);">FIVE</text>
@@ -34,16 +34,16 @@
             <text x="-47.562px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">Duty of Care</text>
         </g>
         <g transform="matrix(1,0,0,1,140,74)">
-            <text x="-88.789px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Maintains graph integrity<tspan x="84.344px " y="0px ">,</tspan></text>
+            <text x="-88.789px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Maintains graph integrity,</text>
         </g>
         <g transform="matrix(1,0,0,1,140,92)">
-            <text x="-100.969px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">governance, agent behavior<tspan x="96.523px " y="0px ">,</tspan></text>
+            <text x="-100.969px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">governance, agent behavior,</text>
         </g>
         <g transform="matrix(1,0,0,1,140,110)">
             <text x="-56.488px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">ontology health.</text>
         </g>
         <g transform="matrix(1,0,0,1,57,138)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O<tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED</text>
         </g>
         <g transform="matrix(1,0,0,1,140,158)">
             <text x="-95.168px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">4-ontology validation rules,</text>
@@ -72,7 +72,7 @@
             <text x="-101.391px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">in expansion or wallet share.</text>
         </g>
         <g transform="matrix(1,0,0,1,75,142)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O<tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED</text>
         </g>
         <g transform="matrix(1,0,0,1,160,162)">
             <text x="-96.051px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Custodial Council insulates</text>
@@ -93,13 +93,13 @@
             <text x="-87.613px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Applies the methodology</text>
         </g>
         <g transform="matrix(1,0,0,1,160,92)">
-            <text x="-89.676px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">rigorously<tspan x="-21.496px -17.051px " y="0px 0px ">, </tspan>without cutting</text>
+            <text x="-89.676px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">rigorously, without cutting</text>
         </g>
         <g transform="matrix(1,0,0,1,160,110)">
             <text x="-114.719px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">corners under delivery pressure.</text>
         </g>
         <g transform="matrix(1,0,0,1,75,142)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O<tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED</text>
         </g>
         <g transform="matrix(1,0,0,1,160,162)">
             <text x="-92.07px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Standard governance and</text>
@@ -123,10 +123,10 @@
             <text x="-116.062px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">knowledge for competing clients,</text>
         </g>
         <g transform="matrix(1,0,0,1,160,110)">
-            <text x="-99.461px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">structural separations apply<tspan x="95.016px " y="0px ">.</tspan></text>
+            <text x="-99.461px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">structural separations apply.</text>
         </g>
         <g transform="matrix(1,0,0,1,75,142)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O<tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED</text>
         </g>
         <g transform="matrix(1,0,0,1,160,162)">
             <text x="-110.73px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Firewalls between engagement</text>
@@ -141,7 +141,7 @@
         <path d="M320,14L320,30C320,37.727 313.727,44 306,44L14,44C6.273,44 0,37.727 0,30L0,14C0,6.273 6.273,0 14,0L306,0C313.727,0 320,6.273 320,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
         <rect x="0" y="30" width="320" height="14" style="fill:var(--se-text-secondary,#4b5563);"/>
         <g transform="matrix(1,0,0,1,160,29)">
-            <text x="-81.805px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">Duty of T<tspan x="-13.359px -7.133px " y="0px 0px ">ra</tspan>nsparency</text>
+            <text x="-81.805px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">Duty of Transparency</text>
         </g>
         <g transform="matrix(1,0,0,1,160,74)">
             <text x="-101.395px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Provenance, audit trails, and</text>
@@ -153,7 +153,7 @@
             <text x="-80.051px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">to the client by default.</text>
         </g>
         <g transform="matrix(1,0,0,1,75,142)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O<tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED</text>
         </g>
         <g transform="matrix(1,0,0,1,160,162)">
             <text x="-124.949px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Audit trail in progressive autonomy;</text>

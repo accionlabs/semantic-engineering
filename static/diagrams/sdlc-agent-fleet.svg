@@ -2,26 +2,26 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg width="100%" height="100%" viewBox="0 0 1400 700" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,32)">
-        <text x="-115.097px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:22px;fill:var(--se-text,#111111);">The SDLC <tspan x="-4.689px 11.199px " y="0px 0px ">Ag</tspan>ent Fleet</text>
+        <text x="-115.097px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:22px;fill:var(--se-text,#111111);">The SDLC Agent Fleet</text>
     </g>
     <g transform="matrix(1,0,0,1,700,56)">
         <g transform="matrix(12,0,0,12,-30.360352,0)">
         </g>
         <g transform="matrix(12,0,0,12,-27.026367,0)">
         </g>
-        <text x="-312.519px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="-305.177px -301.843px " y="0px 0px "> s</tspan>mall number of specialized agents, each with a deﬁned role and a named owner<tspan x="127.749px 131.083px " y="0px 0px ">, </tspan>running over the four-layer graph.</text>
+        <text x="-312.519px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">A small number of specialized agents, each with a deﬁned role and a named owner, running over the four-layer graph.</text>
     </g>
     <g transform="matrix(1,0,0,1.1,0,-9)">
         <path d="M1360,102.727L1360,237.273C1360,244.297 1353.727,250 1346,250L54,250C46.273,250 40,244.297 40,237.273L40,102.727C40,95.703 46.273,90 54,90L1346,90C1353.727,90 1360,95.703 1360,102.727Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     </g>
     <g transform="matrix(1,0,0,1,60,118)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">O<tspan x="11.03px 21.28px 31.53px 41.781px 51.259px 60.736px 69.428px 79.679px 88.89px 97.582px 101.611px 112.641px 122.891px 126.921px 135.613px 144.578px 154.056px 163.534px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RCHESTRATION LAYER</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">ORCHESTRATION LAYER</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-33)">
         <path d="M860,150L860,198C860,204.623 854.623,210 848,210L552,210C545.377,210 540,204.623 540,198L540,150C540,143.377 545.377,138 552,138L848,138C854.623,138 860,143.377 860,150Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
     </g>
     <g transform="matrix(1,0,0,1,700,133)">
-        <text x="-82.379px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">T<tspan x="-74.33px -65.167px " y="0px 0px ">op</tspan>-Level Orchestrator</text>
+        <text x="-82.379px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:15px;fill:var(--se-text,#111111);">Top-Level Orchestrator</text>
     </g>
     <g transform="matrix(1,0,0,1,700,155)">
         <text x="-85.892px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">routes work to the right workstream</text>
@@ -60,14 +60,14 @@
     </g>
     <path d="M460,304L460,546C460,553.727 453.727,560 446,560L54,560C46.273,560 40,553.727 40,546L40,304C40,296.273 46.273,290 54,290L446,290C453.727,290 460,296.273 460,304Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     <g transform="matrix(1,0,0,1,60,318)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">R<tspan x="9.518px 18.319px 27.837px 37.355px 40.615px 50.133px 60.375px 69.176px 78.694px 86.765px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">EAD AGENTS</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">READ AGENTS</text>
     </g>
     <g transform="matrix(1,0,0,1,60,334)">
         <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">consume the graph and produce evidence</text>
     </g>
     <path d="M420,366L420,426C420,431.519 415.519,436 410,436L90,436C84.481,436 80,431.519 80,426L80,366C80,360.481 84.481,356 90,356L410,356C415.519,356 420,360.481 420,366Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,250,386)">
-        <text x="-74.556px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Impact <tspan x="-26.062px -15.952px " y="0px 0px ">An</tspan>alysis <tspan x="34.894px 45.004px " y="0px 0px ">Ag</tspan>ent</text>
+        <text x="-74.556px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Impact Analysis Agent</text>
     </g>
     <g transform="matrix(1,0,0,1,250,406)">
         <text x="-72.445px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">traverses four layers per spec</text>
@@ -77,7 +77,7 @@
     </g>
     <path d="M420,460L420,520C420,525.519 415.519,530 410,530L90,530C84.481,530 80,525.519 80,520L80,460C80,454.481 84.481,450 90,450L410,450C415.519,450 420,454.481 420,460Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,250,480)">
-        <text x="-75.578px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">BDD Generation <tspan x="35.916px 46.026px " y="0px 0px ">Ag</tspan>ent</text>
+        <text x="-75.578px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">BDD Generation Agent</text>
     </g>
     <g transform="matrix(1,0,0,1,250,500)">
         <text x="-70.316px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">generates Gherkin scenarios</text>
@@ -87,14 +87,14 @@
     </g>
     <path d="M910,304L910,546C910,553.727 903.727,560 896,560L504,560C496.273,560 490,553.727 490,546L490,304C490,296.273 496.273,290 504,290L896,290C903.727,290 910,296.273 910,304Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     <g transform="matrix(1,0,0,1,510,318)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.4px 21.918px 25.66px 33.731px 42.532px 45.791px 55.309px 65.551px 74.352px 83.87px 91.941px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RITE AGENTS</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">WRITE AGENTS</text>
     </g>
     <g transform="matrix(1,0,0,1,510,334)">
         <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">update the graph as the system evolves</text>
     </g>
     <path d="M870,366L870,426C870,431.519 865.519,436 860,436L540,436C534.481,436 530,431.519 530,426L530,366C530,360.481 534.481,356 540,356L860,356C865.519,356 870,360.481 870,366Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,700,386)">
-        <text x="-50.692px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">KG Sync <tspan x="11.03px 21.14px " y="0px 0px ">Ag</tspan>ent</text>
+        <text x="-50.692px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">KG Sync Agent</text>
     </g>
     <g transform="matrix(1,0,0,1,700,406)">
         <text x="-79.5px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">auto-updates the Code Ontology</text>
@@ -104,7 +104,7 @@
     </g>
     <path d="M870,460L870,520C870,525.519 865.519,530 860,530L540,530C534.481,530 530,525.519 530,520L530,460C530,454.481 534.481,450 540,450L860,450C865.519,450 870,454.481 870,460Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,700,480)">
-        <text x="-59.64px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Extraction <tspan x="12.192px 22.302px " y="0px 0px ">Ag</tspan>ents</text>
+        <text x="-59.64px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Extraction Agents</text>
     </g>
     <g transform="matrix(1,0,0,1,700,500)">
         <g transform="matrix(11,0,0,11,-53.818359,0)">
@@ -122,14 +122,14 @@
     </g>
     <path d="M1360,304L1360,546C1360,553.727 1353.727,560 1346,560L954,560C946.273,560 940,553.727 940,546L940,304C940,296.273 946.273,290 954,290L1346,290C1353.727,290 1360,296.273 1360,304Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     <g transform="matrix(1,0,0,1,960,318)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">G<tspan x="10.242px 18.795px 26.866px 35.667px 38.926px 48.445px 58.686px 67.487px 77.005px 85.076px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ATE AGENTS</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">GATE AGENTS</text>
     </g>
     <g transform="matrix(1,0,0,1,960,334)">
         <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">validate output against the graph at boundaries</text>
     </g>
     <path d="M1320,412L1320,472C1320,477.519 1315.519,482 1310,482L990,482C984.481,482 980,477.519 980,472L980,412C980,406.481 984.481,402 990,402L1310,402C1315.519,402 1320,406.481 1320,412Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,1150,432)">
-        <text x="-66.247px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">PR V<tspan x="-34.344px -26.558px " y="0px 0px ">al</tspan>idation <tspan x="26.585px 36.695px " y="0px 0px ">Ag</tspan>ent</text>
+        <text x="-66.247px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">PR Validation Agent</text>
     </g>
     <g transform="matrix(1,0,0,1,1150,452)">
         <text x="-68.476px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">checks every merge against</text>
@@ -148,9 +148,9 @@
     <path d="M1150.466,393.964L1150,402L1143.851,396.805L1150.466,393.964Z" style="fill:var(--se-text-secondary,#4b5563);fill-rule:nonzero;"/>
     <path d="M1083,246C1083,246 1136.012,369.432 1147.727,396.707" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
     <g transform="matrix(1,0,0,1,700,620)">
-        <text x="-457.676px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Each agent has a named human owner<tspan x="-248.648px -245.314px " y="0px 0px ">. </tspan>The orchestrator is the most accountable surface; the workers earn autonomy over time as their evidence track record accumulates.</text>
+        <text x="-457.676px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Each agent has a named human owner. The orchestrator is the most accountable surface; the workers earn autonomy over time as their evidence track record accumulates.</text>
     </g>
     <g transform="matrix(1,0,0,1,700,650)">
-        <text x="-243.563px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Read agents emit reports; write agents commit graph updates; gate agents are the merge boundary<tspan x="240.507px " y="0px ">.</tspan></text>
+        <text x="-243.563px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Read agents emit reports; write agents commit graph updates; gate agents are the merge boundary.</text>
     </g>
 </svg>

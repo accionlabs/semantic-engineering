@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg viewBox="0 0 1400 680" preserveAspectRatio="xMidYMid meet" width="1400px" height="680px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,45)">
-        <text x="-380.955px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:var(--se-text,#111111);">How the Manual T<tspan x="-161.376px -151.258px " y="0px 0px ">ra</tspan>nslation T<tspan x="-15.939px -1.479px " y="0px 0px ">ax</tspan> Scales with W<tspan x="193.127px 209.009px " y="0px 0px ">or</tspan>k Complexity</text>
+        <text x="-380.955px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:26px;fill:var(--se-text,#111111);">How the Manual Translation Tax Scales with Work Complexity</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
         <text x="-487.053px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">MTT grows faster than complexity. Each zone of methodology is sized for a complexity range. Use the wrong zone and the tax becomes crushing.</text>
@@ -26,7 +26,7 @@
     <path d="M100,500L1340,500" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
     <path d="M100,500L100,120" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
     <g transform="matrix(1,0,0,1,60,135)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">M<tspan x="11.802px 20.494px " y="0px 0px ">TT</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">MTT</text>
     </g>
     <g transform="matrix(1,0,0,1,44.737305,200)">
         <text x="0px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">crushing</text>
@@ -57,7 +57,7 @@
         <text x="-59.124px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Throwaway / POC</text>
     </g>
     <g transform="matrix(1,0,0,1,255,542)">
-        <text x="-74.587px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">solo dev<tspan x="-30.776px -27.442px " y="0px 0px ">, </tspan>throwaway scripts,</text>
+        <text x="-74.587px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">solo dev, throwaway scripts,</text>
     </g>
     <g transform="matrix(1,0,0,1,255,558)">
         <text x="-52.699px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">prototypes, learning</text>
@@ -66,7 +66,7 @@
         <text x="-71.176px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Single team / product</text>
     </g>
     <g transform="matrix(1,0,0,1,565,542)">
-        <text x="-97.731px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">one repo, one PO/architect/designer<tspan x="94.397px " y="0px ">,</tspan></text>
+        <text x="-97.731px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">one repo, one PO/architect/designer,</text>
     </g>
     <g transform="matrix(1,0,0,1,565,558)">
         <text x="-56.364px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">tacit knowledge fresh</text>
@@ -98,7 +98,7 @@
         <text x="-64.696px" y="0px" style="font-family:'Helvetica';font-size:12px;fill:var(--se-text-secondary,#4b5563);">multi-year custodianship</text>
     </g>
     <g transform="matrix(1,0,0,1,699.93,595)">
-        <text x="-79.552px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="-66.198px -55.169px -44.918px -34.668px -30.638px -20.388px -9.358px 2.444px 11.922px 20.613px 30.091px 39.569px 43.599px 52.291px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ORK COMPLEXITY</tspan></text>
+        <text x="-79.552px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">WORK COMPLEXITY</text>
         <text x="65.552px" y="0px" style="font-family:'LucidaGrande-Bold', 'Lucida Grande', sans-serif;font-weight:600;font-size:14px;fill:var(--se-text-secondary,#4b5563);">→</text>
     </g>
     <path d="M100,485C166.667,480.333 218.333,475.333 255,470C305,462.667 356.667,452.667 410,440C463.333,421.333 515,401.333 565,380C618.333,350 670,320 720,290C773.333,260 825,235 875,215C928.333,201.667 980,191.667 1030,185C1083.333,180.333 1135,177 1185,175C1238.333,173.667 1290,172.667 1340,172" style="fill:none;fill-rule:nonzero;stroke:var(--se-text,#111111);stroke-width:3px;"/>

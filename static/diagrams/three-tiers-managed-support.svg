@@ -2,10 +2,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg viewBox="0 0 1400 780" preserveAspectRatio="xMidYMid meet" width="1400px" height="780px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,44)">
-        <text x="-229.761px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three T<tspan x="-121.934px -113.599px " y="0px 0px ">ie</tspan>rs of Managed Support</text>
+        <text x="-229.761px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three Tiers of Managed Support</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-525.936px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Dif<tspan x="-506.663px -502.217px " y="0px 0px ">fe</tspan>rent clients want dif<tspan x="-356.647px -352.202px " y="0px 0px ">fe</tspan>rent levels of engagement with the enablement work. Common path: Light</text>
+        <text x="-525.936px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Different clients want different levels of engagement with the enablement work. Common path: Light</text>
         <text x="184.103px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text-secondary,#4b5563);">→</text>
         <text x="199.828px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Medium</text>
         <text x="261.18px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text-secondary,#4b5563);">→</text>
@@ -24,11 +24,11 @@
                 <text x="-20.021px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">2–4</text>
             </g>
             <g transform="matrix(1,0,0,1,59.92,50)">
-                <text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">H<tspan x="-43.982px -33.74px -24.222px -14.704px -5.903px -2.161px 1.58px 5.322px 16.281px 26.523px 36.041px 44.112px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">OURS / MONTH</tspan></text>
+                <text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">HOURS / MONTH</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,22,200)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="15.342px 27.136px 37.751px 47.765px 51.864px 63.659px 75.453px 87.248px 91.933px 104.619px 116.413px 121.099px 132.893px 145.579px 156.491px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT ACCION DOES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT ACCION DOES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,226)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Quarterly health audit</text>
@@ -41,7 +41,7 @@
         </g>
         <path d="M22,296L378,296" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,22,324)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="15.342px 27.136px 37.751px 47.765px 52.45px 62.463px 74.258px 85.17px 89.855px 101.65px 111.663px 116.349px 127.261px 139.055px 149.069px 153.754px 165.549px 178.234px 189.146px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT THE CLIENT DOES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT THE CLIENT DOES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,350)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">All operational ontology work</text>
@@ -71,11 +71,11 @@
                 <text x="-33.369px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">10–20</text>
             </g>
             <g transform="matrix(1,0,0,1,59.92,50)">
-                <text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">H<tspan x="-43.982px -33.74px -24.222px -14.704px -5.903px -2.161px 1.58px 5.322px 16.281px 26.523px 36.041px 44.112px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">OURS / MONTH</tspan></text>
+                <text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">HOURS / MONTH</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,22,200)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="15.342px 27.136px 37.751px 47.765px 51.864px 63.659px 75.453px 87.248px 91.933px 104.619px 116.413px 121.099px 132.893px 145.579px 156.491px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT ACCION DOES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT ACCION DOES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,226)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Monthly ontology health checks</text>
@@ -88,7 +88,7 @@
         </g>
         <path d="M22,296L378,296" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,22,324)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="15.342px 27.136px 37.751px 47.765px 52.45px 62.463px 74.258px 85.17px 89.855px 101.65px 111.663px 116.349px 127.261px 139.055px 149.069px 153.754px 165.549px 178.234px 189.146px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT THE CLIENT DOES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT THE CLIENT DOES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,350)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Day-to-day operational work</text>
@@ -113,11 +113,11 @@
                 <text x="-66.65px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-accent,#E94E1B);">Continuous</text>
             </g>
             <g transform="matrix(1,0,0,1,99.92,50)">
-                <text x="-82.018px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">E<tspan x="-73.218px -62.258px -53.458px -44.657px -35.138px -25.62px -16.819px -7.301px -3.559px 0.182px 9.701px 13.442px 22.243px 31.762px 42.003px 45.517px 53.588px 62.388px 71.189px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">MBEDDED IN ENG TEAM</tspan></text>
+                <text x="-82.018px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">EMBEDDED IN ENG TEAM</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,22,200)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="15.342px 27.136px 37.751px 47.765px 51.864px 63.659px 75.453px 87.248px 91.933px 104.619px 116.413px 121.099px 132.893px 145.579px 156.491px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT ACCION DOES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT ACCION DOES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,226)">
             <g transform="matrix(16,0,0,16,74.710938,0)">
@@ -141,7 +141,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,22,324)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W<tspan x="15.342px 27.136px 37.751px 47.765px 52.45px 62.463px 74.258px 85.17px 89.855px 101.65px 111.663px 116.349px 127.261px 139.055px 149.069px 153.754px 165.549px 178.234px 189.146px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT THE CLIENT DOES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT THE CLIENT DOES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,350)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Strategic direction</text>
@@ -159,7 +159,7 @@
     <g transform="matrix(1,0,0,1,60,580)">
         <path d="M1280,14L1280,146C1280,153.727 1273.727,160 1266,160L14,160C6.273,160 0,153.727 0,146L0,14C0,6.273 6.273,0 14,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,22,32)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">T<tspan x="10.013px 21.808px 32.72px 37.405px 49.2px 61.885px 75.453px 89.022px 101.707px 113.502px 118.187px 131.755px 136.44px 149.126px 160.92px 170.653px 180.666px 185.351px 198.037px 209.831px 214.517px 224.249px 233.981px 243.994px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE COMMON MIGRATION PATH</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">THE COMMON MIGRATION PATH</text>
         </g>
         <g>
             <path d="M60,92L1220,92" style="fill:none;fill-rule:nonzero;"/>

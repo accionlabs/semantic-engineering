@@ -5,7 +5,7 @@
         <text x="-209.224px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Breeze.AI Integration Surface</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-267.281px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="-257.484px -253.039px " y="0px 0px "> l</tspan>ayer on top of the existing engineering toolchain, not a replacement for it.</text>
+        <text x="-267.281px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A layer on top of the existing engineering toolchain, not a replacement for it.</text>
     </g>
     <g transform="matrix(1,0,0,1,700,400)">
         <circle cx="0" cy="0" r="80" style="fill:var(--se-accent,#E94E1B);stroke:var(--se-text,#111111);stroke-width:3px;"/>
@@ -32,7 +32,7 @@
     <g transform="matrix(1,0,0,1,540,116)">
         <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-59.566px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">V<tspan x="-49.77px -40.871px " y="0px 0px ">er</tspan>sion Control</text>
+            <text x="-59.566px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Version Control</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
             <text x="-76.953px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">GitHub · GitLab · Bitbucket</text>
@@ -47,19 +47,19 @@
             <text x="-59.125px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">CI/CD Pipelines</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
-            <text x="-150.655px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">GitHub <tspan x="-107.294px -98.624px " y="0px 0px ">Ac</tspan>tions · Jenkins · GitLab CI · <tspan x="66.124px 74.794px " y="0px 0px ">Az</tspan>ure DevOps</text>
+            <text x="-150.655px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">GitHub Actions · Jenkins · GitLab CI · Azure DevOps</text>
         </g>
         <g transform="matrix(1,0,0,1,160,70)">
-            <text x="-97.081px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">V<tspan x="-89.369px -82.139px " y="0px 0px ">al</tspan>idation agent runs as a CI step</text>
+            <text x="-97.081px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Validation agent runs as a CI step</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,1150,358)">
         <path d="M240,12L240,72C240,78.623 234.623,84 228,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L228,0C234.623,0 240,5.377 240,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,120,28)">
-            <text x="-58.113px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">T<tspan x="-48.621px -44.176px " y="0px 0px ">ic</tspan>ket Systems</text>
+            <text x="-58.113px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Ticket Systems</text>
         </g>
         <g transform="matrix(1,0,0,1,120,50)">
-            <text x="-78.403px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Jira · Linear · <tspan x="-0.359px 8.312px " y="0px 0px ">Az</tspan>ure Boards</text>
+            <text x="-78.403px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Jira · Linear · Azure Boards</text>
         </g>
         <g transform="matrix(1,0,0,1,120,70)">
             <text x="-82.745px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Spec linkage and traceability</text>
@@ -68,7 +68,7 @@
     <g transform="matrix(1,0,0,1,980,576)">
         <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-80.16px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">AI Coding <tspan x="-0.762px 10.793px " y="0px 0px ">As</tspan>sistants</text>
+            <text x="-80.16px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">AI Coding Assistants</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
             <text x="-88.515px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Claude Code · Cursor · Copilot</text>
@@ -80,7 +80,7 @@
     <g transform="matrix(1,0,0,1,540,600)">
         <path d="M320,12L320,72C320,78.623 314.623,84 308,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L308,0C314.623,0 320,5.377 320,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,160,28)">
-            <text x="-50.531px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">T<tspan x="-41.938px -33.039px " y="0px 0px ">es</tspan>t Runners</text>
+            <text x="-50.531px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Test Runners</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
             <text x="-96.805px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Jest · Cypress · Playwright · JUnit</text>
@@ -95,7 +95,7 @@
             <text x="-50.688px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Observability</text>
         </g>
         <g transform="matrix(1,0,0,1,160,50)">
-            <text x="-114.169px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Datadog · Honeycomb · OpenT<tspan x="64.321px 71.551px " y="0px 0px ">el</tspan>emetry</text>
+            <text x="-114.169px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Datadog · Honeycomb · OpenTelemetry</text>
         </g>
         <g transform="matrix(1,0,0,1,160,70)">
             <text x="-105.869px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:13px;fill:var(--se-accent,#E94E1B);">Agent action audit trail forwarded out</text>
@@ -104,7 +104,7 @@
     <g transform="matrix(1,0,0,1,10,358)">
         <path d="M240,12L240,72C240,78.623 234.623,84 228,84L12,84C5.377,84 0,78.623 0,72L0,12C0,5.377 5.377,0 12,0L228,0C234.623,0 240,5.377 240,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,120,28)">
-            <text x="-49.637px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Design T<tspan x="16.746px 26.52px " y="0px 0px ">oo</tspan>ls</text>
+            <text x="-49.637px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Design Tools</text>
         </g>
         <g transform="matrix(1,0,0,1,120,50)">
             <text x="-43.348px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Figma · Sketch</text>
@@ -130,6 +130,6 @@
         </g>
     </g>
     <g transform="matrix(1,0,0,1,700,730)">
-        <text x="-607.879px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Breeze.AI adds a layer to the existing engineering toolchain. It does not replace the IDE, the test runner<tspan x="123.246px 127.691px " y="0px 0px ">, </tspan>the CI/CD pipeline, the ticket system, or the version control system.</text>
+        <text x="-607.879px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Breeze.AI adds a layer to the existing engineering toolchain. It does not replace the IDE, the test runner, the CI/CD pipeline, the ticket system, or the version control system.</text>
     </g>
 </svg>

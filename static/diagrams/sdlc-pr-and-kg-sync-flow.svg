@@ -11,10 +11,10 @@
         </g>
         <g transform="matrix(30,0,0,30,-101.674805,0)">
         </g>
-        <text x="-166.714px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:30px;fill:var(--se-text,#111111);">V<tspan x="-148.359px -131.675px " y="0px 0px ">er</tspan>iﬁcation → KG Sync</text>
+        <text x="-166.714px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Veriﬁcation → KG Sync</text>
     </g>
     <g transform="matrix(1,0,0,1,800,60)">
-        <text x="-353.828px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Operations are numbered. <tspan x="-162.898px -153.125px " y="0px 0px ">Th</tspan>e Knowledge Graph (center) is read at steps 2 and 5, written at step 6.</text>
+        <text x="-353.828px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Operations are numbered. The Knowledge Graph (center) is read at steps 2 and 5, written at step 6.</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <circle cx="140" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
@@ -90,7 +90,7 @@
         <text x="-43.1px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">merged to master</text>
     </g>
     <g transform="matrix(1,0,0,1,919.95,216)">
-        <text x="-44.211px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:var(--se-accent,#E94E1B);">G<tspan x="-36.333px -29.753px -23.545px -16.775px -13.896px -6.575px 1.304px 8.625px 15.947px 23.269px 30.59px 37.541px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ATE BOUNDARY</tspan></text>
+        <text x="-44.211px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:var(--se-accent,#E94E1B);">GATE BOUNDARY</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <circle cx="1180" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
@@ -169,10 +169,10 @@
         <text x="-77.005px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:18px;fill:var(--se-text,#111111);">Knowledge Graph</text>
     </g>
     <g transform="matrix(1,0,0,1,800,419)">
-        <text x="-182.8px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);">Four-Layer Ontology · Functional · Design · <tspan x="70.808px 79.479px " y="0px 0px ">Ar</tspan>chitecture · Code</text>
+        <text x="-182.8px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);">Four-Layer Ontology · Functional · Design · Architecture · Code</text>
     </g>
     <g transform="matrix(1,0,0,1,799.945,445)">
-        <text x="-70.206px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">T<tspan x="-63.377px -55.323px -47.876px -44.71px -36.656px -27.99px -19.936px -13.107px -9.94px -1.887px 6.167px 14.833px 22.887px 30.334px 33.092px 41.146px 48.593px 56.04px 63.487px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE CONTINUOUS ASSET</tspan></text>
+        <text x="-70.206px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">THE CONTINUOUS ASSET</text>
     </g>
     <g transform="matrix(1,0,0,1,800,469)">
         <text x="-214.309px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">read on the way in (step 2) · audited at the gate (step 5) · written on the way out (step 6)</text>
@@ -205,7 +205,7 @@
         <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-accent,#E94E1B);">6f · commit writeback</text>
     </g>
     <g transform="matrix(1,0,0,1,799.935,559)">
-        <text x="-184.939px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">S<tspan x="-176.138px -168.067px -159.266px -150.7px -146.958px -139.598px -135.856px -131.397px -127.656px -118.137px -107.896px -104.154px -95.353px -86.552px -77.034px -67.516px -63.774px -54.973px -45.455px -35.936px -31.477px -23.406px -15.336px -5.094px 7.306px 11.048px 15.507px 20.696px 28.767px 36.838px 44.198px 47.94px 55.3px 59.759px 64.218px 71.578px 76.767px 80.509px 87.869px 95.229px 102.589px 107.778px 115.138px 118.88px 127.681px 137.199px 140.941px 152.63px 159.99px 165.179px 173.25px 180.61px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">TEP 6 · KG SYNC SUB-FLOW (runs after every PR merge)</tspan></text>
+        <text x="-184.939px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">STEP 6 · KG SYNC SUB-FLOW (runs after every PR merge)</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <path d="M250,670L250,718C250,723.519 245.519,728 240,728L60,728C54.481,728 50,723.519 50,718L50,670C50,664.481 54.481,660 60,660L240,660C245.519,660 250,664.481 250,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
@@ -221,7 +221,7 @@
         <text x="-61.055px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-text,#111111);">Parse changed ﬁles</text>
     </g>
     <g transform="matrix(1,0,0,1,150,645)">
-        <text x="-44.841px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">extract <tspan x="-9.381px -2.044px 5.293px 11.814px 14.87px " y="0px 0px 0px 0px 0px ">AST n</tspan>odes</text>
+        <text x="-44.841px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">extract AST nodes</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <path d="M480,670L480,718C480,723.519 475.519,728 470,728L290,728C284.481,728 280,723.519 280,718L280,670C280,664.481 284.481,660 290,660L470,660C475.519,660 480,664.481 480,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
@@ -237,7 +237,7 @@
         </g>
         <g transform="matrix(11,0,0,11,-58.993408,0)">
         </g>
-        <text x="-62.05px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">ﬁle · class · function · <tspan x="44.32px 51.656px " y="0px 0px ">AP</tspan>I</text>
+        <text x="-62.05px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">ﬁle · class · function · API</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <path d="M730,670L730,718C730,723.519 725.519,728 720,728L520,728C514.481,728 510,723.519 510,718L510,670C510,664.481 514.481,660 520,660L720,660C725.519,660 730,664.481 730,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>

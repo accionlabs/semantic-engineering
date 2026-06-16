@@ -16,19 +16,19 @@
             <path d="M560,8L560,32C560,36.415 556.415,40 552,40L288,40C283.585,40 280,36.415 280,32L280,8C280,3.585 283.585,0 288,0L552,0C556.415,0 560,3.585 560,8Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
         </g>
         <g transform="matrix(1,0,0,1,503.88,20)">
-            <text x="-70.178px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">P<tspan x="-59.266px -49.253px -38.638px -28.625px -18.611px -5.926px 5.869px 19.437px 24.122px 35.917px 47.712px 59.506px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">LATFORM RUNS</tspan></text>
+            <text x="-70.178px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">PLATFORM RUNS</text>
         </g>
         <g transform="matrix(1,0,0,1,84,-6)">
             <path d="M860,8L860,32C860,36.415 856.415,40 852,40L588,40C583.585,40 580,36.415 580,32L580,8C580,3.585 583.585,0 588,0L852,0C856.415,0 860,3.585 860,8Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
         </g>
         <g transform="matrix(1,0,0,1,803.88,20)">
-            <text x="-55.43px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">G<tspan x="-42.745px -30.95px -19.156px -8.244px 3.551px 8.236px 18.25px 22.935px 33.847px 44.759px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RAPH LIVES</tspan></text>
+            <text x="-55.43px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">GRAPH LIVES</text>
         </g>
         <g transform="matrix(1,0,0,1,84,-6)">
             <path d="M1160,8L1160,32C1160,36.415 1156.415,40 1152,40L888,40C883.585,40 880,36.415 880,32L880,8C880,3.585 883.585,0 888,0L1152,0C1156.415,0 1160,3.585 1160,8Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
         </g>
         <g transform="matrix(1,0,0,1,1103.88,20)">
-            <text x="-89.045px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">I<tspan x="-84.36px -72.565px -62.552px -51.64px -39.845px -28.933px -17.138px -5.344px 5.568px 10.253px 22.048px 33.843px 44.755px 55.667px 66.578px 78.373px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">NFERENCE HAPPENS</tspan></text>
+            <text x="-89.045px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">INFERENCE HAPPENS</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,40,182)">
@@ -89,12 +89,12 @@
                 <text x="-73.812px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Cloud LLM providers</text>
             </g>
             <g transform="matrix(1,0,0,1,140,60)">
-                <text x="-122.887px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">OpenAI · <tspan x="-56.168px -45.496px " y="0px 0px ">An</tspan>thropic · <tspan x="23.887px 33.973px 49.074px " y="0px 0px 0px ">AWS</tspan> Bedrock</text>
+                <text x="-122.887px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">OpenAI · Anthropic · AWS Bedrock</text>
             </g>
             <g transform="matrix(1,0,0,1,102,80)">
                 <path d="M76,6L76,40C76,43.311 73.311,46 70,46L6,46C2.689,46 0,43.311 0,40L0,6C0,2.689 2.689,0 6,0L70,0C73.311,0 76,2.689 76,6Z" style="fill:var(--se-text-secondary,#4b5563);"/>
                 <g transform="matrix(1,0,0,1,38,28)">
-                    <text x="-30.242px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">LLM <tspan x="4.453px 15.125px " y="0px 0px ">AP</tspan>I</text>
+                    <text x="-30.242px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">LLM API</text>
                 </g>
             </g>
         </g>
@@ -124,7 +124,7 @@
                 <text x="-77.57px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Client&apos;s cloud account</text>
             </g>
             <g transform="matrix(1,0,0,1,140,58)">
-                <text x="-69.062px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="-58.977px -43.875px " y="0px 0px ">WS</tspan> · <tspan x="-20.742px -10.07px " y="0px 0px ">Az</tspan>ure · GCP</text>
+                <text x="-69.062px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-text-secondary,#4b5563);">AWS · Azure · GCP</text>
             </g>
             <g transform="matrix(1,0,0,1,115,76)">
                 <path d="M50,6L50,40C50,43.311 47.311,46 44,46L6,46C2.689,46 0,43.311 0,40L0,6C0,2.689 2.689,0 6,0L44,0C47.311,0 50,2.689 50,6Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
@@ -162,7 +162,7 @@
             <g transform="matrix(1,0,0,1,102,80)">
                 <path d="M76,6L76,40C76,43.311 73.311,46 70,46L6,46C2.689,46 0,43.311 0,40L0,6C0,2.689 2.689,0 6,0L70,0C73.311,0 76,2.689 76,6Z" style="fill:var(--se-text-secondary,#4b5563);"/>
                 <g transform="matrix(1,0,0,1,38,28)">
-                    <text x="-30.242px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">LLM <tspan x="4.453px 15.125px " y="0px 0px ">AP</tspan>I</text>
+                    <text x="-30.242px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">LLM API</text>
                 </g>
             </g>
         </g>
@@ -175,7 +175,7 @@
             <text x="-48.906px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">On-premises</text>
         </g>
         <g transform="matrix(1,0,0,1,214,52)">
-            <text x="-55.594px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-accent,#E94E1B);">Gen <tspan x="-21.781px -11.109px " y="0px 0px ">AI</tspan> in a Box</text>
+            <text x="-55.594px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-accent,#E94E1B);">Gen AI in a Box</text>
         </g>
         <g transform="matrix(1,0,0,1,214,83)">
             <text x="-107.168px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">For highly regulated industries</text>
@@ -229,7 +229,7 @@
                 <text x="-59.586px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Local models via</text>
             </g>
             <g transform="matrix(1,0,0,1,140,54)">
-                <text x="-55.594px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Gen <tspan x="-21.781px -11.109px " y="0px 0px ">AI</tspan> in a Box</text>
+                <text x="-55.594px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Gen AI in a Box</text>
             </g>
             <g transform="matrix(1,0,0,1,102,82)">
                 <path d="M76,6L76,40C76,43.311 73.311,46 70,46L6,46C2.689,46 0,43.311 0,40L0,6C0,2.689 2.689,0 6,0L70,0C73.311,0 76,2.689 76,6Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
@@ -240,6 +240,6 @@
         </g>
     </g>
     <g transform="matrix(1,0,0,1,700,710)">
-        <text x="-459.242px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The deployment decision is made during the <tspan x="-141.711px -131.039px " y="0px 0px ">Ad</tspan>vise phase based on data sovereignty<tspan x="145.305px 149.75px " y="0px 0px ">, </tspan>compliance, integration, and cost structure.</text>
+        <text x="-459.242px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The deployment decision is made during the Advise phase based on data sovereignty, compliance, integration, and cost structure.</text>
     </g>
 </svg>

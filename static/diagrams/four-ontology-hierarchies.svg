@@ -5,11 +5,11 @@
         <text x="-207.201px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:22px;fill:var(--se-text,#111111);">The Four Ontology Hierarchies in Detail</text>
     </g>
     <g transform="matrix(1,0,0,1,700,56)">
-        <text x="-339.97px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Each ontology is a structured node hierarchy<tspan x="-103.392px -100.058px -96.94px -89.61px " y="0px 0px 0px 0px ">. Th</tspan>e hierarchies are how custodians articulate intent in a form the agents can read.</text>
+        <text x="-339.97px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Each ontology is a structured node hierarchy. The hierarchies are how custodians articulate intent in a form the agents can read.</text>
     </g>
     <path d="M1360,104L1360,196C1360,203.727 1353.727,210 1346,210L54,210C46.273,210 40,203.727 40,196L40,104C40,96.273 46.273,90 54,90L1346,90C1353.727,90 1360,96.273 1360,104Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     <g transform="matrix(1,0,0,1,60,118)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">F<tspan x="8.692px 18.942px 29.192px 39.443px 48.135px 52.164px 63.194px 73.444px 83.695px 92.133px 96.163px 107.193px 117.443px 125.882px 136.912px 145.603px 156.633px 167.663px 176.888px 180.917px 184.947px 189.749px 193.779px 197.808px 207.286px 212.874px 221.566px 230.258px 238.95px 246.876px 251.678px 255.708px 266.737px 277.767px 286.459px 294.385px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UNCTIONAL ONTOLOGY  ·  Product Owner</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">FUNCTIONAL ONTOLOGY  ·  Product Owner</text>
     </g>
     <g transform="matrix(1,0,0,1,60,138)">
         <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The why: who uses the system, what outcomes they need, which scenarios drive each outcome</text>
@@ -44,7 +44,7 @@
     <path d="M980,178L1054.24,178" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
     <path d="M1360,244L1360,336C1360,343.727 1353.727,350 1346,350L54,350C46.273,350 40,343.727 40,336L40,244C40,236.273 46.273,230 54,230L1346,230C1353.727,230 1360,236.273 1360,244Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     <g transform="matrix(1,0,0,1,60,258)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">D<tspan x="10.25px 19.728px 29.206px 33.236px 44.265px 54.516px 58.545px 69.575px 79.825px 88.264px 99.294px 107.986px 119.015px 130.045px 139.27px 143.3px 147.329px 152.131px 156.161px 160.191px 170.441px 179.919px 183.949px 194.199px 202.125px 210.051px 214.081px 222.773px 231.464px 239.39px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ESIGN ONTOLOGY  ·  UX Designer</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">DESIGN ONTOLOGY  ·  UX Designer</text>
     </g>
     <g transform="matrix(1,0,0,1,60,278)">
         <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The how it looks and behaves: from the user journey down to the atomic design tokens</text>
@@ -63,7 +63,7 @@
     </g>
     <path d="M700,306L700,328C700,333.519 695.519,338 690,338L590,338C584.481,338 580,333.519 580,328L580,306C580,300.481 584.481,296 590,296L690,296C695.519,296 700,300.481 700,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,640,322)">
-        <text x="-25.896px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">T<tspan x="-19.456px -12.782px " y="0px 0px ">em</tspan>plate</text>
+        <text x="-25.896px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-text,#111111);">Template</text>
     </g>
     <path d="M880,306L880,328C880,333.519 875.519,338 870,338L770,338C764.481,338 760,333.519 760,328L760,306C760,300.481 764.481,296 770,296L870,296C875.519,296 880,300.481 880,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,820,322)">
@@ -91,7 +91,7 @@
     <path d="M1060,318L1114.24,318" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.6px;"/>
     <path d="M1360,384L1360,536C1360,543.727 1353.727,550 1346,550L54,550C46.273,550 40,543.727 40,536L40,384C40,376.273 46.273,370 54,370L1346,370C1353.727,370 1360,376.273 1360,384Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     <g transform="matrix(1,0,0,1,60,398)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">A<tspan x="10.25px 20.501px 30.751px 41.001px 45.031px 53.723px 63.201px 73.451px 82.143px 92.393px 102.644px 112.121px 116.151px 127.181px 137.431px 145.87px 156.9px 165.591px 176.621px 187.651px 196.876px 200.905px 204.935px 209.737px 213.767px 217.277px 227.527px 233.115px 241.041px 249.733px 253.763px 258.565px 266.491px 274.417px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RCHITECTURE ONTOLOGY  ·  Architect</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">ARCHITECTURE ONTOLOGY  ·  Architect</text>
     </g>
     <g transform="matrix(1,0,0,1,60,418)">
         <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The where: services, integration boundaries, infrastructure layers, dependency map</text>
@@ -144,7 +144,7 @@
     </g>
     <path d="M1360,584L1360,676C1360,683.727 1353.727,690 1346,690L54,690C46.273,690 40,683.727 40,676L40,584C40,576.273 46.273,570 54,570L1346,570C1353.727,570 1360,576.273 1360,584Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     <g transform="matrix(1,0,0,1,60,598)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">C<tspan x="10.25px 21.28px 31.53px 41.008px 45.038px 56.068px 66.318px 74.757px 85.786px 94.478px 105.508px 116.537px 125.762px 129.792px 133.822px 138.624px 142.653px 146.683px 156.161px 164.853px 173.544px 177.574px 186.266px 194.192px 202.118px 207.706px 211.736px 220.428px 229.12px 233.149px 240.802px 248.728px 256.654px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ODE ONTOLOGY  ·  Engineering Team</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">CODE ONTOLOGY  ·  Engineering Team</text>
     </g>
     <g transform="matrix(1,0,0,1,60,618)">
         <g transform="matrix(11,0,0,11,163.877441,0)">

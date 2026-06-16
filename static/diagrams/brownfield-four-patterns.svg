@@ -18,7 +18,7 @@
     <g transform="matrix(1,0,0,1,40,110)">
         <path d="M660,12L660,358C660,364.623 654.623,370 648,370L12,370C5.377,370 0,364.623 0,358L0,12C0,5.377 5.377,0 12,0L648,0C654.623,0 660,5.377 660,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,22,36)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">P<tspan x="8.586px 17.944px 26.776px 35.607px 45.225px 55.616px 66.006px 70.176px " y="0px 0px 0px 0px 0px 0px 0px 0px ">ATTERN 1</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">PATTERN 1</text>
         </g>
         <g transform="matrix(1,0,0,1,22,66)">
             <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:21px;fill:var(--se-text,#111111);">Duplicate capabilities</text>
@@ -94,7 +94,7 @@
     <g transform="matrix(1,0,0,1,720,110)">
         <path d="M640,12L640,358C640,364.623 634.623,370 628,370L12,370C5.377,370 0,364.623 0,358L0,12C0,5.377 5.377,0 12,0L628,0C634.623,0 640,5.377 640,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,22,36)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">P<tspan x="8.586px 17.944px 26.776px 35.607px 45.225px 55.616px 66.006px 70.176px " y="0px 0px 0px 0px 0px 0px 0px 0px ">ATTERN 2</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">PATTERN 2</text>
         </g>
         <g transform="matrix(1,0,0,1,22,66)">
             <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:21px;fill:var(--se-text,#111111);">Split functionality</text>
@@ -126,7 +126,7 @@
                 <text x="-40.02px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:var(--se-box-fill,#ffffff);">payments-svc</text>
             </g>
             <g transform="matrix(1,0,0,1,60,56)">
-                <text x="-17.35px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">repo <tspan x="9.346px " y="0px ">A</tspan></text>
+                <text x="-17.35px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">repo A</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,190,240)">
@@ -163,14 +163,14 @@
         <path d="M618,326L618,352C618,355.311 615.311,358 612,358L28,358C24.689,358 22,355.311 22,352L22,326C22,322.689 24.689,320 28,320L612,320C615.311,320 618,322.689 618,326Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
         <g transform="matrix(1,0,0,1,36,336)">
             <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Graph signal:</text>
-            <text x="94.124px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text,#111111);">outcome has code edges into modules in dif<tspan x="367.049px 370.938px " y="0px 0px ">fe</tspan>rent repos with</text>
+            <text x="94.124px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text,#111111);">outcome has code edges into modules in different repos with</text>
             <text x="0px" y="14px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text,#111111);">no unifying intermediate node.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,40,500)">
         <path d="M660,12L660,358C660,364.623 654.623,370 648,370L12,370C5.377,370 0,364.623 0,358L0,12C0,5.377 5.377,0 12,0L648,0C654.623,0 660,5.377 660,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,22,36)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">P<tspan x="8.586px 17.944px 26.776px 35.607px 45.225px 55.616px 66.006px 70.176px " y="0px 0px 0px 0px 0px 0px 0px 0px ">ATTERN 3</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">PATTERN 3</text>
         </g>
         <g transform="matrix(1,0,0,1,22,66)">
             <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:21px;fill:var(--se-text,#111111);">Dead capabilities</text>
@@ -253,7 +253,7 @@
     <g transform="matrix(1,0,0,1,720,500)">
         <path d="M640,12L640,358C640,364.623 634.623,370 628,370L12,370C5.377,370 0,364.623 0,358L0,12C0,5.377 5.377,0 12,0L628,0C634.623,0 640,5.377 640,12Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,22,36)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">P<tspan x="8.586px 17.944px 26.776px 35.607px 45.225px 55.616px 66.006px 70.176px " y="0px 0px 0px 0px 0px 0px 0px 0px ">ATTERN 4</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">PATTERN 4</text>
         </g>
         <g transform="matrix(1,0,0,1,22,66)">
             <g transform="matrix(21,0,0,21,93.392578,0)">
@@ -267,7 +267,7 @@
             </g>
             <g transform="matrix(14,0,0,14,376.461914,0)">
             </g>
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="8.572px 12.462px " y="0px 0px "> &quot;</tspan>billing&quot; service that has accumulated most of the user-proﬁle logic. Boundary no longer holds.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-text-secondary,#4b5563);">A &quot;billing&quot; service that has accumulated most of the user-proﬁle logic. Boundary no longer holds.</text>
         </g>
         <g transform="matrix(1,0,0,1,40,130)">
             <g transform="matrix(1,0,0,1,0,-15)">
@@ -296,7 +296,7 @@
                 <path d="M110,83L110,99C110,101.76 107.76,104 105,104L25,104C22.24,104 20,101.76 20,99L20,83C20,80.24 22.24,78 25,78L105,78C107.76,78 110,80.24 110,83Z" style="fill:var(--se-text-secondary,#4b5563);"/>
             </g>
             <g transform="matrix(1,0,0,1,65,81)">
-                <text x="-26.021px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:var(--se-box-fill,#ffffff);">avatar<tspan x="8.684px 12.018px " y="0px 0px ">.p</tspan>y</text>
+                <text x="-26.021px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:12px;fill:var(--se-box-fill,#ffffff);">avatar.py</text>
             </g>
             <g transform="matrix(1,0,0,1,0,-15)">
                 <path d="M220,83L220,99C220,101.76 217.76,104 215,104L135,104C132.24,104 130,101.76 130,99L130,83C130,80.24 132.24,78 135,78L215,78C217.76,78 220,80.24 220,83Z" style="fill:var(--se-text-secondary,#4b5563);"/>

@@ -9,7 +9,7 @@
         </g>
         <g transform="matrix(15,0,0,15,-321.657715,0)">
         </g>
-        <text x="-360.835px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">Four ﬁlters. <tspan x="-282.473px -272.468px " y="0px 0px ">Al</tspan>l &quot;yes&quot; means SDD is the right operating mode. <tspan x="46.67px 56.675px " y="0px 0px ">An</tspan>y &quot;no&quot; pushes toward Semantic Engineering.</text>
+        <text x="-360.835px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">Four ﬁlters. All &quot;yes&quot; means SDD is the right operating mode. Any &quot;no&quot; pushes toward Semantic Engineering.</text>
     </g>
     <g transform="matrix(1,0,0,1,-376,-22)">
         <path d="M900,150C900,172.077 882.077,190 860,190L540,190C517.923,190 500,172.077 500,150C500,127.923 517.923,110 540,110L860,110C882.077,110 900,127.923 900,150Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
@@ -67,7 +67,7 @@
         <path d="M700,390L940,455L700,520L460,455L700,390Z" style="fill:var(--se-box-fill,#ffffff);fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     </g>
     <g transform="matrix(1,0,0,1,324,413)">
-        <text x="-115.168px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Q2: One clear owner per layer<tspan x="110.723px " y="0px ">,</tspan></text>
+        <text x="-115.168px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">Q2: One clear owner per layer,</text>
     </g>
     <g transform="matrix(1,0,0,1,324,431)">
         <text x="-76.453px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">architect hands-on?</text>
@@ -174,6 +174,6 @@
         <text x="-53.473px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">the structural load.</text>
     </g>
     <g transform="matrix(1,0,0,1,841,554)">
-        <text x="-54.212px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="-46.252px -42.64px " y="0px 0px "> g</tspan>raph is needed.</text>
+        <text x="-54.212px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">A graph is needed.</text>
     </g>
 </svg>

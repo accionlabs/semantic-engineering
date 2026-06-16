@@ -2,14 +2,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg viewBox="0 0 1400 740" preserveAspectRatio="xMidYMid meet" width="1400px" height="740px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,44)">
-        <text x="-248.665px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three Core Capabilities of <tspan x="130.32px 151.985px " y="0px 0px ">AS</tspan>IMOV</text>
+        <text x="-248.665px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three Core Capabilities of ASIMOV</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
         <g transform="matrix(16,0,0,16,140.503906,0)">
         </g>
         <g transform="matrix(16,0,0,16,144.949219,0)">
         </g>
-        <text x="-439.098px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Same architecture and the same agentic execution. Only the <tspan x="-6.246px 1.754px 10.652px " y="0px 0px 0px ">Tar</tspan>get Ontology Conﬁgurator and per-language adapters dif<tspan x="416.855px 421.301px 430.199px 434.652px " y="0px 0px 0px 0px ">fer.</tspan></text>
+        <text x="-439.098px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Same architecture and the same agentic execution. Only the Target Ontology Conﬁgurator and per-language adapters differ.</text>
     </g>
     <g transform="matrix(1,0,0,1,40,120)">
         <path d="M430,14L430,486C430,493.727 423.727,500 416,500L14,500C6.273,500 0,493.727 0,486L0,14C0,6.273 6.273,0 14,0L416,0C423.727,0 430,6.273 430,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
@@ -33,7 +33,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,22,180)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.948px 78.255px 87.121px 95.987px 105.57px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT COVERS</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">WHAT IT COVERS</text>
         </g>
         <g transform="matrix(1,0,0,1,22,206)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">End-to-end transformation of legacy</text>
@@ -48,11 +48,11 @@
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">reduces technical debt; positions for</text>
         </g>
         <g transform="matrix(1,0,0,1,22,278)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">long-term innovation and scalability<tspan x="248.734px " y="0px ">.</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">long-term innovation and scalability.</text>
         </g>
         <path d="M22,306L408,306" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,22,334)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 17.002px 25.868px 29.675px 39.258px 48.841px 56.748px 60.555px 69.421px 78.287px 87.87px 98.894px 107.76px 115.896px 124.762px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL EXAMPLES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">TYPICAL EXAMPLES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,352)">
             <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
@@ -93,7 +93,7 @@
             <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">02</text>
         </g>
         <g transform="matrix(1,0,0,1,80,38)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">Scalable <tspan x="77.388px 90.387px " y="0px 0px ">Ar</tspan>chitecture Redesign</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-box-fill,#ffffff);">Scalable Architecture Redesign</text>
         </g>
         <g transform="matrix(1,0,0,1,135,82)">
             <path d="M50,6L50,54C50,57.311 47.311,60 44,60L6,60C2.689,60 0,57.311 0,54L0,6C0,2.689 2.689,0 6,0L44,0C47.311,0 50,2.689 50,6Z" style="fill:var(--se-text-secondary,#4b5563);"/>
@@ -109,7 +109,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,22,180)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.948px 78.255px 87.121px 95.987px 105.57px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT COVERS</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">WHAT IT COVERS</text>
         </g>
         <g transform="matrix(1,0,0,1,22,206)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Structured path to a modern modular</text>
@@ -124,7 +124,7 @@
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">from monolith to microservices, or from</text>
         </g>
         <g transform="matrix(1,0,0,1,22,278)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">tightly coupled to modular<tspan x="181.453px " y="0px ">.</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">tightly coupled to modular.</text>
         </g>
         <clipPath id="_clip1">
             <rect x="22" y="305.5" width="386" height="1"/>
@@ -135,7 +135,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,22,334)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 17.002px 25.868px 29.675px 39.258px 48.841px 56.748px 60.555px 69.421px 78.287px 87.87px 98.894px 107.76px 115.896px 124.762px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL EXAMPLES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">TYPICAL EXAMPLES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,352)">
             <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
@@ -149,7 +149,7 @@
         <g transform="matrix(1,0,0,1,22,392)">
             <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
             <g transform="matrix(1,0,0,1,14,22)">
-                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">ASP<tspan x="30.836px 35.281px " y="0px 0px ">.N</tspan>ET 4.5</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">ASP.NET 4.5</text>
                 <text x="98.414px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
                 <text x="114.139px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">.NET Core 10</text>
                 <text x="218.171px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">+ React 19</text>
@@ -158,7 +158,7 @@
         <g transform="matrix(1,0,0,1,22,432)">
             <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
             <g transform="matrix(1,0,0,1,14,22)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">VB.NET<tspan x="57.508px 61.953px " y="0px 0px "> t</tspan>ightly coupled</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">VB.NET tightly coupled</text>
                 <text x="168.688px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text,#111111);">→</text>
                 <text x="184.413px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">.NET Core modular</text>
             </g>
@@ -177,25 +177,25 @@
         <g transform="matrix(1,0,0,1,135,82)">
             <path d="M40,24L40,56C40,58.208 38.208,60 36,60L4,60C1.792,60 0,58.208 0,56L0,24C0,21.792 1.792,20 4,20L36,20C38.208,20 40,21.792 40,24Z" style="fill:var(--se-panel-stroke,#9ca3af);"/>
             <g transform="matrix(1,0,0,1,20,44)">
-                <text x="-9.271px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v<tspan x="-3.729px -0.117px " y="0px 0px ">.N</tspan></text>
+                <text x="-9.271px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v.N</text>
             </g>
             <path d="M95,14L95,56C95,58.208 93.208,60 91,60L59,60C56.792,60 55,58.208 55,56L55,14C55,11.792 56.792,10 59,10L91,10C93.208,10 95,11.792 95,14Z" style="fill:var(--se-panel-stroke,#9ca3af);"/>
             <g transform="matrix(1,0,0,1,75,40)">
-                <text x="-16.682px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v<tspan x="-11.14px -7.528px " y="0px 0px ">.N</tspan>+1</text>
+                <text x="-16.682px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v.N+1</text>
             </g>
             <path d="M150,4L150,56C150,58.208 148.208,60 146,60L114,60C111.792,60 110,58.208 110,56L110,4C110,1.792 111.792,0 114,0L146,0C148.208,0 150,1.792 150,4Z" style="fill:var(--se-accent,#E94E1B);"/>
             <g transform="matrix(1,0,0,1,130,35)">
-                <text x="-16.317px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v<tspan x="-10.775px -7.163px " y="0px 0px ">.N</tspan>+x</text>
+                <text x="-16.317px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-box-fill,#ffffff);">v.N+x</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,22,180)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">W<tspan x="12.465px 22.048px 30.673px 38.809px 42.616px 46.422px 54.558px 58.365px 67.948px 78.255px 87.121px 95.987px 105.57px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT IT COVERS</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">WHAT IT COVERS</text>
         </g>
         <g transform="matrix(1,0,0,1,22,206)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Rapid version upgrades within a</text>
         </g>
         <g transform="matrix(1,0,0,1,22,224)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">technology family<tspan x="122.438px 126.883px 130.453px 141.125px " y="0px 0px 0px 0px ">. Au</tspan>tomated code</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">technology family. Automated code</text>
         </g>
         <g transform="matrix(1,0,0,1,22,242)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">scanning, dependency mapping,</text>
@@ -208,7 +208,7 @@
         </g>
         <path d="M22,306L408,306" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,22,334)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 17.002px 25.868px 29.675px 39.258px 48.841px 56.748px 60.555px 69.421px 78.287px 87.87px 98.894px 107.76px 115.896px 124.762px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">YPICAL EXAMPLES</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">TYPICAL EXAMPLES</text>
         </g>
         <g transform="matrix(1,0,0,1,22,352)">
             <path d="M386,6L386,26C386,29.311 383.311,32 380,32L6,32C2.689,32 0,29.311 0,26L0,6C0,2.689 2.689,0 6,0L380,0C383.311,0 386,2.689 386,6Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
@@ -239,13 +239,13 @@
     <g transform="matrix(1,0,0,1,700,680)">
         <text x="-584.839px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">All three run through the same Ingestion</text>
         <text x="-295.776px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text-secondary,#4b5563);">→</text>
-        <text x="-280.332px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);"><tspan x="-280.332px -271.145px -265.816px " y="0px 0px 0px ">Tra</tspan>nsformation</text>
+        <text x="-280.332px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Transformation</text>
         <text x="-168.879px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text-secondary,#4b5563);">→</text>
         <g transform="matrix(16,0,0,16,200.557344,0)">
         </g>
         <g transform="matrix(16,0,0,16,205.002656,0)">
         </g>
-        <text x="-153.154px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Generation pipeline, with the <tspan x="53.807px 61.807px 70.706px " y="0px 0px 0px ">Tar</tspan>get Ontology Conﬁgurator and per-language adapters tuned to the path.</text>
+        <text x="-153.154px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Generation pipeline, with the Target Ontology Conﬁgurator and per-language adapters tuned to the path.</text>
     </g>
     <defs>
         <image id="_Image2" width="386px" height="1px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYIAAAABCAYAAADTqalLAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAGElEQVQ4jWN86SedxjAKRsEoGAWjYMQCAGiyAbosh8KbAAAAAElFTkSuQmCC"/>

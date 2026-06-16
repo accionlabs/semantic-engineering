@@ -2,10 +2,10 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg viewBox="0 0 1400 820" preserveAspectRatio="xMidYMid meet" class="se-svg" width="1400px" height="820px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;">
     <g transform="matrix(1,0,0,1,700,44)">
-        <text x="-485.42px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Breeze.AI and <tspan x="-279.785px -258.12px " y="0px 0px ">AS</tspan>IMOV<tspan x="-163.081px -153.091px " y="0px 0px ">: </tspan>Peer Platforms Under Semantic Engineering</text>
+        <text x="-485.42px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Breeze.AI and ASIMOV: Peer Platforms Under Semantic Engineering</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-264px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Same Semantic Engineering principles. Shaped for two dif<tspan x="148.391px 152.836px " y="0px 0px ">fe</tspan>rent problems.</text>
+        <text x="-264px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Same Semantic Engineering principles. Shaped for two different problems.</text>
     </g>
     <g transform="matrix(1,0,0,1,280,108)">
         <g transform="matrix(1,-0,-0,1,-280,-108)">
@@ -33,7 +33,7 @@
             <text x="-86.254px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">AI-native SDLC platform</text>
         </g>
         <g transform="matrix(1,0,0,1,0,118)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">P<tspan x="8.866px 18.449px 28.756px 38.339px 46.475px 55.341px " y="0px 0px 0px 0px 0px 0px ">ROBLEM</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">PROBLEM</text>
         </g>
         <g transform="matrix(1,0,0,1,0,142)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Evolving an application across years.</text>
@@ -45,13 +45,13 @@
             <path d="M20,184L600,184" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         </g>
         <g transform="matrix(1,0,0,1,0,208)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">O<tspan x="10.307px 19.89px 27.797px 38.104px 46.24px 56.547px 66.854px 75.491px 79.298px 88.881px 97.747px 107.33px 117.637px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">NTOLOGY USAGE</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">ONTOLOGY USAGE</text>
         </g>
         <g transform="matrix(1,0,0,1,0,232)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Full four-layer ontology<tspan x="161.562px 166.008px " y="0px 0px ">, </tspan>all custodians</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Full four-layer ontology, all custodians</text>
         </g>
         <g transform="matrix(1,0,0,1,0,250)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">active. Functional + Design + <tspan x="209.906px 220.578px " y="0px 0px ">Ar</tspan>chitecture</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">active. Functional + Design + Architecture</text>
         </g>
         <g transform="matrix(1,0,0,1,0,268)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">+ Code, continuously maintained.</text>
@@ -60,13 +60,13 @@
             <path d="M20,292L600,292" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         </g>
         <g transform="matrix(1,0,0,1,0,316)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">G<tspan x="10.307px 19.89px 29.473px 38.339px 47.922px 51.253px 60.836px 70.419px 78.555px 82.362px 89.787px 99.37px 108.953px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RAPH ARTIFACT</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">GRAPH ARTIFACT</text>
         </g>
         <g transform="matrix(1,0,0,1,0,340)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">One four-layer graph per product.</text>
         </g>
         <g transform="matrix(1,0,0,1,0,358)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">KG Sync <tspan x="66.703px 77.375px " y="0px 0px ">Ag</tspan>ent keeps it current on</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">KG Sync Agent keeps it current on</text>
         </g>
         <g transform="matrix(1,0,0,1,0,376)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">every merge.</text>
@@ -75,7 +75,7 @@
             <path d="M20,400L600,400" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         </g>
         <g transform="matrix(1,0,0,1,0,424)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">H<tspan x="9.583px 19.166px 30.19px 39.774px 49.357px 53.164px 62.747px 73.054px 81.19px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMAN ROLE</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">HUMAN ROLE</text>
         </g>
         <g transform="matrix(1,0,0,1,0,438)">
             <path d="M580,8L580,40C580,44.415 576.415,48 572,48L8,48C3.585,48 0,44.415 0,40L0,8C0,3.585 3.585,0 8,0L572,0C576.415,0 580,3.585 580,8Z" style="fill:var(--se-text-secondary,#4b5563);"/>
@@ -90,10 +90,10 @@
             <path d="M20,510L600,510" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         </g>
         <g transform="matrix(1,0,0,1,0,534)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="8.136px 11.943px 22.967px 31.833px 35.64px 45.223px 55.53px 65.113px 68.92px 77.055px 87.362px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">IME HORIZON</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">TIME HORIZON</text>
         </g>
         <g transform="matrix(1,0,0,1,0,558)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Y<tspan x="9.203px 18.102px " y="0px 0px ">ea</tspan>rs. Continuous operation.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Years. Continuous operation.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,700,200)">
@@ -113,13 +113,13 @@
             <text x="-129.84px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">AI-led legacy modernization platform</text>
         </g>
         <g transform="matrix(1,0,0,1,40,118)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">P<tspan x="8.866px 18.449px 28.756px 38.339px 46.475px 55.341px " y="0px 0px 0px 0px 0px 0px ">ROBLEM</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">PROBLEM</text>
         </g>
         <g transform="matrix(1,0,0,1,40,142)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Replacing a legacy stack while</text>
         </g>
         <g transform="matrix(1,0,0,1,40,160)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">preserving behavioral parity<tspan x="195.367px " y="0px ">.</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">preserving behavioral parity.</text>
         </g>
         <g transform="matrix(1,0,0,1,20,0)">
             <clipPath id="_clip2">
@@ -132,7 +132,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,40,208)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">O<tspan x="10.307px 19.89px 27.797px 38.104px 46.24px 56.547px 66.854px 75.491px 79.298px 88.881px 97.747px 107.33px 117.637px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">NTOLOGY USAGE</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">ONTOLOGY USAGE</text>
         </g>
         <g transform="matrix(1,0,0,1,40,232)">
             <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Subset: Functional and Code primarily;</text>
@@ -154,13 +154,13 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,40,316)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">G<tspan x="10.307px 19.89px 29.473px 38.339px 47.922px 51.253px 60.836px 70.419px 78.555px 82.362px 89.787px 99.37px 108.953px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RAPH ARTIFACT</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">GRAPH ARTIFACT</text>
         </g>
         <g transform="matrix(1,0,0,1,40,340)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Source Graph (legacy) and <tspan x="196.266px 204.266px 213.164px " y="0px 0px 0px ">Tar</tspan>get Graph</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Source Graph (legacy) and Target Graph</text>
         </g>
         <g transform="matrix(1,0,0,1,40,358)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">(modern), produced on the project. <tspan x="250.523px 258.523px 267.422px " y="0px 0px 0px ">Tar</tspan>get</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">(modern), produced on the project. Target</text>
         </g>
         <g transform="matrix(1,0,0,1,40,376)">
             <g transform="matrix(16,0,0,16,97.835938,0)">
@@ -180,7 +180,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,40,424)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">H<tspan x="9.583px 19.166px 30.19px 39.774px 49.357px 53.164px 62.747px 73.054px 81.19px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMAN ROLE</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">HUMAN ROLE</text>
         </g>
         <g transform="matrix(1,0,0,1,40,438)">
             <path d="M580,8L580,40C580,44.415 576.415,48 572,48L8,48C3.585,48 0,44.415 0,40L0,8C0,3.585 3.585,0 8,0L572,0C576.415,0 580,3.585 580,8Z" style="fill:var(--se-accent,#E94E1B);"/>
@@ -202,7 +202,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,40,534)">
-            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">T<tspan x="8.136px 11.943px 22.967px 31.833px 35.64px 45.223px 55.53px 65.113px 68.92px 77.055px 87.362px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">IME HORIZON</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">TIME HORIZON</text>
         </g>
         <g transform="matrix(1,0,0,1,40,558)">
             <g transform="matrix(16,0,0,16,320.132812,0)">
