@@ -4,7 +4,7 @@ The public site documenting **Accion Labs' Semantic Engineering** approach to AI
 software delivery — the methodology, the platform (Breeze.AI / ASIMOV), and the
 operating model we run engagements under.
 
-- **Live site:** https://accionlabs.github.io/semantic-engineering/
+- **Live site:** https://semantic-engineering.ai/
 - **Built with:** [Hugo](https://gohugo.io/) (static site generator) + the
   [Hextra](https://imfing.github.io/hextra/) theme
 - **Source of truth:** the Markdown in `content/` and the SVGs in `static/diagrams/`
@@ -95,15 +95,12 @@ From the repo root:
 ./serve.sh
 ```
 
-Then open **http://localhost:1313/semantic-engineering/** in your browser.
+Then open **http://localhost:1313/** in your browser.
 
 `serve.sh` stops any previous server, clears the build cache, and starts Hugo's
 dev server with live-reload. **Leave it running** while you edit — the browser
 refreshes automatically when you change content, diagrams, or styles. Press
 **Ctrl-C** to stop it.
-
-> The site lives under the `/semantic-engineering/` path (matching the published
-> URL), so open the link above — plain `localhost:1313/` will 404.
 
 ---
 

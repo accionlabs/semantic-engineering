@@ -62,7 +62,7 @@ if [ "$ME" = "$OWNER" ]; then
   echo "Pushing ..."
   git push origin "$BASE"
   echo
-  echo "Done. The deploy workflow will rebuild → https://accionlabs.github.io/semantic-engineering/"
+  echo "Done. The deploy pipeline will rebuild → https://semantic-engineering.ai/"
 else
   # ---- Contributor: open a pull request for the maintainer to review ----
   BR="contrib/${ME}-$(date '+%Y%m%d-%H%M%S')"

@@ -3,7 +3,7 @@
 # serve.sh — stop any running Hugo dev server, clear build caches, and start fresh.
 # Usage: ./serve.sh
 #
-# Serves at http://localhost:1313/semantic-engineering/
+# Serves at http://localhost:1313/
 # Runs in the foreground — press Ctrl-C to stop.
 #
 # --disableFastRender keeps the search index and page titles current on every edit.
@@ -20,6 +20,6 @@ sleep 1
 echo "Clearing build caches (resources/, public/)..."
 rm -rf resources public
 
-echo "Starting Hugo dev server → http://localhost:1313/semantic-engineering/"
+echo "Starting Hugo dev server → http://localhost:1313/"
 echo "(Ctrl-C to stop)"
 exec hugo serve --port 1313 --bind 127.0.0.1 --disableFastRender
