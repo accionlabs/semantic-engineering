@@ -46,7 +46,7 @@
             <path d="M280,168L280,180" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1.5px;"/>
         </g>
         <g transform="matrix(1,0,0,1,190,338)">
-            <text x="-111.287px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Standard Impact <tspan x="-13px -4.329px " y="0px 0px ">An</tspan>alysis queries here</text>
+            <text x="-111.287px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Standard Impact Analysis queries here</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,510,120)">
@@ -147,7 +147,7 @@
             <path d="M508,238L508,250C508,253.311 505.311,256 502,256L448,256C444.689,256 442,253.311 442,250L442,238C442,234.689 444.689,232 448,232L502,232C505.311,232 508,234.689 508,238Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
         </g>
         <g transform="matrix(1,0,0,1,475,243)">
-            <text x="-29.739px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">REST <tspan x="8.068px 17.456px " y="0px 0px ">AP</tspan>I</text>
+            <text x="-29.739px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">REST API</text>
         </g>
     </g>
     <g>
@@ -188,20 +188,20 @@
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,550)">
-        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="8.832px 19.222px 29.612px 39.23px 48.848px 52.505px 62.896px 74.065px 83.683px 94.073px 102.905px 107.075px 115.661px 126.051px 136.441px 140.611px 151.001px 161.392px 170.223px 179.841px 184.011px 194.401px 204.792px 215.182px 225.572px 234.404px 244.022px 248.192px 257.023px 267.414px 277.032px 281.201px 289.787px 300.177px 310.568px 319.399px 323.569px 332.401px 336.57px 347.74px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HREE AGENT VARIANTS HANDLE THE PARTITION</tspan></text>
+        <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:14px;fill:var(--se-text-secondary,#4b5563);">THREE AGENT VARIANTS HANDLE THE PARTITION</text>
         <g transform="matrix(1,0,0,1,0,30)">
             <path d="M1280,10L1280,66C1280,71.519 1275.519,76 1270,76L10,76C4.481,76 0,71.519 0,66L0,10C0,4.481 4.481,0 10,0L1270,0C1275.519,0 1280,4.481 1280,10Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
             <g transform="matrix(1,0,0,1,22,32)">
-                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Standard Impact <tspan x="137.295px 149.572px " y="0px 0px ">An</tspan>alysis <tspan x="211.321px 223.598px " y="0px 0px ">Ag</tspan>ent</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Standard Impact Analysis Agent</text>
             </g>
             <g transform="matrix(1,0,0,1,22,58)">
-                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:var(--se-text-secondary,#4b5563);">&quot;What in this product is af<tspan x="158.013px 161.902px " y="0px 0px ">fe</tspan>cted by this change?&quot;</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:var(--se-text-secondary,#4b5563);">&quot;What in this product is affected by this change?&quot;</text>
             </g>
             <g transform="matrix(1.58,0,0,1,-371.2,0)">
                 <path d="M840,28L840,52C840,55.311 838.298,58 836.203,58L643.797,58C641.702,58 640,55.311 640,52L640,28C640,24.689 641.702,22 643.797,22L836.203,22C838.298,22 840,24.689 840,28Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
             </g>
             <g transform="matrix(1,0,0,1,755.935,46)">
-                <text x="-103.64px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">C<tspan x="-94.122px -83.88px -74.362px -65.561px -56.043px -48.93px -40.859px -32.058px -27.599px -23.857px -16.497px -12.756px -3.955px 5.563px 15.805px 25.323px 34.842px 44.36px 52.431px 56.173px 66.414px 75.933px 85.451px 94.252px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ONSULTS: 1 PRODUCT GRAPH</tspan></text>
+                <text x="-103.64px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-text-secondary,#4b5563);">CONSULTS: 1 PRODUCT GRAPH</text>
             </g>
             <g transform="matrix(1,0,0,1,1080,32)">
                 <text x="-23.969px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-accent,#E94E1B);">~8 min</text>
@@ -216,13 +216,13 @@
                 <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Cross-Product Impact Extension</text>
             </g>
             <g transform="matrix(1,0,0,1,22,58)">
-                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:var(--se-text-secondary,#4b5563);">&quot;What in other products is af<tspan x="175.137px 179.026px " y="0px 0px ">fe</tspan>cted via integration points?&quot;</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:var(--se-text-secondary,#4b5563);">&quot;What in other products is affected via integration points?&quot;</text>
             </g>
             <g transform="matrix(1.565,0,0,1,-361.6,0)">
                 <path d="M840,28L840,52C840,55.311 838.282,58 836.166,58L643.834,58C641.718,58 640,55.311 640,52L640,28C640,24.689 641.718,22 643.834,22L836.166,22C838.282,22 840,24.689 840,28Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
             </g>
             <g transform="matrix(1,0,0,1,793.935,46)">
-                <text x="-142.688px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">C<tspan x="-133.17px -122.928px -113.41px -104.609px -95.091px -87.979px -79.908px -71.107px -66.648px -62.906px -52.664px -43.146px -33.628px -24.827px -15.309px -11.567px -3.845px -0.103px 9.415px 18.216px 27.734px 37.252px 46.77px 56.288px 65.807px 73.878px 82.678px 86.42px 96.662px 106.18px 115.698px 124.499px 134.018px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ONSULTS: GRAPH + REACHABLE GRAPHS</tspan></text>
+                <text x="-142.688px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">CONSULTS: GRAPH + REACHABLE GRAPHS</text>
             </g>
             <g transform="matrix(1,0,0,1,1080,32)">
                 <text x="-28.14px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-accent,#E94E1B);">~25 min</text>
@@ -234,7 +234,7 @@
         <g transform="matrix(1,0,0,1,0,206)">
             <path d="M1280,10L1280,66C1280,71.519 1275.519,76 1270,76L10,76C4.481,76 0,71.519 0,66L0,10C0,4.481 4.481,0 10,0L1270,0C1275.519,0 1280,4.481 1280,10Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
             <g transform="matrix(1,0,0,1,22,32)">
-                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Portfolio Rationalization <tspan x="199.592px 211.869px " y="0px 0px ">Ag</tspan>ent</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:17px;fill:var(--se-text,#111111);">Portfolio Rationalization Agent</text>
             </g>
             <g transform="matrix(1,0,0,1,22,58)">
                 <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:14px;fill:var(--se-text-secondary,#4b5563);">&quot;What duplicated capability exists across the portfolio?&quot;</text>
@@ -243,7 +243,7 @@
                 <path d="M840,28L840,52C840,55.311 838.265,58 836.129,58L643.871,58C641.735,58 640,55.311 640,52L640,28C640,24.689 641.735,22 643.871,22L836.129,22C838.265,22 840,24.689 840,28Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
             </g>
             <g transform="matrix(1,0,0,1,768.935,46)">
-                <text x="-116.838px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">C<tspan x="-107.32px -97.078px -87.56px -78.759px -69.241px -62.128px -54.057px -45.257px -40.797px -37.532px -28.013px -19.943px -12.1px -8.358px 0.443px 9.961px 20.203px 29.721px 39.239px 48.757px 56.828px 60.57px 70.812px 80.33px 89.848px 98.649px 108.167px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ONSULTS: ALL PRODUCT GRAPHS</tspan></text>
+                <text x="-116.838px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">CONSULTS: ALL PRODUCT GRAPHS</text>
             </g>
             <g transform="matrix(1,0,0,1,1080,32)">
                 <text x="-20.834px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-accent,#E94E1B);">hours</text>
@@ -254,6 +254,6 @@
         </g>
     </g>
     <g transform="matrix(1,0,0,1,700,860)">
-        <text x="-462.881px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:17px;fill:var(--se-text-secondary,#4b5563);">The expensive cross-product traversal happens at spec time. <tspan x="0.768px 11.152px " y="0px 0px ">Th</tspan>e cheap single-product traversal happens at every change.</text>
+        <text x="-462.881px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:17px;fill:var(--se-text-secondary,#4b5563);">The expensive cross-product traversal happens at spec time. The cheap single-product traversal happens at every change.</text>
     </g>
 </svg>

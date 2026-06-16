@@ -2,14 +2,14 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg viewBox="0 0 1400 780" preserveAspectRatio="xMidYMid meet" width="1400px" height="780px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
     <g transform="matrix(1,0,0,1,700,50)">
-        <text x="-153.255px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:28px;fill:var(--se-text,#111111);">Three Sources of T<tspan x="98.827px 109.724px " y="0px 0px ">ru</tspan>th</text>
+        <text x="-153.255px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:28px;fill:var(--se-text,#111111);">Three Sources of Truth</text>
     </g>
     <g transform="matrix(1,0,0,1,700,80)">
         <g transform="matrix(18,0,0,18,61.536621,0)">
         </g>
         <g transform="matrix(18,0,0,18,66.537598,0)">
         </g>
-        <text x="-311.665px" y="0px" style="font-family:'Helvetica';font-size:18px;fill:var(--se-text-secondary,#4b5563);">Each system holds the load it is suited for<tspan x="18.514px 23.515px " y="0px 0px ">. </tspan>Conﬂating them is the failure mode.</text>
+        <text x="-311.665px" y="0px" style="font-family:'Helvetica';font-size:18px;fill:var(--se-text-secondary,#4b5563);">Each system holds the load it is suited for. Conﬂating them is the failure mode.</text>
     </g>
     <g transform="matrix(1,0,0,1,60,120)">
         <path d="M400,14L400,426C400,433.727 393.727,440 386,440L14,440C6.273,440 0,433.727 0,426L0,14C0,6.273 6.273,0 14,0L386,0C393.727,0 400,6.273 400,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
@@ -30,28 +30,28 @@
             <path d="M10,54L38,54" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         </g>
         <g transform="matrix(1,0,0,1,199.925,190)">
-            <text x="-50.677px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-40.523px -28.705px -17.723px -6.74px 4.242px 14.397px 18.715px 28.027px 39.845px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">OURCE FOR</tspan></text>
+            <text x="-50.677px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SOURCE FOR</text>
         </g>
         <g transform="matrix(1,0,0,1,200,216)">
             <text x="-75.613px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Intent for one change</text>
         </g>
         <path d="M40,240L360,240" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,199.925,270)">
-            <text x="-31.214px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-21.059px -10.904px -0.749px 8.564px 18.719px " y="0px 0px 0px 0px 0px ">YSTEM</tspan></text>
+            <text x="-31.214px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SYSTEM</text>
         </g>
         <g transform="matrix(1,0,0,1,200,296)">
             <text x="-86.703px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Markdown or ticket body</text>
         </g>
         <path d="M40,320L360,320" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,199.925,350)">
-            <text x="-26.557px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-16.402px -5.42px 6.398px 16.552px " y="0px 0px 0px 0px ">COPE</tspan></text>
+            <text x="-26.557px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SCOPE</text>
         </g>
         <g transform="matrix(1,0,0,1,200,376)">
             <text x="-101.398px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Local: one feature, one story</text>
         </g>
         <path d="M40,400L360,400" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,199.925,430)">
-            <text x="-81.138px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">P<tspan x="-70.984px -60.001px -55.684px -43.038px -32.056px -21.623px -11.731px -7.414px 3.569px 15.386px 26.369px 36.523px 47.506px 60.151px 70.306px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RIMARY CONSUMER</tspan></text>
+            <text x="-81.138px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">PRIMARY CONSUMER</text>
         </g>
         <g transform="matrix(1,0,0,1,200,456)">
             <text x="-107.84px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Implementation team + agents</text>
@@ -62,7 +62,7 @@
         <path d="M400,14L400,46C400,53.727 393.727,60 386,60L14,60C6.273,60 0,53.727 0,46L0,14C0,6.273 6.273,0 14,0L386,0C393.727,0 400,6.273 400,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
         <rect x="0" y="46" width="400" height="14" style="fill:var(--se-text-secondary,#4b5563);"/>
         <g transform="matrix(1,0,0,1,200,38)">
-            <text x="-73.788px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:22px;fill:var(--se-box-fill,#ffffff);">T<tspan x="-60.736px -54.624px " y="0px 0px ">ic</tspan>ket System</text>
+            <text x="-73.788px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:22px;fill:var(--se-box-fill,#ffffff);">Ticket System</text>
         </g>
         <g transform="matrix(1,0,0,1,160,80)">
             <path d="M22,3L22,71C22,72.656 20.656,74 19,74L3,74C1.344,74 0,72.656 0,71L0,3C0,1.344 1.344,0 3,0L19,0C20.656,0 22,1.344 22,3Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
@@ -74,21 +74,21 @@
             <path d="M77,8L77,16C77,17.104 76.104,18 75,18L63,18C61.896,18 61,17.104 61,16L61,8C61,6.896 61.896,6 63,6L75,6C76.104,6 77,6.896 77,8Z" style="fill:var(--se-text-secondary,#4b5563);"/>
         </g>
         <g transform="matrix(1,0,0,1,199.925,190)">
-            <text x="-50.677px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-40.523px -28.705px -17.723px -6.74px 4.242px 14.397px 18.715px 28.027px 39.845px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">OURCE FOR</tspan></text>
+            <text x="-50.677px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SOURCE FOR</text>
         </g>
         <g transform="matrix(1,0,0,1,200,216)">
             <text x="-120.496px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Progress, ownership, sprint status</text>
         </g>
         <path d="M40,240L360,240" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,199.925,270)">
-            <text x="-31.214px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-21.059px -10.904px -0.749px 8.564px 18.719px " y="0px 0px 0px 0px 0px ">YSTEM</tspan></text>
+            <text x="-31.214px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SYSTEM</text>
         </g>
         <g transform="matrix(1,0,0,1,200,296)">
-            <text x="-89.391px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Jira, Linear<tspan x="-11.117px -6.672px " y="0px 0px ">, </tspan>or equivalent</text>
+            <text x="-89.391px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Jira, Linear, or equivalent</text>
         </g>
         <path d="M40,320L360,320" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,199.925,350)">
-            <text x="-26.557px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-16.402px -5.42px 6.398px 16.552px " y="0px 0px 0px 0px ">COPE</tspan></text>
+            <text x="-26.557px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SCOPE</text>
         </g>
         <g transform="matrix(1,0,0,1,200,376)">
             <g transform="matrix(16,0,0,16,85.367188,0)">
@@ -99,7 +99,7 @@
         </g>
         <path d="M40,400L360,400" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
         <g transform="matrix(1,0,0,1,199.925,430)">
-            <text x="-81.138px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">P<tspan x="-70.984px -60.001px -55.684px -43.038px -32.056px -21.623px -11.731px -7.414px 3.569px 15.386px 26.369px 36.523px 47.506px 60.151px 70.306px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RIMARY CONSUMER</tspan></text>
+            <text x="-81.138px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">PRIMARY CONSUMER</text>
         </g>
         <g transform="matrix(1,0,0,1,200,456)">
             <text x="-140.086px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Engineering managers, product leaders</text>
@@ -129,7 +129,7 @@
             <path d="M40,58L66,84" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
         </g>
         <g transform="matrix(1,0,0,1,199.925,190)">
-            <text x="-50.677px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-40.523px -28.705px -17.723px -6.74px 4.242px 14.397px 18.715px 28.027px 39.845px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">OURCE FOR</tspan></text>
+            <text x="-50.677px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SOURCE FOR</text>
         </g>
         <g transform="matrix(1,0,0,1,200,216)">
             <text x="-129.402px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Application state, structure, behavior</text>
@@ -143,7 +143,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,199.925,270)">
-            <text x="-31.214px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-21.059px -10.904px -0.749px 8.564px 18.719px " y="0px 0px 0px 0px 0px ">YSTEM</tspan></text>
+            <text x="-31.214px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SYSTEM</text>
         </g>
         <g transform="matrix(1,0,0,1,200,296)">
             <text x="-99.609px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Four-layer knowledge graph</text>
@@ -157,7 +157,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,199.925,350)">
-            <text x="-26.557px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">S<tspan x="-16.402px -5.42px 6.398px 16.552px " y="0px 0px 0px 0px ">COPE</tspan></text>
+            <text x="-26.557px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">SCOPE</text>
         </g>
         <g transform="matrix(1,0,0,1,200,376)">
             <text x="-117.395px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Global: full app as it actually runs</text>
@@ -171,7 +171,7 @@
             </g>
         </g>
         <g transform="matrix(1,0,0,1,199.925,430)">
-            <text x="-81.138px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">P<tspan x="-70.984px -60.001px -55.684px -43.038px -32.056px -21.623px -11.731px -7.414px 3.569px 15.386px 26.369px 36.523px 47.506px 60.151px 70.306px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RIMARY CONSUMER</tspan></text>
+            <text x="-81.138px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:15px;fill:var(--se-text-secondary,#4b5563);">PRIMARY CONSUMER</text>
         </g>
         <g transform="matrix(1,0,0,1,200,456)">
             <text x="-102.953px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Agents + custodianship team</text>
@@ -183,13 +183,13 @@
             <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:18px;fill:var(--se-text,#111111);">The misuse pattern</text>
         </g>
         <g transform="matrix(1,0,0,1,30,72)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="8.613px 13.608px " y="0px 0px ">re</tspan>ating the spec as a substitute for the other two collapses progress + state + intent into one document.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">Treating the spec as a substitute for the other two collapses progress + state + intent into one document.</text>
         </g>
         <g transform="matrix(1,0,0,1,30,98)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">The spec becomes a hybrid, the hybrid goes stale, and the team rediscovers the staleness when <tspan x="643.704px 653.708px " y="0px 0px ">AI</tspan>-generated code from</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">The spec becomes a hybrid, the hybrid goes stale, and the team rediscovers the staleness when AI-generated code from</text>
         </g>
         <g transform="matrix(1,0,0,1,30,124)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">the stale spec breaks something nobody predicted. <tspan x="342.444px 351.606px " y="0px 0px ">Th</tspan>e clean separation eliminates the failure mode.</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:15px;fill:var(--se-text-secondary,#4b5563);">the stale spec breaks something nobody predicted. The clean separation eliminates the failure mode.</text>
         </g>
     </g>
     <defs>

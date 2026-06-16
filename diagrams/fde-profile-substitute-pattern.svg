@@ -9,10 +9,10 @@
         <text x="-302.527px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The FDE Proﬁle and the Substitute Pattern</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-404.812px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Part architect, part product owner<tspan x="-169.133px -164.688px " y="0px 0px ">, </tspan>part designer<tspan x="-67.727px -63.281px -59.117px -49.344px " y="0px 0px 0px 0px ">. Th</tspan>e single-person FDE is aspirational. <tspan x="216.281px 226.055px " y="0px 0px ">Th</tspan>e substitute is the norm.</text>
+        <text x="-404.812px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Part architect, part product owner, part designer. The single-person FDE is aspirational. The substitute is the norm.</text>
     </g>
     <g transform="matrix(1,0,0,1,699.84,103)">
-        <text x="-229.903px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-219.81px -207.935px -196.943px -192.178px -181.186px -169.311px -156.546px -146.453px -141.687px -132.469px -121.477px -116.712px -100.392px -95.908px -85.814px -73.94px -62.065px -51.073px -40.081px -35.316px -23.441px -10.676px 2.972px 13.964px 24.956px 35.05px 46.041px 57.916px 69.791px 74.556px 85.548px 96.54px 101.305px 114.953px 126.828px 137.82px 147.632px 152.397px 165.163px 176.155px 187.146px 199.021px 208.24px 219.231px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE PROFILE — THREE COMPETENCIES MUST OVERLAP</tspan></text>
+        <text x="-229.903px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">THE PROFILE — THREE COMPETENCIES MUST OVERLAP</text>
     </g>
     <g transform="matrix(1,0,0,1,700,340)">
         <g transform="matrix(1,-0,-0,1,-700,-340)">
@@ -20,7 +20,7 @@
         </g>
     </g>
     <g transform="matrix(1,0,0,1,699.84,617)">
-        <text x="-315.916px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-305.823px -293.948px -282.956px -278.191px -267.199px -255.324px -244.332px -233.34px -223.247px -218.482px -208.388px -196.514px -186.42px -175.428px -170.663px -160.851px -151.039px -140.945px -130.852px -119.86px -107.985px -96.11px -91.345px -75.025px -70.26px -54.838px -42.964px -31.972px -20.097px -15.332px -3.457px 9.308px 14.074px 25.065px 29.831px 41.705px 54.471px 63.689px 74.681px 79.446px 90.438px 101.43px 113.305px 124.297px 137.062px 148.937px 153.702px 165.577px 178.342px 189.334px 200.326px 212.2px 223.192px 227.083px 238.075px 247.293px 255.925px 260.41px 270.503px 282.378px 294.252px 305.244px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE SUBSTITUTE PATTERN — WHEN NO SINGLE PERSON COVERS ALL THREE</tspan></text>
+        <text x="-315.916px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">THE SUBSTITUTE PATTERN — WHEN NO SINGLE PERSON COVERS ALL THREE</text>
     </g>
     <g transform="matrix(1,0,0,1,60,620)">
         <g transform="matrix(1,0,0,1,0,14)">
@@ -70,7 +70,7 @@
             <text x="-4.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">2</text>
         </g>
         <g transform="matrix(1,0,0,1,76,50)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">T<tspan x="8.898px 20.453px " y="0px 0px ">wo</tspan>-person substitute</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Two-person substitute</text>
         </g>
         <g transform="matrix(1,0,0,1,75,71)">
             <text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Common. One hybrid + one specialist.</text>

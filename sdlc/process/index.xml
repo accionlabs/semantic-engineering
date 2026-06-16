@@ -49,18 +49,18 @@
 &lt;/g>
 &lt;g transform="matrix(30,0,0,30,135.585938,0)">
 &lt;/g>
-&lt;text x="-185.581px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Spec Sprint W&lt;tspan x="78.911px 97.236px " y="0px 0px ">or&lt;/tspan>kﬂow&lt;/text>
+&lt;text x="-185.581px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Spec Sprint Workﬂow&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,72)">
-&lt;text x="-404.094px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Seven steps from pending change requests to impact-analyzed specs. &lt;tspan x="98.133px 107.906px " y="0px 0px ">Th&lt;/tspan>e Impact &lt;tspan x="181.734px 192.406px " y="0px 0px ">An&lt;/tspan>alysis &lt;tspan x="244.883px 255.555px " y="0px 0px ">Ag&lt;/tspan>ent makes the loop.&lt;/text>
+&lt;text x="-404.094px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Seven steps from pending change requests to impact-analyzed specs. The Impact Analysis Agent makes the loop.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,40,130)">
 &lt;path d="M220,12L220,208C220,214.623 214.623,220 208,220L12,220C5.377,220 0,214.623 0,208L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
 &lt;g transform="matrix(1,0,0,1,109.88,32)">
-&lt;text x="-54.544px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">S&lt;tspan x="-43.632px -32.72px -21.808px -10.013px -5.328px 5.584px 16.496px 28.29px 32.976px 44.77px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PEC SPRINT&lt;/tspan>&lt;/text>
+&lt;text x="-54.544px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">SPEC SPRINT&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,109.88,52)">
-&lt;text x="-71.91px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">B&lt;tspan x="-60.999px -50.087px -38.292px -27.38px -18.242px -5.556px 7.129px 11.814px 17.382px 22.068px 33.862px 44.774px 56.569px 66.582px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ACKLOG (INPUT)&lt;/tspan>&lt;/text>
+&lt;text x="-71.91px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">BACKLOG (INPUT)&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,110,92)">
 &lt;text x="-57.828px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Pending change&lt;/text>
@@ -88,7 +88,7 @@
 &lt;path d="M220,12L220,26C220,32.623 214.623,38 208,38L12,38C5.377,38 0,32.623 0,26L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="26" width="220" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,25)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 21.085px 32.077px 42.788px 47.553px " y="0px 0px 0px 0px 0px ">TEP 1&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STEP 1&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Pull change&lt;/text>
@@ -97,10 +97,10 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">requests&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,110)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A&lt;tspan x="9.797px 14.242px " y="0px 0px "> b&lt;/tspan>atch from the&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A batch from the&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,128)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">backlog. &lt;tspan x="63.758px 73.531px " y="0px 0px ">Th&lt;/tspan>e four&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">backlog. The four&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,146)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">custodians agree on&lt;/text>
@@ -109,7 +109,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">which to address.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="11.03px 24.384px 34.634px 44.112px 54.362px 58.392px 62.421px 71.899px 82.15px 93.179px 103.43px 113.68px 123.93px 132.376px 136.406px 147.435px 160.789px 171.04px 180.517px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">WNER: PRODUCT OWNER&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">OWNER: PRODUCT OWNER&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g>
@@ -122,7 +122,7 @@
 &lt;path d="M220,12L220,26C220,32.623 214.623,38 208,38L12,38C5.377,38 0,32.623 0,26L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="26" width="220" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,25)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 21.085px 32.077px 42.788px 47.553px " y="0px 0px 0px 0px 0px ">TEP 2&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STEP 2&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Author&lt;/text>
@@ -140,10 +140,10 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">criteria, out-of-scope,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,164)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">brief why-now&lt;tspan x="97.828px " y="0px ">.&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">brief why-now.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="11.03px 24.384px 34.634px 44.112px 54.362px 58.392px 62.421px 71.899px 82.15px 93.179px 103.43px 113.68px 123.93px 132.376px 136.406px 147.435px 160.789px 171.04px 180.517px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">WNER: PRODUCT OWNER&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">OWNER: PRODUCT OWNER&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g>
@@ -156,13 +156,13 @@
 &lt;path d="M220,12L220,26C220,32.623 214.623,38 208,38L12,38C5.377,38 0,32.623 0,26L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;rect x="0" y="26" width="220" height="12" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;g transform="matrix(1,0,0,1,14,25)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 21.085px 32.077px 42.788px 47.553px " y="0px 0px 0px 0px 0px ">TEP 3&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STEP 3&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Run Impact&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,84)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Analysis &lt;tspan x="63.148px 73.82px " y="0px 0px ">Ag&lt;/tspan>ent&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Analysis Agent&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,110)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Agent traverses the&lt;/text>
@@ -177,7 +177,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">report.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">R&lt;tspan x="10.25px 20.501px 30.751px 40.229px 43.493px 52.971px 63.221px 71.667px 82.697px 94.499px 102.944px 111.636px 115.666px 125.916px 135.394px 143.32px 150.214px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UNS AUTOMATICALLY&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">RUNS AUTOMATICALLY&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g>
@@ -190,7 +190,7 @@
 &lt;path d="M220,12L220,26C220,32.623 214.623,38 208,38L12,38C5.377,38 0,32.623 0,26L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="26" width="220" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,25)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 21.085px 32.077px 42.788px 47.553px " y="0px 0px 0px 0px 0px ">TEP 4&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STEP 4&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Review across&lt;/text>
@@ -215,7 +215,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">components. Eng veriﬁes.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="11.03px 24.384px 34.634px 44.112px 54.362px 58.392px 61.656px 71.134px 79.06px 86.473px 90.503px 98.429px 102.459px 112.709px 122.959px 132.437px 140.883px 151.913px 162.163px 166.193px 175.67px 185.921px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">WNER: ALL 4 CUSTODIANS&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">OWNER: ALL 4 CUSTODIANS&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g>
@@ -227,7 +227,7 @@
 &lt;path d="M220,12L220,26C220,32.623 214.623,38 208,38L12,38C5.377,38 0,32.623 0,26L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="26" width="220" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,25)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 21.085px 32.077px 42.788px 47.553px " y="0px 0px 0px 0px 0px ">TEP 5&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STEP 5&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Update&lt;/text>
@@ -249,10 +249,10 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Graph stays current as&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,164)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">a side ef&lt;tspan x="60.203px 64.648px " y="0px 0px ">fe&lt;/tspan>ct of the sprint.&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">a side effect of the sprint.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="11.03px 24.384px 34.634px 44.112px 54.362px 58.392px 62.421px 71.899px 81.377px 91.628px 101.878px 105.908px 116.158px 126.408px 135.886px 144.332px 155.361px 165.612px 169.641px 179.119px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">WNER: EACH CUSTODIAN&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">OWNER: EACH CUSTODIAN&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g>
@@ -265,7 +265,7 @@
 &lt;path d="M220,12L220,26C220,32.623 214.623,38 208,38L12,38C5.377,38 0,32.623 0,26L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="26" width="220" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,25)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 21.085px 32.077px 42.788px 47.553px " y="0px 0px 0px 0px 0px ">TEP 6&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STEP 6&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Cross-product&lt;/text>
@@ -277,7 +277,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Conditional. When the&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,128)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">change af&lt;tspan x="70px 74.445px " y="0px 0px ">fe&lt;/tspan>cts multiple&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">change affects multiple&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,146)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">products, the Cross-Product&lt;/text>
@@ -286,7 +286,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Extension runs.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="11.03px 24.384px 34.634px 44.112px 54.362px 58.392px 61.656px 71.134px 81.384px 91.634px 101.885px 105.914px 114.606px 124.084px 134.334px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">WNER: ARCHITECT&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">OWNER: ARCHITECT&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g>
@@ -299,7 +299,7 @@
 &lt;path d="M220,12L220,26C220,32.623 214.623,38 208,38L12,38C5.377,38 0,32.623 0,26L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="26" width="220" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,25)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 21.085px 32.077px 42.788px 47.553px " y="0px 0px 0px 0px 0px ">TEP 7&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STEP 7&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Produce&lt;/text>
@@ -312,7 +312,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">ﬁnal spec&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,110)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">V&lt;tspan x="9.492px 18.391px " y="0px 0px ">al&lt;/tspan>idated against the&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Validated against the&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,128)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">now-current graph. Impact&lt;/text>
@@ -324,7 +324,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">the impl sprint backlog.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="11.03px 24.384px 34.634px 44.112px 54.362px 58.392px 62.421px 71.899px 82.15px 93.179px 103.43px 113.68px 123.93px 132.376px 136.406px 147.435px 160.789px 171.04px 180.517px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">WNER: PRODUCT OWNER&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:14px;fill:var(--se-accent,#E94E1B);">OWNER: PRODUCT OWNER&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g>
@@ -335,16 +335,16 @@
 &lt;g transform="matrix(1,0,0,1,1080,460)">
 &lt;path d="M220,12L220,208C220,214.623 214.623,220 208,220L12,220C5.377,220 0,214.623 0,208L0,12C0,5.377 5.377,0 12,0L208,0C214.623,0 220,5.377 220,12Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
 &lt;g transform="matrix(1,0,0,1,109.88,32)">
-&lt;text x="-71.497px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">I&lt;tspan x="-66.812px -53.244px -42.332px -33.194px -22.282px -8.714px 2.198px 13.993px 22.827px 32.559px 42.572px 47.258px 59.943px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">MPLEMENTATION&lt;/tspan>&lt;/text>
+&lt;text x="-71.497px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">IMPLEMENTATION&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,109.88,52)">
-&lt;text x="-80.917px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">B&lt;tspan x="-70.005px -59.093px -47.299px -36.387px -27.248px -14.563px -1.878px 2.808px 8.376px 21.061px 32.856px 42.869px 53.781px 65.576px 75.589px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ACKLOG (OUTPUT)&lt;/tspan>&lt;/text>
+&lt;text x="-80.917px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">BACKLOG (OUTPUT)&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,110,92)">
 &lt;text x="-58.695px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Impact-analyzed&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,110,112)">
-&lt;text x="-72.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">specs in Jira, Linear&lt;tspan x="68.484px " y="0px ">,&lt;/tspan>&lt;/text>
+&lt;text x="-72.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">specs in Jira, Linear,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,110,132)">
 &lt;text x="-45.809px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">or equivalent&lt;/text>
@@ -364,7 +364,7 @@
 &lt;/g>
 &lt;g transform="matrix(16,0,0,16,-9.050781,0)">
 &lt;/g>
-&lt;text x="-440.941px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PUSH-BACK LOOP&lt;tspan x="-298.965px -294.52px " y="0px 0px "> —&lt;/tspan> specs that the implementation sprint ﬁnds missing context return here for the next spec sprint to clear&lt;/text>
+&lt;text x="-440.941px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PUSH-BACK LOOP — specs that the implementation sprint ﬁnds missing context return here for the next spec sprint to clear&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,800)">
@@ -372,7 +372,7 @@
 &lt;/g>
 &lt;g transform="matrix(16,0,0,16,-143.953125,0)">
 &lt;/g>
-&lt;text x="-440.984px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The implementation sprint consumes the ﬁnal spec without rerunning impact analysis on it. &lt;tspan x="203.5px 213.273px " y="0px 0px ">Th&lt;/tspan>e work has already been done.&lt;/text>
+&lt;text x="-440.984px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The implementation sprint consumes the ﬁnal spec without rerunning impact analysis on it. The work has already been done.&lt;/text>
 &lt;/g>
 &lt;/svg>
 &lt;/figure>&lt;/p>
@@ -476,14 +476,14 @@
 &lt;text x="-198.347px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Per-Change SDLC Flow&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,72)">
-&lt;text x="-420.363px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Six stages run left-to-right under structural validation. &lt;tspan x="-41.801px -32.027px " y="0px 0px ">Th&lt;/tspan>e Code Ontology stays current as a side ef&lt;tspan x="278.973px 283.418px " y="0px 0px ">fe&lt;/tspan>ct of every merge.&lt;/text>
+&lt;text x="-420.363px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Six stages run left-to-right under structural validation. The Code Ontology stays current as a side effect of every merge.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,900,110)">
 &lt;g transform="matrix(0.922727,0,0,1,64,6)">
 &lt;path d="M220,6L220,28C220,31.311 217.086,34 213.498,34L6.502,34C2.914,34 0,31.311 0,28L0,6C0,2.689 2.914,0 6.502,0L213.498,0C217.086,0 220,2.689 220,6Z" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;/g>
 &lt;g transform="matrix(0.922727,0,0,1,165.352364,28)">
-&lt;text x="-79.142px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="-68.15px -58.057px -46.182px -34.308px -22.433px -12.34px -0.465px 11.41px 22.402px 31.034px 35.8px 48.565px 58.377px 68.47px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">TRUCTURAL GATE&lt;/tspan>&lt;/text>
+&lt;text x="-79.142px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STRUCTURAL GATE&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,60,160)">
@@ -492,7 +492,7 @@
 &lt;path d="M200,12L200,28C200,34.623 194.623,40 188,40L12,40C5.377,40 0,34.623 0,28L0,12C0,5.377 5.377,0 12,0L188,0C194.623,0 200,5.377 200,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="28" width="200" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,26)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 19.906px 30.898px 43.663px 54.655px 59.42px " y="0px 0px 0px 0px 0px 0px ">TAGE 1&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STAGE 1&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Spec pulled&lt;/text>
@@ -511,7 +511,7 @@
 &lt;/g>
 &lt;path d="M14,172L186,172" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
 &lt;g transform="matrix(1,0,0,1,14,194)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">P&lt;tspan x="10.832px 22.547px 35.152px 46.867px 58.581px 70.296px 81.128px " y="0px 0px 0px 0px 0px 0px 0px ">RODUCES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PRODUCES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,216)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Impact-analyzed&lt;/text>
@@ -535,10 +535,10 @@
 &lt;path d="M200,12L200,28C200,34.623 194.623,40 188,40L12,40C5.377,40 0,34.623 0,28L0,12C0,5.377 5.377,0 12,0L188,0C194.623,0 200,5.377 200,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="28" width="200" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,26)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 19.906px 30.898px 43.663px 54.655px 59.42px " y="0px 0px 0px 0px 0px 0px ">TAGE 2&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STAGE 2&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Impact &lt;tspan x="51.586px 62.258px " y="0px 0px ">An&lt;/tspan>alysis&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Impact Analysis&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,80)">
 &lt;g transform="matrix(16,0,0,16,77.367188,0)">
@@ -558,14 +558,14 @@
 &lt;/g>
 &lt;path d="M14,172L186,172" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
 &lt;g transform="matrix(1,0,0,1,14,194)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">P&lt;tspan x="10.832px 22.547px 35.152px 46.867px 58.581px 70.296px 81.128px " y="0px 0px 0px 0px 0px 0px 0px ">RODUCES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PRODUCES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,216)">
 &lt;g transform="matrix(16,0,0,16,27.578125,0)">
 &lt;/g>
 &lt;g transform="matrix(16,0,0,16,32.023438,0)">
 &lt;/g>
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">V&lt;tspan x="9.797px 18.695px " y="0px 0px ">er&lt;/tspan>iﬁcation report,&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Veriﬁcation report,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,232)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">or push-back if&lt;/text>
@@ -586,10 +586,10 @@
 &lt;path d="M200,12L200,28C200,34.623 194.623,40 188,40L12,40C5.377,40 0,34.623 0,28L0,12C0,5.377 5.377,0 12,0L188,0C194.623,0 200,5.377 200,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="28" width="200" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,26)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 19.906px 30.898px 43.663px 54.655px 59.42px " y="0px 0px 0px 0px 0px 0px ">TAGE 3&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STAGE 3&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Coding &lt;tspan x="54.273px 64.945px " y="0px 0px ">Ag&lt;/tspan>ent&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Coding Agent&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,92)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Generates code under&lt;/text>
@@ -605,7 +605,7 @@
 &lt;/g>
 &lt;path d="M14,172L186,172" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
 &lt;g transform="matrix(1,0,0,1,14,194)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">P&lt;tspan x="10.832px 22.547px 35.152px 46.867px 58.581px 70.296px 81.128px " y="0px 0px 0px 0px 0px 0px 0px ">RODUCES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PRODUCES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,216)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Draft implementation,&lt;/text>
@@ -629,7 +629,7 @@
 &lt;path d="M200,12L200,28C200,34.623 194.623,40 188,40L12,40C5.377,40 0,34.623 0,28L0,12C0,5.377 5.377,0 12,0L188,0C194.623,0 200,5.377 200,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="28" width="200" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,26)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 19.906px 30.898px 43.663px 54.655px 59.42px " y="0px 0px 0px 0px 0px 0px ">TAGE 4&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STAGE 4&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Developer review&lt;/text>
@@ -654,7 +654,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">agent&amp;apos;s audit trail.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,194)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">P&lt;tspan x="10.832px 22.547px 35.152px 46.867px 58.581px 70.296px 81.128px " y="0px 0px 0px 0px 0px 0px 0px ">RODUCES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PRODUCES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,216)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Code ready for PR&lt;/text>
@@ -672,10 +672,10 @@
 &lt;path d="M200,12L200,28C200,34.623 194.623,40 188,40L12,40C5.377,40 0,34.623 0,28L0,12C0,5.377 5.377,0 12,0L188,0C194.623,0 200,5.377 200,12Z" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;rect x="0" y="28" width="200" height="12" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;g transform="matrix(1,0,0,1,14,26)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 19.906px 30.898px 43.663px 54.655px 59.42px " y="0px 0px 0px 0px 0px 0px ">TAGE 5&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STAGE 5&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">PR V&lt;tspan x="36.164px 45.062px " y="0px 0px ">al&lt;/tspan>idation&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">PR Validation&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,80)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Agent&lt;/text>
@@ -698,13 +698,13 @@
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,194)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">P&lt;tspan x="10.832px 22.547px 35.152px 46.867px 58.581px 70.296px 81.128px " y="0px 0px 0px 0px 0px 0px 0px ">RODUCES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PRODUCES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,216)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Pass or fail.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,232)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">A&lt;tspan x="10.969px 15.414px " y="0px 0px "> f&lt;/tspan>ailing merge is&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">A failing merge is&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,248)">
 &lt;g transform="matrix(16,0,0,16,103.117188,0)">
@@ -726,7 +726,7 @@
 &lt;path d="M200,12L200,28C200,34.623 194.623,40 188,40L12,40C5.377,40 0,34.623 0,28L0,12C0,5.377 5.377,0 12,0L188,0C194.623,0 200,5.377 200,12Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="28" width="200" height="12" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,14,26)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">S&lt;tspan x="10.992px 19.906px 30.898px 43.663px 54.655px 59.42px " y="0px 0px 0px 0px 0px 0px ">TAGE 6&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STAGE 6&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Merge + KG Sync&lt;/text>
@@ -735,17 +735,17 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Merge lands.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,110)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">KG Sync &lt;tspan x="66.703px 77.375px " y="0px 0px ">Ag&lt;/tspan>ent&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">KG Sync Agent&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,128)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">updates the Code&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,146)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology&lt;tspan x="62.859px " y="0px ">.&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology.&lt;/text>
 &lt;/g>
 &lt;path d="M14,172L186,172" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
 &lt;g transform="matrix(1,0,0,1,14,194)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">P&lt;tspan x="10.832px 22.547px 35.152px 46.867px 58.581px 70.296px 81.128px " y="0px 0px 0px 0px 0px 0px 0px ">RODUCES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PRODUCES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,216)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Updated graph.&lt;/text>
@@ -762,7 +762,7 @@
 &lt;path d="M134.815,431.151L139,422L143.81,430.838L134.815,431.151Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
 &lt;path d="M1310,426C1309.667,482.333 1243.333,484.667 730,491C252.603,483.641 145.316,484.267 139.25,429.196" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;stroke-dasharray:5,3;"/>
 &lt;g transform="matrix(1,0,0,1,704,516)">
-&lt;text x="-271.992px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">KG Sync loops back: the graph stays current as a side ef&lt;tspan x="130.602px 135.047px " y="0px 0px ">fe&lt;/tspan>ct of every merge.&lt;/text>
+&lt;text x="-271.992px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">KG Sync loops back: the graph stays current as a side effect of every merge.&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,693,575)">
@@ -883,7 +883,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">O&lt;/text>
 &lt;g transform="matrix(1,0,0,1,8.721,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">N&lt;tspan x="8.109px 14.993px 23.714px 30.598px 39.319px 48.041px 55.543px 58.764px 66.873px 74.982px 82.484px 89.368px 98.089px 106.198px 109.419px 117.528px 125.637px 133.139px 136.36px 139.581px 142.802px 150.911px 158.413px 165.915px 173.416px 176.637px 183.522px 191.63px 199.132px 202.354px 210.462px 218.571px 227.292px 237.84px 244.724px 252.226px 260.335px 269.056px 276.558px 279.779px 288.5px 296.609px 304.718px 312.22px 320.329px 323.55px 331.659px 339.767px 347.876px 355.985px 363.487px 371.596px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">TOLOGY CUSTODIANS · KEEP THE KNOWLEDGE GRAPH CURRENT&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">NTOLOGY CUSTODIANS · KEEP THE KNOWLEDGE GRAPH CURRENT&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1020,7 +1020,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">I&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,-93.469,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">N&lt;tspan x="8.086px 14.949px 22.429px 31.128px 39.215px 47.301px 54.164px 61.644px 69.73px 72.93px 81.016px 88.496px 91.695px 98.557px 106.644px 114.124px 117.323px 125.41px 133.497px 140.977px 147.84px 156.539px 164.626px 167.825px 175.912px 183.999px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">TEGRATED BY THE CUSTODIANS&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">NTEGRATED BY THE CUSTODIANS&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1129,7 +1129,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">F&lt;/text>
 &lt;g transform="matrix(1,0,0,1,6.884,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="8.721px 16.83px 24.939px 28.767px 35.651px 43.76px 51.262px 58.764px 66.873px 70.094px 78.203px 86.312px 95.033px 105.58px 112.465px 119.967px 128.075px 136.797px 144.299px 147.52px 156.241px 164.35px 172.459px 179.96px 188.069px 191.29px 194.512px 197.733px 205.842px 213.95px 222.672px 230.174px 237.675px 241.504px 248.388px 251.609px 259.718px 267.827px 275.329px 283.437px 286.659px 289.88px 293.101px 302.429px 310.538px 318.647px 326.755px 329.977px 338.085px 345.587px 349.415px 357.524px 365.026px 373.135px 381.244px 389.353px 397.462px 404.346px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UR-LAYER KNOWLEDGE GRAPH · CROSS-LINKED · MACHINE-READABLE&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">OUR-LAYER KNOWLEDGE GRAPH · CROSS-LINKED · MACHINE-READABLE&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1238,7 +1238,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:9px;fill:var(--se-panel-stroke,#9ca3af);">by Engineering&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,20.188,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:9px;fill:var(--se-panel-stroke,#9ca3af);">Te&lt;tspan x="10.504px " y="0px ">a&lt;/tspan>m&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:9px;fill:var(--se-panel-stroke,#9ca3af);">Team&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1248,7 +1248,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">·&lt;/text>
 &lt;g transform="matrix(1,0,0,1,3.221,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">A&lt;tspan x="2.818px 10.927px 19.648px 27.15px 35.259px 42.143px 45.365px 52.249px 59.133px 66.635px 74.137px 81.021px 84.242px 92.351px 100.46px 108.569px 116.071px 119.292px 126.176px 134.285px 141.787px 145.008px 151.892px 160.613px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">GENT FLEET RUNS THE LOOP&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">AGENT FLEET RUNS THE LOOP&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1256,7 +1256,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">·&lt;/text>
 &lt;g transform="matrix(1,0,0,1,3.221,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">G&lt;tspan x="3.221px 11.942px 20.051px 28.16px 35.662px 43.771px 46.992px 53.876px 61.378px 68.88px 76.989px 84.491px 87.712px 95.821px 104.542px 112.651px 119.535px 127.037px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RAPH FEEDS CONTEXT&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">GRAPH FEEDS CONTEXT&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1264,7 +1264,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">·&lt;/text>
 &lt;g transform="matrix(1,0,0,1,3.221,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">M&lt;tspan x="3.221px 12.549px 20.658px 28.96px 36.269px 39.49px 46.374px 53.258px 61.979px 72.527px 80.029px 83.25px 86.471px 94.58px 98.612px 105.303px 113.412px 121.521px 129.629px 136.514px 143.398px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ANY FLOWS IN PARALLEL&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">MANY FLOWS IN PARALLEL&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1272,7 +1272,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">P&lt;/text>
 &lt;g transform="matrix(1,0,0,1,7.502,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">E&lt;tspan x="7.502px 15.611px 19.439px 27.548px 35.656px 43.765px 51.874px 60.595px 68.097px 71.318px 78.82px 86.929px 93.813px 101.922px 105.143px 112.028px 118.912px 127.633px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">R-CHANGE SDLC FLOW&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">ER-CHANGE SDLC FLOW&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1534,7 +1534,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">A&lt;/text>
 &lt;g transform="matrix(1,0,0,1,8.109,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">G&lt;tspan x="8.721px 16.223px 24.332px 31.216px 34.437px 42.546px 50.655px 58.157px 65.041px 73.762px 81.871px 85.092px 93.201px 101.309px 108.811px 116.92px 120.141px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ENT CUSTODIANSHIP&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">GENT CUSTODIANSHIP&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1542,7 +1542,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">·&lt;/text>
 &lt;g transform="matrix(1,0,0,1,3.221,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">D&lt;tspan x="3.221px 11.33px 18.832px 26.334px 33.836px 40.72px 49.441px 56.943px 64.445px 72.554px 80.056px 83.277px 91.998px 99.5px 107.002px 115.111px 122.613px 130.115px 137.617px 140.838px 147.722px 155.831px 163.333px 166.554px 173.438px 180.322px 187.824px 195.326px 202.21px 205.432px 212.316px 220.425px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">EVELOPERS OVERSEE THE FLEET FROM&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">DEVELOPERS OVERSEE THE FLEET FROM&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1550,7 +1550,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">I&lt;/text>
 &lt;g transform="matrix(1,0,0,1,3.221,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">M&lt;tspan x="9.328px 16.83px 24.939px 33.048px 39.932px 43.153px 51.262px 59.371px 67.48px 74.364px 81.866px 89.368px 92.589px 100.091px 103.312px 110.197px 118.306px 126.414px 135.136px 143.244px 151.966px 160.074px 163.296px 170.797px 178.906px 182.127px 189.629px 197.738px 204.622px 207.844px 215.952px 224.061px 230.945px 234.167px 242.888px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PACT ANALYSIS THROUGH PR VALIDATION&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-text-secondary,#4b5563);">MPACT ANALYSIS THROUGH PR VALIDATION&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1624,7 +1624,7 @@
 &lt;g>
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10.5px;fill:var(--se-text-secondary,#4b5563);">L&lt;/text>
 &lt;g transform="matrix(1,0,0,1,6.54,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10.5px;fill:var(--se-text-secondary,#4b5563);">E&lt;tspan x="7.129px 15.422px 22.552px 30.261px " y="0px 0px 0px 0px ">GEND&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:10.5px;fill:var(--se-text-secondary,#4b5563);">EGEND&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/g>
@@ -1726,7 +1726,7 @@
 &lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 &lt;svg viewBox="0 0 1400 940" preserveAspectRatio="xMidYMid meet" width="1400px" height="940px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
 &lt;g transform="matrix(1,0,0,1,700,44)">
-&lt;text x="-229.797px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Three-Layer T&lt;tspan x="28.059px 44.744px " y="0px 0px ">ea&lt;/tspan>m Structure&lt;/text>
+&lt;text x="-229.797px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Three-Layer Team Structure&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,72)">
 &lt;text x="-380.664px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Custodians own the graphs. Implementation consumes the specs. Enablement supports both from beneath.&lt;/text>
@@ -1736,7 +1736,7 @@
 &lt;path d="M280,14L280,206C280,213.727 273.727,220 266,220L14,220C6.273,220 0,213.727 0,206L0,14C0,6.273 6.273,0 14,0L266,0C273.727,0 280,6.273 280,14Z" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;rect x="266" y="0" width="14" height="220" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;g transform="matrix(1,0,0,1,22,30)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">TO&lt;tspan x="22.578px 33.288px 38.053px 47.272px 57.084px 68.076px 79.068px " y="0px 0px 0px 0px 0px 0px 0px ">P LAYER&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">TOP LAYER&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Custodianship&lt;/text>
@@ -1747,7 +1747,7 @@
 &lt;g transform="matrix(1,0,0,1,22,118)">
 &lt;path d="M230,8L230,32C230,36.415 226.415,40 222,40L8,40C3.585,40 0,36.415 0,32L0,8C0,3.585 3.585,0 8,0L222,0C226.415,0 230,3.585 230,8Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,16)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">C&lt;tspan x="11.795px 22.707px 34.501px 45.413px 57.208px 69.002px " y="0px 0px 0px 0px 0px 0px ">ADENCE&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">CADENCE&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,34)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Spec sprint cadence&lt;/text>
@@ -1756,7 +1756,7 @@
 &lt;g transform="matrix(1,0,0,1,22,168)">
 &lt;path d="M230,8L230,32C230,36.415 226.415,40 222,40L8,40C3.585,40 0,36.415 0,32L0,8C0,3.585 3.585,0 8,0L222,0C226.415,0 230,3.585 230,8Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,16)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">S&lt;tspan x="10.912px 15.597px 25.611px 30.296px 42.091px " y="0px 0px 0px 0px 0px ">IZING&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">SIZING&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,34)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Per workstream, client-supplied&lt;/text>
@@ -1802,7 +1802,7 @@
 &lt;g transform="matrix(1,0,0,1,735,0)">
 &lt;path d="M230,10L230,66C230,71.519 225.519,76 220,76L10,76C4.481,76 0,71.519 0,66L0,10C0,4.481 4.481,0 10,0L220,0C225.519,0 230,4.481 230,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,24)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Engineering &lt;tspan x="89.562px 97.562px 106.461px " y="0px 0px 0px ">Tea&lt;/tspan>m&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Engineering Team&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,44)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Custodian of the&lt;/text>
@@ -1813,7 +1813,7 @@
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,300,148)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">T&lt;tspan x="10.013px 21.808px 26.493px 37.405px 42.091px 51.229px 60.961px 71.873px 82.785px 94.58px 99.265px 110.177px 121.972px 134.657px 146.452px 158.246px 170.041px 180.953px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HIS LAYER PRODUCES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">THIS LAYER PRODUCES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,300,174)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">The four ontologies, kept current. Impact-analyzed specs at spec sprint cadence.&lt;/text>
@@ -1841,7 +1841,7 @@
 &lt;path d="M280,14L280,206C280,213.727 273.727,220 266,220L14,220C6.273,220 0,213.727 0,206L0,14C0,6.273 6.273,0 14,0L266,0C273.727,0 280,6.273 280,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="266" y="0" width="14" height="220" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,22,30)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">M&lt;tspan x="13.648px 18.413px 30.288px 42.163px 51.381px 62.373px 67.138px 76.357px 86.169px 97.161px 108.153px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">IDDLE LAYER&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">MIDDLE LAYER&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Implementation&lt;/text>
@@ -1852,7 +1852,7 @@
 &lt;g transform="matrix(1,0,0,1,22,118)">
 &lt;path d="M230,8L230,32C230,36.415 226.415,40 222,40L8,40C3.585,40 0,36.415 0,32L0,8C0,3.585 3.585,0 8,0L222,0C226.415,0 230,3.585 230,8Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,16)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">C&lt;tspan x="11.795px 22.707px 34.501px 45.413px 57.208px 69.002px " y="0px 0px 0px 0px 0px 0px ">ADENCE&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">CADENCE&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,34)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Regular sprint cadence&lt;/text>
@@ -1861,7 +1861,7 @@
 &lt;g transform="matrix(1,0,0,1,22,168)">
 &lt;path d="M230,8L230,32C230,36.415 226.415,40 222,40L8,40C3.585,40 0,36.415 0,32L0,8C0,3.585 3.585,0 8,0L222,0C226.415,0 230,3.585 230,8Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,16)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">S&lt;tspan x="10.912px 15.597px 25.611px 30.296px 42.091px " y="0px 0px 0px 0px 0px ">IZING&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">SIZING&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,34)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Full-time per workstream&lt;/text>
@@ -1874,7 +1874,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Implementation Engineers&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,44)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Consume impact-analyzed specs. W&lt;tspan x="259.375px 264.703px " y="0px 0px ">ri&lt;/tspan>te code (or in Stage 4,&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Consume impact-analyzed specs. Write code (or in Stage 4,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,62)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">write the agents that write code) under the four-ontology gates.&lt;/text>
@@ -1890,7 +1890,7 @@
 &lt;/g>
 &lt;g transform="matrix(16,0,0,16,171.296875,0)">
 &lt;/g>
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">W&lt;tspan x="14.82px 20.148px " y="0px 0px ">ri&lt;/tspan>te workstream-speciﬁc agents for pattern-based&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Write workstream-speciﬁc agents for pattern-based&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,62)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">code generation under the spec sprint&amp;apos;s direction.&lt;/text>
@@ -1898,7 +1898,7 @@
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,300,148)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T&lt;tspan x="10.013px 21.808px 26.493px 37.405px 42.091px 51.229px 60.961px 71.873px 82.785px 94.58px 99.265px 110.177px 121.972px 134.657px 146.452px 158.246px 170.041px 180.953px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HIS LAYER PRODUCES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">THIS LAYER PRODUCES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,300,174)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Code merged to master under structural validation. KG Sync updates the Code Ontology on every merge.&lt;/text>
@@ -1930,7 +1930,7 @@
 &lt;path d="M280,14L280,206C280,213.727 273.727,220 266,220L14,220C6.273,220 0,213.727 0,206L0,14C0,6.273 6.273,0 14,0L266,0C273.727,0 280,6.273 280,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="266" y="0" width="14" height="220" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,22,30)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">B&lt;tspan x="10.992px 23.757px 33.851px 43.663px 56.428px 70.076px 74.842px 84.06px 93.872px 104.864px 115.856px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">OTTOM LAYER&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">BOTTOM LAYER&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,64)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">Enablement&lt;/text>
@@ -1941,7 +1941,7 @@
 &lt;g transform="matrix(1,0,0,1,22,118)">
 &lt;path d="M230,8L230,32C230,36.415 226.415,40 222,40L8,40C3.585,40 0,36.415 0,32L0,8C0,3.585 3.585,0 8,0L222,0C226.415,0 230,3.585 230,8Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,16)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">C&lt;tspan x="11.795px 22.707px 34.501px 45.413px 57.208px 69.002px " y="0px 0px 0px 0px 0px 0px ">ADENCE&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">CADENCE&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,34)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Quarterly + on trigger&lt;/text>
@@ -1950,7 +1950,7 @@
 &lt;g transform="matrix(1,0,0,1,22,168)">
 &lt;path d="M230,8L230,32C230,36.415 226.415,40 222,40L8,40C3.585,40 0,36.415 0,32L0,8C0,3.585 3.585,0 8,0L222,0C226.415,0 230,3.585 230,8Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,16)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">S&lt;tspan x="10.912px 15.597px 25.611px 30.296px 42.091px " y="0px 0px 0px 0px 0px ">IZING&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">SIZING&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,34)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Fractional across portfolio&lt;/text>
@@ -1960,7 +1960,7 @@
 &lt;g>
 &lt;path d="M230,10L230,66C230,71.519 225.519,76 220,76L10,76C4.481,76 0,71.519 0,66L0,10C0,4.481 4.481,0 10,0L220,0C225.519,0 230,4.481 230,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,24)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Chief &lt;tspan x="40.922px 51.594px " y="0px 0px ">Ar&lt;/tspan>chitect&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Chief Architect&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,44)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Cross-ontology governance;&lt;/text>
@@ -2000,7 +2000,7 @@
 &lt;g transform="matrix(1,0,0,1,735,0)">
 &lt;path d="M230,10L230,66C230,71.519 225.519,76 220,76L10,76C4.481,76 0,71.519 0,66L0,10C0,4.481 4.481,0 10,0L220,0C225.519,0 230,4.481 230,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,24)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Knowledge &lt;tspan x="82.742px 93.414px " y="0px 0px ">Ag&lt;/tspan>ent Owner&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Knowledge Agent Owner&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,44)">
 &lt;g transform="matrix(16,0,0,16,46.257812,0)">
@@ -2015,17 +2015,17 @@
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,300,148)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T&lt;tspan x="10.013px 21.808px 26.493px 37.405px 42.091px 51.229px 60.961px 71.873px 82.785px 94.58px 99.265px 110.177px 121.972px 134.657px 145.569px 150.254px 162.049px 172.961px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HIS LAYER PROVIDES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">THIS LAYER PROVIDES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,300,174)">
 &lt;g transform="matrix(16,0,0,16,456.5625,0)">
 &lt;/g>
 &lt;g transform="matrix(16,0,0,16,461.007812,0)">
 &lt;/g>
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Customization of Breeze.AI / &lt;tspan x="206.328px 217px " y="0px 0px ">AS&lt;/tspan>IMOV&lt;tspan x="267.094px 271.539px " y="0px 0px ">. &lt;/tspan>Initial graph setup. &lt;tspan x="410.305px 420.977px " y="0px 0px ">Ag&lt;/tspan>ent ﬂeet operations. Managed support cadence.&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Customization of Breeze.AI / ASIMOV. Initial graph setup. Agent ﬂeet operations. Managed support cadence.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,300,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Supports the client&amp;apos;s custodians; does not own the graphs. &lt;tspan x="417.25px 426.438px 429.992px " y="0px 0px 0px ">Tie&lt;/tspan>red: Light / Medium / Deep.&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Supports the client&amp;apos;s custodians; does not own the graphs. Tiered: Light / Medium / Deep.&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;/svg>
@@ -2071,10 +2071,10 @@
 &lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 &lt;svg viewBox="0 0 1400 780" preserveAspectRatio="xMidYMid meet" width="1400px" height="780px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
 &lt;g transform="matrix(1,0,0,1,700,44)">
-&lt;text x="-321.731px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Fractional &lt;tspan x="-171.13px -149.465px " y="0px 0px ">Al&lt;/tspan>location: Where the W&lt;tspan x="173.342px 191.667px " y="0px 0px ">or&lt;/tspan>k Moves&lt;/text>
+&lt;text x="-321.731px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Fractional Allocation: Where the Work Moves&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,72)">
-&lt;text x="-491.914px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">AI compresses coding ef&lt;tspan x="-317px -312.555px " y="0px 0px ">fo&lt;/tspan>rt. Upstream specialist work expands. &lt;tspan x="-33.617px -23.844px " y="0px 0px ">Th&lt;/tspan>e materialized graph lets the same specialists cover more workstreams.&lt;/text>
+&lt;text x="-491.914px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">AI compresses coding effort. Upstream specialist work expands. The materialized graph lets the same specialists cover more workstreams.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,280,118)">
 &lt;rect x="0" y="0" width="14" height="14" style="fill:var(--se-text-secondary,#4b5563);"/>
@@ -2104,10 +2104,10 @@
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,60,160)">
 &lt;g transform="matrix(1,0,0,1,0,22)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">P&lt;tspan x="10.912px 22.707px 33.618px 39.187px 50.098px 54.784px 59.469px 74.811px 87.496px 99.291px 110.202px 119.341px 132.026px 142.938px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RE-AI WORKLOAD&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">PRE-AI WORKLOAD&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,0,46)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Big implementation chunk. Upstream specialist work small or one-of&lt;tspan x="479.914px 484.359px " y="0px 0px ">f.&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Big implementation chunk. Upstream specialist work small or one-off.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,0,68)">
 &lt;rect x="0" y="0" width="896" height="80" style="fill:var(--se-text-secondary,#4b5563);"/>
@@ -2149,7 +2149,7 @@
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,60,328)">
 &lt;g transform="matrix(1,0,0,1,0,22)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">A&lt;tspan x="10.912px 15.597px 21.165px 32.077px 42.989px 53.901px 58.586px 69.498px 79.512px 90.423px 102.218px 106.903px 122.245px 134.93px 146.725px 157.637px 166.775px 179.461px 190.373px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">I-ASSISTED WORKLOAD&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">AI-ASSISTED WORKLOAD&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,0,46)">
 &lt;g transform="matrix(16,0,0,16,249,0)">
@@ -2210,10 +2210,10 @@
 &lt;g transform="matrix(1,0,0,1,60,540)">
 &lt;path d="M1280,14L1280,206C1280,213.727 1273.727,220 1266,220L14,220C6.273,220 0,213.727 0,206L0,14C0,6.273 6.273,0 14,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
 &lt;g transform="matrix(1,0,0,1,22,32)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">F&lt;tspan x="10.013px 21.808px 32.72px 44.515px 54.528px 59.213px 71.899px 83.693px 94.605px 103.158px 107.843px 118.755px 129.667px 140.579px 152.373px 157.059px 167.971px 177.109px 181.794px 192.706px 202.72px 213.632px 218.317px 229.229px 241.023px 253.709px 264.621px 277.306px 288.218px 292.028px 301.76px 311.493px 315.897px 325.91px 337.705px 342.39px 355.075px 367.761px 378.673px 390.467px 395.153px 406.064px 418.75px 423.435px 435.23px 445.243px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">RACTIONAL SPECIALISTS ENGAGE AT TRIGGER POINTS&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">FRACTIONAL SPECIALISTS ENGAGE AT TRIGGER POINTS&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,56)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Sized to the deliverable, not to a calendar quarter&lt;tspan x="348.68px 353.125px " y="0px 0px ">. &lt;/tspan>Continuous re-engagement across the lifecycle, with low re-entry cost thanks to the materialized graph.&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Sized to the deliverable, not to a calendar quarter. Continuous re-engagement across the lifecycle, with low re-entry cost thanks to the materialized graph.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,86)">
 &lt;g>
@@ -2244,13 +2244,13 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Agent Developer&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,44)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Impact &lt;tspan x="51.586px 62.258px " y="0px 0px ">An&lt;/tspan>alysis &lt;tspan x="114.734px 125.406px " y="0px 0px ">Ag&lt;/tspan>ent&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Impact Analysis Agent&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,60)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">PR V&lt;tspan x="36.164px 45.062px " y="0px 0px ">al&lt;/tspan>idation &lt;tspan x="99.336px 110.008px " y="0px 0px ">Ag&lt;/tspan>ent&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">PR Validation Agent&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,76)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">KG Sync &lt;tspan x="66.703px 77.375px " y="0px 0px ">Ag&lt;/tspan>ent&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">KG Sync Agent&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,96)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Specialist depth&lt;/text>
@@ -2259,7 +2259,7 @@
 &lt;g transform="matrix(1,0,0,1,500,0)">
 &lt;path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,24)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Data &lt;tspan x="37.367px 48.039px " y="0px 0px ">Ar&lt;/tspan>chitect&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Data Architect&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,44)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Data model design&lt;/text>
@@ -2277,7 +2277,7 @@
 &lt;g transform="matrix(1,0,0,1,750,0)">
 &lt;path d="M240,10L240,100C240,105.519 235.519,110 230,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L230,0C235.519,0 240,4.481 240,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,24)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">DevOps &lt;tspan x="61.367px 72.039px " y="0px 0px ">Ar&lt;/tspan>chitect&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">DevOps Architect&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,44)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">CI/CD ontology gates&lt;/text>
@@ -2295,7 +2295,7 @@
 &lt;g transform="matrix(1,0,0,1,1000,0)">
 &lt;path d="M236,10L236,100C236,105.519 231.519,110 226,110L10,110C4.481,110 0,105.519 0,100L0,10C0,4.481 4.481,0 10,0L226,0C231.519,0 236,4.481 236,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,14,24)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">UX &lt;tspan x="25.797px 36.469px " y="0px 0px ">Ar&lt;/tspan>chitect&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">UX Architect&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,14,44)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Design system curation&lt;/text>
@@ -2631,10 +2631,10 @@
 &lt;text x="-302.527px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The FDE Proﬁle and the Substitute Pattern&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,72)">
-&lt;text x="-404.812px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Part architect, part product owner&lt;tspan x="-169.133px -164.688px " y="0px 0px ">, &lt;/tspan>part designer&lt;tspan x="-67.727px -63.281px -59.117px -49.344px " y="0px 0px 0px 0px ">. Th&lt;/tspan>e single-person FDE is aspirational. &lt;tspan x="216.281px 226.055px " y="0px 0px ">Th&lt;/tspan>e substitute is the norm.&lt;/text>
+&lt;text x="-404.812px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Part architect, part product owner, part designer. The single-person FDE is aspirational. The substitute is the norm.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,699.84,103)">
-&lt;text x="-229.903px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T&lt;tspan x="-219.81px -207.935px -196.943px -192.178px -181.186px -169.311px -156.546px -146.453px -141.687px -132.469px -121.477px -116.712px -100.392px -95.908px -85.814px -73.94px -62.065px -51.073px -40.081px -35.316px -23.441px -10.676px 2.972px 13.964px 24.956px 35.05px 46.041px 57.916px 69.791px 74.556px 85.548px 96.54px 101.305px 114.953px 126.828px 137.82px 147.632px 152.397px 165.163px 176.155px 187.146px 199.021px 208.24px 219.231px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE PROFILE — THREE COMPETENCIES MUST OVERLAP&lt;/tspan>&lt;/text>
+&lt;text x="-229.903px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">THE PROFILE — THREE COMPETENCIES MUST OVERLAP&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,340)">
 &lt;g transform="matrix(1,-0,-0,1,-700,-340)">
@@ -2642,7 +2642,7 @@
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,699.84,617)">
-&lt;text x="-315.916px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T&lt;tspan x="-305.823px -293.948px -282.956px -278.191px -267.199px -255.324px -244.332px -233.34px -223.247px -218.482px -208.388px -196.514px -186.42px -175.428px -170.663px -160.851px -151.039px -140.945px -130.852px -119.86px -107.985px -96.11px -91.345px -75.025px -70.26px -54.838px -42.964px -31.972px -20.097px -15.332px -3.457px 9.308px 14.074px 25.065px 29.831px 41.705px 54.471px 63.689px 74.681px 79.446px 90.438px 101.43px 113.305px 124.297px 137.062px 148.937px 153.702px 165.577px 178.342px 189.334px 200.326px 212.2px 223.192px 227.083px 238.075px 247.293px 255.925px 260.41px 270.503px 282.378px 294.252px 305.244px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE SUBSTITUTE PATTERN — WHEN NO SINGLE PERSON COVERS ALL THREE&lt;/tspan>&lt;/text>
+&lt;text x="-315.916px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">THE SUBSTITUTE PATTERN — WHEN NO SINGLE PERSON COVERS ALL THREE&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,60,620)">
 &lt;g transform="matrix(1,0,0,1,0,14)">
@@ -2692,7 +2692,7 @@
 &lt;text x="-4.449px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">2&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,76,50)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">T&lt;tspan x="8.898px 20.453px " y="0px 0px ">wo&lt;/tspan>-person substitute&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Two-person substitute&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,75,71)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Common. One hybrid + one specialist.&lt;/text>
@@ -3016,7 +3016,7 @@
 &lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 &lt;svg viewBox="0 0 1400 760" preserveAspectRatio="xMidYMid meet" width="1400px" height="760px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
 &lt;g transform="matrix(1,0,0,1,700,44)">
-&lt;text x="-253.945px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three-Y&lt;tspan x="-143.892px -127.207px " y="0px 0px ">ea&lt;/tspan>r T&lt;tspan x="-74.399px -56.074px " y="0px 0px ">ot&lt;/tspan>al Cost of Ownership&lt;/text>
+&lt;text x="-253.945px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three-Year Total Cost of Ownership&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,72)">
 &lt;text x="-367.762px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Conventional cost grows under tech debt drag. SE-driven cost falls as the knowledge asset compounds.&lt;/text>
@@ -3049,7 +3049,7 @@
 &lt;/g>
 &lt;path d="M-5,95L0,95" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,-12,101)">
-&lt;text x="-25.516px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">1&lt;tspan x="-17.797px -8.898px " y="0px 0px ">12&lt;/tspan>&lt;/text>
+&lt;text x="-25.516px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">112&lt;/text>
 &lt;/g>
 &lt;path d="M-5,190L0,190" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,-12,196)">
@@ -3067,13 +3067,13 @@
 &lt;path d="M600,380L600,386" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;path d="M1000,380L1000,386" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
 &lt;g transform="matrix(1,0,0,1,200,408)">
-&lt;text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Y&lt;tspan x="-13.633px -4.734px " y="0px 0px ">ea&lt;/tspan>r 1&lt;/text>
+&lt;text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Year 1&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,600,408)">
-&lt;text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Y&lt;tspan x="-13.633px -4.734px " y="0px 0px ">ea&lt;/tspan>r 2&lt;/text>
+&lt;text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Year 2&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,1000,408)">
-&lt;text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Y&lt;tspan x="-13.633px -4.734px " y="0px 0px ">ea&lt;/tspan>r 3&lt;/text>
+&lt;text x="-22.836px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Year 3&lt;/text>
 &lt;/g>
 &lt;path d="M200,380L200,360L600,280L1000,140L1000,380L200,380Z" style="fill:var(--se-accent-fill,#FDE8DD);fill-opacity:0.85;fill-rule:nonzero;"/>
 &lt;g transform="matrix(1,0,0,1,800,296)">
@@ -3095,7 +3095,7 @@
 &lt;circle cx="1000" cy="203" r="7" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;g transform="matrix(1,0,0,1,200,42)">
 &lt;g transform="matrix(1,0,0,1,-104,0)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">Higher &lt;tspan x="51.297px 60.5px 69.398px " y="0px 0px 0px ">Yea&lt;/tspan>r 1 cost&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">Higher Year 1 cost&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,-104,16)">
 &lt;g transform="matrix(16,0,0,16,132.085938,0)">
@@ -3109,7 +3109,7 @@
 &lt;g transform="matrix(1,0,0,1,890,-12)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Conventional accelerates&lt;/text>
 &lt;g transform="matrix(1,0,0,1,0,16)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">tech debt drag in &lt;tspan x="123.359px 132.562px 141.461px " y="0px 0px 0px ">Yea&lt;/tspan>r 3&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">tech debt drag in Year 3&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;path d="M1000,22L1000,-2" style="fill:none;fill-rule:nonzero;stroke:var(--se-text-secondary,#4b5563);stroke-width:1px;stroke-dasharray:3,2;"/>
@@ -3128,14 +3128,14 @@
 &lt;g transform="matrix(1,0,0,1,60,620)">
 &lt;path d="M1280,14L1280,106C1280,113.727 1273.727,120 1266,120L14,120C6.273,120 0,113.727 0,106L0,14C0,6.273 6.273,0 14,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
 &lt;g transform="matrix(1,0,0,1,22,34)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">C&lt;tspan x="11.875px 23.749px 37.398px 49.272px 58.491px 68.303px 78.396px 83.162px 94.153px 105.145px 109.911px 119.129px 124.777px 135.769px 146.761px 157.753px 169.627px 174.393px 186.267px 199.033px 212.681px 222.493px 233.485px 245.36px 250.125px 261.117px 273.882px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">UMULATIVE 3-YEAR COMPARISON&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">CUMULATIVE 3-YEAR COMPARISON&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,60,52)">
 &lt;g transform="matrix(1,0,0,1,0,32)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text-secondary,#4b5563);">350&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,100,22)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">C&lt;tspan x="11.795px 24.48px 36.275px 47.187px 58.098px 69.893px 79.907px 84.592px 97.277px 109.072px 119.984px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">ONVENTIONAL&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">CONVENTIONAL&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,100,42)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">3-year cumulative cost&lt;/text>
@@ -3146,7 +3146,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-accent,#E94E1B);">280&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,100,22)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">S&lt;tspan x="10.912px 21.824px 27.392px 39.187px 50.981px 55.667px 66.578px 77.49px " y="0px 0px 0px 0px 0px 0px 0px 0px ">E-DRIVEN&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">SE-DRIVEN&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,100,42)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">3-year cumulative cost&lt;/text>
@@ -3157,7 +3157,7 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-accent,#E94E1B);">−20%&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,140,22)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">TO&lt;tspan x="22.418px 27.103px 36.687px 45.825px 54.963px 69.43px 74.115px 83.254px 95.939px 111.281px 122.192px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px "> −30% LOWER&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">TO −30% LOWER&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,140,42)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">cumulative cost; value compounds&lt;/text>
@@ -3254,7 +3254,7 @@
 &lt;circle cx="0" cy="0" r="84" style="fill:none;stroke:white;stroke-width:2px;"/>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,-0.16,29)">
-&lt;text x="-55.674px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">E&lt;tspan x="-44.682px -32.808px -21.816px -10.824px -1.606px 9.386px 23.034px 34.026px 45.901px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px ">NABLEMENT&lt;/tspan>&lt;/text>
+&lt;text x="-55.674px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">ENABLEMENT&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,0,60)">
 &lt;text x="-26.672px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-box-fill,#ffffff);">FIVE&lt;/text>
@@ -3273,16 +3273,16 @@
 &lt;text x="-47.562px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">Duty of Care&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,140,74)">
-&lt;text x="-88.789px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Maintains graph integrity&lt;tspan x="84.344px " y="0px ">,&lt;/tspan>&lt;/text>
+&lt;text x="-88.789px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Maintains graph integrity,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,140,92)">
-&lt;text x="-100.969px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">governance, agent behavior&lt;tspan x="96.523px " y="0px ">,&lt;/tspan>&lt;/text>
+&lt;text x="-100.969px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">governance, agent behavior,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,140,110)">
 &lt;text x="-56.488px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">ontology health.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,57,138)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,140,158)">
 &lt;text x="-95.168px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">4-ontology validation rules,&lt;/text>
@@ -3311,7 +3311,7 @@
 &lt;text x="-101.391px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">in expansion or wallet share.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,75,142)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,162)">
 &lt;text x="-96.051px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Custodial Council insulates&lt;/text>
@@ -3332,13 +3332,13 @@
 &lt;text x="-87.613px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Applies the methodology&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,92)">
-&lt;text x="-89.676px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">rigorously&lt;tspan x="-21.496px -17.051px " y="0px 0px ">, &lt;/tspan>without cutting&lt;/text>
+&lt;text x="-89.676px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">rigorously, without cutting&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,110)">
 &lt;text x="-114.719px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">corners under delivery pressure.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,75,142)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,162)">
 &lt;text x="-92.07px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Standard governance and&lt;/text>
@@ -3362,10 +3362,10 @@
 &lt;text x="-116.062px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">knowledge for competing clients,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,110)">
-&lt;text x="-99.461px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">structural separations apply&lt;tspan x="95.016px " y="0px ">.&lt;/tspan>&lt;/text>
+&lt;text x="-99.461px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">structural separations apply.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,75,142)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,162)">
 &lt;text x="-110.73px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Firewalls between engagement&lt;/text>
@@ -3380,7 +3380,7 @@
 &lt;path d="M320,14L320,30C320,37.727 313.727,44 306,44L14,44C6.273,44 0,37.727 0,30L0,14C0,6.273 6.273,0 14,0L306,0C313.727,0 320,6.273 320,14Z" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;rect x="0" y="30" width="320" height="14" style="fill:var(--se-text-secondary,#4b5563);"/>
 &lt;g transform="matrix(1,0,0,1,160,29)">
-&lt;text x="-81.805px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">Duty of T&lt;tspan x="-13.359px -7.133px " y="0px 0px ">ra&lt;/tspan>nsparency&lt;/text>
+&lt;text x="-81.805px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-box-fill,#ffffff);">Duty of Transparency&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,74)">
 &lt;text x="-101.395px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Provenance, audit trails, and&lt;/text>
@@ -3392,7 +3392,7 @@
 &lt;text x="-80.051px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">to the client by default.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,75,142)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">O&lt;tspan x="12.685px 23.597px 34.509px 46.304px 56.919px 66.932px 71.617px 84.303px 96.097px 107.892px 117.906px 122.591px 132.604px 143.516px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">PERATIONALIZED&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">OPERATIONALIZED&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,162)">
 &lt;text x="-124.949px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Audit trail in progressive autonomy;&lt;/text>
@@ -3419,10 +3419,10 @@
 &lt;!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 &lt;svg viewBox="0 0 1400 780" preserveAspectRatio="xMidYMid meet" width="1400px" height="780px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;" class="se-svg">
 &lt;g transform="matrix(1,0,0,1,700,44)">
-&lt;text x="-229.761px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three T&lt;tspan x="-121.934px -113.599px " y="0px 0px ">ie&lt;/tspan>rs of Managed Support&lt;/text>
+&lt;text x="-229.761px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Three Tiers of Managed Support&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,72)">
-&lt;text x="-525.936px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Dif&lt;tspan x="-506.663px -502.217px " y="0px 0px ">fe&lt;/tspan>rent clients want dif&lt;tspan x="-356.647px -352.202px " y="0px 0px ">fe&lt;/tspan>rent levels of engagement with the enablement work. Common path: Light&lt;/text>
+&lt;text x="-525.936px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Different clients want different levels of engagement with the enablement work. Common path: Light&lt;/text>
 &lt;text x="184.103px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text-secondary,#4b5563);">→&lt;/text>
 &lt;text x="199.828px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Medium&lt;/text>
 &lt;text x="261.18px" y="0px" style="font-family:'AppleSDGothicNeo-Regular', 'Apple SD Gothic Neo';font-size:16px;fill:var(--se-text-secondary,#4b5563);">→&lt;/text>
@@ -3441,11 +3441,11 @@
 &lt;text x="-20.021px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">2–4&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,59.92,50)">
-&lt;text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">H&lt;tspan x="-43.982px -33.74px -24.222px -14.704px -5.903px -2.161px 1.58px 5.322px 16.281px 26.523px 36.041px 44.112px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">OURS / MONTH&lt;/tspan>&lt;/text>
+&lt;text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">HOURS / MONTH&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W&lt;tspan x="15.342px 27.136px 37.751px 47.765px 51.864px 63.659px 75.453px 87.248px 91.933px 104.619px 116.413px 121.099px 132.893px 145.579px 156.491px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT ACCION DOES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT ACCION DOES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,226)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Quarterly health audit&lt;/text>
@@ -3458,7 +3458,7 @@
 &lt;/g>
 &lt;path d="M22,296L378,296" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
 &lt;g transform="matrix(1,0,0,1,22,324)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W&lt;tspan x="15.342px 27.136px 37.751px 47.765px 52.45px 62.463px 74.258px 85.17px 89.855px 101.65px 111.663px 116.349px 127.261px 139.055px 149.069px 153.754px 165.549px 178.234px 189.146px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT THE CLIENT DOES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT THE CLIENT DOES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,350)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">All operational ontology work&lt;/text>
@@ -3488,11 +3488,11 @@
 &lt;text x="-33.369px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">10–20&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,59.92,50)">
-&lt;text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">H&lt;tspan x="-43.982px -33.74px -24.222px -14.704px -5.903px -2.161px 1.58px 5.322px 16.281px 26.523px 36.041px 44.112px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">OURS / MONTH&lt;/tspan>&lt;/text>
+&lt;text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">HOURS / MONTH&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W&lt;tspan x="15.342px 27.136px 37.751px 47.765px 51.864px 63.659px 75.453px 87.248px 91.933px 104.619px 116.413px 121.099px 132.893px 145.579px 156.491px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT ACCION DOES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT ACCION DOES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,226)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Monthly ontology health checks&lt;/text>
@@ -3505,7 +3505,7 @@
 &lt;/g>
 &lt;path d="M22,296L378,296" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
 &lt;g transform="matrix(1,0,0,1,22,324)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W&lt;tspan x="15.342px 27.136px 37.751px 47.765px 52.45px 62.463px 74.258px 85.17px 89.855px 101.65px 111.663px 116.349px 127.261px 139.055px 149.069px 153.754px 165.549px 178.234px 189.146px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT THE CLIENT DOES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT THE CLIENT DOES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,350)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Day-to-day operational work&lt;/text>
@@ -3530,11 +3530,11 @@
 &lt;text x="-66.65px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-accent,#E94E1B);">Continuous&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,99.92,50)">
-&lt;text x="-82.018px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">E&lt;tspan x="-73.218px -62.258px -53.458px -44.657px -35.138px -25.62px -16.819px -7.301px -3.559px 0.182px 9.701px 13.442px 22.243px 31.762px 42.003px 45.517px 53.588px 62.388px 71.189px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">MBEDDED IN ENG TEAM&lt;/tspan>&lt;/text>
+&lt;text x="-82.018px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">EMBEDDED IN ENG TEAM&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,200)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W&lt;tspan x="15.342px 27.136px 37.751px 47.765px 51.864px 63.659px 75.453px 87.248px 91.933px 104.619px 116.413px 121.099px 132.893px 145.579px 156.491px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT ACCION DOES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT ACCION DOES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,226)">
 &lt;g transform="matrix(16,0,0,16,74.710938,0)">
@@ -3558,7 +3558,7 @@
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,324)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">W&lt;tspan x="15.342px 27.136px 37.751px 47.765px 52.45px 62.463px 74.258px 85.17px 89.855px 101.65px 111.663px 116.349px 127.261px 139.055px 149.069px 153.754px 165.549px 178.234px 189.146px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HAT THE CLIENT DOES&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text-secondary,#4b5563);">WHAT THE CLIENT DOES&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,22,350)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Strategic direction&lt;/text>
@@ -3576,7 +3576,7 @@
 &lt;g transform="matrix(1,0,0,1,60,580)">
 &lt;path d="M1280,14L1280,146C1280,153.727 1273.727,160 1266,160L14,160C6.273,160 0,153.727 0,146L0,14C0,6.273 6.273,0 14,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
 &lt;g transform="matrix(1,0,0,1,22,32)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">T&lt;tspan x="10.013px 21.808px 32.72px 37.405px 49.2px 61.885px 75.453px 89.022px 101.707px 113.502px 118.187px 131.755px 136.44px 149.126px 160.92px 170.653px 180.666px 185.351px 198.037px 209.831px 214.517px 224.249px 233.981px 243.994px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">HE COMMON MIGRATION PATH&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">THE COMMON MIGRATION PATH&lt;/text>
 &lt;/g>
 &lt;g>
 &lt;path d="M60,92L1220,92" style="fill:none;fill-rule:nonzero;"/>
@@ -3671,14 +3671,14 @@
 &lt;text x="-328.33px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Offboarding Doctrine: Four Commitments&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,700,72)">
-&lt;text x="-380.805px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The exit is real. &lt;tspan x="-268.156px -258.383px " y="0px 0px ">Th&lt;/tspan>e asset transfers cleanly&lt;tspan x="-78.141px -73.695px -69.531px -59.758px " y="0px 0px 0px 0px ">. Th&lt;/tspan>e of&lt;tspan x="-24.453px -20.008px " y="0px 0px ">fb&lt;/tspan>oarding doctrine is what makes the entry decision easy&lt;tspan x="376.359px " y="0px ">.&lt;/tspan>&lt;/text>
+&lt;text x="-380.805px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The exit is real. The asset transfers cleanly. The offboarding doctrine is what makes the entry decision easy.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,60,108)">
 &lt;path d="M320,14L320,106C320,113.727 313.727,120 306,120L14,120C6.273,120 0,113.727 0,106L0,14C0,6.273 6.273,0 14,0L306,0C313.727,0 320,6.273 320,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
 &lt;g transform="matrix(1,0,0,1,159.92,36)">
 &lt;g transform="matrix(16,0,0,16,56.354688,0)">
 &lt;/g>
-&lt;text x="-56.355px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">A&lt;tspan x="-44.64px -32.925px -21.211px -16.605px -4px 7.715px 12.32px 22.253px 33.968px 45.683px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">CCION LABS&lt;/tspan>&lt;/text>
+&lt;text x="-56.355px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">ACCION LABS&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,62)">
 &lt;g transform="matrix(16,0,0,16,-55.136719,0)">
@@ -3691,7 +3691,7 @@
 &lt;text x="-106.75px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">at the end of the engagement.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,160,104)">
-&lt;text x="-77.383px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Hands the asset over&lt;tspan x="72.938px " y="0px ">.&lt;/tspan>&lt;/text>
+&lt;text x="-77.383px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Hands the asset over.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,320,0)">
 &lt;g>
@@ -3703,7 +3703,7 @@
 &lt;/g>
 &lt;path d="M460,32L460,88C460,94.623 454.623,100 448,100L192,100C185.377,100 180,94.623 180,88L180,32C180,25.377 185.377,20 192,20L448,20C454.623,20 460,25.377 460,32Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
 &lt;g transform="matrix(1,0,0,1,319.92,52)">
-&lt;text x="-46.341px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">H&lt;tspan x="-34.627px -22.912px -11.197px 0.518px 13.123px 23.955px 34.787px " y="0px 0px 0px 0px 0px 0px 0px ">ANDOVER&lt;/tspan>&lt;/text>
+&lt;text x="-46.341px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">HANDOVER&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,320,78)">
 &lt;text x="-89.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Four commitments below&lt;/text>
@@ -3711,16 +3711,16 @@
 &lt;/g>
 &lt;path d="M1280,14L1280,106C1280,113.727 1273.727,120 1266,120L974,120C966.273,120 960,113.727 960,106L960,14C960,6.273 966.273,0 974,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
 &lt;g transform="matrix(1,0,0,1,1119.92,36)">
-&lt;text x="-93.448px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">C&lt;tspan x="-81.733px -71.8px -67.194px -56.362px -44.648px -34.714px -30.109px -20.176px -13.789px -9.184px 1.648px 13.363px 25.077px 36.792px 47.624px 58.456px 69.288px 81.893px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">LIENT or SUCCESSOR&lt;/tspan>&lt;/text>
+&lt;text x="-93.448px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">CLIENT or SUCCESSOR&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,1120,62)">
 &lt;text x="-79.34px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The client&amp;apos;s own team,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,1120,84)">
-&lt;text x="-80.488px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">or a successor vendor&lt;tspan x="76.043px " y="0px ">.&lt;/tspan>&lt;/text>
+&lt;text x="-80.488px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">or a successor vendor.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,1120,104)">
-&lt;text x="-68.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T&lt;tspan x="-60.93px -52.031px " y="0px 0px ">ak&lt;/tspan>es the asset on.&lt;/text>
+&lt;text x="-68.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Takes the asset on.&lt;/text>
 &lt;/g>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,60,266)">
@@ -3728,7 +3728,7 @@
 &lt;path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;g transform="matrix(1,0,0,1,59.84,36)">
-&lt;text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N&lt;tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 1&lt;/tspan>&lt;/text>
+&lt;text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">No. 1&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,36,68)">
 &lt;circle cx="24" cy="14" r="7" style="fill:var(--se-box-fill,#ffffff);"/>
@@ -3765,7 +3765,7 @@
 &lt;path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;g transform="matrix(1,0,0,1,59.84,36)">
-&lt;text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N&lt;tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 2&lt;/tspan>&lt;/text>
+&lt;text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">No. 2&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,36,68)">
 &lt;circle cx="20" cy="46" r="14" style="fill:none;stroke:white;stroke-width:2.5px;"/>
@@ -3810,7 +3810,7 @@
 &lt;path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;g transform="matrix(1,0,0,1,59.84,36)">
-&lt;text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N&lt;tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 3&lt;/tspan>&lt;/text>
+&lt;text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">No. 3&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,40,68)">
 &lt;path d="M40,9L40,63C40,64.656 38.656,66 37,66L3,66C1.344,66 0,64.656 0,63L0,9C0,7.344 1.344,6 3,6L37,6C38.656,6 40,7.344 40,9Z" style="fill:none;stroke:white;stroke-width:2.5px;"/>
@@ -3844,7 +3844,7 @@
 &lt;path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
 &lt;g transform="matrix(1,0,0,1,59.84,36)">
-&lt;text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N&lt;tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 4&lt;/tspan>&lt;/text>
+&lt;text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">No. 4&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,36,68)">
 &lt;circle cx="18" cy="20" r="8" style="fill:var(--se-box-fill,#ffffff);"/>
@@ -3856,13 +3856,13 @@
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">The enablement roles are transitionable&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,146,78)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A&lt;tspan x="9.797px 14.242px " y="0px 0px "> p&lt;/tspan>laybook is delivered for the client to&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A playbook is delivered for the client to&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,146,98)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">recruit and onboard their own Chief &lt;tspan x="253.492px 264.164px " y="0px 0px ">Ar&lt;/tspan>chitect,&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">recruit and onboard their own Chief Architect,&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,146,118)">
-&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology Maintainer&lt;tspan x="142.312px 146.758px " y="0px 0px ">, &lt;/tspan>and KG &lt;tspan x="209.031px 219.703px " y="0px 0px ">Ag&lt;/tspan>ent Owner&lt;tspan x="301.539px " y="0px ">.&lt;/tspan>&lt;/text>
+&lt;text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology Maintainer, and KG Agent Owner.&lt;/text>
 &lt;/g>
 &lt;g transform="matrix(1,0,0,1,146,158)">
 &lt;text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Or for a successor vendor to operate them.&lt;/text>

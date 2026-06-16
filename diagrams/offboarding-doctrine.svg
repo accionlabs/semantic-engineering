@@ -5,14 +5,14 @@
         <text x="-328.33px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Offboarding Doctrine: Four Commitments</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-380.805px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The exit is real. <tspan x="-268.156px -258.383px " y="0px 0px ">Th</tspan>e asset transfers cleanly<tspan x="-78.141px -73.695px -69.531px -59.758px " y="0px 0px 0px 0px ">. Th</tspan>e of<tspan x="-24.453px -20.008px " y="0px 0px ">fb</tspan>oarding doctrine is what makes the entry decision easy<tspan x="376.359px " y="0px ">.</tspan></text>
+        <text x="-380.805px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The exit is real. The asset transfers cleanly. The offboarding doctrine is what makes the entry decision easy.</text>
     </g>
     <g transform="matrix(1,0,0,1,60,108)">
         <path d="M320,14L320,106C320,113.727 313.727,120 306,120L14,120C6.273,120 0,113.727 0,106L0,14C0,6.273 6.273,0 14,0L306,0C313.727,0 320,6.273 320,14Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-text-secondary,#4b5563);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,159.92,36)">
             <g transform="matrix(16,0,0,16,56.354688,0)">
             </g>
-            <text x="-56.355px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">A<tspan x="-44.64px -32.925px -21.211px -16.605px -4px 7.715px 12.32px 22.253px 33.968px 45.683px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">CCION LABS</tspan></text>
+            <text x="-56.355px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">ACCION LABS</text>
         </g>
         <g transform="matrix(1,0,0,1,160,62)">
             <g transform="matrix(16,0,0,16,-55.136719,0)">
@@ -25,7 +25,7 @@
             <text x="-106.75px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">at the end of the engagement.</text>
         </g>
         <g transform="matrix(1,0,0,1,160,104)">
-            <text x="-77.383px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Hands the asset over<tspan x="72.938px " y="0px ">.</tspan></text>
+            <text x="-77.383px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Hands the asset over.</text>
         </g>
         <g transform="matrix(1,0,0,1,320,0)">
             <g>
@@ -37,7 +37,7 @@
             </g>
             <path d="M460,32L460,88C460,94.623 454.623,100 448,100L192,100C185.377,100 180,94.623 180,88L180,32C180,25.377 185.377,20 192,20L448,20C454.623,20 460,25.377 460,32Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
             <g transform="matrix(1,0,0,1,319.92,52)">
-                <text x="-46.341px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">H<tspan x="-34.627px -22.912px -11.197px 0.518px 13.123px 23.955px 34.787px " y="0px 0px 0px 0px 0px 0px 0px ">ANDOVER</tspan></text>
+                <text x="-46.341px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">HANDOVER</text>
             </g>
             <g transform="matrix(1,0,0,1,320,78)">
                 <text x="-89.359px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Four commitments below</text>
@@ -45,16 +45,16 @@
         </g>
         <path d="M1280,14L1280,106C1280,113.727 1273.727,120 1266,120L974,120C966.273,120 960,113.727 960,106L960,14C960,6.273 966.273,0 974,0L1266,0C1273.727,0 1280,6.273 1280,14Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:2px;"/>
         <g transform="matrix(1,0,0,1,1119.92,36)">
-            <text x="-93.448px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">C<tspan x="-81.733px -71.8px -67.194px -56.362px -44.648px -34.714px -30.109px -20.176px -13.789px -9.184px 1.648px 13.363px 25.077px 36.792px 47.624px 58.456px 69.288px 81.893px " y="0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px 0px ">LIENT or SUCCESSOR</tspan></text>
+            <text x="-93.448px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">CLIENT or SUCCESSOR</text>
         </g>
         <g transform="matrix(1,0,0,1,1120,62)">
             <text x="-79.34px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">The client&apos;s own team,</text>
         </g>
         <g transform="matrix(1,0,0,1,1120,84)">
-            <text x="-80.488px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">or a successor vendor<tspan x="76.043px " y="0px ">.</tspan></text>
+            <text x="-80.488px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">or a successor vendor.</text>
         </g>
         <g transform="matrix(1,0,0,1,1120,104)">
-            <text x="-68.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">T<tspan x="-60.93px -52.031px " y="0px 0px ">ak</tspan>es the asset on.</text>
+            <text x="-68.93px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Takes the asset on.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,60,266)">
@@ -62,7 +62,7 @@
         <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
         <rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,59.84,36)">
-            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 1</tspan></text>
+            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">No. 1</text>
         </g>
         <g transform="matrix(1,0,0,1,36,68)">
             <circle cx="24" cy="14" r="7" style="fill:var(--se-box-fill,#ffffff);"/>
@@ -99,7 +99,7 @@
         <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
         <rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,59.84,36)">
-            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 2</tspan></text>
+            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">No. 2</text>
         </g>
         <g transform="matrix(1,0,0,1,36,68)">
             <circle cx="20" cy="46" r="14" style="fill:none;stroke:white;stroke-width:2.5px;"/>
@@ -144,7 +144,7 @@
         <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
         <rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,59.84,36)">
-            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 3</tspan></text>
+            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">No. 3</text>
         </g>
         <g transform="matrix(1,0,0,1,40,68)">
             <path d="M40,9L40,63C40,64.656 38.656,66 37,66L3,66C1.344,66 0,64.656 0,63L0,9C0,7.344 1.344,6 3,6L37,6C38.656,6 40,7.344 40,9Z" style="fill:none;stroke:white;stroke-width:2.5px;"/>
@@ -178,7 +178,7 @@
         <path d="M120,12L120,178C120,184.623 114.623,190 108,190L12,190C5.377,190 0,184.623 0,178L0,12C0,5.377 5.377,0 12,0L108,0C114.623,0 120,5.377 120,12Z" style="fill:var(--se-accent,#E94E1B);"/>
         <rect x="106" y="0" width="14" height="190" style="fill:var(--se-accent,#E94E1B);"/>
         <g transform="matrix(1,0,0,1,59.84,36)">
-            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">N<tspan x="-7.886px 1.332px 6.097px 10.863px " y="0px 0px 0px 0px ">o. 4</tspan></text>
+            <text x="-19.761px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">No. 4</text>
         </g>
         <g transform="matrix(1,0,0,1,36,68)">
             <circle cx="18" cy="20" r="8" style="fill:var(--se-box-fill,#ffffff);"/>
@@ -190,13 +190,13 @@
             <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-text,#111111);">The enablement roles are transitionable</text>
         </g>
         <g transform="matrix(1,0,0,1,146,78)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A<tspan x="9.797px 14.242px " y="0px 0px "> p</tspan>laybook is delivered for the client to</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">A playbook is delivered for the client to</text>
         </g>
         <g transform="matrix(1,0,0,1,146,98)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">recruit and onboard their own Chief <tspan x="253.492px 264.164px " y="0px 0px ">Ar</tspan>chitect,</text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">recruit and onboard their own Chief Architect,</text>
         </g>
         <g transform="matrix(1,0,0,1,146,118)">
-            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology Maintainer<tspan x="142.312px 146.758px " y="0px 0px ">, </tspan>and KG <tspan x="209.031px 219.703px " y="0px 0px ">Ag</tspan>ent Owner<tspan x="301.539px " y="0px ">.</tspan></text>
+            <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology Maintainer, and KG Agent Owner.</text>
         </g>
         <g transform="matrix(1,0,0,1,146,158)">
             <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">Or for a successor vendor to operate them.</text>
