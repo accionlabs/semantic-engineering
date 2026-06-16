@@ -2,11 +2,12 @@ name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
-  contents: write   # push the built site to the gh-pages branch
+  contents: write
 
 defaults:
   run:
@@ -15,23 +16,42 @@ defaults:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     env:
       HUGO_VERSION: 0.148.1
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           submodules: recursive
           fetch-depth: 0
-      - uses: actions/setup-go@v5
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
         with:
-          go-version: "stable"
-      - uses: peaceiris/actions-hugo@v3
+          go-version: stable
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "${{ env.HUGO_VERSION }}"
+          hugo-version: ${{ env.HUGO_VERSION }}
           extended: true
-      - run: hugo mod get -u
-      - run: hugo --gc --minify
-      - run: touch public/.nojekyll
+
+      - name: Download Hugo modules
+        run: hugo mod get
+
+      - name: Build Hugo site
+        run: hugo --gc --minify
+
+      - name: Disable Jekyll
+        run: touch public/.nojekyll
+
+      - name: Copy deployment artifacts
+        run: |
+          cp Dockerfile public/
+          cp semantic-engineering-deploy.yaml public/
+
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
         with:
