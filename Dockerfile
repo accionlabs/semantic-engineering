@@ -2,9 +2,11 @@ FROM nginx:1.27-alpine
 
 RUN rm -rf /usr/share/nginx/html/*
 
-RUN mkdir -p /usr/share/nginx/html/semantic-engineering     
+COPY . /usr/share/nginx/html/
 
-COPY . /usr/share/nginx/html/semantic-engineering/
+# Rewrite generated paths
+RUN find /usr/share/nginx/html -type f -name "*.html" \
+    -exec sed -i 's|/semantic-engineering/|/|g' {} \;
 
 EXPOSE 80
 
