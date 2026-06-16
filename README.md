@@ -8,8 +8,9 @@ operating model we run engagements under.
 - **Built with:** [Hugo](https://gohugo.io/) (static site generator) + the
   [Hextra](https://imfing.github.io/hextra/) theme
 - **Source of truth:** the Markdown in `content/` and the SVGs in `static/diagrams/`
-- **Publishing:** every push to `main` triggers a GitHub Actions build that deploys
-  to the `gh-pages` branch, which GitHub Pages serves.
+- **Publishing:** every push to `main` triggers a GitHub Actions build that pushes
+  the output to the `gh-pages` branch, which is served at the custom domain
+  (`semantic-engineering.ai`) by a separate deployment pipeline.
 
 Content is plain Markdown, so you can edit it in any editor (VS Code, Obsidian,
 Cowork, etc.). You do **not** need to be a developer to update copy — see
@@ -220,14 +221,19 @@ gh pr create --base main --reviewer bijoor
 ## How it deploys
 
 - Pushing to **`main`** runs `.github/workflows/hugo.yml`.
-- The workflow builds the site with Hugo and pushes the output to the **`gh-pages`**
-  branch; GitHub Pages serves that branch.
+- The workflow builds the site with Hugo (using `hugo.yaml`'s
+  `https://semantic-engineering.ai/` baseURL) and pushes the output to the
+  **`gh-pages`** branch.
+- A separate deployment pipeline serves the `gh-pages` branch at
+  **`semantic-engineering.ai`**. (GitHub Pages' own serving is disabled; the
+  `gh-pages` branch is still produced on every push and must be retained.)
 - No manual step is needed — just push to `main`.
 - You can watch builds under the repo's **Actions** tab.
 
-> The deploy uses a branch-based publish (rather than the default GitHub-Pages
-> OIDC deploy) because of org security policy. Don't switch the workflow to the
-> `actions/deploy-pages` approach — it fails with a 401 in this org.
+> The workflow publishes by pushing the built site to `gh-pages` (rather than the
+> default GitHub-Pages OIDC deploy) because of org security policy. Don't switch
+> the workflow to the `actions/deploy-pages` approach — it fails with a 401 in
+> this org.
 
 ---
 
