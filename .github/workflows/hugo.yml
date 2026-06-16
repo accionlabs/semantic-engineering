@@ -30,7 +30,7 @@ jobs:
           hugo-version: "${{ env.HUGO_VERSION }}"
           extended: true
       - run: hugo mod get -u
-      - run: hugo --gc --minify --baseURL "https://accionlabs.github.io/semantic-engineering/"
+      - run: hugo --gc --minify
       - run: touch public/.nojekyll
       - name: Publish to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4
