@@ -22,7 +22,7 @@ Semantic Engineering is the methodology we developed at Accion Labs for running 
 
 ![Semantic Engineering at a Glance](/diagrams/hero-semantic-engineering-at-a-glance.svg)
 
-This page is the executive overview. Each section links to a deep dive in the topic area it summarizes. If you want to jump straight to a use case, the two anchor sections are [Agentic Software Engineering (SDLC)](sdlc/_index.md) and [Agentic Legacy Modernization](modernization/_index.md). If you want a guided diagnosis of which use case fits the work in front of you, start with the Self-assessment.
+This page is the executive overview. Each section links to a deep dive in the topic area it summarizes. If you want to jump straight to a use case, the two anchor sections are [Agentic Software Engineering (SDLC)](sdlc/_index.md) and [Agentic Legacy Modernization](modernization/_index.md).
 
 ## The Shared Problem
 
@@ -154,7 +154,6 @@ Beyond the commercial vendors, open-source projects like Graphify have started b
 
 | If you want to...                                                     | Go to                                                   |
 | --------------------------------------------------------------------- | ------------------------------------------------------- |
-| Diagnose which use case and entry point fits the work in front of you | Self-assessment                   |
 | Walk the continuous SDLC instantiation end to end                     | [Agentic Software Engineering (SDLC)](sdlc/_index.md)   |
 | Walk the legacy modernization instantiation end to end                | [Agentic Legacy Modernization](modernization/_index.md) |
 | Understand how Accion Labs engage commercially                        | [Practitioner](practitioner/_index.md)                  |
