@@ -16,6 +16,8 @@ audience:
 
 This section covers the legacy modernization instantiation of Semantic Engineering. The work covered here is the kind a team does when replacing a legacy stack with a modern stack while preserving the behavior the business has built up over years. The target is well-defined: the legacy behavior is the parity contract; the target stack is chosen up front. The work is bounded rather than continuous.
 
+A first-time reader may expect a parallel structure to the SDLC track and look for "modernization zones." There are none. The continuous SDLC track uses zones because work complexity varies across changes inside a continuous flow. Modernization is bounded delivery, so the calibration axis is what the client commits to rather than how complex the work is. The five engagement modes below are the calibration mechanism.
+
 The parallel section for continuous software engineering is [Agentic Software Engineering (SDLC)](../sdlc/_index.md). The two use cases share a methodology but use different graph models because they ask different questions.
 
 ## How to Walk This Section
@@ -25,7 +27,7 @@ The pages below are sequenced to build understanding in reading order. A reader 
 | Page | What it covers |
 |---|---|
 | [The Modernization Translation Tax](translation-tax.md) | The structural cost of modernizing a legacy application without a machine-readable substrate the agents can query. Four components: reverse-engineering, lost-context, validation-vacuum, and knowledge-disappearance. How the methodology addresses each. |
-| [Engagement Modes of Legacy Modernization](engagement-modes/_index.md) | The five engagement modes through which modernization is delivered: Documentation Only, Discovery and Documentation, Migration Readiness, Full Modernization, and Maintain / Operate. Each mode is an entry point sized to the work the client is ready to commit to. |
+| [Engagement Modes of Legacy Modernization](engagement-modes/_index.md) | The five engagement modes through which modernization is delivered: Documentation Only, Discovery and Documentation, Migration Readiness, Full Modernization, and Maintain, Operate, and Convergence. Each mode is an entry point sized to the work the client is ready to commit to. |
 | [Ontologies for Legacy Modernization](methodology.md) | The methodology in depth: the Source-state ontology decomposed from the legacy system, the Target-state ontology defined by the four custodians from a target blueprint, the specification format that bridges the two, the annotation discipline (Retain, Modify, Replace, Retire), and the parity contract that constrains agent generation. |
 | [The Modernization Agent Fleet](agents.md) | The agent fleet that operates the modernization pipeline. Nine named agents across five stages (Discover, Document, Migrate, Validate, Maintain). Bounded project pipeline rather than continuous loop. Progressive autonomy calibrated per engagement. |
 | [Process](process/_index.md) | The operating model that delivers legacy modernization. Five-stage delivery, SME tuning loop, Expert Review pattern. The enablement frame sized for a bounded project. |
@@ -36,7 +38,7 @@ The pages below are sequenced to build understanding in reading order. A reader 
 
 ## What This Section Maps To
 
-The legacy modernization instantiation is operationalized by the [ASIMOV platform](../practitioner/asimov.md). The ASIMOV page covers the production implementation: the four pillars (AGIE, ASF, AMM, AVF) and the Maintain stage, the four quality gates, the deployment architecture, and the operational track record across 15M+ LOC modernized.
+The legacy modernization instantiation is operationalized by the [ASIMOV platform](../practitioner/asimov.md). The ASIMOV page covers the production implementation: the five pillars (AGIE, ASF, AMM, AVF, Maintain), the four quality gates, the deployment architecture, and the operational track record across 15M+ LOC modernized.
 
 The [About Accion Labs](../practitioner/_index.md) page covers the firm. Engagement entry point for modernization work is on the [Contact](../practitioner/contact.md) page.
 

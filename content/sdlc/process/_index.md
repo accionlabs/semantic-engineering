@@ -51,7 +51,7 @@ Specification authorship runs ahead of implementation. Two sprint cycles run sta
 
 | Sprint | What it produces | Backlog tool | Cadence |
 |---|---|---|---|
-| [Spec Sprint](spec-sprint.md) | Impact-analyzed specifications. Refreshed knowledge graph. | Posthog or equivalent (separate from implementation) | Runs ahead of the implementation sprint it feeds |
+| [Spec Sprint](spec-sprint.md) | Impact-analyzed specifications. Refreshed knowledge graph. | Linear or equivalent (separate from implementation) | Runs ahead of the implementation sprint it feeds |
 | [Implementation Sprint](implementation-sprint.md) | Code merged to master under structural validation. KG Sync updates the Code Ontology on every merge. | Jira, Linear, or equivalent | Regular team sprint cadence |
 
 The two backlogs can live in the same platform, differentiated by labels or boards rather than separate tools. The discipline is what matters; the tool is the team's existing one.

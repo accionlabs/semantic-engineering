@@ -225,7 +225,7 @@ For analysts and academics who want to verify that the governance is real:
 - The change log provides the full history of canonical changes
 - The Editorial Board membership is published on the [Practitioner > Accion Labs](../practitioner/_index.md#about-accion-labs) page
 - The methodology mark and the trademark policy are documented in [Copyright and Trademark](#copyright-and-trademark)
-- The Engagement Council, which holds the firewall between competing-client engagements, has its membership and charter publicly available on request
+- The Engagement Council, which holds the firewall between competing-client engagements, has its membership and charter available on request
 
 For audit requests, write to `methodology@accionlabs.com`.
 

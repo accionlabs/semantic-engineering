@@ -19,7 +19,7 @@ The companion to this page is [Zones of AI-Assisted SDLC](zones/_index.md), whic
 
 ## What the Custodians Know That the Code Does Not Show
 
-In any enterprise application of real size, the people who hold the application together are not only the engineers writing code. They are the four roles that carry the context the team depends on day to day.
+In any enterprise application of real size, the people who hold the application together are not only the engineers writing code but also the four roles that carry the context the team depends on day to day.
 
 The product owner holds the why. Why this feature exists, which persona it is for, which business outcome it serves, which scenarios trigger it, which edge cases are deliberately not addressed because they belong to a different workflow, which earlier proposal was rejected and on what grounds. This knowledge is rarely in the ticket. It lives in the product owner's head, refined through sprint planning conversations, customer calls, and demo feedback over years.
 

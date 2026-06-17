@@ -111,13 +111,13 @@ The engagement frame shift in modernization runs in two stages.
 | Stage | Engagement shape |
 |---|---|
 | **Stage 1**: Pre-modernization modes (Documentation Only, Discovery + Documentation, Migration Readiness) | Fixed-price scoped to legacy estate size and SME engagement depth |
-| **Stage 2**: Modernization and post-modernization modes (Full Modernization, Maintain / Operate) | Time-and-materials with module-level milestone-based deliverables, transitioning to outcome-based as the engagement matures |
+| **Stage 2**: Modernization and post-modernization modes (Full Modernization, Maintain, Operate, and Convergence) | Time-and-materials with module-level milestone-based deliverables, transitioning to outcome-based as the engagement matures |
 
 The pricing transition reflects the difference between scope-bounded discovery and outcome-driven modernization. A client can engage and re-engage across modes; pricing recalibrates per engagement.
 
 > **How Accion Labs operationalizes the modernization enablement frame**
 >
-> The [engagement model](../../practitioner/_index.md#engagement-model) includes the five modernization engagement modes as named entry points. The [services catalog](../../practitioner/_index.md#services) describes the engagement shape per mode. The Engagement Council operates as a named body within Accion Labs, with charter, membership, and quarterly review meetings visible to clients. For the SDLC equivalent, see [The Enablement Partnership](../../sdlc/process/enablement-partnership.md).
+> The [engagement model](../../practitioner/_index.md#engagement-models) includes the five modernization engagement modes as named entry points. The [services catalog](../../practitioner/_index.md#services) describes the engagement shape per mode. The Engagement Council operates as a named body within Accion Labs, with charter, membership, and quarterly review meetings visible to clients. For the SDLC equivalent, see [The Enablement Partnership](../../sdlc/process/enablement-partnership.md).
 
 ---
 

@@ -86,7 +86,7 @@ The site is organized so a reader can walk either use case end to end across the
 | **Methodology** (graph model) | [Four-Layer Ontology](sdlc/methodology.md): Functional, Design, Architecture, Code. Curated live by the four custodians. | [Ontologies for Legacy Modernization](modernization/methodology.md): Source-state decomposed from legacy code, Target-state defined by the same four custodians from a target blueprint, specification format bridges the two. |
 | **Agents** (the fleet) | [The SDLC Agent Fleet](sdlc/agents.md): impact analysis, BDD generation, KG sync, validation on merge. Earn autonomy over time. | [The Modernization Agent Fleet](modernization/agents.md): nine named agents across Discover, Document, Migrate, Validate, Maintain. Progressive autonomy per engagement. |
 | **Process** (the operating model) | [Continuous SDLC Operating Model](sdlc/process/_index.md): spec sprint and implementation sprint, fractional allocation, layered team, enablement partnership across years. | [Modernization Operating Model](modernization/process/_index.md): five-phase delivery, SME tuning loop, expert review pattern, enablement frame sized for a bounded project. |
-| **Engagement Model** | [SDLC Engagement Model](sdlc/engagement-model.md): Advise, Launch, Scale, Optimize. Pricing per phase. Three-Phase Rollout aligns to methodology phases. | [Modernization Engagement Model](modernization/engagement-model.md): five entry modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain / Operate). Pricing per mode. |
+| **Engagement Model** | [SDLC Engagement Model](sdlc/engagement-model.md): Advise, Launch, Scale, Optimize. Pricing per phase. Three-Phase Rollout aligns to methodology phases. | [Modernization Engagement Model](modernization/engagement-model.md): five entry modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain, Operate, and Convergence). Pricing per mode. |
 | **Case Archetypes** | [SDLC Case Archetypes](sdlc/case-archetypes.md): two real engagements end to end, one brownfield at 2M LOC, one greenfield grown into complexity. | [Modernization Case Archetypes](modernization/case-archetypes.md): seven anonymized case studies across ASP.Net, COBOL, Delphi, VB.NET, ASP Forms, and Java migrations across multiple industries. |
 
 The structural response is the same in both columns. The shape of the response differs because the work asks different questions.
@@ -117,7 +117,7 @@ Outcomes measured on engagements running under this methodology. Anonymized walk
 | **53%** design component reuse in the first sprint | First sprint under SE-governed UI development on a greenfield workstream |
 | **23%** defect rate reduction against the team's pre-SE baseline | Same codebase, same team, before and after |
 | **93.4%** test coverage with zero manual BDD overhead | BDD scenarios generated automatically from the Functional Ontology |
-| **81%** lower five-year TCO with on-premises AI deployment | For engagements where model inference must remain inside the client's infrastructure |
+| **81%** lower five-year TCO with on-premises AI deployment (modeled) | TCO model for engagements where model inference must remain inside the client's infrastructure; not a measured outcome from a specific engagement |
 
 **Legacy modernization engagements under ASIMOV:**
 
@@ -148,7 +148,7 @@ Every choice in the methodology traces back to this commitment. The four ontolog
 
 Snowflake's semantic layer, Microsoft's knowledge graph integrations in Fabric, and Palantir's ontology positioning have all shipped or matured in the last twelve months. The market is converging on what we concluded in 2022: enterprise AI needs structured context to operate at scale, and a knowledge graph is the practical way to provide it.
 
-Beyond the commercial vendors, open-source projects like Graphify have started building knowledge-graph context layers around code. The technical direction is broadly consistent with what we have been building. These efforts today focus primarily on the Code layer of what we treat as a four-layer ontology. The Functional, Design, and Architecture layers, the cross-layer relationships, the enablement partnership that keeps the graph healthy over years, and the operating model that makes the methodology run at enterprise scale are not yet part of these efforts. We expect open-source to fill in over time, and we will be glad when it does.
+Beyond the commercial vendors, open-source projects are starting to build knowledge-graph context layers around code. The technical direction is broadly consistent with what we have been building. These efforts today focus primarily on the Code layer of what we treat as a four-layer ontology. The Functional, Design, and Architecture layers, the cross-layer relationships, the enablement partnership that keeps the graph healthy over years, and the operating model that makes the methodology run at enterprise scale are not yet part of these efforts. We expect open-source to fill in over time, and we will be glad when it does.
 
 ## Where to Go Next
 

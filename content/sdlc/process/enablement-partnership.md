@@ -116,12 +116,12 @@ Accion Labs's position is structurally distinctive. The firm that built the meth
 
 The enablement discipline is what allows the long-term engagement to be framed predictably. The client commits to an outcome (graph health metrics meeting thresholds, agent fleet operating reliably, rationalization findings flowing into the product roadmap) rather than to engineer-hours.
 
-The engagement frame shifts in two phases. Phase 1: effort-based engagement for fractional enablement roles. Phase 2: deliverable-based engagement for graph-health outcomes. Full treatment in [Engagement Model Evolution](team.md#engagement-model-evolution).
+The engagement frame shifts in two phases. Phase 1: effort-based engagement for fractional enablement roles. Phase 2: deliverable-based engagement for graph-health outcomes. Full treatment in [Engagement Model Evolution](team.md#engagement-models-evolution).
 
 > **How Accion Labs operationalizes the partnership**
 >
-> The [engagement model](../../practitioner/_index.md#engagement-model) includes the enablement contract as a named deliverable. The [services catalog](../../practitioner/_index.md#services) describes the three tiers (Light, Medium, Deep) with engagement shape and deliverables. The Engagement Council operates as a named body within Accion Labs, with charter, membership, and quarterly review meetings visible to clients.
+> The [engagement model](../../practitioner/_index.md#engagement-models) includes the enablement contract as a named deliverable. The [services catalog](../../practitioner/_index.md#services) describes the three tiers (Light, Medium, Deep) with engagement shape and deliverables. The Engagement Council operates as a named body within Accion Labs, with charter, membership, and quarterly review meetings visible to clients.
 
 ---
 
-[Team](team.md) covers the layered structure where the enablement roles sit beneath the custodianship layer. [Engagement Model Evolution](team.md#engagement-model-evolution) covers the engagement-shape shift the methodology enables. The parallel enablement frame for legacy modernization (which is bounded rather than continuous) is on [The Modernization Enablement Frame](../../modernization/process/enablement-frame.md).
+[Team](team.md) covers the layered structure where the enablement roles sit beneath the custodianship layer. [Engagement Model Evolution](team.md#engagement-models-evolution) covers the engagement-shape shift the methodology enables. The parallel enablement frame for legacy modernization (which is bounded rather than continuous) is on [The Modernization Enablement Frame](../../modernization/process/enablement-frame.md).

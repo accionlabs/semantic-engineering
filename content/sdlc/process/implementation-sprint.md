@@ -78,7 +78,7 @@ The implementation sprint does not govern the knowledge graph. Graph governance 
 
 > **How Accion Labs operationalizes the implementation sprint**
 >
-> The [Breeze.AI platform](../../practitioner/breeze-ai.md) runs the Impact Analysis, Coding, Test Generation, PR Validation, and KG Sync agents that operate the per-change SDLC flow. The [engagement model](../../practitioner/_index.md#engagement-model) staffs the implementation team and the Zone 4 custodial role evolution.
+> The [Breeze.AI platform](../../practitioner/breeze-ai.md) runs the Impact Analysis, BDD Generation, PR Validation, and KG Sync agents that operate the per-change SDLC flow, integrating with external AI coding assistants for code generation. The [engagement model](../../practitioner/_index.md#engagement-models) staffs the implementation team and the Zone 4 custodial role evolution.
 
 ---
 

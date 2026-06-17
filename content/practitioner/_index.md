@@ -25,7 +25,7 @@ Our claim to operate the methodology rests on three things. The firm originated 
 | ------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
 | [About Accion Labs](#about-accion-labs)     | The firm: company facts, AI evolution timeline from the 2017 Breeze framework through the 2023 KAPS commercial practice to the 2025 naming of the methodology, AI Operating Model        |
 | [Platforms](#platforms)                     | The production implementations of the methodology: Breeze.AI (the four-layer KG plus agent fleet), ASIMOV (automated legacy modernization) |
-| [Engagement Model](#engagement-model)       | Advise, Launch, Scale, Optimize phases with activities, participants, deliverables                                                         |
+| [Engagement Model](#engagement-models)       | Advise, Launch, Scale, Optimize phases with activities, participants, deliverables                                                         |
 | [Three-Phase Rollout](#three-phase-rollout) | The methodology phases inside the engagement: SDD Adoption, SE Foundation, SE at Scale                                                     |
 | [Services](#services)                       | Workshops, assessments, managed support tiers, specialist pool, Forward-Deployed Engineer program                                          |
 | [Contact](contact.md)                       | Workshop request, pricing inquiry, analyst briefing request                                                                                |
@@ -128,6 +128,22 @@ Three things give us the credible claim to operate the methodology as its primar
 
 ---
 
+
+### Editorial Board
+
+The Editorial Board governs the canonical evolution of the Semantic Engineering methodology. Membership is composed of role-level seats rather than named individuals so the roster survives normal personnel changes.
+
+| Seat | Held by |
+|---|---|
+| Chair | Chief Technology Officer, Accion Labs |
+| Methodology Steward | Head of the Semantic Engineering practice |
+| SDLC Instantiation Lead | Lead architect of the SDLC instantiation |
+| Modernization Instantiation Lead | Lead architect of the Modernization instantiation |
+| Platforms Liaison | Engineering lead, Breeze.AI and ASIMOV |
+| Engagement Council Liaison | Chair of the Engagement Council |
+
+Membership rotates on a two-year cadence. The current roster is available on request to `methodology@accionlabs.com`.
+
 ## Platforms
 
 The technical implementations we bring to a Semantic Engineering engagement. Each platform operationalizes a specific element of the methodology. The platforms are listed in the order they typically engage on a client project.
@@ -135,7 +151,7 @@ The technical implementations we bring to a Semantic Engineering engagement. Eac
 | Platform | What it does | When it engages |
 |---|---|---|
 | [Breeze.AI](breeze-ai.md) | The AI-native SDLC platform. Operates the full four-layer knowledge graph plus the agent fleet (Impact Analysis, PR Validation, BDD Generation, KG Sync, Extraction). Developer is in the loop on per-change decisions. | When the engagement is ongoing SDLC governance and evolution of a live application. |
-| [ASIMOV](asimov.md) | The agentic legacy modernization platform. Builds on Semantic Engineering principles. Five-pillar architecture across the legacy modernization lifecycle: AGIE (Discover), ASF (Document, with BRD / Gherkin / Playwright / chatbot extraction), AMM (Migrate), AVF (Validate, with four named gates: Architecture, Design, Standards, Functional), Maintain. Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Five engagement modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain / Operate). Humans validate at SME annotation and Expert Review; everything between is agentic. Track record: 15M+ LOC modernized across 10+ programs over 3+ years. Up to 4× faster than manual modernization. | When the engagement scope is replacing a legacy system (COBOL, Delphi, VB.NET, older Java, ASP.Net) with a modern stack (.NET 8/10, Java 21, React 19, Spring MVC, Angular 19) while preserving behavior. |
+| [ASIMOV](asimov.md) | The agentic legacy modernization platform. Builds on Semantic Engineering principles. Five-pillar architecture across the legacy modernization lifecycle: AGIE (Discover), ASF (Document, with BRD / Gherkin / Playwright / chatbot extraction), AMM (Migrate), AVF (Validate, with four named gates: Architecture, Design, Standards, Functional), Maintain. Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Five engagement modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain, Operate, and Convergence). Humans validate at SME annotation and Expert Review; everything between is agentic. Track record: 15M+ LOC modernized across 10+ programs over 3+ years. Up to 4× faster than manual modernization. | When the engagement scope is replacing a legacy system (COBOL, Delphi, VB.NET, older Java, ASP.Net) with a modern stack (.NET 8/10, Java 21, React 19, Spring MVC, Angular 19) while preserving behavior. |
 
 ### Other Accion Labs Platforms Referenced in the Methodology
 
@@ -191,7 +207,7 @@ We offer two distinct engagement models, one per use case. Continuous software e
 | Engagement model | Shape | When it applies |
 |---|---|---|
 | **[Continuous SDLC](../sdlc/engagement-model.md)**: Advise / Launch / Scale / Optimize | Years of continuous operation under the four-layer ontology with the [Enablement Partnership](../sdlc/process/enablement-partnership.md) frame | Live applications evolving under custodianship; greenfield, brownfield, or anywhere in between |
-| **[Legacy Modernization](../modernization/engagement-model.md)**: five engagement modes | Bounded project sized to one of five entry points (Documentation Only through Maintain / Operate) | Replacing a legacy stack with a defined modern target while preserving behavior |
+| **[Legacy Modernization](../modernization/engagement-model.md)**: five engagement modes | Bounded project sized to one of five entry points (Documentation Only through Maintain, Operate, and Convergence) | Replacing a legacy stack with a defined modern target while preserving behavior |
 
 The two engagement models do not overlap during an engagement. A client engagement that includes both modernization and ongoing SDLC governance uses the modernization model for the bounded migration project and then transitions to the continuous SDLC model once the modernized system is in live operation, at the hand-over from the [Maintain mode](../modernization/engagement-modes/_index.md#mode-5-maintain-operate-and-convergence).
 
@@ -202,28 +218,13 @@ The full treatment of each model is on its own page:
 
 ### Continuous SDLC Engagement Model
 
-The continuous SDLC engagement model has four phases. The full treatment is on [the SDLC Engagement Model page](../sdlc/engagement-model.md). A short reminder follows.
+Four phases (Advise, Launch, Scale, Optimize) shaped for ongoing custodianship over years. Full treatment, with activities, participants, deliverables, managed-support-tier mappings, and pricing per phase, is on the [SDLC Engagement Model](../sdlc/engagement-model.md) page.
 
-| Phase | Duration | What it produces |
-|---|---|---|
-| Advise | Two to four weeks | Roadmap, prioritized use cases, platform recommendation, scoped plan |
-| Launch | About twelve weeks | Working MVP, four ontologies in production, agent fleet deployed, first Zone 3 workstream |
-| Scale | Quarters to years | Methodology extended across the portfolio, multi-agent rollout, enablement layer in place |
-| Optimize | Continuous | Steady-state operation, governance audits, rationalization cycles, refresh sprints |
 
 ### Legacy Modernization Engagement Model
 
-The legacy modernization engagement model has five entry modes. The full treatment is on [the Modernization Engagement Model page](../modernization/engagement-model.md). A short reminder follows.
+Five engagement modes (Documentation Only, Discovery and Documentation, Migration Readiness, Full Modernization, Maintain, Operate, and Convergence) shaped for a bounded project with a defined target. Full treatment, with deliverables, durations, pricing per mode, and the comparison to the SDLC phases, is on the [Modernization Engagement Model](../modernization/engagement-model.md) page.
 
-| Mode | Duration | Suitable when |
-|---|---|---|
-| Documentation Only | Two to six weeks | Legacy continues to run; priority is preserving institutional knowledge |
-| Discovery + Documentation | Four to ten weeks | Considering modernization; needs defensible baseline of system understanding |
-| Migration Readiness | Six to twelve weeks | Modernization is planned; needs rigorous foundation before execution |
-| Full Modernization | Quarters to years | Committed to replacing legacy stack with defined modern target |
-| Maintain / Operate / Convergence | Continuous after Full Modernization | Modernization complete; client wants knowledge graph operated as living asset |
-
----
 
 ## Three-Phase Rollout
 
@@ -310,7 +311,7 @@ For engagements where the trigger is legacy modernization (replacing a legacy sy
 
 The extraction process runs against the legacy system. The four-layer graph captures the legacy system's actual behavior. The graph then becomes the specification for the modern system. The implementation team builds against the graph. The methodology is in place from Day 1 of the modern system.
 
-This is the pattern we use for [ASIMOV](#asimov)-based legacy modernization engagements.
+This is the pattern we use for [ASIMOV](asimov.md)-based legacy modernization engagements.
 
 ### Expected Outcomes
 
@@ -384,9 +385,9 @@ See [The Enablement Partnership](../sdlc/process/enablement-partnership.md) for 
 
 | Tier              | Engagement shape                                                                                                                                               | Indicative monthly hours                |
 | ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| Light Governance  | Quarterly health audit; metric reviews; rationalization recommendations                                                                                        | Two to four custodian-hours per month   |
-| Medium Enablement | Monthly ontology health checks; agent retraining decisions; rationalization cycle execution; structural changes to ontology shape                              | Ten to twenty custodian-hours per month |
-| Deep Operations   | Full custodianship including agent fleet operation, KG sync management, refresh sprints, cross-product extension reasoning, full Engagement Council membership | Continuous engagement                   |
+| Light Governance  | Quarterly health audit; metric reviews; rationalization recommendations                                                                                        | Two to four enablement-hours per month   |
+| Medium Curation   | Monthly ontology health checks; agent retraining decisions; rationalization cycle execution; structural changes to ontology shape                              | Ten to twenty enablement-hours per month |
+| Deep Operations   | Full enablement including agent fleet operation, KG sync management, refresh sprints, cross-product extension reasoning, full Engagement Council membership | Continuous engagement                   |
 
 ### The Enablement Layer and the Wider Specialist Pool
 

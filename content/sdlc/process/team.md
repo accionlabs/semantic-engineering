@@ -36,7 +36,7 @@ In our client conversations we set the expectation early: the methodology can be
 
 > **How Accion Labs supports the team transition**
 >
-> The [engagement model](../../practitioner/_index.md#engagement-model) covers Advise, Launch, Scale, and Optimize phases. The Forward-Deployed Engineer program is a named offer in [Practitioner services](../../practitioner/_index.md#services). Managed support tiers (Light Governance, Medium Curation, Deep Operations) are described on the [Enablement Partnership](enablement-partnership.md) page.
+> The [engagement model](../../practitioner/_index.md#engagement-models) covers Advise, Launch, Scale, and Optimize phases. The Forward-Deployed Engineer program is a named offer in [Practitioner services](../../practitioner/_index.md#services). Managed support tiers (Light Governance, Medium Curation, Deep Operations) are described on the [Enablement Partnership](enablement-partnership.md) page.
 
 ---
 
@@ -118,7 +118,7 @@ The headline savings from AI-assisted coding are real but partial. The compoundi
 
 The fractional allocation model differs from how many engineering organizations are staffed today. Compensation, evaluation, and career progression often assume one-workstream attribution and may evolve over time to recognize specialist contribution across multiple workstreams. Procurement contracts may also evolve to support continuous re-engagement alongside conventional FTE allocations.
 
-The methodology can be deployed before the operating model fully shifts. The full value compounds as the operating model matures. See [Engagement Model Evolution](#engagement-model-evolution) below for the two-stage engagement-shape transition.
+The methodology can be deployed before the operating model fully shifts. The full value compounds as the operating model matures. See [Engagement Model Evolution](#engagement-models-evolution) below for the two-stage engagement-shape transition.
 
 > **How Accion Labs staffs the fractional allocation model**
 >
@@ -225,7 +225,7 @@ In the layered team structure, the Forward-Deployed Engineer (FDE) backfills mis
 | Responsibility | What it looks like in practice |
 |---|---|
 | Own the spec sprint for a workstream | Author the spec, run the Impact Analysis Agent against it, review the impact report, modify the spec to keep the impact in control |
-| Bridge to the the enablement layer | Surface findings from the impact analysis that warrant enablement-layer attention (boundary violations, duplicate-capability flags, dead-capability patterns) |
+| Bridge to the enablement layer | Surface findings from the impact analysis that warrant enablement-layer attention (boundary violations, duplicate-capability flags, dead-capability patterns) |
 | Reconcile cross-product changes | When a change affects multiple product graphs, run the cross-product impact extension and decide how to keep the change tractable across all affected products |
 | Bring product judgment into engineering | Decide which features to split, which to ship together, which to defer; the judgment that distinguishes a senior product owner from a feature backlog clerk |
 | Bring architecture judgment into engineering | Decide when to modify the architecture rather than route around it; surface architectural smells the team has been working around |
@@ -237,7 +237,7 @@ The role replaces what was previously distributed across a product owner, a sepa
 
 ![The FDE profile (three competencies overlap) and the substitute pattern (1-person, 2-person, 3-person compositions)](/diagrams/fde-profile-substitute-pattern.svg)
 
-The FDE profile is "part architect, part product owner, part designer". The internal shorthand we use for this profile is **Amol**, after a specific engagement where the role first crystallized for us: someone who can hold the architecture, the product mechanics, and the design system in their head at the same time, and who can move fluidly between the three perspectives in a single conversation.
+The FDE profile spans all four custodian roles: part product owner, part architect, part UX designer, and part engineering team. The proportions vary with the product or application the FDE is engaged on. A team building a UI-heavy product needs an FDE who is heavier on design and UX; a team modernizing a data platform needs an FDE heavier on architecture and engineering. The internal shorthand we use for this profile is **Amol**, after a specific engagement where the role first crystallized for us: someone who can hold the architecture, the product mechanics, the design system, and the code structure in their head at the same time, and who can move fluidly between the four perspectives in a single conversation.
 
 | Trait | What it means |
 |---|---|

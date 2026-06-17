@@ -38,7 +38,7 @@ The two operating models do not overlap during an engagement. A client engagemen
 
 > **How Accion Labs operationalizes the modernization operating model**
 >
-> The [ASIMOV platform](../../practitioner/asimov.md) implements the five-stage modernization pipeline and the four validation gates that the operating model wraps. The [five engagement modes](../engagement-modes/_index.md) (Documentation Only through Maintain / Operate) are the entry points clients can engage at.
+> The [ASIMOV platform](../../practitioner/asimov.md) implements the five-stage modernization pipeline and the four validation gates that the operating model wraps. The [five engagement modes](../engagement-modes/_index.md) (Documentation Only through Maintain, Operate, and Convergence) are the entry points clients can engage at.
 
 ---
 

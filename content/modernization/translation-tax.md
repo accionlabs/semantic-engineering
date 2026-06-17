@@ -73,7 +73,7 @@ The five [engagement modes](engagement-modes/_index.md) of legacy modernization 
 | [Discovery + Documentation](engagement-modes/_index.md#mode-2-discovery-and-documentation) | Closed | Substantial | Not addressed | Partial |
 | [Migration Readiness](engagement-modes/_index.md#mode-3-migration-readiness) | Closed | Closed | Partial | Not addressed |
 | [Full Modernization](engagement-modes/_index.md#mode-4-full-modernization) | Closed | Closed | Closed | Partial |
-| [Maintain / Operate](engagement-modes/_index.md#mode-5-maintain-operate-and-convergence) | Closed (maintained) | Closed (maintained) | Sustained | Closed |
+| [Maintain, Operate, and Convergence](engagement-modes/_index.md#mode-5-maintain-operate-and-convergence) | Closed (maintained) | Closed (maintained) | Sustained | Closed |
 
 A client engaged at Documentation Only addresses the reverse-engineering tax fully and the lost-context tax substantially. The validation-vacuum and knowledge-disappearance taxes are not closed at that mode; they become triggers for moving to a higher mode if the client's needs evolve. Each higher mode closes more of the tax.
 

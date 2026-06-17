@@ -206,7 +206,7 @@ ASIMOV and [Breeze.AI](breeze-ai.md) are peer platforms under Accion Labs's Soft
 | Graph artifact | One four-layer graph per product, continuously maintained | Source Graph, Target Graph, and an ASF document bridging them, all produced during the modernization project |
 | Constraint mechanism | Four-layer ontology plus governance and metrics framework | Source Graph plus Target Blueprint plus ASF plus the four AVF gates |
 | Human role | In the loop: developer reviews per change; gates approve at merge | Validation, not per-step approval: custodians annotate ASF (Retain / Modify / Replace / Retire); Expert reviews target output |
-| Engagement shape | Open-ended ongoing operation under [Advise / Launch / Scale / Optimize](_index.md#engagement-model) | Finite project with a parity objective under one of the [five ASIMOV engagement modes](#the-asimov-engagement-model) |
+| Engagement shape | Open-ended ongoing operation under [Advise / Launch / Scale / Optimize](_index.md#engagement-models) | Finite project with a parity objective under one of the [five ASIMOV engagement modes](#the-asimov-engagement-model) |
 | Time horizon | Years (continuous) | Quarters per migration estate |
 
 A client engagement that includes both modernization and ongoing SDLC governance uses ASIMOV for the modernization and, once the modernized system is in live operation, Breeze.AI for its continuous evolution. The Source Graph and Functional Ontology that ASIMOV captured from the legacy system transfer to Breeze.AI as the seed for the four-layer graph on the modern stack. The graph travels; the engagement models do not overlap.
@@ -221,7 +221,7 @@ The two are not in tension. Many enterprise clients use both: ASIMOV for the bou
 
 ## The ASIMOV Engagement Model
 
-ASIMOV's engagement model is distinct from Breeze.AI's. Breeze.AI engagements run on the [Advise / Launch / Scale / Optimize](_index.md#engagement-model) phases because the work is continuous SDLC evolution. ASIMOV engagements are framed around five entry modes because the legacy-modernization lifecycle has natural points where a client may want ASIMOV to engage without committing to the full migration.
+ASIMOV's engagement model is distinct from Breeze.AI's. Breeze.AI engagements run on the [Advise / Launch / Scale / Optimize](_index.md#engagement-models) phases because the work is continuous SDLC evolution. ASIMOV engagements are framed around five entry modes because the legacy-modernization lifecycle has natural points where a client may want ASIMOV to engage without committing to the full migration.
 
 The intelligence core that ASIMOV builds (the Source Graph, the Enriched Graph, the ASF, the Target Graph) is multi-utility. Each of the five engagement modes consumes a different slice of the same core.
 
@@ -231,7 +231,7 @@ The intelligence core that ASIMOV builds (the Source Graph, the Enriched Graph, 
 | **Discovery + Documentation** | Application inventory, dependency maps, business rules, process flows, SME review packs, plus the documentation outputs above. | When the organization needs a defensible baseline of system understanding before committing to a modernization path. |
 | **Migration Readiness** | Migration scope, as-is versus delta classification, target mapping inputs, sequencing, risk and complexity view, requirements traceability matrix. | When a modernization is planned but the team needs a rigorous readiness foundation before transformation begins. |
 | **Full Modernization** | The end-to-end pipeline: AGIE → ASF → AMM → AVF → Maintain. Target code generation, API and interface specs, architecture alignment, custom code for approved deltas, developer-ready work packages. | When the client commits to replacing a legacy stack with a modern stack and wants ASIMOV to drive the migration. |
-| **Maintain / Operate and Convergence** | Operational knowledge base, lifecycle documentation, change-impact support, overlap analysis across products, consolidation opportunities, convergence blueprint. | When the modernization is complete (or partially complete) and the client wants ASIMOV to continue operating the knowledge graph for ongoing maintenance, rationalization, and convergence across products. |
+| **Maintain, Operate, and Convergence** | Operational knowledge base, lifecycle documentation, change-impact support, overlap analysis across products, consolidation opportunities, convergence blueprint. | When the modernization is complete (or partially complete) and the client wants ASIMOV to continue operating the knowledge graph for ongoing maintenance, rationalization, and convergence across products. |
 
 A client may move from one mode to the next as confidence builds. A Documentation Only engagement often leads to Discovery + Documentation, which leads to Migration Readiness, which leads to Full Modernization. The five modes are not a forced ladder; they are entry points sized to the client's situation.
 
@@ -239,7 +239,7 @@ A client may move from one mode to the next as confidence builds. A Documentatio
 
 The two engagement models do not overlap. ASIMOV's five modes serve a bounded modernization objective. Breeze.AI's Advise / Launch / Scale / Optimize phases serve continuous SDLC evolution. A client may use one without the other, both at different times, or both for different parts of the portfolio.
 
-What does travel between the two is the knowledge graph. When ASIMOV completes a Full Modernization (or finishes a Maintain / Operate engagement and hands the modernized system back to the client), the Source Graph and the Functional Ontology that ASIMOV captured are available as the seed for Breeze.AI's four-layer graph on the modern stack. If the client then wants continuous SDLC governance on the modernized system, Breeze.AI takes over with its own engagement model starting from that seed. The two engagements are sequential, not concurrent, and the use cases are distinct.
+What does travel between the two is the knowledge graph. When ASIMOV completes a Full Modernization (or finishes a Maintain, Operate, and Convergence engagement and hands the modernized system back to the client), the Source Graph and the Functional Ontology that ASIMOV captured are available as the seed for Breeze.AI's four-layer graph on the modern stack. If the client then wants continuous SDLC governance on the modernized system, Breeze.AI takes over with its own engagement model starting from that seed. The two engagements are sequential, not concurrent, and the use cases are distinct.
 
 ### Indicative Phase Cadence Within Full Modernization
 
@@ -257,4 +257,4 @@ Durations depend on the legacy estate size, the target stack, and the organizati
 
 ---
 
-[Breeze.AI](breeze-ai.md) is the peer platform for evolving the modern system once the migration is complete. [Engagement Model](_index.md#engagement-model) covers the Advise / Launch / Scale / Optimize phases that apply to Breeze.AI engagements.
+[Breeze.AI](breeze-ai.md) is the peer platform for evolving the modern system once the migration is complete. [Engagement Model](_index.md#engagement-models) covers the Advise / Launch / Scale / Optimize phases that apply to Breeze.AI engagements.

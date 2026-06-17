@@ -12,7 +12,7 @@ audience:
   - chief-architect
 ---
 
-The methodology landing covers the [continuous SDLC instantiation](../sdlc/methodology.md#the-four-custodians-and-their-ontologies-continuous-sdlc-instantiation) in depth on [The Four-Layer Ontology](../sdlc/methodology.md) page. This page covers the legacy modernization instantiation in equivalent depth. The ontologies have a different shape because the use case is different. Modernization is a bounded project with a well-defined target. The ontology structure is sized for that shape.
+The methodology landing covers the continuous SDLC instantiation in depth on [The Four-Layer Ontology](../sdlc/methodology.md) page. This page covers the legacy modernization instantiation in equivalent depth. The ontologies have a different shape because the use case is different. Modernization is a bounded project with a well-defined target. The ontology structure is sized for that shape.
 
 ## Why Modernization Needs a Different Ontology Shape
 
@@ -92,7 +92,7 @@ The specification is extractable to multiple human-readable formats: a business 
 
 ## The Annotation Discipline: Retain, Modify, Replace, Retire
 
-![The annotation discipline: every Source-state module receives Retain, Modify, Replace, or Retire — with concrete examples per option](/diagrams/modernization-rmrr-annotation.svg)
+![The annotation discipline: every Source-state module receives Retain, Modify, Replace, or Retire, with concrete examples per option](/diagrams/modernization-rmrr-annotation.svg)
 
 The SME annotation discipline is how custodianship is performed in modernization. The same four custodians who own the four-layer ontology in the SDLC instantiation own the three modernization ontologies. The cadence is different: the SDLC custodians articulate intent continuously into their ontology layers across sprints; the modernization custodians articulate intent through the annotation discipline at module scoping, adjust during functional gate reviews, and validate at UAT. The Product Owner and Architect drive the per-module annotation, with input from the Engineering Team on technical disposition and from the UX Designer on legacy interaction patterns where the target retains a user interface surface. Each module gets one of four annotations.
 

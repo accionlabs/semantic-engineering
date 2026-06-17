@@ -142,7 +142,7 @@ The three paths are not exclusive. A common engagement shape is: the modernizati
 
 > **How Accion Labs operationalizes this**
 >
-> The [ASIMOV platform](../../practitioner/asimov.md) implements the five-stage pipeline (Discover, Document, Migrate, Validate, Maintain) and the four validation gates that the operating model wraps. The five engagement modes (Documentation Only through Maintain / Operate) are described on the [ASIMOV engagement model](../../practitioner/asimov.md#the-asimov-engagement-model) section. The [Breeze.AI platform](../../practitioner/breeze-ai.md) implements the continuous SDLC operating model that the modernization engagement can transition to at hand-over.
+> The [ASIMOV platform](../../practitioner/asimov.md) implements the five-stage pipeline (Discover, Document, Migrate, Validate, Maintain) and the four validation gates that the operating model wraps. The five engagement modes (Documentation Only through Maintain, Operate, and Convergence) are described on the [ASIMOV engagement model](../../practitioner/asimov.md#the-asimov-engagement-model) section. The [Breeze.AI platform](../../practitioner/breeze-ai.md) implements the continuous SDLC operating model that the modernization engagement can transition to at hand-over.
 
 ---
 

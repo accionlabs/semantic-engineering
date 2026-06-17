@@ -28,7 +28,7 @@ The justification for separating spec authorship into its own sprint cycle scale
 |---|---|
 | Owner | Product Owner |
 | Participants | The four ontology custodians: Product Owner, Architect, UX Designer, and Engineering Team representative (typically a tech lead). Each contributes the slice that maps to their ontology layer |
-| Spec sprint backlog | Pending change requests, maintained in Posthog, Jira, or an equivalent tool. Distinct from the implementation backlog |
+| Spec sprint backlog | Pending change requests, maintained in Linear, Jira, or an equivalent tool. Distinct from the implementation backlog |
 | Output | Two artifacts per change request: a well-formed specification, and any knowledge graph updates the change requires |
 | Cadence | One or two spec sprints ahead of the corresponding implementation sprint, depending on the complexity of the workstream |
 | Implementation handoff | Refined specs land in the implementation sprint backlog (Jira or equivalent). Pushed-back specs return to the spec sprint backlog |
@@ -43,7 +43,7 @@ The spec sprint is structured around the Impact Analysis Agent. The agent provid
 
 | Step | What the team does |
 |---|---|
-| 1. Pull pending change requests | The product owner pulls a batch of pending change requests from the spec sprint backlog (Posthog or equivalent). The four custodians decide together which to address in this sprint. |
+| 1. Pull pending change requests | The product owner pulls a batch of pending change requests from the spec sprint backlog (Linear or equivalent). The four custodians decide together which to address in this sprint. |
 | 2. Author the draft spec | Product Owner writes a candidate spec using the standard template (title, acceptance criteria, out-of-scope items, brief "why now") |
 | 3. Run pre-implementation Impact Analysis | The agent traverses the four-layer graph and produces the impact report |
 | 4. Review the impact report across all four layers | All four custodians review together. The product owner anchors the persona/outcome. The architect approves boundaries and integration contracts. The UX designer names the components. The engineering team verifies code touchpoints and flags refactor candidates. |
@@ -87,7 +87,7 @@ The two cadences run staggered, with the spec sprint always one or two sprints a
 
 The Spec Sprint team often fractionalizes across two or three workstreams. The Product Owner is per-workstream, but the Architect, UX Designer, and Engineering Team representative may rotate across spec sprints for different workstreams. This is what makes the fractional allocation model work in practice. The same Architect contributes to spec sprints for three workstreams across a quarter, sized to the cadence rather than to a full-time allocation.
 
-The two backlogs (spec sprint and implementation sprint) can live in the same platform (Jira, Posthog, or equivalent) with labels or board configurations distinguishing the two. The custodianship discipline is what matters; the tool is the team's existing one.
+The two backlogs (spec sprint and implementation sprint) can live in the same platform (Jira, Linear, or equivalent) with labels or board configurations distinguishing the two. The custodianship discipline is what matters; the tool is the team's existing one.
 
 > **How Accion Labs supports the spec sprint adoption**
 >
