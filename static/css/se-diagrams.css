@@ -9,9 +9,19 @@
    these styles cascade into the SVG content. Standalone .svg files opened
    directly will fall back to their browser default colors (intentional).
 
-   Theme switching: variables flip on
-     - @media (prefers-color-scheme: dark)   — OS preference
-     - html.dark, body.dark                  — Hextra theme toggle
+   Theme switching: variables flip on Hextra's class system only
+     - html.dark, body.dark   — dark mode
+     - html.light, body.light — light mode
+
+   We do NOT use @media (prefers-color-scheme: dark) here. Hextra already
+   detects the OS preference itself and applies the `dark` class on <html>.
+   Adding an @media query in parallel creates a race: on a phone whose OS
+   is set to dark, the @media rule could fire before Hextra's inline theme
+   script has applied the class, leaving SVG text rendered with the dark-mode
+   light-gray fill while the page background is still Hextra's light white —
+   the diagrams disappear, and a page that is mostly diagrams (the home page)
+   reads as a blank white page. Driving the variables entirely from Hextra's
+   class system keeps the SVGs in lockstep with the rest of the page.
    ========================================================================= */
 
 :root {
@@ -30,26 +40,8 @@
   --se-on-accent:       #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --se-text:            #e5e7eb;
-    --se-text-secondary:  #9ca3af;
-    --se-accent:          #FF7A4D;
-    --se-accent-fill:     #3d1a0c;
-    --se-panel-fill:      #1f2937;
-    --se-panel-fill-alt:  #111827;
-    --se-panel-stroke:    #4b5563;
-    --se-box-fill:        #111827;
-    --se-box-stroke:      #9ca3af;
-    --se-human-stroke:    #e5e7eb;
-    --se-arrow:           #9ca3af;
-    --se-grid:            #374151;
-    --se-on-accent:       #ffffff;
-  }
-}
-
 /* Hextra theme toggle: when the user picks dark mode manually,
-   .dark is applied on <html>. Override prefers-color-scheme. */
+   .dark is applied on <html>. */
 html.dark,
 body.dark,
 .dark {
@@ -128,9 +120,6 @@ body.light,
   opacity: 1;
   pointer-events: auto;
   cursor: zoom-out;
-}
-@media (prefers-color-scheme: dark) {
-  #se-zoom-bg { background: rgba(15, 23, 42, 0.95); }
 }
 html.dark #se-zoom-bg,
 body.dark #se-zoom-bg,
