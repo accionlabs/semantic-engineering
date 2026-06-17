@@ -119,6 +119,14 @@ A real example. A product owner files a user story: "Let users choose how often 
 
 The traversal happens before any code is written. The senior developer who used to assemble this context manually now reviews it. Full mechanism in [The Impact Analysis Agent](agents.md#the-impact-analysis-agent).
 
+### Queryability and the Token Economy
+
+The four-layer ontology is what makes the Structured Substrate principle concrete: it is queryable. Agents that operate against the graph load only the slice each task needs (the affected personas and outcomes, the architecture nodes the change crosses, the code modules involved, the design components touched) rather than receiving the whole codebase plus the whole spec library as raw context.
+
+This matters because the alternative is prompt stuffing. Without a structured substrate, the team has to feed the agent enough text to cover every case it might encounter on the way to the answer. The richer the change, the larger the prompt. The richer the prompt, the higher the per-invocation token cost, and the more likely the agent misses something buried in the middle of it, which triggers another prompt with more context. Token spend grows super-linearly with change complexity.
+
+Queryability inverts this. Each agent invocation pulls a known-shaped slice; the rest of the graph is held in storage rather than carried in the prompt. Cross-layer impact analysis runs before generation rather than emerging from iteration. The cost per change tracks change size rather than the size of the surrounding context. The token-economy advantage is a direct consequence of giving the agent a queryable substrate rather than a stack of documents.
+
 ### Why We Model at Function and Module Level
 
 If an agent has to make a safe, targeted change inside a 1.6 million line application, it needs to know which functions and modules implement the relevant behavior. A repository-level map tells the agent that a repository exists. It does not tell the agent where the logic actually lives. Without code-level nodes, the agent either reparses the repository at runtime (slow, expensive, nondeterministic) or guesses (confidently wrong).

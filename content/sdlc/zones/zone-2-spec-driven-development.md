@@ -228,9 +228,9 @@ The canonical treatment of the spec sprint, including the full SE form, is on th
 
 ## When This Zone Stops Working
 
-![The four SDD ceilings: localized context, spec drift, single-layer coverage, specs as bottleneck](/diagrams/zone-2-four-ceilings.svg)
+![The first four SDD ceilings: localized context, spec drift, single-layer coverage, specs as bottleneck. Token economy is the fifth ceiling and appears as a corollary of the four](/diagrams/zone-2-four-ceilings.svg)
 
-SDD is the right operating mode for the contexts described above, and many teams will rightly stay in SDD for years. For teams whose complexity profile grows past those contexts, SDD has a ceiling. The spec is still text, and the spec captures one custodian's view (the product owner's). The four ceiling conditions appear in roughly the order below.
+SDD is the right operating mode for the contexts described above, and many teams will rightly stay in SDD for years. For teams whose complexity profile grows past those contexts, SDD has a ceiling. The spec is still text, and the spec captures one custodian's view (the product owner's). Five ceiling conditions appear in roughly the order below. The diagram above shows the first four; the fifth (token economy) compounds the others rather than appearing as a discrete failure.
 
 **Localized context.** A team-A product owner writes a spec for an alert frequency feature. The spec is reviewed by the team-A tech lead, approved, and handed to the AI agent. The agent generates code that adds a write to a shared notification-preferences table. Team B has been migrating that table to a new schema for six weeks and has a PR open that drops two columns the team-A change relies on. Team B's architect never saw team A's spec. Team A's PO never saw team B's migration plan. Both PRs merge in the same week, integration breaks on a Friday afternoon, and the production hotfix takes the weekend. The spec was correct against team A's local view. There was no place in the SDD workflow for either architect to look across the boundary, because the architects' view is not part of the spec.
 
@@ -243,6 +243,11 @@ The architect updated her artifact. The PO updated her artifact. Neither of them
 **Single-layer coverage.** SDD tools like AWS Kiro, GitHub Spec Kit, and Tessl capture functional intent, which is the product owner's contribution. They do not structurally capture the architecture (the architect's contribution) or the design system (the designer's contribution). A spec says "add a configuration form for alert preferences with daily, weekly, and off options". The agent generates the form, picks a Dropdown because that is what the model has seen most often in training, places the API call in the saved-search service because the spec mentioned saved searches, and uses inline labels because the spec did not specify visual treatment. The form ships. The designer notices in a sprint demo that the Dropdown should have been a SegmentedControl, that the team has a guideline against inline labels for short option sets, and that the visual treatment violates two design tokens. The architect notices the API call should have gone through the notification service. Both noticed too late. Their context was not in the spec the agent read because the spec captures only the PO's layer.
 
 **Specs become the new bottleneck.** Once the team has hit the three ceilings above, the obvious fix is to make the specs richer. Bring the architect into spec review. Bring the designer into spec review. Make sure every spec covers all the angles the agent needs. We have watched several teams attempt this. It does work, in a sense: the specs get more accurate and AI-generated code gets more reliable. But the throughput collapses. The PO can write specs at the rate she can think; the architect can review them at the rate she has free time, which is not much because she is also fielding the Slack DMs from Zone 1; the designer is in the same boat. The team's senior people end up spending their week in spec authoring and review meetings while the implementation engineers wait for input. The bottleneck moves from typing to thinking, and the operating model is not configured to absorb the shift. The cost structure no longer aligns with FTE-based estimation, because the work the team needs is no longer the work the team is staffed for.
+
+
+**Token economy.** SDD's response to the previous three ceilings is to load more context into the prompt. The PO writes a richer spec; the dev attaches the affected service code; another snippet is added to cover the design system; the architect's last decision memo is pasted in for good measure. Each invocation grows, and so does its cost. Some of the cost shows up as larger context windows on every API call. More of it shows up as iteration loops because the agent missed something inside the larger prompt and a follow-up prompt has to add it. Over time, a team that is succeeding at SDD discovers that token spend grows super-linearly with change complexity rather than linearly with change size, and a meaningful share of the engineering budget is going into reprompting the agent toward a correct answer that was already in someone's head.
+
+This ceiling is a corollary of the other four. The fix the methodology proposes (the structured substrate) reduces the cost per invocation in two ways. First, the agent queries the graph for the slice each task needs rather than receiving a re-stuffed package of background; the payload is targeted and known-shaped. Second, the cross-layer impact analysis catches gaps before generation, so the iteration loop does not start. Token economy is rarely the first ceiling a team feels, but it is the ceiling that compounds fastest once the team is past the others.
 
 ### From the Field: An SDD-Mature Engagement at the Ceiling
 
@@ -266,7 +271,7 @@ The full case is in [SDD at the Governance Ceiling](../case-archetypes.md#sdd-at
 
 ## The Pattern
 
-The four conditions compound. A team can survive one. A team that hits two or three at the same time will not survive without changing the substrate.
+The five conditions compound. A team can survive one. A team that hits two or three at the same time will not survive without changing the substrate.
 
 | If your team is hitting | The signal you will see |
 |---|---|
@@ -274,7 +279,8 @@ The four conditions compound. A team can survive one. A team that hits two or th
 | Just spec drift | AI-generated outputs that are confidently wrong against the current system |
 | Just single-layer coverage | Design system erosion, architectural boundary violations, broken downstream consumers |
 | Just specs becoming the bottleneck | The team's senior people stuck in spec-authoring meetings rather than shipping value |
-| Three or four at once | All of the above, simultaneously, with engineering velocity declining despite more AI tool adoption |
+| Just token economy strain | Per-change agent spend growing super-linearly with change complexity; budget conversations about coding-agent cost rather than developer productivity |
+| Three or more at once | All of the above, simultaneously, with engineering velocity declining despite more AI tool adoption |
 
 Most enterprise teams hitting the ceiling are in the last row.
 
@@ -287,6 +293,7 @@ The team is ready to extend SDD with SE when at least three of the following hol
 - Brownfield work consumes more than a third of sprint capacity
 - Two or more teams are working on the same product and informal coordination is breaking down
 - The team has hit at least one production incident traceable to AI-generated code that violated an unstated architectural or design constraint
+- Coding-agent token spend per change is growing faster than change complexity, and prompt-stuffing rounds are visible in the team's working pattern
 
 ## From SDD to SE
 
