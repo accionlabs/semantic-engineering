@@ -23,7 +23,7 @@
 &lt;/tr>
 &lt;tr>
 &lt;td>Spec sprint backlog&lt;/td>
-&lt;td>Pending change requests, maintained in Posthog, Jira, or an equivalent tool. Distinct from the implementation backlog&lt;/td>
+&lt;td>Pending change requests, maintained in Linear, Jira, or an equivalent tool. Distinct from the implementation backlog&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>Output&lt;/td>
@@ -387,7 +387,7 @@
 &lt;tbody>
 &lt;tr>
 &lt;td>1. Pull pending change requests&lt;/td>
-&lt;td>The product owner pulls a batch of pending change requests from the spec sprint backlog (Posthog or equivalent). The four custodians decide together which to address in this sprint.&lt;/td>
+&lt;td>The product owner pulls a batch of pending change requests from the spec sprint backlog (Linear or equivalent). The four custodians decide together which to address in this sprint.&lt;/td>
 &lt;/tr>
 &lt;tr>
 &lt;td>2. Author the draft spec&lt;/td>
@@ -460,7 +460,7 @@
 &lt;h2>The Spec Sprint and the Implementation Sprint Together&lt;span class="hx:absolute hx:-mt-20" id="the-spec-sprint-and-the-implementation-sprint-together">&lt;/span>
 &lt;a href="#the-spec-sprint-and-the-implementation-sprint-together" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The two cadences run staggered, with the spec sprint always one or two sprints ahead of the implementation sprint it feeds.&lt;/p>
 &lt;p>The Spec Sprint team often fractionalizes across two or three workstreams. The Product Owner is per-workstream, but the Architect, UX Designer, and Engineering Team representative may rotate across spec sprints for different workstreams. This is what makes the fractional allocation model work in practice. The same Architect contributes to spec sprints for three workstreams across a quarter, sized to the cadence rather than to a full-time allocation.&lt;/p>
-&lt;p>The two backlogs (spec sprint and implementation sprint) can live in the same platform (Jira, Posthog, or equivalent) with labels or board configurations distinguishing the two. The custodianship discipline is what matters; the tool is the team&amp;rsquo;s existing one.&lt;/p>
+&lt;p>The two backlogs (spec sprint and implementation sprint) can live in the same platform (Jira, Linear, or equivalent) with labels or board configurations distinguishing the two. The custodianship discipline is what matters; the tool is the team&amp;rsquo;s existing one.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>How Accion Labs supports the spec sprint adoption&lt;/strong>&lt;/p>
 &lt;p>Accion Labs&amp;rsquo;s &lt;a href="https://semantic-engineering.ai/sdlc/process/team/#forward-deployed-engineers">Forward-Deployed Engineer program&lt;/a> staffs the spec sprint with the role profile that makes it work. The &lt;a href="https://semantic-engineering.ai/practitioner/#services">two-day deep-dive workshop&lt;/a> includes a session on diagnosing whether the client&amp;rsquo;s complexity has crossed the threshold where spec sprints become worth the cadence change.&lt;/p>
@@ -1714,7 +1714,7 @@
 &lt;p>The implementation sprint does not govern the knowledge graph. Graph governance is the enablement team&amp;rsquo;s responsibility. The implementation sprint surfaces findings through PR validation failures and the merge events that trigger KG sync; the enablement team acts on the patterns.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>How Accion Labs operationalizes the implementation sprint&lt;/strong>&lt;/p>
-&lt;p>The &lt;a href="https://semantic-engineering.ai/practitioner/breeze-ai/">Breeze.AI platform&lt;/a> runs the Impact Analysis, Coding, Test Generation, PR Validation, and KG Sync agents that operate the per-change SDLC flow. The &lt;a href="https://semantic-engineering.ai/practitioner/#engagement-model">engagement model&lt;/a> staffs the implementation team and the Zone 4 custodial role evolution.&lt;/p>
+&lt;p>The &lt;a href="https://semantic-engineering.ai/practitioner/breeze-ai/">Breeze.AI platform&lt;/a> runs the Impact Analysis, BDD Generation, PR Validation, and KG Sync agents that operate the per-change SDLC flow, integrating with external AI coding assistants for code generation. The &lt;a href="https://semantic-engineering.ai/practitioner/#engagement-models">engagement model&lt;/a> staffs the implementation team and the Zone 4 custodial role evolution.&lt;/p>
 &lt;/blockquote>
 &lt;hr>
 &lt;p>&lt;a href="https://semantic-engineering.ai/sdlc/process/spec-sprint/">Spec Sprint&lt;/a> is the cadence that feeds the implementation sprint. &lt;a href="https://semantic-engineering.ai/sdlc/process/team/">Team&lt;/a> covers the operating model that staffs both sprints. &lt;a href="https://semantic-engineering.ai/sdlc/agents/">The Agents&lt;/a> describes each agent in the per-change SDLC flow in detail.&lt;/p></description></item><item><title>Team</title><link>https://semantic-engineering.ai/sdlc/process/team/</link><pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate><guid>https://semantic-engineering.ai/sdlc/process/team/</guid><description>
@@ -2061,7 +2061,7 @@
 &lt;p>In our client conversations we set the expectation early: the methodology can be rolled out in weeks, while the operating model that delivers its full value matures across quarters.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>How Accion Labs supports the team transition&lt;/strong>&lt;/p>
-&lt;p>The &lt;a href="https://semantic-engineering.ai/practitioner/#engagement-model">engagement model&lt;/a> covers Advise, Launch, Scale, and Optimize phases. The Forward-Deployed Engineer program is a named offer in &lt;a href="https://semantic-engineering.ai/practitioner/#services">Practitioner services&lt;/a>. Managed support tiers (Light Governance, Medium Curation, Deep Operations) are described on the &lt;a href="https://semantic-engineering.ai/sdlc/process/enablement-partnership/">Enablement Partnership&lt;/a> page.&lt;/p>
+&lt;p>The &lt;a href="https://semantic-engineering.ai/practitioner/#engagement-models">engagement model&lt;/a> covers Advise, Launch, Scale, and Optimize phases. The Forward-Deployed Engineer program is a named offer in &lt;a href="https://semantic-engineering.ai/practitioner/#services">Practitioner services&lt;/a>. Managed support tiers (Light Governance, Medium Curation, Deep Operations) are described on the &lt;a href="https://semantic-engineering.ai/sdlc/process/enablement-partnership/">Enablement Partnership&lt;/a> page.&lt;/p>
 &lt;/blockquote>
 &lt;hr>
 &lt;h2>Fractional Allocation&lt;span class="hx:absolute hx:-mt-20" id="fractional-allocation">&lt;/span>
@@ -2445,7 +2445,7 @@
 &lt;p>The headline savings from AI-assisted coding are real but partial. The compounding value is in speed and quality. The deliverable shape changes: clients receive a maintained semantic model alongside the running code, and the model makes every future change cheaper.&lt;/p>
 &lt;h3>Adoption Considerations&lt;span class="hx:absolute hx:-mt-20" id="adoption-considerations">&lt;/span>
 &lt;a href="#adoption-considerations" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h3>&lt;p>The fractional allocation model differs from how many engineering organizations are staffed today. Compensation, evaluation, and career progression often assume one-workstream attribution and may evolve over time to recognize specialist contribution across multiple workstreams. Procurement contracts may also evolve to support continuous re-engagement alongside conventional FTE allocations.&lt;/p>
-&lt;p>The methodology can be deployed before the operating model fully shifts. The full value compounds as the operating model matures. See &lt;a href="#engagement-model-evolution">Engagement Model Evolution&lt;/a> below for the two-stage engagement-shape transition.&lt;/p>
+&lt;p>The methodology can be deployed before the operating model fully shifts. The full value compounds as the operating model matures. See &lt;a href="#engagement-models-evolution">Engagement Model Evolution&lt;/a> below for the two-stage engagement-shape transition.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>How Accion Labs staffs the fractional allocation model&lt;/strong>&lt;/p>
 &lt;p>Accion Labs fields specialists from a shared pool across multiple client engagements. The pool means a single specialist can support several engagements while maintaining depth of judgment on each, so each engagement gets focused expertise at the moments it needs them.&lt;/p>
@@ -2597,7 +2597,7 @@
 &lt;td>Author the spec, run the Impact Analysis Agent against it, review the impact report, modify the spec to keep the impact in control&lt;/td>
 &lt;/tr>
 &lt;tr>
-&lt;td>Bridge to the the enablement layer&lt;/td>
+&lt;td>Bridge to the enablement layer&lt;/td>
 &lt;td>Surface findings from the impact analysis that warrant enablement-layer attention (boundary violations, duplicate-capability flags, dead-capability patterns)&lt;/td>
 &lt;/tr>
 &lt;tr>
@@ -2812,7 +2812,7 @@
 &lt;/defs>
 &lt;/svg>
 &lt;/figure>&lt;/p>
-&lt;p>The FDE profile is &amp;ldquo;part architect, part product owner, part designer&amp;rdquo;. The internal shorthand we use for this profile is &lt;strong>Amol&lt;/strong>, after a specific engagement where the role first crystallized for us: someone who can hold the architecture, the product mechanics, and the design system in their head at the same time, and who can move fluidly between the three perspectives in a single conversation.&lt;/p>
+&lt;p>The FDE profile spans all four custodian roles: part product owner, part architect, part UX designer, and part engineering team. The proportions vary with the product or application the FDE is engaged on. A team building a UI-heavy product needs an FDE who is heavier on design and UX; a team modernizing a data platform needs an FDE heavier on architecture and engineering. The internal shorthand we use for this profile is &lt;strong>Amol&lt;/strong>, after a specific engagement where the role first crystallized for us: someone who can hold the architecture, the product mechanics, the design system, and the code structure in their head at the same time, and who can move fluidly between the four perspectives in a single conversation.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -3919,10 +3919,10 @@
 &lt;p>Accion Labs&amp;rsquo;s position is structurally distinctive. The firm that built the methodology that produced the artifact has the most credible claim to enable its ongoing use, because the enabler&amp;rsquo;s competence is verifiable against the methodology&amp;rsquo;s own discipline. Naming enablement as a formal practice converts that structural advantage into a defensible market position.&lt;/p>
 &lt;h2>Why This Matters for the Engagement Frame&lt;span class="hx:absolute hx:-mt-20" id="why-this-matters-for-the-engagement-frame">&lt;/span>
 &lt;a href="#why-this-matters-for-the-engagement-frame" class="subheading-anchor" aria-label="Permalink for this section">&lt;/a>&lt;/h2>&lt;p>The enablement discipline is what allows the long-term engagement to be framed predictably. The client commits to an outcome (graph health metrics meeting thresholds, agent fleet operating reliably, rationalization findings flowing into the product roadmap) rather than to engineer-hours.&lt;/p>
-&lt;p>The engagement frame shifts in two phases. Phase 1: effort-based engagement for fractional enablement roles. Phase 2: deliverable-based engagement for graph-health outcomes. Full treatment in &lt;a href="https://semantic-engineering.ai/sdlc/process/team/#engagement-model-evolution">Engagement Model Evolution&lt;/a>.&lt;/p>
+&lt;p>The engagement frame shifts in two phases. Phase 1: effort-based engagement for fractional enablement roles. Phase 2: deliverable-based engagement for graph-health outcomes. Full treatment in &lt;a href="https://semantic-engineering.ai/sdlc/process/team/#engagement-models-evolution">Engagement Model Evolution&lt;/a>.&lt;/p>
 &lt;blockquote>
 &lt;p>&lt;strong>How Accion Labs operationalizes the partnership&lt;/strong>&lt;/p>
-&lt;p>The &lt;a href="https://semantic-engineering.ai/practitioner/#engagement-model">engagement model&lt;/a> includes the enablement contract as a named deliverable. The &lt;a href="https://semantic-engineering.ai/practitioner/#services">services catalog&lt;/a> describes the three tiers (Light, Medium, Deep) with engagement shape and deliverables. The Engagement Council operates as a named body within Accion Labs, with charter, membership, and quarterly review meetings visible to clients.&lt;/p>
+&lt;p>The &lt;a href="https://semantic-engineering.ai/practitioner/#engagement-models">engagement model&lt;/a> includes the enablement contract as a named deliverable. The &lt;a href="https://semantic-engineering.ai/practitioner/#services">services catalog&lt;/a> describes the three tiers (Light, Medium, Deep) with engagement shape and deliverables. The Engagement Council operates as a named body within Accion Labs, with charter, membership, and quarterly review meetings visible to clients.&lt;/p>
 &lt;/blockquote>
 &lt;hr>
-&lt;p>&lt;a href="https://semantic-engineering.ai/sdlc/process/team/">Team&lt;/a> covers the layered structure where the enablement roles sit beneath the custodianship layer. &lt;a href="https://semantic-engineering.ai/sdlc/process/team/#engagement-model-evolution">Engagement Model Evolution&lt;/a> covers the engagement-shape shift the methodology enables. The parallel enablement frame for legacy modernization (which is bounded rather than continuous) is on &lt;a href="https://semantic-engineering.ai/modernization/process/enablement-frame/">The Modernization Enablement Frame&lt;/a>.&lt;/p></description></item></channel></rss>
+&lt;p>&lt;a href="https://semantic-engineering.ai/sdlc/process/team/">Team&lt;/a> covers the layered structure where the enablement roles sit beneath the custodianship layer. &lt;a href="https://semantic-engineering.ai/sdlc/process/team/#engagement-models-evolution">Engagement Model Evolution&lt;/a> covers the engagement-shape shift the methodology enables. The parallel enablement frame for legacy modernization (which is bounded rather than continuous) is on &lt;a href="https://semantic-engineering.ai/modernization/process/enablement-frame/">The Modernization Enablement Frame&lt;/a>.&lt;/p></description></item></channel></rss>
