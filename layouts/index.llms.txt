@@ -1,0 +1,20 @@
+{{- /* /llms.txt — a curated, machine-readable index of the site for AI/LLM crawlers.
+       Format: https://llmstxt.org/ */ -}}
+# {{ site.Title }}: An AI-led SDLC Methodology
+
+> {{ with site.Home.Description }}{{ . | plainify | chomp }}{{ else }}{{ site.Params.description | plainify | chomp }}{{ end }}
+
+Semantic Engineering is the methodology Accion Labs developed for agentic software engineering and legacy modernization. It models an enterprise application as a four-layer knowledge graph (functional, design, architecture, and code) that AI agents query for precise, governed context, addressing the "Manual Translation Tax" of feeding tacit enterprise knowledge to AI coding agents. Canonical site: {{ site.Home.Permalink }}
+{{ range site.Home.Sections.ByWeight }}{{ if ne .Params.sidebar.exclude true }}
+## {{ .Title }}
+{{ with .Description }}
+{{ . | plainify | chomp }}
+{{ end }}{{ range .RegularPagesRecursive.ByWeight }}
+- [{{ .Title }}]({{ .Permalink }}){{ with .Description }}: {{ . | plainify | chomp }}{{ end }}{{ end }}
+{{ end }}{{ end }}
+
+## Reference
+- [Home]({{ site.Home.Permalink }}): {{ site.Home.Description | plainify | chomp }}
+- Archived release (DOI): https://doi.org/10.5281/zenodo.20745234
+- Source repository: https://github.com/accionlabs/semantic-engineering
+- License: content CC-BY-4.0, code MIT. "Semantic Engineering" and "Manual Translation Tax" are trademarks of Accion Labs.

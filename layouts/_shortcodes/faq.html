@@ -1,0 +1,15 @@
+{{- /* Renders the page's `faqs:` frontmatter (list of {question, answer}) as an
+       accordion. Pairs with the FAQPage JSON-LD in custom/structured-data.html.
+       Usage: place the faq shortcode where the FAQ should appear. */ -}}
+{{- with .Page.Params.faqs }}
+<div class="se-faq hx:my-6">
+  {{- range . }}
+  <details class="se-faq-item hx:border-b hx:border-gray-200 hx:dark:border-neutral-800 hx:py-2">
+    <summary class="hx:cursor-pointer hx:font-semibold hx:py-2">{{ .question }}</summary>
+    <div class="hx:pb-2 hx:text-gray-600 hx:dark:text-gray-300">
+      {{ .answer | markdownify }}
+    </div>
+  </details>
+  {{- end }}
+</div>
+{{- end -}}

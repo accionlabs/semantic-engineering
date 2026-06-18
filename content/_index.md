@@ -16,6 +16,31 @@ audience:
   - tech-lead
   - cio
   - analyst
+faqs:
+  - question: "What is Semantic Engineering?"
+    answer: "Semantic Engineering is a methodology, developed at Accion Labs, for running AI agents reliably inside enterprise software work. It models the application as a queryable four-layer knowledge graph (functional, design, architecture, and code), constrains agent generation through that graph, and governs the graph through named ownership and validation gates so it stays accurate as work proceeds."
+  - question: "What is the Manual Translation Tax?"
+    answer: "The Manual Translation Tax is the recurring cost a team pays converting tacit, unstructured enterprise knowledge into a form AI coding agents can act on. Four custodians (the product owner, architect, UX designer, and engineering team) hold that knowledge; Semantic Engineering reduces the tax by capturing it once in a governed knowledge graph the agents can query."
+  - question: "What is the four-layer ontology?"
+    answer: "The four-layer ontology is the structure of the knowledge graph at the core of Semantic Engineering: a functional layer (what the system does), a design layer (how it behaves and looks), an architecture layer (how it is organized), and a code layer (what is actually built). Agents traverse these layers to pull only the context a given change requires."
+  - question: "How is Semantic Engineering different from spec-driven development?"
+    answer: "Spec-driven development gives an agent a written specification per change, but the context is local and re-derived each time. Semantic Engineering adds a persistent, governed knowledge graph spanning the whole application, so context is global, queryable, and kept current by agents and named custodians rather than rewritten for every task. SE is additive: a mature SDD practice transfers in directly, with the graph layered underneath."
+  - question: "Does Semantic Engineering apply to greenfield, brownfield, and legacy modernization the same way?"
+    answer: "The four universal principles apply to all three. The shape of the graph differs: greenfield and brownfield share a four-layer ontology of the live application that the four custodians curate continuously. Legacy modernization uses a Source-state / Target-state / specification format sized for the bounded scope of the migration. The custodian roles and the validation discipline are the same across all three."
+  - question: "Does Semantic Engineering replace the AI coding tools we already use?"
+    answer: "No. Semantic Engineering layers under whatever AI coding tools the team already runs (Copilot, Cursor, Claude Code, Devin, internal coding agents). The methodology adds the knowledge graph that the agent reads against, the impact analysis that runs before generation, and the validation gates that check the output at merge time. The agent that writes the code is unchanged; what changes is the context the agent operates against."
+  - question: "How does Semantic Engineering reduce AI hallucinations?"
+    answer: "The agent generates against a structured graph of what the application actually contains rather than against unstructured prose. Functions it references must exist as Code Ontology nodes. Service boundaries it crosses must be declared in the Architecture Ontology. The PR Validation Agent rejects merges that contradict the graph. Hallucinations are caught at the structural gate, not after they have reached production."
+  - question: "What languages and stacks does Semantic Engineering support?"
+    answer: "The Breeze.AI platform currently parses TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl for brownfield extraction. ASIMOV extends to legacy-modernization stacks including COBOL on AS400, Delphi, ASP.NET Web Forms, VB.NET monoliths, Struts/Hibernate, and others. The methodology itself is language-agnostic; language coverage matters for the brownfield extraction step that builds the initial Code Ontology."
+  - question: "Who maintains the knowledge graph day to day?"
+    answer: "Four named custodians, one per ontology layer. The Product Owner curates the Functional Ontology. The Architect curates the Architecture Ontology. The UX Designer curates the Design Ontology. The Engineering Team curates the Code Ontology. The Code Ontology updates as a side effect of every merge via the KG Sync Agent; the other three are curated during the spec sprint cadence."
+  - question: "How long does it take to extract a knowledge graph from an existing application?"
+    answer: "For a 2M+ LOC application, full extraction of all four layers typically completes in two to three weeks. AST parsers cover the code, LLM enrichment adds the semantic metadata, browser-automation agents exercise the live UI for the Design layer, and existing documentation cross-validates the Architecture layer. The output is a populated graph plus a prioritized rationalization backlog of structural debt the extraction surfaces."
+  - question: "How do validation gates affect developer velocity?"
+    answer: "The gates catch structural defects at PR merge time rather than at integration or in production. In practice, velocity improves because the rework loop shortens dramatically. The P0 gates (DAG validity, layer integrity, connectivity) are sub-second and run on every merge. A merge that fails a gate is blocked until the underlying defect is fixed. The goal is structural correctness, not procedural overhead."
+  - question: "How do we start? What does a first engagement look like?"
+    answer: "Most engagements begin with a two-day deep-dive workshop on the client's context, producing an adoption plan, an ontology draft, and a twelve-week roadmap. A pilot engagement follows, entering at the SDLC zone or modernization engagement mode that fits the client's current state. The phased rollout (SDD Adoption, SE Foundation, SE at Scale) extends over quarters to years depending on portfolio scope."
 ---
 
 Semantic Engineering is the methodology we developed at Accion Labs for running AI agents reliably inside enterprise software work. It treats the knowledge an agent needs as a queryable graph, constrains generation through that graph, and governs the graph through named ownership and validation gates so it stays honest as the work proceeds. The same principles apply whether the team is building new software, evolving live software, or modernizing legacy software.
@@ -169,3 +194,7 @@ Semantic Engineering is proprietary to Accion Labs. The framework and concepts a
 If you want to adopt the methodology in your own organization, the content here is everything you need to understand it. If you want our help running it, the [Practitioner section](practitioner/_index.md) describes how we engage.
 
 [Talk to us about adopting this for your team](practitioner/contact.md).
+
+## Frequently Asked Questions
+
+{{< faq >}}

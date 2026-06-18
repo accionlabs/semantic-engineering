@@ -1,0 +1,20 @@
+{{- /* Project override of Hextra's twitter_cards partial.
+       Upgrades to a large-image summary card and adds twitter:image,
+       drawing the image from page params.images or site params.images. */ -}}
+{{- $img := "" -}}
+{{- with .Params.images -}}
+  {{- $img = index . 0 -}}
+{{- else -}}
+  {{- with site.Params.images -}}{{ $img = index . 0 }}{{- end -}}
+{{- end -}}
+{{- if hasPrefix $img "/" -}}{{ $img = strings.TrimPrefix "/" $img }}{{- end -}}
+
+<meta name="twitter:card" content="{{ cond (ne $img "") "summary_large_image" "summary" }}">
+{{- with site.Params.social.twitter }}
+<meta name="twitter:site" content="@{{ . }}">
+{{- end }}
+<meta name="twitter:title" content="{{ .Title }}">
+<meta name="twitter:description" content="{{ partial "utils/page-description.html" . }}">
+{{- with $img }}
+<meta name="twitter:image" content="{{ . | absURL }}">
+{{- end }}
