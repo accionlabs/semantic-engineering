@@ -6,6 +6,11 @@ enableInlineShortcodes: true
 enableGitInfo: false
 enableRobotsTXT: true
 
+# Google Analytics (GA4). Loaded only in production builds, not local serve.
+services:
+  googleAnalytics:
+    ID: G-9F9DMLMBBN
+
 # Custom plain-text output for /llms.txt (a curated index for AI/LLM crawlers).
 outputFormats:
   llms:
