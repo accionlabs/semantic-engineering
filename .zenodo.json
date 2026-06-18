@@ -1,0 +1,40 @@
+{
+  "title": "Semantic Engineering: An AI-led SDLC Methodology",
+  "upload_type": "publication",
+  "publication_type": "report",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "description": "Semantic Engineering is a methodology for AI-led software delivery developed at Accion Labs. It models an enterprise application as a four-layer knowledge graph (functional, design, architecture, and code) that AI agents query for precise, governed context, addressing the \"Manual Translation Tax\" of feeding tacit enterprise knowledge to coding agents. This repository contains the full methodology site, covering the AI-assisted SDLC track and the legacy-modernization track, the agent fleet, the operating model, and case archetypes.",
+  "keywords": [
+    "Semantic Engineering",
+    "knowledge graph",
+    "ontology",
+    "AI-assisted software development",
+    "software development lifecycle",
+    "legacy modernization",
+    "large language models",
+    "AI agents",
+    "software engineering methodology",
+    "enterprise software delivery"
+  ],
+  "creators": [
+    {
+      "name": "Bijoor, Ashutosh",
+      "affiliation": "Accion Labs",
+      "orcid": "0009-0003-5402-3873"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isVariantFormOf",
+      "identifier": "https://semantic-engineering.ai/",
+      "scheme": "url"
+    },
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/accionlabs/semantic-engineering",
+      "scheme": "url"
+    }
+  ],
+  "notes": "The code in this repository (Hugo configuration, layouts, and scripts) is additionally available under the MIT License; see LICENSE-CODE. \"Semantic Engineering\" and \"Manual Translation Tax\" are trademarks of Accion Labs."
+}

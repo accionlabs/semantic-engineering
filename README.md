@@ -27,6 +27,7 @@ Cowork, etc.). You do **not** need to be a developer to update copy — see
 - [Editing diagrams](#editing-diagrams) ← **read this before touching any SVG**
 - [Committing and publishing](#committing-and-publishing)
 - [How it deploys](#how-it-deploys)
+- [Citation and license](#citation-and-license)
 - [Troubleshooting](#troubleshooting)
 
 ---
@@ -236,6 +237,22 @@ gh pr create --base main --reviewer bijoor
 > this org.
 
 ---
+
+## Citation and license
+
+If you reference or reuse this work, please cite it. GitHub shows a **"Cite this
+repository"** button (driven by [`CITATION.cff`](CITATION.cff)); once a Zenodo
+DOI is minted for a release, the DOI badge will be added here.
+
+**Licensing:**
+- **Content** (text, diagrams, structural arrangement) — [CC-BY-4.0](LICENSE):
+  reuse and adapt with attribution to Accion Labs.
+- **Code** (Hugo config, layouts, scripts) — [MIT](LICENSE-CODE).
+- **Trademarks** — "Semantic Engineering" and "Manual Translation Tax" are
+  reserved marks of Accion Labs; the licenses above do not grant trademark
+  rights. See the site's *About → Copyright and Trademark* for the full posture.
+
+Archival metadata for Zenodo is in [`.zenodo.json`](.zenodo.json).
 
 ## Troubleshooting
 

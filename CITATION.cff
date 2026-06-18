@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "If you reference or reuse this methodology, please cite it as below."
+title: "Semantic Engineering: An AI-led SDLC Methodology"
+abstract: >-
+  Semantic Engineering is a methodology for AI-led software delivery developed
+  at Accion Labs. It models an enterprise application as a four-layer knowledge
+  graph (functional, design, architecture, and code) that AI agents query for
+  precise, governed context, addressing the "Manual Translation Tax" of feeding
+  tacit enterprise knowledge to coding agents.
+type: software
+license: CC-BY-4.0
+version: 1.0.0
+date-released: "2026-06-18"   # update to the actual date of the v1.0.0 release
+url: "https://semantic-engineering.ai/"
+repository-code: "https://github.com/accionlabs/semantic-engineering"
+keywords:
+  - Semantic Engineering
+  - knowledge graph
+  - ontology
+  - AI-assisted software development
+  - software development lifecycle
+  - legacy modernization
+  - software engineering methodology
+authors:
+  - family-names: "Bijoor"
+    given-names: "Ashutosh"
+    affiliation: "Accion Labs"
+    orcid: "https://orcid.org/0009-0003-5402-3873"
