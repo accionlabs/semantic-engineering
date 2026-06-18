@@ -30,6 +30,8 @@ A specification enters the flow from the left, one of many flowing through in pa
 
 The implementation sprint does not run impact analysis on the spec it receives, because it has already been done in the spec sprint. When the implementation sprint's Impact Analysis Agent (running for verification) detects a spec missing context that only the custodians can supply, the spec is pushed back to the spec sprint backlog. The implementation team does not block on it. They pull the next spec from the backlog.
 
+The validation gate at stage 5 is what makes the flow safe to run at speed. As Matt Pocock has put it, "the rate of feedback is your speed limit." The PR Validation Agent against the four ontologies is the structural form of that feedback. A team with machine-verifiable evidence on every merge can let the agent do more of the work and trust the gate to catch what the agent missed. A team with only human review on every merge is bound by reviewer bandwidth, and the agent's throughput cannot exceed it.
+
 ## The Three Sources of Truth in Operation
 
 The flow uses all three sources of truth (covered in [Three Sources of Truth](_index.md#three-sources-of-truth) on the Process landing) together.

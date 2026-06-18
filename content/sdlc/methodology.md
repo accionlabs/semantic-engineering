@@ -14,6 +14,8 @@ audience:
 
 The Semantic Knowledge Graph is one of the [three sources of truth](process/_index.md#three-sources-of-truth) in the Semantic Engineering methodology, and captures the knowledge from the custodians - product owners, architects and UX designers. This page describes the four ontology layers in operational detail, the inclusion criterion that keeps them sustainable, how we partition and extract them, and the metrics framework that keeps them healthy.
 
+Frederick Brooks called the shared theory of a system its "design concept": the ephemeral understanding that everyone working on the system carries in their head. The graph is what that design concept looks like when it is made persistent and queryable rather than reconstructed in each conversation. The four layers below are the structure of the design concept; the aperture and governance sections that follow are the disciplines that keep the structure honest.
+
 ## The Four-Layer Ontology
 
 An application is captured as four cross-linked graphs.
@@ -153,6 +155,8 @@ Once the four ontologies exist, every change is validated against all four befor
 ## Aperture
 
 A common first instinct when adopting the methodology is to put everything into the knowledge graph. Within a few sprints, the maintenance burden has overwhelmed the team and the methodology gets blamed for the failure. The aperture is the inclusion criterion that keeps the graph sustainable.
+
+John Ousterhout defines complexity as "anything related to the structure of a software system that makes it hard to understand and modify the system." That is the complexity the graph is built to attack: the cross-boundary, structurally consequential relationships the team cannot keep current in prose. The same author's distinction between deep modules (significant logic hidden behind a small, stable interface) and shallow modules (thin wrappers whose interface is as complex as their implementation) is the same distinction the aperture draws. Wide-radius elements that hide structural complexity behind a clean interface belong in the graph. Locally-contained complexity inside a function or a one-off layout stays in the code or the file where it lives.
 
 ### The Blast Radius Test
 

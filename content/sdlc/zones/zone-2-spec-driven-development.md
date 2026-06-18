@@ -299,6 +299,8 @@ The team is ready to extend SDD with SE when at least three of the following hol
 
 This section is for teams whose complexity profile has crossed the SDD ceiling and that need to keep operating beyond it. Teams whose contexts stay inside the patterns SDD addresses well do not need to make this move. SDD remains the right operating mode for them indefinitely.
 
+There is a critique of SDD worth engaging with directly here. As Matt Pocock has put it, "specs-to-code is v-coding by another name." The critique has force when the spec is the only durable artifact and the code is treated as a disposable byproduct: without something underneath the spec that captures the application's actual structure, every change re-derives that structure from prose, and drift compounds with each generation cycle. Semantic Engineering's answer is to add structure beneath the spec rather than to replace the spec with the agent. The knowledge graph is the persistent substrate. The spec stays as the intent for one change. The code stays as the implementation. The graph is what the agent reads when intent and implementation have to be reconciled against the rest of the system. The spec is no longer asked to carry knowledge it cannot carry, and the code stays first-class.
+
 For teams that do need to extend SDD, the addition of a structured knowledge graph is what carries the team to Semantic Engineering. SE is a strict superset of SDD. The spec authorship habits transfer directly. The ontology becomes the additional shared artifact the specs feed into and are validated against.
 
 ### What the Knowledge Graph Adds

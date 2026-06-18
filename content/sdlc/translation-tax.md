@@ -45,6 +45,9 @@ Each of these interactions matters. Each is bilateral and unrecorded. Each is pa
 
 ### Why AI Coding Agents Stall on This
 
+> "Bad code is the most expensive it has ever been."
+> — Matt Pocock
+
 This is the situation any AI coding agent walks into. The agent does not have access to any of these Slack conversations. The agent does not know which custodian to ask, and cannot ask anyway. The agent sees what is in the codebase, what is in the ticket, what is in the wiki (often stale), and that is the full extent of its context. Everything the four custodians know is invisible to it.
 
 Bigger context windows do not change this. We can feed an agent the entire codebase plus the entire wiki and it still does not have the architect's mental model of what is current. We can feed it the entire backlog and it still does not have the product owner's understanding of which features were deferred for strategic reasons. We can feed it the entire design system documentation and it still does not have the designer's judgment about which component is right for this case. The volume is not the problem. The shape is the problem. The agent needs structured context it can query for the parts that apply to the current task, not more text it has to wade through.
