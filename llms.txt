@@ -1,0 +1,59 @@
+# Semantic Engineering: An AI-led SDLC Methodology
+
+> Executive overview of Semantic Engineering, the methodology Accion Labs developed for agentic software engineering and legacy modernization. The shared problem, the universal principles, and how they instantiate across greenfield, brownfield, and legacy modernization work.
+
+Semantic Engineering is the methodology Accion Labs developed for agentic software engineering and legacy modernization. It models an enterprise application as a four-layer knowledge graph (functional, design, architecture, and code) that AI agents query for precise, governed context, addressing the "Manual Translation Tax" of feeding tacit enterprise knowledge to AI coding agents. Canonical site: https://semantic-engineering.ai/
+
+## Agentic Software Engineering (SDLC)
+
+The continuous SDLC instantiation of Semantic Engineering. The Manual Translation Tax, the four zones of process, the four-layer ontology, the agent fleet, the operating model, the engagement model, and the case archetypes for continuous software engineering under the methodology.
+
+- [Spec Sprint](https://semantic-engineering.ai/sdlc/process/spec-sprint/): A separate sprint cycle that runs ahead of the implementation sprint. Output is specifications, not code. The discipline that makes the layered team structure work at enterprise scale.
+- [Zone 1: Manual / Vibe Coding](https://semantic-engineering.ai/sdlc/zones/zone-1-manual-vibe-coding/): Conversational AI use without a written specification. The first taste of velocity. Where it is genuinely suitable, where it stops working, and the transition path to Spec-Driven Development.
+- [The Manual Translation Tax](https://semantic-engineering.ai/sdlc/translation-tax/): The structural cost the team pays every day converting unstructured knowledge into action. Four custodians who hold the tacit knowledge. Three components of the tax. The stake-in-the-ground on what stays human. The structural response in two diagrams.
+- [Implementation Sprint](https://semantic-engineering.ai/sdlc/process/implementation-sprint/): The per-change SDLC flow that consumes refined specs and runs them through the agent fleet, from impact analysis through PR validation to KG sync. How the developer role evolves as the agents take on more of the loop.
+- [Zone 2: Spec-Driven Development](https://semantic-engineering.ai/sdlc/zones/zone-2-spec-driven-development/): Spec-Driven Development as a complete operating mode. The contexts where SDD is the right destination, the practitioner playbook (constitution, toolkit, spec format, pod structure, async workflow, validation, review discipline, engineering constraints), the spec sprint cadence as a Zone 2 best practice, and the ceiling conditions teams encounter when complexity grows past SDD's reach.
+- [Team](https://semantic-engineering.ai/sdlc/process/team/): The operating model that delivers Semantic Engineering at enterprise scale. Fractional allocation, the layered team structure, and the Forward-Deployed Engineer role.
+- [The Four-Layer Ontology](https://semantic-engineering.ai/sdlc/methodology/): The four-layer ontology in depth, the aperture criterion that decides what enters it, partition by product, brownfield extraction as rationalization, and the governance framework that keeps the graph healthy.
+- [The Enablement Partnership](https://semantic-engineering.ai/sdlc/process/enablement-partnership/): How Accion Labs enables the client's custodianship across years. Five engagement principles. Three tiers of managed support. Offboarding doctrine that makes the entry decision easy.
+- [The Agents](https://semantic-engineering.ai/sdlc/agents/): The agent fleet that operates on the knowledge graph. Topology, the Impact Analysis Agent, validation and sync agents, and the progressive autonomy discipline.
+- [SDLC Engagement Model](https://semantic-engineering.ai/sdlc/engagement-model/): The commercial engagement model for continuous SDLC engagements. Four phases (Advise, Launch, Scale, Optimize) with activities, participants, deliverables, managed-support tier mappings, and pricing per phase.
+- [Case Archetypes: Continuous SDLC](https://semantic-engineering.ai/sdlc/case-archetypes/): Anonymized engagement anchors that demonstrate the continuous SDLC instantiation of Semantic Engineering. Live application evolution, greenfield growing into complexity, and SDD reaching its operational ceiling.
+
+## Agentic Legacy Modernization
+
+The legacy modernization instantiation of Semantic Engineering. The Modernization Translation Tax, the five engagement modes, the Source-state and Target-state ontologies, the modernization agent fleet, the operating model, the engagement model, and the case studies for legacy modernization under the methodology.
+
+- [Modernization Operating Model](https://semantic-engineering.ai/modernization/process/operating-model/): The operating model that delivers legacy modernization. Five-stage delivery, SME tuning loop, Expert Review pattern, team composition, and how the discipline differs from the continuous SDLC sprint cadence.
+- [The Modernization Translation Tax](https://semantic-engineering.ai/modernization/translation-tax/): The structural cost of modernizing a legacy application without a machine-readable substrate the agents can query. Four components: reverse-engineering, lost-context, validation-vacuum, and knowledge-disappearance. How the modernization methodology addresses each.
+- [The Modernization Enablement Frame](https://semantic-engineering.ai/modernization/process/enablement-frame/): The enablement frame for legacy modernization engagements. Who holds the custodial position, how the five engagement principles apply, the modernization offboarding doctrine, and the transition to the continuous SDLC enablement frame if the engagement continues.
+- [Ontologies for Legacy Modernization](https://semantic-engineering.ai/modernization/methodology/): The modernization instantiation of Semantic Engineering. The Source-state ontology decomposed from the legacy system, the Target-state ontology defined by the four custodians from a target blueprint, the specification format that bridges the two, the annotation discipline, and the parity contract that constrains agent generation.
+- [The Modernization Agent Fleet](https://semantic-engineering.ai/modernization/agents/): The agent fleet that operates the modernization pipeline. Nine named agents across five stages (Discover, Document, Migrate, Validate, Maintain). Bounded project pipeline rather than continuous loop. Progressive autonomy calibrated per engagement.
+- [Modernization Engagement Model](https://semantic-engineering.ai/modernization/engagement-model/): The commercial engagement model for legacy modernization. Five entry modes from Documentation Only through Maintain and Operate. How the modes differ from the continuous SDLC phases. Pricing per mode.
+- [Case Archetypes: Legacy Modernization](https://semantic-engineering.ai/modernization/case-archetypes/): Anonymized case studies that demonstrate the legacy modernization instantiation of Semantic Engineering across industries and stacks. Seven engagements covering ASP.Net, COBOL, Delphi, VB.NET, ASP Forms, and Java modernization.
+
+## Practitioner
+
+Accion Labs as the originating and primary practitioner of Semantic Engineering. About the firm, the platforms (Breeze.AI and ASIMOV), the engagement model, and services.
+
+- [Breeze.AI](https://semantic-engineering.ai/practitioner/breeze-ai/): The Accion Labs platform that operationalizes Semantic Engineering for SDLC engagements. The four-layer knowledge graph, the agent fleet that operates on it, the validation gates, and the brownfield extraction process all live here.
+- [ASIMOV](https://semantic-engineering.ai/practitioner/asimov/): Accion Labs's agentic platform for legacy modernization. Built on Semantic Engineering principles. Five-pillar architecture (AGIE, ASF, AMM, AVF, Maintain) built on a Source Graph, a Target Blueprint, and an intermediate ASIMOV Specification Format. Four Quality Gates enforced by agents. Five engagement modes from Documentation Only through Full Modernization. Humans validate behavioral parity rather than approving each step.
+- [Contact](https://semantic-engineering.ai/practitioner/contact/): Request a workshop, a pricing conversation, or an analyst briefing. The routes to engage with Accion Labs on a Semantic Engineering engagement.
+
+## Glossary
+
+The methodology's terminology with one-paragraph definitions and links into the depth pages.
+
+
+## About
+
+About the methodology. Copyright and trademark posture, governance of the methodology, press and analyst contact. (Origins is on its own page because of length.)
+
+- [Origins](https://semantic-engineering.ai/about/origins/): How Semantic Engineering came to be. The 2017 Breeze framework, the 2022 drug discovery moment, and the convergence that produced the methodology and the Breeze.AI platform.
+
+
+## Reference
+- [Home](https://semantic-engineering.ai/): Executive overview of Semantic Engineering, the methodology Accion Labs developed for agentic software engineering and legacy modernization. The shared problem, the universal principles, and how they instantiate across greenfield, brownfield, and legacy modernization work.
+- Archived release (DOI): https://doi.org/10.5281/zenodo.20745234
+- Source repository: https://github.com/accionlabs/semantic-engineering
+- License: content CC-BY-4.0, code MIT. "Semantic Engineering" and "Manual Translation Tax" are trademarks of Accion Labs.
