@@ -15,7 +15,7 @@ operating model we run engagements under.
   (`semantic-engineering.ai`) by a separate deployment pipeline.
 
 Content is plain Markdown, so you can edit it in any editor (VS Code, Obsidian,
-Cowork, etc.). You do **not** need to be a developer to update copy — see
+Cowork, etc.). You do **not** need to be a developer to update copy, see
 [Making content changes](#making-content-changes).
 
 ---
@@ -75,10 +75,10 @@ You need two tools installed (one-time setup). On macOS with
 brew install hugo go
 ```
 
-- **Hugo (extended)** — `hugo version` should report `extended` and `>= 0.128`.
+- **Hugo (extended)**: `hugo version` should report `extended` and `>= 0.128`.
   (CI uses 0.148.1.)
-- **Go** — required because the Hextra theme is pulled in as a Hugo Module.
-- **Python 3** — only needed if you edit diagrams (for `fix-svg.py`); it ships
+- **Go**: required because the Hextra theme is pulled in as a Hugo Module.
+- **Python 3**: only needed if you edit diagrams (for `fix-svg.py`); it ships
   with macOS.
 
 You also need **git** and access to the `accionlabs/semantic-engineering` repo.
@@ -102,7 +102,7 @@ From the repo root:
 Then open **http://localhost:1313/** in your browser.
 
 `serve.sh` stops any previous server, clears the build cache, and starts Hugo's
-dev server with live-reload. **Leave it running** while you edit — the browser
+dev server with live-reload. **Leave it running** while you edit, the browser
 refreshes automatically when you change content, diagrams, or styles. Press
 **Ctrl-C** to stop it.
 
@@ -123,13 +123,13 @@ refreshes automatically when you change content, diagrams, or styles. Press
    Body text in Markdown...
    ```
 
-   - **Don't** start the body with an `# H1` that repeats the title — the theme
+   - **Don't** start the body with an `# H1` that repeats the title, because the theme
      renders the `title:` as the page heading automatically.
    - **`weight`** sets the left-sidebar order within a section.
 3. Watch the change in the browser, then [commit and publish](#committing-and-publishing).
 
 Internal links between pages use normal relative Markdown links, e.g.
-`[The Agents](agents.md)` or `[Origins](about/origins.md#some-heading)` — the build
+`[The Agents](agents.md)` or `[Origins](about/origins.md#some-heading)`; the build
 resolves them to the right URLs.
 
 ---
@@ -144,7 +144,7 @@ Diagrams are **SVG files** in `static/diagrams/`, referenced from Markdown like:
 
 They're authored in a vector editor (Affinity Designer / Illustrator / Inkscape).
 The site themes diagrams with CSS variables (so they adapt to light/dark mode and
-the site font). **A vector editor strips that theming on export** — it bakes colors
+the site font). **A vector editor strips that theming on export**: it bakes colors
 to literal values, drops the styling class, and adds per-letter kerning that breaks
 under the site's font.
 
@@ -153,7 +153,7 @@ under the site's font.
 After you export/overwrite an SVG in `static/diagrams/`, run:
 
 ```bash
-# Repair every diagram (safe to run repeatedly — it's a no-op on already-fixed files)
+# Repair every diagram (safe to run repeatedly; it's a no-op on already-fixed files)
 python3 scripts/fix-svg.py
 
 # ...or just the one you changed
@@ -172,11 +172,11 @@ diagram will look wrong (off colors, broken dark mode, or garbled text).**
 
 1. Edit the artwork in your vector tool.
 2. **Export/overwrite** the `.svg` directly into `static/diagrams/` (in Affinity,
-   that's **File → Export → SVG**, *not* just ⌘S — a plain Save updates the native
+   that's **File → Export → SVG**, *not* just ⌘S; a plain Save updates the native
    `.afdesign`, not the SVG).
 3. Run `python3 scripts/fix-svg.py`.
 4. Check it in the local site (`./serve.sh`), in **both light and dark mode**.
-   Click the diagram — it should zoom.
+   Click the diagram; it should zoom.
 5. [Commit and publish](#committing-and-publishing).
 
 > Tip: browsers cache SVGs aggressively. If a diagram looks unchanged after editing,
@@ -193,7 +193,7 @@ When you're happy with your changes, run:
 ```
 
 **Who can publish:** the site is publish-protected. Only the **maintainer**
-(`@bijoor`) can update the live site directly — `main` is branch-protected so all
+(`@bijoor`) can update the live site directly; `main` is branch-protected so all
 other changes must go through a pull request the maintainer approves. `commit.sh`
 handles this automatically based on who you are:
 
@@ -230,12 +230,12 @@ gh pr create --base main --reviewer bijoor
 - A separate deployment pipeline serves the `gh-pages` branch at
   **`semantic-engineering.ai`**. (GitHub Pages' own serving is disabled; the
   `gh-pages` branch is still produced on every push and must be retained.)
-- No manual step is needed — just push to `main`.
+- No manual step is needed; just push to `main`.
 - You can watch builds under the repo's **Actions** tab.
 
 > The workflow publishes by pushing the built site to `gh-pages` (rather than the
 > default GitHub-Pages OIDC deploy) because of org security policy. Don't switch
-> the workflow to the `actions/deploy-pages` approach — it fails with a 401 in
+> the workflow to the `actions/deploy-pages` approach; it fails with a 401 in
 > this org.
 
 ---
@@ -261,17 +261,17 @@ button, driven by [`CITATION.cff`](CITATION.cff); the deposit metadata is in
 
 ## Troubleshooting
 
-- **Page is unstyled / CSS missing locally** — usually happens after editing
+- **Page is unstyled / CSS missing locally**: usually happens after editing
   `hugo.yaml` while the server is running. Restart it: `./serve.sh`.
-- **A diagram looks wrong (colors, dark mode, garbled text)** — you forgot to run
+- **A diagram looks wrong (colors, dark mode, garbled text)**: you forgot to run
   `python3 scripts/fix-svg.py` after editing the SVG.
-- **A diagram or favicon won't update in the browser** — it's cached. Hard-refresh
+- **A diagram or favicon won't update in the browser**: it's cached. Hard-refresh
   (**⌘⇧R**).
-- **Search shows old titles locally** — the search index is cached in your browser;
+- **Search shows old titles locally**: the search index is cached in your browser;
   hard-refresh. (It's always correct on the deployed site.)
-- **Broken internal links** — the build prints `render-link unresolved` warnings in
+- **Broken internal links**: the build prints `render-link unresolved` warnings in
   the server log for `.md` links that point to moved/removed pages. Fix the link
   target in the Markdown.
-- **`./commit.sh` push rejected / merge conflict** — someone (or a web edit) changed
+- **`./commit.sh` push rejected / merge conflict**: someone (or a web edit) changed
   the remote. The script rebases automatically; if it reports a conflict, resolve the
   flagged file, then `git rebase --continue` and `git push`.
