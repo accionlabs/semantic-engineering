@@ -1,7 +1,9 @@
 # Semantic Engineering Site
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20745234.svg)](https://doi.org/10.5281/zenodo.20745234)
+
 The public site documenting **Accion Labs' Semantic Engineering** approach to AI-led
-software delivery — the methodology, the platform (Breeze.AI / ASIMOV), and the
+software delivery: the methodology, the platform (Breeze.AI / ASIMOV), and the
 operating model we run engagements under.
 
 - **Live site:** https://semantic-engineering.ai/
@@ -240,19 +242,22 @@ gh pr create --base main --reviewer bijoor
 
 ## Citation and license
 
-If you reference or reuse this work, please cite it. GitHub shows a **"Cite this
-repository"** button (driven by [`CITATION.cff`](CITATION.cff)); once a Zenodo
-DOI is minted for a release, the DOI badge will be added here.
+This work is archived on Zenodo with a citable DOI:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20745234.svg)](https://doi.org/10.5281/zenodo.20745234)
+
+The **concept DOI** [10.5281/zenodo.20745234](https://doi.org/10.5281/zenodo.20745234)
+always resolves to the latest version. GitHub also shows a **"Cite this repository"**
+button, driven by [`CITATION.cff`](CITATION.cff); the deposit metadata is in
+[`.zenodo.json`](.zenodo.json).
 
 **Licensing:**
-- **Content** (text, diagrams, structural arrangement) — [CC-BY-4.0](LICENSE):
-  reuse and adapt with attribution to Accion Labs.
-- **Code** (Hugo config, layouts, scripts) — [MIT](LICENSE-CODE).
-- **Trademarks** — "Semantic Engineering" and "Manual Translation Tax" are
-  reserved marks of Accion Labs; the licenses above do not grant trademark
-  rights. See the site's *About → Copyright and Trademark* for the full posture.
-
-Archival metadata for Zenodo is in [`.zenodo.json`](.zenodo.json).
+- **Content** (text, diagrams, structural arrangement): [CC-BY-4.0](LICENSE).
+  Reuse and adapt with attribution to Accion Labs.
+- **Code** (Hugo config, layouts, scripts): [MIT](LICENSE-CODE).
+- **Trademarks:** "Semantic Engineering" and "Manual Translation Tax" are reserved
+  marks of Accion Labs; the licenses above do not grant trademark rights. See the
+  site's *About > Copyright and Trademark* for the full posture.
 
 ## Troubleshooting
 

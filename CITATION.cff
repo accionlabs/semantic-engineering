@@ -10,9 +10,13 @@ abstract: >-
 type: software
 license: CC-BY-4.0
 version: 1.0.0
-date-released: "2026-06-18"   # update to the actual date of the v1.0.0 release
+date-released: "2026-06-18"
 url: "https://semantic-engineering.ai/"
 repository-code: "https://github.com/accionlabs/semantic-engineering"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.20745234"
+    description: "Concept DOI (resolves to the latest version)"
 keywords:
   - Semantic Engineering
   - knowledge graph
