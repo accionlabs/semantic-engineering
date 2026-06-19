@@ -25,12 +25,6 @@ Accion Labs's agentic platform for legacy modernization. ASIMOV is a peer of [Br
 | Delivery shape | Time-boxed cycles for complex enterprise systems |
 | Engagement attributes | Precise and flexible, scalable and cost-efficient, fully agentic |
 
-**Indicative outcomes on a 1M LOC standalone codebase:**
-
-| Outcome | Value |
-|---|---|
-| Modernization speed | **Up to 4× faster** than manual modernization |
-| Migration time reduction | **Up to 70%** |
 
 Delivery duration on any specific engagement depends on the organization's path-to-production process. Actual cost outcomes depend on the engagement scope, the target environment, the organization's prevailing rate structure, and the modules selected for migration. ASIMOV reports duration and effort outcomes; cost outcomes are framed engagement by engagement.
 
@@ -179,7 +173,7 @@ The Knowledge Graph that AGIE produces is the operational substrate everything d
 
 ## Outcomes and Deliverables
 
-ASIMOV guarantees four outcomes on the modernized application.
+ASIMOV guarantees five outcomes on the modernized application.
 
 | Outcome | What it means |
 |---|---|
@@ -187,6 +181,7 @@ ASIMOV guarantees four outcomes on the modernized application.
 | **Zero cloud dependency on migrated code** | Full control over infrastructure decisions. No vendor lock-in. Freedom to optimize cost and deployment environment after the migration. |
 | **Source code, test cases, and documentation** | Guaranteed transparency. Internal teams can manage, audit, and scale the solution confidently. Onboarding is fast because the artifacts are complete. |
 | **Optimized, high-quality code** | Reduces long-term technical debt. Makes it easier to adapt, enhance, and extend the system as the business evolves. |
+| **Knowleged of the Modernized for accelerated Future development** | Detailed knowlegde of Modernized code. Easy access to code details via interfaces like ChatBot. Faster issue fixing and feature development, enhancement as the business evolves. |
 
 ## Success Stories
 
