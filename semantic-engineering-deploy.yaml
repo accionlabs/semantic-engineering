@@ -78,3 +78,13 @@ spec:
                   number: 80
             path: ${ENV_CONTEXT_PATH}
             pathType: ImplementationSpecific
+    - host: semantic-engineering.ai
+      http:
+        paths:
+          - backend:
+              service:
+                name: ${MICROSERVICE_NAME}
+                port:
+                  number: 80
+            path: ${ENV_CONTEXT_PATH}
+            pathType: ImplementationSpecific 
