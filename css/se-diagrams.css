@@ -111,7 +111,7 @@ body.light,
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
   opacity: 0;
   pointer-events: none;
   transition: opacity 300ms cubic-bezier(0.2, 0, 0.2, 1);
@@ -124,12 +124,12 @@ body.light,
 html.dark #se-zoom-bg,
 body.dark #se-zoom-bg,
 .dark #se-zoom-bg {
-  background: rgba(15, 23, 42, 0.95);
+  background: #0f172a;
 }
 html.light #se-zoom-bg,
 body.light #se-zoom-bg,
 .light #se-zoom-bg {
-  background: rgba(255, 255, 255, 0.95);
+  background: #ffffff;
 }
 
 /* Mermaid diagrams are also zoomable. Match the wrapper cursor. */
