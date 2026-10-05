@@ -341,7 +341,7 @@
         <text x="-366.22px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">The Knowledge Graph anchors the loop: read at step 2 to inform development, audited at step 5 against the merge, written back at step 6.</text>
     </g>
     <g transform="matrix(1,0,0,1,800,733)">
-        <text x="-278.496px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Steps 1-4 produce the merge. Step 5 audits it. Step 6 keeps the graph honest. The cycle repeats per PR.</text>
+        <text x="-278.496px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Steps 1-4 produce the merge. Step 5 audits it. Step 6 keeps the graph current. The cycle repeats per PR.</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <path d="M60,844L60,856C60,858.208 58.208,860 56,860L44,860C41.792,860 40,858.208 40,856L40,844C40,841.792 41.792,840 44,840L56,840C58.208,840 60,841.792 60,844Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>

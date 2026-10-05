@@ -181,7 +181,7 @@ ASIMOV guarantees five outcomes on the modernized application.
 | **Zero cloud dependency on migrated code** | Full control over infrastructure decisions. No vendor lock-in. Freedom to optimize cost and deployment environment after the migration. |
 | **Source code, test cases, and documentation** | Guaranteed transparency. Internal teams can manage, audit, and scale the solution confidently. Onboarding is fast because the artifacts are complete. |
 | **Optimized, high-quality code** | Reduces long-term technical debt. Makes it easier to adapt, enhance, and extend the system as the business evolves. |
-| **Knowleged of the Modernized for accelerated Future development** | Detailed knowlegde of Modernized code. Easy access to code details via interfaces like ChatBot. Faster issue fixing and feature development, enhancement as the business evolves. |
+| **Knowledge of the Modernized for accelerated Future development** | Detailed knowledge of Modernized code. Easy access to code details via interfaces like ChatBot. Faster issue fixing and feature development, enhancement as the business evolves. |
 
 ## Success Stories
 

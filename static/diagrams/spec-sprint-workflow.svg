@@ -321,7 +321,7 @@
             </g>
             <g transform="matrix(16,0,0,16,-9.050781,0)">
             </g>
-            <text x="-440.941px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PUSH-BACK LOOP — specs that the implementation sprint ﬁnds missing context return here for the next spec sprint to clear</text>
+            <text x="-440.941px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">PUSH-BACK LOOP: specs that the implementation sprint ﬁnds missing context return here for the next spec sprint to clear</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,700,800)">

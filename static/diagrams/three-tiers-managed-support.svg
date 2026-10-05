@@ -21,7 +21,7 @@
         <g transform="matrix(1,0,0,1,140,100)">
             <path d="M120,10L120,50C120,55.519 115.519,60 110,60L10,60C4.481,60 0,55.519 0,50L0,10C0,4.481 4.481,0 10,0L110,0C115.519,0 120,4.481 120,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
             <g transform="matrix(1,0,0,1,60,32)">
-                <text x="-20.021px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">2–4</text>
+                <text x="-20.021px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">2 to 4</text>
             </g>
             <g transform="matrix(1,0,0,1,59.92,50)">
                 <text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">HOURS / MONTH</text>
@@ -68,7 +68,7 @@
         <g transform="matrix(1,0,0,1,140,100)">
             <path d="M120,10L120,50C120,55.519 115.519,60 110,60L10,60C4.481,60 0,55.519 0,50L0,10C0,4.481 4.481,0 10,0L110,0C115.519,0 120,4.481 120,10Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
             <g transform="matrix(1,0,0,1,60,32)">
-                <text x="-33.369px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">10–20</text>
+                <text x="-33.369px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:24px;fill:var(--se-text,#111111);">10 to 20</text>
             </g>
             <g transform="matrix(1,0,0,1,59.92,50)">
                 <text x="-53.5px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">HOURS / MONTH</text>

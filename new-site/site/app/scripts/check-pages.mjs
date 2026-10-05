@@ -6,7 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const here = path.dirname(fileURLToPath(import.meta.url));
-const base = process.argv[2] ?? 'http://localhost:4173';
+const base = process.argv[2] ?? 'http://localhost:4174';
 const site = JSON.parse(fs.readFileSync(path.join(here, '../src/content/site.json'), 'utf8'));
 const only = process.argv[3] ? process.argv[3].split(',') : null;
 const pages = [...site.pages.map((p) => p.url), '/no-such-page/'].filter((p) => !only || only.some((o) => p.includes(o)));

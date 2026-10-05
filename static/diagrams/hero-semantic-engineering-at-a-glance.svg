@@ -5,7 +5,7 @@
         <text x="-241.743px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111)">Semantic Engineering at a Glance</text>
     </g>
     <g transform="matrix(1,0,0,1,600,68)">
-        <text x="-319.278px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Tacit knowledge becomes a structured substrate that agents can query selectively, governed so it stays honest.</text>
+        <text x="-319.278px" y="0px" style="font-family:'Helvetica';font-size:13px;fill:var(--se-text-secondary,#4b5563);">Tacit knowledge becomes a structured substrate that agents can query selectively, governed so it stays accurate.</text>
     </g>
     <g transform="matrix(1,0,0,1,60,108)">
         <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">UNSTRUCTURED KNOWLEDGE</text>
@@ -153,7 +153,7 @@
         <text x="-58.091px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">automated checks keep</text>
     </g>
     <g transform="matrix(1,0,0,1,1035,408)">
-        <text x="-41.282px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">the graph honest</text>
+        <text x="-41.282px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">the graph accurate</text>
     </g>
     <g transform="matrix(1,0,0,1,600,467)">
         <text x="-232.066px" y="0px" style="font-family:'Helvetica-Oblique', 'Helvetica';font-style:italic;font-size:11px;fill:var(--se-text-secondary,#4b5563);">A machine-readable substrate that captures the knowledge the agents need to do reliable work.</text>

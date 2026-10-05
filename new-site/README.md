@@ -10,7 +10,7 @@ Copied on 5 October 2026 from `~/Code/dialect-engineering` at commit `7f90f10`, 
 cd new-site/site/app
 npm install
 npm run build      # content, type check, client and server builds, prerender every page
-npm run preview    # http://localhost:4173
+npm run preview    # http://localhost:4174
 ```
 
 `npm run dev` serves the app with live reload; run `npm run content` again after editing Markdown.
