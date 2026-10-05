@@ -20,6 +20,11 @@ import { scene18 } from './s18-many-products';
 import { scene19 } from './s19-tech-debt';
 import { scene20 } from './s20-team';
 import { scene21 } from './s21-results';
+import { scene22 } from './s22-modernization-tax';
+import { scene23 } from './s23-ontologies';
+import { scene24 } from './s24-parity-gates';
+import { scene25 } from './s25-modes-stages';
+import { scene26 } from './s26-results-handover';
 
 /** Every scene built so far, in script order. */
-export const DEFS: SceneDef[] = [scene01, scene02, scene03, scene04, scene05, scene06, scene07, scene08, scene09, scene10, scene11, scene12, scene13, scene14, scene15, scene16, scene17, scene18, scene19, scene20, scene21].sort((a, b) => a.n - b.n);
+export const DEFS: SceneDef[] = [scene01, scene02, scene03, scene04, scene05, scene06, scene07, scene08, scene09, scene10, scene11, scene12, scene13, scene14, scene15, scene16, scene17, scene18, scene19, scene20, scene21, scene22, scene23, scene24, scene25, scene26].sort((a, b) => a.n - b.n);
