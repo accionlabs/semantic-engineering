@@ -1,5 +1,5 @@
 import React from 'react';
-import { C, F, H, W, tenantColour } from '../theme';
+import { C, F, H, W } from '../theme';
 
 // Static parts. Each takes a className so the scene's timeline can find and move it.
 // Anything that should start hidden carries the class "pre" (set to hidden at time 0 by the scene).
@@ -73,26 +73,6 @@ export const Callout: React.FC<{ className: string; x: number; y: number; w?: nu
 );
 
 /** A number the timeline can count up; tween its `.counter-value` innerText with snap. */
-export const Counter: React.FC<{ className: string; x: number; y: number; start: number; label?: string }> = ({ className, x, y, start, label = 'tenants' }) => (
-  <div className={className} data-target="counter.tenants" style={{ position: 'absolute', left: x, top: y, display: 'flex', alignItems: 'baseline', gap: 12 }}>
-    <span className="counter-value" style={{ fontFamily: F.display, fontWeight: 700, fontSize: 44, fontVariantNumeric: 'tabular-nums' }}>{start}</span>
-    <span style={{ fontFamily: F.sans, fontSize: 19, color: C.muted }}>{label} <span style={{ fontFamily: F.mono, fontSize: 13, letterSpacing: 1 }}>ILLUSTRATIVE</span></span>
-  </div>
-);
-
-export const LanguageCard: React.FC<{ className: string; x: number; y: number; w?: number; tenant: string; colour: string; lines: string[]; compact?: boolean; target: string; header?: string }> = ({ className, x, y, w = 460, tenant, colour, lines, compact, target, header }) => {
-  // Line classes come from the last class name, so a card marked "pre card" does not hide its own lines.
-  const lineKey = className.trim().split(/\s+/).pop();
-  return (
-  <div className={className} data-target={target} style={{ position: 'absolute', left: x, top: y, width: w, background: '#0a1a1a', border: `1.5px solid ${colour}`, borderRadius: 10, overflow: 'hidden' }}>
-    <div style={{ background: colour, color: C.tenantText, fontFamily: F.mono, fontSize: compact ? 12 : 14, padding: compact ? '4px 12px' : '6px 14px', letterSpacing: 1 }}>{header ?? (compact ? tenant : `${tenant} · business rules`)}</div>
-    <pre style={{ margin: 0, padding: compact ? '8px 12px' : '12px 16px', fontFamily: F.mono, fontSize: compact ? 13 : 17, lineHeight: 1.55, color: C.text, whiteSpace: 'pre' }}>
-      {lines.map((l, i) => <div key={i} className={`${lineKey}-line ${lineKey}-line-${i}`} style={{ whiteSpace: 'pre' }}>{l || ' '}</div>)}
-    </pre>
-  </div>
-  );
-};
-
 export const Pill: React.FC<{ className?: string; x: number; y: number; text: string; colour: string; w?: number; fill?: string }> = ({ className, x, y, text, colour, w, fill }) => {
   const width = w ?? text.length * 9.6 + 30;
   return (
@@ -103,34 +83,14 @@ export const Pill: React.FC<{ className?: string; x: number; y: number; text: st
   );
 };
 
-export const Person: React.FC<{ className?: string; x: number; y: number; r?: number; colour?: string }> = ({ className, x, y, r = 16, colour = C.tenant[3] }) => (
+export const Person: React.FC<{ className?: string; x: number; y: number; r?: number; colour?: string }> = ({ className, x, y, r = 16, colour = C.people }) => (
   <g className={className}>
     <circle cx={x} cy={y} r={r * 0.6} fill="none" stroke={colour} strokeWidth={3} />
     <path d={`M${x - r} ${y + r * 1.9} q${r} ${-r * 1.9} ${2 * r} 0`} fill="none" stroke={colour} strokeWidth={3} strokeLinecap="round" />
   </g>
 );
 
-export const ScreenIcon: React.FC<{ className?: string; x: number; y: number; w: number; h: number; colour: string; variant?: number }> = ({ className, x, y, w, h, colour, variant = 0 }) => (
-  <g className={className}>
-    <rect x={x} y={y} width={w} height={h} rx={6} fill={C.canvasRaised} stroke={colour} strokeWidth={2} />
-    <rect x={x} y={y} width={w} height={h * 0.16} rx={6} fill={colour} opacity={0.8} />
-    {variant === 0 ? (
-      <>
-        <rect x={x + w * 0.08} y={y + h * 0.28} width={w * 0.84} height={h * 0.12} rx={3} fill={C.hairline} />
-        <rect x={x + w * 0.08} y={y + h * 0.48} width={w * 0.84} height={h * 0.12} rx={3} fill={C.hairline} />
-        <rect x={x + w * 0.08} y={y + h * 0.68} width={w * 0.5} height={h * 0.12} rx={3} fill={C.hairline} />
-      </>
-    ) : (
-      <>
-        <rect x={x + w * 0.08} y={y + h * 0.28} width={w * 0.38} height={h * 0.52} rx={3} fill={colour} opacity={0.5} />
-        <rect x={x + w * 0.54} y={y + h * 0.28} width={w * 0.38} height={h * 0.22} rx={3} fill={C.hairline} />
-        <rect x={x + w * 0.54} y={y + h * 0.58} width={w * 0.38} height={h * 0.22} rx={3} fill={C.hairline} />
-      </>
-    )}
-  </g>
-);
-
-export const DocIcon: React.FC<{ className?: string; x: number; y: number; label: string; colour?: string; glyph?: string }> = ({ className, x, y, label, colour = C.sharedEdge, glyph = '' }) => (
+export const DocIcon: React.FC<{ className?: string; x: number; y: number; label: string; colour?: string; glyph?: string }> = ({ className, x, y, label, colour = C.card, glyph = '' }) => (
   <g className={className}>
     <path d={`M${x} ${y} h56 l18 18 v72 h-74 z`} fill={C.canvasRaised} stroke={colour} strokeWidth={2} />
     <text x={x + 37} y={y + 58} textAnchor="middle" fontFamily={F.mono} fontSize={17} fill={colour}>{glyph}</text>
@@ -139,22 +99,3 @@ export const DocIcon: React.FC<{ className?: string; x: number; y: number; label
 );
 
 /** The knowledge graph of the domain primitives. Nodes carry class `${key}-node-<i>`. */
-export const GRAPH_NODES = [
-  { id: 'Employee', x: 150, y: 690 }, { id: 'Pay element', x: 390, y: 640 },
-  { id: 'Statutory deduction', x: 330, y: 800 }, { id: 'Calculation', x: 120, y: 850 },
-];
-const EDGES = [[0, 1], [1, 2], [1, 3], [0, 3], [2, 3]];
-export const Graph: React.FC<{ className: string; dx?: number; dy?: number; scale?: number }> = ({ className, dx = 0, dy = 0, scale = 1 }) => (
-  <g className={className} transform={`translate(${dx} ${dy}) scale(${scale})`} data-target="graph.knowledge">
-    {EDGES.map(([a, b], k) => <line key={k} className={`${className}-edge`} x1={GRAPH_NODES[a].x} y1={GRAPH_NODES[a].y} x2={GRAPH_NODES[b].x} y2={GRAPH_NODES[b].y} stroke={C.invariantEdge} strokeWidth={2} opacity={0.6} />)}
-    {GRAPH_NODES.map((nd, i) => (
-      <g key={nd.id} className={`${className}-node ${className}-node-${i}`}>
-        <circle cx={nd.x} cy={nd.y} r={11} fill={C.canvas} stroke={C.invariantEdge} strokeWidth={3} />
-        <text x={nd.x + 18} y={nd.y + 6} fontFamily={F.sans} fontSize={18} fill={C.text}>{nd.id}</text>
-      </g>
-    ))}
-    <text x={80} y={600} fontFamily={F.mono} fontSize={14} fill={C.muted} letterSpacing={1.5}>KNOWLEDGE GRAPH</text>
-  </g>
-);
-
-export { tenantColour };

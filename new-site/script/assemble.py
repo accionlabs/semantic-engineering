@@ -14,8 +14,8 @@ import sys
 
 MEDIA = pathlib.Path.home() / 'Documents/Documentation System/content/shared/accion-2.0/semantic-engineering-site-media/video'
 PARTS = [('overview', 'Overview'), ('act-1', 'Act 1. The shared problem'), ('act-2', 'Act 2. The methodology'),
-         ('act-3', 'Act 3. The SDLC models'), ('act-4', 'Act 4. In operation, with Breeze.AI'),
-         ('act-5', 'Act 5. Legacy modernization, with ASIMOV'), ('act-6', 'Act 6. Working together (optional)')]
+         ('act-3', 'Act 3. Knowledge graphs and agents in the AI-driven SDLC, with Breeze.AI'),
+         ('act-4', 'Act 4. Legacy modernization, with ASIMOV'), ('act-5', 'Act 5. Working together (optional)')]
 WPS = 2.6
 OPENERS = r'(They|It|That|This|These|Those|And|So|Here|But|Further down|Its|Their|Then|Also)\b'
 RULES = [
@@ -94,6 +94,18 @@ for s in scenes:
         sec += [f'### {part}', '']
     sec += [f"#### {'Overview' if not s['n'] else 'Scene ' + str(s['n']) + '. ' + s['name']}", '', re.sub(r'^#{3,4} Storyboard[^\n]*\n', '', s['board']).strip(), '']
 (MEDIA / 'storyboard.md').write_text(head + '\n'.join(sec) + '\n')
+
+# ---------- narration.json for the animation engine ----------
+ACTS = {str(i): t.split('. ', 1)[-1] for i, (_, t) in enumerate(PARTS)}
+nar = {'acts': ACTS, 'scenes': []}
+for sc in scenes:
+    body = ' '.join(l[1:].strip() for l in sc['script'].splitlines() if l.startswith('>'))
+    sents = re.split(r'(?<=[.!?])\s+(?=[A-Z0-9"])', body)
+    act = next(i for i, (_, t) in enumerate(PARTS) if t == sc['part'])
+    nar['scenes'].append({'act': act, 'n': sc['n'], 'title': sc['name'], 'text': body, 'words': len(body.split()), 'sentences': sents})
+ANIM = pathlib.Path(__file__).resolve().parent.parent / 'video/animation/src/narration.json'
+import json
+ANIM.write_text(json.dumps(nar, indent=1))
 
 print(f'{len(scenes)} scenes, {total} words, about {total / WPS / 60:.1f} minutes')
 print('\n'.join(problems) if problems else 'narration checks: no problems')

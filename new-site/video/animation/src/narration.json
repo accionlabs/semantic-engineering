@@ -1,495 +1,584 @@
 {
  "acts": {
   "0": "Overview",
-  "1": "Above the surface",
-  "2": "The customer's journey down today's stack",
-  "3": "The approach",
-  "4": "Implementation",
-  "5": "The brownfield path, layer by layer"
+  "1": "The shared problem",
+  "2": "The methodology",
+  "3": "Knowledge graphs and agents in the AI-driven SDLC, with Breeze.AI",
+  "4": "Legacy modernization, with ASIMOV",
+  "5": "Working together (optional)"
  },
  "scenes": [
   {
    "act": 0,
-   "n": 30,
+   "n": 0,
    "title": "Overview",
-   "paper": "1, 2, 9, 8, 3, 5, 14",
-   "text": "SaaS architecture rests on one premise: writing the code is the expensive part. So products share every layer they can, and draw the line between shared and per-customer as high as it will go. When a customer needs something the configuration did not anticipate, the quick answer is a special case in shared code, and every tenant carries it. Coding agents are now reported building whole applications end to end. If code is no longer the expensive part, the line can move. Customers want to start without a project measured in months, change things easily after go-live, personalise down to the individual user, and have their own agents operate the product. Beneath every customer's variation sit the domain invariants: the entities, calculations and relationships every customer shares. The product's knowledge graph already records them. Put a language on top of them. The invariants are its vocabulary, and its grammar says how each customer's business rules may combine them. The line moves down to sit on the invariants. An agent writes each customer's rules in that language from what the customer asks for, and a validator, tests and a compiler check them before anything reaches the product. An existing product can start at the top, with onboarding, which leaves the product's code untouched. That is dialect engineering: one shared product, and a language for each customer. Each part of the full video goes deeper, with the paper's sources.",
-   "words": 237,
+   "text": "Semantic Engineering is the method Accion Labs uses to make AI coding agents work reliably on large enterprise software. AI coding tools are fast on small, contained tasks. On a large enterprise application, AI coding tools make mistakes, because the knowledge they need is written down nowhere they can read. A coding agent needs four kinds of knowledge about the application: functional, design, architecture and code. In a typical enterprise application, the product owner holds the functional knowledge, the UX designer holds the design knowledge, the architect holds the architecture knowledge, and the engineering team holds the code knowledge. The knowledge reaches developers through messages, meetings and someone's memory, and every handoff loses a little of it. The recurring cost of passing knowledge on by hand is called the Manual Translation Tax. Bigger context windows do not remove the tax, because an agent needs structured knowledge it can check its work against. Semantic Engineering records that knowledge once, in a knowledge graph of the application: every feature, screen, service and piece of code recorded as an item, with the links between them. The knowledge graph has four layers, one for each kind of knowledge: functional, design, architecture and code. Each layer is owned by the role that holds that knowledge, and that person is accountable for keeping the layer accurate. Agents read the knowledge graph before they change anything, and build only what the graph describes. Every change is checked against the knowledge graph before it is merged, and each check leaves evidence the team can audit. After every merge, the knowledge graph is updated, so the next change starts from the application as it is. How much of the method a team needs depends on the complexity of its work. One developer building a prototype can simply chat with an AI tool. One team on one product works well with a written specification for each change. Several teams working on a large existing system need the knowledge graph. For that work, Breeze.AI's agents carry each change: impact analysis before coding, a check against the graph before merge, and an update to the graph after merge. People decide which work the agents take on, and every agent has a named owner. The same method applies to building new applications, changing existing ones, and replacing legacy systems. Legacy modernization uses its own form of the knowledge graph: a graph of the old system, a graph of the new one, and a specification that connects the two. Two platforms run the method: Breeze.AI for new and existing applications, and ASIMOV for legacy modernization. In every case, the same four principles hold: one structured graph, agents bound by it, a named owner for each part, and a check on every change.",
+   "words": 458,
    "sentences": [
-    "SaaS architecture rests on one premise: writing the code is the expensive part.",
-    "So products share every layer they can, and draw the line between shared and per-customer as high as it will go.",
-    "When a customer needs something the configuration did not anticipate, the quick answer is a special case in shared code, and every tenant carries it.",
-    "Coding agents are now reported building whole applications end to end.",
-    "If code is no longer the expensive part, the line can move.",
-    "Customers want to start without a project measured in months, change things easily after go-live, personalise down to the individual user, and have their own agents operate the product.",
-    "Beneath every customer's variation sit the domain invariants: the entities, calculations and relationships every customer shares.",
-    "The product's knowledge graph already records them.",
-    "Put a language on top of them.",
-    "The invariants are its vocabulary, and its grammar says how each customer's business rules may combine them.",
-    "The line moves down to sit on the invariants.",
-    "An agent writes each customer's rules in that language from what the customer asks for, and a validator, tests and a compiler check them before anything reaches the product.",
-    "An existing product can start at the top, with onboarding, which leaves the product's code untouched.",
-    "That is dialect engineering: one shared product, and a language for each customer.",
-    "Each part of the full video goes deeper, with the paper's sources."
-   ],
-   "figs": []
+    "Semantic Engineering is the method Accion Labs uses to make AI coding agents work reliably on large enterprise software.",
+    "AI coding tools are fast on small, contained tasks.",
+    "On a large enterprise application, AI coding tools make mistakes, because the knowledge they need is written down nowhere they can read.",
+    "A coding agent needs four kinds of knowledge about the application: functional, design, architecture and code.",
+    "In a typical enterprise application, the product owner holds the functional knowledge, the UX designer holds the design knowledge, the architect holds the architecture knowledge, and the engineering team holds the code knowledge.",
+    "The knowledge reaches developers through messages, meetings and someone's memory, and every handoff loses a little of it.",
+    "The recurring cost of passing knowledge on by hand is called the Manual Translation Tax.",
+    "Bigger context windows do not remove the tax, because an agent needs structured knowledge it can check its work against.",
+    "Semantic Engineering records that knowledge once, in a knowledge graph of the application: every feature, screen, service and piece of code recorded as an item, with the links between them.",
+    "The knowledge graph has four layers, one for each kind of knowledge: functional, design, architecture and code.",
+    "Each layer is owned by the role that holds that knowledge, and that person is accountable for keeping the layer accurate.",
+    "Agents read the knowledge graph before they change anything, and build only what the graph describes.",
+    "Every change is checked against the knowledge graph before it is merged, and each check leaves evidence the team can audit.",
+    "After every merge, the knowledge graph is updated, so the next change starts from the application as it is.",
+    "How much of the method a team needs depends on the complexity of its work.",
+    "One developer building a prototype can simply chat with an AI tool.",
+    "One team on one product works well with a written specification for each change.",
+    "Several teams working on a large existing system need the knowledge graph.",
+    "For that work, Breeze.AI's agents carry each change: impact analysis before coding, a check against the graph before merge, and an update to the graph after merge.",
+    "People decide which work the agents take on, and every agent has a named owner.",
+    "The same method applies to building new applications, changing existing ones, and replacing legacy systems.",
+    "Legacy modernization uses its own form of the knowledge graph: a graph of the old system, a graph of the new one, and a specification that connects the two.",
+    "Two platforms run the method: Breeze.AI for new and existing applications, and ASIMOV for legacy modernization.",
+    "In every case, the same four principles hold: one structured graph, agents bound by it, a named owner for each part, and a check on every change."
+   ]
   },
   {
    "act": 1,
    "n": 1,
-   "title": "The premise and the line",
-   "paper": "1, 2",
-   "text": "For decades, SaaS architecture has rested on one premise: writing the code is the expensive part. Four rules follow from it. Write the code once. Share every layer that can be shared. Express customer difference as configuration. Write custom code only where configuration runs out. Picture the product as a stack of layers with a line drawn through it. Below the line, everything is shared by every tenant. Above it sit only each customer's configuration values. The rules push that line as high as it will go, and they fix the product's flexibility at design time.",
-   "words": 96,
+   "title": "Who holds the knowledge",
+   "text": "The knowledge an enterprise application depends on falls into four kinds: functional, design, architecture and code. The product owner holds the functional knowledge: the personas, the outcomes, the scenarios, and the proposals that were rejected. The UX designer holds the design knowledge: the components, the interaction patterns and how each screen handles its states. The architect holds the architecture knowledge: the service boundaries, the databases that are the source of truth, and the integration contracts. The engineering team holds the code knowledge: the live functions, the retry policies, the active feature flags and the unused utilities. The product owner writes functional knowledge into prose specifications, the UX designer writes design knowledge into Figma handoffs, and the architect writes architecture knowledge into an architecture wiki. Much of the code knowledge stays in people's heads, each developer holding a narrow slice of the codebase. No single person and no document holds all four kinds of knowledge. The four roles are the custodians of the application's knowledge.",
+   "words": 164,
    "sentences": [
-    "For decades, SaaS architecture has rested on one premise: writing the code is the expensive part.",
-    "Four rules follow from it.",
-    "Write the code once.",
-    "Share every layer that can be shared.",
-    "Express customer difference as configuration.",
-    "Write custom code only where configuration runs out.",
-    "Picture the product as a stack of layers with a line drawn through it.",
-    "Below the line, everything is shared by every tenant.",
-    "Above it sit only each customer's configuration values.",
-    "The rules push that line as high as it will go, and they fix the product's flexibility at design time."
-   ],
-   "figs": [
-    "Microsoft SaaS maturity model: a single instance \"with configurable metadata providing a unique user experience and feature set for each one\" (Chong and Carraro, Microsoft, 2006)"
+    "The knowledge an enterprise application depends on falls into four kinds: functional, design, architecture and code.",
+    "The product owner holds the functional knowledge: the personas, the outcomes, the scenarios, and the proposals that were rejected.",
+    "The UX designer holds the design knowledge: the components, the interaction patterns and how each screen handles its states.",
+    "The architect holds the architecture knowledge: the service boundaries, the databases that are the source of truth, and the integration contracts.",
+    "The engineering team holds the code knowledge: the live functions, the retry policies, the active feature flags and the unused utilities.",
+    "The product owner writes functional knowledge into prose specifications, the UX designer writes design knowledge into Figma handoffs, and the architect writes architecture knowledge into an architecture wiki.",
+    "Much of the code knowledge stays in people's heads, each developer holding a narrow slice of the codebase.",
+    "No single person and no document holds all four kinds of knowledge.",
+    "The four roles are the custodians of the application's knowledge."
    ]
   },
   {
    "act": 1,
    "n": 2,
-   "title": "Special cases accumulate",
-   "paper": "1.1",
-   "text": "When a customer asks for something the configuration did not anticipate, a deadline usually comes with it, and the quickest answer is a special case in shared code. In one large family of industry surveys, time pressure is the most cited cause of technical debt. In a multi-tenant product, every tenant carries every special case.",
-   "words": 55,
+   "title": "One feature in one sprint",
+   "text": "Consider one developer in a conventional Scrum sprint, building a feature that lets users choose how often they receive saved-search alerts. For the functional knowledge, the developer has the product owner's one-paragraph user story, and three questions about it. For the design knowledge, the design system offers four controls, and the UX designer takes thirty seconds to name the right one. For the architecture knowledge, the architecture wiki has not been updated in nine months, so the developer asks the architect where the new data should live. For the code knowledge, the developer messages two colleagues, one of whom is away until Monday. Each message costs the person asking about thirty minutes, and each answer takes ten to fifteen minutes to write. The answers come back partial, and one contradicts the wiki. Code review catches one issue, integration testing catches another, and the third surfaces in production six weeks later. Each of these exchanges happens between two people, and none of them is recorded. The time and information lost in exchanges like these is what the methodology calls the Manual Translation Tax.",
+   "words": 182,
    "sentences": [
-    "When a customer asks for something the configuration did not anticipate, a deadline usually comes with it, and the quickest answer is a special case in shared code.",
-    "In one large family of industry surveys, time pressure is the most cited cause of technical debt.",
-    "In a multi-tenant product, every tenant carries every special case."
-   ],
-   "figs": [
-    "Time pressure: most cited cause of technical debt, 653 practitioners in six countries (InsighTD; Ramač et al., Journal of Systems and Software, 2022)"
+    "Consider one developer in a conventional Scrum sprint, building a feature that lets users choose how often they receive saved-search alerts.",
+    "For the functional knowledge, the developer has the product owner's one-paragraph user story, and three questions about it.",
+    "For the design knowledge, the design system offers four controls, and the UX designer takes thirty seconds to name the right one.",
+    "For the architecture knowledge, the architecture wiki has not been updated in nine months, so the developer asks the architect where the new data should live.",
+    "For the code knowledge, the developer messages two colleagues, one of whom is away until Monday.",
+    "Each message costs the person asking about thirty minutes, and each answer takes ten to fifteen minutes to write.",
+    "The answers come back partial, and one contradicts the wiki.",
+    "Code review catches one issue, integration testing catches another, and the third surfaces in production six weeks later.",
+    "Each of these exchanges happens between two people, and none of them is recorded.",
+    "The time and information lost in exchanges like these is what the methodology calls the Manual Translation Tax."
    ]
   },
   {
    "act": 1,
    "n": 3,
-   "title": "The premise shifts",
-   "paper": "1.2",
-   "text": "That premise, that writing the code is the expensive part, is now moving. Coding agents such as Claude Code and Codex are reported building whole applications end to end. If code is no longer the expensive part, the four rules built on its cost deserve a second look. Which layers should every customer still share? What is a SaaS product really selling, once its code is cheap to reproduce?",
-   "words": 69,
+   "title": "The Manual Translation Tax",
+   "text": "The Manual Translation Tax is the daily cost of turning knowledge held in documents, messages and people's memory into decisions, code and review comments. Every translation takes time, and every translation loses some information. The tax has three components, and all three appear even on disciplined teams with good tools. The first component is ambiguity: the same words mean different things to different people. A product owner writes \"let users save their search so they can return to it later\". The frontend developer stores the search in the browser, the backend developer stores it in the database, and the QA engineer tests for a confirmation message. The difference surfaces in code review, and two weeks of work are partly redone. The second component is non-persistence: knowledge that was never written down is lost when the person who holds it leaves. When a senior engineer leaves, the team spends months rediscovering what she knew, usually when something breaks. A coding agent loses its knowledge the same way, because every new session starts with no memory of the last one. The third component is non-traceability: nothing records which parts of the code depend on a feature the user sees. When the alert frequency on saved searches changed from daily to weekly, some customers received both emails, because a worker in another repository still sent the daily ones. Nothing linked the alert frequency feature to that worker, and finding the cause took two days. The usual response to the tax is to write more documentation. On one platform team, roughly 40% of the architecture pages sampled were materially out of date by the end of the year. More documentation adds more text to translate, and the new text goes out of date in the same way. Removing the tax requires changing how the knowledge is recorded.",
+   "words": 303,
    "sentences": [
-    "That premise, that writing the code is the expensive part, is now moving.",
-    "Coding agents such as Claude Code and Codex are reported building whole applications end to end.",
-    "If code is no longer the expensive part, the four rules built on its cost deserve a second look.",
-    "Which layers should every customer still share?",
-    "What is a SaaS product really selling, once its code is cheap to reproduce?"
-   ],
-   "figs": [
-    "Vendor report: a 100,000-line C compiler that builds Linux 6.9, from about 2,000 Claude Code sessions, with people designing the tests (Anthropic, February 2026). Pending addition to the paper",
-    "Vendor report: a design tool built from a blank repository in about 25 hours, described as an experiment (OpenAI). Pending addition to the paper"
+    "The Manual Translation Tax is the daily cost of turning knowledge held in documents, messages and people's memory into decisions, code and review comments.",
+    "Every translation takes time, and every translation loses some information.",
+    "The tax has three components, and all three appear even on disciplined teams with good tools.",
+    "The first component is ambiguity: the same words mean different things to different people.",
+    "A product owner writes \"let users save their search so they can return to it later\".",
+    "The frontend developer stores the search in the browser, the backend developer stores it in the database, and the QA engineer tests for a confirmation message.",
+    "The difference surfaces in code review, and two weeks of work are partly redone.",
+    "The second component is non-persistence: knowledge that was never written down is lost when the person who holds it leaves.",
+    "When a senior engineer leaves, the team spends months rediscovering what she knew, usually when something breaks.",
+    "A coding agent loses its knowledge the same way, because every new session starts with no memory of the last one.",
+    "The third component is non-traceability: nothing records which parts of the code depend on a feature the user sees.",
+    "When the alert frequency on saved searches changed from daily to weekly, some customers received both emails, because a worker in another repository still sent the daily ones.",
+    "Nothing linked the alert frequency feature to that worker, and finding the cause took two days.",
+    "The usual response to the tax is to write more documentation.",
+    "On one platform team, roughly 40% of the architecture pages sampled were materially out of date by the end of the year.",
+    "More documentation adds more text to translate, and the new text goes out of date in the same way.",
+    "Removing the tax requires changing how the knowledge is recorded."
    ]
   },
   {
    "act": 1,
    "n": 4,
-   "title": "What customers want",
-   "paper": "3",
-   "text": "Start with the customer's journey with the current product, and what the customer now expects of it. Customers want to use the product straight away, without a project measured in months. Customers want a change after go-live to be small and contained. Customers want the product personalised below the tenant, down to the individual user. Increasingly, customers expect their own agents to operate the product for them. Follow one customer down through the stack, and see what each expectation meets.",
-   "words": 80,
+   "title": "Why AI coding agents make mistakes",
+   "text": "A coding agent working on the same feature faces the same gaps. The agent sees the codebase, the ticket and the wiki, and the wiki is often stale. The agent cannot see the direct messages, does not know which custodian to ask, and cannot ask anyway. Everything the four custodians know is invisible to the agent. In one example, an agent called a function the team had removed three sprints earlier, because the spec said the function existed. Coding agents do well on small, contained tasks, and make mistakes on the complexity of enterprise applications. Bigger context windows do not solve the problem, because more unstructured text gives the agent nothing it can check its work against. Building new applications, changing existing ones and modernizing legacy systems all face this gap, at different levels of complexity. The agent needs what the four custodians know written down in a structured form, which it can search for exactly the part each task needs.",
+   "words": 161,
    "sentences": [
-    "Start with the customer's journey with the current product, and what the customer now expects of it.",
-    "Customers want to use the product straight away, without a project measured in months.",
-    "Customers want a change after go-live to be small and contained.",
-    "Customers want the product personalised below the tenant, down to the individual user.",
-    "Increasingly, customers expect their own agents to operate the product for them.",
-    "Follow one customer down through the stack, and see what each expectation meets."
-   ],
-   "figs": [
-    "By 2028, 33% of enterprise software applications will include agentic AI, up from less than 1% in 2024; over 40% of agentic AI projects will be cancelled by the end of 2027 (Gartner, June 2025)"
+    "A coding agent working on the same feature faces the same gaps.",
+    "The agent sees the codebase, the ticket and the wiki, and the wiki is often stale.",
+    "The agent cannot see the direct messages, does not know which custodian to ask, and cannot ask anyway.",
+    "Everything the four custodians know is invisible to the agent.",
+    "In one example, an agent called a function the team had removed three sprints earlier, because the spec said the function existed.",
+    "Coding agents do well on small, contained tasks, and make mistakes on the complexity of enterprise applications.",
+    "Bigger context windows do not solve the problem, because more unstructured text gives the agent nothing it can check its work against.",
+    "Building new applications, changing existing ones and modernizing legacy systems all face this gap, at different levels of complexity.",
+    "The agent needs what the four custodians know written down in a structured form, which it can search for exactly the part each task needs."
    ]
   },
   {
    "act": 2,
    "n": 5,
-   "title": "Onboarding and configuration today",
-   "paper": "2, 3, 6, 10, 14",
-   "text": "The first layer the customer meets is onboarding: gathering requirements, mapping them to features and configuration, customising, migrating data and training people. The customer cannot use the product until onboarding is done, and enterprise implementation is still measured in months. The configuration sits in setup screens, spreadsheets and files such as JSON, YAML or XML. A schema lists the fields and their types, while the rules for valid combinations are written nowhere it can enforce, so errors often surface after go-live. For the provider, the knowledge sits with a few people, every attribute needs review, and the work repeats whenever a law, a policy or the organisation changes.",
-   "words": 108,
+   "title": "Four principles",
+   "text": "Semantic Engineering answers the problem with four principles that apply to every kind of project. The first principle is to write the knowledge an agent needs into a knowledge graph, with explicit items and the links between them. Each agent asks the knowledge graph for just the part its task needs. The second principle is that agents build only what the knowledge graph describes, and cannot invent capabilities the graph does not contain. The third principle is named ownership: every part of the knowledge graph has a person accountable for keeping it accurate. When part of the knowledge graph falls out of date, the methodology holds the owner of that part responsible. The fourth principle is validation gates: automatic checks that test every change against the knowledge graph. Each validation gate records a pass or a fail that the team can audit.",
+   "words": 142,
    "sentences": [
-    "The first layer the customer meets is onboarding: gathering requirements, mapping them to features and configuration, customising, migrating data and training people.",
-    "The customer cannot use the product until onboarding is done, and enterprise implementation is still measured in months.",
-    "The configuration sits in setup screens, spreadsheets and files such as JSON, YAML or XML.",
-    "A schema lists the fields and their types, while the rules for valid combinations are written nowhere it can enforce, so errors often surface after go-live.",
-    "For the provider, the knowledge sits with a few people, every attribute needs review, and the work repeats whenever a law, a policy or the organisation changes."
-   ],
-   "figs": [
-    "Implementation phases: Discover, Initiate, Implement, Prepare, Operate, with requirements gathered in Discover and training and cutover in Prepare (Microsoft, Success by Design, 2026). Pending addition to the paper",
-    "Median ERP project timeline nine months, with almost a quarter of organisations over schedule (The 2026 ERP Report, Panorama Consulting Group)",
-    "Slow or complex implementation: second most cited reason for purchase regret, 32% of 3,484 buyers (Gartner Digital Markets via TechRepublic, 2023)"
+    "Semantic Engineering answers the problem with four principles that apply to every kind of project.",
+    "The first principle is to write the knowledge an agent needs into a knowledge graph, with explicit items and the links between them.",
+    "Each agent asks the knowledge graph for just the part its task needs.",
+    "The second principle is that agents build only what the knowledge graph describes, and cannot invent capabilities the graph does not contain.",
+    "The third principle is named ownership: every part of the knowledge graph has a person accountable for keeping it accurate.",
+    "When part of the knowledge graph falls out of date, the methodology holds the owner of that part responsible.",
+    "The fourth principle is validation gates: automatic checks that test every change against the knowledge graph.",
+    "Each validation gate records a pass or a fail that the team can audit."
    ]
   },
   {
    "act": 2,
    "n": 6,
-   "title": "The interface and APIs today",
-   "paper": "2, 3, 7",
-   "text": "Beneath onboarding are the interface and the APIs. The customer wants screens that fit how their people work, down to the individual user, and increasingly wants their own agents to operate the product. Today every customer sees the same screens, and personalisation stops at the tenant. An API lets a program bypass the screens, through the same service the screens use, and an agent using it still has to learn the product's rules from somewhere else. For a buyer who expects agents to operate the software, a product that needs a person clicking through menus is one their agents cannot use. For the provider, fitting the product to every customer and their agents means hundreds or thousands of screens, fronting a capability described only through forms, APIs and a configuration schema. Modernising them means wireframe, build and review, one screen at a time. Agents make each screen faster, and the cost still grows with the number of screens.",
-   "words": 158,
+   "title": "The four layers",
+   "text": "For an application in use, the knowledge graph has four layers, and each layer is called an ontology: a structured description of one kind of knowledge. The Functional Ontology holds personas, outcomes, scenarios, steps and actions, and the Product Owner keeps it. The Design Ontology holds screen components and their building blocks, page templates and user flows, kept by the UX Designer and the design system owner. The Architecture Ontology holds services, boundaries, dependencies, data stores and integrations, kept by the Architect and the tech lead. The Code Ontology holds modules, classes, functions, endpoints and database schemas, kept by the Engineering Team. Links connect the layers, so one search can follow a user action through to the screen component, the service and the code function behind it. On one user story about email alerts, following those links found fourteen affected parts of the architecture and fifteen code changes across five repositories. The search runs before any code is written. Every item in the graph cites its source: the document, design frame, ticket or code file it came from.",
+   "words": 178,
    "sentences": [
-    "Beneath onboarding are the interface and the APIs.",
-    "The customer wants screens that fit how their people work, down to the individual user, and increasingly wants their own agents to operate the product.",
-    "Today every customer sees the same screens, and personalisation stops at the tenant.",
-    "An API lets a program bypass the screens, through the same service the screens use, and an agent using it still has to learn the product's rules from somewhere else.",
-    "For a buyer who expects agents to operate the software, a product that needs a person clicking through menus is one their agents cannot use.",
-    "For the provider, fitting the product to every customer and their agents means hundreds or thousands of screens, fronting a capability described only through forms, APIs and a configuration schema.",
-    "Modernising them means wireframe, build and review, one screen at a time.",
-    "Agents make each screen faster, and the cost still grows with the number of screens."
-   ],
-   "figs": [
-    "Only 23% of digital workers completely satisfied with their work applications in 2024 (Gartner, March 2025)",
-    "By 2028, a third of user experiences will shift from native applications to agentic front ends (Gartner, August 2025)",
-    "API operations go through the same service the application uses (Microsoft Learn, Use the Microsoft Dataverse Web API, 2026). Pending addition to the paper"
+    "For an application in use, the knowledge graph has four layers, and each layer is called an ontology: a structured description of one kind of knowledge.",
+    "The Functional Ontology holds personas, outcomes, scenarios, steps and actions, and the Product Owner keeps it.",
+    "The Design Ontology holds screen components and their building blocks, page templates and user flows, kept by the UX Designer and the design system owner.",
+    "The Architecture Ontology holds services, boundaries, dependencies, data stores and integrations, kept by the Architect and the tech lead.",
+    "The Code Ontology holds modules, classes, functions, endpoints and database schemas, kept by the Engineering Team.",
+    "Links connect the layers, so one search can follow a user action through to the screen component, the service and the code function behind it.",
+    "On one user story about email alerts, following those links found fourteen affected parts of the architecture and fifteen code changes across five repositories.",
+    "The search runs before any code is written.",
+    "Every item in the graph cites its source: the document, design frame, ticket or code file it came from."
    ]
   },
   {
    "act": 2,
    "n": 7,
-   "title": "Business rules today",
-   "paper": "1.1, 2, 3",
-   "text": "Below the interface are the business rules: how each customer's policies, approvals and workflows apply the product's capabilities. They vary from customer to customer, and mature products let customers adjust many of them through configurable workflows, which vendors say cover most common scenarios. When a customer needs something the workflows cannot express, there is no middle option. Either the configuration exposes a value for it, or it becomes an engineering change to code every tenant runs on. A special case in shared code does the most harm in the business rules, because a change made for one customer can surface as a defect for another.",
-   "words": 105,
+   "title": "What goes into the graph",
+   "text": "A common first instinct is to put everything into the graph. Within a few sprints, the maintenance burden overwhelms the team. The methodology uses a rule, called the aperture, to decide what enters the graph. Every decision has a blast radius: the other decisions, artifacts and behaviours that have to change when the decision changes. A persona definition, a service boundary or a shared API contract has a wide blast radius, so it belongs in the graph. The wording on a single button affects nothing beyond that button, so it stays in the code. When the answer is unclear, the element stays out of the graph until the team is sure. The aperture starts narrow and widens as the team gains confidence, reaching its full width by about sprint twelve. The graph is partitioned by product, with one graph per product or application. Each graph is kept to one product because queries slow down as a graph grows: one impact analysis query on the graph of a 1.6 million line application takes about eight minutes. Where two products integrate, links connect their graphs.",
+   "words": 183,
    "sentences": [
-    "Below the interface are the business rules: how each customer's policies, approvals and workflows apply the product's capabilities.",
-    "They vary from customer to customer, and mature products let customers adjust many of them through configurable workflows, which vendors say cover most common scenarios.",
-    "When a customer needs something the workflows cannot express, there is no middle option.",
-    "Either the configuration exposes a value for it, or it becomes an engineering change to code every tenant runs on.",
-    "A special case in shared code does the most harm in the business rules, because a change made for one customer can surface as a defect for another."
-   ],
-   "figs": [
-    "\"Most common automation scenarios can be built in flows\" (Salesforce Trailhead, Flow Basics). Pending addition to the paper",
-    "More than 850 preconfigured business processes (Workday, business process framework datasheet). Pending addition to the paper"
+    "A common first instinct is to put everything into the graph.",
+    "Within a few sprints, the maintenance burden overwhelms the team.",
+    "The methodology uses a rule, called the aperture, to decide what enters the graph.",
+    "Every decision has a blast radius: the other decisions, artifacts and behaviours that have to change when the decision changes.",
+    "A persona definition, a service boundary or a shared API contract has a wide blast radius, so it belongs in the graph.",
+    "The wording on a single button affects nothing beyond that button, so it stays in the code.",
+    "When the answer is unclear, the element stays out of the graph until the team is sure.",
+    "The aperture starts narrow and widens as the team gains confidence, reaching its full width by about sprint twelve.",
+    "The graph is partitioned by product, with one graph per product or application.",
+    "Each graph is kept to one product because queries slow down as a graph grows: one impact analysis query on the graph of a 1.6 million line application takes about eight minutes.",
+    "Where two products integrate, links connect their graphs."
    ]
   },
   {
    "act": 2,
    "n": 8,
-   "title": "Domain primitives today",
-   "paper": "1.3",
-   "text": "Beneath the business rules are the domain primitives: the entities, calculations and relationships every customer relies on. In payroll, that means an employee, a pay element, a statutory deduction, and how they combine. They change far less from one customer to the next. Two customers can have different pay policies while sharing the same definition of a pay element. The product exposes these primitives through its APIs, which already cover a large part of the domain.",
-   "words": 76,
+   "title": "Keeping the graph accurate",
+   "text": "Every change is checked against all four layers of the graph before it can merge. An agent called the PR Validation Agent runs this check on every pull request before it merges into the main branch. The check fails when a change misses a required outcome, duplicates an existing design component, crosses a service boundary, or breaks something that depends on it. On every merge, the KG Sync Agent updates the graph to match the new code. The health of the graph itself is measured too, with twenty-nine metrics and fourteen verification checks. A merge that fails one of the most critical checks is blocked until the problem is fixed. The four custodians stay human. Each custodian works with information that exists only in conversations and decisions between people, such as customer calls, compliance decisions, vendor contracts and user research. No system an agent can read contains that information. Agents draft updates to the graph for the custodians to approve, and enforce the graph when code merges.",
+   "words": 167,
    "sentences": [
-    "Beneath the business rules are the domain primitives: the entities, calculations and relationships every customer relies on.",
-    "In payroll, that means an employee, a pay element, a statutory deduction, and how they combine.",
-    "They change far less from one customer to the next.",
-    "Two customers can have different pay policies while sharing the same definition of a pay element.",
-    "The product exposes these primitives through its APIs, which already cover a large part of the domain."
-   ],
-   "figs": []
-  },
-  {
-   "act": 2,
-   "n": 9,
-   "title": "The deep layers today",
-   "paper": "2, 5",
-   "text": "Below the domain primitives are the data model, the database and the infrastructure. Every customer stands on them. Where a customer needs data the model did not include, platforms offer custom fields, stored as metadata so that the shared schema itself does not change. In our experience, these often hold information at the edge of the domain rather than at its core. Risk grows with depth. A change here cannot easily be seen, compared with what came before, or reversed. Because the revenue depends on these layers, they change last, if at all.",
-   "words": 93,
-   "sentences": [
-    "Below the domain primitives are the data model, the database and the infrastructure.",
-    "Every customer stands on them.",
-    "Where a customer needs data the model did not include, platforms offer custom fields, stored as metadata so that the shared schema itself does not change.",
-    "In our experience, these often hold information at the edge of the domain rather than at its core.",
-    "Risk grows with depth.",
-    "A change here cannot easily be seen, compared with what came before, or reversed.",
-    "Because the revenue depends on these layers, they change last, if at all."
-   ],
-   "figs": [
-    "Customisation stored as metadata; the platform \"does not create an actual table\" (Salesforce Architects, Platform Multitenant Architecture). Pending addition to the paper",
-    "Tenant extensions mapped onto shared universal and pivot tables (Aulbach et al., ACM SIGMOD 2008). Pending addition to the paper"
+    "Every change is checked against all four layers of the graph before it can merge.",
+    "An agent called the PR Validation Agent runs this check on every pull request before it merges into the main branch.",
+    "The check fails when a change misses a required outcome, duplicates an existing design component, crosses a service boundary, or breaks something that depends on it.",
+    "On every merge, the KG Sync Agent updates the graph to match the new code.",
+    "The health of the graph itself is measured too, with twenty-nine metrics and fourteen verification checks.",
+    "A merge that fails one of the most critical checks is blocked until the problem is fixed.",
+    "The four custodians stay human.",
+    "Each custodian works with information that exists only in conversations and decisions between people, such as customer calls, compliance decisions, vendor contracts and user research.",
+    "No system an agent can read contains that information.",
+    "Agents draft updates to the graph for the custodians to approve, and enforce the graph when code merges."
    ]
   },
   {
    "act": 2,
-   "n": 10,
-   "title": "The bill",
-   "paper": "1, 2, 4",
-   "text": "At the end of the customer's journey is the bill. The customer buys a tier, and the tier bundles a common set of capabilities, whether this customer needs them or not. The provider is under pressure on the bill too, as seat-based pricing loses ground and agents take on work that users used to do. The pressures on the customer, all the way down, trace back to the same line, drawn high because code was expensive. Which brings back the question. What should stay shared, and what is the product really selling?",
-   "words": 92,
+   "n": 9,
+   "title": "Two kinds of graph",
+   "text": "Semantic Engineering covers three kinds of work: building a new application, called greenfield; changing an existing one, called brownfield; and replacing an old system, called legacy modernization. The three kinds of work use two shapes of graph, depending on whether the end state keeps changing or is fixed in advance. New and existing applications keep changing, so greenfield and brownfield work share the four-layer graph. A greenfield graph is built up as the application grows, and a brownfield graph is extracted from the existing application and then maintained by its owners. For an application of more than 2 million lines, extraction typically completes in two to three weeks. Legacy modernization has a fixed end state, chosen at the start of the project. The modernization graph has three parts: a graph of the old system built from its code, a graph of the new system defined by the custodians, and a specification that connects the two. The same four custodian roles govern both shapes. When a modernization completes, its graph converts to the four-layer graph. The right process for continuous work changes as the complexity of the work rises.",
+   "words": 188,
    "sentences": [
-    "At the end of the customer's journey is the bill.",
-    "The customer buys a tier, and the tier bundles a common set of capabilities, whether this customer needs them or not.",
-    "The provider is under pressure on the bill too, as seat-based pricing loses ground and agents take on work that users used to do.",
-    "The pressures on the customer, all the way down, trace back to the same line, drawn high because code was expensive.",
-    "Which brings back the question.",
-    "What should stay shared, and what is the product really selling?"
-   ],
-   "figs": [
-    "80% of features in the average software product rarely or never used, across 615 products (Pendo, The 2019 Feature Adoption Report)",
-    "36% of SaaS licences unused on average (Zylo, 2026 SaaS Management Index)",
-    "Seat-based as primary pricing model fell from 21% to 15% in a year; hybrid rose from 27% to 41% (Poyar, The State of B2B Monetization in 2025)",
-    "Agents \"break the link between user growth and revenue growth for many enterprise software vendors\" (Gartner, July 2026)"
+    "Semantic Engineering covers three kinds of work: building a new application, called greenfield; changing an existing one, called brownfield; and replacing an old system, called legacy modernization.",
+    "The three kinds of work use two shapes of graph, depending on whether the end state keeps changing or is fixed in advance.",
+    "New and existing applications keep changing, so greenfield and brownfield work share the four-layer graph.",
+    "A greenfield graph is built up as the application grows, and a brownfield graph is extracted from the existing application and then maintained by its owners.",
+    "For an application of more than 2 million lines, extraction typically completes in two to three weeks.",
+    "Legacy modernization has a fixed end state, chosen at the start of the project.",
+    "The modernization graph has three parts: a graph of the old system built from its code, a graph of the new system defined by the custodians, and a specification that connects the two.",
+    "The same four custodian roles govern both shapes.",
+    "When a modernization completes, its graph converts to the four-layer graph.",
+    "The right process for continuous work changes as the complexity of the work rises."
+   ]
+  },
+  {
+   "act": 3,
+   "n": 10,
+   "title": "When are specifications not enough?",
+   "text": "AI coding tools are fast for one developer working on small, contained tasks. One team on one product works well with a written specification for each change, which the coding agent builds from and the reviewer checks against. Specifications start to fall short when the work crosses team boundaries, or reaches deep into a large existing system. Each specification describes one change, and knows little about the rest of the application. Specifications drift from the code under deadline pressure. A specification carries the product owner's functional knowledge, and little of the design, architecture and code knowledge the change depends on. Writing specifications becomes the slowest step in the process. The knowledge graph sits alongside the specifications and supplies the design, architecture and code knowledge they lack. Each specification still describes the change, and the knowledge graph describes the application the change lands in.",
+   "words": 143,
+   "sentences": [
+    "AI coding tools are fast for one developer working on small, contained tasks.",
+    "One team on one product works well with a written specification for each change, which the coding agent builds from and the reviewer checks against.",
+    "Specifications start to fall short when the work crosses team boundaries, or reaches deep into a large existing system.",
+    "Each specification describes one change, and knows little about the rest of the application.",
+    "Specifications drift from the code under deadline pressure.",
+    "A specification carries the product owner's functional knowledge, and little of the design, architecture and code knowledge the change depends on.",
+    "Writing specifications becomes the slowest step in the process.",
+    "The knowledge graph sits alongside the specifications and supplies the design, architecture and code knowledge they lack.",
+    "Each specification still describes the change, and the knowledge graph describes the application the change lands in."
    ]
   },
   {
    "act": 3,
    "n": 11,
-   "title": "The domain invariants",
-   "paper": "1.3, 8",
-   "text": "Look back down the stack. The deeper the layer, the fewer customers need to change it. Almost every customer customises something: in one survey, only 7% changed nothing. Far fewer go deep, and most of what changes sits near the top. Under the business rules are the domain primitives, and they do not vary between customers. Call them the domain invariants. They are where correctness is decided, and what the revenue depends on. The domain invariants are the product's core value. So the architecture needs a layer that holds those invariants, with everything that varies built on top of it. A product's knowledge graph already records the invariants: its capabilities, workflows and entities, and nothing specific to one customer. That is the idea behind semantic engineering.",
-   "words": 126,
+   "title": "Where is the state of the work kept?",
+   "text": "Three records hold the state of the work, and each answers a different question. The specification says what one change should do. The ticket system, such as Jira, says who is doing what, and how far the work has got. The knowledge graph says what the application does today. The ticket carries each change from start to finish. When a specification is written, a hook in the ticket system runs impact analysis and attaches the report to the ticket. Each later step updates the ticket's status and attaches its results, such as test results and a second impact analysis after coding. At the end, the final impact analysis uses the whole history of the ticket. The ticket works the same way whether people, agents or both do the work. Each team designs the workflow between the steps to fit its own process.",
+   "words": 142,
    "sentences": [
-    "Look back down the stack.",
-    "The deeper the layer, the fewer customers need to change it.",
-    "Almost every customer customises something: in one survey, only 7% changed nothing.",
-    "Far fewer go deep, and most of what changes sits near the top.",
-    "Under the business rules are the domain primitives, and they do not vary between customers.",
-    "Call them the domain invariants.",
-    "They are where correctness is decided, and what the revenue depends on.",
-    "The domain invariants are the product's core value.",
-    "So the architecture needs a layer that holds those invariants, with everything that varies built on top of it.",
-    "A product's knowledge graph already records the invariants: its capabilities, workflows and entities, and nothing specific to one customer.",
-    "That is the idea behind semantic engineering."
-   ],
-   "figs": [
-    "Only 7% of organisations did not customise any aspect of their ERP; 63% had some or significant customisation; 7% extreme and 5% complete (Panorama Consulting, 2015 ERP Report, 562 respondents). ERP in general, not SaaS only, and not broken down by layer. Pending addition to the paper",
-    "Faster development \"will mean competitors and upstarts can rapidly replicate offerings at a lower cost\" (McKinsey, 2024)",
-    "Proprietary data, domain-specific content and deep domain knowledge named among the defences that hold (Bain, 2025)",
-    "On screen and on the site: a link to semantic-engineering.ai, where semantic engineering is described as modelling the application as a queryable knowledge graph that constrains agent generation"
+    "Three records hold the state of the work, and each answers a different question.",
+    "The specification says what one change should do.",
+    "The ticket system, such as Jira, says who is doing what, and how far the work has got.",
+    "The knowledge graph says what the application does today.",
+    "The ticket carries each change from start to finish.",
+    "When a specification is written, a hook in the ticket system runs impact analysis and attaches the report to the ticket.",
+    "Each later step updates the ticket's status and attaches its results, such as test results and a second impact analysis after coding.",
+    "At the end, the final impact analysis uses the whole history of the ticket.",
+    "The ticket works the same way whether people, agents or both do the work.",
+    "Each team designs the workflow between the steps to fit its own process."
    ]
   },
   {
    "act": 3,
    "n": 12,
-   "title": "Invariants plus rules: a domain-specific language",
-   "paper": "2, 9, 10",
-   "text": "That gives two things to name. The domain invariants are drawn from the knowledge graph and shared by every customer. The business rules differ for each customer. Together, the invariants and the business rules make a domain-specific language. The invariants are its vocabulary, and its grammar says how business rules may combine them: which parts may vary, what values they admit, and which combinations are legal. The multi-tenancy line moves down to sit on the invariants. Below it, shared by every tenant, are the invariants, a compiler for the language, the data platform and the infrastructure. Above the line, per customer, are onboarding, the interface, and each customer's business rules, written in the language. Moving the line down gives up some of the original sharing, which is affordable once the per-customer part is cheap to produce. That leaves one question. Who writes the business rules?",
-   "words": 145,
+   "title": "Who prepares a change before coding starts?",
+   "text": "With AI, writing code is fast, so preparing good specifications becomes the slowest step. The methodology gives that work its own sprint, the spec sprint, which runs a step ahead of the implementation sprint. The custodians meet for one or two days and work through several requests together. The product owner drafts each specification from a standard template. Impact analysis reports everything the specification will touch. Each custodian reviews the report for their own layer: functional, design, architecture and code. Where a change needs new items in the graph, each custodian adds them to their own layer. The finished specification, with its impact report, goes into the implementation backlog. The implementation sprint works from specifications whose risks are already known. A specification that turns out to be missing context goes back to the spec sprint.",
+   "words": 135,
    "sentences": [
-    "That gives two things to name.",
-    "The domain invariants are drawn from the knowledge graph and shared by every customer.",
-    "The business rules differ for each customer.",
-    "Together, the invariants and the business rules make a domain-specific language.",
-    "The invariants are its vocabulary, and its grammar says how business rules may combine them: which parts may vary, what values they admit, and which combinations are legal.",
-    "The multi-tenancy line moves down to sit on the invariants.",
-    "Below it, shared by every tenant, are the invariants, a compiler for the language, the data platform and the infrastructure.",
-    "Above the line, per customer, are onboarding, the interface, and each customer's business rules, written in the language.",
-    "Moving the line down gives up some of the original sharing, which is affordable once the per-customer part is cheap to produce.",
-    "That leaves one question.",
-    "Who writes the business rules?"
-   ],
-   "figs": []
+    "With AI, writing code is fast, so preparing good specifications becomes the slowest step.",
+    "The methodology gives that work its own sprint, the spec sprint, which runs a step ahead of the implementation sprint.",
+    "The custodians meet for one or two days and work through several requests together.",
+    "The product owner drafts each specification from a standard template.",
+    "Impact analysis reports everything the specification will touch.",
+    "Each custodian reviews the report for their own layer: functional, design, architecture and code.",
+    "Where a change needs new items in the graph, each custodian adds them to their own layer.",
+    "The finished specification, with its impact report, goes into the implementation backlog.",
+    "The implementation sprint works from specifications whose risks are already known.",
+    "A specification that turns out to be missing context goes back to the spec sprint."
+   ]
   },
   {
    "act": 3,
    "n": 13,
-   "title": "AI agents write the language",
-   "paper": "9, 10, 11, 12, 13.1, 15",
-   "text": "AI agents write the business rules. Earlier domain languages stalled partly because the experts had to learn them and write in them. A domain expert states the intent in plain language, and an agent writes it as business rules in the domain's own vocabulary. The model's general knowledge does the translation, so the grammar can stay small: a language with a room primitive needs no bedroom keyword. It also shortens the leap. Going from plain language straight to a narrow configuration schema is a long step, and the model makes it invisibly. The grammar splits it into two shorter steps, with a readable document in between. The agent works with the grammar, worked examples, a validator and a test runner, reached through standard tooling such as the Language Server Protocol and MCP, so it checks its own work. The validator rejects anything malformed, with a location and a reason, and the agent tries again. Functional tests run against cases with known answers, and the compiler turns the result into configuration, screens or API calls, shown back to the expert. A request the language cannot express is refused rather than guessed at. The agent can still be wrong inside the language, which is why the tests carry the weight. An agent working in the language cannot add an API, a table or a code path, so the shared layers stay out of its reach. Agents may later help derive the grammar itself from the knowledge graph; for now, deciding what goes into it is architectural judgement.",
-   "words": 255,
+   "title": "What does impact analysis tell you, and when does it run?",
+   "text": "Impact analysis follows the links in the knowledge graph from a specification to everything it touches: outcomes, components, services, database tables and code. For people, impact analysis writes a readable report with the reasons for each finding. For another agent, impact analysis returns structured data that lists the IDs of the affected items in each layer. When an agent owns the work, the agent reads the structured form and continues without waiting for a person. Impact analysis runs when the specification is written, again after the code is written, at the pull request, and after merge. One example is the saved-search alert feature, on an application of 1.6 million lines. On a graph of that size, an impact analysis takes about eight minutes. The report found that the database already had the column the feature needed, so no database change was required. The report flagged a likely and serious risk: without a new filter, weekly subscribers would also receive a daily email. The report also set the order of deployment across three repositories. A senior engineer would need three to five working days to produce a comparable analysis.",
+   "words": 188,
    "sentences": [
-    "AI agents write the business rules.",
-    "Earlier domain languages stalled partly because the experts had to learn them and write in them.",
-    "A domain expert states the intent in plain language, and an agent writes it as business rules in the domain's own vocabulary.",
-    "The model's general knowledge does the translation, so the grammar can stay small: a language with a room primitive needs no bedroom keyword.",
-    "It also shortens the leap.",
-    "Going from plain language straight to a narrow configuration schema is a long step, and the model makes it invisibly.",
-    "The grammar splits it into two shorter steps, with a readable document in between.",
-    "The agent works with the grammar, worked examples, a validator and a test runner, reached through standard tooling such as the Language Server Protocol and MCP, so it checks its own work.",
-    "The validator rejects anything malformed, with a location and a reason, and the agent tries again.",
-    "Functional tests run against cases with known answers, and the compiler turns the result into configuration, screens or API calls, shown back to the expert.",
-    "A request the language cannot express is refused rather than guessed at.",
-    "The agent can still be wrong inside the language, which is why the tests carry the weight.",
-    "An agent working in the language cannot add an API, a table or a code path, so the shared layers stay out of its reach.",
-    "Agents may later help derive the grammar itself from the knowledge graph; for now, deciding what goes into it is architectural judgement."
-   ],
-   "figs": [
-    "A grammar in the model's context lifted out-of-distribution accuracy from 63.3% to 90.8% (Grammar Prompting for DSL Generation, NeurIPS 2023)",
-    "Coding agents on bespoke domain languages: often below 20% accuracy, up to 85% with seed examples, explicit rules, compiler-in-the-loop validation and schema exposure (Microsoft vendor blog). 85% does not permit unattended conversion",
-    "JSON pass rates 84.5% to 99.97% against value accuracy 69.3% to 83.0% across 21 models (The Structured Output Benchmark, arXiv preprint, 2026)",
-    "Parser-constrained decoding for text-to-SQL: execution errors fell from 12% of outputs to 2% left unusable, with no valid query found (Scholak et al., PICARD, EMNLP 2021). Pending addition to the paper"
+    "Impact analysis follows the links in the knowledge graph from a specification to everything it touches: outcomes, components, services, database tables and code.",
+    "For people, impact analysis writes a readable report with the reasons for each finding.",
+    "For another agent, impact analysis returns structured data that lists the IDs of the affected items in each layer.",
+    "When an agent owns the work, the agent reads the structured form and continues without waiting for a person.",
+    "Impact analysis runs when the specification is written, again after the code is written, at the pull request, and after merge.",
+    "One example is the saved-search alert feature, on an application of 1.6 million lines.",
+    "On a graph of that size, an impact analysis takes about eight minutes.",
+    "The report found that the database already had the column the feature needed, so no database change was required.",
+    "The report flagged a likely and serious risk: without a new filter, weekly subscribers would also receive a daily email.",
+    "The report also set the order of deployment across three repositories.",
+    "A senior engineer would need three to five working days to produce a comparable analysis."
    ]
   },
   {
    "act": 3,
    "n": 14,
-   "title": "Governing the invariants",
-   "paper": "8; semantic-engineering.ai",
-   "text": "The invariants below the line change as well, far less often and with far more at stake, because every tenant stands on them. Semantic engineering governs changes to the invariants. The knowledge graph records the application in four linked layers: what it does, how it looks and behaves, how it is organised, and how it is built. Each layer has a named custodian, a person accountable for its accuracy. When an invariant needs to change, agents traverse the graph to find everything the change touches, across every layer, and report the impact before any code is written. Generation agents then work only against what the graph declares, validation agents check the result against the graph, and the change merges only when those checks pass. The graph is updated on every merge, so it stays current. Above the line, the language bounds what each customer can change. Below it, the graph governs what the product can change. Semantic engineering governs the invariants below the line. Dialect engineering governs each customer's language above it.",
+   "title": "How do coding agents use the graph?",
+   "text": "Developers keep the coding agents they already use, such as Claude Code or Cursor. The coding agents connect to the knowledge graph through the Breeze.AI MCP server, a standard interface that AI tools use to call other services. The impact report goes into the coding agent's prompt. With the report in its prompt, the coding agent knows which services, components and tables the change must touch. The coding agent builds only what the knowledge graph describes. Rules for the functional layer are checked on the developer's machine before any change reaches the graph. Code generated twice from the same prompt still differs in detail, such as variable names and the order of operations. The impact report fixes the structure of the change, so the remaining differences are in detail only. Code review moves from asking whether the agent changed the right files to asking whether the details are right.",
+   "words": 149,
+   "sentences": [
+    "Developers keep the coding agents they already use, such as Claude Code or Cursor.",
+    "The coding agents connect to the knowledge graph through the Breeze.AI MCP server, a standard interface that AI tools use to call other services.",
+    "The impact report goes into the coding agent's prompt.",
+    "With the report in its prompt, the coding agent knows which services, components and tables the change must touch.",
+    "The coding agent builds only what the knowledge graph describes.",
+    "Rules for the functional layer are checked on the developer's machine before any change reaches the graph.",
+    "Code generated twice from the same prompt still differs in detail, such as variable names and the order of operations.",
+    "The impact report fixes the structure of the change, so the remaining differences are in detail only.",
+    "Code review moves from asking whether the agent changed the right files to asking whether the details are right."
+   ]
+  },
+  {
+   "act": 3,
+   "n": 15,
+   "title": "How is each change checked, and how does the graph stay current?",
+   "text": "Every pull request goes through the PR Validation Agent before it can merge. The PR Validation Agent compares the change with the impact report, and checks the change against all four layers of the graph. The check fails when a change misses an outcome the specification required, duplicates an existing design component, crosses a service boundary, or breaks something that depends on it. A failed check names the violation and the item in the graph involved, and a mismatch with the impact report goes to a person for review. Style, linting and unit test coverage stay in the team's existing build pipeline. The BDD Generation Agent writes test scenarios from the functional layer, each describing how the application should respond to a user's action. After every merge, the KG Sync Agent updates the graph to match the new code. The next impact analysis then runs against the application as it is.",
+   "words": 151,
+   "sentences": [
+    "Every pull request goes through the PR Validation Agent before it can merge.",
+    "The PR Validation Agent compares the change with the impact report, and checks the change against all four layers of the graph.",
+    "The check fails when a change misses an outcome the specification required, duplicates an existing design component, crosses a service boundary, or breaks something that depends on it.",
+    "A failed check names the violation and the item in the graph involved, and a mismatch with the impact report goes to a person for review.",
+    "Style, linting and unit test coverage stay in the team's existing build pipeline.",
+    "The BDD Generation Agent writes test scenarios from the functional layer, each describing how the application should respond to a user's action.",
+    "After every merge, the KG Sync Agent updates the graph to match the new code.",
+    "The next impact analysis then runs against the application as it is."
+   ]
+  },
+  {
+   "act": 3,
+   "n": 16,
+   "title": "Who decides which work agents do?",
+   "text": "Every agent has a named human owner, and no agent runs on its own without one. People decide which work goes to agents, in sprint planning or in support triage. Work with a repeatable pattern suits an agent: support requests, customer customizations, changes to workflows and forms, new fields and custom reports. An agent takes on a pattern once it has a record of reliable results on that pattern. New scope stays with people, because a new feature needs product, design and architecture judgment. Agents earn autonomy over five levels, from suggesting a change to acting without review. Each step up is recorded in a written agreement that names the evidence, the threshold, the person who approved it, and the conditions for stepping back down. When an agent's results fall below the threshold, the agent steps back down automatically. The agents that run impact analysis and pull request checks typically operate at the fourth level, where people review their results on a regular schedule.",
+   "words": 164,
+   "sentences": [
+    "Every agent has a named human owner, and no agent runs on its own without one.",
+    "People decide which work goes to agents, in sprint planning or in support triage.",
+    "Work with a repeatable pattern suits an agent: support requests, customer customizations, changes to workflows and forms, new fields and custom reports.",
+    "An agent takes on a pattern once it has a record of reliable results on that pattern.",
+    "New scope stays with people, because a new feature needs product, design and architecture judgment.",
+    "Agents earn autonomy over five levels, from suggesting a change to acting without review.",
+    "Each step up is recorded in a written agreement that names the evidence, the threshold, the person who approved it, and the conditions for stepping back down.",
+    "When an agent's results fall below the threshold, the agent steps back down automatically.",
+    "The agents that run impact analysis and pull request checks typically operate at the fourth level, where people review their results on a regular schedule."
+   ]
+  },
+  {
+   "act": 3,
+   "n": 17,
+   "title": "How do managers see what people and agents are doing?",
+   "text": "Managers see the work of people and agents in the ticket system they already use. Every step of a change updates the ticket, whether a person or an agent did it. Some products receive support and data requests at a volume a ticket system handles poorly, because it holds no knowledge of the application. For those products, the requests can move to an agent workbench. Triage agents in the workbench classify each request, apply the product's own priorities, and route each request to a person or to an agent. Metrics are kept for each product, each graph and each agent. Each organization brings the metrics into its own reporting.",
+   "words": 109,
+   "sentences": [
+    "Managers see the work of people and agents in the ticket system they already use.",
+    "Every step of a change updates the ticket, whether a person or an agent did it.",
+    "Some products receive support and data requests at a volume a ticket system handles poorly, because it holds no knowledge of the application.",
+    "For those products, the requests can move to an agent workbench.",
+    "Triage agents in the workbench classify each request, apply the product's own priorities, and route each request to a person or to an agent.",
+    "Metrics are kept for each product, each graph and each agent.",
+    "Each organization brings the metrics into its own reporting."
+   ]
+  },
+  {
+   "act": 3,
+   "n": 18,
+   "title": "What happens across many products?",
+   "text": "Each product has one knowledge graph, shared by every team that works on that product. Graphs are kept to one product because queries slow down as a graph grows. A portfolio adopts the methodology one product at a time. The first product builds its graph, sets up the process, and hands its repeatable work to agents, and after a few months the next product follows. Some knowledge belongs to the whole enterprise: compliance and security rules, infrastructure preferences, shared deployment pipelines, and an enterprise design system. Enterprise knowledge is defined once, and every product's agents read it according to their access rights. Where products integrate, impact analysis follows the integration points into the other products' graphs. Every quarter, an agent looks across the product graphs for capabilities that are duplicated or no longer used.",
+   "words": 134,
+   "sentences": [
+    "Each product has one knowledge graph, shared by every team that works on that product.",
+    "Graphs are kept to one product because queries slow down as a graph grows.",
+    "A portfolio adopts the methodology one product at a time.",
+    "The first product builds its graph, sets up the process, and hands its repeatable work to agents, and after a few months the next product follows.",
+    "Some knowledge belongs to the whole enterprise: compliance and security rules, infrastructure preferences, shared deployment pipelines, and an enterprise design system.",
+    "Enterprise knowledge is defined once, and every product's agents read it according to their access rights.",
+    "Where products integrate, impact analysis follows the integration points into the other products' graphs.",
+    "Every quarter, an agent looks across the product graphs for capabilities that are duplicated or no longer used."
+   ]
+  },
+  {
+   "act": 3,
+   "n": 19,
+   "title": "What about existing systems and technical debt?",
+   "text": "For an existing application, agents extract the knowledge graph from the code, and the custodians review it. Extraction typically takes two to three weeks for an application of more than two million lines. Extraction shows the application as it actually is, including duplicated and tangled parts that nobody had mapped. Agents that write code quickly can also add technical debt quickly. The knowledge graph can record the target state the enterprise has decided on, as well as the current one. One example is a new authorization service that some products have not adopted yet. When a change touches that area, the agent looks up the target, and the change moves the code toward it. Technical debt is then paid down a piece at a time, inside the work that touches it.",
+   "words": 131,
+   "sentences": [
+    "For an existing application, agents extract the knowledge graph from the code, and the custodians review it.",
+    "Extraction typically takes two to three weeks for an application of more than two million lines.",
+    "Extraction shows the application as it actually is, including duplicated and tangled parts that nobody had mapped.",
+    "Agents that write code quickly can also add technical debt quickly.",
+    "The knowledge graph can record the target state the enterprise has decided on, as well as the current one.",
+    "One example is a new authorization service that some products have not adopted yet.",
+    "When a change touches that area, the agent looks up the target, and the change moves the code toward it.",
+    "Technical debt is then paid down a piece at a time, inside the work that touches it."
+   ]
+  },
+  {
+   "act": 3,
+   "n": 20,
+   "title": "What changes for the team?",
+   "text": "The sprint, the ticket system and code review stay as they are. The team adds a spec sprint ahead of implementation. The team works in three layers: the custodians, the implementation teams, and an enablement layer from Accion Labs. Forward-deployed engineers from Accion Labs fill any custodian role the client cannot staff yet. Specialists work part-time across several workstreams, and one architect can cover two or three of them. The custodians stay human. Much of what the custodians know comes from customer calls, compliance decisions, vendor contracts and user research, which no agent can read. Agents draft updates to the graph, and the custodians approve them.",
+   "words": 106,
+   "sentences": [
+    "The sprint, the ticket system and code review stay as they are.",
+    "The team adds a spec sprint ahead of implementation.",
+    "The team works in three layers: the custodians, the implementation teams, and an enablement layer from Accion Labs.",
+    "Forward-deployed engineers from Accion Labs fill any custodian role the client cannot staff yet.",
+    "Specialists work part-time across several workstreams, and one architect can cover two or three of them.",
+    "The custodians stay human.",
+    "Much of what the custodians know comes from customer calls, compliance decisions, vendor contracts and user research, which no agent can read.",
+    "Agents draft updates to the graph, and the custodians approve them."
+   ]
+  },
+  {
+   "act": 3,
+   "n": 21,
+   "title": "What results have teams seen?",
+   "text": "Engagements under Breeze.AI report these results, each in its own context. Extracting the graph from a codebase of more than two million lines took two to three weeks. An impact analysis on a graph of 1.6 million lines takes about eight minutes. In the first sprint of a new user-interface workstream, 53% of design components were reused. Defects fell 23% compared with the same team's results before Semantic Engineering, on the same codebase. Test coverage reached 93.4%, with test scenarios generated from the functional layer and no manual scenario writing. A cost model puts five-year total cost 81% lower when the AI runs on the client's own infrastructure; the figure comes from the model and was not measured on an engagement.",
+   "words": 121,
+   "sentences": [
+    "Engagements under Breeze.AI report these results, each in its own context.",
+    "Extracting the graph from a codebase of more than two million lines took two to three weeks.",
+    "An impact analysis on a graph of 1.6 million lines takes about eight minutes.",
+    "In the first sprint of a new user-interface workstream, 53% of design components were reused.",
+    "Defects fell 23% compared with the same team's results before Semantic Engineering, on the same codebase.",
+    "Test coverage reached 93.4%, with test scenarios generated from the functional layer and no manual scenario writing.",
+    "A cost model puts five-year total cost 81% lower when the AI runs on the client's own infrastructure; the figure comes from the model and was not measured on an engagement."
+   ]
+  },
+  {
+   "act": 4,
+   "n": 22,
+   "title": "The modernization tax",
+   "text": "In a legacy modernization, a team replaces an old technology stack with a modern one, and keeps the behavior the business has built up over years. The people who could once explain the legacy system are often retiring, scarce or already gone. The legacy code is the only authoritative record of what the system actually does. The cost of working from that record by hand is the Modernization Translation Tax, and the tax has four components. The reverse-engineering tax is the work of finding out, from the legacy code, what the system does, which needs senior engineers. The lost-context tax covers business decisions the code does not show, such as deliberate edge cases and old workarounds. The validation-vacuum tax arises because nothing can test the old behavior automatically, so every migrated module needs a hand-built check that it behaves as before. The knowledge-disappearance tax arrives after the project, when the people who built up the understanding leave with the engagement. The first three components make each other worse. Without an executable contract that proves the new system behaves like the old one, nobody can show the migration is complete. A modernization that cannot be proven complete stalls before it can deploy.",
+   "words": 201,
+   "sentences": [
+    "In a legacy modernization, a team replaces an old technology stack with a modern one, and keeps the behavior the business has built up over years.",
+    "The people who could once explain the legacy system are often retiring, scarce or already gone.",
+    "The legacy code is the only authoritative record of what the system actually does.",
+    "The cost of working from that record by hand is the Modernization Translation Tax, and the tax has four components.",
+    "The reverse-engineering tax is the work of finding out, from the legacy code, what the system does, which needs senior engineers.",
+    "The lost-context tax covers business decisions the code does not show, such as deliberate edge cases and old workarounds.",
+    "The validation-vacuum tax arises because nothing can test the old behavior automatically, so every migrated module needs a hand-built check that it behaves as before.",
+    "The knowledge-disappearance tax arrives after the project, when the people who built up the understanding leave with the engagement.",
+    "The first three components make each other worse.",
+    "Without an executable contract that proves the new system behaves like the old one, nobody can show the migration is complete.",
+    "A modernization that cannot be proven complete stalls before it can deploy."
+   ]
+  },
+  {
+   "act": 4,
+   "n": 23,
+   "title": "Graphs of the old and new systems",
+   "text": "The methodology replaces this manual work with three structured records, each fixed for the length of the project. The Source-state ontology is a graph of the old system, built from the legacy code by agents: its files, classes, functions, statements and APIs. The Source-state ontology keeps the actual code statements, as evidence of the behavior the new system must reproduce. The Target-state ontology is a graph of the new system, built from the target blueprint: its architecture, runtime, standards and design system. The specification connects the two graphs, and produces a requirements document, test scenarios, end-to-end test scripts and a chatbot that answers questions about the code. The Product Owner and Architect mark every module of the old system, in the specification, with one of four decisions. Retain keeps the module's behavior while its structure changes. Modify changes the behavior in defined ways that the Product Owner records. Replace hands the function to a different solution, such as a modern library. Retire removes the function, and the retired items stay documented. A module without a decision cannot be migrated.",
+   "words": 179,
+   "sentences": [
+    "The methodology replaces this manual work with three structured records, each fixed for the length of the project.",
+    "The Source-state ontology is a graph of the old system, built from the legacy code by agents: its files, classes, functions, statements and APIs.",
+    "The Source-state ontology keeps the actual code statements, as evidence of the behavior the new system must reproduce.",
+    "The Target-state ontology is a graph of the new system, built from the target blueprint: its architecture, runtime, standards and design system.",
+    "The specification connects the two graphs, and produces a requirements document, test scenarios, end-to-end test scripts and a chatbot that answers questions about the code.",
+    "The Product Owner and Architect mark every module of the old system, in the specification, with one of four decisions.",
+    "Retain keeps the module's behavior while its structure changes.",
+    "Modify changes the behavior in defined ways that the Product Owner records.",
+    "Replace hands the function to a different solution, such as a modern library.",
+    "Retire removes the function, and the retired items stay documented.",
+    "A module without a decision cannot be migrated."
+   ]
+  },
+  {
+   "act": 4,
+   "n": 24,
+   "title": "The parity contract and the four gates",
+   "text": "Together, the two graphs and the marked-up specification form the parity contract: the agreed definition of how the new system must behave, which the agents must follow. Neither the recorded legacy behavior nor the target architecture can change during the project. Migration agents write the new code one module at a time, from the specification and the Target-state ontology. Every piece of migrated code then passes through four validation gates, each run by its own agent. The architecture gate checks conformance to the target blueprint's architecture. The design gate checks the design system and UI guidelines. The standards gate checks security rules and coding standards. The functional gate checks that the new code behaves like the legacy code recorded in the Source-state ontology. Code that fails any gate goes back with the gate's evidence attached, until all four gates pass. Nine named agents cover five stages: Discover, Document, Migrate, Validate and Maintain. People check the work at two points: the decisions in the specification before migration, and a modernization expert's review of the code that has passed the gates. ASIMOV is the platform that runs the five stages.",
+   "words": 188,
+   "sentences": [
+    "Together, the two graphs and the marked-up specification form the parity contract: the agreed definition of how the new system must behave, which the agents must follow.",
+    "Neither the recorded legacy behavior nor the target architecture can change during the project.",
+    "Migration agents write the new code one module at a time, from the specification and the Target-state ontology.",
+    "Every piece of migrated code then passes through four validation gates, each run by its own agent.",
+    "The architecture gate checks conformance to the target blueprint's architecture.",
+    "The design gate checks the design system and UI guidelines.",
+    "The standards gate checks security rules and coding standards.",
+    "The functional gate checks that the new code behaves like the legacy code recorded in the Source-state ontology.",
+    "Code that fails any gate goes back with the gate's evidence attached, until all four gates pass.",
+    "Nine named agents cover five stages: Discover, Document, Migrate, Validate and Maintain.",
+    "People check the work at two points: the decisions in the specification before migration, and a modernization expert's review of the code that has passed the gates.",
+    "ASIMOV is the platform that runs the five stages."
+   ]
+  },
+  {
+   "act": 4,
+   "n": 25,
+   "title": "Five engagement modes and five delivery stages",
+   "text": "A modernization client enters through one of five engagement modes, each sized to the work the client is ready to commit to. The modes differ in how much of the work the client takes on, rather than in how complex the legacy system is. Documentation Only produces documentation and test scenarios from the legacy code, with no migration. Discovery and Documentation adds an inventory of the applications, maps of their dependencies, the business rules, and review material for subject-matter experts. Migration Readiness adds a scope for each module, its place in the new system, the order of migration, and the marked-up specification. Full Modernization runs the whole pipeline, over quarters to years. Maintain, Operate and Convergence keeps the knowledge graph up to date on the modern system. Each mode addresses a defined part of the modernization tax, and a client may stop at any mode. Full Modernization runs in five stages: discovery and analysis, building the graphs, migrating one first module, migrating the rest, and user acceptance testing with deployment. While the first module is migrated, subject-matter experts review the output and tune the agents to the project.",
+   "words": 188,
+   "sentences": [
+    "A modernization client enters through one of five engagement modes, each sized to the work the client is ready to commit to.",
+    "The modes differ in how much of the work the client takes on, rather than in how complex the legacy system is.",
+    "Documentation Only produces documentation and test scenarios from the legacy code, with no migration.",
+    "Discovery and Documentation adds an inventory of the applications, maps of their dependencies, the business rules, and review material for subject-matter experts.",
+    "Migration Readiness adds a scope for each module, its place in the new system, the order of migration, and the marked-up specification.",
+    "Full Modernization runs the whole pipeline, over quarters to years.",
+    "Maintain, Operate and Convergence keeps the knowledge graph up to date on the modern system.",
+    "Each mode addresses a defined part of the modernization tax, and a client may stop at any mode.",
+    "Full Modernization runs in five stages: discovery and analysis, building the graphs, migrating one first module, migrating the rest, and user acceptance testing with deployment.",
+    "While the first module is migrated, subject-matter experts review the output and tune the agents to the project."
+   ]
+  },
+  {
+   "act": 4,
+   "n": 26,
+   "title": "Results, and the handover",
+   "text": "Under ASIMOV, more than fifteen million lines of legacy code have been modernized across more than ten programs. On a one-million-line standalone codebase, the indicative figures are up to four times faster than manual modernization, and up to seventy percent less migration time. An inventory and warehouse platform moved 2.1 million lines from Java 8 to Java 21 in about three and a half months. A European education-technology provider moved three million lines of Delphi to cloud-native .NET 8, with about sixty percent less effort than manual. Actual outcomes vary by engagement scope, target stack and the modules selected. When a modernization completes and the client wants ongoing governance of the new system, the graph is carried over to it. The Source-state ontology becomes the starting point for the code layer. The Retain and Modify decisions in the specification become the starting point for the functional layer. The target blueprint becomes the starting point for the architecture and design layers. The same four custodians continue, and the work moves from project stages to regular sprints.",
+   "words": 175,
+   "sentences": [
+    "Under ASIMOV, more than fifteen million lines of legacy code have been modernized across more than ten programs.",
+    "On a one-million-line standalone codebase, the indicative figures are up to four times faster than manual modernization, and up to seventy percent less migration time.",
+    "An inventory and warehouse platform moved 2.1 million lines from Java 8 to Java 21 in about three and a half months.",
+    "A European education-technology provider moved three million lines of Delphi to cloud-native .NET 8, with about sixty percent less effort than manual.",
+    "Actual outcomes vary by engagement scope, target stack and the modules selected.",
+    "When a modernization completes and the client wants ongoing governance of the new system, the graph is carried over to it.",
+    "The Source-state ontology becomes the starting point for the code layer.",
+    "The Retain and Modify decisions in the specification become the starting point for the functional layer.",
+    "The target blueprint becomes the starting point for the architecture and design layers.",
+    "The same four custodians continue, and the work moves from project stages to regular sprints."
+   ]
+  },
+  {
+   "act": 5,
+   "n": 27,
+   "title": "Engagement phases",
+   "text": "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize. Advise takes two to four weeks, diagnoses the team's current zone, and produces a scoped roadmap for the next transition. Launch takes about twelve weeks, builds the four-layer graph for the highest-priority product, and puts the validation gate in place on every merge. Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work. Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs. In every phase, the client's four custodians own the four layers of the knowledge graph. Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers. Accion Labs makes four commitments for the end of an engagement. The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff.",
+   "words": 164,
+   "sentences": [
+    "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize.",
+    "Advise takes two to four weeks, diagnoses the team's current zone, and produces a scoped roadmap for the next transition.",
+    "Launch takes about twelve weeks, builds the four-layer graph for the highest-priority product, and puts the validation gate in place on every merge.",
+    "Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work.",
+    "Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs.",
+    "In every phase, the client's four custodians own the four layers of the knowledge graph.",
+    "Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers.",
+    "Accion Labs makes four commitments for the end of an engagement.",
+    "The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff."
+   ]
+  },
+  {
+   "act": 5,
+   "n": 28,
+   "title": "Three engagements",
+   "text": "Three anonymized engagements show the methodology at work on continuous SDLC. The first archetype is a live code base of more than two million lines, with five to six scrum teams. Extracting the graph from the code built all four layers in two to three weeks. On the extracted graph, an impact analysis runs in eight minutes, where senior engineers previously needed three to five days to work out the same answer. The second archetype is a new user-interface workstream that grew in complexity, and started with the design layer of the graph. In its first sprint under Semantic Engineering, the workstream reused 53 percent of its components from the existing design system. The third archetype is a mature spec-driven practice that rewrote more than a million lines in five to six months. The spec-driven practice now reviews pull requests of 300 to 400 files, and each review takes more than two weeks. In all three archetypes, the answer was to add structured knowledge exactly where the specification alone was not enough.",
    "words": 172,
    "sentences": [
-    "The invariants below the line change as well, far less often and with far more at stake, because every tenant stands on them.",
-    "Semantic engineering governs changes to the invariants.",
-    "The knowledge graph records the application in four linked layers: what it does, how it looks and behaves, how it is organised, and how it is built.",
-    "Each layer has a named custodian, a person accountable for its accuracy.",
-    "When an invariant needs to change, agents traverse the graph to find everything the change touches, across every layer, and report the impact before any code is written.",
-    "Generation agents then work only against what the graph declares, validation agents check the result against the graph, and the change merges only when those checks pass.",
-    "The graph is updated on every merge, so it stays current.",
-    "Above the line, the language bounds what each customer can change.",
-    "Below it, the graph governs what the product can change.",
-    "Semantic engineering governs the invariants below the line.",
-    "Dialect engineering governs each customer's language above it."
-   ],
-   "figs": [
-    "Four-layer ontology: functional, design, architecture, code, each with a named custodian (semantic-engineering.ai). Pending addition to the paper",
-    "On screen and on the site: a link to semantic-engineering.ai"
-   ]
-  },
-  {
-   "act": 4,
-   "n": 15,
-   "title": "Greenfield and brownfield",
-   "paper": "5",
-   "text": "With the approach defined, how is it implemented? That depends on where a product starts. A greenfield product has nothing running yet, so it can build from the bottom, designing its execution layer and data model to be driven by a document. A brownfield product has customers and revenue on its lower layers, and risk grows with depth, so it works from the top down, following the same journey the customer took. Onboarding comes first, then the interface, then the business rules, later or not at all.",
-   "words": 87,
-   "sentences": [
-    "With the approach defined, how is it implemented?",
-    "That depends on where a product starts.",
-    "A greenfield product has nothing running yet, so it can build from the bottom, designing its execution layer and data model to be driven by a document.",
-    "A brownfield product has customers and revenue on its lower layers, and risk grows with depth, so it works from the top down, following the same journey the customer took.",
-    "Onboarding comes first, then the interface, then the business rules, later or not at all."
-   ],
-   "figs": [
-    "Strangler fig pattern: grow a new system around the edges of the old one, with reduced risk the main reason to prefer it over a rewrite (Fowler, 2004; Azure Architecture Center, 2026)"
-   ]
-  },
-  {
-   "act": 4,
-   "n": 16,
-   "title": "Four recommendations",
-   "paper": "14",
-   "text": "For a brownfield product, the paper makes four recommendations. Do not staff a screen-by-screen interface programme now, because if the grammar route works, that work will not carry over; fix only the screens that are losing deals. Put the effort into the grammar and the compiler, which are the durable assets. Take onboarding first, because it touches no product code and its value shows in cycle time on the process that gates revenue. Treat any planned re-architecture as the place to design the lower line in.",
-   "words": 86,
-   "sentences": [
-    "For a brownfield product, the paper makes four recommendations.",
-    "Do not staff a screen-by-screen interface programme now, because if the grammar route works, that work will not carry over; fix only the screens that are losing deals.",
-    "Put the effort into the grammar and the compiler, which are the durable assets.",
-    "Take onboarding first, because it touches no product code and its value shows in cycle time on the process that gates revenue.",
-    "Treat any planned re-architecture as the place to design the lower line in."
-   ],
-   "figs": []
-  },
-  {
-   "act": 4,
-   "n": 17,
-   "title": "What would show this wrong",
-   "paper": "16",
-   "text": "The argument has clear failure conditions: grammar coverage that stalls, semantic errors that survive validation, and a case corpus that proves impractical to build. The site sets out each one.",
-   "words": 30,
-   "sentences": [
-    "The argument has clear failure conditions: grammar coverage that stalls, semantic errors that survive validation, and a case corpus that proves impractical to build.",
-    "The site sets out each one."
-   ],
-   "figs": [
-    "Falsifier threshold: more than 10% of validator-passing documents semantically wrong in production (paper, section 16)"
-   ]
-  },
-  {
-   "act": 4,
-   "n": 18,
-   "title": "Close",
-   "paper": "13",
-   "text": "The two applications behind this argument illustrate both directions of travel. Wadi, a house-design application, is the greenfield case: it was built around its language, an agent writes the documents, and the controls for adjusting a design are generated from them. Its case corpus has not been built yet. On2Go is the brownfield case: an onboarding platform whose customisable language sits above an existing product and compiles to inputs that product already accepts, shown so far on test data. The full argument, with every source, is on the site.",
-   "words": 89,
-   "sentences": [
-    "The two applications behind this argument illustrate both directions of travel.",
-    "Wadi, a house-design application, is the greenfield case: it was built around its language, an agent writes the documents, and the controls for adjusting a design are generated from them.",
-    "Its case corpus has not been built yet.",
-    "On2Go is the brownfield case: an onboarding platform whose customisable language sits above an existing product and compiles to inputs that product already accepts, shown so far on test data.",
-    "The full argument, with every source, is on the site."
-   ],
-   "figs": []
-  },
-  {
-   "act": 5,
-   "n": 19,
-   "title": "Drill-down: onboarding",
-   "paper": "6, 10, 12, 13.2, 14",
-   "text": "The brownfield journey starts where the customer's did, with onboarding. Every step of onboarding draws on the same domain invariants, which the language can represent once and share across the whole journey. Requirements would be stated in the domain's vocabulary, and the agent would write them as a document. The validator would check the configuration against the domain's rules before anything is applied. Customisation and training would draw on the same definitions, so each step works from one description of the domain rather than its own. The same onboarding document drives the data migration, and each failure cites the record and the rule that rejected it. The product itself is untouched, because the document compiles to inputs the product already accepts. For the provider, the knowledge a few specialists held is written into the grammar, and review moves from every attribute toward judging outputs. So far, only the migration step of onboarding has been demonstrated, on test data.",
-   "words": 158,
-   "sentences": [
-    "The brownfield journey starts where the customer's did, with onboarding.",
-    "Every step of onboarding draws on the same domain invariants, which the language can represent once and share across the whole journey.",
-    "Requirements would be stated in the domain's vocabulary, and the agent would write them as a document.",
-    "The validator would check the configuration against the domain's rules before anything is applied.",
-    "Customisation and training would draw on the same definitions, so each step works from one description of the domain rather than its own.",
-    "The same onboarding document drives the data migration, and each failure cites the record and the rule that rejected it.",
-    "The product itself is untouched, because the document compiles to inputs the product already accepts.",
-    "For the provider, the knowledge a few specialists held is written into the grammar, and review moves from every attribute toward judging outputs.",
-    "So far, only the migration step of onboarding has been demonstrated, on test data."
-   ],
-   "figs": []
-  },
-  {
-   "act": 5,
-   "n": 20,
-   "title": "Drill-down: the interface",
-   "paper": "2, 3, 7, 8, 13.1",
-   "text": "Next comes the interface, where the customer wanted the product personalised down to the individual user and operable by their own agents. With a grammar of what a screen can be, a screen becomes a document too: which entities it shows, which fields, in what order, with what validation, all checked against the domain's rules. Each tenant's layout, or one user's, is a variation of the screen's document, which the agent can write. In an existing product, the compiler emits those screens as source code at build time, reviewed and deployed through the normal pipeline, so each variation is a build. Composing the interface at run time, per user, needs a platform that accepts a desired-state description, which usually means new platform work. For the provider, there is a fixed cost to build the grammar and the compiler, then a cost per screen that falls as converted screens become worked examples, with close review of the first ones. The evidence supports converting screens at a faster rate, with review still needed. The same language is what a customer's own agent needs to operate the product in the domain's terms.",
-   "words": 189,
-   "sentences": [
-    "Next comes the interface, where the customer wanted the product personalised down to the individual user and operable by their own agents.",
-    "With a grammar of what a screen can be, a screen becomes a document too: which entities it shows, which fields, in what order, with what validation, all checked against the domain's rules.",
-    "Each tenant's layout, or one user's, is a variation of the screen's document, which the agent can write.",
-    "In an existing product, the compiler emits those screens as source code at build time, reviewed and deployed through the normal pipeline, so each variation is a build.",
-    "Composing the interface at run time, per user, needs a platform that accepts a desired-state description, which usually means new platform work.",
-    "For the provider, there is a fixed cost to build the grammar and the compiler, then a cost per screen that falls as converted screens become worked examples, with close review of the first ones.",
-    "The evidence supports converting screens at a faster rate, with review still needed.",
-    "The same language is what a customer's own agent needs to operate the product in the domain's terms."
-   ],
-   "figs": [
-    "Coding agents on bespoke domain languages: often below 20% accuracy, up to 85% with seed examples, explicit rules, compiler-in-the-loop validation and schema exposure (Microsoft vendor blog). 85% does not permit unattended conversion"
+    "Three anonymized engagements show the methodology at work on continuous SDLC.",
+    "The first archetype is a live code base of more than two million lines, with five to six scrum teams.",
+    "Extracting the graph from the code built all four layers in two to three weeks.",
+    "On the extracted graph, an impact analysis runs in eight minutes, where senior engineers previously needed three to five days to work out the same answer.",
+    "The second archetype is a new user-interface workstream that grew in complexity, and started with the design layer of the graph.",
+    "In its first sprint under Semantic Engineering, the workstream reused 53 percent of its components from the existing design system.",
+    "The third archetype is a mature spec-driven practice that rewrote more than a million lines in five to six months.",
+    "The spec-driven practice now reviews pull requests of 300 to 400 files, and each review takes more than two weeks.",
+    "In all three archetypes, the answer was to add structured knowledge exactly where the specification alone was not enough."
    ]
   },
   {
    "act": 5,
-   "n": 21,
-   "title": "Drill-down: business rules and invariants",
-   "paper": "2, 5",
-   "text": "Then the business rules, which a brownfield programme reaches later, if at all. The language expresses each customer's rules in the domain's own terms, over the invariants: which entities exist, how they relate, and which workflows govern them. A customer's variation becomes that customer's own business rules, checked against the invariants, and the shared code stays as it is. The existing APIs may not offer the granularity the language needs, but they already cover a large part of the domain. Deciding what becomes an invariant is architectural judgement.",
-   "words": 88,
+   "n": 29,
+   "title": "Where it came from",
+   "text": "In 2017, an internal Accion Labs framework called Breeze set out what product owners, UX designers and architects need to produce. Breeze documents were maintained by hand, and teams tended to drop them under deadline pressure. In 2022, on a drug-discovery project for a pharmaceutical client, connecting the AI model to a knowledge graph kept its hallucinations, the answers it invents, under control. In 2023, the knowledge-graph approach became a commercial platform, KAPS, used across customer engagements. By 2024, the Breeze guidelines had become the four layers of the knowledge graph, with agents built around them, in a platform named Breeze.AI. The method took the name Semantic Engineering in 2025. The framework and concepts of Semantic Engineering are public and free to apply. Breeze.AI runs the methodology for new and existing applications, and ASIMOV runs it for legacy modernization. Accion Labs works with teams to adopt the methodology, and an engagement can start with a two-day workshop.",
+   "words": 157,
    "sentences": [
-    "Then the business rules, which a brownfield programme reaches later, if at all.",
-    "The language expresses each customer's rules in the domain's own terms, over the invariants: which entities exist, how they relate, and which workflows govern them.",
-    "A customer's variation becomes that customer's own business rules, checked against the invariants, and the shared code stays as it is.",
-    "The existing APIs may not offer the granularity the language needs, but they already cover a large part of the domain.",
-    "Deciding what becomes an invariant is architectural judgement."
-   ],
-   "figs": []
-  },
-  {
-   "act": 5,
-   "n": 22,
-   "title": "Drill-down: the deep layers",
-   "paper": "2, 5, 14",
-   "text": "At the bottom of the stack, the deep layers stay where they are. Few customers' needs reach the deep layers, and those that do carry the most risk. In a brownfield product, the data model, the database and the infrastructure stay shared and unchanged, and an agent working in the language cannot reach them. The needs that do reach this far are handled case by case, and the site sets out how. Where a company already plans to rebuild the layer that applies configuration, that rebuild is the place to design the lower line in, and there the greenfield path begins.",
-   "words": 101,
-   "sentences": [
-    "At the bottom of the stack, the deep layers stay where they are.",
-    "Few customers' needs reach the deep layers, and those that do carry the most risk.",
-    "In a brownfield product, the data model, the database and the infrastructure stay shared and unchanged, and an agent working in the language cannot reach them.",
-    "The needs that do reach this far are handled case by case, and the site sets out how.",
-    "Where a company already plans to rebuild the layer that applies configuration, that rebuild is the place to design the lower line in, and there the greenfield path begins."
-   ],
-   "figs": []
-  },
-  {
-   "act": 5,
-   "n": 23,
-   "title": "Drill-down: the bill",
-   "paper": "4",
-   "text": "The journey ends, as it did before, with the bill. The customer's domain document is, in effect, a bill of materials: the capabilities this implementation uses, and how they are put together. The price can follow the customer's document, the way modular physical products are priced: a price for each capability used, plus the work of assembling them for this customer. Packages for common scenarios, priced on their value, sit beside the components. Because the price is computed from the same document the compiler validates, the quote and the implementation cannot drift apart. Assembly becomes a visible, priced service.",
-   "words": 99,
-   "sentences": [
-    "The journey ends, as it did before, with the bill.",
-    "The customer's domain document is, in effect, a bill of materials: the capabilities this implementation uses, and how they are put together.",
-    "The price can follow the customer's document, the way modular physical products are priced: a price for each capability used, plus the work of assembling them for this customer.",
-    "Packages for common scenarios, priced on their value, sit beside the components.",
-    "Because the price is computed from the same document the compiler validates, the quote and the implementation cannot drift apart.",
-    "Assembly becomes a visible, priced service."
-   ],
-   "figs": []
+    "In 2017, an internal Accion Labs framework called Breeze set out what product owners, UX designers and architects need to produce.",
+    "Breeze documents were maintained by hand, and teams tended to drop them under deadline pressure.",
+    "In 2022, on a drug-discovery project for a pharmaceutical client, connecting the AI model to a knowledge graph kept its hallucinations, the answers it invents, under control.",
+    "In 2023, the knowledge-graph approach became a commercial platform, KAPS, used across customer engagements.",
+    "By 2024, the Breeze guidelines had become the four layers of the knowledge graph, with agents built around them, in a platform named Breeze.AI.",
+    "The method took the name Semantic Engineering in 2025.",
+    "The framework and concepts of Semantic Engineering are public and free to apply.",
+    "Breeze.AI runs the methodology for new and existing applications, and ASIMOV runs it for legacy modernization.",
+    "Accion Labs works with teams to adopt the methodology, and an engagement can start with a two-day workshop."
+   ]
   }
  ]
 }

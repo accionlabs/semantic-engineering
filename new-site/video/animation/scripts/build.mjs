@@ -12,6 +12,6 @@ await build({
   format: 'iife', jsx: 'automatic', minify: true, loader: { '.woff2': 'file', '.woff': 'file' },
   define: { 'process.env.NODE_ENV': '"production"' }, logLevel: 'warning',
 });
-fs.writeFileSync(path.join(dist, 'index.html'), `<!doctype html><html><head><meta charset="utf-8"><title>SaaS architecture when code is cheap</title>
+fs.writeFileSync(path.join(dist, 'index.html'), `<!doctype html><html><head><meta charset="utf-8"><title>Semantic Engineering</title>
 <link rel="stylesheet" href="app.css"><style>html,body{margin:0;background:#0d1220}</style></head><body><div id="root"></div><script src="app.js"></script></body></html>`);
 console.log('built', dist);

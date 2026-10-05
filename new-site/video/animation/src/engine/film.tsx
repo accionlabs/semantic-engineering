@@ -15,7 +15,7 @@ const titleItem = (): Item => ({
   View: () => (
     <Frame act="" scene="">
       <div className="t" style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <div style={{ fontFamily: F.display, fontWeight: 700, fontSize: 92, letterSpacing: -1 }}>SaaS architecture when code is cheap</div>
+        <div style={{ fontFamily: F.display, fontWeight: 700, fontSize: 92, letterSpacing: -1 }}>Semantic Engineering</div>
         <div style={{ fontFamily: F.mono, fontSize: 22, color: C.warn, marginTop: 30, letterSpacing: 2 }}>REVIEW CUT · TEXT IN PLACE OF VOICE · NO AUDIO</div>
       </div>
     </Frame>
@@ -33,9 +33,8 @@ const cardItem = (act: number): Item => ({
   View: () => (
     <Frame act="" scene="">
       <div className="t" style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <div style={{ fontFamily: F.mono, fontSize: 22, letterSpacing: 4, color: C.line, textTransform: 'uppercase' }}>{act === 5 ? 'Act 5 · optional' : `Act ${act}`}</div>
-        <div style={{ fontFamily: F.display, fontWeight: 700, fontSize: 76, marginTop: 18, textAlign: 'center', maxWidth: 1500 }}>{ACT_NAMES[String(act)]}</div>
-        {act === 5 && <div style={{ fontSize: 26, color: C.muted, marginTop: 22 }}>Also offered on the site as drill-down chapters.</div>}
+        <div style={{ fontFamily: F.mono, fontSize: 22, letterSpacing: 4, color: C.tax, textTransform: 'uppercase' }}>{act === 0 ? 'Overview' : `Act ${act}`}</div>
+        <div style={{ fontFamily: F.display, fontWeight: 700, fontSize: 76, marginTop: 18, textAlign: 'center', maxWidth: 1500 }}>{ACT_NAMES[String(act)].replace(' (optional)', '')}</div>
       </div>
     </Frame>
   ),

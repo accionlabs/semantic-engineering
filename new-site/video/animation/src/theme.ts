@@ -1,19 +1,18 @@
-// Colour roles for the video. Each role means one thing for the whole film.
+// Colour roles for the video. Each role means one thing for the whole film (storyboard section 1.4).
 export const C = {
   canvas: '#0d1220',
   canvasRaised: '#141b2d',
   hairline: '#26304a',
-  shared: '#2f4a78',
-  sharedEdge: '#44639a',
-  sharedText: '#c9d6ee',
-  tenant: ['#1f8a7a', '#2a9d8c', '#1b7a6d', '#35ad9b', '#177063', '#3fbba8'],
-  tenantText: '#d8f3ee',
-  line: '#ff5a6e',
-  warn: '#f0a93b',
-  warnSoft: '#5a3f17',
-  invariantEdge: '#9fc2ff',
   text: '#eef1f7',
   muted: '#8f9ab1',
+  people: '#e6e9f0',
+  card: '#3a4560', // knowledge held by hand: documents and specifications as text
+  cardText: '#c3cad8',
+  tax: '#ff6a3d', // the Manual Translation Tax, and nothing else (Accion red, lifted for a dark canvas)
+  pass: '#34d399',
+  warn: '#f0a93b',
+  // One hue per kind of knowledge, and per graph layer, in layer order.
+  layer: { functional: '#5b9cf6', design: '#a77bf3', architecture: '#2cc5b4', code: '#9fb4d8' },
 };
 
 export const F = {
@@ -26,16 +25,11 @@ export const FPS = 30;
 export const W = 1920;
 export const H = 1080;
 
-// The seven bands, bottom to top, as the viewer meets them in Act 2.
-export const BANDS = [
-  { id: 'infrastructure', label: 'Infrastructure' },
-  { id: 'database', label: 'Database' },
-  { id: 'data-model', label: 'Data model' },
-  { id: 'primitives', label: 'Domain primitives' },
-  { id: 'rules', label: 'Business rules' },
-  { id: 'interface', label: 'Interface and APIs' },
-  { id: 'onboarding', label: 'Onboarding and configuration' },
-] as const;
-
-export const tenantColour = (i: number) => C.tenant[i % C.tenant.length];
-export const tenantName = (i: number) => `Tenant ${String.fromCharCode(65 + (i % 26))}`;
+export type Kind = keyof typeof C.layer;
+/** The four kinds of knowledge, in layer order, with the custodian who holds each. */
+export const KINDS: { id: Kind; label: string; custodian: string }[] = [
+  { id: 'functional', label: 'Functional', custodian: 'Product Owner' },
+  { id: 'design', label: 'Design', custodian: 'UX Designer' },
+  { id: 'architecture', label: 'Architecture', custodian: 'Architect' },
+  { id: 'code', label: 'Code', custodian: 'Engineering Team' },
+];
