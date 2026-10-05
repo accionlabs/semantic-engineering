@@ -6,9 +6,10 @@ import { Bands, GY, Ties, item } from '../parts/Graph';
 import { Callout, Frame, Svg } from '../parts/ui';
 import { C, F, KINDS } from '../theme';
 import { GATE_X, Gate } from './s05-principles';
+import { GraphSync, syncClear, syncMerge, syncUpdate } from '../parts/Sync';
 
 // Scene 8. Keeping the graph accurate. A gate checks every pull request against the four layers; an
-// agent updates the graph after every merge; the graph's own health is measured. The custodians stay
+// agent updates the graph before the pull request merges; the graph's own health is measured. The custodians stay
 // human, because what they know comes from conversations no agent can read.
 const REASONS: [typeof KINDS[number]['id'], string][] = [['functional', 'misses a required outcome'], ['design', 'duplicates a design component'], ['architecture', 'crosses a service boundary'], ['code', 'breaks what depends on it']];
 const INPUTS = ['customer calls', 'user research', 'vendor contracts', 'compliance decisions'];
@@ -36,7 +37,7 @@ export const scene08: SceneDef = {
             <text x={GATE_X + 46} y={Y.flow + 79} fontFamily={F.sans} fontSize={18} fill={C.text}>{t}</text>
           </g>
         ))}
-        <line className="pre sync" x1={PR.x} y1={Y.flow - 38} x2={PR.x} y2={GY.code + 27} stroke={C.layer.code} strokeWidth={4} />
+        <GraphSync />
         <g className="pre blocked">
           <rect x={GATE_X - 30} y={Y.flow - 60} width={60} height={120} rx={8} fill="none" stroke={C.warn} strokeWidth={3} />
           <text x={GATE_X} y={Y.flow + 86} textAnchor="middle" fontFamily={F.mono} fontSize={14} fill={C.warn}>blocked</text>
@@ -58,7 +59,7 @@ export const scene08: SceneDef = {
         <g className="pre approve"><circle cx={COL.design + 34} cy={Y.person - 30} r={12} fill={C.pass} /><path d={`M${COL.design + 28} ${Y.person - 30} l4 5 l8 -10`} stroke={C.canvas} strokeWidth={3} fill="none" /></g>
       </Svg>
       <Callout className="pre co-gate" x={150} y={570} w={520} kind="PR Validation Agent" text="Checks every pull request before it merges" tone={C.text} anchor={{ x: GATE_X - 10, y: Y.flow }} target="agent.pr-validation" />
-      <Callout className="pre co-sync" x={1180} y={570} w={500} kind="KG Sync Agent" text="Updates the graph before the pull request merges" tone={C.layer.code} target="agent.kg-sync" />
+      <Callout className="pre co-sync" x={150} y={560} w={720} kind="KG Sync Agent" text="Updates the graph before the pull request merges" tone={C.layer.code} target="agent.kg-sync" />
       <Callout className="pre chip-health" x={1080} y={568} w={600} kind="The health of the graph" text="29 metrics · 14 verification checks" tone={C.text} target="fig.health" />
       <Callout className="pre co-blocked" x={1180} y={570} w={520} kind="Most critical checks" text="A failure blocks the merge until it is fixed" tone={C.warn} target="governance.p0" />
       <Callout className="pre co-human" x={680} y={572} w={560} kind="The four custodians" text="Stay human" tone={C.text} target="custodians.human" />
@@ -87,16 +88,16 @@ export const scene08: SceneDef = {
       appear(ctx, `.reason-${k}`, at);
       if (i < 3) vanish(ctx, `.reason-${k}`, at + 1.2);
     });
-    // s4: the graph is updated on every merge.
+    // s4: the KG Sync Agent updates the graph, and only then does the pull request merge.
     const s4 = cue('sync', 's3');
     vanish(ctx, '.tok-bad, .reason, .check', s4);
     tl.to(q('.g.band'), { opacity: 1, duration: 0.3 }, s4);
-    tl.fromTo(q('.sync'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 0.8 }, s4 + 0.3);
-    tl.fromTo(q('.band-code .band-rect'), { attr: { 'stroke-width': 1.8 } }, { attr: { 'stroke-width': 5 }, duration: 0.3, repeat: 1, yoyo: true }, s4 + 1.1);
     appear(ctx, '.co-sync', s4 + 0.5);
+    syncMerge(ctx, syncUpdate(ctx, s4 + 0.3) + 0.4);
     // s5: the graph's own health is measured.
     const s5 = cue('health', 's4');
-    vanish(ctx, '.co-sync, .sync', s5);
+    vanish(ctx, '.co-sync', s5);
+    syncClear(ctx, s5);
     appear(ctx, '.chip-health', s5 + 0.2);
     // s6: a failed critical check blocks the merge.
     const s6 = cue('blocked', 's5');

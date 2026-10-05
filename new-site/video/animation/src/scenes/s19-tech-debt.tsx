@@ -3,9 +3,10 @@ import type { SceneDef } from '../engine/scene';
 import { appear, vanish } from '../engine/scene';
 import { AGENT, AgentIcon, STATIONS, Y } from '../parts/Landscape';
 import { Base, Card, GAP_Y, LOWER } from '../parts/Act3';
-import { GY, item } from '../parts/Graph';
+import { GX, GY, item } from '../parts/Graph';
 import { Callout, Frame, Svg } from '../parts/ui';
 import { C, F, KINDS } from '../theme';
+import { GraphSync, syncClear, syncMerge, syncUpdate } from '../parts/Sync';
 
 // Scene 19. What about existing systems and technical debt? Agents extract the graph from the code and
 // the custodians review it; extraction shows duplicated and tangled parts; a target the enterprise has
@@ -40,9 +41,9 @@ export const scene19: SceneDef = {
         <g className="pre notyet">
           {['Product B', 'Product C'].map((p, i) => <g key={p}><rect x={1200 + i * 270} y={LOWER.y + 10} width={250} height={50} rx={8} fill="none" stroke={C.muted} strokeDasharray="6 5" /><text x={1214 + i * 270} y={LOWER.y + 32} fontFamily={F.mono} fontSize={14} fill={C.text}>{p}</text><text x={1214 + i * 270} y={LOWER.y + 52} fontFamily={F.sans} fontSize={15} fill={C.warn}>not adopted yet</text></g>)}
         </g>
-        <text className="pre parity" x={1760} y={GY.code + 76} textAnchor="end" fontFamily={F.mono} fontSize={15} fill={C.text}>graph: parity with the code</text>
+        <text className="pre parity" x={GX.x0} y={GY.code + 76} fontFamily={F.mono} fontSize={15} fill={C.text}>graph: parity with the code</text>
         <line className="pre ia" x1={STATIONS[0].x} y1={Y.flow - 40} x2={item('architecture', 4).x} y2={item('architecture', 4).y} stroke={C.text} strokeWidth={3} />
-        <line className="pre sync" x1={STATIONS[2].x} y1={Y.flow - 38} x2={STATIONS[2].x} y2={GY.code + 27} stroke={C.layer.code} strokeWidth={4} />
+        <GraphSync />
         <g className="pre modern">
           {[0, 1, 2].map((i) => <rect key={i} x={1200 + i * 90} y={LOWER.y + 76} width={80} height={56} rx={6} fill={C.canvasRaised} stroke={[C.layer.code, C.card, C.layer.architecture][i]} strokeWidth={i === 2 ? 3 : 1.5} />)}
           <text x={1480} y={LOWER.y + 110} fontFamily={F.sans} fontSize={16} fill={C.text}>legacy modernization:</text>
@@ -91,11 +92,11 @@ export const scene19: SceneDef = {
     tl.fromTo(q('.ia'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 0.8 }, s8 + 0.3);
     tl.to(q(`.node-architecture-4 circle`), { attr: { r: 12 }, duration: 0.3 }, s8 + 1.1);
     vanish(ctx, '.ia', s8 + 2.2);
-    tl.fromTo(q('.sync'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 0.8 }, s8 + 2.6);
-    vanish(ctx, '.sync', s8 + 4.0);
+    syncMerge(ctx, syncUpdate(ctx, s8 + 2.4) + 0.3);
     // s9: legacy modernization keeps a graph for the target.
     const s9 = cue('modern', 's8');
     vanish(ctx, '.notyet', s9);
+    syncClear(ctx, s9);
     appear(ctx, '.modern', s9 + 0.3);
   },
 };
