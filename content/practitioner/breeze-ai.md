@@ -137,7 +137,6 @@ Breeze.AI is in production at multiple client engagements.
 |---|---|
 | Largest single-application graph in production | 1.6M+ LOC |
 | Typical brownfield extraction time | Two to three weeks for 2M LOC |
-| Typical impact analysis query time | Eight minutes for 1.6M LOC graph |
 | Code languages parsed | Ten (TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, Perl) |
 | MCP tools published | Approximately forty-three, organized across seven graph and management groups |
 | Skills in the Claude Code plugin | Eighteen `/breeze:*` slash commands |

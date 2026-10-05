@@ -158,7 +158,6 @@ Outcomes measured on engagements running under this methodology. Anonymized walk
 | Number | Context |
 |---|---|
 | **2 to 3 weeks** to extract a 2M+ LOC codebase into the four-layer graph | Brownfield extraction on a Node.js, TypeScript and React application |
-| **8 minutes** for an impact analysis agent to analyze a 1.6M LOC graph | The number that determines why we partition the graph by product |
 | **53%** design component reuse in the first sprint | First sprint under SE-governed UI development on a greenfield workstream |
 | **23%** defect rate reduction against the team's pre-SE baseline | Same codebase, same team, before and after |
 | **93.4%** test coverage with zero manual BDD overhead | BDD scenarios generated automatically from the Functional Ontology |

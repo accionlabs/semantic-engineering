@@ -78,7 +78,7 @@ export const scene07: SceneDef = {
       <Callout className="pre co-out" x={1240} y={570} w={420} kind="Affects nothing else" text="Stays in the specification and the code" tone={C.muted} target="aperture.exclude" />
       <Callout className="pre co-unsure" x={1240} y={570} w={420} kind="Unclear" text="Stays out until the team is sure" tone={C.muted} target="aperture.default-exclude" />
       <Callout className="pre co-wider" x={150} y={570} w={420} kind="Over time" text="The aperture widens as confidence grows" tone={C.text} target="aperture.matures" />
-      <Callout className="pre chip-8min" x={1080} y={568} w={680} kind="One impact analysis query, 1.6 million line application" text="About eight minutes" tone={C.text} target="fig.impact-8-min" />
+      <Callout className="pre chip-8min" x={1080} y={568} w={680} kind="One graph per product" text="The cost of a query grows with the size of the graph" tone={C.text} target="graph.partition" />
       <Callout className="pre co-bridge" x={150} y={570} w={480} kind="Where products integrate" text="Links connect their graphs" tone={C.text} target="graph.integration-points" />
     </Frame>
   ),

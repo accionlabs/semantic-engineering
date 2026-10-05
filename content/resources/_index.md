@@ -136,7 +136,7 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 ## P
 
-**Partition by Product.** The methodology's choice to build one knowledge graph per product or application rather than per repository (too granular) or monolithically (too slow). The 8-minute query time for a 1.6M LOC graph is the engineering rationale. Cross-product reasoning happens through the Cross-Product Impact Extension. See [Partition by Product](../sdlc/methodology.md#partition-by-product).
+**Partition by Product.** The methodology's choice to build one knowledge graph per product or application rather than per repository (too granular) or monolithically (too slow). The cost of a query grows with the size of the graph, which is the engineering rationale. Cross-product reasoning happens through the Cross-Product Impact Extension. See [Partition by Product](../sdlc/methodology.md#partition-by-product).
 
 **Portfolio Rationalization Agent.** The agent that runs quarterly across all product graphs to detect cross-product duplication and dead capabilities. Output feeds the rationalization backlog. See [Agent Fleet](../sdlc/agents.md#agent-fleet-topology).
 

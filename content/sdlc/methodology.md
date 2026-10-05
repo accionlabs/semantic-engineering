@@ -227,9 +227,9 @@ We build one knowledge graph per product or application. Not per repository, and
 
 ![Partition by product with integration-point bridges and three agent variants that handle the partition](/diagrams/partition-by-product.svg)
 
-### The Number That Decides It
+### What Decides It
 
-A single Impact Analysis query against a 1.6M LOC application graph takes about eight minutes. The query traverses functional, design, architecture, and code nodes, surfaces the cross-layer impact, and produces a structured impact report. Eight minutes is an acceptable agent runtime budget for the spec sprint. A monolithic graph spanning ten such applications does not produce useful results in any reasonable agent runtime budget.
+The cost of an Impact Analysis query grows with the size of the graph and the number of items a change touches. The query traverses functional, design, architecture, and code nodes, surfaces the cross-layer impact, and produces a structured impact report. On a product graph, that cost stays within what the spec sprint can absorb. A monolithic graph spanning ten such applications does not produce useful results in any reasonable agent runtime budget.
 
 | Partition choice | Why we rejected it |
 |---|---|

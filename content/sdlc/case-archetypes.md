@@ -85,7 +85,7 @@ The team moved past traditional SDD into what we describe internally as agent-dr
 |---|---|
 | AI coding tools produced isolated UI prototypes; no global productivity gain | The team operates under agent-driven development; the spec is the input, agents handle the rest under governance |
 | Cross-team coordination happened in meetings and Slack | Cross-team conflicts are caught at the PR validation gate before integration |
-| Brownfield changes required senior-engineer archaeology of three to five days | Brownfield impact analysis runs in eight minutes against the live graph |
+| Brownfield changes required senior-engineer archaeology of three to five days | Brownfield impact analysis runs against the live graph before each change |
 | BDD scenarios were authored manually and routinely abandoned | BDD scenarios are auto-generated from the Functional Ontology; 93.4% test coverage with zero manual overhead |
 
 ### The Verification Suite Found Real Issues
