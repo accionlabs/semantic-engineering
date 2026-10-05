@@ -88,6 +88,8 @@ The doctrine has four commitments.
 | The governance framework is documented | The 29-metric framework, the 14 verification checks, and the thresholds the client's graph operates to are delivered |
 | The enablement roles are transitionable | A documented playbook is delivered for the client to recruit and onboard their own Chief Architect, Ontology Maintainer, Knowledge Agent Owner, and Semantic Engineers, or for a successor vendor to operate them |
 
+In the client-hosted deployment of [Breeze.AI](../../practitioner/breeze-ai.md#deployment-architecture), the platform and the graph run inside the client's own cloud account for the whole engagement, and stay there if the engagement ends.
+
 The offboarding doctrine is the answer to the vendor lock-in concern long-term engagements always raise. The graph is the client's. The exit path is real. The relationship continues because the enablement partner adds value, not because departure is impractical.
 
 ## Engineering Team's Custodianship of the Agent Fleet (Zone 4 Evolution)

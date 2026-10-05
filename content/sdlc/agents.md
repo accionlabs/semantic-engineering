@@ -157,6 +157,23 @@ The knowledge graph is updated continuously as part of the merge process, so the
 
 ![End-to-end flow: spec to PR to verification and KG sync](/diagrams/sdlc-pr-and-kg-sync-flow.svg)
 
+### Two Kinds of Output
+
+The Impact Analysis Agent returns its findings in one of two forms. For people, it writes a readable report: the affected outcomes, components, services and code, with the reasons for each. For another agent, it returns structured data: a JSON document listing the IDs of the affected items in each layer of the graph. An agent that calls impact analysis as a skill or as a subagent asks for the structured form, because it can act on the item IDs directly.
+
+A person reads the report when a person owns the decision the report informs: in the spec sprint, for new scope, and for any change the team has not handed to an agent. When an agent owns the work (see [Which Work Goes to Agents](#which-work-goes-to-agents)), the agent reads the structured form and continues.
+
+### When Impact Analysis Runs
+
+One change can be analyzed several times on its way to production.
+
+| When | What the analysis is for |
+|---|---|
+| The specification is written | The custodians review the predicted impact in the spec sprint and refine the specification |
+| Code is written, before the pull request | The team checks that the code matches the impact the specification predicted |
+| The pull request is raised | The PR Validation Agent compares the change with the predicted impact |
+| The change is merged | Post-implementation mode compares the final change with the prediction, using the whole history of the change |
+
 ### A Worked Example
 
 A real user story run through the agent against a 1.6 million LOC Node.js, TypeScript, and React application.
@@ -480,6 +497,22 @@ Promotion is not one-directional. An agent that has been promoted to Level 3 but
 | A Sev-1 incident is traced to the agent's output | The agent reverts to Level 1; root-cause analysis is required before any re-promotion |
 
 Demotion is not a failure of the methodology. It is the methodology working as designed. Agents that no longer meet the threshold for their current level should not operate at that level. The cycle of promotion, evidence accumulation, and (when warranted) demotion is what keeps the agent fleet trustworthy over time.
+
+### Which Work Goes to Agents
+
+Every agent has a human owner, and no agent runs autonomously without one. A named person is accountable for what the agent does, as a named custodian is accountable for each layer of the graph.
+
+People decide which work goes to agents. The decision is made where the team already assigns work: in sprint planning, or in triage for support work. Each ticket goes to a person, or to an agent that already has a record of reliable results on that kind of work.
+
+Work suits an agent when it follows a repeatable pattern. Typical examples are support requests, customer-specific customizations, changes to workflows and forms, new fields, and custom reports. Each pattern can be tested, written up as a runbook, and given a level of autonomy through a Promotion Agreement. Once an agent meets the threshold for a pattern, tickets that match the pattern can be routed to it as they arrive.
+
+New scope stays with people. A new feature, including an enhancement to an existing application, needs product, design and architecture judgment, and its custodians own it. The people who own new scope decide how much of its implementation to hand to agents.
+
+### High-Volume Support Work
+
+Some products receive support and data requests at high volume: data corrections, documentation updates, small configuration changes, and research or data sourcing done for customers. Many of these need no code change, but they still reach the development team. At that volume, a general ticket system or service desk becomes a bottleneck, because it holds no knowledge of the application.
+
+For these products, the requests can move to an agent workbench: a queue with triage agents that classify each request, apply the product's own prioritization rules, and route each request to a person or to an agent at the autonomy level set for that kind of request.
 
 ### The Five Levels Mapped to Agent Classes
 

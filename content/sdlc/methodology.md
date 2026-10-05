@@ -219,6 +219,8 @@ The aperture never reaches maximum width. The mature graph is the one where the 
 
 The default is exclusion. Elements that should have been included will surface when their changes start cascading without graph governance, and the team can add them then with the evidence to justify inclusion.
 
+The code stays the single source of truth for what the code does. The graph holds only high-aperture elements, and points an agent to the code elements that matter for a change, so the agent reads those directly instead of searching the whole codebase.
+
 ## Partition by Product
 
 We build one knowledge graph per product or application. Not per repository, and not monolithic across the portfolio. The reason is operational.
@@ -246,6 +248,20 @@ Partitioning by product does not isolate the graphs. The agent fleet runs three 
 | What duplicated capability exists across products? | Portfolio Rationalization Agent | All product graphs filtered by functional-ontology overlap |
 
 Integration points (APIs, events, shared databases, shared libraries) are the bridges between product graphs. If integration is implicit (shared global state, undocumented file-based coupling, ad-hoc HTTP calls without contracts), the cross-product analysis surfaces the gap as a finding and recommends that the integration be made explicit. The expensive cross-product traversal happens at spec time, when the team has the bandwidth to reason about it. The cheap single-product traversal happens at every change, when the team needs the answer immediately.
+
+### One Graph for All of a Product's Teams
+
+When several teams work on one product, they share that product's graph and the same set of agents. Each team's changes are analyzed against the whole product, and every team's merges keep the same graph current.
+
+### Rolling Out Product by Product
+
+A portfolio adopts the methodology one product at a time. The first product builds its graph, sets up the process around it, and finds the repeatable patterns of work that agents can take on (see [Which Work Goes to Agents](agents.md#which-work-goes-to-agents)). After a few months of this, the next product follows.
+
+### Knowledge Shared Across Products
+
+Some knowledge belongs to the enterprise and applies to every product: compliance and security requirements, infrastructure preferences, and shared deployment pipelines run by a central DevOps or DevSecOps team. The methodology defines this knowledge once, at the enterprise level, instead of repeating it in every product's specifications. Each product keeps its own graph, and each product's agents read the shared knowledge according to the access rights set for those agents.
+
+An enterprise design system works the same way. Where a central UX team maintains one design system, its design graph is shared across products, and each product adapts it through its own templates.
 
 ## Extraction as Rationalization
 
@@ -342,7 +358,13 @@ The framework runs to concrete thresholds. The numbers below are what we operate
 | Quarterly | The P2 community structure and P3 centrality metrics. Output is a prioritized rationalization backlog. | Chief Architect, Ontology Maintainer |
 | Continuously | Ontology freshness check. Refresh sprints scheduled when freshness threshold is breached. | Knowledge Agent Owner |
 
+The metrics are kept per product, per graph and per agent, as data the client's team can read and collect. Each organization brings them into its own governance reporting; the methodology does not prescribe a reporting format.
+
 The metrics framework is what makes the knowledge graph a sustainable asset rather than another stale documentation artifact. The four ontology custodians own the framework; Accion Labs's [Enablement Partnership](process/enablement-partnership.md) supports them at a chosen tier of managed support.
+
+### Paying Down Technical Debt
+
+Agents that write code quickly can also add technical debt quickly. The graph gives the team a way to reduce debt inside ordinary work. The graph can record the target state the enterprise has decided on as well as the current one: for example, a new authorization service that some products have not adopted yet. When a change touches an area with a recorded target, the agent looks up the target, and the change can move the code toward it while the feature is being built. The debt is paid down a piece at a time, in the work that touches it.
 
 > **How Accion Labs operationalizes graph operation**
 >

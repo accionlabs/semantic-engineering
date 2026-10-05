@@ -46,6 +46,22 @@ The flow uses all three sources of truth (covered in [Three Sources of Truth](_i
 
 After the change is merged, the same Impact Analysis Agent can rerun the analysis against the new state of the knowledge graph and compare the post-implementation reality against the pre-implementation specification. The three sources of truth, used together, are what make that comparison meaningful.
 
+## How the Ticket Carries the Change
+
+The ticket system, Jira for example, holds the state of every change from start to finish, whether people, agents or both do the work. The impact analysis and the test results attach to the ticket as the change moves.
+
+| Step | What happens on the ticket |
+|---|---|
+| The specification is written | A hook in the ticket system runs the Impact Analysis Agent and attaches the impact report to the ticket |
+| Spec sprint review | The custodians review the report on the ticket and refine the specification |
+| Sprint planning | The ticket is assigned to a person or, for a repeatable pattern, to an agent with the autonomy for it (see [Which Work Goes to Agents](../agents.md#which-work-goes-to-agents)) |
+| Code is written | Impact analysis can run again to check the code against the predicted impact, and the result is attached |
+| Testing | Acceptance tests generated from the Functional Ontology are attached and run |
+| Pull request | The PR Validation Agent reconciles the change with the impact report; a mismatch goes to a person for review |
+| Merge | The final impact analysis uses the whole history of the ticket, and the KG Sync Agent updates the graph |
+
+Each step updates the ticket's status, so managers see the work of people and agents in the place they already look. The agents do not prescribe the workflow between these steps; each team designs it to fit its own process.
+
 ## Zone 4: Agents Run the Loop
 
 At Zone 3, the developer is in the per-change loop, reviewing the coding agent's output and applying implementation judgment. At [Zone 4](../zones/_index.md#zone-4-se-at-scale), the agents run the loop and the developer moves upstream.

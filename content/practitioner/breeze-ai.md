@@ -34,7 +34,7 @@ Breeze.AI is the production implementation of every methodology element describe
 | Citations at every node | Every node carries a pointer back to its source artifact: Jira ticket, Confluence page, Figma frame, document, or code file. Citations are required at the time of node creation and are what make the graph audit-grade. |
 | Brownfield extraction | Tree-sitter AST parsing across ten languages (TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, Perl). LLM-inferred metadata enrichment. Browser-automation design extraction. Full-stack inference of architecture and functional layers from the enriched code graph. |
 | Data schema ingestion | Relational and search schemas (PostgreSQL, Oracle, SQL Server, Elasticsearch) modeled as first-class graph nodes: tables, columns, constraints, indexes, mappings. |
-| Impact Analysis Agent | Pre and post implementation analysis with the full impact-report output format. |
+| Impact Analysis Agent | Pre and post implementation analysis with the full impact-report output format. Returns a readable report for people, or JSON listing the affected item IDs for another agent; callable as a skill or a subagent. |
 | PR Validation Agent | CI/CD pipeline integration; per-merge validation against all four ontologies. |
 | BDD Generation Agent | Functional Ontology to Gherkin-format scenario generation. |
 | KG Sync Agent | Autonomous agents wired into GitHub, Bitbucket, and Jira watch every PR, push, and ticket transition. The agents re-ingest exactly what changed. The graph stays continuously current with HEAD. |
@@ -93,6 +93,8 @@ The guardrails matter because they keep the ontology disciplined at the moment o
 | SaaS (Accion Labs-hosted) | Accion Labs's managed infrastructure | Accion Labs's managed graph storage | Cloud LLM providers (OpenAI, Anthropic, AWS Bedrock) |
 | Client-hosted dedicated | Client's cloud account (AWS, Azure, GCP) | Client's cloud account | Cloud LLM providers or client-managed |
 | On-premises | Client's on-premises infrastructure | Client's data center | Local models via Gen AI in a Box |
+
+Graph storage is typically Neo4j Community Edition. Another graph database can be used where a client has a standard of its own. Enterprise support for the database matters only when a graph grows large enough to need it for scale. Accion Labs is a Neo4j partner.
 
 The deployment decision is made during the Advise phase. Factors include data sovereignty requirements, compliance regime, integration with existing client infrastructure, and cost structure.
 
