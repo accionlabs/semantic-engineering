@@ -20,6 +20,16 @@ export const DEV = { x: COL.design, y: Y.flow - Y.stationH / 2 };
 
 const CARDS: Record<Exclude<Kind, 'code'>, string> = { functional: 'Prose specs', design: 'Figma handoffs', architecture: 'Architecture wiki' };
 
+/**
+ * An arrowhead drawn in place. Every scene is mounted at once, so shared marker ids would resolve to a
+ * hidden scene's definition; drawing the head directly avoids that.
+ */
+export const Head: React.FC<{ x: number; y: number; from: { x: number; y: number }; colour: string; size?: number }> = ({ x, y, from, colour, size = 12 }) => {
+  const a = Math.atan2(y - from.y, x - from.x), w = size * 0.55;
+  const p = (dx: number, dy: number) => `${x + dx * Math.cos(a) - dy * Math.sin(a)},${y + dx * Math.sin(a) + dy * Math.cos(a)}`;
+  return <polygon points={`${p(0, 0)} ${p(-size, -w)} ${p(-size, w)}`} fill={colour} />;
+};
+
 export const KindLabels: React.FC<{ className?: string }> = ({ className = '' }) => (
   <g>
     {KINDS.map((k) => (
@@ -87,7 +97,10 @@ export const SprintFrame: React.FC<{ className?: string }> = ({ className = '' }
 export const Flow: React.FC<{ className?: string; agent?: boolean }> = ({ className = '', agent = false }) => (
   <g className={`${className} flow`}>
     {STATIONS.slice(0, -1).map((s, i) => (
-      <line key={s.id} className={`link link-${i}`} x1={s.x + 120} y1={Y.flow} x2={STATIONS[i + 1].x - 128} y2={Y.flow} stroke={C.muted} strokeWidth={2} markerEnd="url(#arrow)" />
+      <g key={s.id} className={`link link-${i}`}>
+        <line x1={s.x + 120} y1={Y.flow} x2={STATIONS[i + 1].x - 130} y2={Y.flow} stroke={C.muted} strokeWidth={2} />
+        <Head x={STATIONS[i + 1].x - 122} y={Y.flow} from={{ x: s.x, y: Y.flow }} colour={C.muted} />
+      </g>
     ))}
     {STATIONS.map((s) => (
       <g key={s.id} className={`st st-${s.id}`} data-target={`flow.${s.id}`}>
@@ -124,7 +137,12 @@ export const Defs: React.FC = () => (
 /** A dashed red translation arrow from a point to the developer. */
 export const TaxArrow: React.FC<{ className: string; x: number; y: number; to?: { x: number; y: number } }> = ({ className, x, y, to = DEV }) => {
   const mx = (x + to.x) / 2, my = Math.min(y, to.y) + Math.abs(to.y - y) * 0.55;
-  return <path className={className} d={`M${x} ${y} Q${mx} ${my} ${to.x} ${to.y - 6}`} fill="none" stroke={C.tax} strokeWidth={3} strokeDasharray="10 8" markerEnd="url(#arrow-tax)" />;
+  return (
+    <g className={className}>
+      <path d={`M${x} ${y} Q${mx} ${my} ${to.x} ${to.y - 14}`} fill="none" stroke={C.tax} strokeWidth={3} strokeDasharray="10 8" />
+      <Head x={to.x} y={to.y - 4} from={{ x: mx, y: my }} colour={C.tax} />
+    </g>
+  );
 };
 
 /** A knowledge token and three fragments, placed at a translation arrow's start. */
