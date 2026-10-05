@@ -84,7 +84,7 @@ export const SprintFrame: React.FC<{ className?: string }> = ({ className = '' }
   </g>
 );
 
-export const Flow: React.FC<{ className?: string }> = ({ className = '' }) => (
+export const Flow: React.FC<{ className?: string; agent?: boolean }> = ({ className = '', agent = false }) => (
   <g className={`${className} flow`}>
     {STATIONS.slice(0, -1).map((s, i) => (
       <line key={s.id} className={`link link-${i}`} x1={s.x + 120} y1={Y.flow} x2={STATIONS[i + 1].x - 128} y2={Y.flow} stroke={C.muted} strokeWidth={2} markerEnd="url(#arrow)" />
@@ -92,11 +92,23 @@ export const Flow: React.FC<{ className?: string }> = ({ className = '' }) => (
     {STATIONS.map((s) => (
       <g key={s.id} className={`st st-${s.id}`} data-target={`flow.${s.id}`}>
         <rect x={s.x - 120} y={Y.flow - Y.stationH / 2} width={240} height={Y.stationH} rx={10} fill={C.canvasRaised} stroke={C.muted} strokeWidth={1.5} />
-        <text x={s.x} y={Y.flow + 8} textAnchor="middle" fontFamily={F.sans} fontSize={23} fontWeight={500} fill={C.text}>{s.label}</text>
+        <text x={agent && s.id === 'dev' ? s.x - 34 : s.x} y={Y.flow + 8} textAnchor="middle" fontFamily={F.sans} fontSize={23} fontWeight={500} fill={C.text}>{s.label}</text>
       </g>
     ))}
   </g>
 );
+
+/** The coding agent: a rounded square with two eyes, drawn distinct from the people. */
+export const AgentIcon: React.FC<{ className?: string; x: number; y: number; s?: number }> = ({ className = '', x, y, s = 30 }) => (
+  <g className={className} data-target="flow.coding-agent">
+    <rect x={x - s / 2} y={y - s / 2} width={s} height={s} rx={s * 0.28} fill="none" stroke={C.text} strokeWidth={2.5} />
+    <circle cx={x - s * 0.18} cy={y - s * 0.04} r={s * 0.07} fill={C.text} />
+    <circle cx={x + s * 0.18} cy={y - s * 0.04} r={s * 0.07} fill={C.text} />
+    <line x1={x} y1={y - s / 2} x2={x} y2={y - s / 2 - 7} stroke={C.text} strokeWidth={2} />
+  </g>
+);
+/** Where the coding agent sits on the Developer station. */
+export const AGENT = { x: COL.design + 78, y: Y.flow };
 
 export const Defs: React.FC = () => (
   <defs>
