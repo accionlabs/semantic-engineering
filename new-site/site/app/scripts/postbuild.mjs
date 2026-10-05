@@ -1,7 +1,65 @@
-// Caching for static hosting. Routing falls back to the app through wrangler.jsonc.
+// Prerenders every page into dist/<path>/index.html with its own title, description, social cards and
+// structured data, so the site reads fully without JavaScript and search engines see each page as before.
+// Then writes the 404 page and the caching headers.
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-const dist = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../dist');
-fs.writeFileSync(path.join(dist, '_headers'), '/media/*\n  Cache-Control: public, max-age=86400\n/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n');
-console.log('postbuild: _headers written');
+import { fileURLToPath, pathToFileURL } from 'node:url';
+
+const app = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const dist = path.join(app, 'dist');
+const SITE_URL = 'https://semantic-engineering.ai';
+const GA = 'G-9F9DMLMBBN';
+const { render, SITE } = await import(pathToFileURL(path.join(app, 'dist-ssr/entry-server.js')).href);
+const template = fs.readFileSync(path.join(dist, 'index.html'), 'utf8');
+const pages = new Map(SITE.pages.map((p) => [p.key, p]));
+
+const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const ld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`;
+const ogImage = `${SITE_URL}/og-image.png`;
+const publisher = { '@type': 'Organization', name: 'Accion Labs', url: 'https://www.accionlabs.com', logo: { '@type': 'ImageObject', url: ogImage } };
+// Google Analytics runs on the live address only, so test deployments and local previews are not counted.
+const analytics = `<script>if(location.hostname==='semantic-engineering.ai'){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=${GA}';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${GA}')}</script>`;
+
+const head = (p) => {
+  const url = SITE_URL + p.url;
+  const title = p.key === 'home' ? 'Semantic Engineering' : `${p.title} · Semantic Engineering`;
+  const ancestors = [];
+  for (let k = p.parent; k; k = pages.get(k)?.parent) ancestors.unshift(pages.get(k));
+  const data = [];
+  if (p.key === 'home') data.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Semantic Engineering', alternateName: 'Semantic Engineering Methodology', url: `${SITE_URL}/`, inLanguage: 'en', publisher });
+  if (!p.isSection && p.key !== 'home') data.push({ '@context': 'https://schema.org', '@type': 'TechArticle', headline: p.title, description: p.description, url, mainEntityOfPage: url, inLanguage: 'en', image: ogImage, datePublished: p.date, dateModified: p.lastmod, author: { '@type': 'Person', name: 'Ashutosh Bijoor', url: 'https://orcid.org/0009-0003-5402-3873' }, publisher });
+  if (ancestors.length) data.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [...ancestors, p].map((a, i) => ({ '@type': 'ListItem', position: i + 1, name: a.title, item: SITE_URL + a.url })) });
+  if (p.faqs?.length) data.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: p.faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.text } })) });
+  return [
+    `<title>${esc(title)}</title>`,
+    `<meta name="description" content="${esc(p.description)}" />`,
+    `<link rel="canonical" href="${url}" />`,
+    p.draft ? '<meta name="robots" content="noindex" />' : '',
+    `<meta property="og:type" content="${p.key === 'home' || p.isSection ? 'website' : 'article'}" />`,
+    `<meta property="og:site_name" content="Semantic Engineering" />`,
+    `<meta property="og:title" content="${esc(p.key === 'home' ? 'Semantic Engineering' : p.title)}" />`,
+    `<meta property="og:description" content="${esc(p.description)}" />`,
+    `<meta property="og:url" content="${url}" />`,
+    `<meta property="og:image" content="${ogImage}" />`,
+    `<meta name="twitter:card" content="summary_large_image" />`,
+    `<meta name="twitter:title" content="${esc(p.key === 'home' ? 'Semantic Engineering' : p.title)}" />`,
+    `<meta name="twitter:description" content="${esc(p.description)}" />`,
+    `<meta name="twitter:image" content="${ogImage}" />`,
+    ...data.map(ld),
+    analytics,
+  ].filter(Boolean).join('\n    ');
+};
+
+let n = 0;
+for (const p of SITE.pages) {
+  const faqs = JSON.parse(fs.readFileSync(path.join(app, 'src/content/pages', `${p.key.replace(/\//g, '__')}.json`), 'utf8')).faqs;
+  const html = template.replace('<!--head-->', head({ ...p, faqs })).replace('<!--app-->', render(p.url));
+  const dir = path.join(dist, p.url);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  n++;
+}
+const notFound = template.replace('<!--head-->', `<title>Page not found · Semantic Engineering</title>\n    <meta name="robots" content="noindex" />\n    ${analytics}`).replace('<!--app-->', render('/404-not-found/'));
+fs.writeFileSync(path.join(dist, '404.html'), notFound);
+fs.writeFileSync(path.join(dist, '_headers'), '/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n/diagrams/*\n  Cache-Control: public, max-age=3600\n');
+console.log(`postbuild: ${n} pages prerendered, 404 page and _headers written`);

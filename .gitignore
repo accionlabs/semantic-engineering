@@ -18,3 +18,7 @@ dist-*/
 new-site/video/renders/
 new-site/video/audio/vo/
 new-site/site/app/public/media/
+dist-ssr/
+new-site/site/app/public/
+new-site/site/app/src/content/site.json
+new-site/site/app/src/content/pages/

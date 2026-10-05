@@ -1,42 +1,49 @@
-import paper from './paper.json';
-import summariesRaw from './summaries.json';
+// The site's content, as scripts/build-content.mjs writes it from content/**/*.md.
+// Page metadata and navigation load with the app; each page's blocks load when the page is opened.
+import site from './site.json';
 
-export type Block = { type: 'html'; html: string } | { type: 'diagram'; id: string; source: string };
-export type Section = { n: number; title: string; slug: string; subsections: { id: string; number: string; title: string }[]; blocks: Block[] };
-export type Citation = { url: string; title: string; sections: string[] };
-export const PAPER = paper as unknown as {
-  title: string; subtitle: string; status: string; summary: { title: string; blocks: Block[] }; sections: Section[];
-  appendixA: { title: string; blocks: Block[] } | null; glossary: { term: string; slug: string; html: string; sections: number[] }[]; citations: Citation[];
+export type Heading = { level: number; id: string; text: string };
+export type Block =
+  | { k: 'h'; level: number; id: string; text: string; html: string }
+  | { k: 'p' | 'list' | 'table' | 'quote' | 'code' | 'html' | 'diagram' | 'faq'; sec: string; sub: string; n: number; html: string; text?: string; diagram?: string };
+export type Faq = { question: string; html: string; text: string };
+export type PageMeta = {
+  key: string; url: string; file: string; isSection: boolean; title: string; linkTitle?: string; description: string;
+  weight: number; date?: string; lastmod?: string; draft: boolean; audience: string[]; parent: string | null; headings: Heading[]; hasFaq: boolean;
 };
-export const SUMMARIES = summariesRaw as Record<string, string>;
+export type PageData = { key: string; blocks: Block[]; faqs: Faq[] };
+export type NavNode = { key: string; children: NavNode[] };
 
-// Products the paper names get a link to their own site, at their first mention in the section that presents them.
-// Added here so the paper itself carries citations only.
-const PRODUCT_LINKS: { section: number; term: string; url: string }[] = [{ section: 13, term: 'On2Go', url: 'https://on2go.ai' }];
-PRODUCT_LINKS.forEach(({ section, term, url }) => {
-  const b = PAPER.sections.find((s) => s.n === section)?.blocks.find((x) => x.type === 'html' && x.html.includes(term)) as { html: string } | undefined;
-  if (b) b.html = b.html.replace(new RegExp(`(^|[^\\w>/-])${term}(?![^<]*</a>)`), `$1<a href="${url}" target="_blank" rel="noopener">${term}</a>`);
-});
-export const sectionByN = (n: number) => PAPER.sections.find((s) => s.n === n);
-export const sectionHref = (n: number, anchor?: string) => `/sections/${sectionByN(n)?.slug ?? n}${anchor ? '#' + anchor : ''}`;
-
-/** Which scenes of the video each section embeds, and the scene its card thumbnail comes from. */
-export const SECTION_SCENES: Record<number, { from: number; to: number; thumb: number }> = {
-  1: { from: 1, to: 4, thumb: 1 }, 2: { from: 12, to: 12, thumb: 12 }, 3: { from: 4, to: 6, thumb: 4 }, 4: { from: 10, to: 10, thumb: 10 },
-  5: { from: 15, to: 15, thumb: 15 }, 6: { from: 5, to: 5, thumb: 5 }, 7: { from: 6, to: 6, thumb: 6 }, 8: { from: 11, to: 11, thumb: 11 },
-  9: { from: 12, to: 13, thumb: 13 }, 10: { from: 5, to: 5, thumb: 5 }, 11: { from: 13, to: 13, thumb: 13 }, 12: { from: 13, to: 13, thumb: 13 },
-  13: { from: 18, to: 18, thumb: 18 }, 14: { from: 16, to: 16, thumb: 16 }, 15: { from: 21, to: 21, thumb: 21 }, 16: { from: 17, to: 17, thumb: 17 },
+export const SITE = site as unknown as { pages: PageMeta[]; nav: NavNode[]; order: string[]; diagrams: { file: string; title: string; pages: string[] }[] };
+export const PAGES = new Map(SITE.pages.map((p) => [p.key, p]));
+export const pageByUrl = (pathname: string) => {
+  const url = pathname.endsWith('/') ? pathname : `${pathname}/`;
+  return SITE.pages.find((p) => p.url === url);
 };
-/** The main paper section for each scene, used by chapter markers and panels. */
-export const SCENE_SECTION: Record<number, number> = { 1: 1, 2: 1, 3: 1, 4: 3, 5: 6, 6: 7, 7: 2, 8: 2, 9: 5, 10: 4, 11: 8, 12: 9, 13: 9, 14: 8, 15: 5, 16: 14, 17: 16, 18: 13, 19: 6, 20: 7, 21: 15, 22: 5, 23: 4, 30: 1 };
+export const navTitle = (p: PageMeta) => (p.key === 'home' ? 'Home' : p.linkTitle ?? p.title);
+/** The pages above this one, home first. */
+export const ancestors = (p: PageMeta) => {
+  const out: PageMeta[] = [];
+  for (let k = p.parent; k; k = PAGES.get(k)?.parent ?? null) { const a = PAGES.get(k); if (a) out.unshift(a); }
+  return out;
+};
+/** The address of a block, for the reader, the graph and agents: "sdlc/methodology#aperture p3". */
+export const blockAddress = (key: string, b: { sec: string; n: number }) => `${key}#${b.sec} p${b.n}`;
 
-/** Layer by layer: each layer's scene today, then its scene after the line moves. Top of the stack first. */
-export const LAYERS: { slug: string; name: string; short: string; before: number; after: number; shared?: boolean }[] = [
-  { slug: 'onboarding', name: 'Onboarding and configuration', short: 'onboarding', before: 5, after: 19 },
-  { slug: 'interface', name: 'Interface and APIs', short: 'the interface', before: 6, after: 20 },
-  { slug: 'business-rules', name: 'Business rules', short: 'the business rules', before: 7, after: 21 },
-  { slug: 'domain-invariants', name: 'Domain primitives, the invariants', short: 'the domain invariants', before: 8, after: 11, shared: true },
-  { slug: 'deep-layers', name: 'Data model, database and infrastructure', short: 'the deep layers', before: 9, after: 22, shared: true },
-  { slug: 'bill', name: 'The bill', short: 'the bill', before: 10, after: 23 },
-];
-export const layerBySlug = (slug: string) => LAYERS.find((l) => l.slug === slug);
+// ---------- page data, loaded on demand and cached ----------
+
+const loaders = import.meta.glob<PageData>('./pages/*.json', { import: 'default' });
+const cache = new Map<string, PageData>();
+const fileOf = (key: string) => `./pages/${key.replace(/\//g, '__')}.json`;
+export const cachedPage = (key: string) => cache.get(key);
+export const loadPage = async (key: string) => {
+  const hit = cache.get(key);
+  if (hit) return hit;
+  const load = loaders[fileOf(key)];
+  if (!load) throw new Error(`no page ${key}`);
+  const data = await load();
+  cache.set(key, data);
+  return data;
+};
+/** The server renderer fills the cache up front, so every page renders synchronously. */
+export const primePages = (all: Record<string, PageData>) => Object.values(all).forEach((d) => cache.set(d.key, d));

@@ -13,5 +13,6 @@
     "baseUrl": ".",
     "paths": { "@film/*": ["../../video/animation/src/*"], "react": ["./node_modules/@types/react"], "react/*": ["./node_modules/@types/react/*"], "gsap": ["./node_modules/gsap"], "gsap/*": ["./node_modules/gsap/*"] }
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/later"]
 }
