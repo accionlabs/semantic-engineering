@@ -390,8 +390,8 @@
    "act": 3,
    "n": 19,
    "title": "What about existing systems and technical debt?",
-   "text": "For an existing application, agents extract the knowledge graph from the code, and the custodians review it. Extraction typically takes two to three weeks for an application of more than two million lines. Extraction shows the application as it actually is, including duplicated and tangled parts that nobody had mapped. Agents that write code quickly can also add technical debt quickly. An enterprise often decides on a target that some products have not reached yet. One example is a new authorization service that some products have not adopted. When a change touches that area, the agent looks up the target, and the change moves the code toward it. Technical debt is then paid down a piece at a time, inside the work that touches it.",
-   "words": 125,
+   "text": "For an existing application, agents extract the knowledge graph from the code, and the custodians review it. Extraction typically takes two to three weeks for an application of more than two million lines. Extraction shows the application as it actually is, including duplicated and tangled parts that nobody had mapped. Agents that write code quickly can also add technical debt quickly. An enterprise often decides on a target that some products have not reached yet. One example is a new authorization service that some products have not adopted. Until the change reaches the code, the target lives in the specifications, because the knowledge graph keeps strict parity with the code. When a change touches that area, impact analysis shows everything in the current code that the change touches, and the specification can move that code toward the target. Large-scale legacy modernization is the exception: there, the target has a graph of its own.",
+   "words": 153,
    "sentences": [
     "For an existing application, agents extract the knowledge graph from the code, and the custodians review it.",
     "Extraction typically takes two to three weeks for an application of more than two million lines.",
@@ -399,8 +399,9 @@
     "Agents that write code quickly can also add technical debt quickly.",
     "An enterprise often decides on a target that some products have not reached yet.",
     "One example is a new authorization service that some products have not adopted.",
-    "When a change touches that area, the agent looks up the target, and the change moves the code toward it.",
-    "Technical debt is then paid down a piece at a time, inside the work that touches it."
+    "Until the change reaches the code, the target lives in the specifications, because the knowledge graph keeps strict parity with the code.",
+    "When a change touches that area, impact analysis shows everything in the current code that the change touches, and the specification can move that code toward the target.",
+    "Large-scale legacy modernization is the exception: there, the target has a graph of its own."
    ]
   },
   {

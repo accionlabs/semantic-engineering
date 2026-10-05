@@ -5,7 +5,7 @@
         <text x="-198.347px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:30px;fill:var(--se-text,#111111);">The Per-Change SDLC Flow</text>
     </g>
     <g transform="matrix(1,0,0,1,700,72)">
-        <text x="-420.363px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Six stages run left-to-right under structural validation. The Code Ontology stays current as a side effect of every merge.</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Six stages run left to right under structural validation. The Code Ontology is updated with every change, before it merges.</text>
     </g>
     <g transform="matrix(1,0,0,1,900,110)">
         <g transform="matrix(0.922727,0,0,1,64,6)">
@@ -167,7 +167,7 @@
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">(or autonomous)</text>
             </g>
             <g transform="matrix(1,0,0,1,14,108)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Stage 3: dev reviews</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Zone 3: dev reviews</text>
             </g>
             <g transform="matrix(1,0,0,1,14,126)">
                 <g transform="matrix(16,0,0,16,28.015625,0)">
@@ -177,7 +177,7 @@
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">+ reﬁnes.</text>
             </g>
             <g transform="matrix(1,0,0,1,14,144)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Stage 4: dev reviews</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Zone 4: dev reviews</text>
             </g>
             <g transform="matrix(1,0,0,1,14,162)">
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">agent&apos;s audit trail.</text>
@@ -210,7 +210,7 @@
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Agent</text>
             </g>
             <g transform="matrix(1,0,0,1,14,108)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Checks the merge</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Checks the pull request</text>
             </g>
             <g transform="matrix(1,0,0,1,14,126)">
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">against all four</text>
@@ -233,7 +233,7 @@
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Pass or fail.</text>
             </g>
             <g transform="matrix(1,0,0,1,14,232)">
-                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">A failing merge is</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:16px;fill:var(--se-accent,#E94E1B);">A failing pull request is</text>
             </g>
             <g transform="matrix(1,0,0,1,14,248)">
                 <g transform="matrix(16,0,0,16,103.117188,0)">
@@ -258,19 +258,19 @@
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-box-fill,#ffffff);">STAGE 6</text>
             </g>
             <g transform="matrix(1,0,0,1,14,64)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">Merge + KG Sync</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text,#111111);">KG Sync + Merge</text>
             </g>
             <g transform="matrix(1,0,0,1,14,92)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Merge lands.</text>
-            </g>
-            <g transform="matrix(1,0,0,1,14,110)">
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">KG Sync Agent</text>
             </g>
-            <g transform="matrix(1,0,0,1,14,128)">
+            <g transform="matrix(1,0,0,1,14,110)">
                 <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">updates the Code</text>
             </g>
+            <g transform="matrix(1,0,0,1,14,128)">
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology, then</text>
+            </g>
             <g transform="matrix(1,0,0,1,14,146)">
-                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Ontology.</text>
+                <text x="0px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">the merge lands.</text>
             </g>
             <path d="M14,172L186,172" style="fill:none;fill-rule:nonzero;stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
             <g transform="matrix(1,0,0,1,14,194)">
@@ -291,7 +291,7 @@
         <path d="M134.815,431.151L139,422L143.81,430.838L134.815,431.151Z" style="fill:var(--se-accent,#E94E1B);fill-rule:nonzero;"/>
         <path d="M1310,426C1309.667,482.333 1243.333,484.667 730,491C252.603,483.641 145.316,484.267 139.25,429.196" style="fill:none;fill-rule:nonzero;stroke:var(--se-accent,#E94E1B);stroke-width:2px;stroke-dasharray:5,3;"/>
         <g transform="matrix(1,0,0,1,704,516)">
-            <text x="-271.992px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">KG Sync loops back: the graph stays current as a side effect of every merge.</text>
+            <text x="0px" y="0px" style="text-anchor:middle;font-family:'Helvetica';font-size:16px;fill:var(--se-accent,#E94E1B);">KG Sync loops back: the graph is updated with every change, before it merges.</text>
         </g>
     </g>
     <g transform="matrix(1,0,0,1,693,575)">
@@ -299,7 +299,7 @@
         </g>
         <g transform="matrix(16,0,0,16,36.460938,0)">
         </g>
-        <text x="-407.305px" y="0px" style="font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Failing merges block until the underlying structural violation is ﬁxed. Implementation does not absorb structural risk.</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'Helvetica';font-size:16px;fill:var(--se-text-secondary,#4b5563);">Failing pull requests block until the underlying structural violation is ﬁxed. Implementation does not absorb structural risk.</text>
     </g>
     <defs>
         <image id="_Image2" width="172px" height="1px" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKwAAAABCAYAAABDs0XoAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAE0lEQVQokWN86SedxjAKRsEQAQCiaAG6t95mxQAAAABJRU5ErkJggg=="/>

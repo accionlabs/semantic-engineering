@@ -4,17 +4,17 @@
     <g transform="matrix(1,0,0,1,629,35)">
         <g transform="matrix(30,0,0,30,235.825195,0)">
         </g>
-        <text x="-227.49px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:30px;fill:var(--se-text,#111111);">End-to-End Flow: Spec → PR →</text>
+        <text x="171px" y="0px" style="text-anchor:middle;font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:30px;fill:var(--se-text,#111111);">End-to-End Flow: Spec → PR → Veriﬁcation → KG Sync → Merge</text>
     </g>
     <g transform="matrix(1,0,0,1,1030,35)">
         <g transform="matrix(30,0,0,30,-111.665039,0)">
         </g>
         <g transform="matrix(30,0,0,30,-101.674805,0)">
         </g>
-        <text x="-166.714px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:30px;fill:var(--se-text,#111111);">Veriﬁcation → KG Sync</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:30px;fill:var(--se-text,#111111);"></text>
     </g>
     <g transform="matrix(1,0,0,1,800,60)">
-        <text x="-353.828px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Operations are numbered. The Knowledge Graph (center) is read at steps 2 and 5, written at step 6.</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'ArialMT', 'Arial', sans-serif;font-size:16px;fill:var(--se-text-secondary,#4b5563);">Operations are numbered. The Knowledge Graph (center) is read at steps 2 and 5, and written at step 6, before the pull request merges.</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <circle cx="140" cy="180" r="22" style="fill:var(--se-accent,#E94E1B);"/>
@@ -87,7 +87,7 @@
         <text x="-42.396px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-text,#111111);">Pull Request</text>
     </g>
     <g transform="matrix(1,0,0,1,920,195)">
-        <text x="-43.1px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">merged to master</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">raised, not yet merged</text>
     </g>
     <g transform="matrix(1,0,0,1,919.95,216)">
         <text x="-44.211px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:10px;fill:var(--se-accent,#E94E1B);">GATE BOUNDARY</text>
@@ -130,7 +130,7 @@
         <text x="-36.69px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Code Ontology</text>
     </g>
     <g transform="matrix(1,0,0,1,1440,215)">
-        <text x="-29.358px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">auto-update</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">updated before merge</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <g transform="matrix(1,-0,-0,1,-0,71)">
@@ -175,7 +175,7 @@
         <text x="-70.206px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">THE CONTINUOUS ASSET</text>
     </g>
     <g transform="matrix(1,0,0,1,800,469)">
-        <text x="-214.309px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">read on the way in (step 2) · audited at the gate (step 5) · written on the way out (step 6)</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">read on the way in (step 2) · audited at the gate (step 5) · written before the merge (step 6)</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <g transform="matrix(1,-0,-0,1,-0,71)">
@@ -205,7 +205,7 @@
         <text x="0px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:11px;fill:var(--se-accent,#E94E1B);">6f · commit writeback</text>
     </g>
     <g transform="matrix(1,0,0,1,799.935,559)">
-        <text x="-184.939px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">STEP 6 · KG SYNC SUB-FLOW (runs after every PR merge)</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:13px;fill:var(--se-accent,#E94E1B);">STEP 6 · KG SYNC SUB-FLOW (runs on every pull request, before it merges)</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <path d="M250,670L250,718C250,723.519 245.519,728 240,728L60,728C54.481,728 50,723.519 50,718L50,670C50,664.481 54.481,660 60,660L240,660C245.519,660 250,664.481 250,670Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
@@ -338,10 +338,10 @@
         </g>
     </g>
     <g transform="matrix(1,0,0,1,800,709)">
-        <text x="-366.22px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">The Knowledge Graph anchors the loop: read at step 2 to inform development, audited at step 5 against the merge, written back at step 6.</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">The Knowledge Graph anchors the loop: read at step 2 to inform development, audited at step 5 against the pull request, written back at step 6, before the merge.</text>
     </g>
     <g transform="matrix(1,0,0,1,800,733)">
-        <text x="-278.496px" y="0px" style="font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Steps 1-4 produce the merge. Step 5 audits it. Step 6 keeps the graph current. The cycle repeats per PR.</text>
+        <text x="0px" y="0px" style="text-anchor:middle;font-family:'Arial-ItalicMT', 'Arial', sans-serif;font-style:italic;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Steps 1 to 4 produce the pull request. Step 5 audits it. Step 6 updates the graph, and the pull request merges with the code and the graph in step.</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-71)">
         <path d="M60,844L60,856C60,858.208 58.208,860 56,860L44,860C41.792,860 40,858.208 40,856L40,844C40,841.792 41.792,840 44,840L56,840C58.208,840 60,841.792 60,844Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>

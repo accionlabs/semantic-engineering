@@ -364,7 +364,9 @@ The metrics framework is what makes the knowledge graph a sustainable asset rath
 
 ### Paying Down Technical Debt
 
-Agents that write code quickly can also add technical debt quickly. The graph gives the team a way to reduce debt inside ordinary work. An enterprise often decides on a target that some products have not reached yet: for example, a new authorization service that some products have not adopted. When a change touches that area, the agent looks up the target, and the change can move the code toward it while the feature is being built. The graph records the code as it is, so the debt that remains stays visible to impact analysis. The debt is paid down a piece at a time, in the work that touches it.
+Agents that write code quickly can also add technical debt quickly. The graph helps the team reduce debt inside ordinary work. An enterprise often decides on a target that some products have not reached yet: for example, a new authorization service. Until the change reaches the code, that target lives in the specifications, because the graph keeps strict parity with the code as it is. When a change touches that area, impact analysis shows everything in the current code that the change touches, and the specification for the change can include moving that code toward the target. As the code changes, the graph is updated to record the new state before the change merges.
+
+Large-scale modernization is the exception. There the target has a graph of its own, the [Target-state ontology](../modernization/methodology.md#the-target-state-ontology-in-detail), built from the target blueprint and fixed for the length of the project. The debt is paid down a piece at a time, in the work that touches it.
 
 > **How Accion Labs operationalizes graph operation**
 >
