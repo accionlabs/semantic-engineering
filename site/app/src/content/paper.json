@@ -1,0 +1,900 @@
+{
+ "title": "SaaS architecture when code is cheap",
+ "subtitle": "SaaS architecture when writing the code is no longer the expensive part",
+ "status": "Draft. Derived from architecture consultations with a payroll SaaS provider, August and September 2026.",
+ "builtFrom": "dsl-saas-architecture.md",
+ "summary": {
+  "title": "Summary",
+  "blocks": [
+   {
+    "type": "html",
+    "html": "<p>Multi-tenant SaaS architecture rests on a premise that has held for decades: that the most expensive part of delivering software to many customers is writing the code. Every structural decision follows from it. Write once, share as many layers as possible, express customer difference as configuration, fall back to custom code only when configuration runs out. Because the resulting flexibility is fixed when the product is designed, requests outside it tend to be met under deadline with special cases in shared code, and technical debt accumulates.</p>\n<p>This paper takes as its working assumption that the premise no longer holds, and follows the consequences. The question that organises the argument is what the product&#39;s core value is, stated in terms of the needs of its domain. The answer decides what stays shared, what can move, and how the product can be priced. When producing code becomes cheap, the layer at which a product draws its line between shared and per-customer can move down. Pressure to move it is arriving from three directions at once. Customers want to start using the product without a long onboarding. They want changes to be easy after go-live. They want it personalised below the tenant, down to the individual user, and they increasingly expect their own agents to operate it.</p>\n<p>Moving that line is a deep architectural change, and depth is where the risk sits. This paper argues for a specific order of work. Greenfield products move the line from the bottom, because there is nothing to break. Existing products move it from the top, because the top two layers, customer onboarding and the user interface, can be rebuilt without touching the domain logic the revenue depends on.</p>\n<p>The mechanism for rebuilding those layers at useful speed is a second layer of governance above the product&#39;s knowledge graph, in the form of a formal grammar. The knowledge graph records what does not vary between customers, which makes it the right starting inventory, at a level above the detail that generating anything needs. A grammar adds the rules a schema cannot express, gives an agent a target with far fewer degrees of freedom than a general-purpose language, and reduces per-attribute human review by moving most checks into functional tests the agent can run itself. Section 9.1 sets out exactly what that does and does not guarantee.</p>\n"
+   }
+  ]
+ },
+ "sections": [
+  {
+   "n": 1,
+   "title": "The premise that has been withdrawn",
+   "slug": "1-premise",
+   "subsections": [
+    {
+     "id": "s1-1",
+     "number": "1.1",
+     "title": "Fixed flexibility and technical debt"
+    },
+    {
+     "id": "s1-2",
+     "number": "1.2",
+     "title": "What has changed, and three questions"
+    },
+    {
+     "id": "s1-3",
+     "number": "1.3",
+     "title": "The value proposition, in domain terms"
+    }
+   ],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>A SaaS product is a bet about where cost concentrates. The bet that shaped current architecture was made when engineers were the scarce resource and a line of code written once and sold a thousand times was the whole economic idea.</p>\n<p>That bet produced a consistent set of structural rules.</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Rule</th>\n<th>What it optimised for</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Write the code once</td>\n<td>Engineering cost amortised across the customer base</td>\n</tr>\n<tr>\n<td>Share every layer that can be shared</td>\n<td>Infrastructure, database and support cost</td>\n</tr>\n<tr>\n<td>Express customer difference as configuration</td>\n<td>Avoiding a code change per customer</td>\n</tr>\n<tr>\n<td>Write custom code only where configuration runs out</td>\n<td>Containing the long-term maintenance surface</td>\n</tr>\n</tbody></table>\n</div><p>Each rule is sound given the premise, and the standard descriptions of mature SaaS architecture state them directly. Microsoft&#39;s SaaS maturity model places the most mature products at a single instance serving every customer, &quot;with configurable metadata providing a unique user experience and feature set for each one&quot; (<a href=\"https://msdn.microsoft.com/en-us/library/aa479069.aspx\" target=\"_blank\" rel=\"noopener\">Architecture Strategies for Catching the Long Tail</a>, Chong and Carraro, Microsoft, 2006). Salesforce describes its platform in the same terms: a customer&#39;s customisation is stored as metadata, and the platform does not create a table or compile any code for it (<a href=\"https://developer.salesforce.com/ja/wiki/multi_tenant_architecture\" target=\"_blank\" rel=\"noopener\">The Salesforce Platform Multitenant Architecture</a>, Salesforce, 2016).</p>\n<p>Together the rules produce a product whose flexibility is fixed at design time, because the set of things configuration can vary, and the rules by which those things combine, are decided when the configuration mechanism is built.</p>\n<h3 id=\"s1-1\">1.1 Fixed flexibility and technical debt</h3><p>Fixed flexibility has a cost that accumulates. When a customer asks for something the configuration mechanism did not anticipate, the request usually arrives with a deadline attached, and the quickest way to meet it is a special case: a customer-specific branch, a conditional in shared code, a copied module. Generalising the mechanism so that the next customer&#39;s variant becomes a configuration change would take longer, and the urgency of the current request wins. Each such decision is technical debt in the standard sense: &quot;design or implementation constructs that are expedient in the short term, but set up a technical context that can make future changes more costly or impossible&quot; (<a href=\"https://doi.org/10.4230/DagRep.6.4.110\" target=\"_blank\" rel=\"noopener\">Managing Technical Debt in Software Engineering</a>, Dagstuhl Seminar 16162, 2016).</p>\n<p>The pattern is well documented. In the InsighTD family of industry surveys, 653 practitioners across six countries named time pressure or deadlines as the single most cited cause of technical debt (<a href=\"https://doi.org/10.1016/j.jss.2021.111114\" target=\"_blank\" rel=\"noopener\">Ramač et al., Journal of Systems and Software, 2022</a>). The closest direct evidence for the customer-driven case comes from software product lines, where each customer variant plays the role a tenant-specific extension plays in SaaS. A study of cloning across six industrial product lines recorded the mechanism in a practitioner&#39;s own words: &quot;When a new customer came, we needed to decide how to implement his requirements in the fastest way. We do not have time to think thoroughly about generic approaches&quot; (<a href=\"https://gsd.uwaterloo.ca/sites/default/files/2013-csmr-cloning.pdf\" target=\"_blank\" rel=\"noopener\">Dubinsky et al., CSMR 2013</a>). A later field study of opportunistic reuse found time pressure to be the main reason teams did not consider alternatives to copying (<a href=\"https://doi.org/10.1016/j.jss.2024.111969\" target=\"_blank\" rel=\"noopener\">Wolfart et al., Journal of Systems and Software, 2024</a>).</p>\n<p>The debt compounds because it sits in the shared layers. Developers in a longitudinal study reported losing on average 23% of their working time to technical debt, and being frequently forced to introduce more of it (<a href=\"https://doi.org/10.1016/j.jss.2019.06.004\" target=\"_blank\" rel=\"noopener\">Besker, Martini and Bosch, Journal of Systems and Software, 2019</a>). In a multi-tenant product every special case added for one customer is carried by all of them, which is how a change made for one customer can surface as a defect for another.</p>\n<h3 id=\"s1-2\">1.2 What has changed, and three questions</h3><p>The first generation of SaaS sold the removal of installation. Software arrived on tap rather than on a disc, and Salesforce&#39;s launch event was themed around &quot;The End of Software&quot; (<a href=\"https://www.salesforce.com/news/stories/the-history-of-salesforce/\" target=\"_blank\" rel=\"noopener\">The History of Salesforce</a>, Salesforce, 2020). That value proposition eroded as running software in the cloud became cheap, so the proposition moved upward into configuration, integration and platforms. Salesforce itself followed with AppExchange as an integration marketplace and Force.com as a development platform (<a href=\"https://mitsloan.mit.edu/shared/ods/documents?PublicationDocumentID=5975\" target=\"_blank\" rel=\"noopener\">Cloud Computing and SaaS as New Computing Platforms</a>, Cusumano, Communications of the ACM, 2010). The architecture underneath did not move with it. What runs at most B2B SaaS companies today is a delivery model designed around expensive code, carrying a value proposition that has been revised several times.</p>\n<p>The evidence on how far the cost of producing code has actually fallen is mixed, which is why this paper treats the premise&#39;s withdrawal as a working assumption. Field experiments covering 4,867 developers at three companies found a 26% increase in completed tasks with an AI coding assistant (<a href=\"https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535\" target=\"_blank\" rel=\"noopener\">Cui et al., Management Science, 2026</a>). A randomised trial with experienced open-source developers found tasks taking 19% longer with AI tools (<a href=\"https://arxiv.org/abs/2507.09089\" target=\"_blank\" rel=\"noopener\">METR, 2025</a>), and METR&#39;s 2026 follow-up describes its own updated estimate as weak evidence (<a href=\"https://metr.org/blog/2026-02-24-uplift-update/\" target=\"_blank\" rel=\"noopener\">METR, 2026</a>).</p>\n<p>Vendors now report coding agents completing whole applications with little intervention. Anthropic describes 16 parallel agents producing a 100,000-line C compiler that builds Linux 6.9, over nearly 2,000 sessions, with people designing the tests and the environment (<a href=\"https://www.anthropic.com/engineering/building-c-compiler\" target=\"_blank\" rel=\"noopener\">Building a C compiler with a team of parallel Claudes</a>, Anthropic, February 2026). OpenAI describes Codex building a design tool from a blank repository over about 25 hours and 30,000 lines, which its author calls an experiment rather than a production rollout (<a href=\"https://developers.openai.com/blog/run-long-horizon-tasks-with-codex\" target=\"_blank\" rel=\"noopener\">Run long horizon tasks with Codex</a>, OpenAI). These are vendor accounts of single projects rather than controlled measurements.</p>\n<p>With the premise withdrawn, three questions follow.</p>\n<ol>\n<li>Is the existing architecture worth continuing to maintain as it stands?</li>\n<li>If a different architecture is coming, what distinguishes it from this one?</li>\n<li>What is the product&#39;s core value proposition, stated in terms of the needs of the domain it serves?</li>\n</ol>\n<p>Competitors will not wait, so the answer to the first is no. The second is the subject of this paper, and answering it depends on the third.</p>\n<h3 id=\"s1-3\">1.3 The value proposition, in domain terms</h3><p>Under the old premise the value proposition could be stated in terms of delivery: the software is written, hosted, maintained and upgraded on the customer&#39;s behalf. Each revision since has stayed at that level, adding configuration, integration and APIs to what is delivered. None of these explains why a customer in a particular domain buys this product over another, and as producing code gets cheaper they converge across vendors. McKinsey&#39;s analysis of generative AI in software makes the same point: faster development &quot;will mean competitors and upstarts can rapidly replicate offerings at a lower cost&quot; (<a href=\"https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/navigating-the-generative-ai-disruption-in-software\" target=\"_blank\" rel=\"noopener\">Navigating the generative AI disruption in software</a>, McKinsey, 2024).</p>\n<p>What stays distinctive is the product&#39;s encoded understanding of its domain. For a payroll product that is the knowledge of how pay is calculated across statutes, company policies and employee life events, and of how those rules change over time. For a dealer-management ERP it is how parts, warehouses, inventory and service relate for an equipment dealer. That domain capability is the product&#39;s strongest asset. It is where correctness is decided, and it is what the revenue depends on the product getting right. Bain&#39;s 2025 assessment of agentic AI and SaaS points the same way, naming proprietary data, domain-specific content and deep domain knowledge among the defences that hold (<a href=\"https://www.bain.com/insights/will-agentic-ai-disrupt-saas-technology-report-2025/\" target=\"_blank\" rel=\"noopener\">Will Agentic AI Disrupt SaaS?</a>, Bain, 2025).</p>\n<p>Stating the value proposition this way supplies the answers the rest of the paper depends on.</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Question the paper returns to</th>\n<th>How the domain value proposition answers it</th>\n<th>Where</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Which parts of the product every customer should share</td>\n<td>The domain capability, because it is the asset and every customer depends on it being correct</td>\n<td>Section 2</td>\n</tr>\n<tr>\n<td>How a customer&#39;s variation should be accommodated without accumulating technical debt</td>\n<td>As a composition of the shared domain capability, described for that customer and checked against the domain&#39;s rules, so that a new variant adds to that customer&#39;s own description and leaves the shared code unchanged. A need the shared capability cannot yet express is met locally for that customer, and generalised into the shared capability once its wider applicability is understood</td>\n<td>Sections 2, 10 and 15</td>\n</tr>\n<tr>\n<td>How the product should be priced</td>\n<td>By the domain capabilities each customer&#39;s implementation actually uses, plus the work of assembling them for that customer, in place of a common bundle priced by a measure of overall use</td>\n<td>Section 4</td>\n</tr>\n<tr>\n<td>What the product should offer to whoever operates it, whether a person or software acting on their behalf</td>\n<td>What the domain can be asked to do, rather than the screens that currently front it</td>\n<td>Section 3</td>\n</tr>\n<tr>\n<td>What the product&#39;s own record of its capabilities should hold</td>\n<td>The domain capability, which is exactly what does not vary between customers</td>\n<td>Section 8</td>\n</tr>\n<tr>\n<td>How a customer&#39;s requirement should be stated so it can be checked before it takes effect</td>\n<td>In the domain&#39;s own vocabulary and rules, at the level a domain expert states it</td>\n<td>Sections 9 and 15</td>\n</tr>\n</tbody></table>\n</div><p>Everything above the domain capability, meaning the screens, the setup process and the per-customer mapping, is how that value is delivered to a particular customer. Those are the parts whose cost has fallen, and the parts that can reasonably vary from one customer to the next.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "title": "Multi-tenancy as a line through a stack",
+   "slug": "2-multi-tenancy-line",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>It helps to treat multi-tenancy as a line drawn through a stack of layers rather than as a property of a product. Everything above the line varies per customer. Everything below is shared. Vendor guidance already describes tenancy per layer: AWS notes that many systems run some components siloed per tenant and others pooled (<a href=\"https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/silo-pool-and-bridge-models.html\" target=\"_blank\" rel=\"noopener\">Silo, Pool, and Bridge Models</a>, AWS Well-Architected SaaS Lens), and Microsoft describes horizontal deployments that share some tiers and dedicate others to each tenant (<a href=\"https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/considerations/tenancy-models\" target=\"_blank\" rel=\"noopener\">Tenancy models for a multitenant solution</a>, Azure Architecture Center, 2025).</p>\n"
+    },
+    {
+     "type": "diagram",
+     "id": "d1",
+     "source": "flowchart TD\n    subgraph above[\"Per customer\"]\n        A[\"Onboarding and configuration values\"]\n    end\n    subgraph below[\"Shared across tenants\"]\n        B[\"User experience\"]\n        C[\"Business rules and APIs\"]\n        D[\"Data model\"]\n        E[\"Database\"]\n        F[\"Infrastructure and deployment\"]\n    end\n    A --> B --> C --> D --> E --> F"
+    },
+    {
+     "type": "html",
+     "html": "<p><em>Conventional placement.</em> Practice pushes the line as high as it will go. The higher it sits, the more layers are shared, and the more of the original economy of scale is captured. The user interface is the same for every customer, and configuration is the mechanism that lets a shared stack behave differently for different customers without any shared layer being rewritten. Current guidance is explicit about keeping per-tenant variation out of the shared layers, advising against deploying &quot;features or a configuration that only applies to a single tenant&quot; (<a href=\"https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/deployment-configuration\" target=\"_blank\" rel=\"noopener\">Architectural approaches for the deployment and configuration of multitenant solutions</a>, Azure Architecture Center).</p>\n<p>Two layers in the middle of the stack behave differently and are worth separating. The business rules say how each customer&#39;s policies, approvals and workflows apply the product&#39;s capabilities, and they vary from customer to customer. Beneath them sit the domain primitives: the entities, calculations and relationships every customer relies on. They change far less. Two payroll customers can have different overtime policies while sharing the same definition of a pay element. The product exposes these primitives through its APIs, which often cover a large part of the domain, though not always at the granularity a domain language needs.</p>\n<p>Two consequences follow.</p>\n<p>The first is that onboarding becomes the product&#39;s real surface. A customer cannot use the system until someone has mapped their requirements onto the available configuration. That mapping is where the domain knowledge concentrates, and it is usually the least formalised part of the whole operation. It also recurs for the life of the account. Requirements change, laws change, organisational structures change, and policies change, so the mapping has to be revisited each time.</p>\n<p>The second is that anything the configuration mechanism did not anticipate becomes an engineering task. The product&#39;s flexibility has a boundary, drawn years earlier by someone estimating how much variation there would ever be, and crossing it requires work on layers that other customers are also running on. Section 1.1 describes what that work tends to leave behind when it is done under deadline.</p>\n<p>Products do offer ways to stretch that boundary. Mature products let customers adjust business rules through configurable workflows. Salesforce describes most common automation scenarios as buildable in its flows (<a href=\"https://trailhead.salesforce.com/content/learn/modules/flow-basics/go-with-the-flow-th\" target=\"_blank\" rel=\"noopener\">Flow Basics</a>, Salesforce Trailhead), and Workday describes more than 850 preconfigured business processes that customers can change without IT support (<a href=\"https://www.workday.com/content/dam/web/en-us/documents/datasheets/workday-business-process-framework.pdf\" target=\"_blank\" rel=\"noopener\">The Workday business process framework</a>, Workday datasheet). Where a customer needs data the model did not include, platforms offer custom fields and objects stored as metadata, so the shared schema itself does not change: the platform &quot;does not create an actual table&quot; (<a href=\"https://architect.salesforce.com/docs/architect/fundamentals/guide/platform-multitenant-architecture.html\" target=\"_blank\" rel=\"noopener\">Platform Multitenant Architecture</a>, Salesforce Architects), a technique studied as mapping tenant extensions onto shared tables (<a href=\"https://db.in.tum.de/research/publications/conferences/sigmod2008-mtd.pdf\" target=\"_blank\" rel=\"noopener\">Aulbach et al., SIGMOD 2008</a>). In our experience these extensions often hold information at the edge of the domain rather than at its core.</p>\n<p>Customisation itself is close to universal. In Panorama Consulting&#39;s 2015 survey of 562 organisations implementing ERP, only 7% of organisations customised nothing, while 12% reported extreme or complete customisation (<a href=\"https://www.panorama-consulting.com/wp-content/uploads/2016/07/2015-ERP-Report-3.pdf\" target=\"_blank\" rel=\"noopener\">2015 ERP Report</a>, Panorama Consulting). The survey covers ERP in general rather than SaaS, and does not say which layer each change reached. It is consistent with, though not evidence for, most variation sitting in the upper layers. In a multi-tenant product, the deeper a change reaches, the more customers it puts at risk.</p>\n<p>Lowering the line addresses both. The illustration below shows one plausible placement once it has moved.</p>\n"
+    },
+    {
+     "type": "diagram",
+     "id": "d2",
+     "source": "flowchart TD\n    subgraph above2[\"Per customer, and per user where needed\"]\n        A2[\"Onboarding\"]\n        B2[\"User experience\"]\n        C2[\"Domain document: how this customer's rules compose the primitives\"]\n    end\n    subgraph below2[\"Shared across tenants\"]\n        D2[\"Language compiler or interpreter over the product's primitives\"]\n        E2[\"Data platform\"]\n        F2[\"Infrastructure and deployment\"]\n    end\n    A2 --> B2 --> C2 --> D2 --> E2 --> F2"
+    },
+    {
+     "type": "html",
+     "html": "<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Layer</th>\n<th>Conventional placement</th>\n<th>After the line moves</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Onboarding</td>\n<td>Per customer, as configuration values</td>\n<td>Per customer, as a validated document</td>\n</tr>\n<tr>\n<td>User experience</td>\n<td>Shared</td>\n<td>Per customer, generated or composed per tenant and per user</td>\n</tr>\n<tr>\n<td>Business rules</td>\n<td>Shared code, switched by configuration</td>\n<td>Shared primitives, composed per customer in a domain document</td>\n</tr>\n<tr>\n<td>Execution and data</td>\n<td>Shared</td>\n<td>Shared</td>\n</tr>\n<tr>\n<td>Infrastructure</td>\n<td>Shared</td>\n<td>Shared</td>\n</tr>\n</tbody></table>\n</div><p>The placement follows from section 1.3. What stays shared is the domain capability and the platform that executes it. What moves above the line is how that capability is presented and mapped for each customer.</p>\n<p>It also answers the customisation question in section 1.3. A customer&#39;s variation lives in that customer&#39;s own domain document, composed from shared primitives and validated against the domain&#39;s rules. Meeting a new request then means adding to one customer&#39;s document, or, where the language cannot yet express it, attaching a plugin scoped to that customer until the need is understood well enough to become part of the language (section 15). Either way the shared layers stay untouched, which removes the mechanism by which section 1.1&#39;s special cases accumulate.</p>\n<p>Lowering the line gives up some of the sharing that justified the original design. That is affordable only once producing the per-customer part has become cheap, which is the condition that has changed.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "title": "What the customer will ask for",
+   "slug": "3-customer-asks",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>Three requirements are arriving together, and a high line makes all three hard.</p>\n<p><strong>Immediate use.</strong> A customer expects to start using software without a project. Long onboarding is tolerated in enterprise B2B because there has been no alternative. Enterprise implementation is still measured in months: the 2026 ERP Report found a median project timeline of nine months, with almost a quarter of organisations over schedule (<a href=\"https://4439340.fs1.hubspotusercontent-na1.net/hubfs/4439340/Reports/ERP%20Report/2026-erp-report-panorama-consulting-group.pdf\" target=\"_blank\" rel=\"noopener\">The 2026 ERP Report</a>, Panorama Consulting Group). In Gartner&#39;s 2023 software buying survey of 3,484 buyers, slow or complex implementation was the second most cited reason for regretting a purchase, at 32% (<a href=\"https://www.techrepublic.com/article/gartner-global-software-trends/\" target=\"_blank\" rel=\"noopener\">TechRepublic reporting Gartner Digital Markets</a>, 2023).</p>\n<p><strong>Easy change.</strong> After go-live, a change to how the product behaves for one customer should be a small, contained action. Where the line is high, such a change is either a configuration value the mechanism happens to expose, or an engineering change to a shared layer. There is no middle option.</p>\n<p><strong>Personalisation below the tenant.</strong> Configuration granularity currently stops at the tenant, and the demand is moving to the individual user. Gartner predicts that by 2028 more than 20% of digital workplace applications will use AI-driven personalisation to adapt to the individual worker, and reports that only 23% of digital workers were completely satisfied with their work applications in 2024 (<a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-03-12-gartner-predicts-over-20-percent-of-workplace-apps-will-use-ai-driven-personalization-algorithms-for-adaptive-worker-experiences-by-2028\" target=\"_blank\" rel=\"noopener\">Gartner, March 2025</a>). This is an architectural change, and what drives it is agents.</p>\n<p>Software is acquiring the expectation that it can be operated by the user&#39;s own agent. Gartner predicts that 33% of enterprise software applications will include agentic AI by 2028, up from less than 1% in 2024, while also predicting that over 40% of agentic AI projects will be cancelled by the end of 2027 (<a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027\" target=\"_blank\" rel=\"noopener\">Gartner, June 2025</a>). It also predicts that by 2028 a third of user experiences will shift from native applications to agentic front ends (<a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025\" target=\"_blank\" rel=\"noopener\">Gartner, August 2025</a>). Once the expectation settles, a B2B buyer asks whether your product can be driven by their agent, and treats a product that requires a person to click through menus as a product with an integration gap. The timing is uncertain while the direction is settled, and a company with no answer prepared will be answering it under pressure.</p>\n<p>Many platforms already offer APIs, which let a program bypass the screens: operations go through the same service the application itself uses (<a href=\"https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview\" target=\"_blank\" rel=\"noopener\">Use the Microsoft Dataverse Web API</a>, Microsoft Learn, 2026). An API exposes operations, though, and an agent using it still has to learn elsewhere which combinations of them are valid.</p>\n<p>Agent addressability reaches below the surface, which is what ties it back to the line. An agent needs to know what the product can be asked to do, in terms the domain uses, with the rules that govern valid combinations. That is the same artefact a lower multi-tenancy line requires: a formal description of the product&#39;s domain capability, the value proposition of section 1.3, in place of a set of forms and a configuration schema.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "title": "Pricing what the customer assembles",
+   "slug": "4-pricing",
+   "subsections": [
+    {
+     "id": "s4-1",
+     "number": "4.1",
+     "title": "A bill of materials for software"
+    },
+    {
+     "id": "s4-2",
+     "number": "4.2",
+     "title": "Material and assembly"
+    },
+    {
+     "id": "s4-3",
+     "number": "4.3",
+     "title": "Where the value sits"
+    },
+    {
+     "id": "s4-4",
+     "number": "4.4",
+     "title": "Outcome-based pricing"
+    },
+    {
+     "id": "s4-5",
+     "number": "4.5",
+     "title": "Pricing a plugin"
+    }
+   ],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>Seat and tier pricing has long been the dominant SaaS model. A customer buys a tier, the tier bundles a common set of capabilities, and the price is set by some measure of use of the application as a whole: per user, per agent, per tenant. A customer support product sold per agent per month in escalating suites is a typical example (<a href=\"https://www.zendesk.com/pricing/\" target=\"_blank\" rel=\"noopener\">Zendesk pricing</a>, accessed September 2026). The price follows the tier, whether or not this customer needs everything in it.</p>\n<p>Customers pay for a good deal they do not use. Pendo&#39;s analysis of feature usage across 615 of its own customers&#39; products found that 80% of features in the average software product are rarely or never used (<a href=\"https://www.pendo.io/resources/the-2019-feature-adoption-report/\" target=\"_blank\" rel=\"noopener\">The 2019 Feature Adoption Report</a>, Pendo). At the level of whole licences, Zylo&#39;s 2026 index reports that organisations leave an average of 36% of their SaaS licences unused (<a href=\"https://zylo.com/news/2026-saas-management-index\" target=\"_blank\" rel=\"noopener\">2026 SaaS Management Index</a>, Zylo, January 2026).</p>\n<p>The market is already moving away from the seat. In a 2025 survey of more than 240 B2B software companies, the share whose primary model was seat-based fell from 21% to 15% in a year, while hybrid pricing rose from 27% to 41%. Only 5% priced primarily on outcomes, and 25% expected to by 2028 (<a href=\"https://www.growthunhinged.com/p/2025-state-of-b2b-monetization\" target=\"_blank\" rel=\"noopener\">The State of B2B Monetization in 2025</a>, Poyar, June 2025). Agents accelerate the move. Bain puts it directly: &quot;Seat-based pricing may not fit when AI is doing the work&quot; (<a href=\"https://www.bain.com/insights/will-agentic-ai-disrupt-saas-technology-report-2025/\" target=\"_blank\" rel=\"noopener\">Will Agentic AI Disrupt SaaS?</a>, Bain, 2025). Gartner estimates up to $234 billion of enterprise application spending exposed to agents completing work across systems by 2030, and notes that this &quot;breaks the link between user growth and revenue growth for many enterprise software vendors&quot; (<a href=\"https://www.gartner.com/en/newsroom/press-releases/2026-07-01-gartner-says-us-dollars-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-artificial-intelligence\" target=\"_blank\" rel=\"noopener\">Gartner, July 2026</a>).</p>\n<h3 id=\"s4-1\">4.1 A bill of materials for software</h3><p>Section 2 describes a product in which each customer&#39;s implementation is a document composed from shared domain primitives. That document is, in effect, a bill of materials: a list of the capabilities this customer&#39;s implementation uses and how they are put together. It makes a different pricing model available, closer to how modular physical products are priced.</p>\n<p>Manufacturing builds product cost from two parts. The bill of materials lists every component and raw material that goes into an assembly, and standard costing calculates the cost of a manufactured item from it (<a href=\"https://learn.microsoft.com/en-us/dynamics365/supply-chain/cost-management/information-used-bom-calculations-standard-costs\" target=\"_blank\" rel=\"noopener\">Information used in BOM calculations with standard costs</a>, Microsoft, 2025). Conversion cost, the direct labour and overhead of turning materials into a product, is added on top (<a href=\"https://courses.lumenlearning.com/wm-accountingformanagers/chapter/dm-dl-moh/\" target=\"_blank\" rel=\"noopener\">Accounting for Managers</a>, Lumen Learning). Modular products extend this to variety: with a modular architecture each function maps to a component with a de-coupled interface, so product variety comes from combining components (<a href=\"https://doi.org/10.1016/0048-7333(94)00775-3\" target=\"_blank\" rel=\"noopener\">Ulrich, Research Policy, 1995</a>). In configure-to-order selling, the customer chooses a base model and selects options, and the price is calculated from the configuration itself rather than looked up on a price sheet (<a href=\"https://docs.oracle.com/cd/A60725_05/html/comnls/us/cz/gls.htm\" target=\"_blank\" rel=\"noopener\">Configurator glossary</a>, Oracle; <a href=\"https://www.netsuite.com/portal/resource/articles/erp/configure-price-quote-cpq.shtml\" target=\"_blank\" rel=\"noopener\">What Is CPQ?</a>, Oracle NetSuite, 2025).</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Manufacturing</th>\n<th>A product composed from domain primitives</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Bill of materials</td>\n<td>The capability SKUs a customer&#39;s domain document uses</td>\n</tr>\n<tr>\n<td>Material cost</td>\n<td>A price per capability SKU, charged for what the document uses, regardless of how the SKUs are assembled</td>\n</tr>\n<tr>\n<td>Conversion cost: labour and overhead</td>\n<td>The cost of assembling the customer&#39;s implementation: mapping requirements, composing and validating the document, and later change requests</td>\n</tr>\n<tr>\n<td>Configure-to-order price, computed from the configuration</td>\n<td>A price computed from the document by the same compiler that validates it</td>\n</tr>\n<tr>\n<td>Parts made to order for one customer</td>\n<td>Customer-scoped plugins (section 15)</td>\n</tr>\n</tbody></table>\n</div>"
+    },
+    {
+     "type": "diagram",
+     "id": "d3",
+     "source": "flowchart LR\n    A[\"Customer's domain document\"] --> B[\"Capability SKUs used<br/>(material)\"]\n    A --> C[\"Assembly work<br/>(conversion)\"]\n    A --> D[\"Customer-scoped plugins<br/>(made to order)\"]\n    B --> E[\"Price\"]\n    C --> E\n    D --> E"
+    },
+    {
+     "type": "html",
+     "html": "<p>Three things follow. A customer pays for the capabilities its implementation uses, which addresses the unused-feature problem directly. The assembly work that onboarding and configuration currently bury inside a tier becomes a visible, priced service. And because the price is computed from the same document the compiler validates, the quote and the implementation cannot drift apart.</p>\n<h3 id=\"s4-2\">4.2 Material and assembly</h3><p>The assembly cost has fallen, which is the premise of this paper, and it has not fallen to zero. Someone still maps a customer&#39;s requirements onto the domain, reviews what an agent composes, runs the case corpus and handles change requests. Pricing that work separately makes its cost legible to both sides. It also changes how the work scales: under a tier, a customer with complex requirements and a customer with simple ones pay the same and cost very different amounts to serve, whereas under material-plus-assembly each pays for what its own implementation took.</p>\n<h3 id=\"s4-3\">4.3 Where the value sits</h3><p>Pricing components alone carries a risk that physical products have long had to manage. What the customer values is what the assembled whole does, and a component price can under-price that. Value-based pricing sets price by &quot;the value a product or service delivers to a predefined segment of customers&quot;, and Hinterhuber&#39;s review of pricing research finds that cost-based pricing &quot;leads to lower-than-average profitability&quot; (<a href=\"https://lp-website.s3.amazonaws.com/pdfs/Customer_value_based_pricing_strategies.pdf\" target=\"_blank\" rel=\"noopener\">Hinterhuber, Journal of Business Strategy, 2008</a>). Bundling theory adds that a well-designed bundle can capture value that separately priced components leave on the table (<a href=\"https://pages.stern.nyu.edu/~bakos/big/big.html\" target=\"_blank\" rel=\"noopener\">Bakos and Brynjolfsson, Bundling Information Goods, 1996</a>).</p>\n<p>Physical products handle this with packages alongside components. Vehicles are sold as trim levels and option packages as well as individual options, partly because, as one industry analyst put it, &quot;If you allowed everything to be a separate option, the possible configurations of a vehicle would explode exponentially&quot; (<a href=\"https://www.consumerreports.org/buying-a-car/sticker-shock-navigating-car-trim-levels/\" target=\"_blank\" rel=\"noopener\">Sticker Shock: Navigating Car Trim Levels</a>, Consumer Reports, 2018). The same applies here. A capability catalogue can carry composite SKUs, pre-assembled for common domain scenarios and priced on the value of the scenario, next to the component SKUs they are built from. Because both are expressed in the same language, a composite SKU is itself a document, and the compiler can price and validate it in the same way.</p>\n<h3 id=\"s4-4\">4.4 Outcome-based pricing</h3><p>For AI agents the market is moving toward pricing by outcome. Intercom charges $0.99 per outcome for its Fin agent, on top of a base plan (<a href=\"https://fin.ai/help/en/articles/13975800-fin-pricing-outcomes\" target=\"_blank\" rel=\"noopener\">Fin pricing: Outcomes</a>, Intercom). Salesforce launched Agentforce at $2 per conversation (<a href=\"https://www.salesforce.com/news/press-releases/2024/09/12/agentforce-announcement/\" target=\"_blank\" rel=\"noopener\">Salesforce Unveils Agentforce</a>, September 2024) and added per-action pricing at $0.10 per action in 2025 (<a href=\"https://www.salesforce.com/news/press-releases/2025/05/15/agentforce-flexible-pricing-news/\" target=\"_blank\" rel=\"noopener\">Salesforce, May 2025</a>). Zendesk announced pricing that charges only for issues its AI agents resolve autonomously (<a href=\"https://www.zendesk.com/newsroom/articles/zendesk-outcome-based-pricing/\" target=\"_blank\" rel=\"noopener\">Zendesk, August 2024</a>).</p>\n<p>Outcome pricing and capability pricing measure different things and combine well. Capability SKUs price what a customer has assembled and made available. Outcome or usage metering prices what that assembly then does, for the capabilities where the work performed varies. The domain document helps with both, because it records which capability is in play when an outcome is produced, which gives a basis for deciding which outcomes are metered and how they are attributed.</p>\n<h3 id=\"s4-5\">4.5 Pricing a plugin</h3><p>A customer-scoped plugin (section 15) is the equivalent of a part made to order: built for one customer, maintained for one customer, and costed accordingly. That customer pays for its build and upkeep, as an assembly-heavy line on its bill of materials. When the need recurs and the plugin is generalised into a shared primitive, it becomes a catalogue SKU available to every customer at catalogue price. The customer carrying a plugin therefore has a reason to want it generalised, and the vendor has a pricing signal telling it which plugins to promote first.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "title": "Two directions of travel",
+   "slug": "5-two-directions",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>Risk in a layered stack increases with depth. A change to the top layer is visible, comparable against the previous version, and reversible. A change to the data model or the deployment pipeline is none of those things, and every existing customer is standing on it. The same reasoning underlies the strangler fig pattern, which grows a new system around the edges of an old one and gives reduced risk as the most important reason to prefer it over a rewrite (<a href=\"https://martinfowler.com/bliki/OriginalStranglerFigApplication.html\" target=\"_blank\" rel=\"noopener\">Original Strangler Fig Application</a>, Fowler, 2004; <a href=\"https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig\" target=\"_blank\" rel=\"noopener\">Strangler Fig pattern</a>, Azure Architecture Center, 2026).</p>\n<p>This gives two different programmes depending on what already exists. A new product is called greenfield here, and an existing product with customers on it brownfield.</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th></th>\n<th>Greenfield product</th>\n<th>Existing product</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Where the line starts moving</td>\n<td>Bottom</td>\n<td>Top</td>\n</tr>\n<tr>\n<td>Why</td>\n<td>Nothing is running yet, so the deepest decisions are the cheapest to make correctly</td>\n<td>Revenue depends on the lower layers, so they go last or not at all</td>\n</tr>\n<tr>\n<td>First work</td>\n<td>Execution layer and data model designed to be driven by a document</td>\n<td>Customer onboarding, then the user interface</td>\n</tr>\n</tbody></table>\n</div>"
+    },
+    {
+     "type": "diagram",
+     "id": "d4",
+     "source": "flowchart LR\n    subgraph bf[\"Existing product: work downward\"]\n        direction TB\n        B1[\"Step 1: Onboarding and configuration\"] --> B2[\"Step 2: User experience\"] --> B3[\"Step 3: Business rules, later or never\"]\n    end\n    subgraph gf[\"Greenfield: work upward\"]\n        direction BT\n        G1[\"Step 1: Execution layer and data model\"] --> G2[\"Step 2: Capability grammar\"] --> G3[\"Step 3: Generated surface\"]\n    end"
+    },
+    {
+     "type": "html",
+     "html": "<p>The greenfield case is covered in section 7.6 of <span class=\"unpublished\">The Domain-Specific Language as a Software Interface</span>. The rest of this paper concerns existing products, which is where most of the installed base and most of the revenue sit.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 6,
+   "title": "Onboarding first",
+   "slug": "6-onboarding-first",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>Onboarding is the easier of the two top layers, because the product does not change at all. The user interface stays as it is, the business rules stay as they are, and the work is confined to how a customer&#39;s stated requirements become a valid configuration.</p>\n<p>Today that translation is performed by people reading documents and filling in a spreadsheet or a sequence of setup screens. The spreadsheet has columns, naming conventions and implicit rules, which makes it a language already. What it lacks is anything that checks the result. The person filling it in has no way to know whether what they wrote produces the behaviour the customer described, and the error surfaces downstream, often after go-live.</p>\n<p>Onboarding is a sequence of steps. Vendor implementation methods describe gathering requirements, mapping them to features and configuration, building and extending, testing, migrating data, and training people before go-live (<a href=\"https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/success-by-design\" target=\"_blank\" rel=\"noopener\">Success by Design</a>, Microsoft, 2026; <a href=\"https://www.panorama-consulting.com/erp-implementation-success-factors/\" target=\"_blank\" rel=\"noopener\">ERP implementation in six phases</a>, Panorama Consulting, 2019). Each step works from its own artefacts, such as spreadsheets, setup screens, configuration files, migration scripts and training material, and each depends on the same understanding of the domain.</p>\n<p>Replacing that with a validated language leaves the product untouched and changes the economics of the process that gates every sale.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 7,
+   "title": "Horizontal and vertical modernisation",
+   "slug": "7-modernisation",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>The user interface is the second layer to move. It is safe to work on for a structural reason: the interface depends on the layer beneath it, and nothing beneath depends on the interface. So it can be replaced wholesale while the business rules stay fixed, and each result can be compared against the version it replaces. This is the standard modernisation argument. The part that has changed is the achievable rate.</p>\n<p>A large platform has hundreds or thousands of screens. The conventional programme treats each one as a unit of work: a UX team produces wireframes, a coding agent implements against them, a reviewer checks the result, and the programme advances one screen at a time. Adding agents to that pipeline makes each unit faster and leaves the shape unchanged. Progress stays linear in the number of screens.</p>\n"
+    },
+    {
+     "type": "diagram",
+     "id": "d5",
+     "source": "flowchart TD\n    subgraph h[\"Horizontal: cost linear in screen count\"]\n        H1[\"Screen 1: wireframe, build, review\"] --> H2[\"Screen 2: wireframe, build, review\"] --> H3[\"Screen n\"]\n    end\n    subgraph v[\"Vertical: fixed cost, then falling cost per screen\"]\n        V1[\"Define the grammar of what a screen can be\"] --> V2[\"Agent authors every screen in that grammar\"] --> V3[\"Compiler emits the implementation\"]\n    end"
+    },
+    {
+     "type": "html",
+     "html": "<p>The vertical route asks what would have to be true for the whole surface to be modernised in one pass, rather than how quickly one screen can be done. The answer is that the agent needs a target narrow enough that a malformed screen is rejected before it reaches the product, and a check it can run without a human looking at the output.</p>\n<p>The economics change shape. There is a fixed cost to define the grammar and write the compiler, then a marginal cost per screen that falls as the corpus of converted screens grows, because each new screen is written against a language with working examples in it. The first handful need close supervision to confirm the grammar covers what the screens actually do. After that the constraint moves from review capacity to grammar coverage.</p>\n<p>In an existing product the compiler emits source code at build time, which is then reviewed and deployed through the normal pipeline. Generating the interface at run time from the document is a different proposition and needs a platform that accepts a desired-state description, which section 13.1 returns to.</p>\n<p>This is a claim about a rate rather than about a guarantee, and the supporting evidence is specific. Microsoft&#39;s engineering guidance reports coding agents on bespoke domain languages often starting below 20% accuracy, with confabulated APIs, and reaching up to 85% once four things are in place: curated seed examples, explicit domain rules, compiler-in-the-loop validation, and schema exposure (<a href=\"https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/\" target=\"_blank\" rel=\"noopener\">AI Coding Agents and DSLs</a>, Microsoft vendor blog). Twenty percent to eighty-five percent is the measured range, the four conditions are the cost, and 85% does not permit unattended conversion of a revenue-bearing surface.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 8,
+   "title": "The knowledge graph as the starting inventory",
+   "slug": "8-knowledge-graph",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>The starting inventory for any of this is the product&#39;s knowledge graph. The graph records what does not vary between customers: the capabilities the software offers, the workflows it supports, the entities it holds, and on the architecture side the API contracts and data models. Customer-specific detail is deliberately excluded, because it is low aperture and does not generalise. In the terms of section 1.3, the graph is a record of the product&#39;s domain value proposition.</p>\n<p>This is the approach of semantic engineering, which models an application as a queryable knowledge graph that constrains what agents generate (<a href=\"https://semantic-engineering.ai\" target=\"_blank\" rel=\"noopener\">Semantic Engineering</a>, the author&#39;s programme). The part of the graph that matters here is the domain invariants: what does not vary between customers, and so what an architecture should keep beneath the multi-tenancy line.</p>\n<p>The invariants still change, less often and with more at stake, since every tenant depends on them. Semantic engineering governs those changes through the graph. It records the application in four linked layers, covering what it does, how it looks and behaves, how it is organised and how it is built, and gives each layer a named custodian. When an invariant needs to change, agents traverse the graph to find everything the change touches and report the impact before any code is written. Generation agents then work under the structural constraint of the graph, validation agents check the result against the graph before a merge, and the graph is updated on every merge. Dialect engineering, described in section 9 before 9.1, governs change above the line.</p>\n<p>That exclusion is what makes the graph the right inventory, and a level above what a specification needs.</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th></th>\n<th>Knowledge graph</th>\n<th>What generating a screen requires</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Aperture</td>\n<td>High. Capabilities, workflows, entities, contracts</td>\n<td>Low. What this specific screen does, in what order, with what validation</td>\n</tr>\n<tr>\n<td>Varies per customer</td>\n<td>No, by construction</td>\n<td>Frequently</td>\n</tr>\n<tr>\n<td>Authoritative source</td>\n<td>Derived from the code</td>\n<td>The code itself</td>\n</tr>\n<tr>\n<td>Intended consumer</td>\n<td>Human engineers and architects</td>\n<td>A compiler, then an agent</td>\n</tr>\n</tbody></table>\n</div><p>In new development, the low-aperture detail lives in tickets, user stories and specification files. In an existing product it lives only in the code. So handing an agent the knowledge graph and a design system and asking it to modernise the interface leaves it inferring the low-aperture detail from the code with no check on whether the inference was right.</p>\n<p>There are two routes out. Trust the agent to read the current code and reproduce its behaviour, screen by screen, with human review at each step, which is the horizontal route and its linear cost. Or add a second layer of governance above the graph: an artefact that lets the agent verify its own output. That artefact is the subject of the next section.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 9,
+   "title": "A grammar above the graph",
+   "slug": "9-grammar",
+   "subsections": [
+    {
+     "id": "s9-1",
+     "number": "9.1",
+     "title": "What the grammar does and does not guarantee"
+    }
+   ],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>A knowledge graph records that a given primitive exists and what it relates to. A grammar records what a valid instance of that primitive looks like, which of its parts may vary, what values each part admits, and which combinations are legal.</p>\n<p>Take a product whose configuration primitive is a screen bound to a set of fields and a rule set. The graph holds the primitive as a node with its relationships. The grammar states that this primitive admits these parameters, that one parameter takes one of four values, that another is required when a third is present, and that a given combination is invalid. An agent given the grammar writes in the product&#39;s own vocabulary rather than in Angular or React, and the text it produces can be parsed, validated and tested before anything reaches the product.</p>\n<p>What the grammar provides:</p>\n<ul>\n<li><strong>Parsing and validation.</strong> A malformed document is rejected at the boundary with a location and a reason.</li>\n<li><strong>Editor support.</strong> Syntax highlighting, completion and inline errors come from the language workbench through the Language Server Protocol, with no bespoke tooling. The same protocol that gives a developer these affordances in an editor gives them to an agent.</li>\n<li><strong>A test target.</strong> Functional tests can be written against the language and run by the agent, so semantic errors that the tests cover are caught without a person reading the document.</li>\n<li><strong>Worked examples.</strong> Every converted screen becomes a reference for the next one.</li>\n<li><strong>A smaller output.</strong> The agent writes the domain construct rather than its implementation, so there is less text to get wrong.</li>\n<li><strong>A bounded reach.</strong> An agent writing in the language cannot add an API, a table or a code path. Its reach ends at what the language can express, so the shared layers below the line are outside what it can change.</li>\n</ul>\n<p>The last property matters specifically for a multi-tenant platform. The layers below the line are the ones every tenant shares, and an agent confined to the language has no route into them.</p>\n<p>The tooling for this is two decades old. Fowler&#39;s 2005 article called language workbenches the killer application for domain-specific languages, and his 2010 book <em>Domain-Specific Languages</em> is the standard treatment of both external and embedded forms. The category has been continuously maintained since: MPS, Xtext, Spoofax, Rascal, and more recently Langium. Grammar, parser, editor support and validation are standard output from any of them.</p>\n<p>Adoption fell short of that 2005 expectation: the assessment from inside the field is that these workbenches see real use and none reached the traction anticipated (<a href=\"https://medium.com/@dslmeinte/are-language-workbenches-dead-4b05d1698d3c\" target=\"_blank\" rel=\"noopener\">Are language workbenches dead?</a>). One reason was that domain experts did not author in the language. The same pattern repeated with low-code platforms, where the people operating the platform turned out to be developers, who reasonably asked why they should use it when they already knew how to write the underlying code. The adoption literature adds scarcity of compiler competence, absence of established vendors, fear of lock-in, and prior bad experience with 4GL and rapid-application-development tools (<a href=\"http://grammarware.net/text/2020/dsl-adoption.pdf\" target=\"_blank\" rel=\"noopener\">Reflections on the Lack of Adoption of DSLs</a>, 2020).</p>\n"
+    },
+    {
+     "type": "diagram",
+     "id": "d6",
+     "source": "flowchart LR\n    A[\"Domain expert states intent<br/>in natural language\"] --> B[\"Agent authors the document<br/>in the domain grammar\"]\n    B --> C{\"Parser and validator\"}\n    C -->|\"invalid\"| B\n    C -->|\"valid\"| D[\"Functional tests\"]\n    D -->|\"fail\"| B\n    D -->|\"pass\"| E[\"Compiler\"]\n    E --> F[\"Product configuration,<br/>interface, API calls\"]\n    F --> G[\"Result shown back<br/>to the domain expert\"]\n    G --> A"
+    },
+    {
+     "type": "html",
+     "html": "<p>What changed is the second step, where the agent rather than the expert authors the document. The expert no longer learns the notation, and the definition of the language and its compiler stay with the product company. The grammar can also stay small, because the model brings general world knowledge to the translation. A language with a generic <code>room</code> primitive needs no <code>bedroom</code> keyword, since the model maps the word to the primitive. That mapping previously needed hand-written pattern matching.</p>\n<p>Two disciplines divide this work at the multi-tenancy line. Semantic engineering governs what sits below it: the knowledge graph that records the domain invariants every customer shares, and the process by which those invariants change (<a href=\"https://semantic-engineering.ai\" target=\"_blank\" rel=\"noopener\">Semantic Engineering</a>). Dialect engineering governs what sits above it: a domain language defined over those invariants, in which each customer&#39;s business rules are written as that customer&#39;s own dialect, and in which people, agents and applications exchange requests and results, each exchange checked by the grammar and the functional tests before it takes effect.</p>\n<h3 id=\"s9-1\">9.1 What the grammar does and does not guarantee</h3><p>A grammar bounds what can be expressed. A request the language has no construction for produces no valid document, so it is refused at the boundary with a reason, rather than being silently reinterpreted as the nearest thing the language can say. The gain is in the failure mode.</p>\n<p>The clearest measurement of that trade comes from constrained generation. When PICARD checked each step of a model&#39;s SQL output with a parser, for T5-3B on Spider&#39;s development set, 12% of generated queries caused an execution error without it; with it, 2% were unusable, all cases where no valid query was found, so they surfaced as explicit non-answers (<a href=\"https://arxiv.org/abs/2109.05093\" target=\"_blank\" rel=\"noopener\">Scholak et al., PICARD</a>, EMNLP 2021).</p>\n<p>Analytics shows the same behaviour one level down. dbt compared free-form text-to-SQL against queries through a semantic layer: on a properly modelled project one model went from 84.1% to 100.0% and another from 90.0% to 98.2%, and beyond the semantic layer&#39;s coverage accuracy was 0.0%, against 70.0% for free-form SQL (<a href=\"https://docs.getdbt.com/blog/semantic-layer-vs-text-to-sql-2026\" target=\"_blank\" rel=\"noopener\">Semantic Layer vs. Text-to-SQL</a>, vendor benchmark with public dataset and method). A semantic layer is a governed catalogue of concepts, closer to the knowledge graph of section 8 than to a grammar, and it shows the same behaviour at its boundary. A formal layer stops at its boundary rather than degrading, and that is the trade being made.</p>\n<p>Semantic errors inside the language remain entirely possible. Across 21 models the Structured Output Benchmark found JSON pass rates of 84.5% to 99.97% against value accuracy of 69.3% to 83.0%, so near-perfect structure routinely contains wrong values (<a href=\"https://arxiv.org/html/2604.25359v1\" target=\"_blank\" rel=\"noopener\">The Structured Output Benchmark</a>, arXiv preprint, 2026). At small model sizes and under hard constraints the gap widens: across 15,000 generations on models from 0.5B to 3B, schema validity rose from 61.5% to 100.0% while answer accuracy fell from 19.7% to 11.0%, and the share of outputs that were wrong while remaining schema-valid rose from 49.5% to 88.9% (<a href=\"https://arxiv.org/html/2605.26128v1\" target=\"_blank\" rel=\"noopener\">The Constraint Tax</a>, arXiv preprint, 2026).</p>\n<p>Our own implementation supplies the same lesson without a benchmark. In the house-design language described in section 13.1, a mistyped reference resolved silently to zero and produced a valid document that rendered a plausible, wrong building. The validator as built did not catch it. What catches that class of error is executing the document against adjudicated cases, which is why functional tests are load-bearing rather than optional.</p>\n<p>The claim, then, is that a grammar, a validator and an executable test corpus together produce a system that refuses what it cannot express and catches the errors its test corpus covers, while an agent writing inside the language remains capable of error.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 10,
+   "title": "Configuration schema and grammar",
+   "slug": "10-schema-and-grammar",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>Most mature products already have something in this territory: a schema per feature stating which attributes that feature takes. Where AI has been introduced into a setup process, the usual shape is a model reading the customer&#39;s documents and mapping what it finds onto that schema, with a person reviewing the result.</p>\n<p>This is the right first step, and it hits three limits in sequence.</p>\n<p><strong>The schema has to carry every permutation.</strong> In most products the configuration sits in setup screens, spreadsheets and files in formats such as JSON, YAML or XML. A schema for those files lists the fields and their types, and can express only limited conditional rules, such as that an attribute is only valid in certain combinations, or that one value constrains another, so every legal variation has to be enumerated as structure. The schema grows with the product&#39;s flexibility, and the growth is combinatorial.</p>\n<p><strong>Instructions in prose are not enforceable.</strong> The rules a schema cannot hold get written as markdown instructions or agent configuration. Prose instructions are read as guidance, and nothing checks the output against them. Two separate gaps open. The output may not match what the instruction said, and it may not match what the software needs, because a field being the right type says nothing about that field&#39;s relationship to the rest of the configuration.</p>\n<p><strong>Review stays per attribute.</strong> Because neither gap is machine-checkable, the human approval loop runs over every line and every attribute on the screen. This is the cost that does not amortise. It scales with the volume of configuration rather than with the number of features.</p>\n<p>A grammar addresses all three at the same point. It uses the same underlying structure as the schema, which makes it an increment rather than a restart, and it adds the rules as formal constructions that a parser enforces. A markdown instruction is guidance that a model interprets, whereas the parser applies a grammar rule the same way every time.</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th></th>\n<th>Schema plus prose instructions</th>\n<th>Grammar</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Structure</td>\n<td>Enforced</td>\n<td>Enforced</td>\n</tr>\n<tr>\n<td>Conditional and cross-field rules</td>\n<td>Prose, advisory</td>\n<td>Formal, enforced by the parser</td>\n</tr>\n<tr>\n<td>Invalid request</td>\n<td>Mapped to the nearest valid structure</td>\n<td>Refused, with a location and a reason</td>\n</tr>\n<tr>\n<td>Semantic check</td>\n<td>Human review, per attribute</td>\n<td>Functional tests, run by the agent</td>\n</tr>\n<tr>\n<td>Error surfaces</td>\n<td>Structure at authoring time, cross-field rules after the configuration is applied</td>\n<td>Structure and rules at authoring time, behaviour at test time</td>\n</tr>\n<tr>\n<td>Editor and agent support</td>\n<td>Standard for structure, none for cross-field rules</td>\n<td>Standard for both, through the Language Server Protocol</td>\n</tr>\n</tbody></table>\n</div><p>Evidence that the grammar does work, beyond documenting, comes from grammar prompting: putting a grammar in the model&#39;s context lifted in-distribution accuracy modestly and lifted out-of-distribution accuracy on previously unseen functions from 63.3% to 90.8% (<a href=\"https://proceedings.neurips.cc/paper_files/paper/2023/file/cd40d0d65bfebb894ccc9ea822b47fa8-Paper-Conference.pdf\" target=\"_blank\" rel=\"noopener\">Grammar Prompting for DSL Generation</a>, NeurIPS 2023). The gain concentrates on constructions the model has never seen, which is where a bespoke product language sits.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 11,
+   "title": "Degrees of freedom and what they cost",
+   "slug": "11-degrees-of-freedom",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>A narrower target performs better for a reason that also predicts where the cost goes.</p>\n<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Layer</th>\n<th>Degrees of freedom</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>Natural language</td>\n<td>Unbounded. Meaning is completed by the reader</td>\n</tr>\n<tr>\n<td>General-purpose code</td>\n<td>Near unbounded</td>\n</tr>\n<tr>\n<td>A domain grammar</td>\n<td>Bounded by the grammar</td>\n</tr>\n<tr>\n<td>A schema or API surface</td>\n<td>Very narrow and fixed</td>\n</tr>\n</tbody></table>\n</div><p>A model translates natural language into general-purpose code comparatively well because the two have similar freedom, so the crossing is short. Asking a model to go from natural language to a narrow schema in one step is a long crossing, and the model performs the narrowing invisibly: it picks a reading, the software executes it, and a misread request returns something plausible with no record of which reading was chosen. A grammar splits one long crossing into two shorter ones and makes the intermediate result inspectable.</p>\n<p>The same argument has a cost consequence. Getting from prose instructions to a valid structure takes the model work, and that work is tokens. The narrower and more explicit the target, the less of it there is. In one of our own applications, moving a configuration from a schema-plus-instructions arrangement to a grammar reduced token consumption substantially. The reduction was observed in use and has not been measured under controlled conditions, so no figure is given.</p>\n<p>A related measurement concerns context cost. A reproducible benchmark across MCP servers found a 25x spread in the token cost of tool definitions, with one official server consuming 17,161 tokens for 24 tools and 97% of that cost coming from input schemas rather than descriptions (<a href=\"https://github.com/zhang-liz/mcp-token-benchmark\" target=\"_blank\" rel=\"noopener\">mcp-token-benchmark</a>). Inference prices, though, are falling fast: Epoch AI finds the price for a fixed capability level falling by a median of 50x per year (<a href=\"https://epoch.ai/data-insights/llm-inference-price-trends\" target=\"_blank\" rel=\"noopener\">Epoch AI</a>). So the durable part of this argument is review load rather than token spend.</p>\n<p>Both matter for sequencing rather than for the pitch. At pilot scale, neither token cost nor review load is noticed. Both become visible at the point where a working pilot is asked to cover the whole product.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 12,
+   "title": "Verification moves from reading to running",
+   "slug": "12-verification",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>The weakest link in the schema-plus-review arrangement is the reviewer. A person confirming that a generated configuration is correct is reading a formal artefact and judging whether it matches an intent expressed in a document. The evidence on how well people do that is discouraging. In the Catala study of a formal language for statutory law, only 2 of 7 law graduates who had already confirmed a formalisation correct detected a seeded operator inversion (<a href=\"https://arxiv.org/pdf/2103.03198\" target=\"_blank\" rel=\"noopener\">Catala</a>). In a scalable-oversight study, reviewers checking model output reached 0.71 accuracy where the model alone reached 0.75 (<a href=\"https://arxiv.org/abs/2507.19486\" target=\"_blank\" rel=\"noopener\">scalable oversight, 2025</a>).</p>\n<p>Historical successes with executable formalism verified by running rather than by reading. Catala found a real defect in France&#39;s official benefits simulator by executing its rules against known cases. ISDA measures its executable regulatory rules by regulator acknowledgement rates, reporting 98.2% at one go-live and 100% at another (<a href=\"https://www.isda.org/a/LhRgE/Industry-Perspectives-on-the-ISDA-DRR-Unlocking-Efficiency-Accuracy-and-Strategic-Value.pdf\" target=\"_blank\" rel=\"noopener\">ISDA Digital Regulatory Reporting</a>, undated industry report).</p>\n<p>For a configuration language, this means the artefact that matters alongside the grammar is a case corpus: inputs with adjudicated outputs, which the agent runs its own document against. In an onboarding context that has a natural form. Given a configuration for a new customer, compute a result the customer already knows, such as a sample calculation or a worked example from their own records, and show it back. The configuration is then judged by its output rather than by its text, and the person reviewing it is judging something they are qualified to judge.</p>\n<p>This loop is also where a language acquires its value. A language with no compiler is a notation. The loop back to a visible result is where the value sits, and a programme that builds the grammar without the loop has built the cheaper half.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 13,
+   "title": "Evidence from two applications",
+   "slug": "13-evidence",
+   "subsections": [
+    {
+     "id": "s13-1",
+     "number": "13.1",
+     "title": "A parametric design language"
+    },
+    {
+     "id": "s13-2",
+     "number": "13.2",
+     "title": "A customer onboarding language"
+    }
+   ],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>The two applications illustrate the two directions of travel in section 5. The house-design application, Wadi, is the greenfield case: it was built around its language from the start. The onboarding language, On2Go, is the brownfield case: an overlay on a product that already has customers.</p>\n<h3 id=\"s13-1\">13.1 A parametric design language</h3><p>The first is a house-design application built on this architecture. The domain grammar has primitives at the level a designer works in: floors, rooms, walls, windows, furniture anchored to a position within a room, rather than geometric shapes. A validated document compiles to a model that drives a 3D view, floor plans, elevations, roof details and material quantities.</p>\n<p>Four properties bear on the argument.</p>\n<p><strong>The configuration surface is generated from the document.</strong> The document declares which parameters are adjustable, and the interface for adjusting them is produced from that declaration at run time. Adding a parameter to the document adds a control to the interface with no change to the application. This is the one benefit in this paper that genuinely needs a greenfield: generating the surface from the document requires the platform to accept a desired-state description, which an existing product generally does not.</p>\n<p><strong>An agent authors it over MCP.</strong> The grammar, worked examples, a validator and a test runner are exposed to a coding agent through an MCP server. The agent writes and checks documents without the application in the loop. A single instruction such as adding a floor with the same plan as the one below produces a valid document and a rendered result.</p>\n<p><strong>The agent is confined to the language.</strong> It cannot add an API, a table or new application code to satisfy a request. Requests outside the language are designed to be refused. Under delivery pressure the validator gained an advisory tier, and the case corpus that section 12 describes was not built.</p>\n<p><strong>It was verified by looking at output.</strong> The fastest check on a complicated geometry turned out to be rendering it and looking. A missing balcony wall on a newly added floor was obvious in the render and easy to miss in the document.</p>\n<h3 id=\"s13-2\">13.2 A customer onboarding language</h3><p>The second is a demonstration built against a dealer-management ERP vendor&#39;s product and run on test onboarding data. Onboarding for that product moves substantial reference data for each new customer: warehouses, parts, part-to-warehouse mappings, on-hand inventory, hundreds of records per entity, arriving from spreadsheets, accounting systems and CRM in a different shape for every customer. The current process is manual manipulation of whatever the customer sends, because there is no standard format.</p>\n<p>The demonstration defines a grammar in that product&#39;s own vocabulary, derived from its knowledge graph, with per-customer source mappings held as project templates. An operator uploads the customer&#39;s files without classifying them, the language&#39;s configuration identifies which input each file corresponds to, and the onboarding run executes. Validation results report per entity, failures cite the specific records, and a failure links to the line of the language that rejected it. The rejected records go back to the customer as a file.</p>\n<p>Two points about this case matter more than the demonstration itself.</p>\n<p>The scope today is data migration, which is the narrowest useful version. The intended path is for the same language to cover configuration, and eventually screen and workflow definition. That is a substantially harder claim and is not evidenced by what runs now.</p>\n<p>The product is untouched. The language compiles to inputs the product already accepts, which makes it an overlay rather than a rewrite, and makes it available to an existing product with customers on it.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 14,
+   "title": "What this asks of a product roadmap",
+   "slug": "14-roadmap",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p>The practical recommendation arising from this analysis is about sequencing.</p>\n<p><strong>Do not staff a conventional interface modernisation programme now.</strong> If the vertical route works, most of the horizontal route&#39;s cost is avoidable, and work done screen by screen will not carry over. Where an interface is unusable enough to be losing deals, fix those screens and no others.</p>\n<p><strong>Put the effort into the grammar and the compiler instead.</strong> These are the durable assets. The grammar encodes the mapping from customer requirement to product capability, which is the knowledge currently held by the small number of people who know how to configure the product. Formalising it is the point of the exercise.</p>\n<p><strong>Take onboarding first.</strong> It touches no product code, and the value is measurable in cycle time on a process that gates revenue. Where the product already accepts configuration as data, the language compiles to that.</p>\n<p><strong>Treat a planned re-architecture as the place to design the lower line in.</strong> A company already planning to rebuild the layer that applies configuration has an opportunity, because that rebuild is where a lower multi-tenancy line can be designed in rather than retrofitted. Developing the grammar in parallel tells the rebuild what it will need to accept.</p>\n"
+    },
+    {
+     "type": "diagram",
+     "id": "d7",
+     "source": "flowchart TD\n    A[\"Knowledge graph<br/>high-aperture inventory\"] --> B[\"Grammar for one feature<br/>or one onboarding surface\"]\n    B --> C[\"Compiler to current configuration\"]\n    C --> D[\"Case corpus and functional tests\"]\n    D --> E[\"Extend grammar coverage<br/>feature by feature\"]\n    B -.->|\"informs\"| F[\"Platform re-architecture<br/>designed to accept a desired-state document\"]\n    E --> G[\"Surface generated from the document\"]\n    F --> G"
+    },
+    {
+     "type": "html",
+     "html": ""
+    }
+   ]
+  },
+  {
+   "n": 15,
+   "title": "What the grammar demands",
+   "slug": "15-grammar-demands",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<p><strong>Deciding what goes into it is architectural judgement.</strong> Whether something becomes a primitive, a parameter, or stays as configuration is a decision an architect makes today. The mechanics of building the language are largely automatable. The aim is to derive the grammar from the knowledge graph automatically, so that a new product goes from graph to grammar to modernised surface as a routine sequence. The method does not yet do that.</p>\n<p><strong>The language has to sit above the product&#39;s primitives rather than restate them.</strong> A grammar that only exposes what the software already does, one construction per existing configuration option, is a command-line substitute for a form. The value is in the higher-level constructions that encode how a stated requirement becomes a set of those options, which is the knowledge the configuration specialist holds. Put in the terms of section 1.3, the grammar should express the domain value proposition in the domain&#39;s own vocabulary.</p>\n<p><strong>A customer&#39;s change needs a path into the language.</strong> A change requested by one customer is made first in the domain document that represents that customer&#39;s implementation. Where the language can already express it, that is the whole change. Where it cannot, the need is met by a plugin: an extension scoped to that customer, attached to that customer&#39;s document, written in the host language under engineer review, and largely independent of the language&#39;s primitives. Either way the change stays local to one customer and the shared layers are untouched.</p>\n<p>That locality buys time. Whether a request is a genuine variation of the domain or one customer&#39;s particular need is rarely clear from its first appearance, and generalising too early produces a primitive shaped around a single customer. Once the same need has appeared across enough customers for its shape to be understood and mapped, the plugins that met it are generalised into a new primitive or a change to the grammar, and the customers using them move onto the language construct. Refactoring practice encodes the same caution as the rule of three: two similar instances can be tolerated, and the third is the point at which to generalise (<a href=\"https://martinfowler.com/books/refactoring.html\" target=\"_blank\" rel=\"noopener\">Refactoring: Improving the Design of Existing Code</a>, Fowler et al., 1999, crediting the rule to Don Roberts).</p>\n"
+    },
+    {
+     "type": "diagram",
+     "id": "d8",
+     "source": "flowchart LR\n    A[\"Customer requests a change\"] --> B{\"Expressible in<br/>the language?\"}\n    B -->|\"yes\"| C[\"Change in that customer's document\"]\n    B -->|\"no\"| D[\"Plugin scoped to that customer,<br/>engineer reviewed\"]\n    D --> E{\"Same need recurs<br/>across customers?\"}\n    E -->|\"yes, shape understood\"| F[\"New primitive or grammar change\"]\n    F --> G[\"Customers move from plugin<br/>to the language construct\"]\n    E -->|\"not yet\"| H[\"Plugin stays local,<br/>reviewed for promotion or retirement\"]"
+    },
+    {
+     "type": "html",
+     "html": "<p>The plugin is where the risk of section 1.1 now sits, so it needs its own discipline. Each plugin is scoped to one customer, recorded as a candidate for generalisation, and reviewed periodically for promotion or retirement. A plugin that lives indefinitely is a special case again, with the one improvement that it cannot affect another customer.</p>\n<p>This is how the language grows, and it is compatible with keeping the language bounded. What the grammar should not acquire is general-purpose machinery, such as user-defined functions, general recursion or arbitrary expressions, because that turns it back into a programming language with worse tooling than the one it replaced. The discipline of keeping general computation out of the language and in reviewed host-language code is what has kept SQL, regular expressions and Terraform&#39;s configuration language bounded for decades. Adding a domain primitive that several customers have shown they need is the intended way for the language to grow.</p>\n"
+    }
+   ]
+  },
+  {
+   "n": 16,
+   "title": "What would show this wrong",
+   "slug": "16-falsifiers",
+   "subsections": [],
+   "blocks": [
+    {
+     "type": "html",
+     "html": "<ul>\n<li>Grammar coverage stalls. If most screens or configurations in a real product cannot be expressed without per-case grammar extensions, the fixed cost never amortises and the horizontal route was correct.</li>\n<li>Semantic error survives validation. More than 10% of validator-passing documents turn out semantically wrong in production, and review load stays proportional to output volume.</li>\n<li>The case corpus proves impractical to build, leaving verification dependent on reading. This is the failure mode with the strongest historical precedent.</li>\n</ul>\n"
+    }
+   ]
+  }
+ ],
+ "appendixA": {
+  "title": "Appendix A: the documents in this programme",
+  "blocks": [
+   {
+    "type": "html",
+    "html": "<div class=\"table-wrap\"><table>\n<thead>\n<tr>\n<th>Document</th>\n<th>Question it answers</th>\n</tr>\n</thead>\n<tbody><tr>\n<td><span class=\"unpublished\">The Domain-Specific Language as a Software Interface</span></td>\n<td>Why a domain language is the right interface for AI to operate software, and what the evidence for and against says</td>\n</tr>\n<tr>\n<td><span class=\"unpublished\">Onboarding as the first surface</span></td>\n<td>Why customer onboarding is the commercial wedge, worked through a payroll account</td>\n</tr>\n<tr>\n<td><span class=\"unpublished\">Building a domain language for one feature</span></td>\n<td>How a grammar is derived from one existing feature, end to end, including what the grammar replaces</td>\n</tr>\n<tr>\n<td>This paper</td>\n<td>Which layer of a SaaS product should be shared, what moves when that changes, and in what order the work goes</td>\n</tr>\n</tbody></table>\n</div>"
+   }
+  ]
+ },
+ "glossary": [
+  {
+   "term": "Aperture",
+   "slug": "aperture",
+   "html": "The level of detail at which a description operates. High aperture covers capabilities, workflows and contracts. Low aperture covers what one specific screen does with what validation.",
+   "sections": [
+    8
+   ]
+  },
+  {
+   "term": "Capability SKU",
+   "slug": "capability-sku",
+   "html": "A priced unit of domain capability that a customer&#39;s domain document can use. A composite SKU is a pre-assembled combination of capabilities, priced as a package.",
+   "sections": [
+    4
+   ]
+  },
+  {
+   "term": "Compilation target",
+   "slug": "compilation-target",
+   "html": "The artefact the language compiles into. For an overlay on an existing product this is a configuration, an API call sequence or a data load that the product already accepts.",
+   "sections": []
+  },
+  {
+   "term": "Dialect engineering",
+   "slug": "dialect-engineering",
+   "html": "The practice of defining a domain language over a product&#39;s invariants so that each customer&#39;s business rules are written as that customer&#39;s own dialect of it, checked by the grammar and functional tests. It governs change above the multi-tenancy line, as semantic engineering governs change below it.",
+   "sections": [
+    8,
+    9
+   ]
+  },
+  {
+   "term": "Grammar",
+   "slug": "grammar",
+   "html": "A formal definition of the valid constructions of a language, which a parser enforces.",
+   "sections": [
+    7,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ]
+  },
+  {
+   "term": "Language Server Protocol",
+   "slug": "language-server-protocol",
+   "html": "The standard by which an editor obtains completion, diagnostics and navigation for a language. A custom language that publishes one gets editor and agent support without bespoke tooling.",
+   "sections": [
+    9,
+    10
+   ]
+  },
+  {
+   "term": "Language workbench",
+   "slug": "language-workbench",
+   "html": "A toolkit for defining a language and generating its parser, validator and editor support. MPS, Xtext, Spoofax, Rascal, Langium.",
+   "sections": [
+    9
+   ]
+  },
+  {
+   "term": "Multi-tenancy line",
+   "slug": "multi-tenancy-line",
+   "html": "The layer in a product&#39;s stack above which everything varies per customer and below which everything is shared.",
+   "sections": [
+    3,
+    8,
+    9,
+    14
+   ]
+  },
+  {
+   "term": "Overlay",
+   "slug": "overlay",
+   "html": "A language layer above a product that compiles to interfaces the product already exposes, requiring no change to the product.",
+   "sections": [
+    13
+   ]
+  }
+ ],
+ "citations": [
+  {
+   "url": "https://msdn.microsoft.com/en-us/library/aa479069.aspx",
+   "title": "Architecture Strategies for Catching the Long Tail",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://developer.salesforce.com/ja/wiki/multi_tenant_architecture",
+   "title": "The Salesforce Platform Multitenant Architecture",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://doi.org/10.4230/DagRep.6.4.110",
+   "title": "Managing Technical Debt in Software Engineering",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://doi.org/10.1016/j.jss.2021.111114",
+   "title": "Ramač et al., Journal of Systems and Software, 2022",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://gsd.uwaterloo.ca/sites/default/files/2013-csmr-cloning.pdf",
+   "title": "Dubinsky et al., CSMR 2013",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://doi.org/10.1016/j.jss.2024.111969",
+   "title": "Wolfart et al., Journal of Systems and Software, 2024",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://doi.org/10.1016/j.jss.2019.06.004",
+   "title": "Besker, Martini and Bosch, Journal of Systems and Software, 2019",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://www.salesforce.com/news/stories/the-history-of-salesforce/",
+   "title": "The History of Salesforce",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://mitsloan.mit.edu/shared/ods/documents?PublicationDocumentID=5975",
+   "title": "Cloud Computing and SaaS as New Computing Platforms",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2025.00535",
+   "title": "Cui et al., Management Science, 2026",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://arxiv.org/abs/2507.09089",
+   "title": "METR, 2025",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://metr.org/blog/2026-02-24-uplift-update/",
+   "title": "METR, 2026",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://www.anthropic.com/engineering/building-c-compiler",
+   "title": "Building a C compiler with a team of parallel Claudes",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://developers.openai.com/blog/run-long-horizon-tasks-with-codex",
+   "title": "Run long horizon tasks with Codex",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/navigating-the-generative-ai-disruption-in-software",
+   "title": "Navigating the generative AI disruption in software",
+   "sections": [
+    "1"
+   ]
+  },
+  {
+   "url": "https://www.bain.com/insights/will-agentic-ai-disrupt-saas-technology-report-2025/",
+   "title": "Will Agentic AI Disrupt SaaS?",
+   "sections": [
+    "1",
+    "4"
+   ]
+  },
+  {
+   "url": "https://docs.aws.amazon.com/wellarchitected/latest/saas-lens/silo-pool-and-bridge-models.html",
+   "title": "Silo, Pool, and Bridge Models",
+   "sections": [
+    "2"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/considerations/tenancy-models",
+   "title": "Tenancy models for a multitenant solution",
+   "sections": [
+    "2"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/deployment-configuration",
+   "title": "Architectural approaches for the deployment and configuration of multitenant solutions",
+   "sections": [
+    "2"
+   ]
+  },
+  {
+   "url": "https://trailhead.salesforce.com/content/learn/modules/flow-basics/go-with-the-flow-th",
+   "title": "Flow Basics",
+   "sections": [
+    "2"
+   ]
+  },
+  {
+   "url": "https://www.workday.com/content/dam/web/en-us/documents/datasheets/workday-business-process-framework.pdf",
+   "title": "The Workday business process framework",
+   "sections": [
+    "2"
+   ]
+  },
+  {
+   "url": "https://architect.salesforce.com/docs/architect/fundamentals/guide/platform-multitenant-architecture.html",
+   "title": "Platform Multitenant Architecture",
+   "sections": [
+    "2"
+   ]
+  },
+  {
+   "url": "https://db.in.tum.de/research/publications/conferences/sigmod2008-mtd.pdf",
+   "title": "Aulbach et al., SIGMOD 2008",
+   "sections": [
+    "2"
+   ]
+  },
+  {
+   "url": "https://www.panorama-consulting.com/wp-content/uploads/2016/07/2015-ERP-Report-3.pdf",
+   "title": "2015 ERP Report",
+   "sections": [
+    "2"
+   ]
+  },
+  {
+   "url": "https://4439340.fs1.hubspotusercontent-na1.net/hubfs/4439340/Reports/ERP%20Report/2026-erp-report-panorama-consulting-group.pdf",
+   "title": "The 2026 ERP Report",
+   "sections": [
+    "3"
+   ]
+  },
+  {
+   "url": "https://www.techrepublic.com/article/gartner-global-software-trends/",
+   "title": "TechRepublic reporting Gartner Digital Markets",
+   "sections": [
+    "3"
+   ]
+  },
+  {
+   "url": "https://www.gartner.com/en/newsroom/press-releases/2025-03-12-gartner-predicts-over-20-percent-of-workplace-apps-will-use-ai-driven-personalization-algorithms-for-adaptive-worker-experiences-by-2028",
+   "title": "Gartner, March 2025",
+   "sections": [
+    "3"
+   ]
+  },
+  {
+   "url": "https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027",
+   "title": "Gartner, June 2025",
+   "sections": [
+    "3"
+   ]
+  },
+  {
+   "url": "https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025",
+   "title": "Gartner, August 2025",
+   "sections": [
+    "3"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/power-apps/developer/data-platform/webapi/overview",
+   "title": "Use the Microsoft Dataverse Web API",
+   "sections": [
+    "3"
+   ]
+  },
+  {
+   "url": "https://www.zendesk.com/pricing/",
+   "title": "Zendesk pricing",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://www.pendo.io/resources/the-2019-feature-adoption-report/",
+   "title": "The 2019 Feature Adoption Report",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://zylo.com/news/2026-saas-management-index",
+   "title": "2026 SaaS Management Index",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://www.growthunhinged.com/p/2025-state-of-b2b-monetization",
+   "title": "The State of B2B Monetization in 2025",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://www.gartner.com/en/newsroom/press-releases/2026-07-01-gartner-says-us-dollars-234-billion-in-enterprise-application-software-spend-is-at-risk-from-agentic-artificial-intelligence",
+   "title": "Gartner, July 2026",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/dynamics365/supply-chain/cost-management/information-used-bom-calculations-standard-costs",
+   "title": "Information used in BOM calculations with standard costs",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://courses.lumenlearning.com/wm-accountingformanagers/chapter/dm-dl-moh/",
+   "title": "Accounting for Managers",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://doi.org/10.1016/0048-7333(94)00775-3",
+   "title": "Ulrich, Research Policy, 1995",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://docs.oracle.com/cd/A60725_05/html/comnls/us/cz/gls.htm",
+   "title": "Configurator glossary",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://www.netsuite.com/portal/resource/articles/erp/configure-price-quote-cpq.shtml",
+   "title": "What Is CPQ?",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://lp-website.s3.amazonaws.com/pdfs/Customer_value_based_pricing_strategies.pdf",
+   "title": "Hinterhuber, Journal of Business Strategy, 2008",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://pages.stern.nyu.edu/~bakos/big/big.html",
+   "title": "Bakos and Brynjolfsson, Bundling Information Goods, 1996",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://www.consumerreports.org/buying-a-car/sticker-shock-navigating-car-trim-levels/",
+   "title": "Sticker Shock: Navigating Car Trim Levels",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://fin.ai/help/en/articles/13975800-fin-pricing-outcomes",
+   "title": "Fin pricing: Outcomes",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://www.salesforce.com/news/press-releases/2024/09/12/agentforce-announcement/",
+   "title": "Salesforce Unveils Agentforce",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://www.salesforce.com/news/press-releases/2025/05/15/agentforce-flexible-pricing-news/",
+   "title": "Salesforce, May 2025",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://www.zendesk.com/newsroom/articles/zendesk-outcome-based-pricing/",
+   "title": "Zendesk, August 2024",
+   "sections": [
+    "4"
+   ]
+  },
+  {
+   "url": "https://martinfowler.com/bliki/OriginalStranglerFigApplication.html",
+   "title": "Original Strangler Fig Application",
+   "sections": [
+    "5"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig",
+   "title": "Strangler Fig pattern",
+   "sections": [
+    "5"
+   ]
+  },
+  {
+   "url": "https://learn.microsoft.com/en-us/dynamics365/guidance/implementation-guide/success-by-design",
+   "title": "Success by Design",
+   "sections": [
+    "6"
+   ]
+  },
+  {
+   "url": "https://www.panorama-consulting.com/erp-implementation-success-factors/",
+   "title": "ERP implementation in six phases",
+   "sections": [
+    "6"
+   ]
+  },
+  {
+   "url": "https://devblogs.microsoft.com/all-things-azure/ai-coding-agents-domain-specific-languages/",
+   "title": "AI Coding Agents and DSLs",
+   "sections": [
+    "7"
+   ]
+  },
+  {
+   "url": "https://semantic-engineering.ai",
+   "title": "Semantic Engineering",
+   "sections": [
+    "8",
+    "9"
+   ]
+  },
+  {
+   "url": "https://medium.com/@dslmeinte/are-language-workbenches-dead-4b05d1698d3c",
+   "title": "Are language workbenches dead?",
+   "sections": [
+    "9"
+   ]
+  },
+  {
+   "url": "http://grammarware.net/text/2020/dsl-adoption.pdf",
+   "title": "Reflections on the Lack of Adoption of DSLs",
+   "sections": [
+    "9"
+   ]
+  },
+  {
+   "url": "https://arxiv.org/abs/2109.05093",
+   "title": "Scholak et al., PICARD",
+   "sections": [
+    "9"
+   ]
+  },
+  {
+   "url": "https://docs.getdbt.com/blog/semantic-layer-vs-text-to-sql-2026",
+   "title": "Semantic Layer vs. Text-to-SQL",
+   "sections": [
+    "9"
+   ]
+  },
+  {
+   "url": "https://arxiv.org/html/2604.25359v1",
+   "title": "The Structured Output Benchmark",
+   "sections": [
+    "9"
+   ]
+  },
+  {
+   "url": "https://arxiv.org/html/2605.26128v1",
+   "title": "The Constraint Tax",
+   "sections": [
+    "9"
+   ]
+  },
+  {
+   "url": "https://proceedings.neurips.cc/paper_files/paper/2023/file/cd40d0d65bfebb894ccc9ea822b47fa8-Paper-Conference.pdf",
+   "title": "Grammar Prompting for DSL Generation",
+   "sections": [
+    "10"
+   ]
+  },
+  {
+   "url": "https://github.com/zhang-liz/mcp-token-benchmark",
+   "title": "mcp-token-benchmark",
+   "sections": [
+    "11"
+   ]
+  },
+  {
+   "url": "https://epoch.ai/data-insights/llm-inference-price-trends",
+   "title": "Epoch AI",
+   "sections": [
+    "11"
+   ]
+  },
+  {
+   "url": "https://arxiv.org/pdf/2103.03198",
+   "title": "Catala",
+   "sections": [
+    "12"
+   ]
+  },
+  {
+   "url": "https://arxiv.org/abs/2507.19486",
+   "title": "scalable oversight, 2025",
+   "sections": [
+    "12"
+   ]
+  },
+  {
+   "url": "https://www.isda.org/a/LhRgE/Industry-Perspectives-on-the-ISDA-DRR-Unlocking-Efficiency-Accuracy-and-Strategic-Value.pdf",
+   "title": "ISDA Digital Regulatory Reporting",
+   "sections": [
+    "12"
+   ]
+  },
+  {
+   "url": "https://martinfowler.com/books/refactoring.html",
+   "title": "Refactoring: Improving the Design of Existing Code",
+   "sections": [
+    "15"
+   ]
+  }
+ ]
+}

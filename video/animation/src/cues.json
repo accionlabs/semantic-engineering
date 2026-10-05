@@ -1,0 +1,4 @@
+{
+  "_help": "Timing overrides. Keys are scene numbers. Each named cue takes a position: s<k> is the start of sentence k (from 0), optionally +/- seconds, e.g. \"s3+0.4\"; \"end\" is the scene end; a plain number is seconds from the scene start. Scenes fall back to their own defaults for any cue not listed here.",
+  "scenes": {}
+}

@@ -9,3 +9,12 @@ resources/_gen/
 # Local tooling / scaffolding (not part of the site)
 .claude/
 claude-code-setup-prompt.md
+
+# New app (site/, video/): dependencies, builds, local Worker state, renders
+node_modules/
+dist/
+dist-*/
+.wrangler/
+video/renders/
+video/audio/vo/
+site/app/public/media/

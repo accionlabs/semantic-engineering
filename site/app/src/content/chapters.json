@@ -1,0 +1,170 @@
+[
+ {
+  "key": "title",
+  "start": 0,
+  "duration": 4
+ },
+ {
+  "key": "card-1",
+  "start": 4,
+  "duration": 2.6
+ },
+ {
+  "key": "premise",
+  "n": 1,
+  "start": 6.6,
+  "duration": 45.867999999999995
+ },
+ {
+  "key": "accumulation",
+  "n": 2,
+  "start": 52.467999999999996,
+  "duration": 24.854000000000003
+ },
+ {
+  "key": "shift",
+  "n": 3,
+  "start": 77.322,
+  "duration": 29.701
+ },
+ {
+  "key": "wants",
+  "n": 4,
+  "start": 107.023,
+  "duration": 36.748000000000005
+ },
+ {
+  "key": "card-2",
+  "start": 143.77100000000002,
+  "duration": 2.6
+ },
+ {
+  "key": "onboarding-today",
+  "n": 5,
+  "start": 146.371,
+  "duration": 48.744
+ },
+ {
+  "key": "interface-today",
+  "n": 6,
+  "start": 195.115,
+  "duration": 67.745
+ },
+ {
+  "key": "rules-today",
+  "n": 7,
+  "start": 262.86,
+  "duration": 46.550000000000004
+ },
+ {
+  "key": "primitives-today",
+  "n": 8,
+  "start": 309.41,
+  "duration": 34.665
+ },
+ {
+  "key": "deep-today",
+  "n": 9,
+  "start": 344.07500000000005,
+  "duration": 42.17700000000001
+ },
+ {
+  "key": "bill",
+  "n": 10,
+  "start": 386.25200000000007,
+  "duration": 35.57300000000001
+ },
+ {
+  "key": "card-3",
+  "start": 421.82500000000005,
+  "duration": 2.6
+ },
+ {
+  "key": "invariants",
+  "n": 11,
+  "start": 424.42500000000007,
+  "duration": 61.274
+ },
+ {
+  "key": "language",
+  "n": 12,
+  "start": 485.69900000000007,
+  "duration": 68.329
+ },
+ {
+  "key": "agents",
+  "n": 13,
+  "start": 554.028,
+  "duration": 105.954
+ },
+ {
+  "key": "governance",
+  "n": 14,
+  "start": 659.982,
+  "duration": 74.649
+ },
+ {
+  "key": "card-4",
+  "start": 734.631,
+  "duration": 2.6
+ },
+ {
+  "key": "green-brown",
+  "n": 15,
+  "start": 737.231,
+  "duration": 36.937000000000005
+ },
+ {
+  "key": "recommendations",
+  "n": 16,
+  "start": 774.168,
+  "duration": 37.32900000000001
+ },
+ {
+  "key": "falsifiers",
+  "n": 17,
+  "start": 811.4970000000001,
+  "duration": 15.768999999999997
+ },
+ {
+  "key": "close",
+  "n": 18,
+  "start": 827.2660000000001,
+  "duration": 41.091
+ },
+ {
+  "key": "card-5",
+  "start": 868.3570000000001,
+  "duration": 2.6
+ },
+ {
+  "key": "onboarding-future",
+  "n": 19,
+  "start": 870.9570000000001,
+  "duration": 68.366
+ },
+ {
+  "key": "interface-future",
+  "n": 20,
+  "start": 939.3230000000001,
+  "duration": 78.273
+ },
+ {
+  "key": "rules-future",
+  "n": 21,
+  "start": 1017.5960000000001,
+  "duration": 40.071
+ },
+ {
+  "key": "deep-future",
+  "n": 22,
+  "start": 1057.6670000000001,
+  "duration": 41.874
+ },
+ {
+  "key": "bill-future",
+  "n": 23,
+  "start": 1099.5410000000002,
+  "duration": 46.415000000000006
+ }
+]
