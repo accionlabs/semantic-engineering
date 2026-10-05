@@ -1,14 +1,9 @@
 {
-  // Static site plus a Worker (worker.ts) that runs first: it redirects www, serves /media/* with byte
-  // ranges (for seeking), and answers the MCP server at /mcp. Everything else is a static asset.
-  "name": "dialect-engineering",
-  "main": "worker.ts",
+  // Phase 1: the prerendered pages as static assets, at the Worker's workers.dev address for review.
+  // The Worker code (media with byte ranges, the MCP server at /mcp) returns in phase 6, and the
+  // semantic-engineering.ai routes are added at the switch (phase 7).
+  "name": "semantic-engineering",
   "compatibility_date": "2026-09-01",
-  "assets": { "directory": "./dist", "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": true },
-  // Keep the workers.dev address working alongside the custom domain.
-  "workers_dev": true,
-  "routes": [
-    { "pattern": "dialect-engineering.ai", "custom_domain": true },
-    { "pattern": "www.dialect-engineering.ai", "custom_domain": true }
-  ]
+  "assets": { "directory": "./dist", "not_found_handling": "404-page", "html_handling": "auto-trailing-slash" },
+  "workers_dev": true
 }

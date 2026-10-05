@@ -1,36 +1,44 @@
-// Screenshots every page at desktop and phone widths, in both themes, and records page errors.
-//   node scripts/check-pages.mjs [baseUrl]
-import { chromium } from '../../../video/animation/node_modules/playwright-core/index.mjs';
+// Opens every page at desktop and phone widths, in both themes, and records page errors, console errors,
+// horizontal overflow, diagrams that failed to render, and a full-page screenshot of each.
+//   node scripts/check-pages.mjs [baseUrl] [only,these,paths]
+import { chromium } from 'playwright-core';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const base = process.argv[2] ?? 'http://localhost:4173';
-const paper = JSON.parse(fs.readFileSync(path.join(here, '../src/content/paper.json'), 'utf8'));
-const pages = ['/', '/sections', '/summary', '/glossary', '/references', '/about', '/graph', '/explain', '/connect', '/privacy', '/watch/layer-onboarding', ...paper.sections.map((s) => `/sections/${s.slug}`)];
-const out = path.resolve(here, '../../checks'); fs.mkdirSync(out, { recursive: true });
+const site = JSON.parse(fs.readFileSync(path.join(here, '../src/content/site.json'), 'utf8'));
 const only = process.argv[3] ? process.argv[3].split(',') : null;
+const pages = [...site.pages.map((p) => p.url), '/no-such-page/'].filter((p) => !only || only.some((o) => p.includes(o)));
+const out = path.resolve(here, '../../checks'); fs.mkdirSync(out, { recursive: true });
 const browser = await chromium.launch({ channel: 'chrome' });
 const problems = [];
-for (const [dev, vp] of [['desktop', { width: 1280, height: 900 }], ['phone', { width: 390, height: 844 }]]) {
+for (const [dev, vp] of [['desktop', { width: 1440, height: 900 }], ['phone', { width: 390, height: 844 }]]) {
   for (const theme of ['light', 'dark']) {
-    const ctx = await browser.newContext({ viewport: vp, colorScheme: theme, reducedMotion: 'reduce', deviceScaleFactor: 1 });
+    const ctx = await browser.newContext({ viewport: vp, colorScheme: theme, deviceScaleFactor: 1 });
     for (const p of pages) {
-      if (only && !only.some((o) => p === o || p.includes(o))) continue;
       const page = await ctx.newPage();
-      page.on('pageerror', (e) => problems.push(`${p} [${dev} ${theme}] page error: ${e.message}`));
-      page.on('console', (m) => { if (m.type() === 'error') problems.push(`${p} [${dev} ${theme}] console: ${m.text()}`); });
-      await page.goto(base + p, { waitUntil: 'networkidle' });
-      await page.waitForTimeout(600);
-      const over = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
-      if (over > 1) problems.push(`${p} [${dev} ${theme}] horizontal overflow ${over}px`);
-      const name = `${dev}-${theme}-${p === '/' ? 'home' : p.slice(1).replace(/\//g, '_')}.png`;
-      await page.screenshot({ path: path.join(out, name), fullPage: true });
+      const where = `${p} [${dev} ${theme}]`;
+      page.on('pageerror', (e) => problems.push(`${where} page error: ${e.message}`));
+      page.on('console', (m) => { if (m.type() === 'error' && !/404/.test(m.text()) || /hydrat/i.test(m.text())) problems.push(`${where} console: ${m.text()}`); });
+      const res = await page.goto(base + p, { waitUntil: 'networkidle' });
+      if (p !== '/no-such-page/' && res?.status() !== 200) problems.push(`${where} status ${res?.status()}`);
+      await page.waitForTimeout(300);
+      const r = await page.evaluate(() => ({
+        over: document.documentElement.scrollWidth - document.documentElement.clientWidth,
+        empty: [...document.querySelectorAll('.se-diagram svg')].filter((s) => s.getBoundingClientRect().height < 20).length,
+        h1: document.querySelector('h1')?.textContent ?? '',
+      }));
+      if (r.over > 1) problems.push(`${where} horizontal overflow ${r.over}px`);
+      if (r.empty) problems.push(`${where} ${r.empty} diagram(s) render with no height`);
+      if (!r.h1) problems.push(`${where} no heading`);
+      const name = `${dev}-${theme}-${p === '/' ? 'home' : p.slice(1, -1).replace(/\//g, '_')}.png`;
+      await page.screenshot({ path: path.join(out, name), fullPage: dev === 'phone' ? false : true });
       await page.close();
     }
     await ctx.close();
   }
 }
 await browser.close();
-fs.writeFileSync(path.join(out, 'problems.txt'), problems.join('\n') || 'none');
-console.log(problems.length ? problems.join('\n') : 'no problems found', '\nscreenshots in', out);
+console.log(problems.length ? problems.join('\n') : `check-pages: ${pages.length} pages × 4 views, no problems`);
+process.exit(problems.length ? 1 : 0);

@@ -46,7 +46,8 @@ Each of these interactions matters. Each is bilateral and unrecorded. Each is pa
 ### Why AI Coding Agents Stall on This
 
 > "Bad code is the most expensive it has ever been."
-> — Matt Pocock
+>
+> Matt Pocock
 
 This is the situation any AI coding agent walks into. The agent does not have access to any of these Slack conversations. The agent does not know which custodian to ask, and cannot ask anyway. The agent sees what is in the codebase, what is in the ticket, what is in the wiki (often stale), and that is the full extent of its context. Everything the four custodians know is invisible to it.
 

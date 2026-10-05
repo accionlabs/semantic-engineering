@@ -118,7 +118,7 @@ The headline savings from AI-assisted coding are real but partial. The compoundi
 
 The fractional allocation model differs from how many engineering organizations are staffed today. Compensation, evaluation, and career progression often assume one-workstream attribution and may evolve over time to recognize specialist contribution across multiple workstreams. Procurement contracts may also evolve to support continuous re-engagement alongside conventional FTE allocations.
 
-The methodology can be deployed before the operating model fully shifts. The full value compounds as the operating model matures. See [Engagement Model Evolution](#engagement-models-evolution) below for the two-stage engagement-shape transition.
+The methodology can be deployed before the operating model fully shifts. The full value compounds as the operating model matures. See [Engagement Model Evolution](#engagement-model-evolution) below for the two-stage engagement-shape transition.
 
 > **How Accion Labs staffs the fractional allocation model**
 >

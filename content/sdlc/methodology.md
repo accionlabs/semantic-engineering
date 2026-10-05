@@ -12,9 +12,9 @@ audience:
   - chief-architect
 ---
 
-The Semantic Knowledge Graph is one of the [three sources of truth](process/_index.md#three-sources-of-truth) in the Semantic Engineering methodology, and captures the knowledge from the custodians - product owners, architects and UX designers. This page describes the four ontology layers in operational detail, the inclusion criterion that keeps them sustainable, how we partition and extract them, and the metrics framework that keeps them healthy.
+The Semantic Knowledge Graph is one of the [three sources of truth](process/_index.md#three-sources-of-truth) in the Semantic Engineering methodology, and captures the knowledge from the custodians: product owners, architects and UX designers. This page describes the four ontology layers in operational detail, the inclusion criterion that keeps them sustainable, how we partition and extract them, and the metrics framework that keeps them healthy.
 
-Frederick Brooks called the shared theory of a system its "design concept": the ephemeral understanding that everyone working on the system carries in their head. The graph is what that design concept looks like when it is made persistent and queryable rather than reconstructed in each conversation. The four layers below are the structure of the design concept; the aperture and governance sections that follow are the disciplines that keep the structure honest.
+Frederick Brooks called the shared theory of a system its "design concept": the ephemeral understanding that everyone working on the system carries in their head. The graph is what that design concept looks like when it is made persistent and queryable rather than reconstructed in each conversation. The four layers below are the structure of the design concept; the aperture and governance sections that follow are the disciplines that keep the structure sound.
 
 ## The Four-Layer Ontology
 

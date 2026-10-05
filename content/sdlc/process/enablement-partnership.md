@@ -116,7 +116,7 @@ Accion Labs's position is structurally distinctive. The firm that built the meth
 
 The enablement discipline is what allows the long-term engagement to be framed predictably. The client commits to an outcome (graph health metrics meeting thresholds, agent fleet operating reliably, rationalization findings flowing into the product roadmap) rather than to engineer-hours.
 
-The engagement frame shifts in two phases. Phase 1: effort-based engagement for fractional enablement roles. Phase 2: deliverable-based engagement for graph-health outcomes. Full treatment in [Engagement Model Evolution](team.md#engagement-models-evolution).
+The engagement frame shifts in two phases. Phase 1: effort-based engagement for fractional enablement roles. Phase 2: deliverable-based engagement for graph-health outcomes. Full treatment in [Engagement Model Evolution](team.md#engagement-model-evolution).
 
 > **How Accion Labs operationalizes the partnership**
 >
@@ -124,4 +124,4 @@ The engagement frame shifts in two phases. Phase 1: effort-based engagement for 
 
 ---
 
-[Team](team.md) covers the layered structure where the enablement roles sit beneath the custodianship layer. [Engagement Model Evolution](team.md#engagement-models-evolution) covers the engagement-shape shift the methodology enables. The parallel enablement frame for legacy modernization (which is bounded rather than continuous) is on [The Modernization Enablement Frame](../../modernization/process/enablement-frame.md).
+[Team](team.md) covers the layered structure where the enablement roles sit beneath the custodianship layer. [Engagement Model Evolution](team.md#engagement-model-evolution) covers the engagement-shape shift the methodology enables. The parallel enablement frame for legacy modernization (which is bounded rather than continuous) is on [The Modernization Enablement Frame](../../modernization/process/enablement-frame.md).

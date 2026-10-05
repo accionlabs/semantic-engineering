@@ -43,7 +43,7 @@ faqs:
     answer: "Most engagements begin with a two-day deep-dive workshop on the client's context, producing an adoption plan, an ontology draft, and a twelve-week roadmap. A pilot engagement follows, entering at the SDLC zone or modernization engagement mode that fits the client's current state. The phased rollout (SDD Adoption, SE Foundation, SE at Scale) extends over quarters to years depending on portfolio scope."
 ---
 
-Semantic Engineering is the methodology we developed at Accion Labs for running AI agents reliably inside enterprise software work. It treats the knowledge an agent needs as a queryable graph, constrains generation through that graph, and governs the graph through named ownership and validation gates so it stays honest as the work proceeds. The same principles apply whether the team is building new software, evolving live software, or modernizing legacy software.
+Semantic Engineering is the methodology we developed at Accion Labs for running AI agents reliably inside enterprise software work. It treats the knowledge an agent needs as a queryable graph, constrains generation through that graph, and governs the graph through named ownership and validation gates so it stays accurate as the work proceeds. The same principles apply whether the team is building new software, evolving live software, or modernizing legacy software.
 
 ![Semantic Engineering at a Glance](/diagrams/hero-semantic-engineering-at-a-glance.svg)
 
@@ -72,7 +72,7 @@ Semantic Engineering responds to the structural gap with four universal principl
 |---|---|
 | **Structured representation as the substrate** | Encode the knowledge the agent needs as a queryable graph with explicit nodes and relationships. The agent queries the graph for the slice each task needs. |
 | **Agent constraint through the graph** | Agents generate only against what the graph asserts. They cannot invent capabilities the graph does not contain. Generation is bounded by what is declared. |
-| **Named ownership of the substrate** | Each part of the graph has a named human custodian who is accountable for keeping it honest. Decay is treated as ownership failure, not a tooling problem. |
+| **Named ownership of the substrate** | Each part of the graph has a named human custodian who is accountable for keeping it accurate. Decay is treated as ownership failure, not a tooling problem. |
 | **Validation gates that produce machine-verifiable evidence** | Quality is enforced by gates that emit pass or fail evidence against the graph. The gates run automatically and produce artifacts the team can audit. |
 
 The principles are universal. The shape of the graph and the rhythm of the operating model differ by use case because the questions each use case asks are different. The next section shows how the same principles instantiate across the three use cases the enterprise portfolio actually contains.

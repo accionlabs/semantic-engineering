@@ -17,5 +17,7 @@ const root = document.getElementById('root')!;
 const app = <BrowserRouter><App /></BrowserRouter>;
 const page = pageByUrl(location.pathname);
 (page ? loadPage(page.key).catch(() => undefined) : Promise.resolve()).then(() => {
-  if (root.hasChildNodes()) hydrateRoot(root, app); else createRoot(root).render(app);
+  // An address with no page gets whatever the host serves for it, so render it afresh rather than hydrate.
+  if (page && root.hasChildNodes()) hydrateRoot(root, app);
+  else { root.replaceChildren(); createRoot(root).render(app); }
 });

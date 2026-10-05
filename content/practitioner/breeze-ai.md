@@ -154,7 +154,7 @@ Breeze.AI is licensed as part of the Accion Labs engagement.
 | Phase 2 (SE Foundation) | Full platform deployment for the first workstream |
 | Phase 3 (SE at Scale) | Full platform deployment across the portfolio |
 
-The engagement frame evolves over the lifecycle. See [Engagement Model Evolution](../sdlc/process/team.md#engagement-models-evolution). Early-stage engagements typically use an effort-based engagement with platform access included. Mature engagements move to a deliverable-based engagement where the platform plus the enablement hours plus the graph-health SLA are framed as an integrated outcome.
+The engagement frame evolves over the lifecycle. See [Engagement Model Evolution](../sdlc/process/team.md#engagement-model-evolution). Early-stage engagements typically use an effort-based engagement with platform access included. Mature engagements move to a deliverable-based engagement where the platform plus the enablement hours plus the graph-health SLA are framed as an integrated outcome.
 
 ---
 

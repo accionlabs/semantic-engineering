@@ -142,7 +142,7 @@ This difference reflects the difference between the two problems. Evolving an ap
 |---|---|
 | **Discovery and Analysis** | Agentic deep analysis of the existing source code and supporting artifacts. Comprehensive Analysis Report and migration recommendations. Detailed migration plan with target architecture and designs. MVP module identification. |
 | **Code Graph Generation and Enrichment** | Creation of the knowledge graph with automated ingestion of source code, target architecture, and designs into the graph database. Agentic enrichment of the knowledge graph. |
-| **MVP - 1 Identified Module (Iterative Migration)** | Customization and configuration of AI agents (frontend, backend, services) per migration requirements. Agent-driven migration of the MVP module. Architect and Product Owner feedback. Agent tuning for iterative improvement. |
+| **MVP: 1 Identified Module (Iterative Migration)** | Customization and configuration of AI agents (frontend, backend, services) per migration requirements. Agent-driven migration of the MVP module. Architect and Product Owner feedback. Agent tuning for iterative improvement. |
 | **Scaled Migration (Iterative Migration)** | Agent-driven migration and validation of remaining modules. Deployment and testing of migrated application code. Custodian feedback. Agent tuning for iterative improvement across the wider estate. |
 | **UAT and Deployment** | Deployment and UAT testing of migrated application code. Architect and Product Owner feedback. UAT fixes. Generation of technical documentation for the migrated application code. |
 
