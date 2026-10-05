@@ -8,6 +8,18 @@ import { scene06 } from './s06-four-layers';
 import { scene07 } from './s07-what-goes-in';
 import { scene08 } from './s08-keeping-accurate';
 import { scene09 } from './s09-two-kinds';
+import { scene10 } from './s10-specs-enough';
+import { scene11 } from './s11-state-of-work';
+import { scene12 } from './s12-spec-sprint';
+import { scene13 } from './s13-impact-analysis';
+import { scene14 } from './s14-coding-agents';
+import { scene15 } from './s15-checked';
+import { scene16 } from './s16-who-decides';
+import { scene17 } from './s17-managers-see';
+import { scene18 } from './s18-many-products';
+import { scene19 } from './s19-tech-debt';
+import { scene20 } from './s20-team';
+import { scene21 } from './s21-results';
 
 /** Every scene built so far, in script order. */
-export const DEFS: SceneDef[] = [scene01, scene02, scene03, scene04, scene05, scene06, scene07, scene08, scene09].sort((a, b) => a.n - b.n);
+export const DEFS: SceneDef[] = [scene01, scene02, scene03, scene04, scene05, scene06, scene07, scene08, scene09, scene10, scene11, scene12, scene13, scene14, scene15, scene16, scene17, scene18, scene19, scene20, scene21].sort((a, b) => a.n - b.n);
