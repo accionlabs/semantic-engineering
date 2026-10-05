@@ -10,11 +10,11 @@ resources/_gen/
 .claude/
 claude-code-setup-prompt.md
 
-# New app (site/, video/): dependencies, builds, local Worker state, renders
+# New site (new-site/): dependencies, builds, local Worker state, renders
 node_modules/
 dist/
 dist-*/
 .wrangler/
-video/renders/
-video/audio/vo/
-site/app/public/media/
+new-site/video/renders/
+new-site/video/audio/vo/
+new-site/site/app/public/media/
