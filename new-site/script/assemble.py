@@ -60,6 +60,9 @@ for slug, title in PARTS:
                     problems.append(f'scene {n} s{i}: {what}: {s[:90]}')
             if len(s.split()) > 34:
                 problems.append(f'scene {n} s{i}: {len(s.split())} words, long for a voice')
+        cited = [int(x) for x in re.findall(r'\(s(\d+)', board)] + [int(x) for x in re.findall(r'\bs(\d+)\b', board)]
+        if cited and max(cited) != len(sentences):
+            problems.append(f'scene {n}: storyboard beats run to s{max(cited)}, narration has {len(sentences)} sentences')
         scenes.append({'n': n, 'name': name, 'part': title, 'words': words, 'sentences': len(sentences), 'script': script.strip(), 'board': board.strip()})
 
 # ---------- script.md ----------
