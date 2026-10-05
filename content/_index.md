@@ -34,7 +34,7 @@ faqs:
   - question: "What languages and stacks does Semantic Engineering support?"
     answer: "The Breeze.AI platform currently parses TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl for brownfield extraction. ASIMOV extends to legacy-modernization stacks including COBOL on AS400, Delphi, ASP.NET Web Forms, VB.NET monoliths, Struts/Hibernate, and others. The methodology itself is language-agnostic; language coverage matters for the brownfield extraction step that builds the initial Code Ontology."
   - question: "Who maintains the knowledge graph day to day?"
-    answer: "Four named custodians, one per ontology layer. The Product Owner curates the Functional Ontology. The Architect curates the Architecture Ontology. The UX Designer curates the Design Ontology. The Engineering Team curates the Code Ontology. The Code Ontology updates as a side effect of every merge via the KG Sync Agent; the other three are curated during the spec sprint cadence."
+    answer: "Four named custodians, one per ontology layer. The Product Owner curates the Functional Ontology. The Architect curates the Architecture Ontology. The UX Designer curates the Design Ontology. The Engineering Team curates the Code Ontology. The KG Sync Agent updates the Code Ontology with every change, before the pull request merges, so the graph stays in step with the main branch; the other three are curated during the spec sprint cadence."
   - question: "How long does it take to extract a knowledge graph from an existing application?"
     answer: "For a 2M+ LOC application, full extraction of all four layers typically completes in two to three weeks. AST parsers cover the code, LLM enrichment adds the semantic metadata, browser-automation agents exercise the live UI for the Design layer, and existing documentation cross-validates the Architecture layer. The output is a populated graph plus a prioritized rationalization backlog of structural debt the extraction surfaces."
   - question: "How do validation gates affect developer velocity?"
@@ -91,7 +91,7 @@ Semantic Engineering responds to the structural gap with four universal principl
 | Principle | What it means |
 |---|---|
 | **Structured representation as the substrate** | Encode the knowledge the agent needs as a queryable graph with explicit nodes and relationships. The agent queries the graph for the slice each task needs. |
-| **Agent constraint through the graph** | Agents generate only against what the graph asserts. They cannot invent capabilities the graph does not contain. Generation is bounded by what is declared. |
+| **Agent constraint through the graph** | Every change is analyzed against the graph before code is written, and agents cannot ignore what the impact analysis finds. The graph holds the high-aperture structure of the application as it exists today; the specification describes each change, including its low-aperture details and any new scope. The graph governs how a change fits the application, and the specification remains the description of what to build. |
 | **Named ownership of the substrate** | Each part of the graph has a named human custodian who is accountable for keeping it accurate. Decay is treated as ownership failure, not a tooling problem. |
 | **Validation gates that produce machine-verifiable evidence** | Quality is enforced by gates that emit pass or fail evidence against the graph. The gates run automatically and produce artifacts the team can audit. |
 

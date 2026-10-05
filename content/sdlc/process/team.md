@@ -81,7 +81,7 @@ The team composition that delivers the methodology has two distinct categories: 
 |---|---|
 | Product Designer (evolved from BA) | Moves from business systems analysis to product mechanics; understands how products are built, not just what they should do. The Functional Ontology gives them a materialized view of every outcome already in the system. |
 | UX Designer | Ships working UI code with design-system primitives, anchored to the Design Ontology. AI generates reliable UI when fed component-level structure, which is what the Design Ontology provides. |
-| Solution Architect / Tech Lead | Owns architecture currency through the Architecture Ontology, which is updated on every merge by KG Sync. Architecture review moves from a quarterly event to a state that is always visible. |
+| Solution Architect / Tech Lead | Owns architecture currency through the Architecture Ontology, which KG Sync updates with every change before it merges. Architecture review moves from a quarterly event to a state that is always visible. |
 | Implementation Engineers | Higher leverage per engineer; work with AI agents inside the four-ontology governance frame. The implementation step compresses; the human review and integration step remains essential. |
 
 **Fractional allocation** applies to specialists who engage at trigger points across multiple workstreams.

@@ -12,7 +12,7 @@ import { GATE_X, Gate } from './s05-principles';
 // human, because what they know comes from conversations no agent can read.
 const REASONS: [typeof KINDS[number]['id'], string][] = [['functional', 'misses a required outcome'], ['design', 'duplicates a design component'], ['architecture', 'crosses a service boundary'], ['code', 'breaks what depends on it']];
 const INPUTS = ['customer calls', 'user research', 'vendor contracts', 'compliance decisions'];
-const MERGE = STATIONS[3];
+const PR = STATIONS[2]; // the pull request is reviewed here, before the gate
 
 export const scene08: SceneDef = {
   n: 8,
@@ -36,7 +36,7 @@ export const scene08: SceneDef = {
             <text x={GATE_X + 46} y={Y.flow + 79} fontFamily={F.sans} fontSize={18} fill={C.text}>{t}</text>
           </g>
         ))}
-        <line className="pre sync" x1={MERGE.x} y1={Y.flow - 38} x2={MERGE.x} y2={GY.code + 27} stroke={C.layer.code} strokeWidth={4} />
+        <line className="pre sync" x1={PR.x} y1={Y.flow - 38} x2={PR.x} y2={GY.code + 27} stroke={C.layer.code} strokeWidth={4} />
         <g className="pre blocked">
           <rect x={GATE_X - 30} y={Y.flow - 60} width={60} height={120} rx={8} fill="none" stroke={C.warn} strokeWidth={3} />
           <text x={GATE_X} y={Y.flow + 86} textAnchor="middle" fontFamily={F.mono} fontSize={14} fill={C.warn}>blocked</text>
@@ -58,7 +58,7 @@ export const scene08: SceneDef = {
         <g className="pre approve"><circle cx={COL.design + 34} cy={Y.person - 30} r={12} fill={C.pass} /><path d={`M${COL.design + 28} ${Y.person - 30} l4 5 l8 -10`} stroke={C.canvas} strokeWidth={3} fill="none" /></g>
       </Svg>
       <Callout className="pre co-gate" x={150} y={570} w={520} kind="PR Validation Agent" text="Checks every pull request before it merges" tone={C.text} anchor={{ x: GATE_X - 10, y: Y.flow }} target="agent.pr-validation" />
-      <Callout className="pre co-sync" x={1180} y={570} w={500} kind="KG Sync Agent" text="Updates the graph on every merge" tone={C.layer.code} target="agent.kg-sync" />
+      <Callout className="pre co-sync" x={1180} y={570} w={500} kind="KG Sync Agent" text="Updates the graph before the pull request merges" tone={C.layer.code} target="agent.kg-sync" />
       <Callout className="pre chip-health" x={1080} y={568} w={600} kind="The health of the graph" text="29 metrics · 14 verification checks" tone={C.text} target="fig.health" />
       <Callout className="pre co-blocked" x={1180} y={570} w={520} kind="Most critical checks" text="A failure blocks the merge until it is fixed" tone={C.warn} target="governance.p0" />
       <Callout className="pre co-human" x={680} y={572} w={560} kind="The four custodians" text="Stay human" tone={C.text} target="custodians.human" />

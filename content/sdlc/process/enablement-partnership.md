@@ -98,7 +98,7 @@ The engagement principles above frame Accion Labs's role across the partnership.
 
 At [Zone 4](../zones/_index.md#zone-4-se-at-scale), the agent fleet becomes a second asset class that needs custodianship. The client's Engineering Team's role evolves to absorb this: they continue to be the custodian of the Code Ontology, and they also become the custodian of the agents that operate on the graph.
 
-The agent-custodial span runs from Impact Analysis through PR Validation: the four agents where developer judgment is on the loop even when the agents are autonomous. Specification (PO authors via the Functional Ontology) is upstream of the span. KG Sync (automatic post-merge) is downstream. The Engineering Team's day-to-day in this mode includes:
+The agent-custodial span runs from Impact Analysis through PR Validation: the four agents where developer judgment is on the loop even when the agents are autonomous. Specification (PO authors via the Functional Ontology) is upstream of the span. KG Sync (automatic, before each merge) is downstream. The Engineering Team's day-to-day in this mode includes:
 
 - Approving Promotion Agreements that move agents to higher autonomy levels
 - Reviewing the agent audit trail on a defined cadence

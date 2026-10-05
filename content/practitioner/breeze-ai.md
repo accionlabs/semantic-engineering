@@ -20,7 +20,7 @@ The platform that operationalizes Semantic Engineering for SDLC engagements. The
 
 Breeze.AI carries the name of an earlier framework. The original **Breeze** was published in 2017 as a manual blueprint that codified the minimal governance structure for product owners, architects, and UX designers. It worked but was operationally heavy. Maintaining the artifacts across hundreds of engagements required continuous coordination, and senior practitioners often skipped them under deadline pressure.
 
-Breeze.AI is what Breeze became once AI could do the maintenance work humans had been doing by hand. The role-governance discipline that the 2017 framework codified is preserved in the four-layer ontology. The maintenance burden that defeated the manual version is now handled by the agent fleet, with the KG Sync Agent keeping the graph current on every merge and the verification suite gating every commit. See [Origins](../about/origins.md) for the full convergence story.
+Breeze.AI is what Breeze became once AI could do the maintenance work humans had been doing by hand. The role-governance discipline that the 2017 framework codified is preserved in the four-layer ontology. The maintenance burden that defeated the manual version is now handled by the agent fleet, with the KG Sync Agent updating the graph with every change before it merges and the verification suite gating every commit. See [Origins](../about/origins.md) for the full convergence story.
 
 ## What Breeze.AI Implements
 
@@ -52,7 +52,7 @@ The platform exposes three distinct interfaces, each sized for a different user.
 |---|---|---|
 | **WebUI** at `ai.accionbreeze.com` | Product Owners, Architects, UX Designers, Compliance and Audit reviewers | Visual graph editor, four chat surfaces (one per ontology), document upload, ndjson upload for code, project administration. No IDE setup required. |
 | **Claude Code plugin** (`breeze`) | Engineering Teams working in their IDE | The full set of `/breeze:*` slash commands, ontology-aware MCP tools, and the PreToolUse hooks that enforce ontology rules at write time. Distributed through the `breezeai-claude-plugin` marketplace. |
-| **Code Ontology CLI** with an API key | CI jobs, batch indexers, headless contexts | Programmatic graph access where no browser is available for OAuth. Used by CI pipelines that re-ingest the graph on every merge. |
+| **Code Ontology CLI** with an API key | CI jobs, batch indexers, headless contexts | Programmatic graph access where no browser is available for OAuth. Used by CI pipelines that re-ingest the graph on every pull request, before it merges. |
 
 The same four-layer graph backs all three. A Product Owner working in the WebUI and an engineer working in Claude Code see the same nodes, the same citations, and the same validation state.
 

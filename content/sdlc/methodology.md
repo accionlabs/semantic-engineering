@@ -94,7 +94,7 @@ The Code Ontology is the layer that exposes whether the engineering team has the
 
 The Code Ontology bridges the Architecture Ontology and the implementation surface. Each File node carries a module attribution that links it to a Service node in the Architecture Ontology. Each API Endpoint node carries a route signature that links it to an API Gateway contract. Each Function node carries call-graph edges that let the Impact Analysis Agent trace a Functional Action down to the specific lines that implement it. The captured statement bodies are what make the impact analysis precise rather than approximate: the agent reads behavior, not just structure.
 
-The Code Ontology is extracted by AST parsers across the supported language set (currently TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl). The parsers run on every merge to master, so the Code Ontology stays current as a side effect of the implementation sprint cadence covered in [Implementation Sprint](process/implementation-sprint.md).
+The Code Ontology is extracted by AST parsers across the supported language set (currently TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl). The parsers run on every pull request before it merges to the main branch, so the Code Ontology stays in step with the main branch as a side effect of the implementation sprint cadence covered in [Implementation Sprint](process/implementation-sprint.md).
 
 ### Citations at Every Layer
 
@@ -219,7 +219,7 @@ The aperture never reaches maximum width. The mature graph is the one where the 
 
 The default is exclusion. Elements that should have been included will surface when their changes start cascading without graph governance, and the team can add them then with the evidence to justify inclusion.
 
-The code stays the single source of truth for what the code does. The graph holds only high-aperture elements, and points an agent to the code elements that matter for a change, so the agent reads those directly instead of searching the whole codebase.
+The code stays the single source of truth for what the code does. The graph holds only high-aperture elements; low-aperture details live in the specifications and the code. The graph points an agent to the code elements that matter for a change, so the agent reads those directly instead of searching the whole codebase.
 
 ## Partition by Product
 
@@ -364,7 +364,7 @@ The metrics framework is what makes the knowledge graph a sustainable asset rath
 
 ### Paying Down Technical Debt
 
-Agents that write code quickly can also add technical debt quickly. The graph gives the team a way to reduce debt inside ordinary work. The graph can record the target state the enterprise has decided on as well as the current one: for example, a new authorization service that some products have not adopted yet. When a change touches an area with a recorded target, the agent looks up the target, and the change can move the code toward it while the feature is being built. The debt is paid down a piece at a time, in the work that touches it.
+Agents that write code quickly can also add technical debt quickly. The graph gives the team a way to reduce debt inside ordinary work. An enterprise often decides on a target that some products have not reached yet: for example, a new authorization service that some products have not adopted. When a change touches that area, the agent looks up the target, and the change can move the code toward it while the feature is being built. The graph records the code as it is, so the debt that remains stays visible to impact analysis. The debt is paid down a piece at a time, in the work that touches it.
 
 > **How Accion Labs operationalizes graph operation**
 >

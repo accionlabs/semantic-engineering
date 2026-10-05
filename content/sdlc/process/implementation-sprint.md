@@ -11,7 +11,7 @@ audience:
   - tech-lead
 ---
 
-The implementation sprint consumes the impact-analyzed specifications produced by the [Spec Sprint](spec-sprint.md) and runs them through the per-change SDLC flow. Each change moves left-to-right through the agent fleet under structural validation. The Code Ontology stays current as a side effect of every merge.
+The implementation sprint consumes the impact-analyzed specifications produced by the [Spec Sprint](spec-sprint.md) and runs them through the per-change SDLC flow. Each change moves left-to-right through the agent fleet under structural validation. The Code Ontology stays in step with the main branch, because it is updated with every change before the change merges.
 
 ## The Per-Change SDLC Flow
 
@@ -42,7 +42,7 @@ The flow uses all three sources of truth (covered in [Three Sources of Truth](_i
 | Spec correlated to ticket | Ticket system | Which workstream is this part of? Which team owns it? When is it scheduled? |
 | Impact analysis | Knowledge graph | What will this change touch across all four layers? |
 | Code generated and validated | All three | Implementation against the spec, validated against the graph, tracked in the ticket |
-| Post-merge sync | Knowledge graph | The graph now reflects the change. Future impact analyses operate against the new state. |
+| Sync before merge | Knowledge graph | The graph reflects the change by the time it merges. Future impact analyses operate against the new state. |
 
 After the change is merged, the same Impact Analysis Agent can rerun the analysis against the new state of the knowledge graph and compare the post-implementation reality against the pre-implementation specification. The three sources of truth, used together, are what make that comparison meaningful.
 
@@ -58,7 +58,7 @@ The ticket system, Jira for example, holds the state of every change from start 
 | Code is written | Impact analysis can run again to check the code against the predicted impact, and the result is attached |
 | Testing | Acceptance tests generated from the Functional Ontology are attached and run |
 | Pull request | The PR Validation Agent reconciles the change with the impact report; a mismatch goes to a person for review |
-| Merge | The final impact analysis uses the whole history of the ticket, and the KG Sync Agent updates the graph |
+| Before merge | The KG Sync Agent updates the graph to match the change, and the final impact analysis uses the whole history of the ticket |
 
 Each step updates the ticket's status, so managers see the work of people and agents in the place they already look. The agents do not prescribe the workflow between these steps; each team designs it to fit its own process.
 

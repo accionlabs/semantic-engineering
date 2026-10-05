@@ -75,7 +75,7 @@ export const scene07: SceneDef = {
       <Callout className="pre co-aperture" x={1240} y={570} w={480} kind="The aperture" text="The rule for what enters the graph" tone={C.text} target="aperture" />
       <Callout className="pre co-blast" x={560} y={570} w={800} kind="Blast radius" text="What else has to change when this decision changes" tone={C.warn} target="aperture.blast-radius" />
       <Callout className="pre co-in" x={1240} y={570} w={420} kind="Wide blast radius" text="Belongs in the graph" tone={C.pass} target="aperture.include" />
-      <Callout className="pre co-out" x={1240} y={570} w={420} kind="Affects nothing else" text="Stays in the code" tone={C.muted} target="aperture.exclude" />
+      <Callout className="pre co-out" x={1240} y={570} w={420} kind="Affects nothing else" text="Stays in the specification and the code" tone={C.muted} target="aperture.exclude" />
       <Callout className="pre co-unsure" x={1240} y={570} w={420} kind="Unclear" text="Stays out until the team is sure" tone={C.muted} target="aperture.default-exclude" />
       <Callout className="pre co-wider" x={150} y={570} w={420} kind="Over time" text="The aperture widens as confidence grows" tone={C.text} target="aperture.matures" />
       <Callout className="pre chip-8min" x={1080} y={568} w={680} kind="One impact analysis query, 1.6 million line application" text="About eight minutes" tone={C.text} target="fig.impact-8-min" />

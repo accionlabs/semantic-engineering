@@ -10,7 +10,7 @@ import { C, F, KINDS } from '../theme';
 // agent asks the graph for what it needs and builds only what it describes; each layer has an owner;
 // a gate checks every change and records the result.
 export const GATE_X = 1380;
-const SLOTS = ['Knowledge graph', 'Build only what the graph describes', 'Named ownership', 'Validation gates'];
+const SLOTS = ['Knowledge graph', 'Impact analysis on every change', 'Named ownership', 'Validation gates'];
 const SLOT_Y = 806;
 const QUERY: [typeof KINDS[number]['id'], number][] = [['functional', 2], ['design', 3], ['architecture', 2], ['code', 1]];
 
@@ -37,10 +37,16 @@ export const scene05: SceneDef = {
         </g>
         <g className="bottom"><Flow agent /><AgentIcon x={AGENT.x} y={AGENT.y} /></g>
         <line className="pre query" x1={AGENT.x} y1={AGENT.y - 20} x2={item('code', 1).x} y2={item('code', 1).y} stroke={C.text} strokeWidth={3} />
-        <g className="pre outside">
-          <circle cx={1600} cy={600} r={14} fill="none" stroke={C.warn} strokeWidth={2.5} strokeDasharray="5 4" />
-          <path d="M1590 590 l20 20 M1610 590 l-20 20" stroke={C.warn} strokeWidth={2.5} />
-          <line x1={AGENT.x + 20} y1={AGENT.y - 10} x2={1586} y2={604} stroke={C.warn} strokeWidth={1.5} strokeDasharray="4 5" />
+        <g className="pre report">
+          <rect x={AGENT.x + 40} y={Y.flow - 110} width={150} height={40} rx={6} fill={C.canvasRaised} stroke={C.text} strokeWidth={1.5} />
+          <text x={AGENT.x + 115} y={Y.flow - 84} textAnchor="middle" fontFamily={F.mono} fontSize={14} fill={C.text}>impact report</text>
+          <line x1={AGENT.x + 60} y1={Y.flow - 70} x2={AGENT.x + 12} y2={AGENT.y - 18} stroke={C.text} strokeWidth={1.5} />
+        </g>
+        <g className="pre spec">
+          <rect x={150} y={572} width={300} height={70} rx={8} fill={C.canvasRaised} stroke={C.card} strokeWidth={2} />
+          {[0, 1, 2].map((r) => <rect key={r} x={168} y={588 + r * 14} width={r === 2 ? 120 : 200} height={6} rx={3} fill={C.card} />)}
+          <text x={470} y={600} fontFamily={F.sans} fontSize={20} fill={C.text}>Specification: what to build, with every detail</text>
+          <text x={470} y={630} fontFamily={F.sans} fontSize={20} fill={C.muted}>Knowledge graph: how the change fits the application</text>
         </g>
         <Gate className="pre" />
         <g className="pre change"><rect className="chg" x={AGENT.x + 40} y={Y.flow + 44} width={36} height={18} rx={4} fill={C.text} /></g>
@@ -92,20 +98,24 @@ export const scene05: SceneDef = {
     tl.fromTo(q('.query'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 0.8 }, s3 + 0.2);
     QUERY.forEach(([k, i], n) => tl.to(q(`.node-${k}-${i} circle`), { attr: { r: 12 }, duration: 0.3 }, s3 + 0.9 + n * 0.2));
     appear(ctx, '.co-part', s3 + 1.0);
-    // s4: agents build only what the graph describes; an invented item does not take.
-    const s4 = cue('constrain', 's3');
+    // s4: every change is analyzed against the graph, and the agent cannot ignore what it finds.
+    const s4 = cue('analysis', 's3');
     vanish(ctx, '.co-part, .query', s4);
-    QUERY.forEach(([k, i]) => tl.to(q(`.node-${k}-${i} circle`), { attr: { r: 7 }, duration: 0.3 }, s4));
-    appear(ctx, '.outside', s4 + 0.4, { y: 0 });
-    vanish(ctx, '.outside', s4 + 3.2);
+    QUERY.forEach(([k, i]) => tl.to(q(`.node-${k}-${i} circle`), { attr: { r: 7 }, duration: 0.3 }, s4 + 1.6));
+    appear(ctx, '.report', s4 + 0.4);
     fill(1, s4 + 0.8);
+    // s5: the specification still describes what to build; the graph governs how it fits.
+    const s5spec = cue('specification', 's4');
+    vanish(ctx, '.report', s5spec);
+    appear(ctx, '.spec', s5spec + 0.2);
     // s5: each layer is tied to its custodian.
-    const s5 = cue('ownership', 's4');
+    const s5 = cue('ownership', 's5');
+    vanish(ctx, '.spec', s5);
     tl.to(q('.top'), { opacity: 1, duration: 0.4 }, s5);
     KINDS.forEach((k, i) => appear(ctx, `.tie-${k.id}`, s5 + 0.2 + i * 0.3, { y: 0 }));
     fill(2, s5 + 0.8);
     // s6: a layer falls out of date; its owner brings it back.
-    const s6 = cue('decay', 's5');
+    const s6 = cue('decay', 's6');
     tl.to(q('.band-design .band-rect'), { attr: { stroke: C.card }, duration: 0.5 }, s6 + 0.2);
     tl.to(q('.band-design .node'), { opacity: 0.3, duration: 0.5 }, s6 + 0.2);
     tl.to(q('.tie-design line'), { attr: { 'stroke-width': 5 }, duration: 0.4 }, s6 + 1.4);
@@ -114,12 +124,12 @@ export const scene05: SceneDef = {
     tl.to(q('.tie-design line'), { attr: { 'stroke-width': 2 }, duration: 0.4 }, s6 + 3.0);
     appear(ctx, '.co-owner', s6 + 0.6);
     // s7: a validation gate on the flow.
-    const s7 = cue('gate', 's6');
+    const s7 = cue('gate', 's7');
     vanish(ctx, '.co-owner', s7);
     appear(ctx, '.gate', s7 + 0.2);
     fill(3, s7 + 0.6);
     // s8: a change passes the gate and leaves evidence.
-    const s8 = cue('evidence', 's7');
+    const s8 = cue('evidence', 's8');
     appear(ctx, '.change', s8);
     tl.to(q('.chg'), { attr: { x: GATE_X - 18 }, duration: 1.2, ease: 'power1.inOut' }, s8 + 0.2);
     appear(ctx, '.pass', s8 + 1.4);

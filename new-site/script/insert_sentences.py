@@ -5,8 +5,8 @@ import json, re, sys
 path, scene, after = sys.argv[1], sys.argv[2], int(sys.argv[3])
 items = json.loads(sys.argv[4])
 s = open(path).read()
-a = s.index(f'### Scene {scene}:')
-b = s.find('\n### ', a + 10); b = len(s) if b < 0 else b
+a = s.index('## Overview') if scene == '0' else s.index(f'### Scene {scene}:')
+b = s.find('\n### Notes', a) if scene == '0' else s.find('\n### ', a + 10); b = len(s) if b < 0 else b
 part = s[a:b]
 # narration
 m = re.search(r'^> (.*)$', part, re.M)

@@ -55,7 +55,7 @@ The SDLC agent fleet is the runtime layer that turns the four-layer knowledge gr
 | Impact Analysis Agent | Pre and post implementation analysis of changes | Spec, ticket system, knowledge graph | Markdown impact report (adjunct to the spec) |
 | PR Validation Agent | Gate every merge against all four ontologies | Knowledge graph, PR diff | Merge gate (pass or fail) |
 | BDD Generation Agent | Generate test scenarios from the Functional Ontology | Functional Ontology | Test suite files |
-| KG Sync Agent | Update the graph on every merge | Merged code, design files, spec changes | Knowledge graph nodes and edges |
+| KG Sync Agent | Update the graph with every change, before it merges | Merged code, design files, spec changes | Knowledge graph nodes and edges |
 | Extraction Agents | Initial brownfield extraction of each ontology layer | Existing code, design files, runtime behavior | Knowledge graph (one agent per ontology layer) |
 | Cross-Product Impact Extension | Cross-product impact analysis when changes span products | Multiple product graphs | Markdown impact report |
 | Portfolio Rationalization Agent | Quarterly cross-product duplication and dead-capability detection | All product graphs | Rationalization findings backlog |
@@ -145,7 +145,7 @@ The pre-implementation report is the input the spec sprint review uses to decide
 
 ### Post-Implementation Mode
 
-When the implementation is merged to the master branch, the same agent reruns the analysis on the actual code change and compares the post-implementation impact with the pre-implementation prediction. The comparison answers three questions automatically.
+When the implementation is complete, before the pull request merges, the same agent reruns the analysis on the actual code change and compares the post-implementation impact with the pre-implementation prediction. The comparison answers three questions automatically.
 
 | Question | What it surfaces |
 |---|---|
@@ -172,7 +172,7 @@ One change can be analyzed several times on its way to production.
 | The specification is written | The custodians review the predicted impact in the spec sprint and refine the specification |
 | Code is written, before the pull request | The team checks that the code matches the impact the specification predicted |
 | The pull request is raised | The PR Validation Agent compares the change with the predicted impact |
-| The change is merged | Post-implementation mode compares the final change with the prediction, using the whole history of the change |
+| Before the change merges | Post-implementation mode compares the final change with the prediction, using the whole history of the change |
 
 ### A Worked Example
 
@@ -373,22 +373,22 @@ For non-functional testing, the team continues to use the same patterns they use
 
 ## The KG Sync Agent
 
-The agent that prevents the methodology from degrading into a stale documentation artifact. On every PR merge, the KG Sync Agent updates the knowledge graph to reflect the new code, the new design references, and the new architectural relationships the change has introduced.
+The agent that prevents the methodology from degrading into a stale documentation artifact. With every pull request, before it merges, the KG Sync Agent updates the knowledge graph to reflect the new code, the new design references, and the new architectural relationships the change has introduced.
 
 Drift is what kills knowledge artifacts. Text documentation drifts because humans do not update it under deadline pressure. The Functional, Design, and Architecture ontologies would drift the same way if humans had to maintain them by hand. The KG Sync Agent removes the human-maintenance dependency. The graph stays current because the agent keeps it current automatically, every commit.
 
 ### What the Sync Touches
 
-The agent updates each of the four ontology layers based on what the merge introduced.
+The agent updates each of the four ontology layers based on what the change introduces.
 
 | Ontology | What sync updates |
 |---|---|
 | Code | Function additions, removals, signature changes; class hierarchy changes; new modules; endpoint changes; database schema migrations |
 | Architecture | Service additions; new integration points; modified bounded-context boundaries (with custodianship approval); infrastructure topology changes |
 | Design | Component additions and removals; design system primitive updates; Figma reference updates |
-| Functional | New scenarios introduced when the merge implements a new user story; action signature changes |
+| Functional | New scenarios introduced when the change implements a new user story; action signature changes |
 
-The Code Ontology is the highest-frequency update. Every merge changes code. The other three layers update less frequently, only when the merge introduces structural changes at those layers.
+The Code Ontology is the highest-frequency update. Every change touches code. The other three layers update less frequently, only when the change introduces structural changes at those layers.
 
 ### The Update Flow
 
@@ -405,13 +405,13 @@ The KG Sync Agent runs automatically for routine updates. Three categories of ch
 | Modified relationship type between ontologies | Chief Architect | Cross-layer relationships are structurally consequential |
 | Cross-product integration point added or removed | Ontology Maintainer plus Chief Architect | Cross-product changes affect the Cross-Product Impact Extension's reasoning |
 
-Routine updates (functions, methods, components within an existing structure) sync automatically and become part of the graph within seconds of the merge.
+Routine updates (functions, methods, components within an existing structure) sync automatically and become part of the graph within seconds, before the pull request merges.
 
 ### Why Sync Must Be Continuous
 
-A team that runs sync on a quarterly cadence rather than on every merge has lost the benefit of the methodology. Within one quarter, the graph drifts far enough that the Impact Analysis Agent's outputs become unreliable. The team starts working around the impact analysis. The custodianship discipline erodes. Within two quarters, the team is operating at Zone 2 again, with a stale graph as an additional maintenance burden rather than an asset.
+A team that runs sync on a quarterly cadence rather than with every change has lost the benefit of the methodology. Within one quarter, the graph drifts far enough that the Impact Analysis Agent's outputs become unreliable. The team starts working around the impact analysis. The custodianship discipline erodes. Within two quarters, the team is operating at Zone 2 again, with a stale graph as an additional maintenance burden rather than an asset.
 
-Our commitment to per-merge sync is what distinguishes Semantic Engineering from the earlier knowledge graph initiatives that failed because the maintenance cost outpaced the value.
+Our commitment to per-change sync is what distinguishes Semantic Engineering from the earlier knowledge graph initiatives that failed because the maintenance cost outpaced the value.
 
 ### Failure Modes
 
@@ -419,14 +419,14 @@ Two failure modes we handle explicitly.
 
 | Failure mode | What it looks like | Response |
 |---|---|---|
-| Sync produces an invalid graph state | A P0 verification check fails on the post-merge graph | The merge is reverted; the team investigates the structural issue before re-attempting |
-| Sync falls behind | The sync queue grows because merges are happening faster than the agent can process | The Ontology Maintainer is paged; the agent's processing capacity is reviewed and increased |
+| Sync produces an invalid graph state | A P0 verification check fails on the updated graph | The pull request does not merge; the team investigates the structural issue before re-attempting |
+| Sync falls behind | The sync queue grows because changes are arriving faster than the agent can process | The Ontology Maintainer is paged; the agent's processing capacity is reviewed and increased |
 
-Sync falling behind is rare in practice. Per-merge sync on a 1.6M LOC application typically completes in seconds. The capacity ceiling has not been hit in production engagements.
+Sync falling behind is rare in practice. Per-change sync on a 1.6M LOC application typically completes in seconds. The capacity ceiling has not been hit in production engagements.
 
 > **How Accion Labs operationalizes the KG Sync Agent**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the KG Sync Agent as part of the client's CI/CD pipeline. Sync is triggered automatically on every merge to master. The Ontology Maintainer from the Accion Labs engagement team owns the agent's operational health.
+> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the KG Sync Agent as part of the client's CI/CD pipeline. Sync is triggered automatically on every pull request, before it merges, so the graph stays in step with the main branch. The Ontology Maintainer from the Accion Labs engagement team owns the agent's operational health.
 
 ## Progressive Autonomy
 
