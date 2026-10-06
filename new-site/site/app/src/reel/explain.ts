@@ -307,6 +307,7 @@ export const checkExplain = (code: string): Result => {
   }
   if (!caveats) warn(last, 'the explanation names no limit. Add at least one "caveat", so the person sees where the method stops.');
   if (!trunkAnswered) warn(last, 'the short explanation has no "answer". End it with the guide answering the question in one or two sentences.');
+  if (!plan.branches.length) warn(last, 'the explanation offers no deep dives. Add two to four with "branch", so the person can choose where to go deeper.');
   const dedupe = (segs: Segment[]) => segs.filter((x, i, all) => !(i > 0 && sameClip(all[i - 1], x)));
   const total = (segs: Segment[]) => segs.reduce((t, x) => t + x.seconds, 0);
   const mins = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;

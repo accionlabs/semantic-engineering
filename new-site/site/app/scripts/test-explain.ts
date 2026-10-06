@@ -56,6 +56,7 @@ const CASES: Case[] = [
   { name: 'a deep dive reuses what the short explanation showed', code: X('show knowledge-graph') + '\nbranch "Sync"\nshow kg-sync', ok: true, expect: [] },
   { name: 'a symptom in a deep dive is addressed there or in the short explanation', code: X('show pr-validation') + '\nbranch "Why it breaks"\nshow boundary-violations', ok: true },
   { name: 'an owner for an unowned layer belongs in the short explanation', code: ['explain "Nobody keeps our architecture current."', '  context brownfield', '  unowned architecture', 'show documentation-decays', 'show kg-sync', 'caveat graph-not-a-spec', 'answer "A."', 'branch "Owners"', 'show named-ownership'].join('\n'), ok: false, expect: [{ line: 9, includes: 'in the short explanation' }] },
+  { name: 'no deep dives is a warning', code: X('show impact-analysis'), ok: true, expect: [{ line: A + 2, includes: 'offers no deep dives', severity: 'warning' }] },
   { name: 'shows nothing from the film', code: 'explain "Q"\n  context brownfield\nanswer "A."', ok: false, expect: [{ line: 3, includes: 'shows nothing from the film' }] },
 ];
 
