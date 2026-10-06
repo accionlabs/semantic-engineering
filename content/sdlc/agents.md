@@ -96,7 +96,7 @@ The same pattern applies to other requests. The orchestrator decides which agent
 
 The fleet does not generate code without human-in-the-loop. The target state is "stop writing code, only write agents", but in the current state the implementation engineers still consume the impact-analyzed spec and produce code (with AI assistance, often Claude Code or Cursor). The fleet provides the structured context that makes that code reliable.
 
-The fleet does not modify the knowledge graph based on the agent's own inference without human approval. The Extraction Agents propose graph updates; the Ontology Maintainer approves them. The KG Sync Agent updates the Code Ontology automatically from merged code, but structural changes to the ontology shape (adding a new entity type, changing a relationship type) require Chief Architect approval.
+The fleet does not modify the knowledge graph based on the agent's own inference without human approval. The Extraction Agents propose graph updates; the Ontology Maintainer approves them. The KG Sync Agent updates the Code Ontology automatically from the code in each pull request before it merges, but structural changes to the ontology shape (adding a new entity type, changing a relationship type) require Chief Architect approval.
 
 The fleet does not run unattended at autonomy levels beyond what the [Progressive Autonomy](#progressive-autonomy) discipline has authorized for a specific agent class. New agents start at the lowest autonomy level and earn higher autonomy levels through demonstrated evidence.
 

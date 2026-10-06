@@ -29,7 +29,7 @@ The justification for separating spec authorship into its own sprint cycle scale
 | Owner | Product Owner |
 | Participants | The four ontology custodians: Product Owner, Architect, UX Designer, and Engineering Team representative (typically a tech lead). Each contributes the slice that maps to their ontology layer |
 | Spec sprint backlog | Pending change requests, maintained in Linear, Jira, or an equivalent tool. Distinct from the implementation backlog |
-| Output | Two artifacts per change request: a well-formed specification, and any knowledge graph updates the change requires |
+| Output | Two artifacts per change request: a well-formed specification, and the impact report. Any new items the change requires are recorded in the specification; they enter the knowledge graph only when the code that implements them merges |
 | Cadence | One or two spec sprints ahead of the corresponding implementation sprint, depending on the complexity of the workstream |
 | Implementation handoff | Refined specs land in the implementation sprint backlog (Jira or equivalent). Pushed-back specs return to the spec sprint backlog |
 
@@ -47,9 +47,9 @@ The spec sprint is structured around the Impact Analysis Agent. The agent provid
 | 2. Author the draft spec | Product Owner writes a candidate spec using the standard template (title, acceptance criteria, out-of-scope items, brief "why now") |
 | 3. Run pre-implementation Impact Analysis | The agent traverses the four-layer graph and produces the impact report |
 | 4. Review the impact report across all four layers | All four custodians review together. The product owner anchors the persona/outcome. The architect approves boundaries and integration contracts. The UX designer names the components. The engineering team verifies code touchpoints and flags refactor candidates. |
-| 5. Update the graph where the change requires new nodes | New personas in Functional Ontology, new services in Architecture Ontology, new design primitives in Design Ontology, refactor flags in Code Ontology. The graph stays current as a side effect of the sprint. |
+| 5. Record the new items the change requires | New personas, services, design primitives or refactor candidates are written into the specification as proposed items, each reviewed by the custodian of its layer. The knowledge graph represents what is in the main branch, so the proposed items enter it when their code merges, through the KG Sync Agent. |
 | 6. For cross-product changes, run the cross-product extension | The Cross-Product Impact Extension consults the additional product graphs and surfaces the cross-product reconciliations needed |
-| 7. Produce the final spec | Validated against the now-current knowledge graph, with the impact report attached as a markdown adjunct. The spec lands in the implementation sprint backlog (Jira or equivalent). |
+| 7. Produce the final spec | Validated against the knowledge graph, with the proposed new items listed and the impact report attached as a markdown adjunct. The spec lands in the implementation sprint backlog (Jira or equivalent). |
 
 The final spec plus the impact report is what the implementation sprint consumes. The implementation sprint does not run impact analysis on the spec it receives, because it has already been done.
 
@@ -75,7 +75,7 @@ The spec sprint cadence is most consequential at the higher zones, where the fou
 |---|---|---|
 | Small greenfield team, single product, single repo, no cross-team dependencies, one person can hold the full context | Not yet | The conventional sprint cadence with spec authorship at the start works. A separate cadence adds overhead without payback. |
 | SDD team with single product growing past one person's capacity, early ceiling signals appearing | Yes, in lighter form | Four-role human review running ahead of implementation. No graph, no Impact Analysis Agent, no four-ontology gates. See [Spec Sprint Cadence as a Zone 2 Best Practice](../zones/zone-2-spec-driven-development.md#spec-sprint-cadence-as-a-zone-2-best-practice). |
-| Single product crossed into multi-team coordination, brownfield reality, agent-assisted development at scale | Yes, in full SE form | Spec sprint produces impact-analyzed specs plus refreshed knowledge graph. Agent participation included. |
+| Single product crossed into multi-team coordination, brownfield reality, agent-assisted development at scale | Yes, in full SE form | Spec sprint produces impact-analyzed specifications, with any new graph items proposed in them. Agent participation included. |
 | Multi-product portfolio with cross-product integration points, multiple custodian groups | Yes, full SE form plus cross-product reconciliation | The spec sprint becomes the most consequential coordination meeting on the engineering calendar. |
 
 A team should adopt the lighter Zone 2 form when the SDD ceiling starts producing signals, and graduate to the full SE form when the complexity crosses the threshold described in [Zones of AI-Assisted SDLC](../zones/_index.md). The two-form framing avoids both the wasted overhead of adopting the full SE structure too early and the cost of deferring the cadence discipline until complexity has clearly overwhelmed the team.

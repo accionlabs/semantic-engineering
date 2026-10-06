@@ -188,13 +188,13 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,132,42)">
-                <g transform="matrix(1,0,0,1,-45.413,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);">drafts spec, proposes</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">drafts spec, names</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,132,56)">
-                <g transform="matrix(1,0,0,1,-60.47,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);">Functional Ontology updates</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">new functional items</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,132,78)">
@@ -221,8 +221,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,132,56)">
-                <g transform="matrix(1,0,0,1,-63.898,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);">Architecture Ontology updates</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">new architecture items</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,132,78)">
@@ -249,8 +249,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,132,56)">
-                <g transform="matrix(1,0,0,1,-53.34,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);">Design Ontology updates</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">new design items</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,132,78)">
@@ -305,17 +305,17 @@
     <g transform="matrix(1,0,0,1,440,420)">
         <path d="M320,5L320,33C320,35.76 317.76,38 315,38L5,38C2.24,38 0,35.76 0,33L0,5C0,2.24 2.24,0 5,0L315,0C317.76,0 320,2.24 320,5Z" style="fill:var(--se-accent-fill,#FDE8DD);stroke:var(--se-accent,#E94E1B);stroke-width:1.5px;"/>
         <g transform="matrix(1,0,0,1,160,17)">
-            <g transform="matrix(1,0,0,1,-69.975,0)">
-                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);">Knowledge Graph updated</text>
+            <g transform="matrix(1,0,0,1,0,0)">
+                <text x="0px" y="0px" style="font-family:'Helvetica-Bold', 'Helvetica';font-weight:700;font-size:11px;fill:var(--se-accent,#E94E1B);text-anchor:middle;">Impact report + specification</text>
             </g>
         </g>
         <g transform="matrix(1,0,0,1,160,31)">
             <g>
-                <g transform="matrix(1,0,0,1,-125.303,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9px;fill:var(--se-text-secondary,#4b5563);">FO ·</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;"></text>
                 </g>
-                <g transform="matrix(1,0,0,1,-105.796,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9px;fill:var(--se-text-secondary,#4b5563);">AO · DO · CO refreshed before next implementation sprint</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">new items enter the graph only when their code merges</text>
                 </g>
             </g>
         </g>

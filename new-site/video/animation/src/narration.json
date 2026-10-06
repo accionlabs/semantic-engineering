@@ -246,8 +246,8 @@
    "act": 3,
    "n": 11,
    "title": "Where is the state of the work kept?",
-   "text": "Three records hold the state of the work, and each answers a different question. The specification says what one change should do. The ticket system, such as Jira, says who is doing what, and how far the work has got. The knowledge graph says what the application does today. The ticket carries each change from start to finish. When a specification is written, a hook in the ticket system runs impact analysis and attaches the report to the ticket. Each later step updates the ticket's status and attaches its results, such as test results and a second impact analysis after coding. At the end, the final impact analysis uses the whole history of the ticket. The ticket works the same way whether people, agents or both do the work. Each team designs the workflow between the steps to fit its own process.",
-   "words": 142,
+   "text": "Three records hold the state of the work, and each answers a different question. The specification says what one change should do. The ticket system, such as Jira, says who is doing what, and how far the work has got. The knowledge graph says what the application does today. The ticket carries each change from start to finish. When a specification is written, a hook in the ticket system runs impact analysis and attaches the report to the ticket. Every later step updates the ticket's status and attaches its results, such as test results and a second impact analysis after coding. At the end, the final impact analysis uses the whole history of the ticket. The ticket works the same way whether people, agents or both do the work. Teams design the workflow between the steps to fit their own process.",
+   "words": 141,
    "sentences": [
     "Three records hold the state of the work, and each answers a different question.",
     "The specification says what one change should do.",
@@ -255,26 +255,26 @@
     "The knowledge graph says what the application does today.",
     "The ticket carries each change from start to finish.",
     "When a specification is written, a hook in the ticket system runs impact analysis and attaches the report to the ticket.",
-    "Each later step updates the ticket's status and attaches its results, such as test results and a second impact analysis after coding.",
+    "Every later step updates the ticket's status and attaches its results, such as test results and a second impact analysis after coding.",
     "At the end, the final impact analysis uses the whole history of the ticket.",
     "The ticket works the same way whether people, agents or both do the work.",
-    "Each team designs the workflow between the steps to fit its own process."
+    "Teams design the workflow between the steps to fit their own process."
    ]
   },
   {
    "act": 3,
    "n": 12,
    "title": "Who prepares a change before coding starts?",
-   "text": "With AI, writing code is fast, so preparing good specifications becomes the slowest step. The methodology gives that work its own sprint, the spec sprint, which runs a step ahead of the implementation sprint. The custodians meet for one or two days and work through several requests together. The product owner drafts each specification from a standard template. Impact analysis reports everything the specification will touch. Each custodian reviews the report for their own layer: functional, design, architecture and code. Where a change needs new items in the graph, each custodian adds them to their own layer. The finished specification, with its impact report, goes into the implementation backlog. The implementation sprint works from specifications whose risks are already known. A specification that turns out to be missing context goes back to the spec sprint.",
-   "words": 135,
+   "text": "With AI, writing code is fast, so preparing good specifications becomes the slowest step. The methodology gives that work its own sprint, the spec sprint, which runs a step ahead of the implementation sprint. The custodians meet for one or two days and work through several requests together. The product owner drafts the specification from a standard template. Impact analysis reports everything the specification will touch. Each custodian reviews the report for their own layer: functional, design, architecture and code. Impact analysis can show that a change needs new items, and the custodians propose them in the specification; the items enter the graph only when their code merges. The finished specification, with its impact report, goes into the implementation backlog. The implementation sprint works from specifications whose risks are already known. A specification that turns out to be missing context goes back to the spec sprint.",
+   "words": 146,
    "sentences": [
     "With AI, writing code is fast, so preparing good specifications becomes the slowest step.",
     "The methodology gives that work its own sprint, the spec sprint, which runs a step ahead of the implementation sprint.",
     "The custodians meet for one or two days and work through several requests together.",
-    "The product owner drafts each specification from a standard template.",
+    "The product owner drafts the specification from a standard template.",
     "Impact analysis reports everything the specification will touch.",
     "Each custodian reviews the report for their own layer: functional, design, architecture and code.",
-    "Where a change needs new items in the graph, each custodian adds them to their own layer.",
+    "Impact analysis can show that a change needs new items, and the custodians propose them in the specification; the items enter the graph only when their code merges.",
     "The finished specification, with its impact report, goes into the implementation backlog.",
     "The implementation sprint works from specifications whose risks are already known.",
     "A specification that turns out to be missing context goes back to the spec sprint."
@@ -357,16 +357,16 @@
    "act": 3,
    "n": 17,
    "title": "How do managers see what people and agents are doing?",
-   "text": "Managers see the work of people and agents in the ticket system they already use. Every step of a change updates the ticket, whether a person or an agent did it. Some products receive support and data requests at a volume a ticket system handles poorly, because it holds no knowledge of the application. For those products, the requests can move to an agent workbench. Triage agents in the workbench classify each request, apply the product's own priorities, and route each request to a person or to an agent. Metrics are kept for each product, each graph and each agent. Each organization brings the metrics into its own reporting.",
-   "words": 109,
+   "text": "Managers see the work of people and agents in the ticket system they already use. Every step of a change updates the ticket, whether a person or an agent did it. Some products receive support and data requests at a volume a ticket system handles poorly, because it holds no knowledge of the application. For those products, the requests can move to an agent workbench. Triage agents in the workbench classify every request, apply the product's own priorities, and route the request to a person or to an agent. Metrics are kept per product, per graph and per agent. Organizations bring these metrics into their own reporting.",
+   "words": 107,
    "sentences": [
     "Managers see the work of people and agents in the ticket system they already use.",
     "Every step of a change updates the ticket, whether a person or an agent did it.",
     "Some products receive support and data requests at a volume a ticket system handles poorly, because it holds no knowledge of the application.",
     "For those products, the requests can move to an agent workbench.",
-    "Triage agents in the workbench classify each request, apply the product's own priorities, and route each request to a person or to an agent.",
-    "Metrics are kept for each product, each graph and each agent.",
-    "Each organization brings the metrics into its own reporting."
+    "Triage agents in the workbench classify every request, apply the product's own priorities, and route the request to a person or to an agent.",
+    "Metrics are kept per product, per graph and per agent.",
+    "Organizations bring these metrics into their own reporting."
    ]
   },
   {

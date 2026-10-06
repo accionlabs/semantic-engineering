@@ -8,7 +8,8 @@ import { Callout, Frame, Svg } from '../parts/ui';
 import { C, F, KINDS } from '../theme';
 
 // Scene 12. Who prepares a change before coding starts? The spec sprint runs a step ahead: the
-// custodians draft, analyze and review each specification, each for their own layer.
+// custodians draft, analyze and review each specification, each for their own layer. New items are
+// proposed in the specification; the graph represents the main branch, so it gains them only on merge.
 const LANE_Y = LOWER.y + 47;
 
 export const scene12: SceneDef = {
@@ -23,13 +24,15 @@ export const scene12: SceneDef = {
         <SpecLane className="pre lane" />
         <Card className="pre draft" x={SPEC_STATIONS[1].x - 60} y={LOWER.y - 30} w={120} h={40} lines={2} />
         <line className="pre ia" x1={SPEC_STATIONS[2].x} y1={LOWER.y + 22} x2={item('code', 2).x} y2={item('code', 2).y} stroke={C.text} strokeWidth={3} />
-        {KINDS.map((k) => <circle key={k.id} className={`pre newnode newnode-${k.id}`} cx={item(k.id, 2).x + 70} cy={GY[k.id] + 19} r={8} fill={C.text} />)}
+        {KINDS.map((k, i) => <circle key={k.id} className={`pre newnode newnode-${k.id}`} cx={SPEC_STATIONS[1].x + 86 + i * 34} cy={LOWER.y - 10} r={12} fill="none" stroke={C.layer[k.id]} strokeWidth={2.5} strokeDasharray="3 3" />)}
+        <text className="pre newlabel" x={SPEC_STATIONS[1].x + 70} y={LOWER.y - 30} fontFamily={F.mono} fontSize={13} fill={C.text}>proposed items</text>
         <Card className="pre ready" x={SPEC_STATIONS[3].x - 60} y={LOWER.y - 30} w={120} h={40} label="spec + report" tone={C.text} />
         <rect className="pre runner" x={STATIONS[0].x - 14} y={Y.flow + 46} width={28} height={16} rx={4} fill={C.text} />
         <rect className="pre back" x={STATIONS[1].x - 14} y={Y.flow + 46} width={28} height={16} rx={4} fill={C.warn} />
       </Svg>
       <Callout className="pre co-days" x={1180} y={GAP_Y - 8} w={480} kind="The custodians" text="One or two days, several requests together" tone={C.text} target="sprint.spec" />
       <Callout className="pre co-known" x={1180} y={GAP_Y - 8} w={480} kind="Implementation sprint" text="Works from specifications whose risks are known" tone={C.pass} target="sprint.implementation" />
+      <Callout className="pre co-proposed" x={1180} y={GAP_Y - 8} w={520} kind="Proposed in the specification" text="New items enter the graph only when their code merges" tone={C.text} target="graph.main-branch" />
       <Callout className="pre co-back" x={1180} y={GAP_Y - 8} w={480} kind="Missing context" text="Back to the spec sprint" tone={C.warn} target="sprint.push-back" />
     </Frame>
   ),
@@ -64,13 +67,15 @@ export const scene12: SceneDef = {
       tl.to(q('.top .cus, .g.band'), { opacity: 0.3, duration: 0.2 }, at);
       tl.to(q(`.top .cus-${k.id}, .band-${k.id}`), { opacity: 1, duration: 0.2 }, at);
     });
-    // s7: new items added to the layers.
+    // s7: new items are proposed in the specification; the graph gains them only when their code merges.
     const s7 = cue('add', 's6');
     tl.to(q('.top .cus, .g.band'), { opacity: 1, duration: 0.3 }, s7);
+    appear(ctx, '.newlabel', s7 + 0.2, { y: 0 });
     KINDS.forEach((k, i) => appear(ctx, `.newnode-${k.id}`, s7 + 0.3 + i * 0.3, { y: 0 }));
+    appear(ctx, '.co-proposed', s7 + 1.4);
     // s8: the finished specification goes into the implementation backlog.
     const s8 = cue('backlog', 's7');
-    vanish(ctx, '.draft', s8);
+    vanish(ctx, '.draft, .newnode, .newlabel, .co-proposed', s8);
     appear(ctx, '.ready', s8 + 0.1);
     tl.to(q('.ready'), { x: STATIONS[0].x + 140 - SPEC_STATIONS[3].x, y: Y.flow - 104 - (LOWER.y - 30), duration: 1.4 }, s8 + 0.6);
     // s9: implementation works from known risks.

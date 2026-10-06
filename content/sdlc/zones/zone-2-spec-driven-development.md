@@ -217,7 +217,7 @@ In standard SDD practice, specification authorship and implementation get compre
 |---|---|---|
 | Cadence | Runs one or two sprints ahead of implementation | Same: runs one or two sprints ahead |
 | Participants | PO, Architect, UX Designer, Engineering tech lead | Same four roles, formalized as ontology custodians |
-| Output | Reviewed, scoped, prioritized specification with cross-functional alignment | Impact-analyzed specification plus refreshed knowledge graph |
+| Output | Reviewed, scoped, prioritized specification with cross-functional alignment | Impact-analyzed specification, with any new graph items proposed in it |
 | Impact analysis | Human-driven by the four participants | Impact Analysis Agent runs against the graph |
 | Cross-team reconciliation | Architect reviews known cross-team touchpoints from memory | Cross-product extension run by the architect against multiple product graphs |
 | Validation before implementation pulls | Spec freeze after four-role sign-off | Spec freeze after agent and custodian sign-off |
