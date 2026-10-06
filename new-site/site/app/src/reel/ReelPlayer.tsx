@@ -61,6 +61,18 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
   const raf = useRef(0);
   const timer = useRef(0);
   const resumeAt = useRef<number | null>(null);
+  const clipPlaying = useRef(false);
+  // Safari on iPhone and iPad starts media only in answer to a tap. Clips start on their own after the guide
+  // speaks, so the first tap plays the narration for an instant, which lets later clips start it too.
+  const unlocked = useRef(false);
+  const unlock = () => {
+    const a = audio.current;
+    if (!a || unlocked.current) return;
+    unlocked.current = true;
+    const muted = a.muted;
+    a.muted = true;
+    a.play().then(() => { if (!clipPlaying.current) a.pause(); a.muted = muted; }).catch(() => { a.muted = muted; unlocked.current = false; });
+  };
   const segs = plan.segments;
   const total = plan.seconds;
   const ended = index >= segs.length;
@@ -76,6 +88,7 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
     run.current++;
     stopSpeech.current(); stopSpeech.current = () => {};
     cancelAnimationFrame(raf.current); clearTimeout(timer.current);
+    clipPlaying.current = false;
     audio.current?.pause();
   }, []);
 
@@ -110,6 +123,7 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
     const begin = startOf(seg.scene) + (from ?? seg.from), end = startOf(seg.scene) + seg.to;
     film.master.seek(begin);
     let clock = { wall: performance.now(), t: begin }, loadStart = performance.now(), bad = false;
+    clipPlaying.current = true;
     if (a) { a.muted = !sound; a.volume = 0; seekAudio(a, begin); a.play().catch(() => { bad = true; }); }
     const tick = () => {
       if (!alive()) return;
@@ -164,7 +178,7 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
   const elapsed = segs.slice(0, Math.max(0, index)).reduce((a, s) => a + s.seconds, 0);
   const guideOnScreen = seg?.kind === 'host' || seg?.kind === 'quote';
   return (
-    <section className="player reel-player" aria-label="Your explanation">
+    <section className="player reel-player" aria-label="Your explanation" onClickCapture={unlock} onTouchEndCapture={unlock}>
       <div ref={box} className="player-stage" style={{ height: H * scale }} onClick={(e) => { if ((e.target as Element).closest('button, a')) return; playing ? pause() : play(); }}>
         <div ref={stage} className={`stage ${guideOnScreen ? 'no-captions' : ''}`} style={{ transform: `scale(${scale})` }} aria-hidden>
           <FilmView items={MAIN} onReady={onReady} />
