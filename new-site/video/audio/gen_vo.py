@@ -20,7 +20,7 @@ LEAD, GAP, TAIL = 0.6, 0.7, 1.2  # the gap leaves room to cut a clip cleanly bet
 
 # Spoken forms for words the voice reads badly. Captions keep the written form.
 # Pronunciations: REQUIREMENTS.md section 4.
-SAY = [(r'\bBreeze\.AI\b', 'Breeze A I'), (r'\bASIMOV\b', 'Ass-ee-mow'), (r'\bSDLC\b', 'S D L C'), (r'\bLOC\b', 'L O C'),
+SAY = [(r'\bBreeze\.AI\b', 'Breeze A I'), (r'\bASIMOV\b', 'Aseemow'), (r'\bSDLC\b', 'S D L C'), (r'\bLOC\b', 'L O C'),
        (r'\bUX\b', 'U X'), (r'\bMCP\b', 'M C P'), (r'\bKAPS\b', 'caps'), (r'\bSaaS\b', 'sass')]
 
 def spoken(text):
