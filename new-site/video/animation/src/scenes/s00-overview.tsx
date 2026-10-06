@@ -92,8 +92,8 @@ export const scene00: SceneDef = {
         <g className="pre spots">
           {SPOTS.map((s) => (
             <g key={s.label}>
-              <AgentIcon x={s.x} y={GAP_Y + 40} s={30} />
-              <text x={s.x} y={GAP_Y + 78} textAnchor="middle" fontFamily={F.mono} fontSize={13} fill={C.text}>{s.label}</text>
+              <AgentIcon x={s.x} y={GAP_Y + 18} s={30} />
+              <text x={s.x} y={GAP_Y + 52} textAnchor="middle" fontFamily={F.mono} fontSize={13} fill={C.text}>{s.label}</text>
             </g>
           ))}
         </g>
@@ -218,6 +218,7 @@ export const scene00: SceneDef = {
     // s19: Breeze.AI's agents carry each change.
     const s19 = cue('breeze', 's19');
     vanish(ctx, '.lv', s19);
+    tl.to(q('.gatew text'), { autoAlpha: 0, duration: 0.3 }, s19);
     appear(ctx, '.spots', s19 + 0.3);
     appear(ctx, '.co-breeze', s19 + 0.6);
     // s20: people decide; every agent has an owner.
@@ -228,6 +229,7 @@ export const scene00: SceneDef = {
     // s21: three use cases.
     const s21 = cue('uses', 's21');
     vanish(ctx, '.co-people, .owners', s21);
+    tl.to(q('.gatew text'), { autoAlpha: 1, duration: 0.3 }, s21 + 0.3);
     showStrip('use', 3, s21 + 0.3);
     // s22: legacy modernization has its own graphs.
     const s22 = cue('legacy', 's22');
