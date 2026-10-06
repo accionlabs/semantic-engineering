@@ -1,9 +1,10 @@
 {
-  // Phase 1: the prerendered pages as static assets, at the Worker's workers.dev address for review.
-  // The Worker code (media with byte ranges, the MCP server at /mcp) returns in phase 6, and the
-  // semantic-engineering.ai routes are added at the switch (phase 7).
+  // The prerendered pages as static assets, at the Worker's workers.dev address for review. The Worker
+  // (worker.ts) runs only for /media/*, to serve the narration with byte ranges. The MCP server returns
+  // later, and the semantic-engineering.ai routes are added at the switch.
   "name": "semantic-engineering",
+  "main": "worker.ts",
   "compatibility_date": "2026-09-01",
-  "assets": { "directory": "./dist", "not_found_handling": "404-page", "html_handling": "auto-trailing-slash" },
+  "assets": { "directory": "./dist", "binding": "ASSETS", "not_found_handling": "404-page", "html_handling": "auto-trailing-slash", "run_worker_first": ["/media/*"] },
   "workers_dev": true
 }
