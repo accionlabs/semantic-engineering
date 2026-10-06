@@ -130,7 +130,7 @@ export const ExplainPage: React.FC = () => {
     </>
   );
   return (
-    <div className="wrap wide">
+    <div className="wrap wide watch-page">
       <p className="crumbs"><Link to="/">Home</Link> / <Link to="/explain">Explanations</Link> / {full.question}</p>
       <p className="reel-banner">Written by an agent for one question. The scenes and quotes come from the film and the site's pages; the guide's lines are the agent's.</p>
       {full.branches.length > 0 && (

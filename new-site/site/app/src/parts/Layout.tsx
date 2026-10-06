@@ -65,7 +65,8 @@ export const Layout: React.FC = () => {
   const [menu, setMenu] = useState(false);
   useEffect(() => { setMenu(false); }, [pathname]);
   // The watch pages use the full width: the sidebar opens over them from the menu button.
-  const watch = pathname === '/' || pathname === '/watch' || pathname.startsWith('/watch/');
+  // A played explanation is shown the same way.
+  const watch = pathname === '/' || pathname === '/watch' || pathname.startsWith('/watch/') || /^\/explain\/(?!import)[^/]+\/?$/.test(pathname);
   // On wide screens the menu button collapses the sidebar of the content pages; the choice is remembered.
   const [collapsed, setCollapsed] = useState(false);
   useEffect(() => { try { setCollapsed(localStorage.getItem('se-sidebar') === 'collapsed'); } catch { /* storage unavailable */ } }, []);
