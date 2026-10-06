@@ -4,3 +4,5 @@
 |---|---|---|---|---|---|
 | 2026-10-06 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 25 | 3039 | 0.30 |
 | 2026-10-06 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 1 | 113 | 0.01 |
+| 2026-10-06 | fal-ai/minimax/speech-02-hd | Pronunciation trials, ASIMOV and Breeze.AI | 14 | 950 | 0.10 |
+| 2026-10-06 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 2 | 273 | 0.03 |
