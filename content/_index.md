@@ -194,6 +194,14 @@ Snowflake's semantic layer, Microsoft's knowledge graph integrations in Fabric, 
 
 Beyond the commercial vendors, open-source projects are starting to build knowledge-graph context layers around code. The technical direction is broadly consistent with what we have been building. These efforts today focus primarily on the Code layer of what we treat as a four-layer ontology. The Functional, Design, and Architecture layers, the cross-layer relationships, the enablement partnership that keeps the graph healthy over years, and the operating model that makes the methodology run at enterprise scale are not yet part of these efforts. We expect open-source to fill in over time, and we will be glad when it does.
 
+## Graphs for Agent-Facing Products
+
+Software products are starting to open their capabilities to their customers' own agents, which act on the customer's behalf through interfaces such as MCP servers. An MCP server that exposes hundreds of tools gives an agent access, and still leaves the agent to work out which tools to use, in what order and under which rules.
+
+The knowledge graph already records what a product provides: its capabilities, workflows, entities and contracts. These are the domain invariants every customer shares. An interface for agents can be built from the graph, describing each capability in the terms of the domain, independently of the screens and APIs designed for people. The graph also governs which external agent may use which capability.
+
+A formal grammar above the graph adds the rules a schema cannot express. With it, an agent can write what a customer needs and check its own result by running tests. This approach is called dialect engineering: it lets more of a software-as-a-service product vary per customer while the domain invariants stay shared. It is set out in the paper *SaaS architecture when code is cheap*, at [dialect-engineering.ai](https://dialect-engineering.ai).
+
 ## Where to Go Next
 
 | If you want to...                                                     | Go to                                                   |
