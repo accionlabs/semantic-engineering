@@ -163,3 +163,8 @@ h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin: 0.2em 0 0.6em; }
 .g-matrix th.g-col span { writing-mode: vertical-rl; transform: rotate(180deg); display: inline-block; white-space: nowrap; font-weight: 500; }
 .g-cell { text-align: center; color: var(--accent); }
 .g-practice { border-left-color: var(--accent); } .g-principle { border-left-color: #ff5a6e; }
+
+/* The header's own links, as on dialect-engineering.ai. */
+.header-nav { display: flex; gap: 16px; }
+.header-nav a { color: var(--muted); text-decoration: none; font-size: 0.95rem; white-space: nowrap; }
+.header-nav a:hover, .header-nav a[aria-current="page"] { color: var(--fg); }

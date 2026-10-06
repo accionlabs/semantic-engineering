@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { SITE, PAGES, navTitle, pageByUrl, type NavNode } from '../content/data';
 import { Search } from './Search';
 
@@ -98,6 +98,7 @@ export const Layout: React.FC = () => {
             <img className="brand-mark logo-dark" src="/images/logo-dark.svg" alt="" width="34" height="24" />
             <span>Semantic Engineering</span>
           </Link>
+          <nav className="header-nav" aria-label="Main"><NavLink to="/explain">Explain</NavLink></nav>
           <Search />
           <ThemeButton />
         </div>
