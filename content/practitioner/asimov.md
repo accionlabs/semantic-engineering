@@ -56,7 +56,7 @@ All three capabilities use the same five-pillar architecture and the same agenti
 
 ## The Five Pillars of ASIMOV
 
-![ASIMOV architecture: Five pillars across the legacy modernization lifecycle. AGIE produces Source Graph and Target Graph (Discover). ASF is the human-readable specification format that the custodians annotate (Document). AMM is the agentic migration machine (Migrate). AVF is the validation framework with four named gates feeding back into AMM (Validate). Maintain covers ongoing operation of the modernized system (Maintain).](/diagrams/asimov-architecture.svg)
+![ASIMOV architecture: Five pillars across the legacy modernization lifecycle. AGIE produces Source Graph and Target Graph (Discover). ASF is the human-readable specification format that the Product Owner and Architect annotate, with input from the other custodians (Document). AMM is the agentic migration machine (Migrate). AVF is the validation framework with four named gates feeding back into AMM (Validate). Maintain covers ongoing operation of the modernized system (Maintain).](/diagrams/asimov-architecture.svg)
 
 The platform is built around five named pillars covering the legacy modernization lifecycle: **Discover → Document → Migrate → Validate → Maintain**. Each pillar is a distinct concern, each is operated by a named set of agents, and the five together cover the lifecycle from legacy understanding through ongoing operation of the modernized system.
 
@@ -87,7 +87,7 @@ The Semantic Engineering anchor is what makes ASIMOV more than a pattern-matched
 
 ## The Solution Architecture End to End
 
-The detailed flow shows where each agent sits, where the custodians annotate, and where the AVF feedback loop closes.
+The detailed flow shows where each agent sits, where the Product Owner and Architect annotate, and where the AVF feedback loop closes.
 
 | Stage | What runs | Artifact produced |
 |---|---|---|
@@ -200,7 +200,7 @@ ASIMOV and [Breeze.AI](breeze-ai.md) are peer platforms under Accion Labs's Soft
 | Ontology usage | The four-layer ontology of the live system: Functional, Design, Architecture, Code, continuously maintained as the system evolves | A different set of ontologies sized for the modernization problem. A Source-state ontology decomposed from the legacy system by AGIE. A Target-state ontology defined by the four custodians from a target blueprint. The ASF specification format bridges the two. The Source-state ontology intersects with Breeze's four-layer (both decompose code-level state). The Target-state ontology has no Breeze equivalent because Breeze's evolution model has no fixed target. |
 | Graph artifact | One four-layer graph per product, continuously maintained | Source Graph, Target Graph, and an ASF document bridging them, all produced during the modernization project |
 | Constraint mechanism | Four-layer ontology plus governance and metrics framework | Source Graph plus Target Blueprint plus ASF plus the four AVF gates |
-| Human role | In the loop: developer reviews per change; gates approve at merge | Validation, not per-step approval: custodians annotate ASF (Retain / Modify / Replace / Retire); Expert reviews target output |
+| Human role | In the loop: developer reviews per change; gates approve at merge | Validation, not per-step approval: the Product Owner and Architect annotate ASF (Retain / Modify / Replace / Retire); Expert reviews target output |
 | Engagement shape | Open-ended ongoing operation under [Advise / Launch / Scale / Optimize](_index.md#engagement-models) | Finite project with a parity objective under one of the [five ASIMOV engagement modes](#the-asimov-engagement-model) |
 | Time horizon | Years (continuous) | Quarters per migration estate |
 

@@ -5,7 +5,8 @@
         <text x="-340.266px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:24px;fill:var(--se-text,#111111);">The Annotation Discipline: Retain / Modify / Replace / Retire</text>
     </g>
     <g transform="matrix(1,0,0,1,750,58)">
-        <text x="-383.589px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);">Every Source-state module receives exactly one of four annotations from the custodians. The annotation becomes the parity contract.</text>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">Every Source-state module receives exactly one of four annotations from the Product Owner and Architect,</text>
+        <text x="0px" y="18px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:13px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">with input from the Engineering Team and UX Designer. The annotation becomes the parity contract.</text>
     </g>
     <path d="M1460,102L1460,134C1460,140.623 1454.623,146 1448,146L52,146C45.377,146 40,140.623 40,134L40,102C40,95.377 45.377,90 52,90L1448,90C1454.623,90 1460,95.377 1460,102Z" style="fill:var(--se-panel-fill,#f5f5f5);stroke:var(--se-panel-stroke,#9ca3af);stroke-width:1px;"/>
     <g transform="matrix(1,0,0,1,750,116)">

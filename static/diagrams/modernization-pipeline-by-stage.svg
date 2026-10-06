@@ -265,13 +265,14 @@
     </g>
     <path d="M770,594L770,666C770,673.727 763.727,680 756,680L54,680C46.273,680 40,673.727 40,666L40,594C40,586.273 46.273,580 54,580L756,580C763.727,580 770,586.273 770,594Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,60,606)">
-        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">HUMAN VALIDATION POINT 1  ·  CUSTODIAN SME ANNOTATION</text>
+        <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:12px;fill:var(--se-accent,#E94E1B);">HUMAN VALIDATION POINT 1  ·  PRODUCT OWNER AND ARCHITECT ANNOTATION</text>
     </g>
     <g transform="matrix(1,0,0,1,60,630)">
-        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Before Stage 3 begins. The four custodians annotate every Source-state module with</text>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Before Stage 3 begins. The Product Owner and Architect annotate every Source-state module with</text>
     </g>
     <g transform="matrix(1,0,0,1,60,648)">
-        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Retain / Modify / Replace / Retire. The annotation becomes the parity contract.</text>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">Retain / Modify / Replace / Retire, with input from the Engineering Team and UX Designer.</text>
+        <text x="0px" y="18px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:12px;fill:var(--se-text-secondary,#4b5563);">The annotation becomes the parity contract.</text>
     </g>
     <path d="M1535,594L1535,666C1535,673.727 1528.727,680 1521,680L814,680C806.273,680 800,673.727 800,666L800,594C800,586.273 806.273,580 814,580L1521,580C1528.727,580 1535,586.273 1535,594Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,820,606)">

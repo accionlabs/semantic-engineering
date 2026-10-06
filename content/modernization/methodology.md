@@ -76,7 +76,7 @@ The blueprint ingestion agent decomposes the blueprint into a structured Target-
 
 ## The Specification Format: Bridging Source and Target
 
-The specification format sits between the Source-state and Target-state ontologies. The specification extraction agent produces it. The custodians annotate it. The migration and validation agents consume it.
+The specification format sits between the Source-state and Target-state ontologies. The specification extraction agent produces it. The Product Owner and Architect annotate it, with input from the Engineering Team and the UX Designer. The migration and validation agents consume it.
 
 The specification captures, at module granularity:
 
