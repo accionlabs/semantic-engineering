@@ -20,9 +20,20 @@ export const scene29: SceneDef = {
   n: 29,
   id: 'where-it-came-from',
   View: () => (
-    <Frame act="Act 5" scene="Scene 29 · Where it came from">
+    <Frame act="Act 6" scene="Scene 29 · Where it came from">
       <Svg>
         <Defs />
+        <g className="intro">
+          <text x={960} y={380} textAnchor="middle" fontFamily={F.display} fontSize={72} fontWeight={700} fill={C.text}>Where it came from</text>
+          <line className="tline" x1={260} y1={520} x2={1660} y2={520} stroke={C.text} strokeWidth={2} />
+          {[2017, 2019, 2021, 2023, 2025].map((y, i) => (
+            <g key={y} className={`tick tick-${i}`}>
+              <line x1={260 + i * 350} y1={506} x2={260 + i * 350} y2={534} stroke={C.text} strokeWidth={2} />
+              <text x={260 + i * 350} y={572} textAnchor="middle" fontFamily={F.mono} fontSize={22} fill={C.cardText}>{y}</text>
+            </g>
+          ))}
+          <text x={960} y={650} textAnchor="middle" fontFamily={F.sans} fontSize={26} fill={C.cardText}>eight years of client work at Accion Labs</text>
+        </g>
         <g className="top"><KindLabels /><Custodians /></g>
         {(['functional', 'design', 'architecture'] as const).map((k) => {
           const c = CARD(k);
@@ -71,17 +82,28 @@ export const scene29: SceneDef = {
       appear(ctx, `.year-${i}`, at + 0.2);
     };
     tl.set(q('.cus-code, .lbl-code'), { autoAlpha: 0 }, 0);
+    // s1: eight years, 2017 to 2025.
+    tl.set(q('.top, .hcard'), { autoAlpha: 0 }, 0);
+    const s0 = cue('intro', 's0');
+    tl.fromTo(q('.intro > text:first-child'), { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.6, immediateRender: false }, s0 + 0.2);
+    tl.fromTo(q('.tline'), { drawSVG: '0%' }, { drawSVG: '100%', duration: 1.6, ease: 'none' }, s0 + 0.6);
+    [0, 1, 2, 3, 4].forEach((i) => tl.fromTo(q(`.tick-${i}`), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, immediateRender: false }, s0 + 0.6 + i * 0.4));
+    tl.fromTo(q('.intro > text:last-child'), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.5, immediateRender: false }, s0 + 2.6);
+    const s0b = cue('intro-end', 's1');
+    vanish(ctx, '.intro', s0b, { duration: 0.5 });
+    tl.to(q('.top, .hcard'), { autoAlpha: 1, duration: 0.6 }, s0b + 0.3);
+    tl.set(q('.cus-code, .lbl-code'), { autoAlpha: 0 }, s0b + 0.3);
     // s1: 2017, Breeze.
-    const s1 = cue('2017', 's0');
+    const s1 = cue('2017', 's1');
     year(0, s1);
     appear(ctx, '.co-breeze', s1 + 0.4);
     // s2: kept by hand, dropped under pressure.
-    const s2 = cue('decay', 's1');
+    const s2 = cue('decay', 's2');
     vanish(ctx, '.co-breeze', s2);
     tl.to(q('.hcard'), { opacity: 0.25, duration: 1.6 }, s2 + 0.3);
     appear(ctx, '.co-hand', s2 + 0.4);
     // s3: 2022, a graph keeps the model's answers in check.
-    const s3 = cue('2022', 's2');
+    const s3 = cue('2022', 's3');
     vanish(ctx, '.co-hand', s3);
     year(1, s3);
     appear(ctx, '.cluster', s3 + 0.4, { y: 0 });
@@ -90,13 +112,13 @@ export const scene29: SceneDef = {
     appear(ctx, '.mtick', s3 + 2.0, { y: 0 });
     appear(ctx, '.co-drug', s3 + 0.6);
     // s4: 2023, KAPS.
-    const s4 = cue('2023', 's3');
+    const s4 = cue('2023', 's4');
     vanish(ctx, '.co-drug, .mtok, .mtick', s4);
     year(2, s4);
     appear(ctx, '.kaps', s4 + 0.3, { y: 0 });
     appear(ctx, '.co-kaps', s4 + 0.5);
     // s5: 2024, the guidelines become the four layers.
-    const s5 = cue('2024', 's4');
+    const s5 = cue('2024', 's5');
     vanish(ctx, '.co-kaps', s5);
     year(3, s5);
     tl.to(q('.hcard'), { y: 60, autoAlpha: 0, duration: 0.9 }, s5 + 0.3);
@@ -105,20 +127,20 @@ export const scene29: SceneDef = {
     appear(ctx, '.graph', s5 + 0.8, { y: 0 });
     appear(ctx, '.co-bai', s5 + 1.0);
     // s6: 2025, the name.
-    const s6 = cue('2025', 's5');
+    const s6 = cue('2025', 's6');
     vanish(ctx, '.co-bai', s6);
     year(4, s6);
     appear(ctx, '.flow', s6 + 0.3, { y: 0 });
     appear(ctx, '.title', s6 + 0.6);
     // s7: public and free to apply.
-    const s7 = cue('public', 's6');
+    const s7 = cue('public', 's7');
     appear(ctx, '.co-public', s7 + 0.3);
     // s8: the two platforms.
-    const s8 = cue('platforms', 's7');
+    const s8 = cue('platforms', 's8');
     vanish(ctx, '.co-public', s8);
     appear(ctx, '.platforms', s8 + 0.3);
     // s9: a two-day workshop.
-    const s9 = cue('workshop', 's8');
+    const s9 = cue('workshop', 's9');
     appear(ctx, '.co-workshop', s9 + 0.3);
   },
 };

@@ -23,7 +23,7 @@ export const scene30: SceneDef = {
   n: 30,
   id: 'products-agents-use',
   View: () => (
-    <Frame act="Act 5" scene="Scene 30 · Products that agents use">
+    <Frame act="Act 6" scene="Scene 30 · Products that agents use">
       <Svg>
         <g className="land" transform={`matrix(${K},0,0,${K},${OX},${OY})`}><Base /></g>
         <g className="pre boundary">
