@@ -17,3 +17,4 @@
 | 2026-10-06 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 2 | 244 | 0.02 |
 | 2026-10-06 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 1 | 113 | 0.01 |
 | 2026-10-06 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 3 | 291 | 0.03 |
+| 2026-10-06 | fal-ai/minimax/speech-02-hd | Pronunciation takes, ASIMOV in context | 6 | 700 | 0.07 |
