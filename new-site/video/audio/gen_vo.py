@@ -22,7 +22,8 @@ LEAD, GAP, TAIL = 0.6, 0.7, 1.2  # the gap leaves room to cut a clip cleanly bet
 # Pronunciations: REQUIREMENTS.md section 4.
 SAY = [(r'\bBreeze\.AI\b', 'Breeze AI'), (r'\bASIMOV\b', 'Asseemov'), (r'\bSDLC\b', 'S D L C'), (r'\bLOC\b', 'L O C'),
        (r'\bUX\b', 'U X'), (r'\bMCP\b', 'M C P'), (r'\bKAPS\b', 'caps'), (r'\bSaaS\b', 'sass'),
-       (r'\bJava 21\b', 'Java twenty-one'), (r'\bJava 8\b', 'Java eight')]
+       (r'\bJava 21\b', 'Java twenty-one'), (r'\bJava 8\b', 'Java eight'),
+       (r'dialect-engineering\.ai', 'dialect engineering dot AI')]
 
 def spoken(text):
     for pat, rep in SAY:
