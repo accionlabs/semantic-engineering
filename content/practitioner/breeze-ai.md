@@ -82,7 +82,7 @@ The Functional Ontology rules are enforced at write time by a PreToolUse hook on
 | Parent linkage | An Outcome requires a `personaId`. A Scenario requires an `outcomeId`. A Step requires a `scenarioId`. An Action requires a `stepId`. Orphan nodes cannot be created |
 | Required descriptions | Scenario, Step, and Action nodes must carry a non-empty description |
 
-The guardrails matter because they keep the ontology disciplined at the moment of authorship rather than at validation time. A Product Owner authoring through the WebUI gets the same rules enforced by the platform; an engineer authoring through Claude Code gets them enforced before the call leaves the IDE. The discipline is structural, not aspirational.
+The guardrails matter because they keep the ontology disciplined at the moment of authorship rather than at validation time. A Product Owner authoring through the WebUI gets the same rules enforced by the platform; an engineer authoring through Claude Code gets them enforced before the call leaves the IDE. In both paths, the structure enforces the discipline.
 
 ## Deployment Architecture
 

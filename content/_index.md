@@ -30,7 +30,7 @@ faqs:
   - question: "Does Semantic Engineering replace the AI coding tools we already use?"
     answer: "No. Semantic Engineering layers under whatever AI coding tools the team already runs (Copilot, Cursor, Claude Code, Devin, internal coding agents). The methodology adds the knowledge graph that the agent reads against, the impact analysis that runs before generation, and the validation gates that check the output at merge time. The agent that writes the code is unchanged; what changes is the context the agent operates against."
   - question: "How does Semantic Engineering reduce AI hallucinations?"
-    answer: "The agent generates against a structured graph of what the application actually contains rather than against unstructured prose. Functions it references must exist as Code Ontology nodes. Service boundaries it crosses must be declared in the Architecture Ontology. The PR Validation Agent rejects merges that contradict the graph. Hallucinations are caught at the structural gate, not after they have reached production."
+    answer: "The agent generates against a structured graph of what the application actually contains rather than against unstructured prose. Functions it references must exist as Code Ontology nodes. Service boundaries it crosses must be declared in the Architecture Ontology. The PR Validation Agent rejects merges that contradict the graph. Hallucinations are caught at the structural gate, before they reach production."
   - question: "What languages and stacks does Semantic Engineering support?"
     answer: "The Breeze.AI platform currently parses TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl for brownfield extraction. ASIMOV extends to legacy-modernization stacks including COBOL on AS400, Delphi, ASP.NET Web Forms, VB.NET monoliths, Struts/Hibernate, and others. The methodology itself is language-agnostic; language coverage matters for the brownfield extraction step that builds the initial Code Ontology."
   - question: "Who maintains the knowledge graph day to day?"
@@ -38,7 +38,7 @@ faqs:
   - question: "How long does it take to extract a knowledge graph from an existing application?"
     answer: "For a 2M+ LOC application, full extraction of all four layers typically completes in two to three weeks. AST parsers cover the code, LLM enrichment adds the semantic metadata, browser-automation agents exercise the live UI for the Design layer, and existing documentation cross-validates the Architecture layer. The output is a populated graph plus a prioritized rationalization backlog of structural debt the extraction surfaces."
   - question: "How do validation gates affect developer velocity?"
-    answer: "The gates catch structural defects at PR merge time rather than at integration or in production. In practice, velocity improves because the rework loop shortens dramatically. The P0 gates (DAG validity, layer integrity, connectivity) are sub-second and run on every merge. A merge that fails a gate is blocked until the underlying defect is fixed. The goal is structural correctness, not procedural overhead."
+    answer: "The gates catch structural defects at PR merge time rather than at integration or in production. In practice, velocity improves because the rework loop shortens dramatically. The P0 gates (DAG validity, layer integrity, connectivity) are sub-second and run on every merge. A merge that fails a gate is blocked until the underlying defect is fixed. The goal is structural correctness."
   - question: "Which graph database does it use, and do we need an enterprise licence?"
     answer: "Graph storage is typically Neo4j Community Edition, and another graph database can be used where a client has a standard of its own. Enterprise support for the database matters only when a graph grows large enough to need it for scale. Accion Labs is a Neo4j partner."
   - question: "Does a person have to approve every impact analysis?"
@@ -78,7 +78,7 @@ Enterprise software work is hard because the knowledge that holds a system toget
 - the **UX designer** holds the *how it looks and behaves* (components, interaction patterns, state handling)
 - the **engineering team** collectively holds the *what the code actually does* (live functions, retry policies, active feature flags, dead utilities)
 
-No single human holds the whole picture and no document does either. AI coding assistants do well on small, contained tasks but break against this complexity because they have no structured way to query the system's actual state. Bigger context windows do not fix this. The agent needs structured context it can read against, not more raw text to wade through.
+No single human holds the whole picture and no document does either. AI coding assistants do well on small, contained tasks but break against this complexity because they have no structured way to query the system's actual state. Bigger context windows do not fix this. The agent needs structured context it can read against.
 
 Every use case in a typical enterprise portfolio hits the same wall. Greenfield work needs the new application to fit a landscape it has not yet been built into. Brownfield work needs to reason about dependencies inside the live application as it evolves. Legacy modernization needs to honor years of accumulated behavior while replacing the stack that produced it. The complexity differs by use case, but the structural gap is the same.
 
@@ -92,7 +92,7 @@ Semantic Engineering responds to the structural gap with four universal principl
 |---|---|
 | **Structured representation as the substrate** | Encode the knowledge the agent needs as a queryable graph with explicit nodes and relationships. The agent queries the graph for the slice each task needs. |
 | **Agent constraint through the graph** | Every change is analyzed against the graph before code is written, and agents cannot ignore what the impact analysis finds. The graph holds the high-aperture structure of the application as it exists today; the specification describes each change, including its low-aperture details and any new scope. The graph governs how a change fits the application, and the specification remains the description of what to build. |
-| **Named ownership of the substrate** | Each part of the graph has a named human custodian who is accountable for keeping it accurate. Decay is treated as ownership failure, not a tooling problem. |
+| **Named ownership of the substrate** | Each part of the graph has a named human custodian who is accountable for keeping it accurate. Decay is treated as a failure of ownership. |
 | **Validation gates that produce machine-verifiable evidence** | Quality is enforced by gates that emit pass or fail evidence against the graph. The gates run automatically and produce artifacts the team can audit. |
 
 The principles are universal. The shape of the graph and the rhythm of the operating model differ by use case because the questions each use case asks are different. The next section shows how the same principles instantiate across the three use cases the enterprise portfolio actually contains.

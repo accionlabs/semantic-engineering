@@ -46,7 +46,7 @@ The [About Accion Labs](../practitioner/_index.md) page covers the firm, the AI 
 
 > **The Universal Principles**
 >
-> Semantic Engineering is a methodology, not a single ontology. The same underlying principles (structured representation as the substrate, agents constrained by structure, named ownership of the substrate, validation gates that produce machine-verifiable evidence) appear in both instantiations. The four-layer ontology described here is the SDLC instantiation. The [Source-state, Target-state, and specification format](../modernization/methodology.md) of the modernization instantiation is the parallel structure for the bounded modernization use case.
+> Semantic Engineering is a methodology with more than one instantiation, each with its own ontology. The same underlying principles (structured representation as the substrate, agents constrained by structure, named ownership of the substrate, validation gates that produce machine-verifiable evidence) appear in both instantiations. The four-layer ontology described here is the SDLC instantiation. The [Source-state, Target-state, and specification format](../modernization/methodology.md) of the modernization instantiation is the parallel structure for the bounded modernization use case.
 
 ---
 

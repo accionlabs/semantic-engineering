@@ -42,7 +42,7 @@ The Functional Ontology is the layer that exposes whether the product owner is d
 | Step | An ordered unit of work within the scenario | Open saved search, configure alert frequency, save |
 | Action | The atomic operation the user performs | Click "Edit", select "Weekly", click "Save" |
 
-The structure matters for governance, not specification. When a product owner says "we want the user to be able to do X", the Functional Ontology forces the question: which persona, which outcome, which scenario? The ontology is not the requirements. It is the shape the requirements have to take so the team and the agent can both reason about them consistently.
+The structure matters for governance. When a product owner says "we want the user to be able to do X", the Functional Ontology forces the question: which persona, which outcome, which scenario? The ontology is the shape the requirements have to take so the team and the agent can both reason about them consistently.
 
 ### The Design Ontology in Detail
 
@@ -92,7 +92,7 @@ The Code Ontology is the layer that exposes whether the engineering team has the
 | Statement | A captured statement body for the call-graph and impact analysis | The body of `scheduleWeeklyAlert`, retained so downstream agents can reason about behavior |
 | API Endpoint | A route exposed by the file (REST, GraphQL, gRPC, or message-queue consumer) | `POST /alerts/configure` |
 
-The Code Ontology bridges the Architecture Ontology and the implementation surface. Each File node carries a module attribution that links it to a Service node in the Architecture Ontology. Each API Endpoint node carries a route signature that links it to an API Gateway contract. Each Function node carries call-graph edges that let the Impact Analysis Agent trace a Functional Action down to the specific lines that implement it. The captured statement bodies are what make the impact analysis precise rather than approximate: the agent reads behavior, not just structure.
+The Code Ontology bridges the Architecture Ontology and the implementation surface. Each File node carries a module attribution that links it to a Service node in the Architecture Ontology. Each API Endpoint node carries a route signature that links it to an API Gateway contract. Each Function node carries call-graph edges that let the Impact Analysis Agent trace a Functional Action down to the specific lines that implement it. The captured statement bodies are what make the impact analysis precise rather than approximate: the agent reads behavior as well as structure.
 
 The Code Ontology is extracted by AST parsers across the supported language set (currently TypeScript, JavaScript, Python, Java, C#, Go, PHP, VB.NET, Apex, and Perl). The parsers run on every pull request before it merges to the main branch, so the Code Ontology stays in step with the main branch as a side effect of the implementation sprint cadence covered in [Implementation Sprint](process/implementation-sprint.md).
 
@@ -146,7 +146,7 @@ A team adopting the methodology on an existing application does not write all fo
 | Functional | Inferred from the enriched code graph, starting from the UI and following code paths |
 | Design | Extracted from component code and design tool wireframes; enriched by browser-automation agents that exercise the application end to end |
 
-The output is a model of the system's actual behavior, not its intended behavior. Documentation usually describes the system as it was originally designed. Specs describe the system as the team wishes it were. Only the knowledge graph describes the system as it actually runs. For a 2M+ LOC application, extraction typically completes in two to three weeks.
+The output is a model of the system's actual behavior. Documentation usually describes the system as it was originally designed. Specs describe the system as the team wishes it were. Only the knowledge graph describes the system as it actually runs. For a 2M+ LOC application, extraction typically completes in two to three weeks.
 
 ### The Validation Gate
 

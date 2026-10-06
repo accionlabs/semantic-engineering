@@ -26,7 +26,7 @@ These differences produce a different ontology shape.
 |---|---|
 | A representation of the legacy system's actual behavior | The four-layer ontology captures the live system; for modernization the system is "live" but is the legacy that will be retired, so the representation has to be Source-snapshot |
 | A custodian-governed representation of the target system | The SDLC ontology has no target state because the system evolves incrementally; modernization requires a target ontology derived from the target blueprint before any code is generated |
-| A bridge that lets the custodians shape the scope at project start | SDLC has no equivalent because scope is shaped continuously through sprint cycles, not at project start |
+| A bridge that lets the custodians shape the scope at project start | SDLC has no equivalent because scope is shaped continuously through sprint cycles |
 | A parity contract the agents are bound to | SDLC agents validate change against the current ontology; modernization agents validate the modern output against the legacy behavior captured in the Source-state ontology |
 
 ## The Three Modernization Ontologies
@@ -99,7 +99,7 @@ The SME annotation discipline is how custodianship is performed in modernization
 | Annotation | What it means | Effect on the migration agents |
 |---|---|---|
 | **Retain** | The legacy module's behavior is preserved in the modern equivalent. The structural shape may change (paragraph to class, subroutine to method) but the functional behavior must match. | The migration agents generate a modern equivalent and the functional validation gate verifies parity. |
-| **Modify** | The legacy module's behavior is changing in defined ways during the modernization. The Product Owner captures what changes in the annotation. | The migration agents generate a modern equivalent that reflects the modification. The functional gate validates against the modified contract, not the legacy. |
+| **Modify** | The legacy module's behavior is changing in defined ways during the modernization. The Product Owner captures what changes in the annotation. | The migration agents generate a modern equivalent that reflects the modification. The functional gate validates against the modified contract. |
 | **Replace** | The legacy module is being replaced by a different solution (a modern library, a SaaS subscription, an existing service in the target architecture). The legacy implementation is not migrated. | The migration agents do not generate a migration; they wire the target architecture to the replacement and validate the integration. |
 | **Retire** | The legacy module's function is being eliminated. The modern system will not have an equivalent. | The migration agents do not generate a migration. The Source-state nodes are documented in the technical artifacts as retired. |
 

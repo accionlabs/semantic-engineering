@@ -22,13 +22,13 @@ The companion to this section is [The Manual Translation Tax](../translation-tax
 
 The Manual Translation Tax is not a fixed cost. It grows faster than the complexity of the work that produces it. A solo developer writing a throwaway script pays almost no tax. A single team shipping a small product pays a modest tax that written specifications absorb cleanly. A multi-team enterprise application crosses a threshold where text-based artifacts cannot keep up and the tax becomes overwhelming. A portfolio of products at portfolio scale requires sustained methodology that holds the tax in check across products and years.
 
-The four zones of process below are each the right methodology for one complexity zone. Use a lower-zone process beyond its range and the team pays the tax in full. Use a higher-zone process below its range and the team pays overhead without benefit. The same team may operate at different zones for different workstreams. The right zone for any given piece of work is determined by the complexity of that work, not by where the team is in its journey.
+The four zones of process below are each the right methodology for one complexity zone. Use a lower-zone process beyond its range and the team pays the tax in full. Use a higher-zone process below its range and the team pays overhead without benefit. The same team may operate at different zones for different workstreams. The right zone for any given piece of work is determined by the complexity of that work.
 
 ## The Four Zones
 
 ![What each zone of process provides: the capability staircase from Manual / Vibe Coding to SE at Scale](/diagrams/zones-staircase.svg)
 
-Each zone of process is sized for a complexity range. Each zone keeps what the previous zone provided and adds the response to a failure the previous zone cannot handle at the higher complexity range. The progression below moves from low-complexity work on the left to portfolio-scale work on the right. The right zone for your workstream is determined by the complexity of the work in that workstream, not by where the team is in its overall journey.
+Each zone of process is sized for a complexity range. Each zone keeps what the previous zone provided and adds the response to a failure the previous zone cannot handle at the higher complexity range. The progression below moves from low-complexity work on the left to portfolio-scale work on the right. The right zone for your workstream is determined by the complexity of the work in that workstream.
 
 | Zone | What the zone covers | What the zone provides | Where the work crosses into the next zone |
 |---|---|---|---|

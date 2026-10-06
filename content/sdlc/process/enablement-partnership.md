@@ -30,7 +30,7 @@ Both traditions share five characteristics that translate to knowledge enablemen
 | Client owns the asset; partner operates against it | The client always owns the knowledge graph; Accion Labs enables, operates, and supports |
 | Partner has codified duties | Engagement principles are documented, audited, and contractually binding |
 | Partner is independent of the asset's commercial outcome | Enablement decisions are insulated from Accion Labs's expansion incentives |
-| Transparency is structural, not discretionary | Provenance, audit trail, and governance decisions are visible to the client by default |
+| Transparency is structural | Provenance, audit trail, and governance decisions are visible to the client by default |
 | Exit is a named, practiced discipline | Offboarding produces a usable handover; the asset transfers cleanly to the client or its chosen successor |
 
 ## The Five Engagement Principles
@@ -49,7 +49,7 @@ The partnership rests on five named principles. Each is operationalized through 
 
 **Duty of Transparency.** Provenance, audit trails, and engagement decisions are visible to the client by default. Operationalized through the audit trail integration in the progressive autonomy framework and the prompt-governance disclosures.
 
-These principles bind the engagement at the contractual level. They are clauses, not aspirations.
+These principles bind the engagement at the contractual level. Each principle is a clause in the contract.
 
 ## The Three Tiers of Managed Support
 
@@ -90,7 +90,7 @@ The doctrine has four commitments.
 
 In the client-hosted deployment of [Breeze.AI](../../practitioner/breeze-ai.md#deployment-architecture), the platform and the graph run inside the client's own cloud account for the whole engagement, and stay there if the engagement ends.
 
-The offboarding doctrine is the answer to the vendor lock-in concern long-term engagements always raise. The graph is the client's. The exit path is real. The relationship continues because the enablement partner adds value, not because departure is impractical.
+The offboarding doctrine is the answer to the vendor lock-in concern long-term engagements always raise. The graph is the client's. The exit path is real. The relationship continues because the enablement partner adds value.
 
 ## Engineering Team's Custodianship of the Agent Fleet (Zone 4 Evolution)
 

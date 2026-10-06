@@ -19,7 +19,7 @@ The companion to this page is [Zones of AI-Assisted SDLC](zones/_index.md), whic
 
 ## What the Custodians Know That the Code Does Not Show
 
-In any enterprise application of real size, the people who hold the application together are not only the engineers writing code but also the four roles that carry the context the team depends on day to day.
+In any enterprise application of real size, the people who hold the application together are the engineers writing code and the four roles that carry the context the team depends on day to day.
 
 The product owner holds the why. Why this feature exists, which persona it is for, which business outcome it serves, which scenarios trigger it, which edge cases are deliberately not addressed because they belong to a different workflow, which earlier proposal was rejected and on what grounds. This knowledge is rarely in the ticket. It lives in the product owner's head, refined through sprint planning conversations, customer calls, and demo feedback over years.
 
@@ -51,7 +51,7 @@ Each of these interactions matters. Each is bilateral and unrecorded. Each is pa
 
 This is the situation any AI coding agent walks into. The agent does not have access to any of these Slack conversations. The agent does not know which custodian to ask, and cannot ask anyway. The agent sees what is in the codebase, what is in the ticket, what is in the wiki (often stale), and that is the full extent of its context. Everything the four custodians know is invisible to it.
 
-Bigger context windows do not change this. We can feed an agent the entire codebase plus the entire wiki and it still does not have the architect's mental model of what is current. We can feed it the entire backlog and it still does not have the product owner's understanding of which features were deferred for strategic reasons. We can feed it the entire design system documentation and it still does not have the designer's judgment about which component is right for this case. The volume is not the problem. The shape is the problem. The agent needs structured context it can query for the parts that apply to the current task, not more text it has to wade through.
+Bigger context windows do not change this. We can feed an agent the entire codebase plus the entire wiki and it still does not have the architect's mental model of what is current. We can feed it the entire backlog and it still does not have the product owner's understanding of which features were deferred for strategic reasons. We can feed it the entire design system documentation and it still does not have the designer's judgment about which component is right for this case. The problem is the shape of the context. The agent needs structured context it can query for the parts that apply to the current task.
 
 What the agent actually needs is a structured representation of what the four custodians know, in a form it can query for exactly the part that applies to the current task. That representation is the four-layer knowledge graph, walked through in detail in [The Methodology](methodology.md).
 
@@ -184,7 +184,7 @@ What the methodology changes is the medium each custodian works in. The product 
 
 There are real automation gains adjacent to each custodian, and we use them. Agents draft ontology updates that the custodian reviews and approves. Agents propose ontology entries from extracted patterns in the existing system. Agents enforce the ontology at PR merge so that drift cannot accumulate silently. None of these replace the custodian's judgment. All of them reduce the custodian's mechanical load so the judgment can be applied where it actually matters.
 
-We treat this position as the methodology's core commitment, not as a temporary stance to be revised when the next model release ships. The reasoning is structural, not based on current model capability. Until AI systems are participants in the human conversations the custodians are participants in, the integration of those conversations into engineering decisions has to be done by a human. That is unlikely to change on any horizon a CTO is planning against today.
+We treat this position as the methodology's core commitment. It stays in place when the next model release ships. The reasoning is structural and does not depend on current model capability. Until AI systems are participants in the human conversations the custodians are participants in, the integration of those conversations into engineering decisions has to be done by a human. That is unlikely to change on any horizon a CTO is planning against today.
 
 ## The Structural Response
 

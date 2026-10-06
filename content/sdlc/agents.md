@@ -66,7 +66,7 @@ A top-level orchestrator runs per engagement. It coordinates across products and
 
 Sub-orchestrators run per workstream. They coordinate the agents within a workstream, dispatch read, write, and gate agents in the right sequence for the request, and hold the workstream-specific configuration.
 
-The pattern keeps coordination overhead manageable. Adding a new workstream means adding a sub-orchestrator, not modifying the top-level orchestrator. Cross-workstream coordination happens at the top level. Day-to-day agent calls happen within a single sub-orchestrator.
+The pattern keeps coordination overhead manageable. Adding a new workstream means adding a sub-orchestrator; the top-level orchestrator stays unchanged. Cross-workstream coordination happens at the top level. Day-to-day agent calls happen within a single sub-orchestrator.
 
 ### Agent Ownership
 
@@ -184,7 +184,7 @@ A real user story run through the agent against a 1.6 million LOC Node.js, TypeS
 
 | Report section | What it captured |
 |---|---|
-| Executive Summary | The headline insight that the database substrate was already half-built; the change was therefore application-layer, not schema-migration |
+| Executive Summary | The headline insight that the database substrate was already half-built; the change was therefore confined to the application layer and needed no schema migration |
 | Functional Layer | Nine functional nodes affected: two outcomes modified, two scenarios added, two existing scenarios touched, three actions modified, with their unique ontology IDs |
 | Design Layer | Seven design components and user journeys affected: three components, three user journeys, one new email template |
 | Code Layer | Fifteen specific code-level changes: file paths, endpoints, current behavior, required additions, across five distinct repositories |
@@ -215,7 +215,7 @@ Code review focus moves upstream. Reviewers stop asking "did the agent touch the
 
 The spec sprint becomes the primary risk-management surface. Since pre-implementation impact analysis surfaces blast radius before code is written, the spec sprint is where risk is identified and mitigated. The implementation sprint becomes the lower-risk activity: a known plan being executed.
 
-Senior engineers spend their time on judgment, not context assembly. The senior engineer's most valuable contribution is the judgment they bring to ambiguous decisions. The methodology takes the context-assembly work off their plate and lets them spend their time where it counts.
+Senior engineers spend their time on judgment. The senior engineer's most valuable contribution is the judgment they bring to ambiguous decisions. The methodology takes the context-assembly work off their plate and lets them spend their time where it counts.
 
 > **How Accion Labs operationalizes the Impact Analysis Agent**
 >
@@ -246,7 +246,7 @@ The PR Validation Agent does not enforce stylistic preferences. It does not run 
 
 The gate does not block PRs for cosmetic reasons. It blocks PRs for structural reasons. The distinction matters: the cost of a false-positive structural block is high (engineers stop trusting the gate), so the gate is calibrated to fail only when the structural violation is unambiguous.
 
-The gate does not arbitrate intent. If a structural violation reflects a deliberate architectural decision, the engineer can request an override from the Chief Architect. The override is logged in the audit trail. Frequent overrides are a signal that the ontology needs to be updated, not that the gate is wrong.
+The gate does not arbitrate intent. If a structural violation reflects a deliberate architectural decision, the engineer can request an override from the Chief Architect. The override is logged in the audit trail. Frequent overrides are a signal that the ontology needs to be updated.
 
 ### How the Gate Catches Cross-Team Contract Violations
 
@@ -270,7 +270,7 @@ A developer is implementing a new modal dialog. The Design Ontology has a `<Conf
 
 The PR Validation Agent flags the duplication. The PR cannot merge until the developer either reuses the existing component or, if there is a legitimate reason to create a new one, justifies the new component to the Design System Owner. The Design System Owner approves the new component (and adds it to the design system) or asks the developer to use the existing one.
 
-This is what prevents the design system erosion that defeats most SDD-disciplined teams. The enforcement happens at the PR gate, not in retrospective design reviews three quarters later when the design system has fragmented.
+This is what prevents the design system erosion that defeats most SDD-disciplined teams. The enforcement happens at the PR gate, before the change merges. A retrospective design review three quarters later would find a design system that has already fragmented.
 
 ### The Override Audit Trail
 
@@ -347,7 +347,7 @@ Test coverage stops being a thing the team has to budget for. It is what the Fun
 | Scenarios covered | All scenarios per outcome have generated step-level coverage |
 | Steps covered | All steps per scenario have generated action-level test cases |
 
-A team operating under the methodology typically reaches 93.4% test coverage with zero manual BDD overhead. The remaining 6.6% is what the team chooses not to cover, such as deliberately deferred edge cases or scenarios marked out-of-scope. The coverage gap is intentional, not accidental.
+A team operating under the methodology typically reaches 93.4% test coverage with zero manual BDD overhead. The remaining 6.6% is what the team chooses not to cover, such as deliberately deferred edge cases or scenarios marked out-of-scope. The coverage gap is intentional.
 
 ### How the Agent Handles Changes
 
@@ -496,7 +496,7 @@ Promotion is not one-directional. An agent that has been promoted to Level 3 but
 | The agent retrain trigger fires | The agent is paused at all levels; retraining is scheduled before any actions resume |
 | A Sev-1 incident is traced to the agent's output | The agent reverts to Level 1; root-cause analysis is required before any re-promotion |
 
-Demotion is not a failure of the methodology. It is the methodology working as designed. Agents that no longer meet the threshold for their current level should not operate at that level. The cycle of promotion, evidence accumulation, and (when warranted) demotion is what keeps the agent fleet trustworthy over time.
+Demotion is the methodology working as designed. Agents that no longer meet the threshold for their current level should not operate at that level. The cycle of promotion, evidence accumulation, and (when warranted) demotion is what keeps the agent fleet trustworthy over time.
 
 ### Which Work Goes to Agents
 

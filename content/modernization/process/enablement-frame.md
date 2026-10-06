@@ -53,7 +53,7 @@ The five engagement principles (Care, Loyalty, Prudence, Independence, Transpare
 | **Duty of Independence** | When the implementing partner runs modernizations for competing clients in the same industry, structural separations apply. Engagement-team firewalls operate the same way they do in SDLC engagements. Specific to modernization: the Target Blueprint chosen for one client cannot be reused for a competitor without explicit consent. |
 | **Duty of Transparency** | The audit trail of every agent action (every migration generation, every gate result, every iteration) is visible to the client. The Expert Review log is visible. The SME annotations are owned by the client throughout. The agent configurations and tuning history are delivered at hand-over. |
 
-The principles bind the engagement at the contractual level. They are clauses, not aspirations.
+The principles bind the engagement at the contractual level. Each principle is a clause in the contract.
 
 ## The Modernization Offboarding Doctrine
 

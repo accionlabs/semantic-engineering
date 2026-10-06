@@ -38,12 +38,12 @@ Vibe coding is not always a bug to be fixed. There are real contexts where the c
 
 | Context | Why vibe coding works |
 |---|---|
-| Solo developer learning a new framework or language | The act of generating, reviewing, and adjusting code is the learning loop. Adding a spec gate would slow down the learning, not improve it. |
-| Greenfield prototypes and proof-of-concept work | The point is to see whether the idea works, not to ship something maintainable. The throwaway nature absorbs the lack of structure. |
+| Solo developer learning a new framework or language | The act of generating, reviewing, and adjusting code is the learning loop. Adding a spec gate would slow down the learning. |
+| Greenfield prototypes and proof-of-concept work | The point is to see whether the idea works. Maintainability is not a goal. The throwaway nature absorbs the lack of structure. |
 | Internal one-off scripts, admin tools, and data fixes | Blast radius is contained. No one else will read the code. The script runs once and goes away. |
 | Hackathon or time-boxed exploration ("can we even do this?") | Exploration is the deliverable. Discovering whether the approach is feasible matters more than how the code reads. |
 | Personal projects and toy applications | No team coordination is required. The developer is the only consumer of the code they write. |
-| Spike work inside a larger project | A scoped, time-boxed dive to answer a technical question. The output is a finding, not production code. |
+| Spike work inside a larger project | A scoped, time-boxed dive to answer a technical question. The output is a finding that answers the question. |
 
 Examples that fit the pattern: a developer using Claude Code to prototype a new internal dashboard over a weekend; a solo engineer at a startup building the first cut of an MVP before the team grows; a senior engineer using an AI tool to explore three different approaches to a refactor before committing to one; an analyst using Claude to write a Python script that processes a CSV once.
 
@@ -96,7 +96,7 @@ Three operational changes mark the transition.
 |---|---|
 | Spec authorship is a hard gate before sprint planning | No work enters a sprint without a written spec. The spec is reviewed by the PO, the architect, and the tech lead before the sprint commits to it. |
 | Spec-to-implementation traceability is instrumented in the ticket system | Every commit references the spec it implements. The ticket system tracks coverage: which spec sections have implementation, which do not. |
-| CI-based drift detection in the pipeline | The CI pipeline checks that the implementation does not diverge from the spec in ways the spec does not anticipate. Drift surfaces as a build warning, not a production incident. |
+| CI-based drift detection in the pipeline | The CI pipeline checks that the implementation does not diverge from the spec in ways the spec does not anticipate. Drift surfaces as a build warning, before it can become a production incident. |
 
 None of the three requires infrastructure change. All three require discipline change. The discipline change is the hard part.
 
@@ -129,7 +129,7 @@ By Sprint 6, the team is at a sustainable Zone 2 operating model. The next quest
 
 ### Adoption Considerations
 
-The hardest part of the Zone 1 to Zone 2 transition is changing the team's habit, not the spec authoring itself. Teams that have shipped without specs for years experience the discipline as friction. The friction is real for the first few sprints. It diminishes as the team accumulates evidence that the discipline reduces total work rather than adding to it.
+The hardest part of the Zone 1 to Zone 2 transition is changing the team's habit; the spec authoring itself is easier to learn. Teams that have shipped without specs for years experience the discipline as friction. The friction is real for the first few sprints. It diminishes as the team accumulates evidence that the discipline reduces total work rather than adding to it.
 
 Engineering leaders adopting SDD should expect Sprint 1 and Sprint 2 to feel slower than the team's pre-SDD baseline. The improvement starts in Sprint 3 and stabilizes by Sprint 6. The leadership patience to hold the discipline through the first two sprints is what makes the adoption work.
 

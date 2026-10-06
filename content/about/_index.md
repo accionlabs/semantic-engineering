@@ -305,7 +305,7 @@ This page does not handle:
 - Workshop requests (see [Practitioner > Contact](../practitioner/contact.md))
 - Pricing inquiries (see [Practitioner > Contact](../practitioner/contact.md))
 - Existing engagement support (contact your engagement lead directly)
-- Recruitment inquiries (see Accion Labs careers, not part of this site)
+- Recruitment inquiries (see Accion Labs careers, which is outside this site)
 
 ---
 

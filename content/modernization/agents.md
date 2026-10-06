@@ -126,7 +126,7 @@ The autonomy framework in both fleets is anchored on machine-verifiable evidence
 
 ## Why the Fleet Stays Small
 
-The modernization fleet is nine agents, not thirty. The fleet was sized to cover the five stages of the modernization lifecycle with one agent per distinct responsibility, plus the four validation agents that map to the four named gates. Adding more agents to the fleet adds operational surface area without adding leverage; the cost of operating an additional agent (configuration, tuning, audit trail, named ownership) is non-trivial and the benefit needs to be visible. We resist agent proliferation in the modernization fleet for the same reason we resist it in the SDLC fleet.
+The modernization fleet has nine agents. The fleet was sized to cover the five stages of the modernization lifecycle with one agent per distinct responsibility, plus the four validation agents that map to the four named gates. Adding more agents to the fleet adds operational surface area without adding leverage; the cost of operating an additional agent (configuration, tuning, audit trail, named ownership) is non-trivial and the benefit needs to be visible. We resist agent proliferation in the modernization fleet for the same reason we resist it in the SDLC fleet.
 
 > **How Accion Labs operationalizes the modernization fleet**
 >

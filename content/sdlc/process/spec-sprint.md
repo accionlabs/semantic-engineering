@@ -1,6 +1,6 @@
 ---
 title: "Spec Sprint"
-description: "A separate sprint cycle that runs ahead of the implementation sprint. Output is specifications, not code. The discipline that makes the layered team structure work at enterprise scale."
+description: "A separate sprint cycle that runs ahead of the implementation sprint. Output is specifications. The implementation sprint writes the code. The discipline that makes the layered team structure work at enterprise scale."
 weight: 10
 date: 2026-06-09
 lastmod: 2026-06-09
@@ -12,7 +12,7 @@ audience:
   - product-owner
 ---
 
-A separate sprint cycle that runs ahead of the implementation sprint. The output is specifications, not code. The discipline that makes the layered team structure work at enterprise scale.
+A separate sprint cycle that runs ahead of the implementation sprint. The output is specifications. The implementation sprint writes the code. The discipline that makes the layered team structure work at enterprise scale.
 
 ## Why a Separate Cadence
 

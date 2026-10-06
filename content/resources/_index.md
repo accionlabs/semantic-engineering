@@ -84,7 +84,7 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 **Engineering Team (as custodian).** The fourth ontology custodian, owning the Code Ontology. At Zone 4 (Agentic SE at Scale), the Engineering Team's custodianship expands to include the agent fleet: approving Promotion Agreements, setting autonomy levels, reviewing the audit trail, and refining agent prompts. Bottom custodial layer in the Zone 4 diagram. See [Engineering Team's Custodianship of the Agent Fleet](../sdlc/process/enablement-partnership.md#engineering-teams-custodianship-of-the-agent-fleet-zone-4-evolution).
 
-**Extraction as Rationalization.** The principle that the brownfield extraction process is not just representation. The extraction surfaces duplicate capabilities, split functionality, dead capabilities, and misclassified architecture as a side effect of building the graph. The extraction output is a refactor roadmap, not just a snapshot. See [Extraction as Rationalization](../sdlc/methodology.md#extraction-as-rationalization).
+**Extraction as Rationalization.** The principle that the brownfield extraction process both represents the system and rationalizes it. The extraction surfaces duplicate capabilities, split functionality, dead capabilities, and misclassified architecture as a side effect of building the graph. The extraction output is a snapshot of the system and a refactor roadmap. See [Extraction as Rationalization](../sdlc/methodology.md#extraction-as-rationalization).
 
 ## F
 
@@ -128,7 +128,7 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 **Materialized View (of the graph).** Each custodian's structured access to their layer of the knowledge graph. The materialized view replaces the manual recovery cost of reading old docs, re-reading code, or asking colleagues what changed. It is what makes fractional allocation work: re-entry into a workstream goes from costly context recovery to opening a structured view of current state. See [Fractional Allocation](../sdlc/process/team.md#fractional-allocation).
 
-**Minimal Governance Structure.** The framing of the four-layer ontology. The ontologies are not full specifications. They are the minimal structure that ensures the corresponding role does their work properly. See [The Four-Layer Ontology](../sdlc/methodology.md#the-four-layer-ontology).
+**Minimal Governance Structure.** The framing of the four-layer ontology. The ontologies are the minimal structure that ensures the corresponding role does their work properly. The full detail lives in specifications and code. See [The Four-Layer Ontology](../sdlc/methodology.md#the-four-layer-ontology).
 
 ## O
 
@@ -142,7 +142,7 @@ The methodology's terminology. One paragraph per term, with a link to the depth 
 
 **PR Validation Agent.** The merge-time gate that validates every change against all four ontologies. Refuses merges that violate cross-team contracts, design system patterns, or architectural boundaries. See [PR Validation Agent](../sdlc/agents.md#the-pr-validation-agent).
 
-**Progressive Autonomy.** The discipline that controls what each agent in the fleet is authorized to do. Five autonomy levels. Agents earn higher autonomy through demonstrated evidence over time, not through a leap of faith. See [Progressive Autonomy](../sdlc/agents.md#progressive-autonomy).
+**Progressive Autonomy.** The discipline that controls what each agent in the fleet is authorized to do. Five autonomy levels. Agents earn higher autonomy through evidence they demonstrate over time. See [Progressive Autonomy](../sdlc/agents.md#progressive-autonomy).
 
 **Promotion Agreement.** The artifact that documents an agent's promotion from one autonomy level to the next. Includes evidence, threshold, approver, rollback criteria, and audit cadence. See [Progressive Autonomy](../sdlc/agents.md#progressive-autonomy).
 

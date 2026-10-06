@@ -48,7 +48,7 @@ The lost-context tax determines how much of the legacy behavior can be reliably 
 
 The validation-vacuum tax is what makes the modernization unprovable. Without an executable parity contract, the team cannot demonstrate that the modern equivalent preserves the legacy behavior. Stakeholders have to take parity on faith, which they reasonably refuse to do for business-critical systems. The unprovable modernization stalls before it can deploy.
 
-The knowledge-disappearance tax is what makes the modernization a one-time event rather than the start of a continuous methodology. The hand-over at the end of a traditional modernization is a hand-over of code, not of understanding. The next team that has to evolve the modernized system has the same reverse-engineering tax to pay all over again, on the modern code base, with no continuity of context.
+The knowledge-disappearance tax is what makes the modernization a one-time event rather than the start of a continuous methodology. The hand-over at the end of a traditional modernization transfers the code. The understanding behind the code is not transferred. The next team that has to evolve the modernized system has the same reverse-engineering tax to pay all over again, on the modern code base, with no continuity of context.
 
 ## How the Methodology Addresses Each Component
 

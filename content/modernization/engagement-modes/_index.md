@@ -14,13 +14,13 @@ audience:
   - chief-architect
 ---
 
-The companion to this section is [The Manual Translation Tax](../translation-tax.md). This section is about which engagement mode fits where you are on the modernization journey. The five modes below are not a complexity ladder. They are entry points sized to the work the client is ready to do, with a natural progression that many engagements follow over time.
+The companion to this section is [The Manual Translation Tax](../translation-tax.md). This section is about which engagement mode fits where you are on the modernization journey. The five modes below are entry points sized to the work the client is ready to do, with a natural progression that many engagements follow over time.
 
-## Why Modes, Not Zones
+## Why Engagement Modes
 
 The continuous SDLC use case has [four zones of process](../../sdlc/zones/_index.md) matched to four zones of work complexity. The right zone is determined by the complexity of the work in front of the team. The modernization use case is shaped differently. The complexity of a legacy estate does not change as the client moves through their journey; what changes is what the client is ready to commit to.
 
-A client may need to close a documentation gap before SMEs retire, without any migration intent. A second client may be considering modernization but not yet committed. A third may be planning a migration and need readiness work first. A fourth is committed and ready for the end-to-end pipeline. A fifth has modernized and needs to operate the modernized system going forward. Each of these is a different scope of work, not a different complexity. The modernization methodology offers a distinct mode for each.
+A client may need to close a documentation gap before SMEs retire, without any migration intent. A second client may be considering modernization but not yet committed. A third may be planning a migration and need readiness work first. A fourth is committed and ready for the end-to-end pipeline. A fifth has modernized and needs to operate the modernized system going forward. Each of these is a different scope of work. The modernization methodology offers a distinct mode for each.
 
 The Manual Translation Tax in modernization (covered on the [MTT page](../translation-tax.md)) has three components plus a residual: the reverse-engineering tax, the lost-context tax, the validation-vacuum tax, and the knowledge-disappearance tax that surfaces post-modernization. Each engagement mode addresses a defined subset.
 
@@ -203,7 +203,7 @@ Many engagements move through several modes in sequence. A Documentation Only en
 | Stop at Documentation Only | The legacy system runs for several more years. SMEs are leaving. Capture knowledge before they go. No commitment to migration. |
 | Stop at Discovery and Documentation | The organization wanted a system-understanding baseline. Whether to modernize will be decided later (or not at all). The discovery artifacts inform that decision. |
 | Stop at Migration Readiness | The migration is planned but commercial or regulatory conditions delay execution. The readiness package is preserved so the migration can start cleanly when conditions allow. |
-| Stop at Full Modernization | The modernized system is in production. The client operates it on their own. The knowledge graph is delivered as an artifact, not as a maintained asset. |
+| Stop at Full Modernization | The modernized system is in production. The client operates it on their own. The knowledge graph is handed over as an artifact and is no longer maintained. |
 | Continue to Maintain | The modernized system is in production and the client wants the graph to keep being maintained, either by the implementing partner or by transitioning to a continuous SDLC engagement under the four-layer ontology. |
 
 ## Time to First Deliverable
@@ -224,7 +224,7 @@ Legacy modernization is bounded, but the work has organizational implications th
 
 The SMEs who annotate the specification are giving up tacit knowledge in a structured form. This is good for the organization (the knowledge is preserved) and may be uncomfortable for the SME (their unique-position knowledge becomes shared). Engagement structure has to account for this.
 
-The target stack the client chooses will shape the engineering team's skill profile for years. The Target Blueprint decision in Discovery and Analysis is not just a technical decision; it is a workforce-planning decision. Procurement and HR need to be aware.
+The target stack the client chooses will shape the engineering team's skill profile for years. The Target Blueprint decision in Discovery and Analysis is a technical decision and also a workforce-planning decision. Procurement and HR need to be aware.
 
 The transition from a legacy system to a modern system rarely happens in one cutover. Strangler patterns, parallel operation, and traffic-shifting all need to be planned in Migration Readiness or earlier. The earlier engagement modes (Documentation Only, Discovery and Documentation) do not address operational cutover at all, which is appropriate because they do not produce a modern system, but the team needs to know that.
 

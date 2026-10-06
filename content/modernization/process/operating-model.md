@@ -109,7 +109,7 @@ The Modernization Expert is the named human owner across the modernization proje
 | At the end of every Stage 3 and Stage 4 module migration | That the module is ready for deployment. That the engagement-specific agent tuning is consistent with the gate outcomes. That any Product Owner or Architect feedback has been incorporated into the configuration. |
 | At the hand-over at the end of Stage 5 | That the modern system is operating as expected. That the knowledge graph is in a state that can transfer to a continuous SDLC engagement or to the client's internal team for ongoing maintenance. |
 
-The Expert Review pattern is what makes the modernization model's "validation, not per-step approval" stance operationally credible. The agents run autonomously through migration and validation; the Expert reviews the bounded outputs at defined gates rather than approving each agent action.
+The Expert Review pattern is what makes the modernization model's "validation at defined gates" stance operationally credible. The agents run autonomously through migration and validation; the Expert reviews the bounded outputs at defined gates rather than approving each agent action.
 
 ## Team Composition Across the Engagement
 

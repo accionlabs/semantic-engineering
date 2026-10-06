@@ -37,9 +37,9 @@ The brownfield archetype is what we do when the team has crossed the threshold b
 
 A third engagement (a social media marketing platform) had artificially split its backend products along organizational lines rather than along technical service boundaries. Multiple "products" were really one monolithic application presented to the user as a unified experience. After four to five years of evolution, the org structure had produced duplication that no team owned and no architect could fully see.
 
-When we applied the methodology, extraction was not just representation. The Functional Ontology surfaced the duplicate capabilities immediately because the same outcome appeared in multiple product graphs with different implementation paths. The output of extraction was the refactor roadmap the team had been putting off.
+When we applied the methodology, extraction also served as rationalization. The Functional Ontology surfaced the duplicate capabilities immediately because the same outcome appeared in multiple product graphs with different implementation paths. The output of extraction was the refactor roadmap the team had been putting off.
 
-The four-layer graph is not only the context the agent reads. It is also the diagnostic surface the team uses to surface the structural work that has been hidden by the org structure.
+The four-layer graph is the context the agent reads and also the diagnostic surface the team uses to surface the structural work that has been hidden by the org structure.
 
 ## Brownfield Enterprise Modernization
 
@@ -57,7 +57,7 @@ This is what the methodology looks like when applied at full scale from the star
 | Tech stack | Node.js, TypeScript, React |
 | Engineering team | 50 to 60 people |
 | Scrum teams | 5 to 6 across the two applications combined |
-| QA / QC | Separate organization, not embedded |
+| QA / QC | Separate organization, outside the scrum teams |
 | Prior AI tooling attempt | Claude Code, used directly by the team, produced isolated UI prototypes but no global productivity gain |
 
 The prior AI tooling attempt is instructive. The team had access to a state-of-the-art coding agent. Individual engineers got value in pockets, typically on isolated UI prototypes. At the global level, where changes had to coordinate across multiple repositories and respect contracts owned by other teams, the agent produced very little of substance. The missing ingredient was global context.
@@ -163,7 +163,7 @@ For context on the broader relationship, the prior digital transformation engage
 
 Three lessons from this archetype.
 
-Greenfield projects with SDD discipline have a complexity ceiling. The ceiling is rarely reached in the first few sprints. It is reached when the codebase, the design system, the team count, or the workstream count crosses a threshold the spec alone cannot govern. The trigger is the rate of complexity accrual, not the absolute starting size.
+Greenfield projects with SDD discipline have a complexity ceiling. The ceiling is rarely reached in the first few sprints. It is reached when the codebase, the design system, the team count, or the workstream count crosses a threshold the spec alone cannot govern. The trigger is the rate of complexity accrual, whatever the starting size.
 
 SE adoption can be staged by ontology. A team does not have to deploy all four ontologies at once. Starting with the ontology most aligned to the active bottleneck (Design at this engagement; Code and Architecture at the brownfield enterprise modernization archetype) produces measurable wins immediately and builds the operating discipline for broader rollout.
 

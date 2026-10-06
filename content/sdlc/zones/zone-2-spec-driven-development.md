@@ -125,7 +125,7 @@ Mature SDD practices organize around small feature pods rather than large standi
 | Dev Lead | Owns the implementation. Drives the agent, reviews generated code, decides when the build is ready for QA. One per pod |
 | QA Lead | Validates the spec before generation, builds the test scenarios, runs the QA pass on generated output. One per pod |
 
-The architect is typically shared across pods because architectural decisions span features. The dev lead and QA lead are usually pod-dedicated for the feature lifecycle, since holding a feature's full context is the work. A team running five features in parallel runs five pods. Coordination between pods happens through the shared architect and the constitution, not through a single team meeting.
+The architect is typically shared across pods because architectural decisions span features. The dev lead and QA lead are usually pod-dedicated for the feature lifecycle, since holding a feature's full context is the work. A team running five features in parallel runs five pods. Coordination between pods happens through the shared architect and the constitution.
 
 ### The Async Workflow
 
@@ -139,7 +139,7 @@ Mature SDD practices run asynchronously. The model is closer to project executio
 | Generation | The agent generates code against the signed spec | Async, three to four days for a substantial change |
 | Review iteration | The dev lead and architect review the generated output, iterate the agent prompts where needed | Async, often two weeks or more on substantial PRs |
 | QA pass | QA validates the implementation against the spec scenarios | Async, typically a few days |
-| Deploy | When the feature is QA-validated, deploy on the team's CI/CD pipeline | Per feature, not per sprint |
+| Deploy | When the feature is QA-validated, deploy on the team's CI/CD pipeline | Per feature |
 
 > "It is an async process, so we do not meet synchronously on a daily basis. We have a couple of chat channels where we communicate. There is a sign-off session when the spec is ready, which is traditionally similar to a project kickoff. No one is coding until all four stakeholders give a go-ahead."
 
@@ -189,7 +189,7 @@ What the agent receives:
 | Observability | What gets logged, what gets metricized, what gets traced. Required on every external call and every domain event |
 | Test coverage | What categories of test must accompany a feature (unit, integration, contract, end-to-end), enforced at PR validation |
 
-Static and dynamic security scanning are integrated into the CI pipeline. SAST tools (SonarQube and similar) run on every PR for static analysis. DAST tools (Snyk and similar) run for dynamic scanning. These are gates on every merge, not periodic audits.
+Static and dynamic security scanning are integrated into the CI pipeline. SAST tools (SonarQube and similar) run on every PR for static analysis. DAST tools (Snyk and similar) run for dynamic scanning. These are gates on every merge.
 
 > "We treat the agent as an engineering graduate. We have told it to use all the SOLID principles, all the design patterns, and event-driven architecture where applicable. As soon as it starts a task, all these things are fed in, so it does not have to be repeated each time."
 
@@ -203,7 +203,7 @@ Practiced this way, SDD produces measurable operational gains the team can stand
 - Engineering discipline encoded in tooling rather than tribal memory
 - Knowledge captured in the constitution and the spec history, which survives team turnover
 
-A mature SDD practice rebuilt more than a million lines of legacy code in five to six months under this model. SDD is not a transitional phase for teams whose complexity profile fits it. It is the operating mode.
+A mature SDD practice rebuilt more than a million lines of legacy code in five to six months under this model. For teams whose complexity profile fits it, SDD is the long-term operating mode.
 
 ## Spec Sprint Cadence as a Zone 2 Best Practice
 
@@ -309,7 +309,7 @@ Semantic Engineering is additive to SDD. The specification remains the canonical
 
 | Ceiling condition | What the methodology changes |
 |---|---|
-| Localized context | The four-layer knowledge graph provides global context across functional, design, architecture, and code. Every change is validated against all four layers, not just the local spec. |
+| Localized context | The four-layer knowledge graph provides global context across functional, design, architecture, and code. Every change is validated against the local spec and against all four layers. |
 | Spec drift | The graph auto-updates on every PR merge. The agent operates against current reality every commit, without manual upkeep. |
 | Single-layer coverage | Each of the four layers has its own ontology with its own validation. Design system enforcement is structural. Architecture boundaries are checked at merge. |
 | Specs becoming the bottleneck | Specs are produced on their own cadence (the spec sprint), validated by the Impact Analysis Agent against the graph, and consumed by the implementation sprint as input. The bottleneck moves from sequential to parallel. |

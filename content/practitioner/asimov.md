@@ -83,7 +83,7 @@ ASIMOV uses the same ontology-and-graph discipline that powers Breeze.AI, applie
 | Validation gates (AVF) | The same agent-fleet discipline Breeze.AI uses on the per-change SDLC flow, applied here to verify behavioral parity and structural conformance at every iteration of the migration. |
 | Subset of the four ontologies | The objective is behavioral parity with a technology change, so the Functional and Code ontologies are always central. Architecture is central whenever the redesign changes structure. Design is in scope when UI re-platforming is part of the engagement. |
 
-The Semantic Engineering anchor is what makes ASIMOV more than a pattern-matched code transpiler. The Source Graph captures actual behavior, not aspirational documentation. The Target Blueprint gives the agents a structured constraint to generate against, not a free-text prompt. The validation gates compare the generated system against both at every iteration. Structure constrains generation at every step.
+The Semantic Engineering anchor is what makes ASIMOV more than a pattern-matched code transpiler. The Source Graph captures the actual behavior of the legacy system. The Target Blueprint gives the agents a structured constraint to generate against. The validation gates compare the generated system against both at every iteration. Structure constrains generation at every step.
 
 ## The Solution Architecture End to End
 
@@ -98,7 +98,7 @@ The detailed flow shows where each agent sits, where the Product Owner and Archi
 
 ## Quality Gates Enforced by Intelligent Agents
 
-> Quality is validated continuously, not approved at the end.
+> Quality is validated continuously throughout the pipeline.
 
 AVF runs four named gates. Each gate has its own validation agent. Each gate produces machine-verifiable evidence and feeds back into the migration loop.
 
@@ -130,7 +130,7 @@ ASIMOV's architecture is explicit about where humans sit relative to the loop.
 | Mode | Where the human sits |
 |---|---|
 | Breeze.AI (the agentic SDLC) | **In the loop**: the developer reviews the coding agent's draft, the PR Validation Agent gives pass or fail at merge, the human approves merges. At Zone 4 the developer moves upstream into a custodial role over the agent fleet but still owns specific decisions per change. |
-| ASIMOV (the agentic modernization platform) | **Validation, not per-step approval**: the agent pipeline runs end to end across AGIE, ASF, AMM, and AVF. The named human points are SME annotation of the ASF (what to retain, modify, replace, retire) and Expert Review of the migrated output. Everything between those two points is agentic. |
+| ASIMOV (the agentic modernization platform) | **Validation at defined gates**: the agent pipeline runs end to end across AGIE, ASF, AMM, and AVF. The named human points are SME annotation of the ASF (what to retain, modify, replace, retire) and Expert Review of the migrated output. Everything between those two points is agentic. |
 
 This difference reflects the difference between the two problems. Evolving an application is an open-ended sequence of decisions where each decision deserves human review. Modernization has a finite, measurable success criterion: behavioral parity with the legacy system on a target stack. That criterion is what the four quality gates measure, so the agents run autonomously and the human validates the outcome.
 
@@ -200,7 +200,7 @@ ASIMOV and [Breeze.AI](breeze-ai.md) are peer platforms under Accion Labs's Soft
 | Ontology usage | The four-layer ontology of the live system: Functional, Design, Architecture, Code, continuously maintained as the system evolves | A different set of ontologies sized for the modernization problem. A Source-state ontology decomposed from the legacy system by AGIE. A Target-state ontology defined by the four custodians from a target blueprint. The ASF specification format bridges the two. The Source-state ontology intersects with Breeze's four-layer (both decompose code-level state). The Target-state ontology has no Breeze equivalent because Breeze's evolution model has no fixed target. |
 | Graph artifact | One four-layer graph per product, continuously maintained | Source Graph, Target Graph, and an ASF document bridging them, all produced during the modernization project |
 | Constraint mechanism | Four-layer ontology plus governance and metrics framework | Source Graph plus Target Blueprint plus ASF plus the four AVF gates |
-| Human role | In the loop: developer reviews per change; gates approve at merge | Validation, not per-step approval: the Product Owner and Architect annotate ASF (Retain / Modify / Replace / Retire); Expert reviews target output |
+| Human role | In the loop: developer reviews per change; gates approve at merge | Validation at defined gates: the Product Owner and Architect annotate ASF (Retain / Modify / Replace / Retire); Expert reviews target output |
 | Engagement shape | Open-ended ongoing operation under [Advise / Launch / Scale / Optimize](_index.md#engagement-models) | Finite project with a parity objective under one of the [five ASIMOV engagement modes](#the-asimov-engagement-model) |
 | Time horizon | Years (continuous) | Quarters per migration estate |
 
@@ -228,13 +228,13 @@ The intelligence core that ASIMOV builds (the Source Graph, the Enriched Graph, 
 | **Full Modernization** | The end-to-end pipeline: AGIE → ASF → AMM → AVF → Maintain. Target code generation, API and interface specs, architecture alignment, custom code for approved deltas, developer-ready work packages. | When the client commits to replacing a legacy stack with a modern stack and wants ASIMOV to drive the migration. |
 | **Maintain, Operate, and Convergence** | Operational knowledge base, lifecycle documentation, change-impact support, overlap analysis across products, consolidation opportunities, convergence blueprint. | When the modernization is complete (or partially complete) and the client wants ASIMOV to continue operating the knowledge graph for ongoing maintenance, rationalization, and convergence across products. |
 
-A client may move from one mode to the next as confidence builds. A Documentation Only engagement often leads to Discovery + Documentation, which leads to Migration Readiness, which leads to Full Modernization. The five modes are not a forced ladder; they are entry points sized to the client's situation.
+A client may move from one mode to the next as confidence builds. A Documentation Only engagement often leads to Discovery + Documentation, which leads to Migration Readiness, which leads to Full Modernization. The five modes are entry points sized to the client's situation.
 
 ### How the Engagement Model Relates to Breeze.AI
 
 The two engagement models do not overlap. ASIMOV's five modes serve a bounded modernization objective. Breeze.AI's Advise / Launch / Scale / Optimize phases serve continuous SDLC evolution. A client may use one without the other, both at different times, or both for different parts of the portfolio.
 
-What does travel between the two is the knowledge graph. When ASIMOV completes a Full Modernization (or finishes a Maintain, Operate, and Convergence engagement and hands the modernized system back to the client), the Source Graph and the Functional Ontology that ASIMOV captured are available as the seed for Breeze.AI's four-layer graph on the modern stack. If the client then wants continuous SDLC governance on the modernized system, Breeze.AI takes over with its own engagement model starting from that seed. The two engagements are sequential, not concurrent, and the use cases are distinct.
+What does travel between the two is the knowledge graph. When ASIMOV completes a Full Modernization (or finishes a Maintain, Operate, and Convergence engagement and hands the modernized system back to the client), the Source Graph and the Functional Ontology that ASIMOV captured are available as the seed for Breeze.AI's four-layer graph on the modern stack. If the client then wants continuous SDLC governance on the modernized system, Breeze.AI takes over with its own engagement model starting from that seed. The two engagements run one after the other, and the use cases are distinct.
 
 ### Indicative Phase Cadence Within Full Modernization
 

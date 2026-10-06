@@ -24,7 +24,7 @@ Semantic Engineering at enterprise scale requires a different team shape. The th
 
 | Layer | Role | What this layer does |
 |---|---|---|
-| Top: Custodianship | Product Owner, Architect, UX Designer, Engineering Team representative | The four ontology custodians. Each owns one ontology layer. Runs the [spec sprint](spec-sprint.md). Validates specs against the knowledge graph via Impact Analysis. Makes cross-product reconciliations. Output is specifications, not code. Typically client-supplied, with Forward-Deployed Engineers backfilling missing coverage. |
+| Top: Custodianship | Product Owner, Architect, UX Designer, Engineering Team representative | The four ontology custodians. Each owns one ontology layer. Runs the [spec sprint](spec-sprint.md). Validates specs against the knowledge graph via Impact Analysis. Makes cross-product reconciliations. Output is specifications. Typically client-supplied, with Forward-Deployed Engineers backfilling missing coverage. |
 | Middle: Implementation Teams | Implementation Engineers, Agent Developers | Consumes the impact-analyzed specification. Produces code (or in the target state, agents that produce code) under the four-ontology governance. |
 | Bottom: Enablement (Accion Labs-supplied) | Chief Architect, Ontology Maintainer, Knowledge Agent Owner, Semantic Engineers | Supports the custodianship layer with cross-ontology governance, ontology stewardship, agent-fleet operations, and brownfield extraction. Provides customization, setup, and managed support. Sits beneath the custodians, who own the asset. |
 
@@ -66,7 +66,7 @@ Fractional allocation means specialists are engaged at the moments their judgmen
 |---|---|
 | Specialist depth | The role requires fluency in a specific discipline (ontology design, agent engineering, data architecture, deployment, design system stewardship) that takes years to build |
 | Lower total duration on any given workstream | The specialist contributes at the moment their judgment is needed and then moves to the next workstream |
-| Sharply scoped deliverable | An ontology, a design system update, a data model, a deployment architecture, an agent specification. A defined output, not a vague "be available" |
+| Sharply scoped deliverable | An ontology, a design system update, a data model, a deployment architecture, an agent specification. A defined output. |
 | Continuous re-engagement across the lifecycle | Not a single front-loaded engagement; the same specialist returns when a workstream needs them again, with low re-entry cost |
 
 The recovered time across the team is real value. Some of it shows up as cost reduction; some shows up as faster delivery and a knowledge asset that compounds over years.
@@ -79,7 +79,7 @@ The team composition that delivers the methodology has two distinct categories: 
 
 | Role | What changed from the pre-SE pattern |
 |---|---|
-| Product Designer (evolved from BA) | Moves from business systems analysis to product mechanics; understands how products are built, not just what they should do. The Functional Ontology gives them a materialized view of every outcome already in the system. |
+| Product Designer (evolved from BA) | Moves from business systems analysis to product mechanics; understands what products should do and how they are built. The Functional Ontology gives them a materialized view of every outcome already in the system. |
 | UX Designer | Ships working UI code with design-system primitives, anchored to the Design Ontology. AI generates reliable UI when fed component-level structure, which is what the Design Ontology provides. |
 | Solution Architect / Tech Lead | Owns architecture currency through the Architecture Ontology, which KG Sync updates with every change before it merges. Architecture review moves from a quarterly event to a state that is always visible. |
 | Implementation Engineers | Higher leverage per engineer; work with AI agents inside the four-ontology governance frame. The implementation step compresses; the human review and integration step remains essential. |
@@ -98,7 +98,7 @@ The team composition that delivers the methodology has two distinct categories: 
 
 In a conventional SDLC, roles like data architect, UX architect, and DevOps architect are typically engaged as one-time or quarterly inputs. They produce a design or a review, hand it off, and lose visibility into how it gets used. When they're called back in, they spend significant time recovering state before they can contribute.
 
-The graph closes that visibility gap. The architect's view of architecture is always current; the designer's view of the component system is always current. When the architect is called into a new workstream's spec sprint, the relevant context is already in the graph and the re-entry is into structured state, not into prose they have to re-read. That is what lets the architect cover two or three workstreams without losing depth on any one of them.
+The graph closes that visibility gap. The architect's view of architecture is always current; the designer's view of the component system is always current. When the architect is called into a new workstream's spec sprint, the relevant context is already in the graph and the architect re-enters through structured state, with no prose to re-read. That is what lets the architect cover two or three workstreams without losing depth on any one of them.
 
 The practical change for a delivery organization: specialists move from "outside the scrum team, called in occasionally with significant ramp each time" to "outside the scrum team, with continuous visibility through the graph, engaged at specific trigger points with low ramp".
 
@@ -142,7 +142,7 @@ We replace distributed scrum with a three-layer structure. The structure is hier
 |---|---|
 | Product Owner | Custodian of the Functional Ontology. Anchors personas, outcomes, scenarios in the spec sprint. |
 | Architect | Custodian of the Architecture Ontology. Approves service boundaries, integration contracts, infrastructure topology. |
-| UX Designer | Custodian of the Design Ontology. Names the components that render the change; ships UI in code, not in wireframes. |
+| UX Designer | Custodian of the Design Ontology. Names the components that render the change; ships UI as code. |
 | Engineering Team representative | Custodian of the Code Ontology. Verifies code touchpoints; flags refactor candidates. At Zone 4, also custodian of the agent fleet. |
 
 The custodians are typically client-supplied. When the client cannot supply all four roles fluently, Forward-Deployed Engineers staff the gap. The FDE profile and the substitute pattern (one, two, or three people covering the four roles together) are detailed in [Forward-Deployed Engineers](#forward-deployed-engineers) below. The pool is sized at one FDE per ten to fifteen million dollars of account revenue, or one per top-fifteen account.
@@ -156,7 +156,7 @@ This layer owns the knowledge graph across years. It produces well-formed specif
 | Implementation Engineers | Write code (or in the target state, write agents that produce code) under the four-ontology governance frame; consume the Impact Analysis Agent's output as input |
 | Agent Developers | Write the workstream-specific agents that handle pattern-based code generation under the spec sprint's direction |
 
-The Implementation Team's day-to-day work is constrained by the spec sprint's output. They are not authoring specs. They are not making architecture decisions. They are not extending the ontology shape. They are executing a known plan that the custodianship layer has validated.
+The Implementation Team's day-to-day work is constrained by the spec sprint's output. They execute a known plan that the custodianship layer has validated. Spec authoring, architecture decisions and changes to the ontology shape belong to the custodianship layer.
 
 **Bottom Layer: Enablement (Accion Labs-supplied).** Sits beneath the custodianship and implementation layers. Provides customization of Breeze.AI / ASIMOV, initial setup, and managed support cadence. Does not own the asset; supports the custodians who do.
 
@@ -220,7 +220,7 @@ The industry has converged on "forward-deployed engineer" as the term for a spec
 
 ### The Role
 
-In the layered team structure, the Forward-Deployed Engineer (FDE) backfills missing coverage in the top (custodianship) layer when the client cannot supply all four ontology custodian roles fluently. They play one or more of the four custodian roles in the [spec sprint](spec-sprint.md). Their output is specifications validated against the knowledge graph, not code.
+In the layered team structure, the Forward-Deployed Engineer (FDE) backfills missing coverage in the top (custodianship) layer when the client cannot supply all four ontology custodian roles fluently. They play one or more of the four custodian roles in the [spec sprint](spec-sprint.md). Their output is specifications validated against the knowledge graph.
 
 | Responsibility | What it looks like in practice |
 |---|---|
@@ -242,7 +242,7 @@ The FDE profile spans all four custodian roles: part product owner, part archite
 | Trait | What it means |
 |---|---|
 | Architectural literacy | Can read a service boundary diagram, identify a coupling problem, and propose a refactor that respects the existing constraints |
-| Product mechanics literacy | Understands not just what the customer wants but how products are built; knows when to push back on a requirement that adds disproportionate engineering cost |
+| Product mechanics literacy | Understands what the customer wants and how products are built; knows when to push back on a requirement that adds disproportionate engineering cost |
 | Design system literacy | Knows the component library, knows when a new design is a real new design and when it is a duplicate of something the team already has |
 | Knowledge graph literacy | Reads impact analysis reports fluently; can identify which findings warrant action and which are noise |
 | Tech lead credibility | Has the engineering chops to be taken seriously by the implementation team |
@@ -286,7 +286,7 @@ The three-month immersion archetype. Indian-origin engineers with five years of 
 
 ### The Mindset Filter
 
-The single most important hiring criterion is mindset, not seniority.
+The single most important hiring criterion is mindset.
 
 | Mindset trait | Why it matters |
 |---|---|
