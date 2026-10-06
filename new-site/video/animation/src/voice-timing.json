@@ -10,6 +10,33 @@
   "pitch": 0,
   "english_normalization": true
  },
- "scenes": {},
- "note": "No voice yet: sentence lengths are estimated until the author approves the script and the animations."
+ "scenes": {
+  "0": [
+   7.575,
+   3.996,
+   8.594,
+   8.254,
+   13.766,
+   7.314,
+   5.72,
+   5.903,
+   12.068,
+   7.053,
+   7.131,
+   7.993,
+   7.81,
+   7.366,
+   7.235,
+   4.78,
+   5.355,
+   7.053,
+   8.646,
+   12.434,
+   4.884,
+   6.922,
+   10.109,
+   9.273,
+   11.232
+  ]
+ }
 }

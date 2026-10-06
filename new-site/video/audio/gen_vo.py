@@ -1,6 +1,7 @@
 """Generates the narration one sentence at a time with fal.ai MiniMax Speech-02 HD.
 
-Each sentence is cached by its text, so re-running regenerates only what changed. Writes the
+Each sentence is cached by its text, so re-running regenerates only what changed. Pass --scenes 0 or
+--scenes 0,1-4 to voice only those scenes; their timing is merged into the existing timing file. Writes the
 clips to vo/, a manifest with measured durations, the timing file the animation reads, and a
 line per call to the cost report. The fal key is read from ~/.fal_key and never printed.
 """
@@ -18,7 +19,9 @@ AUDIO = {'sample_rate': 44100, 'bitrate': 256000, 'format': 'mp3', 'channel': 1}
 LEAD, GAP, TAIL = 0.6, 0.7, 1.2  # the gap leaves room to cut a clip cleanly between sentences
 
 # Spoken forms for words the voice reads badly. Captions keep the written form.
-SAY = [(r'\bSaaS\b', 'sass'), (r'\bOn2Go\b', 'on-to-go'), (r'\bYAML\b', 'yammel'), (r'\bLSP\b', 'L S P')]
+# Pronunciations: REQUIREMENTS.md section 4.
+SAY = [(r'\bBreeze\.AI\b', 'Breeze A I'), (r'\bASIMOV\b', 'Ass-ee-mow'), (r'\bSDLC\b', 'S D L C'), (r'\bLOC\b', 'L O C'),
+       (r'\bUX\b', 'U X'), (r'\bMCP\b', 'M C P'), (r'\bKAPS\b', 'caps'), (r'\bSaaS\b', 'sass')]
 
 def spoken(text):
     for pat, rep in SAY:
@@ -44,12 +47,28 @@ def synth(job):
     meta.write_text(json.dumps({'ms': res['duration_ms'], 'text': text, 'spoken': say}))
     return n, k, text, say, out.name, res['duration_ms'], True
 
+def wanted():
+    import sys
+    if '--scenes' not in sys.argv:
+        return None
+    out = set()
+    for part in sys.argv[sys.argv.index('--scenes') + 1].split(','):
+        a, _, b = part.partition('-')
+        out.update(range(int(a), int(b or a) + 1))
+    return out
+
 def main():
-    scenes = json.loads(NARRATION.read_text())['scenes']
+    only = wanted()
+    scenes = [s for s in json.loads(NARRATION.read_text())['scenes'] if only is None or s['n'] in only]
     jobs = [(s['n'], k, t) for s in scenes for k, t in enumerate(s['sentences'])]
     with cf.ThreadPoolExecutor(6) as ex:
         results = list(ex.map(synth, jobs))
-    manifest, timing, new_chars = {}, {'lead': LEAD, 'gap': GAP, 'tail': TAIL, 'model': MODEL, 'voice': VOICE, 'scenes': {}}, 0
+    manifest = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {}
+    old = json.loads(TIMING.read_text()) if TIMING.exists() else {}
+    timing = {'lead': LEAD, 'gap': GAP, 'tail': TAIL, 'model': MODEL, 'voice': VOICE, 'scenes': old.get('scenes', {})}
+    for s in scenes:
+        manifest.pop(str(s['n']), None); timing['scenes'].pop(str(s['n']), None)
+    new_chars = 0
     for n, k, text, say, file, ms, fresh in results:
         manifest.setdefault(str(n), []).append({'k': k, 'text': text, 'spoken': say, 'file': file, 'ms': ms})
         timing['scenes'].setdefault(str(n), []).append(round(ms / 1000, 3))
