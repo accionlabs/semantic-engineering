@@ -12,6 +12,6 @@
     { "pattern": "www.semantic-engineering.ai", "custom_domain": true }
   ],
   "workers_dev": true,
-  // Explanations agents make through the connector, stored under an id made from their text, kept 180 days.
+  // Explanations agents make through the connector, stored under an id made from their text, kept 90 days.
   "kv_namespaces": [{ "binding": "EXPLANATIONS", "id": "851e5f06e3d946e9b53063b1c382f2de" }]
 }

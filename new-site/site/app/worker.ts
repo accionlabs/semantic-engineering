@@ -49,7 +49,7 @@ const CORS = {
 // ---------- stored explanations ----------
 
 /** How long a stored explanation is kept. */
-const KEEP_SECONDS = 180 * 24 * 3600;
+const KEEP_SECONDS = 90 * 24 * 3600;
 /** An explanation's id: made from its text, so the same explanation always has the same id and is stored once. */
 const idFor = async (code: string) => {
   const digest = new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(code)));
@@ -76,7 +76,7 @@ const REMOTE: Record<string, Tool> = {
   ...Object.fromEntries(Object.entries(TOOLS).map(([name, t]) => [name, { ...t, run: t.run as (input: never) => unknown, readOnly: true }])),
   make_explanation: {
     title: 'Make an explanation the person can play',
-    description: "Checks an explanation and, if it passes, stores it and returns a short link that plays it on semantic-engineering.ai. The same explanation always gets the same link. Stored explanations are kept for 180 days.",
+    description: "Checks an explanation and, if it passes, stores it and returns a short link that plays it on semantic-engineering.ai. The same explanation always gets the same link. Stored explanations are kept for 90 days.",
     inputSchema: { type: 'object', properties: { code: { type: 'string' } }, required: ['code'] },
     readOnly: false,
     run: async ({ code }: { code: string }, env: Env) => {

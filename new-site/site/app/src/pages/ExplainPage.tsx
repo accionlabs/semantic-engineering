@@ -188,7 +188,7 @@ export const ExplainStored: React.FC = () => {
     }).catch(() => setMissing(true));
   }, [id]); // eslint-disable-line
   if (local) return <ExplainPage localId={local} />;
-  if (missing) return <div className="wrap narrow"><h1>This explanation is not available</h1><p>There is no explanation with this address, or it has expired. Explanations made by the connector are kept for 180 days. Ask your agent to make it again.</p><p><Link to="/explain">Explanations saved in this browser</Link></p></div>;
+  if (missing) return <div className="wrap narrow"><h1>This explanation is not available</h1><p>There is no explanation with this address, or it has expired. Explanations made by the connector are kept for 90 days. Ask your agent to make it again.</p><p><Link to="/explain">Explanations saved in this browser</Link></p></div>;
   return <div className="wrap narrow"><p>Opening the explanation…</p></div>;
 };
 
@@ -212,7 +212,7 @@ export const ExplainHome: React.FC = () => {
       <ul className="reel-connect">
         <li><strong>Claude (web or desktop):</strong> in Settings, under Connectors, add a custom connector with that address.</li>
         <li><strong>Claude Code:</strong> run <code>claude mcp add --transport http semantic-engineering {MCP_URL}</code></li>
-        <li><strong>Other agents:</strong> add it as a remote MCP server over Streamable HTTP. It needs no sign-in; it stores the explanations made with it for 180 days.</li>
+        <li><strong>Other agents:</strong> add it as a remote MCP server over Streamable HTTP. It needs no sign-in; it stores the explanations made with it for 90 days.</li>
         <li><strong>Agents in your browser:</strong> where a browser supports WebMCP, this site offers the same tools directly, and can play an explanation on the page.</li>
       </ul>
       <p className="muted">When the agent has written an explanation, it gives you a link. Opening it plays the explanation here and saves it in this browser. The knowledge graph the agent works from, with its evidence, is on <Link to="/graph">the graph page</Link>; how to connect, the tools and the privacy policy are on <Link to="/connect">the connector page</Link>.</p>

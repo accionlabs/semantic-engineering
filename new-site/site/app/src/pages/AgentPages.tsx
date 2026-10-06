@@ -35,7 +35,7 @@ export const ConnectPage: React.FC = () => (
       <thead><tr><th>Tool</th><th>What it does</th></tr></thead>
       <tbody>
         {Object.entries(TOOLS).map(([name, t]) => <tr key={name}><td><code>{name}</code></td><td>{t.description}</td></tr>)}
-        <tr><td><code>make_explanation</code></td><td>Checks an explanation and, if it passes, stores it and returns a short link that plays it on this site. The same explanation always gets the same link. Stored explanations are kept for 180 days.</td></tr>
+        <tr><td><code>make_explanation</code></td><td>Checks an explanation and, if it passes, stores it and returns a short link that plays it on this site. The same explanation always gets the same link. Stored explanations are kept for 90 days.</td></tr>
       </tbody>
     </table></div>
     <p>The language and the whole graph are also published at <a href="/explanation-language.md">/explanation-language.md</a>, and the graph with its evidence at <Link to="/graph">/graph</Link>.</p>
@@ -44,7 +44,7 @@ export const ConnectPage: React.FC = () => (
     <ul>{EXAMPLE_PROMPTS.map((p) => <li key={p}>{p}</li>)}</ul>
 
     <h2>Privacy and support</h2>
-    <p>The connector needs no account. It stores the explanations agents make with it, for 180 days, and nothing about who made them. See the <Link to="/privacy">privacy policy</Link>. For questions or problems, contact <a href={`mailto:${CONTACT}`}>{CONTACT}</a>.</p>
+    <p>The connector needs no account. It stores the explanations agents make with it, for 90 days, and nothing about who made them. See the <Link to="/privacy">privacy policy</Link>. For questions or problems, contact <a href={`mailto:${CONTACT}`}>{CONTACT}</a>.</p>
   </div>
 );
 
@@ -56,7 +56,7 @@ export const PrivacyPage: React.FC = () => (
 
     <h2>What we collect</h2>
     <p>The site has no accounts and no advertising. It uses Google Analytics to count visits and see which pages are read, which sets cookies and sends Google the address of each page viewed and general information about the browser and device, under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a>.</p>
-    <p>When an agent uses the connector, the server receives the tool requests it sends, such as a search phrase or the text of an explanation to check, and returns a result. When an agent makes an explanation for you, the server stores the text of that explanation, including the question and any description of you or your company the agent wrote into it, so that its short link can play it. Stored explanations are kept for 180 days and then deleted. Anyone with the link can play the explanation. The server keeps no record of who made an explanation or who called it, and the connector sends nothing to Google Analytics. To have a stored explanation removed sooner, write to the contact address below with its link.</p>
+    <p>When an agent uses the connector, the server receives the tool requests it sends, such as a search phrase or the text of an explanation to check, and returns a result. When an agent makes an explanation for you, the server stores the text of that explanation, including the question and any description of you or your company the agent wrote into it, so that its short link can play it. Stored explanations are kept for 90 days and then deleted. Anyone with the link can play the explanation. The server keeps no record of who made an explanation or who called it, and the connector sends nothing to Google Analytics. To have a stored explanation removed sooner, write to the contact address below with its link.</p>
 
     <h2>What stays in your browser</h2>
     <p>The site keeps a few things in your browser's local storage: your colour theme, the guide voice you chose, and the explanations you have played, with the questions and descriptions they contain, so that you or an agent working in your browser can return to them. None of this is sent to us. You can remove it with "Clear the history" on the <Link to="/explain">explanations page</Link> or by clearing this site's data in your browser.</p>
@@ -69,7 +69,7 @@ export const PrivacyPage: React.FC = () => (
     <p>The site and the connector are hosted on Cloudflare, which processes each request to deliver and protect the service, under the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare privacy policy</a>. We do not sell data.</p>
 
     <h2>Retention</h2>
-    <p>Explanations made through the connector are kept for 180 days. What your browser keeps stays until you clear it.</p>
+    <p>Explanations made through the connector are kept for 90 days. What your browser keeps stays until you clear it.</p>
 
     <h2>Contact</h2>
     <p>Questions about this policy: <a href={`mailto:${CONTACT}`}>{CONTACT}</a>.</p>
