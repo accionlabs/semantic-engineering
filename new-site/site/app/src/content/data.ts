@@ -20,7 +20,7 @@ export const pageByUrl = (pathname: string) => {
   const url = pathname.endsWith('/') ? pathname : `${pathname}/`;
   return SITE.pages.find((p) => p.url === url);
 };
-export const navTitle = (p: PageMeta) => (p.key === 'home' ? 'Home' : p.linkTitle ?? p.title);
+export const navTitle = (p: PageMeta) => (p.key === 'home' ? 'Introduction' : p.linkTitle ?? p.title);
 /** The pages above this one, home first. */
 export const ancestors = (p: PageMeta) => {
   const out: PageMeta[] = [];

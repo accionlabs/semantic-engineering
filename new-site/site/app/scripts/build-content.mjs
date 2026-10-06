@@ -40,10 +40,11 @@ files.sort();
 /** content-relative file → URL path, as Hugo publishes it: sdlc/_index.md → /sdlc/, sdlc/agents.md → /sdlc/agents/ */
 const urlOf = (rel) => {
   const noExt = rel.replace(/\\/g, '/').replace(/\.md$/, '');
-  const p = noExt === '_index' ? '' : noExt.endsWith('/_index') ? noExt.slice(0, -'/_index'.length) : noExt;
+  // The home page's content is the introduction; the site's home is the video (src/pages/WatchPage.tsx).
+  const p = noExt === '_index' ? 'introduction' : noExt.endsWith('/_index') ? noExt.slice(0, -'/_index'.length) : noExt;
   return p ? `/${p}/` : '/';
 };
-const keyOf = (url) => (url === '/' ? 'home' : url.slice(1, -1));
+const keyOf = (url) => (url === '/introduction/' ? 'home' : url.slice(1, -1));
 
 // Heading ids follow Hugo's (goldmark, "github" style), so links to the live site's anchors keep working.
 const headingId = (text) => text.toLowerCase().replace(/[^\p{L}\p{N}\s_-]/gu, '').replace(/\s/g, '-');

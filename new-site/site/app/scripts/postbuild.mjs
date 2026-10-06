@@ -22,12 +22,11 @@ const analytics = `<script>if(location.hostname==='semantic-engineering.ai'){var
 
 const head = (p) => {
   const url = SITE_URL + p.url;
-  const title = p.key === 'home' ? 'Semantic Engineering' : `${p.title} · Semantic Engineering`;
+  const title = `${p.title} · Semantic Engineering`;
   const ancestors = [];
   for (let k = p.parent; k; k = pages.get(k)?.parent) ancestors.unshift(pages.get(k));
   const data = [];
-  if (p.key === 'home') data.push({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Semantic Engineering', alternateName: 'Semantic Engineering Methodology', url: `${SITE_URL}/`, inLanguage: 'en', publisher });
-  if (!p.isSection && p.key !== 'home') data.push({ '@context': 'https://schema.org', '@type': 'TechArticle', headline: p.title, description: p.description, url, mainEntityOfPage: url, inLanguage: 'en', image: ogImage, datePublished: p.date, dateModified: p.lastmod, author: { '@type': 'Person', name: 'Ashutosh Bijoor', url: 'https://orcid.org/0009-0003-5402-3873' }, publisher });
+  if (!p.isSection) data.push({ '@context': 'https://schema.org', '@type': 'TechArticle', headline: p.title, description: p.description, url, mainEntityOfPage: url, inLanguage: 'en', image: ogImage, datePublished: p.date, dateModified: p.lastmod, author: { '@type': 'Person', name: 'Ashutosh Bijoor', url: 'https://orcid.org/0009-0003-5402-3873' }, publisher });
   if (ancestors.length) data.push({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [...ancestors, p].map((a, i) => ({ '@type': 'ListItem', position: i + 1, name: a.title, item: SITE_URL + a.url })) });
   if (p.faqs?.length) data.push({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: p.faqs.map((f) => ({ '@type': 'Question', name: f.question, acceptedAnswer: { '@type': 'Answer', text: f.text } })) });
   return [
@@ -35,14 +34,14 @@ const head = (p) => {
     `<meta name="description" content="${esc(p.description)}" />`,
     `<link rel="canonical" href="${url}" />`,
     p.draft ? '<meta name="robots" content="noindex" />' : '',
-    `<meta property="og:type" content="${p.key === 'home' || p.isSection ? 'website' : 'article'}" />`,
+    `<meta property="og:type" content="${p.isSection && p.key !== 'home' ? 'website' : 'article'}" />`,
     `<meta property="og:site_name" content="Semantic Engineering" />`,
-    `<meta property="og:title" content="${esc(p.key === 'home' ? 'Semantic Engineering' : p.title)}" />`,
+    `<meta property="og:title" content="${esc(p.title)}" />`,
     `<meta property="og:description" content="${esc(p.description)}" />`,
     `<meta property="og:url" content="${url}" />`,
     `<meta property="og:image" content="${ogImage}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
-    `<meta name="twitter:title" content="${esc(p.key === 'home' ? 'Semantic Engineering' : p.title)}" />`,
+    `<meta name="twitter:title" content="${esc(p.title)}" />`,
     `<meta name="twitter:description" content="${esc(p.description)}" />`,
     `<meta name="twitter:image" content="${ogImage}" />`,
     ...data.map(ld),
@@ -65,7 +64,9 @@ const paths = await import(pathToFileURL(path.join(app, 'dist-ssr/entry-server.j
 const narration = JSON.parse(fs.readFileSync(path.join(app, '../../video/animation/src/narration.json'), 'utf8'));
 const label = (a) => narration.labels?.[String(a)] ?? `Act ${a}`;
 const appendix = Object.keys(narration.acts).map(Number).find((a) => label(a) === 'Appendix');
+const home = SITE.pages.find((p) => p.key === 'home');
 const watch = [
+  { url: '/', title: 'Semantic Engineering', description: home.description, website: true },
   { url: '/watch/', title: 'The full video', description: 'The Semantic Engineering explainer, played live and clickable, one part at a time.' },
   { url: '/watch/overview/', title: 'The overview', description: narration.scenes.find((s) => s.n === 0).sentences.slice(0, 2).join(' ') },
   ...Object.keys(narration.acts).map(Number).filter((a) => a > 0).map((a) => ({
@@ -79,11 +80,12 @@ const watch = [
 for (const w of watch) {
   const url = SITE_URL + w.url;
   const headHtml = [
-    `<title>${esc(w.title)} · Semantic Engineering</title>`,
+    w.website ? '<title>Semantic Engineering</title>' : `<title>${esc(w.title)} · Semantic Engineering</title>`,
     `<meta name="description" content="${esc(w.description)}" />`,
     `<link rel="canonical" href="${url}" />`,
     `<meta property="og:title" content="${esc(w.title)}" />`, `<meta property="og:description" content="${esc(w.description)}" />`,
     `<meta property="og:url" content="${url}" />`, `<meta property="og:image" content="${ogImage}" />`,
+    w.website ? ld({ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Semantic Engineering', alternateName: 'Semantic Engineering Methodology', url: `${SITE_URL}/`, inLanguage: 'en', publisher }) : '',
     analytics,
   ].filter(Boolean).join('\n    ');
   const html = template.replace('<!--head-->', headHtml).replace('<!--app-->', render(w.url.replace(/\/$/, '') || '/'));

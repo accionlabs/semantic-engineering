@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ACT_NAMES, APPENDIX, actLabel, actOf, actPath, sceneInfo, scenesOf } from '../content/film';
+import { ACT_NAMES, APPENDIX, actLabel, actOf, actPath, sceneInfo, scenesOf, SCENES } from '../content/film';
 import { LiveVideo } from '../player/LiveVideo';
 import { Paths, type Tab } from '../parts/Paths';
+import { Transcript } from '../parts/Transcript';
 import { roleBySlug, sceneTitle, situationBySlug, type Path } from '../content/paths';
 
 /**
@@ -58,6 +59,7 @@ const PathWatch: React.FC<{ path: Path; kind: 'role' | 'situation' }> = ({ path,
       <LiveVideo key={path.slug} start={{ scene: path.scenes[0] }} stopMode="scene" fallbackScenes={path.scenes}
         onPosition={(sc) => { if (sc && path.scenes.includes(sc)) setScene(sc); }}
         path={{ scenes: path.scenes, nextLabel: (n) => `Next: ${n}. ${sceneTitle(n)}`, end }} />
+      <Transcript scenes={path.scenes} />
       <Paths initial={tab} current={{ scene, [kind]: path.slug }} />
     </div>
   );
@@ -87,6 +89,7 @@ const FilmWatch: React.FC<{ slug: string }> = ({ slug }) => {
       <div className="wrap wide watch-page">
         <p className="crumbs"><Link to="/">Home</Link> / The overview</p>
         <LiveVideo tldr endOverlay={<OverviewEnd />} fallbackScenes={[0]} />
+        <Transcript scenes={[0]} />
         <Paths />
       </div>
     );
@@ -107,6 +110,7 @@ const FilmWatch: React.FC<{ slug: string }> = ({ slug }) => {
     <div className="wrap wide watch-page">
       <p className="crumbs"><Link to="/">Home</Link> / <Link to="/watch">Follow the story</Link> / {title}</p>
       <LiveVideo key={slug} start={{ act: kind === 'act' ? n : undefined, scene: kind === 'scene' ? n : undefined }} stopMode={stopMode} onPosition={onPosition} fallbackScenes={fallbackScenes} />
+      <Transcript scenes={fallbackScenes ?? SCENES.filter((x) => x.n > 0).map((x) => x.n)} />
       <Paths current={stopMode === 'scene' ? { scene } : { act }} />
     </div>
   );
@@ -116,6 +120,8 @@ const FilmWatch: React.FC<{ slug: string }> = ({ slug }) => {
 export const HomeWatch: React.FC = () => (
   <div className="wrap wide home-watch">
     <LiveVideo tldr endOverlay={<OverviewEnd />} fallbackScenes={[0]} />
+    <p className="home-intro muted">Prefer to read? <Link to="/introduction/">Start with the introduction</Link>, or use the sections in the menu.</p>
+    <Transcript scenes={[0]} />
     <Paths />
   </div>
 );

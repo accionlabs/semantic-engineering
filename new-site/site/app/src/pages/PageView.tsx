@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { PAGES, SITE, ancestors, cachedPage, loadPage, navTitle, pageByUrl, type Block, type PageData, type PageMeta } from '../content/data';
 import { zoomDiagram } from '../parts/zoom';
+import { PageVideo } from '../parts/PageVideo';
+import { scenesForSection } from '../content/film';
 
 const Faqs: React.FC<{ data: PageData }> = ({ data }) => (
   <div className="faq">
@@ -14,8 +16,20 @@ const Faqs: React.FC<{ data: PageData }> = ({ data }) => (
   </div>
 );
 
-const BlockView: React.FC<{ b: Block; data: PageData; pageKey: string }> = ({ b, data, pageKey }) => {
-  if (b.k === 'h') return <div className="block-h" dangerouslySetInnerHTML={{ __html: b.html }} />;
+/** Beside a heading: the scenes of the video that cite this section. */
+const SceneLinks: React.FC<{ file: string; anchor: string }> = ({ file, anchor }) => {
+  const scenes = scenesForSection(file, anchor);
+  if (!scenes.length) return null;
+  return (
+    <p className="scene-links">
+      <span className="kicker">In the video</span>
+      {scenes.map((s) => <Link key={s.n} className="scene-chip" to={`/watch/scene-${s.n}`}>▶ {s.n}. {s.title}</Link>)}
+    </p>
+  );
+};
+
+const BlockView: React.FC<{ b: Block; data: PageData; pageKey: string; file: string }> = ({ b, data, pageKey, file }) => {
+  if (b.k === 'h') return <><div className="block-h" dangerouslySetInnerHTML={{ __html: b.html }} />{file !== '_index.md' && <SceneLinks file={file} anchor={b.id} />}</>;
   if (b.k === 'faq') return <Faqs data={data} />;
   // Every block carries its address, so the reader, the graph and agents can point at it.
   return <div className={`block block-${b.k}`} data-addr={`${pageKey}#${b.sec} p${b.n}`} dangerouslySetInnerHTML={{ __html: b.html }} />;
@@ -54,7 +68,7 @@ export const PageView: React.FC = () => {
     if (!page) return;
     const hit = cachedPage(page.key);
     if (hit) setData(hit); else { setData(undefined); loadPage(page.key).then(setData); }
-    document.title = page.key === 'home' ? 'Semantic Engineering' : `${page.title} · Semantic Engineering`;
+    document.title = `${page.title} · Semantic Engineering`;
   }, [page?.key]); // eslint-disable-line
   useEffect(() => {
     if (data?.key === page?.key && hash) document.getElementById(decodeURIComponent(hash.slice(1)))?.scrollIntoView();
@@ -78,8 +92,9 @@ export const PageView: React.FC = () => {
         )}
         {page.draft && <p className="draft-note">Draft for review. This page is not on the live site.</p>}
         <h1>{page.title}</h1>
+        {page.key !== 'home' && <PageVideo file={page.file} />}
         <div className="prose" ref={body}>
-          {data ? data.blocks.map((b, i) => <BlockView key={i} b={b} data={data} pageKey={page.key} />) : <p className="muted">Loading…</p>}
+          {data ? data.blocks.map((b, i) => <BlockView key={i} b={b} data={data} pageKey={page.key} file={page.file} />) : <p className="muted">Loading…</p>}
         </div>
         <Pager page={page} />
       </article>

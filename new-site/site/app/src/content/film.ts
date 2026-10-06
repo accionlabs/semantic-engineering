@@ -47,3 +47,17 @@ export const targetUrl = (id: string) => (TARGETS[id]?.[1]?.startsWith('http') ?
 export const targetName = (id: string) => TARGETS[id]?.[0];
 /** A short name for a location: the heading, else the page title. */
 export const locName = (l: Loc) => l.heading ?? l.page.title;
+
+/** The scenes that draw on a page (its file), in film order, with the sections of the page each cites. */
+export const scenesForPage = (file: string) => {
+  const out: { n: number; title: string; anchors: string[]; main: boolean }[] = [];
+  SCENES.filter((s) => s.n > 0).forEach((s) => {
+    const locs = [...s.sources, ...Object.values(s.targets)].filter((l) => l.split('#')[0] === file);
+    if (!locs.length) return;
+    out.push({ n: s.n, title: s.title, anchors: [...new Set(locs.map((l) => l.split('#')[1]).filter(Boolean))], main: s.sources[0]?.split('#')[0] === file });
+  });
+  return out;
+};
+/** The scenes that cite one section of a page. */
+export const scenesForSection = (file: string, anchor: string) => scenesForPage(file).filter((s) => s.anchors.includes(anchor));
+export const sceneTitleOf = (n: number) => sceneInfo(n)?.title ?? '';

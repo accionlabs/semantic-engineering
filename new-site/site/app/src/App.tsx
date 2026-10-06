@@ -8,7 +8,7 @@ import { HomeWatch, WatchPage } from './pages/WatchPage';
 export const App: React.FC = () => (
   <Routes>
     <Route element={<Layout />}>
-      <Route path="/" element={<><HomeWatch /><PageView /></>} />
+      <Route path="/" element={<HomeWatch />} />
       <Route path="/watch" element={<WatchPage />} />
       <Route path="/watch/:slug" element={<WatchPage />} />
       <Route path="*" element={<PageView />} />

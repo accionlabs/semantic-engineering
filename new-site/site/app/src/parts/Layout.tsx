@@ -38,7 +38,8 @@ const NavItem: React.FC<{ node: NavNode; current: string; onGo: () => void }> = 
 export const Sidebar: React.FC<{ current: string; onGo: () => void }> = ({ current, onGo }) => (
   <nav className="sidebar-nav" aria-label="Site">
     <ul>
-      <li><div className={`nav-row${current === 'home' ? ' active' : ''}`}><Link to="/" onClick={onGo} aria-current={current === 'home' ? 'page' : undefined}>Home</Link></div></li>
+      <li><div className={`nav-row${current === 'video-home' ? ' active' : ''}`}><Link to="/" onClick={onGo} aria-current={current === 'video-home' ? 'page' : undefined}>Home</Link></div></li>
+      <li><div className={`nav-row${current === 'home' ? ' active' : ''}`}><Link to="/introduction/" onClick={onGo} aria-current={current === 'home' ? 'page' : undefined}>Introduction</Link></div></li>
       {SITE.nav.map((n) => <NavItem key={n.key} node={n} current={current} onGo={onGo} />)}
     </ul>
   </nav>
@@ -48,7 +49,7 @@ declare global { interface Window { gtag?: (...a: unknown[]) => void } }
 
 export const Layout: React.FC = () => {
   const { pathname, hash } = useLocation();
-  const current = pageByUrl(pathname)?.key ?? '';
+  const current = pathname === '/' ? 'video-home' : pageByUrl(pathname)?.key ?? '';
   const [menu, setMenu] = useState(false);
   useEffect(() => { setMenu(false); }, [pathname]);
   // Analytics (production host only, see postbuild): the first view is sent on load, later ones on navigation.
