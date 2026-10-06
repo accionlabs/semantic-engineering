@@ -160,6 +160,15 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
     if (autoPlay && film && ready) start(0);
   }, [plan]); // eslint-disable-line
   useEffect(() => () => halt(), [halt]);
+  // Any tap on the page counts, so a first tap on a deep dive's button, outside the player, unlocks it too.
+  const unlockRef = useRef(unlock);
+  unlockRef.current = unlock;
+  useEffect(() => {
+    const on = () => unlockRef.current();
+    document.addEventListener('click', on, true);
+    document.addEventListener('touchend', on, true);
+    return () => { document.removeEventListener('click', on, true); document.removeEventListener('touchend', on, true); };
+  }, []);
   useEffect(() => { if (audio.current) audio.current.muted = !sound; if (!sound) stopSpeech.current(); }, [sound]);
 
   // A frame to show before the first play: the first expert clip.
@@ -178,7 +187,7 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
   const elapsed = segs.slice(0, Math.max(0, index)).reduce((a, s) => a + s.seconds, 0);
   const guideOnScreen = seg?.kind === 'host' || seg?.kind === 'quote';
   return (
-    <section className="player reel-player" aria-label="Your explanation" onClickCapture={unlock} onTouchEndCapture={unlock}>
+    <section className="player reel-player" aria-label="Your explanation">
       <div ref={box} className="player-stage" style={{ height: H * scale }} onClick={(e) => { if ((e.target as Element).closest('button, a')) return; playing ? pause() : play(); }}>
         <div ref={stage} className={`stage ${guideOnScreen ? 'no-captions' : ''}`} style={{ transform: `scale(${scale})` }} aria-hidden>
           <FilmView items={MAIN} onReady={onReady} />
