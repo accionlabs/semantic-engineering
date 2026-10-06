@@ -61,6 +61,7 @@ for (const p of SITE.pages) {
 }
 // The watch pages: the full video, the overview, each part and each scene, each prerendered with the
 // player's placeholder so the address works when opened directly.
+const paths = await import(pathToFileURL(path.join(app, 'dist-ssr/entry-server.js')).href);
 const narration = JSON.parse(fs.readFileSync(path.join(app, '../../video/animation/src/narration.json'), 'utf8'));
 const label = (a) => narration.labels?.[String(a)] ?? `Act ${a}`;
 const appendix = Object.keys(narration.acts).map(Number).find((a) => label(a) === 'Appendix');
@@ -72,6 +73,8 @@ const watch = [
     description: narration.scenes.filter((s) => s.act === a).map((s) => s.title).join(' · '),
   })),
   ...narration.scenes.filter((s) => s.n > 0).map((s) => ({ url: `/watch/scene-${s.n}/`, title: `Scene ${s.n}: ${s.title}`, description: s.sentences.slice(0, 2).join(' ') })),
+  ...paths.ROLES.map((r) => ({ url: `/watch/role-${r.slug}/`, title: `${r.name}: the scenes for your role`, description: r.note })),
+  ...paths.SITUATIONS.map((r) => ({ url: `/watch/use-${r.slug}/`, title: `${r.name}: the scenes for your situation`, description: r.note })),
 ];
 for (const w of watch) {
   const url = SITE_URL + w.url;

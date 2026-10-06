@@ -5,7 +5,6 @@ import { ACT_NAMES, ACTS, actLabel, actPath, scenesOf } from '../content/film';
 /** Every act and scene, each with its own address. */
 export const Story: React.FC<{ current?: { act?: number; scene?: number } }> = ({ current }) => (
   <section className="story" aria-label="Follow the story">
-    <h2 className="kicker">Follow the story</h2>
     <div className="acts">
       {ACTS.map((a) => (
         <article key={a} className={`act-tile ${current?.act === a ? 'current' : ''}`}>

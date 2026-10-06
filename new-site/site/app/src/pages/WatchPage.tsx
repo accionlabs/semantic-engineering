@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { ACT_NAMES, APPENDIX, actLabel, actOf, actPath, sceneInfo, scenesOf } from '../content/film';
 import { LiveVideo } from '../player/LiveVideo';
-import { Story } from '../parts/Story';
+import { Paths, type Tab } from '../parts/Paths';
+import { roleBySlug, sceneTitle, situationBySlug, type Path } from '../content/paths';
 
 /**
  * Every way through the video has its own address:
@@ -11,6 +12,8 @@ import { Story } from '../parts/Story';
  *   /watch/act-3      one act (1 to 6)
  *   /watch/appendix   the appendix
  *   /watch/scene-14   one scene
+ *   /watch/role-cto   a role's path (Pick your role)
+ *   /watch/use-legacy-modernization   a situation's path (Pick your situation)
  * Any of them takes ?t=<seconds> (a moment), &target=<id> (an element's panel) and ?read=<file#anchor> (the reader).
  */
 // Keep the address on what is playing, without reloading the player.
@@ -23,12 +26,54 @@ const OverviewEnd: React.FC = () => (
     <p className="kicker">The overview</p>
     <h2>Go deeper</h2>
     <p className="muted">Follow the full story, one part at a time, or pick a scene.</p>
-    <div className="act-end-actions"><Link className="btn primary" to="/watch">Follow the story</Link></div>
+    <div className="act-end-actions">
+      <Link className="btn primary" to="/watch">Follow the story</Link>
+      <a className="btn" href="#roles" onClick={(e) => { e.preventDefault(); history.replaceState(null, '', '#roles'); dispatchEvent(new HashChangeEvent('hashchange')); document.getElementById('paths')?.scrollIntoView({ behavior: 'smooth' }); }}>Pick your role</a>
+    </div>
   </>
 );
 
+/** A role's or a situation's path: its scenes, one at a time, then a choice of what next. */
+const PathWatch: React.FC<{ path: Path; kind: 'role' | 'situation' }> = ({ path, kind }) => {
+  const [scene, setScene] = useState<number>(path.scenes[0]);
+  const tab: Tab = kind === 'role' ? 'roles' : 'situations';
+  const label = kind === 'role' ? 'Pick your role' : 'Pick your situation';
+  useEffect(() => { document.title = `${path.name} · Semantic Engineering`; }, [path.name]);
+  const end = (
+    <>
+      <p className="kicker">End of the path</p>
+      <h2>{path.name}</h2>
+      <p className="muted">Pick another path, or follow the full story.</p>
+      <div className="act-end-actions">
+        <Link className="btn primary" to={`/watch#${tab}`}>{label}</Link>
+        <Link className="btn" to="/watch">Follow the story</Link>
+      </div>
+    </>
+  );
+  return (
+    <div className="wrap wide watch-page">
+      <p className="crumbs"><Link to="/">Home</Link> / <Link to={`/watch#${tab}`}>{label}</Link> / {path.name}</p>
+      <h1 className="path-title">{path.name}</h1>
+      <p className="muted">{path.note} {path.scenes.length} scenes.</p>
+      <LiveVideo key={path.slug} start={{ scene: path.scenes[0] }} stopMode="scene" fallbackScenes={path.scenes}
+        onPosition={(sc) => { if (sc && path.scenes.includes(sc)) setScene(sc); }}
+        path={{ scenes: path.scenes, nextLabel: (n) => `Next: ${n}. ${sceneTitle(n)}`, end }} />
+      <Paths initial={tab} current={{ scene, [kind]: path.slug }} />
+    </div>
+  );
+};
+
+/** /watch and /watch/<slug>: a path, or the film by part or scene. */
 export const WatchPage: React.FC = () => {
   const { slug = 'full' } = useParams();
+  const role = slug.startsWith('role-') ? roleBySlug(slug.slice(5)) : undefined;
+  const situation = slug.startsWith('use-') ? situationBySlug(slug.slice(4)) : undefined;
+  if (role) return <PathWatch key={slug} path={role} kind="role" />;
+  if (situation) return <PathWatch key={slug} path={situation} kind="situation" />;
+  return <FilmWatch key={slug} slug={slug} />;
+};
+
+const FilmWatch: React.FC<{ slug: string }> = ({ slug }) => {
   const [pos, setPos] = useState<{ act?: number; scene?: number }>({});
   const m = slug === 'full' ? ['', 'full', '1'] : slug === 'appendix' ? ['', 'act', String(APPENDIX)] : slug.match(/^(act|scene)-(\d+)$/);
   const kind = (slug === 'overview' ? 'overview' : m?.[1]) as 'overview' | 'full' | 'act' | 'scene' | undefined;
@@ -42,7 +87,7 @@ export const WatchPage: React.FC = () => {
       <div className="wrap wide watch-page">
         <p className="crumbs"><Link to="/">Home</Link> / The overview</p>
         <LiveVideo tldr endOverlay={<OverviewEnd />} fallbackScenes={[0]} />
-        <Story />
+        <Paths />
       </div>
     );
   }
@@ -62,7 +107,7 @@ export const WatchPage: React.FC = () => {
     <div className="wrap wide watch-page">
       <p className="crumbs"><Link to="/">Home</Link> / <Link to="/watch">Follow the story</Link> / {title}</p>
       <LiveVideo key={slug} start={{ act: kind === 'act' ? n : undefined, scene: kind === 'scene' ? n : undefined }} stopMode={stopMode} onPosition={onPosition} fallbackScenes={fallbackScenes} />
-      <Story current={stopMode === 'scene' ? { scene } : { act }} />
+      <Paths current={stopMode === 'scene' ? { scene } : { act }} />
     </div>
   );
 };
@@ -71,5 +116,6 @@ export const WatchPage: React.FC = () => {
 export const HomeWatch: React.FC = () => (
   <div className="wrap wide home-watch">
     <LiveVideo tldr endOverlay={<OverviewEnd />} fallbackScenes={[0]} />
+    <Paths />
   </div>
 );

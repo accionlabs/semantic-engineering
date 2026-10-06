@@ -193,3 +193,19 @@
 .reel-source > summary { cursor: pointer; font-family: var(--display); font-weight: 600; font-size: 1.05rem; padding: 6px 0; }
 .reel-source[open] > summary { margin-bottom: 10px; }
 .player-stage.placeholder { aspect-ratio: 16 / 9; background: #0d1220; position: relative; }
+
+/* Choose a path: tabs below the video. */
+.paths { margin: 28px 0 8px; }
+.paths .tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 6px; }
+.paths .tab { font: inherit; font-size: 0.95rem; padding: 8px 14px; border-radius: 999px; border: 1px solid var(--hairline); background: var(--surface); color: var(--fg); cursor: pointer; }
+.paths .tab.on { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.paths .tab-note { margin: 4px 0 14px; }
+.path-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; }
+.path-card { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px; border: 1px solid var(--hairline); border-radius: 12px; background: var(--surface); color: var(--fg); text-decoration: none; height: 100%; box-sizing: border-box; }
+.path-card:hover, .path-list .current .path-card { border-color: var(--accent); }
+.path-card .muted { font-size: 0.92rem; line-height: 1.45; }
+.path-scenes { font-family: var(--mono); font-size: 0.78rem; color: var(--muted); }
+.question-list { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 8px; }
+.question-list a { display: flex; gap: 10px; padding: 10px 14px; border: 1px solid var(--hairline); border-radius: 10px; background: var(--surface); color: var(--fg); text-decoration: none; }
+.question-list a:hover, .question-list .current a { border-color: var(--accent); }
+.path-title { margin: 6px 0 2px; font-family: var(--display); }

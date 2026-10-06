@@ -8,3 +8,4 @@ import { primePages, type PageData } from './content/data';
 primePages(import.meta.glob<PageData>('./content/pages/*.json', { eager: true, import: 'default' }));
 export const render = (url: string) => renderToString(<StaticRouter location={url}><App /></StaticRouter>);
 export { SITE } from './content/data';
+export { ROLES, SITUATIONS } from './content/paths';
