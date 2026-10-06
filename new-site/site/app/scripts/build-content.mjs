@@ -5,6 +5,7 @@
 // content/ stays the source of truth: editors change the Markdown and the next build picks it up.
 // Addresses: a page key ("sdlc/methodology"), a section anchor (the ## heading's id, "" before the first
 // heading) and a block number within that section: "sdlc/methodology#aperture p3".
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -212,6 +213,15 @@ for (const p of pages) fs.writeFileSync(path.join(out, 'pages', `${fileKey(p.key
 const meta = pages.map(({ blocks, faqs, ...m }) => ({ ...m, hasFaq: faqs.length > 0 }));
 const unused = fs.readdirSync(path.join(STATIC, 'diagrams')).filter((f) => f.endsWith('.svg') && !diagrams.has(f));
 fs.writeFileSync(path.join(out, 'site.json'), JSON.stringify({ pages: meta, nav, order, diagrams: [...diagrams.values()], unusedDiagrams: unused }, null, 1));
+// Each media file's version: a hash of its content, so any change to a file changes its address and no
+// browser plays a cached copy. The files are built locally (video/audio/site_audio.py) and are not in git.
+{
+  const dir = path.join(app, 'public/media');
+  const versions = {};
+  const walk = (d, rel = '') => { if (!fs.existsSync(d)) return; for (const f of fs.readdirSync(d)) { const full = path.join(d, f), r = rel ? `${rel}/${f}` : f; if (fs.statSync(full).isDirectory()) walk(full, r); else versions[r] = crypto.createHash('sha1').update(fs.readFileSync(full)).digest('base64url').slice(0, 10); } };
+  walk(dir);
+  fs.writeFileSync(path.join(out, 'media-versions.json'), JSON.stringify(versions, null, 1));
+}
 // Every addressed block as plain text, by page and section, for the knowledge graph, the explanation
 // language and the MCP server: "sdlc/methodology#aperture p3" is block 3 of the section "aperture".
 // A subsection (h3) lists the blocks under it, numbered within its section.
