@@ -9,6 +9,7 @@ import { HomeWatch, WatchPage } from './pages/WatchPage';
 const GraphPage = lazy(() => import('./pages/GraphPage').then((m) => ({ default: m.GraphPage })));
 const ExplainHome = lazy(() => import('./pages/ExplainPage').then((m) => ({ default: m.ExplainHome })));
 const ExplainImport = lazy(() => import('./pages/ExplainPage').then((m) => ({ default: m.ExplainImport })));
+const ExplainStored = lazy(() => import('./pages/ExplainPage').then((m) => ({ default: m.ExplainStored })));
 const ExplainPage = lazy(() => import('./pages/ExplainPage').then((m) => ({ default: m.ExplainPage })));
 const ConnectPage = lazy(() => import('./pages/AgentPages').then((m) => ({ default: m.ConnectPage })));
 const PrivacyPage = lazy(() => import('./pages/AgentPages').then((m) => ({ default: m.PrivacyPage })));
@@ -25,6 +26,7 @@ export const App: React.FC = () => (
       <Route path="/explain" element={later(<ExplainHome />)} />
       <Route path="/explain/import" element={later(<ExplainImport />)} />
       <Route path="/explain/:id" element={later(<ExplainPage />)} />
+      <Route path="/e/:id" element={later(<ExplainStored />)} />
       <Route path="/connect" element={later(<ConnectPage />)} />
       <Route path="/privacy" element={later(<PrivacyPage />)} />
       <Route path="*" element={<PageView />} />

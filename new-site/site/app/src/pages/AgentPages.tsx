@@ -19,10 +19,10 @@ export const ConnectPage: React.FC = () => (
 
     <h2>What it does</h2>
     <p>The connector gives an agent the knowledge graph of the method: the four layers of knowledge and their custodians, the symptoms a team sees today and their causes, the principles and practices that address them, the recommendations for new applications, existing applications and legacy modernization, and the limits the content states, each tied to the passages of the site and the moments in its film that support it.</p>
-    <p>With it, an agent can ask a person about their situation, map what they describe onto the method, and write an explanation in a small language built on the graph. The connector checks that explanation against the graph and the method's rules, and returns a link. Opening the link plays the explanation on this site as a short film: the recorded narration explains the method, and the agent's lines connect it to the person's question.</p>
+    <p>With it, an agent can ask a person about their situation, map what they describe onto the method, and write an explanation in a small language built on the graph. The connector checks that explanation against the graph and the method's rules, stores it, and returns a short link. Opening the link plays the explanation on this site as a short film: the recorded narration explains the method, and the agent's lines connect it to the person's question.</p>
 
     <h2>Add it</h2>
-    <p>Server address: <code>{MCP_URL}</code>. It uses Streamable HTTP, needs no sign-in or account, and every tool is read-only.</p>
+    <p>Server address: <code>{MCP_URL}</code>. It uses Streamable HTTP and needs no sign-in or account. Every tool is read-only except make_explanation, which stores the explanation it is given.</p>
     <ul>
       <li><strong>Claude (web, desktop and mobile):</strong> in Settings, under Connectors, add a custom connector with the address above.</li>
       <li><strong>Claude Code:</strong> <code>claude mcp add --transport http semantic-engineering {MCP_URL}</code></li>
@@ -35,7 +35,7 @@ export const ConnectPage: React.FC = () => (
       <thead><tr><th>Tool</th><th>What it does</th></tr></thead>
       <tbody>
         {Object.entries(TOOLS).map(([name, t]) => <tr key={name}><td><code>{name}</code></td><td>{t.description}</td></tr>)}
-        <tr><td><code>make_explanation</code></td><td>Checks an explanation and, if it passes, returns a link that opens it on this site in the person's own browser, where it plays and is saved there. The explanation travels in the link itself; the server keeps nothing.</td></tr>
+        <tr><td><code>make_explanation</code></td><td>Checks an explanation and, if it passes, stores it and returns a short link that plays it on this site. The same explanation always gets the same link. Stored explanations are kept for 180 days.</td></tr>
       </tbody>
     </table></div>
     <p>The language and the whole graph are also published at <a href="/explanation-language.md">/explanation-language.md</a>, and the graph with its evidence at <Link to="/graph">/graph</Link>.</p>
@@ -44,7 +44,7 @@ export const ConnectPage: React.FC = () => (
     <ul>{EXAMPLE_PROMPTS.map((p) => <li key={p}>{p}</li>)}</ul>
 
     <h2>Privacy and support</h2>
-    <p>The connector keeps no data and needs no account. See the <Link to="/privacy">privacy policy</Link>. For questions or problems, contact <a href={`mailto:${CONTACT}`}>{CONTACT}</a>.</p>
+    <p>The connector needs no account. It stores the explanations agents make with it, for 180 days, and nothing about who made them. See the <Link to="/privacy">privacy policy</Link>. For questions or problems, contact <a href={`mailto:${CONTACT}`}>{CONTACT}</a>.</p>
   </div>
 );
 
@@ -52,21 +52,24 @@ export const PrivacyPage: React.FC = () => (
   <div className="wrap narrow">
     <p className="kicker" style={{ marginTop: 28 }}>Privacy</p>
     <h1>Privacy policy</h1>
-    <p className="muted">For {SITE.replace('https://', '')} and its MCP connector at {MCP_URL.replace('https://', '')}. Draft of 6 October 2026, for review before publishing.</p>
+    <p className="muted">For {SITE.replace('https://', '')} and its MCP connector at {MCP_URL.replace('https://', '')}. Last updated 6 October 2026.</p>
 
     <h2>What we collect</h2>
     <p>The site has no accounts and no advertising. It uses Google Analytics to count visits and see which pages are read, which sets cookies and sends Google the address of each page viewed and general information about the browser and device, under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google privacy policy</a>.</p>
-    <p>When an agent uses the connector, the server receives the tool requests it sends, such as a search phrase or the text of an explanation to check, and returns a result. It does not store requests or results, and it keeps no record of who called it. The connector sends nothing to Google Analytics.</p>
+    <p>When an agent uses the connector, the server receives the tool requests it sends, such as a search phrase or the text of an explanation to check, and returns a result. When an agent makes an explanation for you, the server stores the text of that explanation, including the question and any description of you or your company the agent wrote into it, so that its short link can play it. Stored explanations are kept for 180 days and then deleted. Anyone with the link can play the explanation. The server keeps no record of who made an explanation or who called it, and the connector sends nothing to Google Analytics. To have a stored explanation removed sooner, write to the contact address below with its link.</p>
 
     <h2>What stays in your browser</h2>
     <p>The site keeps a few things in your browser's local storage: your colour theme, the guide voice you chose, and the explanations you have played, with the questions and descriptions they contain, so that you or an agent working in your browser can return to them. None of this is sent to us. You can remove it with "Clear the history" on the <Link to="/explain">explanations page</Link> or by clearing this site's data in your browser.</p>
-    <p>When an agent gives you a link to an explanation, the explanation is carried in the part of the link after the "#", which browsers do not send to the server.</p>
+    <p>When you open an explanation's link, your browser also saves a copy of it in its local storage, with your other explanations.</p>
 
     <h2>Speech</h2>
     <p>The guide's lines in an explanation are read aloud by your browser's own speech feature. Some browsers use an online voice service for some voices, in which case that browser's provider processes the text of those lines under its own policy. Choose a voice installed on your device to keep the text on your device.</p>
 
     <h2>Hosting</h2>
     <p>The site and the connector are hosted on Cloudflare, which processes each request to deliver and protect the service, under the <a href="https://www.cloudflare.com/privacypolicy/" target="_blank" rel="noopener">Cloudflare privacy policy</a>. We do not sell data.</p>
+
+    <h2>Retention</h2>
+    <p>Explanations made through the connector are kept for 180 days. What your browser keeps stays until you clear it.</p>
 
     <h2>Contact</h2>
     <p>Questions about this policy: <a href={`mailto:${CONTACT}`}>{CONTACT}</a>.</p>

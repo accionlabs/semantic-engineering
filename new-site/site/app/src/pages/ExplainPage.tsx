@@ -93,8 +93,9 @@ const sectionOfLine = (plan: Plan, line: number) => {
   return k;
 };
 
-export const ExplainPage: React.FC = () => {
-  const { id = '' } = useParams();
+export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
+  const { id: param = '' } = useParams();
+  const id = localId ?? param;
   const saved = reels.get(id);
   const result = useMemo(() => (saved ? checkExplain(saved.code) : undefined), [saved?.code]); // eslint-disable-line
   const api = useRef<ReelApi | null>(null);
@@ -173,6 +174,24 @@ export const ExplainImport: React.FC = () => {
   return <div className="wrap narrow"><p>Opening the explanation…</p></div>;
 };
 
+/** /e/<id>: fetches an explanation the connector stored, saves it in this browser, then plays it. */
+export const ExplainStored: React.FC = () => {
+  const { id = '' } = useParams();
+  const [missing, setMissing] = useState(false);
+  const [local, setLocal] = useState<string | null>(null);
+  // The short link stays in the address bar, so the person can share it; the copy saved here is for the history.
+  useEffect(() => {
+    setLocal(null); setMissing(false);
+    fetch(`/api/explanations/${encodeURIComponent(id)}`).then((r) => (r.ok ? r.text() : Promise.reject())).then((code) => {
+      const r = checkExplain(code);
+      setLocal(reels.save(code, { question: r.plan?.question ?? code.match(/"([^"]*)"/)?.[1] ?? 'Explanation', audience: r.plan?.audience }, 'import').id);
+    }).catch(() => setMissing(true));
+  }, [id]); // eslint-disable-line
+  if (local) return <ExplainPage localId={local} />;
+  if (missing) return <div className="wrap narrow"><h1>This explanation is not available</h1><p>There is no explanation with this address, or it has expired. Explanations made by the connector are kept for 180 days. Ask your agent to make it again.</p><p><Link to="/explain">Explanations saved in this browser</Link></p></div>;
+  return <div className="wrap narrow"><p>Opening the explanation…</p></div>;
+};
+
 const CopyButton: React.FC<{ text: string; label: string }> = ({ text, label }) => {
   const [done, setDone] = useState(false);
   return <button className="btn" onClick={() => navigator.clipboard?.writeText(text).then(() => { setDone(true); setTimeout(() => setDone(false), 1800); }).catch(() => {})}>{done ? 'Copied' : label}</button>;
@@ -193,7 +212,7 @@ export const ExplainHome: React.FC = () => {
       <ul className="reel-connect">
         <li><strong>Claude (web or desktop):</strong> in Settings, under Connectors, add a custom connector with that address.</li>
         <li><strong>Claude Code:</strong> run <code>claude mcp add --transport http semantic-engineering {MCP_URL}</code></li>
-        <li><strong>Other agents:</strong> add it as a remote MCP server over Streamable HTTP. It needs no sign-in and keeps nothing.</li>
+        <li><strong>Other agents:</strong> add it as a remote MCP server over Streamable HTTP. It needs no sign-in; it stores the explanations made with it for 180 days.</li>
         <li><strong>Agents in your browser:</strong> where a browser supports WebMCP, this site offers the same tools directly, and can play an explanation on the page.</li>
       </ul>
       <p className="muted">When the agent has written an explanation, it gives you a link. Opening it plays the explanation here and saves it in this browser. The knowledge graph the agent works from, with its evidence, is on <Link to="/graph">the graph page</Link>; how to connect, the tools and the privacy policy are on <Link to="/connect">the connector page</Link>.</p>
