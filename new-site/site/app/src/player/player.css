@@ -243,3 +243,11 @@
 .reel-notes { margin-top: 12px; font-size: 0.9rem; } .reel-notes summary { cursor: pointer; color: var(--muted); }
 .reel-source > summary { cursor: pointer; font-family: var(--display); font-weight: 600; font-size: 1.05rem; padding: 6px 0; }
 .reel-source[open] > summary { margin-bottom: 10px; }
+/* An explanation's parts: the short explanation, then the deep dives the person chooses. */
+.reel-sections { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 14px; }
+.reel-sections .kicker { margin: 0 4px 0 10px; }
+.reel-chip { font: 500 0.88rem var(--sans); color: var(--fg); background: var(--surface); border: 1px solid var(--hairline); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.reel-chip.on { border-color: var(--accent); background: var(--raised); }
+.reel-chip.seen:not(.on) { color: var(--muted); }
+.reel-dur { font-family: var(--mono); font-size: 0.78rem; opacity: 0.75; margin-left: 4px; }
+.reel-choices { display: flex; flex-direction: column; gap: 10px; width: min(560px, 100%); }

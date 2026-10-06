@@ -3,6 +3,7 @@
 import { EDGES, NODES, nodeById, type Evidence, type Kind } from './graph';
 import { placeOf, placeText, sceneByN } from './vocab';
 import { checkExplain, compiledListing } from './explain';
+import type { Plan } from './language';
 import { referenceMarkdown } from './reference';
 import { searchBoth } from './search';
 import { SITE } from './prompt';
@@ -20,6 +21,10 @@ export const evidenceText = (ev: Evidence) => ({
     return { ref: p, page: pl.page.title, section: pl.anchor ? pl.section.title : '', url: SITE + pl.url, text: placeText(pl) };
   }),
 });
+
+const minutes = (sec: number) => Math.round((sec / 60) * 10) / 10;
+/** How long each part runs: the short explanation, then each deep dive. */
+export const lengths = (plan: Plan) => ({ minutes: minutes(plan.seconds), parts: plan.segments.length, deepDives: plan.branches.map((b) => ({ label: b.label, minutes: minutes(b.seconds), parts: b.segments.length })) });
 
 const brief = (id: string) => { const x = nodeById(id)!; return { id: x.id, kind: x.kind, label: x.label, definition: x.definition, ...(x.layer ? { layer: x.layer } : {}), ...(x.custodian ? { custodian: x.custodian } : {}), ...(x.contexts ? { contexts: x.contexts } : {}) }; };
 const layerIds = () => NODES.filter((x) => x.kind === 'layer').map((x) => x.id);
@@ -78,12 +83,12 @@ export const TOOLS = {
   },
   check_explanation: {
     title: 'Check an explanation',
-    description: "Checks an explanation written in the explanation language against the knowledge graph and the method's rules. Returns each problem with its line and a reason, and what it compiles to.",
+    description: "Checks an explanation written in the explanation language against the knowledge graph and the method's rules. Returns each problem with its line and a reason, how long the short explanation and each deep dive run, and what it compiles to.",
     inputSchema: { type: 'object', properties: { code: { type: 'string' } }, required: ['code'] },
     run: ({ code }: { code: string }) => {
       if (typeof code !== 'string' || !code.trim()) return { error: 'give the explanation as text in "code", starting with: explain "<the question>"' };
       const r = checkExplain(code);
-      return { ok: r.ok, problems: r.problems, ...(r.plan ? { minutes: Math.round((r.plan.seconds / 60) * 10) / 10, parts: r.plan.segments.length, compiled: compiledListing(r.plan) } : {}) };
+      return { ok: r.ok, problems: r.problems, ...(r.plan ? { ...lengths(r.plan), compiled: compiledListing(r.plan) } : {}) };
     },
   },
 };

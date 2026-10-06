@@ -10,7 +10,7 @@ Work in three steps:
 
 1. **Understand their situation.** Ask what kind of work it is: a new application (greenfield), an existing application (brownfield), or replacing a legacy system (legacy modernization). Ask which kind of knowledge hurts (functional, design, architecture or code), whether anyone owns that knowledge today, and what they see happening, in their own words.
 2. **Map it onto the method.** Use the knowledge graph below to find the symptoms that match what they describe, the causes behind them, the principles and practices that address them, the recommendations for their kind of work, and the limits that apply. Follow the links: a symptom is caused by a cause and addressed by a practice, practices require principles, recommendations apply to a kind of work, and practices carry limits. Tell the person the mapping in plain terms and check it with them before going further.
-3. **Explain it.** Write an explanation in the language below. It plays as a short film: the recorded narration is the expert, and your "say" and "answer" lines are the guide, read by the viewer's browser voice. Show their symptoms, connect them to what the method links them to, recommend what fits their kind of work, name a limit, and answer their question.
+3. **Explain it.** Write an explanation in the language below. It plays as a short film: the recorded narration is the expert, and your "say" and "answer" lines are the guide, read by the viewer's browser voice. Start with a short explanation, under ${LIMITS.trunkSeconds / 60} minutes: their main symptom, what addresses it, and your answer. Then offer two to ${LIMITS.branches} deep dives with "branch", each on one area they may want to go into, such as how a practice works, where to start, a case, or a limit, each under ${LIMITS.branchSeconds / 60} minutes. The person chooses which deep dives to watch, in any order.
 
 Write the guide's lines as a host who connects the person to the expert: start from their words ("You said each change needs days of investigation"), hand over to the film ("Here is how the method sees it"), and say why the next part follows. Do not repeat what the expert is about to say. Keep each line to one or two sentences, at most ${LIMITS.text} characters, in plain text. Follow the site's writing rules: no dashes (use a comma, colon or full stop), no contrasts such as "not this, but that", "rather than" or "instead of", no sales language.
 
@@ -30,6 +30,7 @@ export const MOVES_TABLE = [
   ['caveat <limit>', 'Plays a limit the content states. Name at least one.'],
   ['answer "<line>"', "Last: the guide's answer to their question, in one or two sentences."],
   ['  read <page>#<section>', 'Under answer: offers a page section to read, for example "read sdlc/agents#the-kg-sync-agent".'],
+  ['branch "<what it covers>"', `After the short explanation's answer: starts a deep dive the person can choose, labelled in up to ${LIMITS.label} characters. It holds its own moves, an optional "say" under it as the guide's opening, and an optional "answer" to close it. Up to ${LIMITS.branches} deep dives.`],
   ['# comment', 'Ignored.'],
 ];
 
@@ -42,6 +43,8 @@ export const RULES = [
   'A symptom shown should be addressed by something in the explanation (a warning).',
   'A case carries figures from one engagement: add "caveat results-in-context" (a warning).',
   'Name at least one limit (a warning).',
+  'The short explanation ends with "answer" before the first deep dive. A deep dive builds on what the short explanation showed, never on another deep dive, because the person may watch them in any order; each symptom it shows must be addressed in it or in the short explanation.',
+  'An owner for an "unowned" layer must appear in the short explanation, which everyone watches.',
 ];
 
 const KIND_TITLES: [Kind, string][] = [['context', 'Kinds of work'], ['layer', 'Layers of knowledge'], ['cause', 'Causes'], ['symptom', 'Symptoms'], ['principle', 'The four principles'], ['practice', 'Practices'], ['recommendation', 'Recommendations'], ['limit', 'Limits'], ['case', 'Cases']];
@@ -73,7 +76,7 @@ export const referenceMarkdown = () => {
   L.push('## Your role', '', ROLE, '');
   L.push('## The explanation language', '', '| Statement | What it does |', '|---|---|');
   MOVES_TABLE.forEach(([s, w]) => L.push(`| \`${s.trim()}\` | ${w} |`));
-  L.push('', `Indentation is two spaces. An explanation runs at most ${LIMITS.seconds / 60} minutes and plays at most ${LIMITS.clips} clips comfortably. Every problem comes back with a line number and a reason: fix it and check again. A move the language cannot express is refused.`, '');
+  L.push('', `Indentation is two spaces. The short explanation runs at most ${LIMITS.trunkSeconds / 60} minutes and each deep dive at most ${LIMITS.branchSeconds / 60} minutes, so the person never watches more than ${LIMITS.branchSeconds / 60} minutes without choosing where to go next. Every problem comes back with a line number and a reason: fix it and check again. A move the language cannot express is refused.`, '');
   L.push('### The rules it checks', '', ...RULES.map((r) => `- ${r}`), '');
   L.push('## Examples', '');
   EXPLAIN_EXAMPLES.forEach((e) => L.push(`### ${e.title}`, '', '```', e.code, '```', ''));

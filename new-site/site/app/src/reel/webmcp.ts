@@ -1,7 +1,7 @@
 // WebMCP: the page offers its tools to an agent running in the visitor's browser. Uses
 // document.modelContext.registerTool (the current draft), falls back to navigator.modelContext, and does
 // nothing where neither exists. Everything here stays in the visitor's browser.
-import { TOOLS } from './tools';
+import { TOOLS, lengths } from './tools';
 import { checkExplain } from './explain';
 import { reels } from './store';
 
@@ -40,7 +40,7 @@ export const registerSiteTools = (navigate: (path: string) => void): (() => void
       if (!r.plan) return { ok: false, problems: r.problems };
       const saved = reels.save(code, { question: r.plan.question, audience: r.plan.audience }, 'agent');
       navigate(`/explain/${saved.id}`);
-      return { ok: true, id: saved.id, url: `${location.origin}/explain/${saved.id}`, minutes: Math.round((r.plan.seconds / 60) * 10) / 10, warnings: r.problems };
+      return { ok: true, id: saved.id, url: `${location.origin}/explain/${saved.id}`, ...lengths(r.plan), warnings: r.problems };
     },
   });
   add({

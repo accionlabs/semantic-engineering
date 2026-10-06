@@ -11,10 +11,15 @@ export type Segment = (
   | { kind: 'clip'; scene: number; from: number; to: number; sentences: [number, number]; quotes: string[]; line: number; seconds: number }
   | { kind: 'quote'; quotes: string[]; line: number; seconds: number }
 ) & { trace?: Trace };
-export type Plan = { question: string; audience?: string; context?: string; layers: string[]; unowned: string[]; segments: Segment[]; read: string[]; seconds: number };
+/** A deep dive: a section the viewer chooses after the short explanation. */
+export type Branch = { label: string; line: number; segments: Segment[]; read: string[]; seconds: number };
+/** The short explanation is the trunk (segments, read, seconds); the deep dives are its branches. */
+export type Plan = { question: string; audience?: string; context?: string; layers: string[]; unowned: string[]; segments: Segment[]; read: string[]; seconds: number; branches: Branch[] };
 export type Result = { ok: boolean; problems: Problem[]; plan?: Plan };
 
-export const LIMITS = { question: 180, audience: 80, text: 240, statements: 40, clips: 20, seconds: 15 * 60 };
+/** The short explanation runs at most two minutes and each deep dive at most three, so a viewer never
+ *  watches more than three minutes without choosing where to go next. */
+export const LIMITS = { question: 180, audience: 80, text: 240, label: 60, lines: 120, clips: 12, trunkSeconds: 120, branchSeconds: 180, branches: 4 };
 const WORDS_PER_SECOND = 2.6;
 /** How long a guide's line takes to speak, used when the browser cannot tell us. */
 export const speakingTime = (text: string) => text.split(/\s+/).filter(Boolean).length / WORDS_PER_SECOND + 0.8;

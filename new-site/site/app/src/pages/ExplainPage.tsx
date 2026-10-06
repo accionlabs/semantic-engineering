@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { checkExplain, compiledListing } from '../reel/explain';
+import { checkExplain, sectionListing } from '../reel/explain';
 import { quoteFor, type Plan, type Segment } from '../reel/language';
 import { ReelPlayer, type ReelApi } from '../reel/ReelPlayer';
 import { reels } from '../reel/store';
@@ -57,10 +57,11 @@ const Beside: React.FC<{ seg?: Segment; plan: Plan; onRead: (ref: string) => voi
 };
 
 const Source: React.FC<{ code: string; plan: Plan; index: number; onLine: (line: number) => void }> = ({ code, plan, index, onLine }) => {
+  // plan is the section playing: the short explanation or one deep dive.
   const [tab, setTab] = useState<'source' | 'compiled'>('source');
   const seg = plan.segments[index];
   const lines = code.split(/\r?\n/);
-  const compiled = compiledListing(plan).split('\n');
+  const compiled = sectionListing(plan.segments).split('\n');
   const ref = useRef<HTMLDivElement>(null);
   // Keep the playing line in view inside the code box, without scrolling the page.
   useEffect(() => {
@@ -74,7 +75,7 @@ const Source: React.FC<{ code: string; plan: Plan; index: number; onLine: (line:
         <button role="tab" aria-selected={tab === 'source'} className={`tab ${tab === 'source' ? 'on' : ''}`} onClick={() => setTab('source')}>What the agent wrote</button>
         <button role="tab" aria-selected={tab === 'compiled'} className={`tab ${tab === 'compiled' ? 'on' : ''}`} onClick={() => setTab('compiled')}>What it compiled to</button>
       </div>
-      <p className="muted tab-note">{tab === 'source' ? 'The explanation language names concepts from the knowledge graph of Semantic Engineering. The site checked it against the graph before playing it. Select a line to jump there.' : 'Each move became scenes, sentences and quotes. Lines marked "added from the graph" are concepts the graph required first.'}</p>
+      <p className="muted tab-note">{tab === 'source' ? 'The explanation language names concepts from the knowledge graph of Semantic Engineering. The site checked it against the graph before playing it. Select a line to jump there.' : 'The part playing now, as scenes, sentences and quotes. Lines marked "added from the graph" are concepts the graph required first.'}</p>
       <div className="reel-code" ref={ref}>
         {tab === 'source'
           ? lines.map((l, i) => <div key={i} className={`reel-line ${seg && seg.line === i + 1 ? 'on' : ''}`} onClick={() => onLine(i + 1)}><span className="reel-ln">{i + 1}</span><code>{l || ' '}</code></div>)
@@ -84,40 +85,70 @@ const Source: React.FC<{ code: string; plan: Plan; index: number; onLine: (line:
   );
 };
 
+/** Which section a source line belongs to: -1 for the short explanation, else the deep dive's index. */
+const sectionOfLine = (plan: Plan, line: number) => {
+  let k = -1;
+  plan.branches.forEach((b, i) => { if (b.line <= line) k = i; });
+  return k;
+};
+
 export const ExplainPage: React.FC = () => {
   const { id = '' } = useParams();
   const saved = reels.get(id);
   const result = useMemo(() => (saved ? checkExplain(saved.code) : undefined), [saved?.code]); // eslint-disable-line
   const api = useRef<ReelApi | null>(null);
   const [index, setIndex] = useState(-1);
+  const [active, setActive] = useState(-1);          // -1: the short explanation; else a deep dive
+  const [watched, setWatched] = useState<Set<number>>(new Set());
   const [reading, setReading] = useState<Loc | null>(null);
   useEffect(() => { if (saved) reels.played(saved.id); }, [id]); // eslint-disable-line
+  const full = result?.plan;
+  const section = useMemo<Plan | undefined>(() => {
+    if (!full) return undefined;
+    const b = full.branches[active];
+    return b ? { ...full, segments: b.segments, seconds: b.seconds, read: b.read } : full;
+  }, [full, active]);
   if (!saved) return <div className="wrap narrow"><h1>Not in this browser</h1><p>Explanations are kept in the browser that made them. <Link to="/explain">See the ones saved here</Link>.</p></div>;
-  if (!result?.plan) return (
+  if (!full || !section) return (
     <div className="wrap narrow"><h1>This explanation does not check</h1>
       <ul>{result?.problems.map((p, i) => <li key={i}>Line {p.line}: {p.message}</li>)}</ul>
       <pre className="reel-code">{saved.code}</pre></div>
   );
-  const plan = result.plan;
+  const mmss = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
+  const choose = (k: number) => { setReading(null); setActive(k); setIndex(-1); if (k >= 0) setWatched((w) => new Set(w).add(k)); };
+  const dives = full.branches.map((b, k) => ({ b, k })).filter(({ k }) => k !== active);
   const end = (
     <>
-      <p className="kicker">End of your explanation</p>
-      <h2>{plan.question}</h2>
-      <div className="act-end-actions">
-        {plan.read.map((r) => { const l = locOf(r); return l ? <button key={r} className="btn primary" onClick={() => setReading(l)}>Read: {l.heading ?? l.page.title}</button> : null; })}
+      <p className="kicker">{active < 0 ? 'End of the short explanation' : `End of: ${full.branches[active].label}`}</p>
+      <h2>{dives.length ? 'Go deeper' : full.question}</h2>
+      <div className="act-end-actions reel-choices">
+        {dives.map(({ b, k }) => <button key={k} className="btn primary" onClick={() => choose(k)}>{b.label} <span className="reel-dur">{watched.has(k) ? 'watched · ' : ''}{mmss(b.seconds)}</span></button>)}
+        {active >= 0 && <button className="btn" onClick={() => choose(-1)}>Back to the short explanation</button>}
+        {section.read.map((r) => { const l = locOf(r); return l ? <button key={r} className="btn" onClick={() => setReading(l)}>Read: {l.heading ?? l.page.title}</button> : null; })}
         <Link className="btn" to="/explain">Your explanations</Link>
       </div>
     </>
   );
   return (
     <div className="wrap wide">
-      <p className="crumbs"><Link to="/">Home</Link> / <Link to="/explain">Explanations</Link> / {plan.question}</p>
+      <p className="crumbs"><Link to="/">Home</Link> / <Link to="/explain">Explanations</Link> / {full.question}</p>
       <p className="reel-banner">Written by an agent for one question. The scenes and quotes come from the film and the site's pages; the guide's lines are the agent's.</p>
+      {full.branches.length > 0 && (
+        <nav className="reel-sections" aria-label="Parts of this explanation">
+          <button className={`reel-chip ${active < 0 ? 'on' : ''}`} aria-current={active < 0} onClick={() => choose(-1)}>The short explanation <span className="reel-dur">{mmss(full.seconds)}</span></button>
+          <span className="kicker">Go deeper</span>
+          {full.branches.map((b, k) => <button key={k} className={`reel-chip ${active === k ? 'on' : ''} ${watched.has(k) ? 'seen' : ''}`} aria-current={active === k} onClick={() => choose(k)}>{b.label} <span className="reel-dur">{mmss(b.seconds)}</span></button>)}
+        </nav>
+      )}
       <div className="watch">
-        <ReelPlayer plan={plan} api={api} onIndex={(i) => setIndex(i)} endOverlay={end} />
-        <Beside seg={plan.segments[index]} plan={plan} onRead={(ref) => { const l = locOf(ref); if (!l) return; api.current?.pause(); setReading(l); }} />
+        <ReelPlayer plan={section} api={api} onIndex={(i) => setIndex(i)} endOverlay={end} autoPlay />
+        <Beside seg={section.segments[index]} plan={section} onRead={(ref) => { const l = locOf(ref); if (!l) return; api.current?.pause(); setReading(l); }} />
       </div>
-      <Source code={saved.code} plan={plan} index={index} onLine={(line) => { const i = plan.segments.findIndex((s) => s.line >= line); if (i >= 0) api.current?.goto(i); }} />
+      <Source code={saved.code} plan={section} index={index} onLine={(line) => {
+        const k = sectionOfLine(full, line);
+        if (k !== active) { choose(k); return; }
+        const i = section.segments.findIndex((x) => x.line >= line); if (i >= 0) api.current?.goto(i);
+      }} />
       {result.problems.length > 0 && <details className="reel-warnings"><summary>{result.problems.length} note{result.problems.length > 1 ? 's' : ''} from the checker</summary><ul>{result.problems.map((p, i) => <li key={i}>Line {p.line}: {p.message}</li>)}</ul></details>}
       {reading && <Reader loc={reading} onClose={() => setReading(null)} onResume={() => { setReading(null); api.current?.play(); }} />}
     </div>

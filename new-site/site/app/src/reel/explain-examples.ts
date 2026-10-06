@@ -1,4 +1,5 @@
-// Worked explanations: shown on /explain, given to agents in the reference, and run by the tests.
+// Worked explanations: shown on /explain, given to agents in the reference, and run by the tests. Each is
+// a short explanation with deep dives the person can choose.
 export const EXPLAIN_EXAMPLES: { title: string; code: string }[] = [
   {
     title: 'Agents on a large existing application',
@@ -12,27 +13,43 @@ export const EXPLAIN_EXAMPLES: { title: string; code: string }[] = [
 show agents-make-mistakes
   say "First, why the agents go wrong."
 
+show impact-analysis
+  say "The method starts every change with an analysis against the graph."
+
+show validation-gates
+  say "And before anything merges, the change is checked against the graph."
+
+caveat graph-not-a-spec
+
+answer "Run impact analysis before each change and check every pull request against the graph. Your specifications keep describing the change."
+  read sdlc/agents#the-impact-analysis-agent
+
+branch "How impact analysis replaces days of investigation"
+  say "Here is what impact analysis finds, on a real change."
 show days-of-investigation
-  say "Now the days before each change."
-
 connect days-of-investigation to impact-report
-  say "That investigation is what impact analysis does from the graph."
+show alert-example
+caveat results-in-context
 
-show pr-validation
-  say "Before anything merges, the change is checked against the graph."
-
+branch "Where to start on an existing application"
 recommend extract-first
   say "For an application already in use, the graph comes from the code itself."
-
 show brownfield-2m
   say "Here is what that looked like on one application of over two million lines."
-
 caveat results-in-context
-caveat graph-not-a-spec
-  say "One limit to keep in view: the graph sits beside your specifications."
+answer "Extract the graph from your code first. It typically takes two to three weeks for more than two million lines."
 
-answer "Extract the graph from your code, run impact analysis before each change, and check every pull request against the graph. Your specifications keep describing the change."
-  read sdlc/agents#the-impact-analysis-agent`,
+branch "How each pull request is checked"
+show pr-validation
+  say "Here is what the check looks for, and what happens when it fails."
+connect boundary-violations to pr-validation
+caveat detail-still-reviewed
+
+branch "How coding agents read the graph"
+show coding-agents-via-mcp
+  say "Your developers keep the coding agents they use today."
+show structure-fixed
+caveat detail-still-reviewed`,
   },
   {
     title: 'A new user-interface workstream growing complex',
@@ -44,50 +61,71 @@ answer "Extract the graph from your code, run impact analysis before each change
 
 show design-duplication
 
-show four-layer-graph
-  say "The method records design knowledge as one of four layers, each with an owner."
+connect design-duplication to pr-validation
+  say "With the design system recorded in the graph, every pull request is checked against it."
 
-compare design today with after
-  say "Here is design knowledge today, and with the design layer in the graph."
-
-recommend start-with-a-layer
-  say "You can start with the one layer that hurts."
-
-show ui-workstream
-  say "One workstream did exactly that."
-
-caveat results-in-context
 caveat graph-not-a-spec
 
-answer "Record the design system as the design layer of the graph, and let the pull request check catch duplicates. Start with that layer alone."
-  read sdlc/case-archetypes#greenfield-growing-into-complexity`,
+answer "Record the design system as the design layer of the graph, and let the pull request check catch duplicates."
+  read sdlc/case-archetypes#greenfield-growing-into-complexity
+
+branch "Design knowledge today and with the graph"
+show four-layer-graph
+  say "The method records design knowledge as one of four layers, each with an owner."
+compare design today with after
+
+branch "Starting with the design layer alone"
+recommend start-with-a-layer
+  say "You can start with the one layer that hurts."
+show ui-workstream
+  say "One workstream did exactly that."
+caveat results-in-context`,
   },
   {
-    title: 'A legacy system nobody can explain',
-    code: `explain "The people who understood our old system have left, and we cannot prove a migration is complete."
-  for "the CIO of a logistics company"
+    title: 'A legacy COBOL system, for a CTO',
+    code: `explain "We run a large COBOL system that the business depends on. How would Semantic Engineering help us modernize it?"
+  for "a CTO with a legacy COBOL system"
   context legacy-modernization
-  say "You said the experts are gone and completeness cannot be proven. Both have a specific answer in legacy modernization."
+  say "You run a COBOL system the business depends on. Here is how the method sees modernizing it."
 
 show legacy-experts-gone
+  say "Start with the people. Most COBOL estates share this problem."
+
+show modernization-stalls
+  say "And here is why so many modernizations stall before they deploy."
 
 connect legacy-experts-gone to source-state-graph
-  say "The old code becomes a graph, with its statements kept as evidence."
+  say "The method starts from the code itself, which becomes a graph of the old system."
 
-show four-decisions
-  say "Every module then gets a decision."
-
-show parity-contract
-  say "Those records together define what complete means."
-
-show four-gates
-
-recommend choose-a-mode
-  say "You can start small and stop at any mode."
+connect modernization-stalls to parity-contract
+  say "It then agrees a definition of how the new system must behave."
 
 caveat contract-fixed
 
-answer "Build a graph of the old system from its code, decide every module, and let four gates prove the new code behaves like the old. Begin with the mode you are ready for."
-  read modernization/methodology#the-parity-contract`,
+answer "Record the COBOL system's behavior as a contract, and let agents migrate against it with checks that prove each module. You choose how far to go."
+  read modernization/methodology#the-parity-contract
+
+branch "How the old and new systems become graphs"
+show source-state-graph
+  say "Here is what the graph of the old system keeps."
+show target-state-graph
+  say "A second graph describes the system you are moving to."
+show four-decisions
+caveat module-needs-decision
+
+branch "How four gates prove the migration"
+show four-gates
+show expert-review
+  say "People still check the work at two points."
+
+branch "Engagement modes and the first module"
+recommend choose-a-mode
+  say "You do not have to commit to everything at once."
+recommend first-module
+
+branch "Results so far"
+show asimov-programs
+  say "Here is the track record, including a COBOL system on AS400."
+caveat results-in-context`,
   },
 ];

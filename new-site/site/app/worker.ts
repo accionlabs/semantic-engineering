@@ -6,7 +6,7 @@
 //     browser. It is stateless and read-only: it keeps nothing and stores nothing,
 //   - answer requests for Markdown on the agent pages with the explanation language's reference.
 // Everything else is a static asset.
-import { TOOLS } from './src/reel/tools';
+import { TOOLS, lengths } from './src/reel/tools';
 import { checkExplain, compiledListing } from './src/reel/explain';
 import { ROLE } from './src/reel/reference';
 import { SITE } from './src/reel/prompt';
@@ -56,7 +56,7 @@ const REMOTE: Record<string, Tool> = {
       if (typeof code !== 'string' || !code.trim()) return { error: 'give the explanation as text in "code", starting with: explain "<the question>"' };
       const r = checkExplain(code);
       if (!r.plan) return { ok: false, problems: r.problems };
-      return { ok: true, link: `${SITE}/explain/import#${base64url(code)}`, minutes: Math.round((r.plan.seconds / 60) * 10) / 10, parts: r.plan.segments.length, warnings: r.problems, compiled: compiledListing(r.plan) };
+      return { ok: true, link: `${SITE}/explain/import#${base64url(code)}`, ...lengths(r.plan), warnings: r.problems, compiled: compiledListing(r.plan) };
     },
   },
 };

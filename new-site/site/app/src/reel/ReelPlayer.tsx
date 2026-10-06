@@ -43,7 +43,9 @@ const QuoteCard: React.FC<{ seg: Segment & { kind: 'quote' } }> = ({ seg }) => {
   );
 };
 
-export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<ReelApi | null>; onIndex?: (i: number, playing: boolean) => void; endOverlay?: React.ReactNode }> = ({ plan, api, onIndex, endOverlay }) => {
+/** Plays one section of an explanation. Given a new section (a deep dive the person chose), it stops, and
+ *  starts the new one at once when autoPlay is set, without loading the film again. */
+export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<ReelApi | null>; onIndex?: (i: number, playing: boolean) => void; endOverlay?: React.ReactNode; autoPlay?: boolean }> = ({ plan, api, onIndex, endOverlay, autoPlay }) => {
   const [film, setFilm] = useState<Film | null>(null);
   const [ready, setReady] = useState(false);
   const [scale, setScale] = useState(0.5);
@@ -135,6 +137,12 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
     start(index, seg?.kind === 'clip' && resumeAt.current !== null ? resumeAt.current : undefined);
   }, [index, ended, segs, start]);
   if (api) api.current = { goto: (i) => start(Math.max(0, Math.min(segs.length - 1, i))), play, pause };
+  const firstPlan = useRef(true);
+  useEffect(() => {
+    if (firstPlan.current) { firstPlan.current = false; return; }
+    halt(); resumeAt.current = null; setIndex(-1); setPlaying(false);
+    if (autoPlay && film && ready) start(0);
+  }, [plan]); // eslint-disable-line
   useEffect(() => () => halt(), [halt]);
   useEffect(() => { if (audio.current) audio.current.muted = !sound; if (!sound) stopSpeech.current(); }, [sound]);
 

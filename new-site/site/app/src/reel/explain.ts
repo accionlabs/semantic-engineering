@@ -6,9 +6,9 @@
 // and quotes from the site's pages, which the player runs. No browser APIs, so the MCP server shares it.
 import { EDGES, NODES, nodeById, type Edge, type Evidence, type Kind, type Node } from './graph';
 import { placeOf, sceneByN } from './vocab';
-import { LIMITS, clipFor, closest, quoted, readLines, speakingTime, textProblems, type Plan, type Problem, type Result, type Segment } from './language';
+import { LIMITS, clipFor, closest, quoted, readLines, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
 
-export const MOVES = ['explain', 'for', 'context', 'layer', 'unowned', 'say', 'show', 'connect', 'compare', 'recommend', 'caveat', 'answer', 'read'];
+export const MOVES = ['explain', 'for', 'context', 'layer', 'unowned', 'say', 'show', 'connect', 'compare', 'recommend', 'caveat', 'answer', 'read', 'branch'];
 const SHOWABLE: Kind[] = ['cause', 'symptom', 'principle', 'practice', 'case'];
 const CONNECTABLE: Kind[] = [...SHOWABLE, 'recommendation', 'limit', 'layer', 'context'];
 const byKind = (k: Kind[]) => NODES.filter((x) => k.includes(x.kind)).map((x) => x.id);
@@ -31,7 +31,11 @@ const contextsOf = (node: Node) => [...new Set([...(node.contexts ?? []), ...EDG
  *  its main one; the rest of its evidence stays available to the evidence tool and the graph page. */
 const fromEvidence = (ev: Evidence, line: number, trace: Segment['trace'], maxSentences?: number, all = false): Segment[] => {
   const out: Segment[] = [];
-  for (const v of (ev.video ?? []).slice(0, all ? undefined : 1)) {
+  // Where a concept is cited in several scenes, play the one from the part of the film about this kind of work.
+  const video = ev.video ?? [];
+  const fit = video.filter((v) => { const sc = sceneByN(Number(v.split('.')[0])); return sc && (preferLegacy ? sc.act === LEGACY_ACT : sc.act !== LEGACY_ACT); });
+  const chosen = all ? video : [fit[0] ?? video[0]].filter(Boolean);
+  for (const v of chosen) {
     const m = v.match(/^(\d+)\.(\d+)(?:-(\d+))?$/);
     if (!m || !sceneByN(Number(m[1]))) continue;
     const a = Number(m[2]);
@@ -45,6 +49,9 @@ const fromEvidence = (ev: Evidence, line: number, trace: Segment['trace'], maxSe
   else if (quotes.length) out.push({ kind: 'quote', quotes, line, seconds: 6 + 4 * quotes.length, trace });
   return out;
 };
+/** The act of the film about legacy modernization, and whether the explanation being compiled is about it. */
+const LEGACY_ACT = 4;
+let preferLegacy = false;
 const sameClip = (a: Segment, b: Segment) => a.kind === 'clip' && b.kind === 'clip' && a.scene === b.scene && a.sentences[0] === b.sentences[0] && a.sentences[1] === b.sentences[1];
 
 export const checkExplain = (code: string): Result => {
@@ -52,17 +59,25 @@ export const checkExplain = (code: string): Result => {
   const err = (line: number, message: string) => problems.push({ line, message, severity: 'error' });
   const warn = (line: number, message: string) => problems.push({ line, message, severity: 'warning' });
   const lines = readLines(code);
-  const plan: Plan = { question: '', segments: [], seconds: 0, layers: [], unowned: [], read: [] };
-  const introduced = new Map<string, number>(); // concept -> line where the explanation first brings it in
-  const shownSymptoms: { id: string; line: number }[] = [];
-  const shownCases: number[] = [];
+  preferLegacy = /^\s+context\s+legacy-modernization\s*$/m.test(code);
+  const plan: Plan = { question: '', segments: [], seconds: 0, layers: [], unowned: [], read: [], branches: [] };
+  // The section being written: the short explanation (the trunk), then each deep dive in turn. A deep dive
+  // builds on what the trunk showed, and on nothing from another deep dive, which the viewer may skip.
+  let out: Segment[] = plan.segments;
+  let reads: string[] = plan.read;
+  let branch: Branch | undefined;
+  let introduced = new Map<string, number>(); // concept -> line where this section first brings it in
+  let trunkIntroduced: Map<string, number> | undefined;
+  let shownSymptoms: { id: string; line: number }[] = [];
+  let shownCases: number[] = [];
   let caveats = 0;
+  let trunkAnswered = false;
   let pendingSay: { text: string; line: number } | undefined;
   let current: { word: string; line: number; ok: boolean } | undefined;
   let answered = false;
 
   if (!lines.length) return { ok: false, problems: [{ line: 1, message: 'the explanation is empty. Start with: explain "<the person\'s question>"', severity: 'error' }] };
-  if (lines.length > LIMITS.statements * 2) err(lines[LIMITS.statements * 2].n, `an explanation has at most ${LIMITS.statements * 2} lines.`);
+  if (lines.length > LIMITS.lines) err(lines[LIMITS.lines].n, `an explanation has at most ${LIMITS.lines} lines.`);
 
   const concept = (word: string | undefined, line: number, kinds: Kind[], what: string): Node | undefined => {
     if (!word) { err(line, `${what} needs a concept name.`); return; }
@@ -102,22 +117,31 @@ export const checkExplain = (code: string): Result => {
     addRequired(node.id, [node.id]);
     const added = [...new Set(before.map((x) => x.trace?.node).filter(Boolean))] as string[];
     if (added.length) warn(line, `"${node.id}" builds on ${added.length === 1 ? 'a concept' : `${added.length} concepts`} not yet shown, so the graph adds a sentence of each first: ${added.join(', ')}. If any matters to this person, show it yourself before this line, with a "say" that introduces it.`);
-    if (lead) plan.segments.push({ kind: 'host', role: 'bridge', text: lead.text, line: lead.line, seconds: speakingTime(lead.text), trace: { move, node: node.id, reason: "the guide's lead-in" } });
-    plan.segments.push(...before);
-    plan.segments.push(...fromEvidence(node.evidence, line, { move, node: node.id }));
+    if (lead) out.push({ kind: 'host', role: 'bridge', text: lead.text, line: lead.line, seconds: speakingTime(lead.text), trace: { move, node: node.id, reason: "the guide's lead-in" } });
+    out.push(...before);
+    out.push(...fromEvidence(node.evidence, line, { move, node: node.id }));
     introduced.set(node.id, introduced.get(node.id) ?? line);
   };
 
   // A move's "say" is written under it and spoken before it, so each move is completed at the next one.
   let queued: (() => void) | undefined;
   const flush = () => { queued?.(); queued = undefined; pendingSay = undefined; };
-  const lead = (move: string, node?: string) => { if (pendingSay) plan.segments.push({ kind: 'host', role: 'bridge', text: pendingSay.text, line: pendingSay.line, seconds: speakingTime(pendingSay.text), trace: { move, node, reason: "the guide's lead-in" } }); };
+  const lead = (move: string, node?: string) => { if (pendingSay) out.push({ kind: 'host', role: 'bridge', text: pendingSay.text, line: pendingSay.line, seconds: speakingTime(pendingSay.text), trace: { move, node, reason: "the guide's lead-in" } }); };
+
+  // The checks that close a section: each symptom it shows is addressed in it, and each case has its context.
+  const endSection = () => {
+    for (const sy of shownSymptoms) {
+      const fixes = EDGES.filter((x) => x.from === sy.id && x.rel === 'addressed-by').map((x) => x.to).filter((f) => !plan.context || fits(nodeById(f)!, plan.context));
+      if (!fixes.some((f) => introduced.has(f))) warn(sy.line, `"${sy.id}" is shown, and nothing in ${branch ? 'this deep dive or the short explanation' : 'this explanation'} addresses it. The method addresses it with: ${fixes.join(', ') || 'nothing for this kind of work'}.`);
+    }
+    if (shownCases.length && !introduced.has('results-in-context')) warn(shownCases[0], 'a case carries figures from one engagement. Add "caveat results-in-context" so the person reads them in their context.');
+  };
 
   lines.forEach((l, i) => {
     const child = l.indent > 0;
     const w = l.rest.split(/\s+/).filter(Boolean);
     if (i === 0 && l.word !== 'explain') err(l.n, `an explanation starts with: explain "<the person's question>". Found "${l.word}".`);
-    if (answered && !child) err(l.n, `"answer" ends the explanation; "${l.word}" comes after it.`);
+    if (answered && !child && l.word !== 'branch') err(l.n, `"answer" ends ${branch ? 'this deep dive' : 'the short explanation'}; "${l.word}" comes after it. Start a deep dive with: branch "<what it covers>".`);
     if (!child && l.word !== 'explain') { flush(); current = { word: l.word, line: l.n, ok: true }; }
     const header = (what: string) => { if (!child || current?.word !== 'explain') { err(l.n, `"${l.word}" goes indented under "explain", ${what}.`); return false; } return true; };
 
@@ -129,7 +153,7 @@ export const checkExplain = (code: string): Result => {
         problems.push(...textProblems(q, l.n, LIMITS.question, 'question'));
         plan.question = q;
         current = { word: 'explain', line: l.n, ok: true };
-        queued = () => plan.segments.push({ kind: 'host', role: 'intro', text: pendingSay?.text ?? '', line: l.n, seconds: speakingTime(`${plan.question} ${pendingSay?.text ?? ''}`), trace: { move: 'explain', reason: "the question, and the guide's opening" } });
+        queued = () => out.push({ kind: 'host', role: 'intro', text: pendingSay?.text ?? '', line: l.n, seconds: speakingTime(`${plan.question} ${pendingSay?.text ?? ''}`), trace: { move: 'explain', reason: "the question, and the guide's opening" } });
         break;
       }
       case 'for': {
@@ -195,7 +219,7 @@ export const checkExplain = (code: string): Result => {
         const link: Edge = links[0];
         queued = () => {
           lead('connect');
-          plan.segments.push(...fromEvidence(link.why, l.n, { move: 'connect', node: `${link.from} ${link.rel} ${link.to}`, reason: `the method's link: ${nodeById(link.from)!.label} ${link.rel.replace('-', ' ')} ${nodeById(link.to)!.label}` }));
+          out.push(...fromEvidence(link.why, l.n, { move: 'connect', node: `${link.from} ${link.rel} ${link.to}`, reason: `the method's link: ${nodeById(link.from)!.label} ${link.rel.replace('-', ' ')} ${nodeById(link.to)!.label}` }));
           [a, b].forEach((x) => introduced.set(x.id, introduced.get(x.id) ?? l.n));
         };
         break;
@@ -211,8 +235,8 @@ export const checkExplain = (code: string): Result => {
         if (!introduced.has('knowledge-graph') && !introduced.has('four-layer-graph')) warn(l.n, '"after" means after the knowledge is recorded in the graph. Show "four-layer-graph" or "knowledge-graph" first, or the viewer meets the change without its reason.');
         queued = () => {
           lead('compare', node.id);
-          plan.segments.push(...fromEvidence(node.today!, l.n, { move: 'compare', node: node.id, reason: `${node.label} today` }, undefined, true));
-          plan.segments.push(...fromEvidence(node.after!, l.n, { move: 'compare', node: node.id, reason: `${node.label} under the method` }, undefined, true));
+          out.push(...fromEvidence(node.today!, l.n, { move: 'compare', node: node.id, reason: `${node.label} today` }, undefined, true));
+          out.push(...fromEvidence(node.after!, l.n, { move: 'compare', node: node.id, reason: `${node.label} under the method` }, undefined, true));
           introduced.set(node.id, introduced.get(node.id) ?? l.n);
         };
         break;
@@ -233,13 +257,33 @@ export const checkExplain = (code: string): Result => {
         if (t === undefined) { err(l.n, 'write the answer in double quotes: answer "…"'); break; }
         problems.push(...textProblems(t, l.n, LIMITS.text, 'answer'));
         answered = true;
-        queued = () => plan.segments.push({ kind: 'host', role: 'close', text: t, line: l.n, seconds: speakingTime(t), trace: { move: 'answer', reason: "the guide's answer to the question" } });
+        if (!branch) trunkAnswered = true;
+        queued = () => out.push({ kind: 'host', role: 'close', text: t, line: l.n, seconds: speakingTime(t), trace: { move: 'answer', reason: "the guide's answer to the question" } });
         break;
       }
       case 'read': {
         if (!child || current?.word !== 'answer') { err(l.n, '"read" goes indented under "answer", to offer a page at the end.'); break; }
         if (!placeOf(l.rest)) { err(l.n, `"${l.rest}" is not a page or section of the site. Write a page and section, for example "read sdlc/agents#the-kg-sync-agent".`); break; }
-        plan.read.push(l.rest);
+        reads.push(l.rest);
+        break;
+      }
+      case 'branch': {
+        if (child) { err(l.n, '"branch" starts a deep dive; remove the indent.'); break; }
+        const label = quoted(l.rest);
+        if (label === undefined) { err(l.n, 'write what the deep dive covers in double quotes: branch "How the four gates prove the migration"'); break; }
+        problems.push(...textProblems(label, l.n, LIMITS.label, 'deep dive label'));
+        if (!branch && !trunkAnswered) err(l.n, 'the short explanation ends with "answer" before the first deep dive, so the person has an answer before choosing where to go deeper.');
+        if (plan.branches.length >= LIMITS.branches) err(l.n, `an explanation offers at most ${LIMITS.branches} deep dives.`);
+        if (plan.branches.some((b) => b.label === label)) err(l.n, `there is already a deep dive called "${label}".`);
+        endSection();
+        trunkIntroduced ??= new Map(introduced);
+        branch = { label, line: l.n, segments: [], read: [], seconds: 0 };
+        plan.branches.push(branch);
+        out = branch.segments; reads = branch.read;
+        introduced = new Map(trunkIntroduced);
+        shownSymptoms = []; shownCases = []; answered = false;
+        current = { word: 'branch', line: l.n, ok: true };
+        queued = () => { if (pendingSay) out.push({ kind: 'host', role: 'bridge', text: pendingSay.text, line: pendingSay.line, seconds: speakingTime(pendingSay.text), trace: { move: 'branch', reason: "the guide's opening for this deep dive" } }); };
         break;
       }
       default: {
@@ -253,36 +297,46 @@ export const checkExplain = (code: string): Result => {
   flush();
 
   // Whole-explanation rules, from the method.
+  endSection();
   const last = lines[lines.length - 1]?.n ?? 1;
+  const trunk = trunkIntroduced ?? introduced;
   if (!plan.context) err(1, 'say the kind of work: add "context greenfield", "context brownfield" or "context legacy-modernization" under explain.');
-  for (const s of shownSymptoms) {
-    const fixes = EDGES.filter((x) => x.from === s.id && x.rel === 'addressed-by').map((x) => x.to).filter((f) => !plan.context || fits(nodeById(f)!, plan.context));
-    if (!fixes.some((f) => introduced.has(f))) warn(s.line, `"${s.id}" is shown, and nothing in this explanation addresses it. The method addresses it with: ${fixes.join(', ') || 'nothing for this kind of work'}.`);
-  }
-  // Named ownership: a layer nobody owns needs an owner before the method can govern it.
+  // Named ownership: a layer nobody owns needs an owner before the method can govern it, in the part everyone watches.
   for (const layer of plan.unowned) {
-    if (!OWNERSHIP.some((o) => introduced.has(o))) err(last, `nobody owns the ${layer} layer today, and the method needs a named owner for every part of the graph. Show or connect one of: ${OWNERSHIP.join(', ')}, so the person sees who would keep that layer.`);
+    if (!OWNERSHIP.some((o) => trunk.has(o))) err(last, `nobody owns the ${layer} layer today, and the method needs a named owner for every part of the graph. Show or connect one of: ${OWNERSHIP.join(', ')} in the short explanation, so the person sees who would keep that layer.`);
   }
-  // Figures hold in their own context.
-  if (shownCases.length && !introduced.has('results-in-context')) warn(shownCases[0], 'a case carries figures from one engagement. Add "caveat results-in-context" so the person reads them in their context.');
   if (!caveats) warn(last, 'the explanation names no limit. Add at least one "caveat", so the person sees where the method stops.');
-  if (!answered) warn(last, 'the explanation has no "answer". End with the guide answering the question in one or two sentences.');
-  plan.segments = plan.segments.filter((s, i, all) => !(i > 0 && sameClip(all[i - 1], s)));
-  const clips = plan.segments.filter((s) => s.kind === 'clip');
-  if (!clips.length && !problems.some((p) => p.severity === 'error')) err(last, 'the explanation shows nothing from the film. Add a "show", "connect" or "compare".');
-  if (clips.length > LIMITS.clips) warn(1, `the explanation plays ${clips.length} clips; at most ${LIMITS.clips} keeps it watchable.`);
-  plan.seconds = plan.segments.reduce((a, s) => a + s.seconds, 0);
-  if (plan.seconds > LIMITS.seconds) err(1, `the explanation runs about ${Math.round(plan.seconds / 60)} minutes; the limit is ${LIMITS.seconds / 60}. Show fewer concepts, or compare fewer layers.`);
+  if (!trunkAnswered) warn(last, 'the short explanation has no "answer". End it with the guide answering the question in one or two sentences.');
+  const dedupe = (segs: Segment[]) => segs.filter((x, i, all) => !(i > 0 && sameClip(all[i - 1], x)));
+  const total = (segs: Segment[]) => segs.reduce((t, x) => t + x.seconds, 0);
+  const mins = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
+  plan.segments = dedupe(plan.segments);
+  plan.seconds = total(plan.segments);
+  if (!plan.segments.some((x) => x.kind === 'clip') && !problems.some((p) => p.severity === 'error')) err(last, 'the explanation shows nothing from the film. Add a "show", "connect" or "compare".');
+  if (plan.seconds > LIMITS.trunkSeconds) err(1, `the short explanation runs about ${mins(plan.seconds)}; the limit is ${LIMITS.trunkSeconds / 60} minutes. Keep the essentials here and move the rest into deep dives with "branch".`);
+  if (plan.segments.filter((x) => x.kind === 'clip').length > LIMITS.clips) warn(1, `the short explanation plays more than ${LIMITS.clips} clips.`);
+  for (const b of plan.branches) {
+    b.segments = dedupe(b.segments);
+    b.seconds = total(b.segments);
+    if (!b.segments.some((x) => x.kind === 'clip')) err(b.line, `the deep dive "${b.label}" shows nothing from the film. Add a "show", "connect" or "compare" under it.`);
+    if (b.seconds > LIMITS.branchSeconds) err(b.line, `the deep dive "${b.label}" runs about ${mins(b.seconds)}; the limit is ${LIMITS.branchSeconds / 60} minutes. Split it into two deep dives, or show fewer concepts.`);
+  }
   const ok = !problems.some((p) => p.severity === 'error');
   return { ok, problems: problems.sort((a, b) => a.line - b.line), plan: ok ? plan : undefined };
 };
 
-/** The compiled form, in the scene-level terms the player runs. Shown beside the source. */
-export const compiledListing = (plan: Plan) => plan.segments.map((s) => {
-  const why = s.trace?.reason ? `   # ${s.trace.reason}` : s.trace?.node ? `   # ${s.trace.node}` : '';
-  if (s.kind === 'host') return `guide ${s.role}${why}`;
-  if (s.kind === 'quote') return `quote ${s.quotes.join(', ')}${why}`;
-  const sc = sceneByN(s.scene)!;
-  const range = s.sentences[0] === 1 && s.sentences[1] === sc.sentences.length ? '' : s.sentences[0] === s.sentences[1] ? ` sentence ${s.sentences[0]}` : ` sentences ${s.sentences[0]}-${s.sentences[1]}`;
-  return `play scene ${s.scene}${range}${s.quotes.length ? ` + quote ${s.quotes.join(', ')}` : ''}${why}`;
+/** The compiled form of one section, in the scene-level terms the player runs. Shown beside the source. */
+export const sectionListing = (segs: Segment[]) => segs.map((x) => {
+  const why = x.trace?.reason ? `   # ${x.trace.reason}` : x.trace?.node ? `   # ${x.trace.node}` : '';
+  if (x.kind === 'host') return `guide ${x.role}${why}`;
+  if (x.kind === 'quote') return `quote ${x.quotes.join(', ')}${why}`;
+  const sc = sceneByN(x.scene)!;
+  const range = x.sentences[0] === 1 && x.sentences[1] === sc.sentences.length ? '' : x.sentences[0] === x.sentences[1] ? ` sentence ${x.sentences[0]}` : ` sentences ${x.sentences[0]}-${x.sentences[1]}`;
+  return `play scene ${x.scene}${range}${x.quotes.length ? ` + quote ${x.quotes.join(', ')}` : ''}${why}`;
 }).join('\n');
+const clock = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
+/** The whole compiled form: the short explanation, then each deep dive. */
+export const compiledListing = (plan: Plan) => [
+  `# the short explanation, ${clock(plan.seconds)}`, sectionListing(plan.segments),
+  ...plan.branches.flatMap((b) => ['', `# deep dive "${b.label}", ${clock(b.seconds)}`, sectionListing(b.segments)]),
+].join('\n');
