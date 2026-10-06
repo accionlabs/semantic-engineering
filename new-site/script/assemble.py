@@ -100,6 +100,36 @@ for s in scenes:
     sec += [f"#### {'Overview' if not s['n'] else 'Scene ' + str(s['n']) + '. ' + s['name']}", '', re.sub(r'^#{3,4} Storyboard[^\n]*\n', '', s['board']).strip(), '']
 (MEDIA / 'storyboard.md').write_text(head + '\n'.join(sec) + '\n')
 
+# ---------- links from each scene to the site's pages ----------
+LOC = re.compile(r'([\w\-]+(?:/[\w\-]+)*\.md)(#[\w\-]+)?|(?<![\w/])#([\w\-]+)')
+
+def locations(text, last=None):
+    """Page locations in a line, in order: 'a/b.md#x' or '#x' (an anchor on the page named before it)."""
+    out = []
+    for m in LOC.finditer(text):
+        if m.group(1):
+            last = m.group(1); out.append(last + (m.group(2) or ''))
+        elif last:
+            out.append(f'{last}#{m.group(3)}')
+    return out, last
+
+def links(sc):
+    """The pages a scene draws on (its Sources line), and the page location of each clickable element (its Targets row)."""
+    src_line = next((l for l in sc['script'].splitlines() if l.lstrip('*').startswith('Sources')), '')
+    sources, _ = locations(src_line)
+    sources = [x for x in dict.fromkeys(sources) if not x.startswith(('content-tuning', 'REQUIREMENTS'))]
+    targets, pending, last = {}, [], None
+    row = next((l for l in sc['board'].splitlines() if l.startswith('| Targets |')), '')
+    for m in re.finditer(r'`([a-z][\w.\-]*)`|\(([^)]*)\)', row):
+        if m.group(1) and '.md' not in m.group(1):
+            pending.append(m.group(1))
+        elif m.group(2) is not None:
+            locs, last = locations(m.group(2), last)
+            for t in pending:
+                if locs: targets[t] = locs[0]
+            pending = []
+    return sources, targets
+
 # ---------- narration.json for the animation engine ----------
 ACTS = {str(i): t.split('. ', 1)[-1] for i, (_, t) in enumerate(PARTS)}
 LABELS = {str(i): t.split('. ', 1)[0] for i, (_, t) in enumerate(PARTS)}
@@ -108,7 +138,9 @@ for sc in scenes:
     body = ' '.join(l[1:].strip() for l in sc['script'].splitlines() if l.startswith('>'))
     sents = re.split(r'(?<=[.!?])\s+(?=[A-Z0-9"])', body)
     act = next(i for i, (_, t) in enumerate(PARTS) if t == sc['part'])
-    nar['scenes'].append({'act': act, 'n': sc['n'], 'title': sc['name'], 'text': body, 'words': len(body.split()), 'sentences': sents})
+    sources, targets = links(sc)
+    nar['scenes'].append({'act': act, 'n': sc['n'], 'title': sc['name'], 'text': body, 'words': len(body.split()), 'sentences': sents,
+                          'sources': sources, 'targets': targets})
 ANIM = pathlib.Path(__file__).resolve().parent.parent / 'video/animation/src/narration.json'
 import json
 ANIM.write_text(json.dumps(nar, indent=1))

@@ -59,6 +59,36 @@ for (const p of SITE.pages) {
   fs.writeFileSync(path.join(dir, 'index.html'), html);
   n++;
 }
+// The watch pages: the full video, the overview, each part and each scene, each prerendered with the
+// player's placeholder so the address works when opened directly.
+const narration = JSON.parse(fs.readFileSync(path.join(app, '../../video/animation/src/narration.json'), 'utf8'));
+const label = (a) => narration.labels?.[String(a)] ?? `Act ${a}`;
+const appendix = Object.keys(narration.acts).map(Number).find((a) => label(a) === 'Appendix');
+const watch = [
+  { url: '/watch/', title: 'The full video', description: 'The Semantic Engineering explainer, played live and clickable, one part at a time.' },
+  { url: '/watch/overview/', title: 'The overview', description: narration.scenes.find((s) => s.n === 0).sentences.slice(0, 2).join(' ') },
+  ...Object.keys(narration.acts).map(Number).filter((a) => a > 0).map((a) => ({
+    url: a === appendix ? '/watch/appendix/' : `/watch/act-${a}/`, title: `${label(a)}: ${narration.acts[String(a)]}`,
+    description: narration.scenes.filter((s) => s.act === a).map((s) => s.title).join(' · '),
+  })),
+  ...narration.scenes.filter((s) => s.n > 0).map((s) => ({ url: `/watch/scene-${s.n}/`, title: `Scene ${s.n}: ${s.title}`, description: s.sentences.slice(0, 2).join(' ') })),
+];
+for (const w of watch) {
+  const url = SITE_URL + w.url;
+  const headHtml = [
+    `<title>${esc(w.title)} · Semantic Engineering</title>`,
+    `<meta name="description" content="${esc(w.description)}" />`,
+    `<link rel="canonical" href="${url}" />`,
+    `<meta property="og:title" content="${esc(w.title)}" />`, `<meta property="og:description" content="${esc(w.description)}" />`,
+    `<meta property="og:url" content="${url}" />`, `<meta property="og:image" content="${ogImage}" />`,
+    analytics,
+  ].filter(Boolean).join('\n    ');
+  const html = template.replace('<!--head-->', headHtml).replace('<!--app-->', render(w.url.replace(/\/$/, '') || '/'));
+  const dir = path.join(dist, w.url);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, 'index.html'), html);
+  n++;
+}
 const notFound = template.replace('<!--head-->', `<title>Page not found · Semantic Engineering</title>\n    <meta name="robots" content="noindex" />\n    ${analytics}`).replace('<!--app-->', render('/404-not-found/'));
 fs.writeFileSync(path.join(dist, '404.html'), notFound);
 fs.writeFileSync(path.join(dist, '_headers'), '/assets/*\n  Cache-Control: public, max-age=31536000, immutable\n/diagrams/*\n  Cache-Control: public, max-age=3600\n');

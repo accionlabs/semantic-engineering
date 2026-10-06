@@ -34,6 +34,14 @@ const { duration, chapters } = await probe.evaluate(() => window.__film);
 const frames = Math.round(duration * FPS);
 console.log(`scenes ${scenes}: ${duration.toFixed(1)} s, ${frames} frames`);
 
+// --chapters <file>: write the film's chapter timings (what the site's narration track is laid on) and stop.
+if (args.chapters) {
+  fs.writeFileSync(path.resolve(args.chapters), JSON.stringify({ duration, chapters }, null, 1));
+  console.log(`wrote ${args.chapters}`);
+  await browser.close();
+  process.exit(0);
+}
+
 if (args.stills) {
   const outdir = path.resolve(args.outdir ?? path.resolve(here, '../../renders/stills'));
   fs.mkdirSync(outdir, { recursive: true });

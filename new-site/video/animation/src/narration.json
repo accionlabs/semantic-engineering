@@ -58,7 +58,32 @@
     "A new user-interface workstream reused 53 percent of its design components in its first sprint, and one team saw 23 percent fewer defects on the same codebase.",
     "More than fifteen million lines of legacy code have been modernized with ASIMOV, across more than ten programs.",
     "In every case, the same four principles hold: one structured graph, agents bound by it, a named owner for each part, and a check on every change."
-   ]
+   ],
+   "sources": [
+    "_index.md",
+    "sdlc/translation-tax.md",
+    "sdlc/agents.md#the-kg-sync-agent",
+    "sdlc/zones/_index.md"
+   ],
+   "targets": {
+    "agent.stall": "sdlc/translation-tax.md#why-ai-coding-agents-stall-on-this",
+    "custodian.product-owner": "sdlc/translation-tax.md#what-the-custodians-know-that-the-code-does-not-show",
+    "custodian.architect": "sdlc/translation-tax.md#what-the-custodians-know-that-the-code-does-not-show",
+    "custodian.ux-designer": "sdlc/translation-tax.md#what-the-custodians-know-that-the-code-does-not-show",
+    "custodian.engineering-team": "sdlc/translation-tax.md#what-the-custodians-know-that-the-code-does-not-show",
+    "tax.band": "sdlc/translation-tax.md#the-manual-translation-tax-the-cost-named",
+    "graph.layer.functional": "sdlc/methodology.md#the-four-layer-ontology",
+    "graph.layer.design": "sdlc/methodology.md#the-four-layer-ontology",
+    "graph.layer.architecture": "sdlc/methodology.md#the-four-layer-ontology",
+    "graph.layer.code": "sdlc/methodology.md#the-four-layer-ontology",
+    "gate.validation": "sdlc/methodology.md#the-validation-gate",
+    "graph.sync": "sdlc/agents.md#the-kg-sync-agent",
+    "limit.several-teams": "sdlc/zones/zone-2-spec-driven-development.md#when-this-zone-stops-working",
+    "agents.owner": "sdlc/agents.md#which-work-goes-to-agents",
+    "graph.modernization": "modernization/methodology.md",
+    "platform.breeze-ai": "_index.md#two-platforms-one-methodology",
+    "platform.asimov": "_index.md#two-platforms-one-methodology"
+   }
   },
   {
    "act": 1,
@@ -76,7 +101,23 @@
     "Much of the code knowledge stays in people's heads, each developer holding a narrow slice of the codebase.",
     "No single person and no document holds all four kinds of knowledge.",
     "The four roles are the custodians of the application's knowledge."
-   ]
+   ],
+   "sources": [
+    "_index.md#the-shared-problem",
+    "sdlc/translation-tax.md#what-the-custodians-know-that-the-code-does-not-show",
+    "sdlc/translation-tax.md#the-landscape-today"
+   ],
+   "targets": {
+    "custodian.product-owner": "sdlc/translation-tax.md#the-product-owner",
+    "custodian.architect": "sdlc/translation-tax.md#the-architect",
+    "custodian.ux-designer": "sdlc/translation-tax.md#the-ux-designer",
+    "custodian.engineering-team": "sdlc/translation-tax.md#the-engineering-team",
+    "artifact.prose-specs": "sdlc/translation-tax.md#the-landscape-today",
+    "artifact.architecture-wiki": "sdlc/translation-tax.md#the-landscape-today",
+    "artifact.design-files": "sdlc/translation-tax.md#the-landscape-today",
+    "artifact.codebase-knowledge": "sdlc/translation-tax.md#the-landscape-today",
+    "problem.no-whole-picture": "_index.md#the-shared-problem"
+   }
   },
   {
    "act": 1,
@@ -98,7 +139,25 @@
     "The coding agent saved minutes of typing, and the feature still waited on people.",
     "Each of these exchanges happens between two people, and none of them is recorded.",
     "The time and information lost in exchanges like these is what the methodology calls the Manual Translation Tax."
-   ]
+   ],
+   "sources": [
+    "sdlc/zones/zone-1-manual-vibe-coding.md#the-manual-sdlc-problem-this-zone-addresses",
+    "sdlc/translation-tax.md#what-this-looks-like-on-a-sprint",
+    "sdlc/translation-tax.md#the-landscape-today"
+   ],
+   "targets": {
+    "flow.specification": "sdlc/translation-tax.md#the-landscape-today",
+    "flow.developer": "sdlc/translation-tax.md#the-landscape-today",
+    "flow.review": "sdlc/translation-tax.md#the-landscape-today",
+    "flow.merge": "sdlc/translation-tax.md#the-landscape-today",
+    "sprint.thread.product-owner": "sdlc/translation-tax.md#what-this-looks-like-on-a-sprint",
+    "sprint.thread.architect": "sdlc/translation-tax.md#what-this-looks-like-on-a-sprint",
+    "sprint.thread.ux-designer": "sdlc/translation-tax.md#what-this-looks-like-on-a-sprint",
+    "sprint.thread.peers": "sdlc/translation-tax.md#what-this-looks-like-on-a-sprint",
+    "fig.ping-cost": "sdlc/translation-tax.md#what-this-looks-like-on-a-sprint",
+    "defect.production": "sdlc/translation-tax.md#what-this-looks-like-on-a-sprint",
+    "tax.band": "sdlc/translation-tax.md#the-landscape-today"
+   }
   },
   {
    "act": 1,
@@ -126,7 +185,21 @@
     "On one platform team, roughly 40% of the architecture pages sampled were materially out of date by the end of the year.",
     "More documentation adds more text to translate, and the new text goes out of date in the same way.",
     "Removing the tax requires changing how the knowledge is recorded."
-   ]
+   ],
+   "sources": [
+    "sdlc/translation-tax.md#the-manual-translation-tax-the-cost-named",
+    "sdlc/translation-tax.md#how-it-shows-up-in-a-sprint",
+    "sdlc/translation-tax.md#the-three-components-of-the-tax",
+    "sdlc/translation-tax.md#why-documentation-does-not-fix-it"
+   ],
+   "targets": {
+    "tax.definition": "sdlc/translation-tax.md#the-manual-translation-tax-the-cost-named",
+    "tax.ambiguity": "sdlc/translation-tax.md#the-three-components-of-the-tax",
+    "tax.non-persistence": "sdlc/translation-tax.md#the-three-components-of-the-tax",
+    "tax.non-traceability": "sdlc/translation-tax.md#the-three-components-of-the-tax",
+    "decay.documentation": "sdlc/translation-tax.md#why-documentation-does-not-fix-it",
+    "fig.docs-40-percent": "sdlc/translation-tax.md#why-documentation-does-not-fix-it"
+   }
   },
   {
    "act": 1,
@@ -146,7 +219,23 @@
     "Bigger context windows do not solve the problem, because more unstructured text gives the agent nothing it can check its work against.",
     "Building new applications, changing existing ones and modernizing legacy systems all face this gap, at different levels of complexity.",
     "The agent needs what the four custodians know written down in a structured form, which it can search for exactly the part each task needs."
-   ]
+   ],
+   "sources": [
+    "_index.md#the-shared-problem",
+    "sdlc/translation-tax.md#why-ai-coding-agents-stall-on-this",
+    "sdlc/translation-tax.md#the-manual-translation-tax-the-cost-named",
+    "sdlc/translation-tax.md#why-documentation-does-not-fix-it",
+    "sdlc/case-archetypes.md#brownfield-enterprise-modernization"
+   ],
+   "targets": {
+    "flow.coding-agent": "sdlc/translation-tax.md#why-ai-coding-agents-stall-on-this",
+    "agent.context-limit": "sdlc/translation-tax.md#why-ai-coding-agents-stall-on-this",
+    "example.removed-function": "sdlc/translation-tax.md#the-manual-translation-tax-the-cost-named",
+    "usecase.greenfield": "_index.md#the-shared-problem",
+    "usecase.brownfield": "_index.md#the-shared-problem",
+    "usecase.legacy": "_index.md#the-shared-problem",
+    "need.structured-context": "sdlc/translation-tax.md#why-ai-coding-agents-stall-on-this"
+   }
   },
   {
    "act": 2,
@@ -164,7 +253,18 @@
     "When part of the knowledge graph falls out of date, the methodology holds the owner of that part responsible.",
     "The fourth principle is validation gates: automatic checks that test every change against the knowledge graph.",
     "Each validation gate records a pass or a fail that the team can audit."
-   ]
+   ],
+   "sources": [
+    "_index.md#the-methodology",
+    "_index.md"
+   ],
+   "targets": {
+    "principle.structured-representation": "_index.md#the-methodology",
+    "principle.agent-constraint": "_index.md#the-methodology",
+    "principle.named-ownership": "_index.md#the-methodology",
+    "principle.validation-gates": "_index.md#the-methodology",
+    "graph.bands": "sdlc/translation-tax.md#the-structural-response"
+   }
   },
   {
    "act": 2,
@@ -182,7 +282,21 @@
     "On one user story about email alerts, following those links found fourteen affected parts of the architecture and fifteen code changes across five repositories.",
     "The search runs before any code is written.",
     "Every item in the graph cites its source: the document, design frame, ticket or code file it came from."
-   ]
+   ],
+   "sources": [
+    "sdlc/methodology.md#the-four-layer-ontology",
+    "sdlc/methodology.md#cross-layer-traversal",
+    "sdlc/methodology.md#citations-at-every-layer"
+   ],
+   "targets": {
+    "graph.layer.functional": "sdlc/methodology.md#the-four-layer-ontology",
+    "graph.layer.design": "sdlc/methodology.md#the-four-layer-ontology",
+    "graph.layer.architecture": "sdlc/methodology.md#the-four-layer-ontology",
+    "graph.layer.code": "sdlc/methodology.md#the-four-layer-ontology",
+    "graph.traverse": "sdlc/methodology.md#cross-layer-traversal",
+    "fig.alerts-traversal": "sdlc/methodology.md#cross-layer-traversal",
+    "graph.citation": "sdlc/methodology.md#citations-at-every-layer"
+   }
   },
   {
    "act": 2,
@@ -202,7 +316,25 @@
     "The graph is partitioned by product, with one graph per product or application.",
     "Each graph is kept to one product, because the cost of a query grows with the size of the graph.",
     "Where two products integrate, links connect their graphs."
-   ]
+   ],
+   "sources": [
+    "sdlc/methodology.md#aperture",
+    "sdlc/methodology.md#the-blast-radius-test",
+    "sdlc/methodology.md#how-the-aperture-matures",
+    "sdlc/methodology.md#the-decision-rule",
+    "sdlc/methodology.md#partition-by-product",
+    "sdlc/methodology.md#what-decides-it",
+    "sdlc/methodology.md#cross-product-reasoning"
+   ],
+   "targets": {
+    "aperture": "sdlc/methodology.md#aperture",
+    "aperture.blast-radius": "sdlc/methodology.md#the-blast-radius-test",
+    "aperture.decision-rule": "sdlc/methodology.md#the-decision-rule",
+    "aperture.maturity": "sdlc/methodology.md#how-the-aperture-matures",
+    "partition.product": "sdlc/methodology.md#partition-by-product",
+    "fig.impact-8min": "sdlc/methodology.md#what-decides-it",
+    "partition.bridges": "sdlc/methodology.md#cross-product-reasoning"
+   }
   },
   {
    "act": 2,
@@ -221,7 +353,25 @@
     "Each custodian works with information that exists only in conversations and decisions between people, such as customer calls, compliance decisions, vendor contracts and user research.",
     "No system an agent can read contains that information.",
     "Agents draft updates to the graph for the custodians to approve, and enforce the graph when code merges."
-   ]
+   ],
+   "sources": [
+    "sdlc/methodology.md#the-validation-gate",
+    "sdlc/methodology.md#governance-and-metrics",
+    "sdlc/methodology.md#the-14-verification-checks",
+    "sdlc/agents.md#the-kg-sync-agent",
+    "sdlc/agents.md#what-triggers-human-review",
+    "sdlc/translation-tax.md#where-we-draw-the-line-on-automation",
+    "sdlc/translation-tax.md#what-the-methodology-changes-and-what-it-does-not"
+   ],
+   "targets": {
+    "gate.validation": "sdlc/methodology.md#the-validation-gate",
+    "agent.pr-validation": "sdlc/agents.md#the-pr-validation-agent",
+    "sync.kg": "sdlc/agents.md#the-kg-sync-agent",
+    "health.metrics": "sdlc/methodology.md#governance-and-metrics",
+    "health.p0": "sdlc/methodology.md#the-14-verification-checks",
+    "principle.humans-stay": "sdlc/translation-tax.md#where-we-draw-the-line-on-automation",
+    "custodian.approves": "sdlc/translation-tax.md#what-the-methodology-changes-and-what-it-does-not"
+   }
   },
   {
    "act": 2,
@@ -240,7 +390,21 @@
     "The same four custodian roles govern both shapes.",
     "When a modernization completes, its graph converts to the four-layer graph.",
     "The right process for continuous work depends on how complex the application is."
-   ]
+   ],
+   "sources": [
+    "_index.md#one-methodology-three-use-cases",
+    "sdlc/methodology.md#brownfield-extraction",
+    "sdlc/zones/_index.md"
+   ],
+   "targets": {
+    "usecase.greenfield": "_index.md#one-methodology-three-use-cases",
+    "usecase.brownfield": "_index.md#one-methodology-three-use-cases",
+    "usecase.modernization": "_index.md#one-methodology-three-use-cases",
+    "graph.model.moving": "_index.md#one-methodology-three-use-cases",
+    "graph.model.fixed": "_index.md#one-methodology-three-use-cases",
+    "fig.extraction-2-3-weeks": "sdlc/methodology.md#brownfield-extraction",
+    "graph.handover": "_index.md#one-methodology-three-use-cases"
+   }
   },
   {
    "act": 3,
@@ -258,7 +422,19 @@
     "Writing specifications becomes the slowest step in the process.",
     "The knowledge graph sits alongside the specifications and supplies the design, architecture and code knowledge they lack.",
     "Each specification still describes the change, and the knowledge graph describes the application the change lands in."
-   ]
+   ],
+   "sources": [
+    "sdlc/zones/_index.md#the-four-zones",
+    "sdlc/zones/zone-2-spec-driven-development.md#when-this-zone-stops-working",
+    "sdlc/zones/zone-2-spec-driven-development.md#from-sdd-to-se"
+   ],
+   "targets": {
+    "limit.local-context": "sdlc/zones/zone-2-spec-driven-development.md#when-this-zone-stops-working",
+    "limit.drift": "sdlc/zones/zone-2-spec-driven-development.md#when-this-zone-stops-working",
+    "limit.one-layer": "sdlc/zones/zone-2-spec-driven-development.md#when-this-zone-stops-working",
+    "limit.bottleneck": "sdlc/zones/zone-2-spec-driven-development.md#when-this-zone-stops-working",
+    "graph.alongside-spec": "sdlc/zones/zone-2-spec-driven-development.md#from-sdd-to-se"
+   }
   },
   {
    "act": 3,
@@ -277,7 +453,18 @@
     "At the end, the final impact analysis uses the whole history of the ticket.",
     "The ticket works the same way whether people, agents or both do the work.",
     "Teams design the workflow between the steps to fit their own process."
-   ]
+   ],
+   "sources": [
+    "sdlc/process/_index.md#three-sources-of-truth",
+    "sdlc/process/implementation-sprint.md#how-the-ticket-carries-the-change"
+   ],
+   "targets": {
+    "record.specification": "sdlc/process/_index.md#three-sources-of-truth",
+    "record.ticket": "sdlc/process/_index.md#three-sources-of-truth",
+    "record.graph": "sdlc/process/_index.md#three-sources-of-truth",
+    "ticket.hook": "sdlc/process/implementation-sprint.md#how-the-ticket-carries-the-change",
+    "ticket.history": "sdlc/process/implementation-sprint.md#how-the-ticket-carries-the-change"
+   }
   },
   {
    "act": 3,
@@ -296,7 +483,19 @@
     "The finished specification, with its impact report, goes into the implementation backlog.",
     "The implementation sprint works from specifications whose risks are already known.",
     "A specification that turns out to be missing context goes back to the spec sprint."
-   ]
+   ],
+   "sources": [
+    "sdlc/process/spec-sprint.md#why-a-separate-cadence",
+    "sdlc/process/spec-sprint.md#the-mechanics",
+    "sdlc/process/spec-sprint.md#what-happens-in-a-spec-sprint",
+    "sdlc/process/spec-sprint.md#what-comes-out-of-the-spec-sprint",
+    "sdlc/process/_index.md#the-two-sprints"
+   ],
+   "targets": {
+    "sprint.spec": "sdlc/process/spec-sprint.md",
+    "sprint.implementation": "sdlc/process/implementation-sprint.md",
+    "spec.review-by-layer": "sdlc/process/spec-sprint.md#what-happens-in-a-spec-sprint"
+   }
   },
   {
    "act": 3,
@@ -316,7 +515,22 @@
     "The report flagged a likely and serious risk: without a new filter, weekly subscribers would also receive a daily email.",
     "The report also set the order of deployment across three repositories.",
     "A senior engineer would need three to five working days to produce a comparable analysis."
-   ]
+   ],
+   "sources": [
+    "sdlc/agents.md#what-it-does",
+    "sdlc/agents.md#two-kinds-of-output",
+    "sdlc/agents.md#when-impact-analysis-runs",
+    "sdlc/agents.md#a-worked-example",
+    "sdlc/agents.md#the-three-findings-that-would-have-cost-the-most-to-discover-manually",
+    "_index.md#numbers-from-real-engagements"
+   ],
+   "targets": {
+    "agent.impact-analysis": "sdlc/agents.md#the-impact-analysis-agent",
+    "impact.outputs": "sdlc/agents.md#two-kinds-of-output",
+    "impact.when": "sdlc/agents.md#when-impact-analysis-runs",
+    "example.alert-frequency": "sdlc/agents.md#a-worked-example",
+    "fig.impact-replaces-investigation": "sdlc/case-archetypes.md"
+   }
   },
   {
    "act": 3,
@@ -334,7 +548,20 @@
     "Code generated twice from the same prompt still differs in detail, such as variable names and the order of operations.",
     "The impact report fixes the structure of the change, so the remaining differences are in detail only.",
     "Code review moves from asking whether the agent changed the right files to asking whether the details are right."
-   ]
+   ],
+   "sources": [
+    "practitioner/breeze-ai.md#the-claude-code-plugin",
+    "practitioner/breeze-ai.md#integration-surface",
+    "practitioner/breeze-ai.md#ontology-guardrails",
+    "sdlc/agents.md#the-cognitive-shortcut-framing",
+    "sdlc/agents.md#the-variance-bounding-insight",
+    "_index.md#the-methodology"
+   ],
+   "targets": {
+    "tool.mcp-server": "practitioner/breeze-ai.md#integration-surface",
+    "guardrail.functional": "practitioner/breeze-ai.md#ontology-guardrails",
+    "variance.bounded": "sdlc/agents.md#the-variance-bounding-insight"
+   }
   },
   {
    "act": 3,
@@ -351,7 +578,20 @@
     "The BDD Generation Agent writes test scenarios from the functional layer, each describing how the application should respond to a user's action.",
     "Before the pull request merges, the KG Sync Agent updates the graph to match the new code.",
     "The graph then matches the main branch, and the next impact analysis runs against the application as it is."
-   ]
+   ],
+   "sources": [
+    "sdlc/agents.md#the-pr-validation-agent",
+    "sdlc/agents.md#what-the-gate-checks",
+    "sdlc/agents.md#what-the-gate-does-not-do",
+    "sdlc/agents.md#the-bdd-generation-agent",
+    "sdlc/agents.md#the-kg-sync-agent",
+    "sdlc/process/implementation-sprint.md#how-the-ticket-carries-the-change"
+   ],
+   "targets": {
+    "agent.pr-validation": "sdlc/agents.md#the-pr-validation-agent",
+    "agent.bdd": "sdlc/agents.md#the-bdd-generation-agent",
+    "agent.kg-sync": "sdlc/agents.md#the-kg-sync-agent"
+   }
   },
   {
    "act": 3,
@@ -369,7 +609,22 @@
     "Each step up is recorded in a written agreement that names the evidence, the threshold, the person who approved it, and the conditions for stepping back down.",
     "When an agent's results fall below the threshold, the agent steps back down automatically.",
     "The agents that run impact analysis and pull request checks typically operate at the fourth level, where people review their results on a regular schedule."
-   ]
+   ],
+   "sources": [
+    "sdlc/agents.md#which-work-goes-to-agents",
+    "sdlc/agents.md#progressive-autonomy",
+    "sdlc/agents.md#the-five-levels",
+    "sdlc/agents.md#the-promotion-agreement",
+    "sdlc/agents.md#rollback-and-demotion",
+    "sdlc/agents.md#the-five-levels-mapped-to-agent-classes"
+   ],
+   "targets": {
+    "agents.owner": "sdlc/agents.md#which-work-goes-to-agents",
+    "agents.triage": "sdlc/agents.md#which-work-goes-to-agents",
+    "autonomy.levels": "sdlc/agents.md#the-five-levels",
+    "autonomy.agreement": "sdlc/agents.md#the-promotion-agreement",
+    "autonomy.demotion": "sdlc/agents.md#rollback-and-demotion"
+   }
   },
   {
    "act": 3,
@@ -385,7 +640,17 @@
     "Triage agents in the workbench classify every request, apply the product's own priorities, and route the request to a person or to an agent.",
     "Metrics are kept per product, per graph and per agent.",
     "Organizations bring these metrics into their own reporting."
-   ]
+   ],
+   "sources": [
+    "sdlc/process/implementation-sprint.md#how-the-ticket-carries-the-change",
+    "sdlc/agents.md#high-volume-support-work",
+    "sdlc/methodology.md#governance-and-metrics"
+   ],
+   "targets": {
+    "ticket.board": "sdlc/process/implementation-sprint.md#how-the-ticket-carries-the-change",
+    "workbench": "sdlc/agents.md#high-volume-support-work",
+    "metrics.reporting": "sdlc/methodology.md#governance-and-metrics"
+   }
   },
   {
    "act": 3,
@@ -402,7 +667,21 @@
     "Enterprise knowledge is defined once, and every product's agents read it according to their access rights.",
     "Where products integrate, impact analysis follows the integration points into the other products' graphs.",
     "Every quarter, an agent looks across the product graphs for capabilities that are duplicated or no longer used."
-   ]
+   ],
+   "sources": [
+    "sdlc/methodology.md#partition-by-product",
+    "sdlc/methodology.md#what-decides-it",
+    "sdlc/methodology.md#one-graph-for-all-of-a-products-teams",
+    "sdlc/methodology.md#rolling-out-product-by-product",
+    "sdlc/methodology.md#knowledge-shared-across-products",
+    "sdlc/methodology.md#cross-product-reasoning"
+   ],
+   "targets": {
+    "graph.per-product": "sdlc/methodology.md#partition-by-product",
+    "rollout.product-by-product": "sdlc/methodology.md#rolling-out-product-by-product",
+    "graph.enterprise-shared": "sdlc/methodology.md#knowledge-shared-across-products",
+    "agent.cross-product": "sdlc/methodology.md#cross-product-reasoning"
+   }
   },
   {
    "act": 3,
@@ -420,7 +699,19 @@
     "Until the change reaches the code, the target lives in the specifications, because the knowledge graph keeps strict parity with the code.",
     "When a change touches that area, impact analysis shows everything in the current code that the change touches, and the specification can move that code toward the target.",
     "Large-scale legacy modernization is the exception: there, the target has a graph of its own."
-   ]
+   ],
+   "sources": [
+    "sdlc/methodology.md#brownfield-extraction",
+    "sdlc/methodology.md#extraction-as-rationalization",
+    "sdlc/methodology.md#paying-down-technical-debt",
+    "_index.md#numbers-from-real-engagements"
+   ],
+   "targets": {
+    "extraction.brownfield": "sdlc/methodology.md#brownfield-extraction",
+    "extraction.patterns": "sdlc/methodology.md#extraction-as-rationalization",
+    "debt.target-state": "sdlc/methodology.md#paying-down-technical-debt",
+    "fig.extraction-2-3-weeks": "_index.md#numbers-from-real-engagements"
+   }
   },
   {
    "act": 3,
@@ -437,7 +728,20 @@
     "The custodians stay human.",
     "Much of what the custodians know comes from customer calls, compliance decisions, vendor contracts and user research, which no agent can read.",
     "Agents draft updates to the graph, and the custodians approve them."
-   ]
+   ],
+   "sources": [
+    "sdlc/process/team.md#the-layered-team-structure",
+    "sdlc/process/team.md#forward-deployed-engineers",
+    "sdlc/process/team.md#fractional-allocation",
+    "sdlc/process/_index.md#the-two-sprints",
+    "sdlc/translation-tax.md#where-we-draw-the-line-on-automation"
+   ],
+   "targets": {
+    "team.layers": "sdlc/process/team.md#the-layered-team-structure",
+    "team.fde": "sdlc/process/team.md#forward-deployed-engineers",
+    "team.fractional": "sdlc/process/team.md#fractional-allocation",
+    "custodians.human": "sdlc/translation-tax.md#where-we-draw-the-line-on-automation"
+   }
   },
   {
    "act": 3,
@@ -453,7 +757,19 @@
     "Defects fell 23% compared with the same team's results before Semantic Engineering, on the same codebase.",
     "Test coverage reached 93.4%, with test scenarios generated from the functional layer and no manual scenario writing.",
     "A cost model puts five-year total cost 81% lower when the AI runs on the client's own infrastructure; the figure comes from the model and was not measured on an engagement."
-   ]
+   ],
+   "sources": [
+    "_index.md#numbers-from-real-engagements",
+    "sdlc/case-archetypes.md"
+   ],
+   "targets": {
+    "fig.extraction": "_index.md#numbers-from-real-engagements",
+    "fig.impact-replaces-investigation": "_index.md#numbers-from-real-engagements",
+    "fig.reuse-53": "_index.md#numbers-from-real-engagements",
+    "fig.defects-23": "_index.md#numbers-from-real-engagements",
+    "fig.coverage-93": "_index.md#numbers-from-real-engagements",
+    "fig.tco-81": "_index.md#numbers-from-real-engagements"
+   }
   },
   {
    "act": 4,
@@ -473,7 +789,24 @@
     "The first three components make each other worse.",
     "Without an executable contract that proves the new system behaves like the old one, nobody can show the migration is complete.",
     "A modernization that cannot be proven complete stalls before it can deploy."
-   ]
+   ],
+   "sources": [
+    "modernization/translation-tax.md#the-modernization-version-of-the-problem",
+    "modernization/translation-tax.md#the-four-components",
+    "modernization/translation-tax.md#why-the-tax-compounds",
+    "modernization/_index.md"
+   ],
+   "targets": {
+    "pipeline.frame": "modernization/_index.md",
+    "card.legacy-code": "modernization/translation-tax.md#the-modernization-version-of-the-problem",
+    "figure.sme": "modernization/translation-tax.md#the-modernization-version-of-the-problem",
+    "tax.reverse-engineering": "modernization/translation-tax.md#the-four-components",
+    "tax.lost-context": "modernization/translation-tax.md#the-four-components",
+    "tax.validation-vacuum": "modernization/translation-tax.md#the-four-components",
+    "tax.knowledge-disappearance": "modernization/translation-tax.md#the-four-components",
+    "tax.compound": "modernization/translation-tax.md#why-the-tax-compounds",
+    "token.stalled": "modernization/translation-tax.md#why-the-tax-compounds"
+   }
   },
   {
    "act": 4,
@@ -493,7 +826,26 @@
     "Replace hands the function to a different solution, such as a modern library.",
     "Retire removes the function, and the retired items stay documented.",
     "A module without a decision cannot be migrated."
-   ]
+   ],
+   "sources": [
+    "modernization/methodology.md#the-three-modernization-ontologies",
+    "modernization/methodology.md#the-source-state-ontology-in-detail",
+    "modernization/methodology.md#the-target-state-ontology-in-detail",
+    "modernization/methodology.md#the-specification-format-bridging-source-and-target",
+    "modernization/methodology.md#the-annotation-discipline-retain-modify-replace-retire"
+   ],
+   "targets": {
+    "graph.source-state": "modernization/methodology.md#the-source-state-ontology-in-detail",
+    "graph.target-state": "modernization/methodology.md#the-target-state-ontology-in-detail",
+    "spec.format": "modernization/methodology.md#the-specification-format-bridging-source-and-target",
+    "spec.extractions": "modernization/methodology.md#the-specification-format-bridging-source-and-target",
+    "annotate.retain": "modernization/methodology.md#the-annotation-discipline-retain-modify-replace-retire",
+    "annotate.modify": "modernization/methodology.md#the-annotation-discipline-retain-modify-replace-retire",
+    "annotate.replace": "modernization/methodology.md#the-annotation-discipline-retain-modify-replace-retire",
+    "annotate.retire": "modernization/methodology.md#the-annotation-discipline-retain-modify-replace-retire",
+    "annotate.required": "modernization/methodology.md#the-annotation-discipline-retain-modify-replace-retire",
+    "ontologies.three": "modernization/methodology.md#the-three-modernization-ontologies"
+   }
   },
   {
    "act": 4,
@@ -514,7 +866,37 @@
     "Nine named agents cover five stages: Discover, Document, Migrate, Validate and Maintain.",
     "People check the work at two points: the decisions in the specification before migration, and a modernization expert's review of the code that has passed the gates.",
     "The five stages run on a platform called ASIMOV."
-   ]
+   ],
+   "sources": [
+    "modernization/methodology.md#the-parity-contract",
+    "modernization/agents.md#named-agents",
+    "modernization/agents.md#validation-stage-agents",
+    "modernization/process/operating-model.md#the-expert-review-pattern",
+    "practitioner/asimov.md#the-five-pillars-of-asimov",
+    "practitioner/asimov.md#humans-validate-agents-execute"
+   ],
+   "targets": {
+    "contract.parity": "modernization/methodology.md#the-parity-contract",
+    "agent.migration": "modernization/agents.md#migration-stage-agents",
+    "gate.architecture": "modernization/agents.md#validation-stage-agents",
+    "gate.design": "modernization/agents.md#validation-stage-agents",
+    "gate.standards": "modernization/agents.md#validation-stage-agents",
+    "gate.functional": "modernization/agents.md#validation-stage-agents",
+    "loop.migration-validation": "modernization/agents.md#validation-stage-agents",
+    "fleet.nine-agents": "modernization/agents.md#named-agents",
+    "stage.discover": "modernization/agents.md#named-agents",
+    "stage.document": "modernization/agents.md#named-agents",
+    "stage.migrate": "modernization/agents.md#named-agents",
+    "stage.validate": "modernization/agents.md#named-agents",
+    "stage.maintain": "modernization/agents.md#named-agents",
+    "human.annotation": "modernization/process/operating-model.md#the-expert-review-pattern",
+    "human.expert-review": "modernization/process/operating-model.md#the-expert-review-pattern",
+    "pillar.agie": "practitioner/asimov.md#the-five-pillars-of-asimov",
+    "pillar.asf": "practitioner/asimov.md#the-five-pillars-of-asimov",
+    "pillar.amm": "practitioner/asimov.md#the-five-pillars-of-asimov",
+    "pillar.avf": "practitioner/asimov.md#the-five-pillars-of-asimov",
+    "pillar.maintain": "practitioner/asimov.md#the-five-pillars-of-asimov"
+   }
   },
   {
    "act": 4,
@@ -533,7 +915,32 @@
     "Each mode addresses a defined part of the modernization tax, and a client may stop at any mode.",
     "Full Modernization runs in five stages: discovery and analysis, building the graphs, migrating one first module, migrating the rest, and user acceptance testing with deployment.",
     "While the first module is migrated, subject-matter experts review the output and tune the agents to the project."
-   ]
+   ],
+   "sources": [
+    "modernization/engagement-modes/_index.md#why-engagement-modes",
+    "modernization/engagement-modes/_index.md#the-five-engagement-modes",
+    "modernization/engagement-modes/_index.md#mtt-components-addressed-by-each-mode",
+    "modernization/engagement-modes/_index.md#natural-progression-and-stopping-points",
+    "modernization/process/operating-model.md#the-five-stage-delivery",
+    "modernization/process/operating-model.md#the-two-iteration-loops"
+   ],
+   "targets": {
+    "modes.why": "modernization/engagement-modes/_index.md#why-engagement-modes",
+    "mode.documentation-only": "modernization/engagement-modes/_index.md#mode-1-documentation-only",
+    "mode.discovery-documentation": "modernization/engagement-modes/_index.md#mode-2-discovery-and-documentation",
+    "mode.migration-readiness": "modernization/engagement-modes/_index.md#mode-3-migration-readiness",
+    "mode.full-modernization": "modernization/engagement-modes/_index.md#mode-4-full-modernization",
+    "mode.maintain-operate-convergence": "modernization/engagement-modes/_index.md#mode-5-maintain-operate-and-convergence",
+    "modes.tax-coverage": "modernization/engagement-modes/_index.md#mtt-components-addressed-by-each-mode",
+    "modes.stopping-points": "modernization/engagement-modes/_index.md#natural-progression-and-stopping-points",
+    "stage.discovery-analysis": "modernization/process/operating-model.md#the-five-stage-delivery",
+    "stage.ontology-generation": "modernization/process/operating-model.md#the-five-stage-delivery",
+    "stage.mvp": "modernization/process/operating-model.md#the-five-stage-delivery",
+    "stage.scaled-migration": "modernization/process/operating-model.md#the-five-stage-delivery",
+    "stage.uat-deployment": "modernization/process/operating-model.md#the-five-stage-delivery",
+    "loop.sme-tuning": "modernization/process/operating-model.md#the-two-iteration-loops",
+    "loop.migration-validation": "modernization/process/operating-model.md#the-two-iteration-loops"
+   }
   },
   {
    "act": 4,
@@ -552,7 +959,27 @@
     "The Retain and Modify decisions in the specification become the starting point for the functional layer.",
     "The target blueprint becomes the starting point for the architecture and design layers.",
     "The same four custodians continue, and the work moves from project stages to regular sprints."
-   ]
+   ],
+   "sources": [
+    "_index.md#numbers-from-real-engagements",
+    "modernization/case-archetypes.md#aggregate-track-record",
+    "modernization/case-archetypes.md#version-and-platform-upgrade-inventory-and-warehouse",
+    "modernization/case-archetypes.md#legacy-modernization-edu-tech",
+    "modernization/methodology.md#how-the-two-instantiations-connect-at-the-handoff",
+    "_index.md#one-methodology-three-use-cases"
+   ],
+   "targets": {
+    "fig.asimov-15m-loc": "_index.md#numbers-from-real-engagements",
+    "fig.up-to-4x": "_index.md#numbers-from-real-engagements",
+    "fig.up-to-70pct": "_index.md#numbers-from-real-engagements",
+    "fig.java-21-upgrade": "_index.md#numbers-from-real-engagements",
+    "fig.delphi-net8": "_index.md#numbers-from-real-engagements",
+    "fig.outcomes-vary": "modernization/case-archetypes.md#aggregate-track-record",
+    "case.inventory-warehouse": "modernization/case-archetypes.md#version-and-platform-upgrade-inventory-and-warehouse",
+    "case.edu-tech": "modernization/case-archetypes.md#legacy-modernization-edu-tech",
+    "handover.graph": "modernization/methodology.md#how-the-two-instantiations-connect-at-the-handoff",
+    "handover.custodians": "modernization/process/operating-model.md#how-the-modernization-operating-model-connects-to-the-continuous-sdlc-operating-model"
+   }
   },
   {
    "act": 5,
@@ -570,7 +997,30 @@
     "During an engagement, Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers.",
     "For the end of an engagement, Accion Labs makes four commitments.",
     "The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff."
-   ]
+   ],
+   "sources": [
+    "sdlc/engagement-model.md#the-four-phases",
+    "sdlc/engagement-model.md#advise",
+    "sdlc/engagement-model.md#launch",
+    "sdlc/engagement-model.md#scale",
+    "sdlc/engagement-model.md#optimize",
+    "sdlc/process/enablement-partnership.md",
+    "sdlc/process/enablement-partnership.md#the-three-tiers-of-managed-support",
+    "sdlc/process/enablement-partnership.md#the-offboarding-doctrine"
+   ],
+   "targets": {
+    "phase.advise": "sdlc/engagement-model.md#advise",
+    "phase.launch": "sdlc/engagement-model.md#launch",
+    "phase.scale": "sdlc/engagement-model.md#scale",
+    "phase.optimize": "sdlc/engagement-model.md#optimize",
+    "phase.tiers": "sdlc/engagement-model.md#how-the-phases-map-to-managed-support-tiers",
+    "partnership.ownership": "sdlc/process/enablement-partnership.md#the-engagement-frame",
+    "partnership.tiers": "sdlc/process/enablement-partnership.md#the-three-tiers-of-managed-support",
+    "offboarding.graph": "sdlc/process/enablement-partnership.md#the-offboarding-doctrine",
+    "offboarding.agents": "sdlc/process/enablement-partnership.md#the-offboarding-doctrine",
+    "offboarding.governance": "sdlc/process/enablement-partnership.md#the-offboarding-doctrine",
+    "offboarding.roles": "sdlc/process/enablement-partnership.md#the-offboarding-doctrine"
+   }
   },
   {
    "act": 5,
@@ -586,7 +1036,27 @@
     "The second archetype is a new user-interface workstream that grew in complexity, and started with the design layer of the graph.",
     "In its first sprint under Semantic Engineering, the workstream reused 53 percent of its components from the existing design system.",
     "In both engagements, structured knowledge was added exactly where the specification alone was not enough."
-   ]
+   ],
+   "sources": [
+    "sdlc/case-archetypes.md#the-archetypes",
+    "sdlc/case-archetypes.md#brownfield-enterprise-modernization",
+    "sdlc/case-archetypes.md#what-changed-in-how-the-team-works",
+    "sdlc/case-archetypes.md#greenfield-growing-into-complexity",
+    "sdlc/case-archetypes.md#results-from-the-first-se-governed-sprint",
+    "sdlc/case-archetypes.md#sdd-at-the-governance-ceiling",
+    "sdlc/case-archetypes.md#the-sdd-ceiling-in-operation",
+    "sdlc/case-archetypes.md#the-pattern-across-the-three"
+   ],
+   "targets": {
+    "archetype.brownfield": "sdlc/case-archetypes.md#brownfield-enterprise-modernization",
+    "fig.brownfield-extraction": "sdlc/case-archetypes.md#what-was-built",
+    "fig.brownfield-impact": "sdlc/case-archetypes.md#what-changed-in-how-the-team-works",
+    "archetype.greenfield": "sdlc/case-archetypes.md#greenfield-growing-into-complexity",
+    "fig.greenfield-reuse": "sdlc/case-archetypes.md#results-from-the-first-se-governed-sprint",
+    "archetype.sdd-ceiling": "sdlc/case-archetypes.md#sdd-at-the-governance-ceiling",
+    "ceiling.review-burden": "sdlc/case-archetypes.md#the-sdd-ceiling-in-operation",
+    "archetype.pattern": "sdlc/case-archetypes.md#the-pattern-across-the-three"
+   }
   },
   {
    "act": 6,
@@ -603,7 +1073,13 @@
     "A formal grammar above the graph adds the rules a schema cannot express, so an agent can write what a customer needs and check its own result by running tests.",
     "Dialect engineering is the name for this approach, which lets more of a software-as-a-service product vary per customer while the domain invariants stay shared.",
     "Dialect engineering is set out at dialect-engineering.ai, and it builds on a knowledge graph governed with Semantic Engineering."
-   ]
+   ],
+   "sources": [
+    "_index.md#graphs-for-agent-facing-products"
+   ],
+   "targets": {
+    "next.agent-interfaces": "_index.md#graphs-for-agent-facing-products"
+   }
   },
   {
    "act": 7,
@@ -622,7 +1098,32 @@
     "The framework and concepts of Semantic Engineering are public and free to apply.",
     "The methodology runs on Breeze.AI for new and existing applications, and on ASIMOV for legacy modernization.",
     "Teams can adopt the methodology with Accion Labs, and an engagement can start with a two-day workshop."
-   ]
+   ],
+   "sources": [
+    "about/origins.md#the-2017-framework-breeze",
+    "about/origins.md#the-2022-discovery-drug-discovery-and-hallucination",
+    "about/origins.md#productizing-the-kg-approach-kaps-2023",
+    "about/origins.md#the-convergence",
+    "_index.md#how-we-arrived-here",
+    "_index.md#where-to-go-next",
+    "_index.md#about-the-methodology",
+    "practitioner/contact.md#request-a-two-day-workshop"
+   ],
+   "targets": {
+    "origin.breeze": "about/origins.md#the-2017-framework-breeze",
+    "origin.drug-discovery": "about/origins.md#the-2022-discovery-drug-discovery-and-hallucination",
+    "origin.kaps": "about/origins.md#productizing-the-kg-approach-kaps-2023",
+    "origin.breeze-ai": "about/origins.md#the-convergence",
+    "origin.name": "_index.md#how-we-arrived-here",
+    "next.sdlc": "sdlc/_index.md",
+    "next.modernization": "modernization/_index.md",
+    "next.breeze-ai": "practitioner/breeze-ai.md",
+    "next.asimov": "practitioner/asimov.md",
+    "next.public": "_index.md#about-the-methodology",
+    "next.practitioner": "practitioner/_index.md#the-two-day-deep-dive-workshop",
+    "next.contact": "practitioner/contact.md#request-a-two-day-workshop",
+    "next.origins": "about/origins.md"
+   }
   }
  ]
 }
