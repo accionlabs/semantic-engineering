@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
+import { PAGES } from '../content/data';
 import { ACT_NAMES, APPENDIX, actLabel, actOf, actPath, sceneInfo, scenesOf, SCENES } from '../content/film';
 import { LiveVideo } from '../player/LiveVideo';
 import { Paths, type Tab } from '../parts/Paths';
@@ -116,8 +117,16 @@ const FilmWatch: React.FC<{ slug: string }> = ({ slug }) => {
   );
 };
 
-/** The home page: the overview, then the home page's content. */
-export const HomeWatch: React.FC = () => (
+/** The home page: the overview and the paths. Links to the old home page's sections (/#heading) go to the introduction. */
+export const HomeWatch: React.FC = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    const id = decodeURIComponent(location.hash.slice(1));
+    if (id && PAGES.get('home')?.headings.some((h) => h.id === id)) navigate(`/introduction/#${id}`, { replace: true });
+  }, []); // eslint-disable-line
+  return <HomeBody />;
+};
+const HomeBody: React.FC = () => (
   <div className="wrap wide home-watch">
     <LiveVideo tldr endOverlay={<OverviewEnd />} fallbackScenes={[0]} />
     <p className="home-intro muted">Prefer to read? <Link to="/introduction/">Start with the introduction</Link>, or use the sections in the menu.</p>
