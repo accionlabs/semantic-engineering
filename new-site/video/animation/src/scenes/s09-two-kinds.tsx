@@ -87,8 +87,8 @@ export const scene09: SceneDef = {
         <g className="pre axis">
           <line x1={330} y1={Y.flow + 92} x2={1580} y2={Y.flow + 92} stroke={C.text} strokeWidth={2} />
           <Head x={1592} y={Y.flow + 92} from={{ x: 330, y: Y.flow + 92 }} colour={C.text} />
-          {['one developer', 'one team', 'several teams'].map((t, i) => <text key={t} x={420 + i * 520} y={Y.flow + 122} textAnchor="middle" fontFamily={F.mono} fontSize={16} fill={C.text}>{t}</text>)}
-          <text x={330} y={Y.flow + 150} fontFamily={F.mono} fontSize={13} fill={C.muted}>complexity of the work</text>
+          {['prototype', 'small application', 'large, complex or legacy application'].map((t, i) => <text key={t} x={420 + i * 520} y={Y.flow + 122} textAnchor="middle" fontFamily={F.mono} fontSize={16} fill={C.text}>{t}</text>)}
+          <text x={330} y={Y.flow + 150} fontFamily={F.mono} fontSize={13} fill={C.muted}>complexity of the application</text>
         </g>
       </Svg>
       <FigureChip className="pre chip-extract" x={L.x + 590} y={510} w={300} figure="2 to 3 weeks" label="to extract the graph of 2M+ lines, typically" source="_index.md#numbers-from-real-engagements" target="fig.extraction" />
@@ -137,7 +137,7 @@ export const scene09: SceneDef = {
     vanish(ctx, '.cols, .pin', s9 + 0.2);
     appear(ctx, '.mini-r', s9 + 0.8);
     appear(ctx, '.after', s9 + 1.2);
-    // s10: the right process for continuous work depends on the complexity of the work.
+    // s10: the right process for continuous work depends on how complex the application is.
     const s10 = cue('complexity', 's9');
     vanish(ctx, '.tag, .heads, .owners, .co-same, .mini-l, .grow, .extract, .mini-r, .after', s10);
     tl.to(q('.land'), { opacity: 1, duration: 0.8 }, s10 + 0.3);

@@ -209,8 +209,8 @@
    "act": 2,
    "n": 9,
    "title": "Two kinds of graph",
-   "text": "Semantic Engineering covers three kinds of work: building a new application, called greenfield; changing an existing one, called brownfield; and replacing an old system, called legacy modernization. The three kinds of work use two shapes of graph, depending on whether the end state keeps changing or is fixed in advance. New and existing applications keep changing, so greenfield and brownfield work share the four-layer graph. A greenfield graph is built up as the application grows, and a brownfield graph is extracted from the existing application and then maintained by its owners. For an application of more than 2 million lines, extraction typically completes in two to three weeks. Legacy modernization has a fixed end state, chosen at the start of the project. The modernization graph has three parts: a graph of the old system built from its code, a graph of the new system defined by the custodians, and a specification that connects the two. The same four custodian roles govern both shapes. When a modernization completes, its graph converts to the four-layer graph. The right process for continuous work changes as the complexity of the work rises.",
-   "words": 188,
+   "text": "Semantic Engineering covers three kinds of work: building a new application, called greenfield; changing an existing one, called brownfield; and replacing an old system, called legacy modernization. The three kinds of work use two shapes of graph, depending on whether the end state keeps changing or is fixed in advance. New and existing applications keep changing, so greenfield and brownfield work share the four-layer graph. A greenfield graph is built up as the application grows, and a brownfield graph is extracted from the existing application and then maintained by its owners. For an application of more than 2 million lines, extraction typically completes in two to three weeks. Legacy modernization has a fixed end state, chosen at the start of the project. The modernization graph has three parts: a graph of the old system built from its code, a graph of the new system defined by the custodians, and a specification that connects the two. The same four custodian roles govern both shapes. When a modernization completes, its graph converts to the four-layer graph. The right process for continuous work depends on how complex the application is.",
+   "words": 187,
    "sentences": [
     "Semantic Engineering covers three kinds of work: building a new application, called greenfield; changing an existing one, called brownfield; and replacing an old system, called legacy modernization.",
     "The three kinds of work use two shapes of graph, depending on whether the end state keeps changing or is fixed in advance.",
@@ -221,7 +221,7 @@
     "The modernization graph has three parts: a graph of the old system built from its code, a graph of the new system defined by the custodians, and a specification that connects the two.",
     "The same four custodian roles govern both shapes.",
     "When a modernization completes, its graph converts to the four-layer graph.",
-    "The right process for continuous work changes as the complexity of the work rises."
+    "The right process for continuous work depends on how complex the application is."
    ]
   },
   {
