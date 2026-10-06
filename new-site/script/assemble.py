@@ -54,6 +54,8 @@ for slug, title in PARTS:
         words = len(narration.split())
         sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z0-9"])', narration)
         for i, s in enumerate(sentences, 1):
+            if re.match(r'(Accion|ASIMOV|Breeze)', s):
+                problems.append(f'scene {n} s{i}: opens with a name the voice mispronounces at the start: {s[:70]}')
             if re.match(OPENERS, s):
                 problems.append(f'scene {n} s{i}: opens with "{s.split()[0]}": {s[:70]}')
             for pat, what in RULES:

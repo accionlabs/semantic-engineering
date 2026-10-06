@@ -527,8 +527,8 @@
    "act": 4,
    "n": 26,
    "title": "Results, and the handover",
-   "text": "More than fifteen million lines of legacy code have been modernized with ASIMOV, across more than ten programs. On a one-million-line standalone codebase, the indicative figures are up to four times faster than manual modernization, and up to seventy percent less migration time. An inventory and warehouse platform moved 2.1 million lines from Java 8 to Java 21 in about three and a half months. A European education-technology provider moved three million lines of Delphi to cloud-native .NET 8, with about sixty percent less effort than manual. Actual outcomes vary by engagement scope, target stack and the modules selected. When a modernization completes and the client wants ongoing governance of the new system, a four-layer graph is built for it. Breeze.AI's agents extract the code layer from the new code, so the graph matches the modernized system from the start. The Retain and Modify decisions in the specification become the starting point for the functional layer. The target blueprint becomes the starting point for the architecture and design layers. The same four custodians continue, and the work moves from project stages to regular sprints.",
-   "words": 184,
+   "text": "More than fifteen million lines of legacy code have been modernized with ASIMOV, across more than ten programs. On a one-million-line standalone codebase, the indicative figures are up to four times faster than manual modernization, and up to seventy percent less migration time. An inventory and warehouse platform moved 2.1 million lines from Java 8 to Java 21 in about three and a half months. A European education-technology provider moved three million lines of Delphi to cloud-native .NET 8, with about sixty percent less effort than manual. Actual outcomes vary by engagement scope, target stack and the modules selected. When a modernization completes and the client wants ongoing governance of the new system, a four-layer graph is built for it. The code layer is then extracted from the new code by Breeze.AI's agents, so the graph matches the modernized system from the start. The Retain and Modify decisions in the specification become the starting point for the functional layer. The target blueprint becomes the starting point for the architecture and design layers. The same four custodians continue, and the work moves from project stages to regular sprints.",
+   "words": 187,
    "sentences": [
     "More than fifteen million lines of legacy code have been modernized with ASIMOV, across more than ten programs.",
     "On a one-million-line standalone codebase, the indicative figures are up to four times faster than manual modernization, and up to seventy percent less migration time.",
@@ -536,7 +536,7 @@
     "A European education-technology provider moved three million lines of Delphi to cloud-native .NET 8, with about sixty percent less effort than manual.",
     "Actual outcomes vary by engagement scope, target stack and the modules selected.",
     "When a modernization completes and the client wants ongoing governance of the new system, a four-layer graph is built for it.",
-    "Breeze.AI's agents extract the code layer from the new code, so the graph matches the modernized system from the start.",
+    "The code layer is then extracted from the new code by Breeze.AI's agents, so the graph matches the modernized system from the start.",
     "The Retain and Modify decisions in the specification become the starting point for the functional layer.",
     "The target blueprint becomes the starting point for the architecture and design layers.",
     "The same four custodians continue, and the work moves from project stages to regular sprints."
@@ -546,8 +546,8 @@
    "act": 5,
    "n": 27,
    "title": "Engagement phases",
-   "text": "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize. Advise takes two to four weeks, assesses how the team uses AI today and where it meets friction, and produces a scoped roadmap and a platform recommendation. Launch takes about twelve weeks, builds the four-layer graph for the highest-priority product, and puts the validation gate in place on every pull request. Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work. Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs. In every phase, the client's four custodians own the four layers of the knowledge graph. Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers. Accion Labs makes four commitments for the end of an engagement. The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff.",
-   "words": 172,
+   "text": "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize. Advise takes two to four weeks, assesses how the team uses AI today and where it meets friction, and produces a scoped roadmap and a platform recommendation. Launch takes about twelve weeks, builds the four-layer graph for the highest-priority product, and puts the validation gate in place on every pull request. Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work. Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs. In every phase, the client's four custodians own the four layers of the knowledge graph. During an engagement, Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers. For the end of an engagement, Accion Labs makes four commitments. The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff.",
+   "words": 175,
    "sentences": [
     "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize.",
     "Advise takes two to four weeks, assesses how the team uses AI today and where it meets friction, and produces a scoped roadmap and a platform recommendation.",
@@ -555,8 +555,8 @@
     "Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work.",
     "Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs.",
     "In every phase, the client's four custodians own the four layers of the knowledge graph.",
-    "Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers.",
-    "Accion Labs makes four commitments for the end of an engagement.",
+    "During an engagement, Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers.",
+    "For the end of an engagement, Accion Labs makes four commitments.",
     "The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff."
    ]
   },
@@ -582,18 +582,18 @@
    "act": 5,
    "n": 29,
    "title": "Where it came from",
-   "text": "In 2017, an internal Accion Labs framework called Breeze set out what product owners, UX designers and architects need to produce. Breeze documents were maintained by hand, and teams tended to drop them under deadline pressure. In 2022, on a drug-discovery project for a pharmaceutical client, connecting the AI model to a knowledge graph kept its hallucinations, the answers it invents, under control. In 2023, the knowledge-graph approach became a commercial platform, KAPS, used across customer engagements. By 2024, the Breeze guidelines had become the four layers of the knowledge graph, with agents built around them, in a platform named Breeze.AI. The method took the name Semantic Engineering in 2025. The framework and concepts of Semantic Engineering are public and free to apply. Breeze.AI runs the methodology for new and existing applications, and ASIMOV runs it for legacy modernization. Accion Labs works with teams to adopt the methodology, and an engagement can start with a two-day workshop.",
-   "words": 157,
+   "text": "In 2017, an internal Accion Labs framework called Breeze set out what product owners, UX designers and architects need to produce. Teams maintained the Breeze documents by hand, and tended to drop them under deadline pressure. In 2022, on a drug-discovery project for a pharmaceutical client, connecting the AI model to a knowledge graph kept its hallucinations, the answers it invents, under control. In 2023, the knowledge-graph approach became a commercial platform, KAPS, used across customer engagements. By 2024, the Breeze guidelines had become the four layers of the knowledge graph, with agents built around them, in a platform named Breeze.AI. The method took the name Semantic Engineering in 2025. The framework and concepts of Semantic Engineering are public and free to apply. The methodology runs on Breeze.AI for new and existing applications, and on ASIMOV for legacy modernization. Teams can adopt the methodology with Accion Labs, and an engagement can start with a two-day workshop.",
+   "words": 156,
    "sentences": [
     "In 2017, an internal Accion Labs framework called Breeze set out what product owners, UX designers and architects need to produce.",
-    "Breeze documents were maintained by hand, and teams tended to drop them under deadline pressure.",
+    "Teams maintained the Breeze documents by hand, and tended to drop them under deadline pressure.",
     "In 2022, on a drug-discovery project for a pharmaceutical client, connecting the AI model to a knowledge graph kept its hallucinations, the answers it invents, under control.",
     "In 2023, the knowledge-graph approach became a commercial platform, KAPS, used across customer engagements.",
     "By 2024, the Breeze guidelines had become the four layers of the knowledge graph, with agents built around them, in a platform named Breeze.AI.",
     "The method took the name Semantic Engineering in 2025.",
     "The framework and concepts of Semantic Engineering are public and free to apply.",
-    "Breeze.AI runs the methodology for new and existing applications, and ASIMOV runs it for legacy modernization.",
-    "Accion Labs works with teams to adopt the methodology, and an engagement can start with a two-day workshop."
+    "The methodology runs on Breeze.AI for new and existing applications, and on ASIMOV for legacy modernization.",
+    "Teams can adopt the methodology with Accion Labs, and an engagement can start with a two-day workshop."
    ]
   },
   {
