@@ -4,12 +4,13 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "content": "node scripts/build-content.mjs",
+    "content": "node scripts/build-content.mjs && tsx scripts/build-reel-reference.ts",
     "dev": "npm run content && vite",
-    "build": "npm run content && tsc --noEmit && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/postbuild.mjs",
+    "build": "npm run content && npm test && tsc --noEmit && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/postbuild.mjs",
     "preview": "vite preview",
     "check": "node scripts/check-pages.mjs",
-    "check-targets": "node scripts/check-targets.mjs"
+    "check-targets": "node scripts/check-targets.mjs",
+    "test": "tsx scripts/test-graph.ts && tsx scripts/test-explain.ts"
   },
   "dependencies": {
     "@fontsource-variable/bricolage-grotesque": "^5.3.0",

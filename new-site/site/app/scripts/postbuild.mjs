@@ -76,10 +76,16 @@ const watch = [
   ...narration.scenes.filter((s) => s.n > 0).map((s) => ({ url: `/watch/scene-${s.n}/`, title: `Scene ${s.n}: ${s.title}`, description: s.sentences.slice(0, 2).join(' ') })),
   ...paths.ROLES.map((r) => ({ url: `/watch/role-${r.slug}/`, title: `${r.name}: the scenes for your role`, description: r.note })),
   ...paths.SITUATIONS.map((r) => ({ url: `/watch/use-${r.slug}/`, title: `${r.name}: the scenes for your situation`, description: r.note })),
+  { url: '/graph/', title: 'The knowledge graph of Semantic Engineering', description: 'Every concept and link of the method, each tied to the film and the pages that support it.' },
+  { url: '/explain/', title: 'Explanations', description: 'Semantic Engineering explained for your own situation by your agent, played as a short film.' },
+  { url: '/explain/saved/', title: 'Your explanation', description: 'An explanation saved in this browser.', noindex: true },
+  { url: '/connect/', title: 'The Semantic Engineering connector', description: 'An MCP server that helps an agent explain how Semantic Engineering applies to a person\'s own software work.' },
+  { url: '/privacy/', title: 'Privacy policy', description: 'What semantic-engineering.ai and its MCP connector collect.' },
 ];
 for (const w of watch) {
   const url = SITE_URL + w.url;
   const headHtml = [
+    w.noindex ? '<meta name="robots" content="noindex" />' : '',
     w.website ? '<title>Semantic Engineering</title>' : `<title>${esc(w.title)} · Semantic Engineering</title>`,
     `<meta name="description" content="${esc(w.description)}" />`,
     `<link rel="canonical" href="${url}" />`,

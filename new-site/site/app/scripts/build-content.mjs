@@ -212,6 +212,22 @@ for (const p of pages) fs.writeFileSync(path.join(out, 'pages', `${fileKey(p.key
 const meta = pages.map(({ blocks, faqs, ...m }) => ({ ...m, hasFaq: faqs.length > 0 }));
 const unused = fs.readdirSync(path.join(STATIC, 'diagrams')).filter((f) => f.endsWith('.svg') && !diagrams.has(f));
 fs.writeFileSync(path.join(out, 'site.json'), JSON.stringify({ pages: meta, nav, order, diagrams: [...diagrams.values()], unusedDiagrams: unused }, null, 1));
+// Every addressed block as plain text, by page and section, for the knowledge graph, the explanation
+// language and the MCP server: "sdlc/methodology#aperture p3" is block 3 of the section "aperture".
+// A subsection (h3) lists the blocks under it, numbered within its section.
+const passages = {};
+for (const p of pages.filter((x) => !x.draft)) {
+  const secs = { '': { title: p.title, paras: [] } };
+  let h2 = '';
+  for (const b of p.blocks) {
+    if (b.k === 'h') { if (b.level <= 2) h2 = b.id; secs[b.id] = { title: b.text, ...(b.level > 2 ? { in: h2 } : {}), paras: [] }; continue; }
+    const para = { n: b.n, k: b.k, text: b.text ?? '' };
+    secs[b.sec]?.paras.push(para);
+    if (b.sub) secs[b.sub]?.paras.push(para);
+  }
+  passages[p.key] = { title: p.title, url: p.url, file: p.file, sections: secs };
+}
+fs.writeFileSync(path.join(out, 'passages.json'), JSON.stringify(passages));
 
 // public/: the static files, then the generated ones.
 const pub = path.join(app, 'public');

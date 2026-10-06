@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, Outlet, useLocation } from 'react-router-dom';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { SITE, PAGES, navTitle, pageByUrl, type NavNode } from '../content/data';
 import { Search } from './Search';
 
@@ -41,6 +41,10 @@ export const Sidebar: React.FC<{ current: string; onGo: () => void }> = ({ curre
       <li><div className={`nav-row${current === 'video-home' ? ' active' : ''}`}><Link to="/" onClick={onGo} aria-current={current === 'video-home' ? 'page' : undefined}>Home</Link></div></li>
       <li><div className={`nav-row${current === 'home' ? ' active' : ''}`}><Link to="/introduction/" onClick={onGo} aria-current={current === 'home' ? 'page' : undefined}>Introduction</Link></div></li>
       {SITE.nav.map((n) => <NavItem key={n.key} node={n} current={current} onGo={onGo} />)}
+      <li className="nav-group"><span className="kicker">For agents</span></li>
+      {[['/graph', 'The knowledge graph'], ['/explain', 'Explanations'], ['/connect', 'The connector']].map(([to, name]) => (
+        <li key={to}><div className={`nav-row${current === to ? ' active' : ''}`}><Link to={to} onClick={onGo} aria-current={current === to ? 'page' : undefined}>{name}</Link></div></li>
+      ))}
     </ul>
   </nav>
 );
@@ -49,7 +53,15 @@ declare global { interface Window { gtag?: (...a: unknown[]) => void } }
 
 export const Layout: React.FC = () => {
   const { pathname, hash } = useLocation();
-  const current = pathname === '/' ? 'video-home' : pageByUrl(pathname)?.key ?? '';
+  const current = pathname === '/' ? 'video-home' : pageByUrl(pathname)?.key ?? ['/graph', '/explain', '/connect'].find((p) => pathname === p || pathname.startsWith(`${p}/`)) ?? '';
+  // WebMCP: where the browser supports it, the page offers the connector's tools to an agent running in it.
+  const navigate = useNavigate();
+  useEffect(() => {
+    let stop = () => {};
+    let gone = false;
+    import('../reel/webmcp').then((m) => { if (!gone) stop = m.registerSiteTools((p) => navigate(p)); }).catch(() => {});
+    return () => { gone = true; stop(); };
+  }, []); // eslint-disable-line
   const [menu, setMenu] = useState(false);
   useEffect(() => { setMenu(false); }, [pathname]);
   // The watch pages use the full width: the sidebar opens over them from the menu button.
@@ -95,7 +107,7 @@ export const Layout: React.FC = () => {
         <aside id="sidebar" className={`sidebar${menu ? ' open' : ''}`}><Sidebar current={current} onGo={() => setMenu(false)} /></aside>
         <main id="main" className="main"><Outlet /></main>
       </div>
-      <footer className="footer"><div className="footer-in">© 2026 Accion Labs</div></footer>
+      <footer className="footer"><div className="footer-in">© 2026 Accion Labs · <Link to="/graph">Knowledge graph</Link> · <Link to="/connect">Connector</Link> · <Link to="/privacy">Privacy</Link></div></footer>
     </>
   );
 };
