@@ -11,6 +11,7 @@ import { Reader } from '../player/Reader';
 import { PAGES } from '../content/data';
 import type { Loc } from '../content/film';
 import { MCP_URL } from '../reel/prompt';
+import { unpackExplanation } from '../reel/link';
 
 /** A page reference ("sdlc/agents#the-kg-sync-agent p3") as a location the reader opens. */
 const locOf = (ref: string): Loc | undefined => {
@@ -111,6 +112,7 @@ export const ExplainPage: React.FC = () => {
   if (!saved) return <div className="wrap narrow"><h1>Not in this browser</h1><p>Explanations are kept in the browser that made them. <Link to="/explain">See the ones saved here</Link>.</p></div>;
   if (!full || !section) return (
     <div className="wrap narrow"><h1>This explanation does not check</h1>
+      {saved.source === 'import' && <p className="muted">If it came in a link, the link may have been cut short when it was copied or sent. Ask your agent for the link again.</p>}
       <ul>{result?.problems.map((p, i) => <li key={i}>Line {p.line}: {p.message}</li>)}</ul>
       <pre className="reel-code">{saved.code}</pre></div>
   );
@@ -158,14 +160,16 @@ export const ExplainPage: React.FC = () => {
 /** /explain/import#<code>: saves an explanation handed over in the address, then plays it. */
 export const ExplainImport: React.FC = () => {
   const navigate = useNavigate();
+  const [broken, setBroken] = useState(false);
   useEffect(() => {
-    try {
-      const code = decodeURIComponent(escape(atob(location.hash.slice(1).replace(/-/g, '+').replace(/_/g, '/'))));
+    unpackExplanation(location.hash.slice(1)).then((code) => {
+      if (!code) { setBroken(true); return; }
       const r = checkExplain(code);
       const saved = reels.save(code, { question: r.plan?.question ?? code.match(/"([^"]*)"/)?.[1] ?? 'Explanation', audience: r.plan?.audience }, 'import');
       navigate(`/explain/${saved.id}`, { replace: true });
-    } catch { navigate('/explain', { replace: true }); }
+    });
   }, []); // eslint-disable-line
+  if (broken) return <div className="wrap narrow"><h1>This link is incomplete</h1><p>The explanation travels inside the link, and part of it is missing, usually because the link was cut short when it was copied or sent. Ask your agent for the link again, and open the whole link.</p><p><Link to="/explain">Explanations saved in this browser</Link></p></div>;
   return <div className="wrap narrow"><p>Opening the explanation…</p></div>;
 };
 

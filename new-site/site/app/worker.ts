@@ -10,6 +10,7 @@ import { TOOLS, lengths } from './src/reel/tools';
 import { checkExplain, compiledListing } from './src/reel/explain';
 import { ROLE, STYLE } from './src/reel/reference';
 import { SITE } from './src/reel/prompt';
+import { packExplanation } from './src/reel/link';
 
 type Env = { ASSETS: { fetch: (r: Request | URL) => Promise<Response> } };
 
@@ -42,21 +43,20 @@ const CORS = {
   'access-control-allow-headers': 'content-type, accept, authorization, mcp-session-id, mcp-protocol-version, last-event-id',
   'access-control-expose-headers': 'mcp-session-id, mcp-protocol-version',
 };
-const base64url = (s: string) => btoa(unescape(encodeURIComponent(s))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 
 type Tool = { title: string; description: string; inputSchema: object; run: (input: never) => unknown; readOnly: boolean };
 const REMOTE: Record<string, Tool> = {
   ...Object.fromEntries(Object.entries(TOOLS).map(([name, t]) => [name, { ...t, run: t.run as (input: never) => unknown, readOnly: true }])),
   make_explanation: {
     title: 'Make an explanation the person can play',
-    description: "Checks an explanation and, if it passes, returns a link that opens it on semantic-engineering.ai in the person's own browser, where it plays and is saved there. The explanation travels in the link itself; this server keeps nothing.",
+    description: "Checks an explanation and, if it passes, returns a link that opens it on semantic-engineering.ai in the person's own browser, where it plays and is saved there. The explanation travels in the link itself, compressed; this server keeps nothing. Give the person the whole link.",
     inputSchema: { type: 'object', properties: { code: { type: 'string' } }, required: ['code'] },
     readOnly: true,
-    run: ({ code }: { code: string }) => {
+    run: async ({ code }: { code: string }) => {
       if (typeof code !== 'string' || !code.trim()) return { error: 'give the explanation as text in "code", starting with: explain "<the question>"' };
       const r = checkExplain(code);
       if (!r.plan) return { ok: false, problems: r.problems };
-      return { ok: true, link: `${SITE}/explain/import#${base64url(code)}`, ...lengths(r.plan), warnings: r.problems, compiled: compiledListing(r.plan) };
+      return { ok: true, link: `${SITE}/explain/import#${await packExplanation(code)}`, ...lengths(r.plan), warnings: r.problems, compiled: compiledListing(r.plan) };
     },
   },
 };
