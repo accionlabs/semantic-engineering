@@ -12,7 +12,7 @@
         <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">FUNCTIONAL ONTOLOGY  ·  Product Owner</text>
     </g>
     <g transform="matrix(1,0,0,1,60,138)">
-        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The why: who uses the system, what outcomes they need, which scenarios drive each outcome</text>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Functional: who uses the system, what outcomes they need, which scenarios drive each outcome</text>
     </g>
     <path d="M260,166L260,188C260,193.519 255.519,198 250,198L110,198C104.481,198 100,193.519 100,188L100,166C100,160.481 104.481,156 110,156L250,156C255.519,156 260,160.481 260,166Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,180,182)">
@@ -47,7 +47,7 @@
         <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">DESIGN ONTOLOGY  ·  UX Designer</text>
     </g>
     <g transform="matrix(1,0,0,1,60,278)">
-        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The how it looks and behaves: from the user journey down to the atomic design tokens</text>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Design: from the user journey down to the atomic design tokens</text>
     </g>
     <path d="M200,306L200,328C200,333.519 195.519,338 190,338L90,338C84.481,338 80,333.519 80,328L80,306C80,300.481 84.481,296 90,296L190,296C195.519,296 200,300.481 200,306Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,140,322)">
@@ -94,7 +94,7 @@
         <text x="0px" y="0px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:14px;fill:var(--se-accent,#E94E1B);">ARCHITECTURE ONTOLOGY  ·  Architect</text>
     </g>
     <g transform="matrix(1,0,0,1,60,418)">
-        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The where: services, integration boundaries, infrastructure layers, dependency map</text>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Architecture: services, integration boundaries, infrastructure layers, dependency map</text>
     </g>
     <path d="M240,448L240,470C240,475.519 235.519,480 230,480L110,480C104.481,480 100,475.519 100,470L100,448C100,442.481 104.481,438 110,438L230,438C235.519,438 240,442.481 240,448Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>
     <g transform="matrix(1,0,0,1,170,464)">
@@ -151,7 +151,7 @@
         </g>
         <g transform="matrix(11,0,0,11,166.933594,0)">
         </g>
-        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">The what the code actually does: ﬁle structure down to statements, plus boundary endpoints</text>
+        <text x="0px" y="0px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:11px;fill:var(--se-text-secondary,#4b5563);">Code: ﬁle structure down to statements, plus boundary endpoints</text>
     </g>
     <g transform="matrix(1,0,0,1,0,-8)">
         <path d="M220,646L220,668C220,673.519 215.519,678 210,678L110,678C104.481,678 100,673.519 100,668L100,646C100,640.481 104.481,636 110,636L210,636C215.519,636 220,640.481 220,646Z" style="fill:var(--se-box-fill,#ffffff);stroke:var(--se-text-secondary,#4b5563);stroke-width:1.5px;"/>

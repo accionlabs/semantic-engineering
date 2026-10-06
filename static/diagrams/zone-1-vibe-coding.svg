@@ -176,8 +176,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,54)">
-                <g transform="matrix(1,0,0,1,-33.631,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">holds the why</text>
+                <g transform="matrix(1,0,0,1,0.019,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">functional knowledge</text>
                 </g>
             </g>
         </g>
@@ -189,8 +189,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,54)">
-                <g transform="matrix(1,0,0,1,-38.83,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">holds the where</text>
+                <g transform="matrix(1,0,0,1,0.020,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">architecture knowledge</text>
                 </g>
             </g>
         </g>
@@ -202,8 +202,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,54)">
-                <g transform="matrix(1,0,0,1,-53.193,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">holds the how-it-looks</text>
+                <g transform="matrix(1,0,0,1,0.007,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">design knowledge</text>
                 </g>
             </g>
         </g>
@@ -220,8 +220,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,54)">
-                <g transform="matrix(1,0,0,1,-63.288,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">holds what-the-code-does</text>
+                <g transform="matrix(1,0,0,1,0.012,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">code knowledge</text>
                 </g>
             </g>
         </g>

@@ -1,6 +1,6 @@
 ---
 title: "Zone 1: Manual / Vibe Coding"
-description: "Conversational AI use without a written specification. The first taste of velocity. Where it is genuinely suitable, where it stops working, and the transition path to Spec-Driven Development."
+description: "Conversational AI use without a written specification. Fast results on small tasks. Where it is genuinely suitable, where it stops working, and the transition path to Spec-Driven Development."
 weight: 10
 date: 2026-06-09
 lastmod: 2026-06-09
@@ -20,7 +20,7 @@ The diagram shows the operating picture at this zone. The persistent context up 
 
 For most of software's history, engineers spent the bulk of their day typing code. A function to validate an email address, a CRUD endpoint for a new entity, a React component for a configuration form. Routine work consumed routine hours. A backend engineer might write three to five hundred lines of new code in a productive week, and most of those lines looked very similar to lines she had written the previous week and the week before that.
 
-The first wave of AI coding tools (Copilot, then ChatGPT in an IDE, then Claude, then Cursor, then Claude Code) collapsed that typing time. A developer opens a chat window and types "give me a Joi schema for a user registration form with email, password meeting these rules, optional phone number, and accept-terms checkbox". The schema appears in seconds. The developer reviews it, adjusts two lines, commits. What used to be twenty minutes of typing is now ninety seconds of reading and editing. This is the first taste of velocity. Most engineers describe it as the best experience they have had with a development tool in their careers.
+The first wave of AI coding tools (Copilot, then ChatGPT in an IDE, then Claude, then Cursor, then Claude Code) collapsed that typing time. A developer opens a chat window and types "give me a Joi schema for a user registration form with email, password meeting these rules, optional phone number, and accept-terms checkbox". The schema appears in seconds. The developer reviews it, adjusts two lines, commits. What used to be twenty minutes of typing is now ninety seconds of reading and editing. This is the first real speed-up AI gives a developer. Most engineers describe it as the best experience they have had with a development tool in their careers.
 
 ## Where the Team Is
 

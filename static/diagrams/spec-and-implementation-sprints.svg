@@ -33,8 +33,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,42)">
-                <g transform="matrix(1,0,0,1,-59.473,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:var(--se-text-secondary,#4b5563);">why · personas · outcomes</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">functional · personas · outcomes</text>
                 </g>
             </g>
         </g>
@@ -46,8 +46,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,42)">
-                <g transform="matrix(1,0,0,1,-65.032,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:var(--se-text-secondary,#4b5563);">where · services · boundaries</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">architecture · services · boundaries</text>
                 </g>
             </g>
         </g>
@@ -59,8 +59,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,42)">
-                <g transform="matrix(1,0,0,1,-58.081,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:var(--se-text-secondary,#4b5563);">how-it-looks · components</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">design · components</text>
                 </g>
             </g>
         </g>
@@ -77,8 +77,8 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,120,42)">
-                <g transform="matrix(1,0,0,1,-44.192,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:var(--se-text-secondary,#4b5563);">what-the-code-does</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:10px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">code · modules · functions</text>
                 </g>
             </g>
         </g>
@@ -566,13 +566,13 @@
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,97,60)">
-                <g transform="matrix(1,0,0,1,-44.884,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);">merged code triggers</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">graph updated</text>
                 </g>
             </g>
             <g transform="matrix(1,0,0,1,97,74)">
-                <g transform="matrix(1,0,0,1,-47.535,0)">
-                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);">Code Ontology update</text>
+                <g transform="matrix(1,0,0,1,0,0)">
+                    <text x="0px" y="0px" style="font-family:'Helvetica';font-size:9.5px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">before the merge</text>
                 </g>
             </g>
         </g>

@@ -177,7 +177,7 @@ Each layer is sized to its work. The Custodianship layer runs on spec sprint cad
 
 Each layer's cadence matches its work. Custodianship runs on spec sprint cadence (one or two sprints ahead of implementation). Implementation runs on the regular sprint cadence. Enablement runs on quarterly rationalization cycles and on-trigger support. Each layer's work has a natural rhythm. The structure does not force the layers to operate at the same cadence.
 
-Coordination is structured. The Custodianship layer produces validated specs and impact reports that flow down to Implementation. Implementation merge events trigger KG sync. The Enablement layer surfaces rationalization findings and ontology-health alerts back up to the custodians. The coordination paths are defined.
+Coordination is structured. The Custodianship layer produces validated specs and impact reports that flow down to Implementation. KG Sync updates the graph from each implementation pull request before it merges. The Enablement layer surfaces rationalization findings and ontology-health alerts back up to the custodians. The coordination paths are defined.
 
 The structure allows specialists to operate fractionally without being lost. A Semantic Engineer is fractional across multiple engagements, but they have a defined home (the Enablement layer) and a defined set of responsibilities (graph integrity, brownfield extraction, KG enrichment). The fractional staffing model works because the layered structure gives each role somewhere to belong.
 

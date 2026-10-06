@@ -22,7 +22,7 @@ faqs:
   - question: "What is the Manual Translation Tax?"
     answer: "The Manual Translation Tax is the recurring cost a team pays converting tacit, unstructured enterprise knowledge into a form AI coding agents can act on. Four custodians (the product owner, architect, UX designer, and engineering team) hold that knowledge; Semantic Engineering reduces the tax by capturing it once in a governed knowledge graph the agents can query."
   - question: "What is the four-layer ontology?"
-    answer: "The four-layer ontology is the structure of the knowledge graph at the core of Semantic Engineering: a functional layer (what the system does), a design layer (how it behaves and looks), an architecture layer (how it is organized), and a code layer (what is actually built). Agents traverse these layers to pull only the context a given change requires."
+    answer: "The four-layer ontology is the structure of the knowledge graph at the core of Semantic Engineering: a functional layer (personas, outcomes and scenarios), a design layer (components and interaction patterns), an architecture layer (services, data stores and integrations), and a code layer (modules, functions and endpoints). Agents traverse these layers to pull only the context a given change requires."
   - question: "How is Semantic Engineering different from spec-driven development?"
     answer: "Spec-driven development gives an agent a written specification per change, but the context is local and re-derived each time. Semantic Engineering adds a persistent, governed knowledge graph spanning the whole application, so context is global, queryable, and kept current by agents and named custodians rather than rewritten for every task. SE is additive: a mature SDD practice transfers in directly, with the graph layered underneath."
   - question: "Does Semantic Engineering apply to greenfield, brownfield, and legacy modernization the same way?"
@@ -71,16 +71,16 @@ This page is the executive overview. Each section links to a deep dive in the to
 
 ## The Shared Problem
 
-Enterprise software work is hard because the knowledge that holds a system together lives in heads, decaying documents, and code that is opaque without interpretation. In a typical enterprise application, four roles carry that tacit knowledge:
+Enterprise software work is hard because the knowledge that holds a system together lives in people's heads, in documents that fall out of date, and in code that is hard to read without someone to explain it. In a typical enterprise application, four roles hold four kinds of knowledge:
 
-- the **product owner** holds the *why* (personas, outcomes, scenarios, rejected proposals)
-- the **architect** holds the *where* (service boundaries, source-of-truth databases, integration contracts)
-- the **UX designer** holds the *how it looks and behaves* (components, interaction patterns, state handling)
-- the **engineering team** collectively holds the *what the code actually does* (live functions, retry policies, active feature flags, dead utilities)
+- the **product owner** holds the *functional* knowledge: personas, outcomes, scenarios, rejected proposals
+- the **UX designer** holds the *design* knowledge: components, interaction patterns, state handling
+- the **architect** holds the *architecture* knowledge: service boundaries, source-of-truth databases, integration contracts
+- the **engineering team** collectively holds the *code* knowledge: live functions, retry policies, active feature flags, unused utilities
 
 No single human holds the whole picture and no document does either. AI coding assistants do well on small, contained tasks but break against this complexity because they have no structured way to query the system's actual state. Bigger context windows do not fix this. The agent needs structured context it can read against.
 
-Every use case in a typical enterprise portfolio hits the same wall. Greenfield work needs the new application to fit a landscape it has not yet been built into. Brownfield work needs to reason about dependencies inside the live application as it evolves. Legacy modernization needs to honor years of accumulated behavior while replacing the stack that produced it. The complexity differs by use case, but the structural gap is the same.
+Every use case in a typical enterprise portfolio faces the same gap. Greenfield work needs the new application to fit a landscape it has not yet been built into. Brownfield work needs to reason about dependencies inside the live application as it evolves. Legacy modernization needs to honor years of accumulated behavior while replacing the stack that produced it. The complexity differs by use case, but the structural gap is the same.
 
 The full problem treatment is in [The Manual Translation Tax](sdlc/translation-tax.md) for continuous SDLC and [The Modernization Translation Tax](modernization/translation-tax.md) for legacy modernization.
 
@@ -129,7 +129,7 @@ The site is organized so a reader can walk either use case end to end across the
 |---|---|---|
 | **Translation Tax** (the problem) | [Manual Translation Tax](sdlc/translation-tax.md): the daily cost of converting tacit knowledge into action across four custodians. | [Modernization Translation Tax](modernization/translation-tax.md): reverse-engineering cost, lost context, validation vacuum, knowledge disappearance. |
 | **Methodology** (graph model) | [Four-Layer Ontology](sdlc/methodology.md): Functional, Design, Architecture, Code. Curated live by the four custodians. | [Ontologies for Legacy Modernization](modernization/methodology.md): Source-state decomposed from legacy code, Target-state defined by the same four custodians from a target blueprint, specification format bridges the two. |
-| **Agents** (the fleet) | [The SDLC Agent Fleet](sdlc/agents.md): impact analysis, BDD generation, KG sync, validation on merge. Earn autonomy over time. | [The Modernization Agent Fleet](modernization/agents.md): nine named agents across Discover, Document, Migrate, Validate, Maintain. Progressive autonomy per engagement. |
+| **Agents** (the fleet) | [The SDLC Agent Fleet](sdlc/agents.md): impact analysis, BDD generation, KG sync, validation before merge. Earn autonomy over time. | [The Modernization Agent Fleet](modernization/agents.md): nine named agents across Discover, Document, Migrate, Validate, Maintain. Progressive autonomy per engagement. |
 | **Process** (the operating model) | [Continuous SDLC Operating Model](sdlc/process/_index.md): spec sprint and implementation sprint, fractional allocation, layered team, enablement partnership across years. | [Modernization Operating Model](modernization/process/_index.md): five-phase delivery, SME tuning loop, expert review pattern, enablement frame sized for a bounded project. |
 | **Engagement Model** | [SDLC Engagement Model](sdlc/engagement-model.md): Advise, Launch, Scale, Optimize. Pricing per phase. Three-Phase Rollout aligns to methodology phases. | [Modernization Engagement Model](modernization/engagement-model.md): five entry modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain, Operate, and Convergence). Pricing per mode. |
 | **Case Archetypes** | [SDLC Case Archetypes](sdlc/case-archetypes.md): two real engagements end to end, one brownfield at 2M LOC, one greenfield grown into complexity. | [Modernization Case Archetypes](modernization/case-archetypes.md): seven anonymized case studies across ASP.Net, COBOL, Delphi, VB.NET, ASP Forms, and Java migrations across multiple industries. |
