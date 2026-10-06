@@ -1,10 +1,15 @@
 {
-  // The prerendered pages as static assets, at the Worker's workers.dev address for review. The Worker
-  // (worker.ts) runs only for /media/*, to serve the narration with byte ranges. The MCP server returns
-  // later, and the semantic-engineering.ai routes are added at the switch.
+  // The prerendered pages as static assets. The Worker (worker.ts) runs first, to send www to the bare
+  // domain and to serve /media/* with byte ranges; everything else falls through to the assets.
+  // The custom domains need the semantic-engineering.ai zone active in this Cloudflare account; until then
+  // the site is at the workers.dev address.
   "name": "semantic-engineering",
   "main": "worker.ts",
   "compatibility_date": "2026-09-01",
-  "assets": { "directory": "./dist", "binding": "ASSETS", "not_found_handling": "404-page", "html_handling": "auto-trailing-slash", "run_worker_first": ["/media/*"] },
+  "assets": { "directory": "./dist", "binding": "ASSETS", "not_found_handling": "404-page", "html_handling": "auto-trailing-slash", "run_worker_first": true },
+  "routes": [
+    { "pattern": "semantic-engineering.ai", "custom_domain": true },
+    { "pattern": "www.semantic-engineering.ai", "custom_domain": true }
+  ],
   "workers_dev": true
 }
