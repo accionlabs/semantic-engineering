@@ -126,3 +126,13 @@ h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin: 0.2em 0 0.6em; }
 .transcript h3 { font-size: 1rem; margin: 16px 0 4px; }
 .transcript p { margin: 4px 0; }
 .home-intro { margin: 10px 0 0; }
+
+/* ---------- the menu button on every width; full-width watch pages; a collapsible sidebar ---------- */
+.menu-btn { display: flex; }
+/* Watch pages, and content pages with the sidebar collapsed: the sidebar opens over the page. */
+.watch-shell, .shell.collapsed { max-width: none; }
+.watch-shell .sidebar, .shell.collapsed .sidebar { position: fixed; top: 62px; left: 0; z-index: 25; width: min(320px, 86vw); background: var(--bg); transform: translateX(-102%); transition: transform 200ms ease; box-shadow: 0 0 30px rgb(0 0 0 / 0.2); }
+.watch-shell .sidebar.open, .shell.collapsed .sidebar.open { transform: none; }
+.shell.collapsed .main { max-width: 1440px; margin: 0 auto; }
+.scrim { position: fixed; inset: 62px 0 0 0; z-index: 24; background: rgb(0 0 0 / 0.25); }
+.watch-shell .wrap.wide { max-width: 1680px; }

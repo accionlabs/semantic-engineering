@@ -52,6 +52,19 @@ export const Layout: React.FC = () => {
   const current = pathname === '/' ? 'video-home' : pageByUrl(pathname)?.key ?? '';
   const [menu, setMenu] = useState(false);
   useEffect(() => { setMenu(false); }, [pathname]);
+  // The watch pages use the full width: the sidebar opens over them from the menu button.
+  const watch = pathname === '/' || pathname === '/watch' || pathname.startsWith('/watch/');
+  // On wide screens the menu button collapses the sidebar of the content pages; the choice is remembered.
+  const [collapsed, setCollapsed] = useState(false);
+  useEffect(() => { try { setCollapsed(localStorage.getItem('se-sidebar') === 'collapsed'); } catch { /* storage unavailable */ } }, []);
+  const toggle = () => {
+    const narrow = matchMedia('(max-width: 860px)').matches;
+    if (narrow || watch) { setMenu(!menu); return; }
+    const next = !collapsed;
+    setCollapsed(next);
+    try { localStorage.setItem('se-sidebar', next ? 'collapsed' : 'open'); } catch { /* storage unavailable */ }
+  };
+  const open = watch || collapsed ? menu : !collapsed;
   // Analytics (production host only, see postbuild): the first view is sent on load, later ones on navigation.
   const [first, setFirst] = useState(true);
   useEffect(() => {
@@ -65,7 +78,7 @@ export const Layout: React.FC = () => {
       <a className="skip" href="#main">Skip to content</a>
       <header className="header">
         <div className="header-in">
-          <button className="menu-btn" aria-expanded={menu} aria-controls="sidebar" aria-label="Menu" onClick={() => setMenu(!menu)}>
+          <button className="menu-btn" aria-expanded={open} aria-controls="sidebar" aria-label={watch ? 'Menu' : collapsed ? 'Show the menu' : 'Hide the menu'} title={watch ? 'Menu' : collapsed ? 'Show the menu' : 'Hide the menu'} onClick={toggle}>
             <svg viewBox="0 0 20 20" width="20" height="20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" strokeWidth="1.8" /></svg>
           </button>
           <Link className="brand" to="/">
@@ -77,7 +90,8 @@ export const Layout: React.FC = () => {
           <ThemeButton />
         </div>
       </header>
-      <div className="shell">
+      <div className={`shell${watch ? ' watch-shell' : ''}${collapsed && !watch ? ' collapsed' : ''}`}>
+        {menu && (watch || collapsed) && <div className="scrim" onClick={() => setMenu(false)} aria-hidden="true" />}
         <aside id="sidebar" className={`sidebar${menu ? ' open' : ''}`}><Sidebar current={current} onGo={() => setMenu(false)} /></aside>
         <main id="main" className="main"><Outlet /></main>
       </div>
