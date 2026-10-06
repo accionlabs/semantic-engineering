@@ -5,6 +5,7 @@ import voice from '../voice-timing.json';
 export type SceneText = { act: number; n: number; title: string; text: string; words: number; sentences: string[] };
 export const SCENES = narration.scenes as SceneText[];
 export const ACT_NAMES = narration.acts as Record<string, string>;
+export const ACT_LABELS = (narration as { labels?: Record<string, string> }).labels ?? {};
 export const sceneText = (n: number) => SCENES.find((s) => s.n === n)!;
 
 // Timing comes from the recorded voice when there is one: each sentence's measured length,

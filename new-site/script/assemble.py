@@ -16,7 +16,8 @@ MEDIA = pathlib.Path.home() / 'Documents/Documentation System/content/shared/acc
 PARTS = [('overview', 'Overview'), ('act-1', 'Act 1. The shared problem'), ('act-2', 'Act 2. The methodology'),
          ('act-3', 'Act 3. Knowledge graphs and agents in the AI-driven SDLC, with Breeze.AI'),
          ('act-4', 'Act 4. Legacy modernization, with ASIMOV'), ('act-5', 'Act 5. Working together'),
-         ('act-6', 'Act 6. Where it came from, and what comes next')]
+         ('act-6', 'Act 6. Semantic Engineering and dialect engineering'),
+         ('appendix', 'Appendix. Where it came from')]
 WPS = 2.6
 OPENERS = r'(They|It|That|This|These|Those|And|So|Here|But|Further down|Its|Their|Then|Also)\b'
 RULES = [
@@ -101,7 +102,8 @@ for s in scenes:
 
 # ---------- narration.json for the animation engine ----------
 ACTS = {str(i): t.split('. ', 1)[-1] for i, (_, t) in enumerate(PARTS)}
-nar = {'acts': ACTS, 'scenes': []}
+LABELS = {str(i): t.split('. ', 1)[0] for i, (_, t) in enumerate(PARTS)}
+nar = {'acts': ACTS, 'labels': LABELS, 'scenes': []}
 for sc in scenes:
     body = ' '.join(l[1:].strip() for l in sc['script'].splitlines() if l.startswith('>'))
     sents = re.split(r'(?<=[.!?])\s+(?=[A-Z0-9"])', body)

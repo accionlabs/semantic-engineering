@@ -1,6 +1,6 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { gsap, TL } from './gsap';
-import { ACT_NAMES, SCENES, sceneDuration } from './cues';
+import { ACT_LABELS, ACT_NAMES, SCENES, sceneDuration } from './cues';
 import { SceneDef, buildCaptions, makeCtx } from './scene';
 import { Frame } from '../parts/ui';
 import { C, F, H, W } from '../theme';
@@ -33,7 +33,7 @@ const cardItem = (act: number): Item => ({
   View: () => (
     <Frame act="" scene="">
       <div className="t" style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-        <div style={{ fontFamily: F.mono, fontSize: 22, letterSpacing: 4, color: C.tax, textTransform: 'uppercase' }}>{act === 0 ? 'Overview' : `Act ${act}`}</div>
+        <div style={{ fontFamily: F.mono, fontSize: 22, letterSpacing: 4, color: C.tax, textTransform: 'uppercase' }}>{ACT_LABELS[String(act)] ?? (act === 0 ? 'Overview' : `Act ${act}`)}</div>
         <div style={{ fontFamily: F.display, fontWeight: 700, fontSize: 76, marginTop: 18, textAlign: 'center', maxWidth: 1500 }}>{ACT_NAMES[String(act)].replace(' (optional)', '')}</div>
       </div>
     </Frame>

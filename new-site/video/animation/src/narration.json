@@ -6,7 +6,18 @@
   "3": "Knowledge graphs and agents in the AI-driven SDLC, with Breeze.AI",
   "4": "Legacy modernization, with ASIMOV",
   "5": "Working together",
-  "6": "Where it came from, and what comes next"
+  "6": "Semantic Engineering and dialect engineering",
+  "7": "Where it came from"
+ },
+ "labels": {
+  "0": "Overview",
+  "1": "Act 1",
+  "2": "Act 2",
+  "3": "Act 3",
+  "4": "Act 4",
+  "5": "Act 5",
+  "6": "Act 6",
+  "7": "Appendix"
  },
  "scenes": [
   {
@@ -580,6 +591,23 @@
   {
    "act": 6,
    "n": 29,
+   "title": "Products that agents use",
+   "text": "Software products are starting to open their capabilities to their customers' own agents, which act on the customer's behalf through interfaces such as MCP servers. An MCP server that exposes hundreds of tools gives an agent access, and still leaves the agent to work out which tools to use, in what order and under which rules. The knowledge graph already records what the product provides: its capabilities, workflows, entities and contracts, which are the domain invariants every customer shares. An interface for agents can be built from the graph, describing each capability in the terms of the domain, independently of the screens and APIs designed for people. The graph also governs which external agent may use which capability. A formal grammar above the graph adds the rules a schema cannot express, so an agent can write what a customer needs and check its own result by running tests. Dialect engineering is the name for this approach, which lets more of a software-as-a-service product vary per customer while the domain invariants stay shared. Dialect engineering is set out at dialect-engineering.ai, and it builds on a knowledge graph governed with Semantic Engineering.",
+   "words": 190,
+   "sentences": [
+    "Software products are starting to open their capabilities to their customers' own agents, which act on the customer's behalf through interfaces such as MCP servers.",
+    "An MCP server that exposes hundreds of tools gives an agent access, and still leaves the agent to work out which tools to use, in what order and under which rules.",
+    "The knowledge graph already records what the product provides: its capabilities, workflows, entities and contracts, which are the domain invariants every customer shares.",
+    "An interface for agents can be built from the graph, describing each capability in the terms of the domain, independently of the screens and APIs designed for people.",
+    "The graph also governs which external agent may use which capability.",
+    "A formal grammar above the graph adds the rules a schema cannot express, so an agent can write what a customer needs and check its own result by running tests.",
+    "Dialect engineering is the name for this approach, which lets more of a software-as-a-service product vary per customer while the domain invariants stay shared.",
+    "Dialect engineering is set out at dialect-engineering.ai, and it builds on a knowledge graph governed with Semantic Engineering."
+   ]
+  },
+  {
+   "act": 7,
+   "n": 30,
    "title": "Where it came from",
    "text": "Semantic Engineering was assembled over eight years of client work at Accion Labs, from 2017 to 2025. In 2017, an internal Accion Labs framework called Breeze set out what product owners, UX designers and architects need to produce. Teams maintained the Breeze documents by hand, and tended to drop them under deadline pressure. In 2022, on a drug-discovery project for a pharmaceutical client, connecting the AI model to a knowledge graph kept its hallucinations, the answers it invents, under control. In 2023, the knowledge-graph approach became a commercial platform, KAPS, used across customer engagements. By 2024, the Breeze guidelines had become the four layers of the knowledge graph, with agents built around them, in a platform named Breeze.AI. The method took the name Semantic Engineering in 2025. The framework and concepts of Semantic Engineering are public and free to apply. The methodology runs on Breeze.AI for new and existing applications, and on ASIMOV for legacy modernization. Teams can adopt the methodology with Accion Labs, and an engagement can start with a two-day workshop.",
    "words": 173,
@@ -594,23 +622,6 @@
     "The framework and concepts of Semantic Engineering are public and free to apply.",
     "The methodology runs on Breeze.AI for new and existing applications, and on ASIMOV for legacy modernization.",
     "Teams can adopt the methodology with Accion Labs, and an engagement can start with a two-day workshop."
-   ]
-  },
-  {
-   "act": 6,
-   "n": 30,
-   "title": "Products that agents use",
-   "text": "Software products are starting to open their capabilities to their customers' own agents, which act on the customer's behalf through interfaces such as MCP servers. An MCP server that exposes hundreds of tools gives an agent access, and still leaves the agent to work out which tools to use, in what order and under which rules. The knowledge graph already records what the product provides: its capabilities, workflows, entities and contracts, which are the domain invariants every customer shares. An interface for agents can be built from the graph, describing each capability in the terms of the domain, independently of the screens and APIs designed for people. The graph also governs which external agent may use which capability. A formal grammar above the graph adds the rules a schema cannot express, so an agent can write what a customer needs and check its own result by running tests. Dialect engineering is the name for this approach, which lets more of a software-as-a-service product vary per customer while the domain invariants stay shared. Dialect engineering is set out at dialect-engineering.ai, and it builds on a knowledge graph governed with Semantic Engineering.",
-   "words": 190,
-   "sentences": [
-    "Software products are starting to open their capabilities to their customers' own agents, which act on the customer's behalf through interfaces such as MCP servers.",
-    "An MCP server that exposes hundreds of tools gives an agent access, and still leaves the agent to work out which tools to use, in what order and under which rules.",
-    "The knowledge graph already records what the product provides: its capabilities, workflows, entities and contracts, which are the domain invariants every customer shares.",
-    "An interface for agents can be built from the graph, describing each capability in the terms of the domain, independently of the screens and APIs designed for people.",
-    "The graph also governs which external agent may use which capability.",
-    "A formal grammar above the graph adds the rules a schema cannot express, so an agent can write what a customer needs and check its own result by running tests.",
-    "Dialect engineering is the name for this approach, which lets more of a software-as-a-service product vary per customer while the domain invariants stay shared.",
-    "Dialect engineering is set out at dialect-engineering.ai, and it builds on a knowledge graph governed with Semantic Engineering."
    ]
   }
  ]

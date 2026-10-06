@@ -7,7 +7,7 @@ import { GAP_Y, LOWER, Mark } from '../parts/Act3';
 import { Callout, Frame, Svg } from '../parts/ui';
 import { C, F } from '../theme';
 
-// Scene 29. Where it came from. 2017, Breeze: what product owners, UX designers and architects produce,
+// Scene 30, the appendix. Where it came from. 2017, Breeze: what product owners, UX designers and architects produce,
 // kept by hand and dropped under pressure. 2022: a knowledge graph kept a model's hallucinations under
 // control. 2023: KAPS. 2024: the Breeze guidelines become the four layers, in Breeze.AI. 2025: the name.
 // Public and free to apply; Breeze.AI and ASIMOV run it; a two-day workshop to start.
@@ -17,10 +17,10 @@ const CLUSTER = [[-70, -40], [0, -60], [70, -30], [-50, 30], [30, 20], [90, 50]]
 const CO = { x: 1180, y: GAP_Y - 8, w: 540 };
 
 export const scene29: SceneDef = {
-  n: 29,
+  n: 30,
   id: 'where-it-came-from',
   View: () => (
-    <Frame act="Act 6" scene="Scene 29 · Where it came from">
+    <Frame act="Appendix" scene="Scene 30 · Where it came from">
       <Svg>
         <Defs />
         <g className="intro">

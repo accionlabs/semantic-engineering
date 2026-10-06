@@ -7,7 +7,7 @@ import { GY, item } from '../parts/Graph';
 import { Callout, Frame, Svg } from '../parts/ui';
 import { C, F } from '../theme';
 
-// Scene 30. Products that agents use. Customers' own agents reach a product through MCP servers; hundreds
+// Scene 29. Products that agents use. Customers' own agents reach a product through MCP servers; hundreds
 // of tools leave the agent guessing; the graph holds the domain invariants; an interface for agents is
 // built from the graph; the graph governs which agent may use which capability; a grammar above the graph
 // lets an agent write and test what a customer needs: dialect engineering, at dialect-engineering.ai.
@@ -20,10 +20,10 @@ const CAPS = ['capability', 'workflow', 'entity', 'contract', 'capability'];
 const CO = { x: 150, y: 580, w: 640 };
 
 export const scene30: SceneDef = {
-  n: 30,
+  n: 29,
   id: 'products-agents-use',
   View: () => (
-    <Frame act="Act 6" scene="Scene 30 · Products that agents use">
+    <Frame act="Act 6" scene="Scene 29 · Products that agents use">
       <Svg>
         <g className="land" transform={`matrix(${K},0,0,${K},${OX},${OY})`}><Base /></g>
         <g className="pre boundary">
