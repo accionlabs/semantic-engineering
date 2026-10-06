@@ -101,9 +101,9 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
       } else window.setTimeout(() => { spoke = true; done(); }, speakingTime(text || ' ') * 1000);
     };
 
-    // The question is on screen; the guide speaks only the opening, and the card stays up long enough to
-    // read the question. Without an opening, the guide reads the question.
-    if (seg.kind === 'host') { say(seg.role === 'intro' ? seg.text || plan.question : seg.text, next, seg.role === 'intro' ? readingTime(plan.question) : 0); return; }
+    // The question is on screen; the guide speaks the opening, which refers to it in the guide's own words, and
+    // the card stays up long enough to read the question. Without an opening, the guide introduces the question.
+    if (seg.kind === 'host') { say(seg.role === 'intro' ? seg.text || `You asked: ${plan.question}` : seg.text, next, seg.role === 'intro' ? readingTime(plan.question) : 0); return; }
     if (seg.kind === 'quote') { timer.current = window.setTimeout(next, seg.seconds * 1000); return; }
     // An expert clip: the narration's clock drives the picture, as in the main player.
     const a = audio.current;

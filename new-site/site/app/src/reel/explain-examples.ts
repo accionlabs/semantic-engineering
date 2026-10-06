@@ -8,7 +8,7 @@ export const EXPLAIN_EXAMPLES: { title: string; code: string }[] = [
   context brownfield
   layer architecture
   layer code
-  say "Both problems have one cause: the knowledge each change depends on is written nowhere an agent can read. Here is how the method changes that."
+  say "You asked about agents that break other teams' work and slow investigations. Both have one cause: the knowledge each change depends on is written nowhere an agent can read."
 
 show agents-make-mistakes
   say "First, why the agents go wrong."
@@ -57,7 +57,7 @@ caveat detail-still-reviewed`,
   for "a design system owner"
   context greenfield
   layer design
-  say "Duplicates are a sign of missing design knowledge, and the method records it where every change is checked against it."
+  say "You asked why your UI keeps duplicating components. It is a sign of missing design knowledge, and the method records it where every change is checked against it."
 
 show design-duplication
 
@@ -86,7 +86,7 @@ caveat results-in-context`,
     code: `explain "We run a large COBOL system that the business depends on. How would Semantic Engineering help us modernize it?"
   for "a CTO with a legacy COBOL system"
   context legacy-modernization
-  say "Two things stand in the way: the people who knew the system are gone, and nothing yet proves a new system behaves like the old one."
+  say "You asked how a COBOL system the business runs on could be modernized. Two things stand in the way: the people who knew it are gone, and nothing yet proves a new system behaves like the old one."
 
 show legacy-experts-gone
   say "Start with the people. Most COBOL estates share this problem."

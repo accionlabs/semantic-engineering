@@ -6,7 +6,7 @@
 // and quotes from the site's pages, which the player runs. No browser APIs, so the MCP server shares it.
 import { EDGES, NODES, nodeById, type Edge, type Evidence, type Kind, type Node } from './graph';
 import { placeOf, sceneByN } from './vocab';
-import { LIMITS, clipFor, closest, quoted, readLines, readingTime, repeats, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
+import { LIMITS, clipFor, closest, quoted, readLines, readingTime, novelty, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
 
 export const MOVES = ['explain', 'for', 'context', 'layer', 'unowned', 'say', 'show', 'connect', 'compare', 'recommend', 'caveat', 'answer', 'read', 'branch'];
 const SHOWABLE: Kind[] = ['cause', 'symptom', 'principle', 'practice', 'case'];
@@ -155,8 +155,8 @@ export const checkExplain = (code: string): Result => {
         current = { word: 'explain', line: l.n, ok: true };
         queued = () => {
           const opening = pendingSay?.text ?? '';
-          // The question is shown, not spoken: the opening must not say it again.
-          if (pendingSay && repeats(plan.question, opening) >= 0.5) warn(pendingSay.line, 'the opening repeats the question, which is already on screen. Open with something new, for example what the explanation will show first.');
+          // The question is shown, not read out: the opening speaks about it in a clause, then adds something new.
+          if (pendingSay && novelty(plan.question, opening) < 0.45) warn(pendingSay.line, 'the opening mostly repeats the question, which is already on screen. Refer to it in one short clause of your own ("You asked how …"), then say something new, such as what the explanation will show first.');
           out.push({ kind: 'host', role: 'intro', text: opening, line: l.n, seconds: Math.max(speakingTime(opening || plan.question), readingTime(plan.question)), trace: { move: 'explain', reason: "the question on screen, and the guide's opening" } });
         };
         break;

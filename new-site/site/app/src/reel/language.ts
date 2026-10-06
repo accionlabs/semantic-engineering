@@ -27,11 +27,12 @@ export const speakingTime = (text: string) => text.split(/\s+/).filter(Boolean).
 export const readingTime = (text: string) => text.split(/\s+/).filter(Boolean).length / 3.5 + 1;
 const STOP = new Set('about after also because been before being could does from have here into just like more most much only other over some such than that their them then there these they this those very what when where which while will with would your yours ours'.split(' '));
 const contentWords = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter((w) => w.length > 3 && !STOP.has(w)).map((w) => w.replace(/(ing|ed|es|s)$/, '')));
-/** The share of the question's words the opening repeats. The question is on screen, so the opening says something new. */
-export const repeats = (question: string, opening: string) => {
+/** The share of the opening's words that are new: not in the question. The opening speaks about the question
+ *  in a short clause of the guide's own, then says something the question does not. */
+export const novelty = (question: string, opening: string) => {
   const q = contentWords(question), o = contentWords(opening);
-  if (q.size < 3) return 0;
-  return [...q].filter((w) => o.has(w)).length / q.size;
+  if (o.size < 4) return 1;
+  return [...o].filter((w) => !q.has(w)).length / o.size;
 };
 
 export const distance = (a: string, b: string) => {

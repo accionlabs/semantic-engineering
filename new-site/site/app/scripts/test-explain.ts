@@ -56,7 +56,8 @@ const CASES: Case[] = [
   { name: 'a deep dive reuses what the short explanation showed', code: X('show knowledge-graph') + '\nbranch "Sync"\nshow kg-sync', ok: true, expect: [] },
   { name: 'a symptom in a deep dive is addressed there or in the short explanation', code: X('show pr-validation') + '\nbranch "Why it breaks"\nshow boundary-violations', ok: true },
   { name: 'an owner for an unowned layer belongs in the short explanation', code: ['explain "Nobody keeps our architecture current."', '  context brownfield', '  unowned architecture', 'show documentation-decays', 'show kg-sync', 'caveat graph-not-a-spec', 'answer "A."', 'branch "Owners"', 'show named-ownership'].join('\n'), ok: false, expect: [{ line: 9, includes: 'in the short explanation' }] },
-  { name: 'the opening does not repeat the question', code: X('show impact-analysis').replace('explain "A question"', 'explain "Our coding agents keep breaking services that other teams own."\n  say "You said your coding agents keep breaking services other teams own."'), ok: true, expect: [{ line: 2, includes: 'repeats the question', severity: 'warning' }] },
+  { name: 'an opening that only repeats the question is a warning', code: X('show impact-analysis').replace('explain "A question"', 'explain "Our coding agents keep breaking services that other teams own."\n  say "You said your coding agents keep breaking services other teams own."'), ok: true, expect: [{ line: 2, includes: 'mostly repeats the question', severity: 'warning' }] },
+  { name: 'an opening that refers to the question and adds to it', code: X('show impact-analysis').replace('explain "A question"', 'explain "Our coding agents keep breaking services that other teams own."\n  say "You asked about agents breaking services other teams own. Two causes are at work, and the method answers both before any code is written."'), ok: true, expect: [] },
   { name: 'no deep dives is a warning', code: X('show impact-analysis'), ok: true, expect: [{ line: A + 2, includes: 'offers no deep dives', severity: 'warning' }] },
   { name: 'shows nothing from the film', code: 'explain "Q"\n  context brownfield\nanswer "A."', ok: false, expect: [{ line: 3, includes: 'shows nothing from the film' }] },
 ];
@@ -66,6 +67,7 @@ for (const c of CASES) {
   const r = checkExplain(c.code);
   const why: string[] = [];
   if (r.ok !== c.ok) why.push(`expected ok=${c.ok}, got ok=${r.ok}: ${r.problems.map((p) => `${p.line} ${p.severity}: ${p.message}`).join(' | ')}`);
+  if (c.expect && !c.expect.length && r.problems.some((p) => /question/.test(p.message))) why.push(`expected no problem about the question; got ${JSON.stringify(r.problems.map((p) => p.message))}`);
   for (const e of c.expect ?? []) if (!r.problems.some((p) => p.line === e.line && p.message.includes(e.includes) && (!e.severity || p.severity === e.severity))) why.push(`missing ${e.severity ?? 'problem'} on line ${e.line} containing "${e.includes}"; got ${JSON.stringify(r.problems.map((p) => [p.line, p.severity, p.message]))}`);
   const allSegments = r.plan ? [...r.plan.segments, ...r.plan.branches.flatMap((b) => b.segments)] : [];
   for (const t of c.traces ?? []) if (!allSegments.some((s) => s.trace?.reason?.includes(t))) why.push(`no segment traced "${t}"`);
