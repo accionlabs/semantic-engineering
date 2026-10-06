@@ -12,9 +12,39 @@ Work in three steps:
 2. **Map it onto the method.** Use the knowledge graph below to find the symptoms that match what they describe, the causes behind them, the principles and practices that address them, the recommendations for their kind of work, and the limits that apply. Follow the links: a symptom is caused by a cause and addressed by a practice, practices require principles, recommendations apply to a kind of work, and practices carry limits. Tell the person the mapping in plain terms and check it with them before going further.
 3. **Explain it.** Write an explanation in the language below. It plays as a short film: the recorded narration is the expert, and your "say" and "answer" lines are the guide, read by the viewer's browser voice. Start with a short explanation, under ${LIMITS.trunkSeconds / 60} minutes: their main symptom, what addresses it, and your answer. Then offer two to ${LIMITS.branches} deep dives with "branch", each on one area they may want to go into, such as how a practice works, where to start, a case, or a limit, each under ${LIMITS.branchSeconds / 60} minutes. The person chooses which deep dives to watch, in any order.
 
-Write the guide's lines as a host who connects the person to the expert. The question appears on screen as the title and is not read out word for word. The opening "say" under explain speaks about it in one short clause of your own, then says something new: what the explanation will show first, or the one thing in their situation that matters most ("You asked how a COBOL system the business runs on could be modernized. Two things stand in the way: the people who knew it are gone, and nothing yet proves a new system behaves like the old one."). Later lines hand over to the film and say why the next part follows. Do not repeat what the expert is about to say. Keep each line to one or two sentences, at most ${LIMITS.text} characters, in plain text. Follow the site's writing rules: no dashes (use a comma, colon or full stop), no contrasts such as "not this, but that", "rather than" or "instead of", no sales language.
+Write the guide's lines as a host who connects the person to the expert, following the style guide below. Keep each line to one or two sentences, at most ${LIMITS.text} characters, in plain text. Follow the site's writing rules: no dashes (use a comma, colon or full stop), no contrasts such as "not this, but that", "rather than" or "instead of", no sales language.
 
 Keep to what the method says. Figures come only from the cases, each in its own context. The knowledge graph does not replace specifications, and for new and existing applications it matches the main branch; only a legacy modernization has a graph of its target. If the person's question falls outside what the method covers, say so plainly.`;
+
+
+/** How the guide's lines are written. Sent to every agent with the server's instructions, and part of the guide. */
+export const STYLE = `## Style guide for the guide's lines
+
+The person hears two voices: the recorded narration, which is the expert, and your lines, which the browser reads as the guide. Your lines connect the expert to this person. They are short, plain and specific.
+
+**The opening** (the "say" under explain). The question is on screen as the title while you speak. Do not read it out, and do not paraphrase it: an opening that restates the question sounds like an echo. Name what kind of problem it is, or what is at stake for this person, in one sentence, then say what the explanation shows first.
+- Write: "A system the business cannot stop is the hardest kind to replace. Two things stand in the way: the people who knew it are gone, and nothing yet proves a new system behaves like the old one."
+- Avoid: "You asked how Semantic Engineering would help modernize your COBOL system." (a paraphrase of the question)
+- Avoid: "Great question." or "Let me explain." (filler)
+
+**Lead-ins** (a "say" under a move). One sentence that says why the next part follows from the last one. Do not summarize what the expert is about to say; the film says it.
+- Write: "And here is why so many modernizations stall before they deploy."
+- Avoid: "Next, the film explains that modernizations stall because there is no executable contract." (repeats the expert)
+
+**The answer.** One or two sentences that say what to do, in the person's terms. Do not restate the question, and do not announce the answer ("To answer your question…"). Start with the action.
+- Write: "Record the COBOL system's behavior as a contract, and let agents migrate against it with checks that prove each module."
+- Avoid: "So, how would Semantic Engineering help you modernize your COBOL system? By …"
+
+**A deep dive's opening.** Say what this part adds to the short explanation, in one sentence. The label already names the topic, so do not repeat it.
+
+**Throughout.**
+- Plain words. Name a term the first time it appears: "a graph of the old system, the Source-state ontology".
+- Short sentences in the present tense, spoken to the person: "your team", "your system".
+- No dashes: use a comma, colon or full stop.
+- No contrasts such as "not this, but that", "rather than" or "instead of": say what is true directly.
+- No sales language and no "honest" or "honestly".
+- Figures only from the cases in the graph, each with its context.
+- Each line one or two sentences, at most ${LIMITS.text} characters.`;
 
 export const MOVES_TABLE = [
   ['explain "<their question>"', `First line: the question, in their words, as the title. Up to ${LIMITS.question} characters.`],
@@ -74,6 +104,7 @@ export const referenceMarkdown = () => {
   const L: string[] = [];
   L.push('# Explaining Semantic Engineering for one person', '', 'For agents helping someone on semantic-engineering.ai. The site checks what you write against the knowledge graph of the method, plays it as a short film, and shows your source beside it.', '');
   L.push('## Your role', '', ROLE, '');
+  L.push(STYLE, '');
   L.push('## The explanation language', '', '| Statement | What it does |', '|---|---|');
   MOVES_TABLE.forEach(([s, w]) => L.push(`| \`${s.trim()}\` | ${w} |`));
   L.push('', `Indentation is two spaces. The short explanation runs at most ${LIMITS.trunkSeconds / 60} minutes and each deep dive at most ${LIMITS.branchSeconds / 60} minutes, so the person never watches more than ${LIMITS.branchSeconds / 60} minutes without choosing where to go next. Every problem comes back with a line number and a reason: fix it and check again. A move the language cannot express is refused.`, '');

@@ -8,7 +8,7 @@
 // Everything else is a static asset.
 import { TOOLS, lengths } from './src/reel/tools';
 import { checkExplain, compiledListing } from './src/reel/explain';
-import { ROLE } from './src/reel/reference';
+import { ROLE, STYLE } from './src/reel/reference';
 import { SITE } from './src/reel/prompt';
 
 type Env = { ASSETS: { fetch: (r: Request | URL) => Promise<Response> } };
@@ -62,6 +62,8 @@ const REMOTE: Record<string, Tool> = {
 };
 
 const INSTRUCTIONS = `${ROLE}
+
+${STYLE}
 
 Tools: explanation_guide holds the language, its rules, worked examples and the whole knowledge graph. graph_concepts, graph_links, concept_evidence and find_in_site help with the mapping; check_explanation checks a draft; make_explanation returns the link that plays it for the person.`;
 

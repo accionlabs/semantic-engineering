@@ -29,6 +29,12 @@ const STOP = new Set('about after also because been before being could does from
 const contentWords = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9\s]/g, ' ').split(/\s+/).filter((w) => w.length > 3 && !STOP.has(w)).map((w) => w.replace(/(ing|ed|es|s)$/, '')));
 /** The share of the opening's words that are new: not in the question. The opening speaks about the question
  *  in a short clause of the guide's own, then says something the question does not. */
+/** The share of the question's content words a line repeats. */
+export const echoes = (question: string, line: string) => {
+  const q = contentWords(question), o = contentWords(line);
+  if (q.size < 3) return 0;
+  return [...q].filter((w) => o.has(w)).length / q.size;
+};
 export const novelty = (question: string, opening: string) => {
   const q = contentWords(question), o = contentWords(opening);
   if (o.size < 4) return 1;

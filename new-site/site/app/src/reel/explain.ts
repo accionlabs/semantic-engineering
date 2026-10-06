@@ -6,7 +6,7 @@
 // and quotes from the site's pages, which the player runs. No browser APIs, so the MCP server shares it.
 import { EDGES, NODES, nodeById, type Edge, type Evidence, type Kind, type Node } from './graph';
 import { placeOf, sceneByN } from './vocab';
-import { LIMITS, clipFor, closest, quoted, readLines, readingTime, novelty, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
+import { LIMITS, clipFor, closest, quoted, readLines, readingTime, novelty, echoes, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
 
 export const MOVES = ['explain', 'for', 'context', 'layer', 'unowned', 'say', 'show', 'connect', 'compare', 'recommend', 'caveat', 'answer', 'read', 'branch'];
 const SHOWABLE: Kind[] = ['cause', 'symptom', 'principle', 'practice', 'case'];
@@ -156,7 +156,8 @@ export const checkExplain = (code: string): Result => {
         queued = () => {
           const opening = pendingSay?.text ?? '';
           // The question is shown, not read out: the opening speaks about it in a clause, then adds something new.
-          if (pendingSay && novelty(plan.question, opening) < 0.45) warn(pendingSay.line, 'the opening mostly repeats the question, which is already on screen. Refer to it in one short clause of your own ("You asked how …"), then say something new, such as what the explanation will show first.');
+          if (pendingSay && (echoes(plan.question, opening) >= 0.4 || novelty(plan.question, opening) < 0.45)) warn(pendingSay.line, 'the opening echoes the question, which is already on screen. Following the style guide, do not read it out or paraphrase it: name what kind of problem it is or what is at stake, then say what the explanation will show first.');
+          if (pendingSay && /^(you asked|you want to know|your question|great question|good question)\b/i.test(opening)) warn(pendingSay.line, 'the opening starts by pointing at the question. Following the style guide, start with what kind of problem it is or what is at stake.');
           out.push({ kind: 'host', role: 'intro', text: opening, line: l.n, seconds: Math.max(speakingTime(opening || plan.question), readingTime(plan.question)), trace: { move: 'explain', reason: "the question on screen, and the guide's opening" } });
         };
         break;
@@ -263,6 +264,8 @@ export const checkExplain = (code: string): Result => {
         problems.push(...textProblems(t, l.n, LIMITS.text, 'answer'));
         answered = true;
         if (!branch) trunkAnswered = true;
+        if (echoes(plan.question, t) >= 0.5) warn(l.n, 'the answer repeats the question. Following the style guide, say what to do, in the person\'s terms, without restating what they asked.');
+        if (/^(to answer your question|in answer to|so,? to answer|the answer is)\b/i.test(t)) warn(l.n, 'the answer starts by announcing itself. Following the style guide, start with what to do.');
         queued = () => out.push({ kind: 'host', role: 'close', text: t, line: l.n, seconds: speakingTime(t), trace: { move: 'answer', reason: "the guide's answer to the question" } });
         break;
       }
