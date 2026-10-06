@@ -3,7 +3,7 @@ title: "Case Archetypes: Continuous SDLC"
 description: "Anonymized engagement anchors that demonstrate the continuous SDLC instantiation of Semantic Engineering. Live application evolution, greenfield growing into complexity, and SDD reaching its operational ceiling."
 weight: 70
 date: 2026-06-04
-lastmod: 2026-06-12
+lastmod: 2026-10-06
 draft: false
 audience:
   - cto
@@ -17,7 +17,7 @@ This page covers the continuous SDLC instantiation. The legacy modernization cas
 
 We have applied the same methodology across continuous SDLC engagements that differ on every meaningful axis: industry, scale, starting context, tech stack, and the specific dimension of complexity that triggered the move to Semantic Engineering. The methodology generalizes because the failure modes it addresses generalize. Whether the trigger is a 2 million line live code base that has accumulated decades of implicit behavior, a clean greenfield workstream that has grown past the point where its design system can govern itself, or a mature SDD practice that has reached the ceiling of what a spec alone can govern, the structural response is the same.
 
-This page presents three anonymized SDLC archetypes.
+This page presents three anonymized SDLC archetypes, followed by the measured delivery outcomes of one [multi-product engagement](#delivery-outcomes-on-a-multi-product-engagement).
 
 ## The Archetypes
 
@@ -247,6 +247,47 @@ The [deliverable-based engagement frame](process/team.md#phase-2-deliverable-bas
 This archetype illustrates SDD as the on-ramp the methodology describes. A team can adopt SDD with discipline, succeed at it on a meaningful scale, and reach the operational ceiling that Zone 2 predicts. The pattern is recognizable from the artifacts the team has already produced: a plugin, a constitution, supervisor skills, prompting conventions, MCP-mediated QA automation. These are precisely the scaffolds a team builds in the late SDD maturity before reaching for a structured substrate underneath the spec.
 
 Where the brownfield archetype shows SE adopted at full scale up front, and the greenfield archetype shows SE adopted as the threshold is approached, this archetype shows the threshold reached from the SDD side. The next move for this engagement is to layer the four ontologies beneath the spec so the review, the QA validation, the governance, and the talent envelope all gain a structural floor.
+
+## Delivery Outcomes on a Multi-Product Engagement
+
+An engagement with Breeze.AI across three products, delivered by the client's existing team over a 14-week pilot. The figures below were measured by the client and the delivery team at the start of the pilot and again at its end. Where a baseline is the client's own estimate, the table says so.
+
+### Delivery Milestones
+
+| Milestone | Result |
+|---|---|
+| Products onboarded | 3 products in 14 weeks, with the same team size (client estimate) |
+| AI agents deployed | 22 agents: 18 end to end across the delivery workflow, 4 in support roles; over 80% reusable on other projects |
+| Unit test coverage | Above 95% |
+| Automated deployment | 100% of environments |
+| Toolchain | Standardized on JIRA, GitHub and Playwright |
+| UI reskin | Approved design to a working prototype in 1 week |
+| Query interface | New feature hypotheses tested against the graph before an idea is rolled out |
+
+### Delivery Metrics Before and After
+
+| Metric | Before | End of pilot | Change | Basis |
+|---|---|---|---|---|
+| Deployment frequency | 19 a month | 36 a month | +90% | Measured |
+| Lead time for changes | 2.0 days | 1.42 days | −29% | Measured |
+| Change failure rate | 4% | 0% | | Baseline estimated by the client before AI adoption; held throughout the pilot |
+| Mean time to recovery | 8 hours | under 2 hours | | Baseline estimated by the client before AI adoption; held throughout the pilot |
+| Coding agent token use | | | up to 53% lower | Projected from cost calculations before and after; not a measured outcome |
+
+### Where the Manual Translation Tax Was Paid
+
+The same team was surveyed twice, at the start and at the end of the pilot (n = 30). The first column is the share of the team that named each area as a place where knowledge and context were lost in handoffs. The last column is what the second survey and the delivery metrics showed.
+
+| Where the tax was paid | Addressed by | Shift observed |
+|---|---|---|
+| 60%: estimation and code comprehension | A query on the graph | 50% report an overall productivity impact |
+| 47%: requirement translation and rework | One authoritative reading per requirement | 42% report improved requirement clarity |
+| 43%: code risk analysis | Impact checks against the graph before the build | Under 1% change failure at nearly double the deployment rate |
+| 27%: delivery predictability | Delivery metrics embedded in the workflow | Lead time from 2.0 to 1.42 days; deployments from 19 to 36 a month |
+
+### Methodology Takeaway
+
+The two measured delivery metrics, deployment frequency and lead time, moved together. More changes reached production, and each one reached it faster, while the change failure rate stayed at the level the client had set as its target. The survey places the largest share of the tax in estimation and code comprehension, the work a query on the graph answers directly.
 
 ---
 

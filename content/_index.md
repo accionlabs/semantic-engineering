@@ -132,7 +132,7 @@ The site is organized so a reader can walk either use case end to end across the
 | **Agents** (the fleet) | [The SDLC Agent Fleet](sdlc/agents.md): impact analysis, BDD generation, KG sync, validation before merge. Earn autonomy over time. | [The Modernization Agent Fleet](modernization/agents.md): nine named agents across Discover, Document, Migrate, Validate, Maintain. Progressive autonomy per engagement. |
 | **Process** (the operating model) | [Continuous SDLC Operating Model](sdlc/process/_index.md): spec sprint and implementation sprint, fractional allocation, layered team, enablement partnership across years. | [Modernization Operating Model](modernization/process/_index.md): five-phase delivery, SME tuning loop, expert review pattern, enablement frame sized for a bounded project. |
 | **Engagement Model** | [SDLC Engagement Model](sdlc/engagement-model.md): Advise, Launch, Scale, Optimize. Pricing per phase. Three-Phase Rollout aligns to methodology phases. | [Modernization Engagement Model](modernization/engagement-model.md): five entry modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain, Operate, and Convergence). Pricing per mode. |
-| **Case Archetypes** | [SDLC Case Archetypes](sdlc/case-archetypes.md): two real engagements end to end, one brownfield at 2M LOC, one greenfield grown into complexity. | [Modernization Case Archetypes](modernization/case-archetypes.md): seven anonymized case studies across ASP.Net, COBOL, Delphi, VB.NET, ASP Forms, and Java migrations across multiple industries. |
+| **Case Archetypes** | [SDLC Case Archetypes](sdlc/case-archetypes.md): three engagement archetypes (brownfield at 2M LOC, greenfield grown into complexity, SDD at its governance ceiling) and the measured delivery outcomes of a multi-product engagement. | [Modernization Case Archetypes](modernization/case-archetypes.md): seven anonymized case studies across ASP.Net, COBOL, Delphi, VB.NET, ASP Forms, and Java migrations across multiple industries. |
 
 The structural response is the same in both columns. The shape of the response differs because the work asks different questions.
 
@@ -151,12 +151,15 @@ The platforms are peers under the same methodology. They differ in graph shape a
 
 ## Numbers from Real Engagements
 
-Outcomes measured on engagements running under this methodology. Anonymized walkthroughs are in the case archetype pages linked above.
+Outcomes measured on engagements running under this methodology. Anonymized walkthroughs are in the case archetype pages linked above, including [the full figures for the multi-product engagement](sdlc/case-archetypes.md#delivery-outcomes-on-a-multi-product-engagement).
 
 **Continuous SDLC engagements under Breeze.AI:**
 
 | Number | Context |
 |---|---|
+| **19 to 36** deployments a month, a 90% rise, over a 14-week pilot | Three products on one engagement; measured at the start and the end of the pilot |
+| **2.0 to 1.42 days** lead time for changes, 29% shorter | Same engagement, same measurement |
+| **60%** of the team named estimation and code comprehension as where the Manual Translation Tax was paid | Same team surveyed at the start and the end of the pilot (n = 30); 50% reported an overall productivity impact at the end |
 | **2 to 3 weeks** to extract a 2M+ LOC codebase into the four-layer graph | Brownfield extraction on a Node.js, TypeScript and React application |
 | **53%** design component reuse in the first sprint | First sprint under SE-governed UI development on a greenfield workstream |
 | **23%** defect rate reduction against the team's pre-SE baseline | Same codebase, same team, before and after |

@@ -24,6 +24,7 @@ const USES = ['building new applications', 'changing existing ones', 'replacing 
 const HOW: Record<string, string> = { functional: 'traced from the screens', design: 'from the running application', architecture: 'inferred from its structure', code: 'parsed from the code' };
 const SOURCES: [string, number, string][] = [['functional', 1, 'ticket'], ['design', 3, 'design frame'], ['architecture', 2, 'document'], ['code', 1, 'code file']];
 const OUTCOMES = [
+  { f: '19 → 36', l: 'deployments a month across three products; lead time from 2.0 to 1.42 days' },
   { f: '3 to 5 days', l: 'of senior-engineer investigation replaced by impact analysis, on one brownfield application' },
   { f: '53%', l: 'design component reuse in the first sprint of a new user-interface workstream' },
   { f: '23%', l: 'fewer defects, same team, same codebase' },
@@ -147,10 +148,10 @@ export const scene00: SceneDef = {
         <g className="pre out">
           {OUTCOMES.map((o, i) => (
             <g key={o.f} className={`out-i out-${i}`}>
-              <rect x={150 + i * 405} y={LOWER.y - 6} width={381} height={124} rx={12} fill={C.canvasRaised} stroke={C.hairline} strokeWidth={1.5} />
-              <text x={170 + i * 405} y={LOWER.y + 34} fontFamily={F.display} fontSize={32} fontWeight={700} fill={C.text}>{o.f}</text>
-              <foreignObject x={170 + i * 405} y={LOWER.y + 46} width={345} height={66}>
-                <div style={{ fontFamily: F.sans, fontSize: 17, lineHeight: 1.25, color: C.cardText }}>{o.l}</div>
+              <rect x={150 + i * 326} y={LOWER.y - 6} width={306} height={124} rx={12} fill={C.canvasRaised} stroke={C.hairline} strokeWidth={1.5} />
+              <text x={168 + i * 326} y={LOWER.y + 34} fontFamily={F.display} fontSize={32} fontWeight={700} fill={C.text}>{o.f}</text>
+              <foreignObject x={168 + i * 326} y={LOWER.y + 46} width={274} height={66}>
+                <div style={{ fontFamily: F.sans, fontSize: 16, lineHeight: 1.25, color: C.cardText }}>{o.l}</div>
               </foreignObject>
             </g>
           ))}
@@ -325,18 +326,19 @@ export const scene00: SceneDef = {
     vanish(ctx, '.use, .mini', s23);
     showStrip('plat', 2, s23 + 0.3);
     // s24: four principles.
-    // s27 to s29: outcomes, each with its context.
-    const o1 = cue('outcome-1', 's27');
-    vanish(ctx, '.plat', o1);
-    tl.set(q('.out'), { autoAlpha: 1 }, o1 + 0.2);
+    // s27 to s30: outcomes, each with its context.
+    const o0 = cue('outcome-0', 's27');
+    vanish(ctx, '.plat', o0);
+    tl.set(q('.out'), { autoAlpha: 1 }, o0 + 0.2);
     tl.set(q('.out-i'), { autoAlpha: 0 }, 0);
-    tl.fromTo(q('.out-0'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, o1 + 0.3);
-    const o2 = cue('outcome-2', 's28');
-    tl.fromTo(q('.out-1'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, o2 + 0.3);
-    tl.fromTo(q('.out-2'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, cue('outcome-2b', 's28+4.5'));
-    const o3 = cue('outcome-3', 's29');
-    tl.fromTo(q('.out-3'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, o3 + 0.3);
-    const s24 = cue('principles', 's30');
+    const show = (i: number, at: number) => tl.fromTo(q(`.out-${i}`), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, at);
+    show(0, o0 + 0.3);
+    show(1, cue('outcome-1', 's28') + 0.3);
+    const o2 = cue('outcome-2', 's29');
+    show(2, o2 + 0.3);
+    show(3, cue('outcome-2b', 's29+4.5'));
+    show(4, cue('outcome-3', 's30') + 0.3);
+    const s24 = cue('principles', 's31');
     vanish(ctx, '.out', s24);
     showStrip('pr', 4, s24 + 0.3);
   },
