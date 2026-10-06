@@ -21,6 +21,8 @@ const seekAudio = (a: HTMLAudioElement, t: number) => {
   a.addEventListener('loadedmetadata', () => { a.currentTime = t; }, { once: true });
   a.load();
 };
+// One-off work after the frame is drawn. A timeout, since a hidden tab never runs animation frames.
+const afterPaint = (f: () => void) => { setTimeout(f, 30); };
 const duration = (s: number) => (s < 90 ? `${Math.round(s)} s` : s < 600 ? `${Math.floor(s / 60)} min ${Math.round(s % 60)} s` : `${Math.round(s / 60)} min`);
 const mmss = (s: number) => `${Math.floor(s / 60)}:${String(Math.floor(s) % 60).padStart(2, '0')}`;
 
@@ -153,7 +155,7 @@ export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api
   const pause = useCallback(() => {
     cancelAnimationFrame(raf.current); setPlaying(false);
     audio.current?.pause();
-    requestAnimationFrame(collect);
+    afterPaint(collect);
   }, [collect]);
 
   const play = useCallback((at?: unknown) => {
@@ -214,7 +216,7 @@ export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api
   const lastCh = film?.chapters.filter((c) => c.key !== 'title' && c.start <= t + 0.01).pop();
   const cardNow = lastCh?.key.startsWith('card-') ? Number(lastCh.key.slice(5)) : undefined;
   useEffect(() => { onScene?.(sceneNow, playing, cardNow); }, [sceneNow, playing, cardNow]); // eslint-disable-line
-  if (api) api.current = { pause, play, seekTo: (x: number) => { started.current = true; seek(x); requestAnimationFrame(collect); }, playing };
+  if (api) api.current = { pause, play, seekTo: (x: number) => { started.current = true; seek(x); afterPaint(collect); }, playing };
   useEffect(() => { if (audio.current) audio.current.muted = !sound; }, [sound]);
   useEffect(() => {
     if (!film || !ready) return;
@@ -231,7 +233,7 @@ export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api
     if (at > 0) {
       started.current = true;
       seek(at);
-      requestAnimationFrame(() => {
+      afterPaint(() => {
         collect();
         const id = p.get('target');
         const el = id && stage.current?.querySelector(`[data-target="${CSS.escape(id)}"]`);
@@ -312,7 +314,7 @@ export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api
         <button className="ctl" onClick={() => (playing ? pause() : play())} aria-label={playing ? 'Pause' : 'Play'} disabled={!ready}>{playing ? '❚❚' : '▶'}</button>
         <div className="scrub">
           <input type="range" aria-label="Position in the video" min={range.start} max={range.end} step={0.1} value={t}
-            onChange={(e) => { started.current = true; if (playing) pause(); seek(Number(e.target.value)); requestAnimationFrame(collect); }} disabled={!ready} />
+            onChange={(e) => { started.current = true; if (playing) pause(); seek(Number(e.target.value)); afterPaint(collect); }} disabled={!ready} />
           <div className="ticks" aria-hidden>
             {chapters.filter((c) => c.key.startsWith('card-') && c.start >= range.start && c.start < range.end).map((c) => (
               <span key={c.key} style={{ left: `${((c.start - range.start) / span) * 100}%` }} title={actLabel(Number(c.key.slice(5)))} />
@@ -320,7 +322,7 @@ export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api
           </div>
         </div>
         <span className="time">{mmss(t - range.start)} / {mmss(span)}</span>
-        {!tldr && <select className="ctl chapters" aria-label="Jump to a chapter" value={String(chapters.reduce((acc, c, i) => (c.key.startsWith('card-') && c.start <= t ? i : acc), 0))} onChange={(e) => { const c = chapters[Number(e.target.value)]; if (c) { started.current = true; if (playing) pause(); seek(c.start + 0.01); requestAnimationFrame(collect); } }}>
+        {!tldr && <select className="ctl chapters" aria-label="Jump to a chapter" value={String(chapters.reduce((acc, c, i) => (c.key.startsWith('card-') && c.start <= t ? i : acc), 0))} onChange={(e) => { const c = chapters[Number(e.target.value)]; if (c) { started.current = true; if (playing) pause(); seek(c.start + 0.01); afterPaint(collect); } }}>
           {chapters.map((c, i) => c.start >= range.start && c.start < range.end && c.key !== 'title' && (
             <option key={c.key} value={i}>{c.n ? `${c.n}. ${SCENE_TEXT.find((s) => s.n === c.n)?.title}` : `${actLabel(Number(c.key.slice(5)))}: ${ACT_NAMES[c.key.slice(5)]}`}</option>
           ))}

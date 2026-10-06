@@ -16,7 +16,7 @@ export const Panel: React.FC<{ content: PanelContent; onClose: () => void; onRes
   return (
     <aside className="panel" role="dialog" aria-modal="false" aria-labelledby="panel-title" tabIndex={-1} ref={ref}>
       <div className="panel-head">
-        <span className="kicker accent">{content.loc ? content.loc.page.title : 'On the site'}</span>
+        <span className="kicker accent">{content.loc ? content.loc.page.title : content.url ? 'Another site' : 'On the site'}</span>
         <button className="panel-close" onClick={onClose} aria-label="Close">✕</button>
       </div>
       <h2 id="panel-title">{content.title}</h2>
@@ -25,6 +25,7 @@ export const Panel: React.FC<{ content: PanelContent; onClose: () => void; onRes
       {text && <p>{text}</p>}
       <div className="panel-actions">
         {content.loc && <Link className="btn primary" to={content.loc.url}>Read {locName(content.loc)} →</Link>}
+        {content.url && <a className="btn primary" href={content.url} target="_blank" rel="noopener">Visit {content.url.replace(/^https?:\/\//, '')} ↗</a>}
         <button className="btn" onClick={onResume}>Resume</button>
         <button className="linkish" onClick={() => navigator.clipboard?.writeText(link).then(() => setCopied(true)).catch(() => {})}>{copied ? 'Link copied' : 'Copy a link to this moment'}</button>
       </div>

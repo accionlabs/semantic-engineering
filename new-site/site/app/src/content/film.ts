@@ -1,5 +1,6 @@
 import narration from '@film/narration.json';
 import { SITE, type PageMeta } from './data';
+import { TARGETS } from './targets';
 
 // The film's scenes and acts, and the site's pages each scene draws on (from the script's Sources lines)
 // and each clickable element points to (from the storyboards' Targets rows), as script/assemble.py writes them.
@@ -34,8 +35,15 @@ const uniq = (xs: (Loc | undefined)[]) => {
 export const sceneSources = (n: number) => uniq((sceneInfo(n)?.sources ?? []).map(resolveLoc));
 /** The pages an act draws on: each scene's main page, then the rest. */
 export const actSources = (act: number) => uniq([...scenesOf(act).map((s) => s.sources[0]), ...scenesOf(act).flatMap((s) => s.sources.slice(1))].map((l) => (l ? resolveLoc(l) : undefined)));
-/** Where a clickable element points: its own entry in the storyboard, else its scene's main page. */
-export const targetLoc = (id: string, scene: number) =>
-  resolveLoc(sceneInfo(scene)?.targets[id] ?? SCENES.find((s) => s.targets[id])?.targets[id] ?? sceneInfo(scene)?.sources[0] ?? '_index.md');
+/** Where a clickable element points: the targets table, else the storyboard, else its scene's main page. */
+export const targetLoc = (id: string, scene: number) => {
+  const own = TARGETS[id]?.[1];
+  if (own?.startsWith('http')) return undefined;
+  return resolveLoc(own ?? sceneInfo(scene)?.targets[id] ?? SCENES.find((s) => s.targets[id])?.targets[id] ?? sceneInfo(scene)?.sources[0] ?? '_index.md');
+};
+/** An element that stands for another site links straight to it. */
+export const targetUrl = (id: string) => (TARGETS[id]?.[1]?.startsWith('http') ? TARGETS[id][1] : undefined);
+/** An element's name, from the targets table. */
+export const targetName = (id: string) => TARGETS[id]?.[0];
 /** A short name for a location: the heading, else the page title. */
 export const locName = (l: Loc) => l.heading ?? l.page.title;
