@@ -164,13 +164,14 @@
    "act": 1,
    "n": 3,
    "title": "The Manual Translation Tax",
-   "text": "The Manual Translation Tax is the recurring cost of knowledge and context lost at each handoff across roles, artifacts and tools, as documents, messages and memory become decisions and code. Every translation takes time, and every translation loses some information. A coding agent makes writing code faster, and leaves the tax where it is. The team's time goes into paying the tax, so faster code generation does not make the team faster. The tax has three components, and all three appear even on disciplined teams with good tools. The first component is ambiguity: the same words mean different things to different people. A product owner writes \"let users save their search so they can return to it later\". The frontend developer stores the search in the browser, the backend developer stores it in the database, and the QA engineer tests for a confirmation message. The difference surfaces in code review, and two weeks of work are partly redone. The second component is non-persistence: knowledge that was never written down is lost when the person who holds it leaves. When a senior engineer leaves, the team spends months rediscovering what she knew, usually when something breaks. A coding agent loses its knowledge the same way, because every new session starts with no memory of the last one. The third component is non-traceability: nothing records which parts of the code depend on a feature the user sees. When the alert frequency on saved searches changed from daily to weekly, some customers received both emails, because a worker in another repository still sent the daily ones. Nothing linked the alert frequency feature to that worker, and finding the cause took two days. The usual response to the tax is to write more documentation. On one platform team, roughly 40% of the architecture pages sampled were materially out of date by the end of the year. More documentation adds more text to translate, and the new text goes out of date in the same way. Removing the tax requires changing how the knowledge is recorded.",
-   "words": 341,
+   "text": "The Manual Translation Tax is the recurring cost of knowledge and context lost at each handoff across roles, artifacts and tools, as documents, messages and memory become decisions and code. Every translation takes time, and every translation loses some information. A coding agent makes writing code faster, and leaves the tax where it is. The team's time goes into paying the tax, so faster code generation does not make the team faster. When one delivery team of thirty people was surveyed, 60 percent named estimation and understanding the existing code as places where the tax was paid. The tax has three components, and all three appear even on disciplined teams with good tools. The first component is ambiguity: the same words mean different things to different people. A product owner writes \"let users save their search so they can return to it later\". The frontend developer stores the search in the browser, the backend developer stores it in the database, and the QA engineer tests for a confirmation message. The difference surfaces in code review, and two weeks of work are partly redone. The second component is non-persistence: knowledge that was never written down is lost when the person who holds it leaves. When a senior engineer leaves, the team spends months rediscovering what she knew, usually when something breaks. A coding agent loses its knowledge the same way, because every new session starts with no memory of the last one. The third component is non-traceability: nothing records which parts of the code depend on a feature the user sees. When the alert frequency on saved searches changed from daily to weekly, some customers received both emails, because a worker in another repository still sent the daily ones. Nothing linked the alert frequency feature to that worker, and finding the cause took two days. The usual response to the tax is to write more documentation. On one platform team, roughly 40% of the architecture pages sampled were materially out of date by the end of the year. More documentation adds more text to translate, and the new text goes out of date in the same way. Removing the tax requires changing how the knowledge is recorded.",
+   "words": 366,
    "sentences": [
     "The Manual Translation Tax is the recurring cost of knowledge and context lost at each handoff across roles, artifacts and tools, as documents, messages and memory become decisions and code.",
     "Every translation takes time, and every translation loses some information.",
     "A coding agent makes writing code faster, and leaves the tax where it is.",
     "The team's time goes into paying the tax, so faster code generation does not make the team faster.",
+    "When one delivery team of thirty people was surveyed, 60 percent named estimation and understanding the existing code as places where the tax was paid.",
     "The tax has three components, and all three appear even on disciplined teams with good tools.",
     "The first component is ambiguity: the same words mean different things to different people.",
     "A product owner writes \"let users save their search so they can return to it later\".",
@@ -189,12 +190,14 @@
    ],
    "sources": [
     "sdlc/translation-tax.md#the-manual-translation-tax-the-cost-named",
-    "sdlc/translation-tax.md#how-it-shows-up-in-a-sprint",
-    "sdlc/translation-tax.md#the-three-components-of-the-tax",
-    "sdlc/translation-tax.md#why-documentation-does-not-fix-it"
+    "sdlc/case-archetypes.md#where-the-manual-translation-tax-was-paid",
+    "sdlc/case-archetypes.md#how-it-shows-up-in-a-sprint",
+    "sdlc/case-archetypes.md#the-three-components-of-the-tax",
+    "sdlc/case-archetypes.md#why-documentation-does-not-fix-it"
    ],
    "targets": {
     "tax.definition": "sdlc/translation-tax.md#the-manual-translation-tax-the-cost-named",
+    "fig.mtt-survey-60": "sdlc/case-archetypes.md#where-the-manual-translation-tax-was-paid",
     "tax.ambiguity": "sdlc/translation-tax.md#the-three-components-of-the-tax",
     "tax.non-persistence": "sdlc/translation-tax.md#the-three-components-of-the-tax",
     "tax.non-traceability": "sdlc/translation-tax.md#the-three-components-of-the-tax",

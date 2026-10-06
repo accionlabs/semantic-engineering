@@ -5,8 +5,8 @@ import { AGENT, AgentIcon, COL, Cards, Custodians, DEV, Defs, Flow, KindLabels, 
 import { Callout, FigureChip, Frame, Svg } from '../parts/ui';
 import { C, F } from '../theme';
 
-// Scene 3. The Manual Translation Tax: what it is, why faster code generation leaves it in place,
-// its three components with one example each, and why more documentation does not remove it.
+// Scene 3. The Manual Translation Tax: what it is, why faster code generation leaves it in place, where one
+// surveyed team paid it, its three components with one example each, and why more documentation does not remove it.
 // The tax band carries the three strands; the upper area, dimmed, is the stage for each example.
 const BAND = { x: 150, y: Y.tax - 22, w: 1620, h: Y.taxH + 44 };
 const STRAND_Y = [BAND.y + 26, BAND.y + 54, BAND.y + 82];
@@ -124,6 +124,7 @@ export const scene03: SceneDef = {
           </div>
         ))}
       </div>
+      <FigureChip className="pre chip-60" x={1330} y={130} w={430} figure="60%" label="of one delivery team named estimation and code comprehension as where the tax was paid" source="team survey, n = 30" target="fig.mtt-survey-60" />
       <FigureChip className="pre chip-redo" x={COL.architecture + 150} y={Y.tax - 190} w={300} figure="2 weeks" label="of work partly redone" source="sdlc/translation-tax.md" target="example.ambiguity" />
       <Callout className="pre co-months" x={1260} y={290} w={400} kind="Non-persistence" text="Months of rediscovery" tone={C.warn} target="example.non-persistence" />
       <Callout className="pre co-session" x={180} y={Y.flow + 100} w={380} kind="Coding agent" text="Each session starts empty" tone={C.text} anchor={{ x: DEV.x - 85, y: Y.flow + 50 }} target="example.agent-session" />
@@ -161,9 +162,13 @@ export const scene03: SceneDef = {
     tl.to(q(top), { opacity: 0.06, duration: 0.3 }, s4);
     appear(ctx, '.meters', s4);
     tl.to(q('.meter-up'), { height: '92%', duration: 1.4, ease: 'power2.out' }, s4 + 0.4);
-    // s5: three components.
-    const s5 = cue('components', 's4');
-    vanish(ctx, '.meters, .clock, .crosser, .code-bit', s5);
+    // s5: where one team paid the tax.
+    const sv = cue('survey', 's4');
+    vanish(ctx, '.meters', sv);
+    appear(ctx, '.chip-60', sv + 0.3);
+    // s6: three components.
+    const s5 = cue('components', 's5');
+    vanish(ctx, '.chip-60, .clock, .crosser, .code-bit', s5);
     tl.to(q('.bottom'), { opacity: 0.45, duration: 0.4 }, s5);
     tl.to(q(top), { opacity: 0.3, duration: 0.4 }, s5);
     tl.to(q('.band-title'), { autoAlpha: 0, duration: 0.3 }, s5);
@@ -176,27 +181,27 @@ export const scene03: SceneDef = {
       appear(ctx, `.sname-${id}`, at + 0.2, { y: 0 });
     };
     // s6 to s9: ambiguity.
-    const s6 = cue('ambiguity', 's5');
+    const s6 = cue('ambiguity', 's6');
     focus('amb', s6);
-    const s7 = cue('phrase', 's6');
+    const s7 = cue('phrase', 's7');
     appear(ctx, '.phrase', s7);
-    const s8 = cue('reads', 's7');
+    const s8 = cue('reads', 's8');
     READS.forEach((_, i) => appear(ctx, `.read-${i}`, s8 + i * 0.5));
-    const s9 = cue('redo', 's8');
+    const s9 = cue('redo', 's9');
     tl.to(q('.bottom'), { opacity: 1, duration: 0.3 }, s9);
     appear(ctx, '.meet', s9, { y: 0 });
     appear(ctx, '.chip-redo', s9 + 0.8);
     // s10 to s12: non-persistence.
-    const s10 = cue('persistence', 's9');
+    const s10 = cue('persistence', 's10');
     vanish(ctx, '.phrase, .read, .meet, .chip-redo', s10);
     tl.to(q('.bottom'), { opacity: 0.45, duration: 0.3 }, s10);
     focus('per', s10);
-    const s11 = cue('leaves', 's10');
+    const s11 = cue('leaves', 's11');
     tl.to(q('.top .cus-code'), { opacity: 1, duration: 0.3 }, s11);
     tl.to(q('.top .cus-code .dev-2'), { x: 260, autoAlpha: 0, duration: 1.6, ease: 'power1.in' }, s11 + 0.3);
     appear(ctx, '.calendar', s11 + 1.0);
     appear(ctx, '.co-months', s11 + 1.6);
-    const s12 = cue('session', 's11');
+    const s12 = cue('session', 's12');
     vanish(ctx, '.calendar, .co-months', s12);
     tl.to(q('.top .cus-code'), { opacity: 0.12, duration: 0.3 }, s12);
     tl.to(q('.bottom'), { opacity: 1, duration: 0.3 }, s12);
@@ -204,34 +209,34 @@ export const scene03: SceneDef = {
     tl.to(q('.session'), { opacity: 0.2, duration: 0.4, repeat: 3, yoyo: true }, s12 + 1.0);
     appear(ctx, '.co-session', s12 + 0.5);
     // s13 to s15: non-traceability.
-    const s13 = cue('traceability', 's12');
+    const s13 = cue('traceability', 's13');
     vanish(ctx, '.session, .co-session', s13);
     tl.to(q('.bottom'), { opacity: 0.45, duration: 0.3 }, s13);
     focus('tra', s13);
-    const s14 = cue('worker', 's13');
+    const s14 = cue('worker', 's14');
     appear(ctx, '.feat', s14);
     appear(ctx, '.worker', s14 + 0.6);
     appear(ctx, '.emails', s14 + 1.4);
-    const s15 = cue('nolink', 's14');
+    const s15 = cue('nolink', 's15');
     tl.fromTo(q('.noline'), { autoAlpha: 1, attr: { x2: COL.functional + 122 } }, { attr: { x2: 960 }, duration: 1.2 }, s15);
     appear(ctx, '.chip-2days', s15 + 1.0);
     // s16 to s18: more documentation, and its decay.
-    const s16 = cue('moredocs', 's15');
+    const s16 = cue('moredocs', 's16');
     vanish(ctx, '.feat, .worker, .emails, .noline, .chip-2days', s16);
     tl.to(q('.strand'), { opacity: 0.3, duration: 0.4 }, s16);
     tl.to(q(top), { opacity: 1, duration: 0.4 }, s16);
     appear(ctx, '.moredoc', s16 + 0.4);
-    const s17 = cue('forty', 's16');
+    const s17 = cue('forty', 's17');
     tl.to(q(top), { opacity: 0.12, duration: 0.3 }, s17);
     tl.to(q('.top .card-architecture, .top .lbl-architecture, .top .cus-architecture'), { opacity: 1, duration: 0.3 }, s17);
     appear(ctx, '.chip-40', s17);
-    const s18 = cue('decay', 's17');
+    const s18 = cue('decay', 's18');
     vanish(ctx, '.chip-40', s18);
     tl.to(q(top), { opacity: 1, duration: 0.3 }, s18);
     tl.to(q('.top .card, .moredoc'), { opacity: 0.22, duration: 1.6 }, s18 + 0.4);
     appear(ctx, '.co-decay', s18 + 0.4);
     // s19: change how the knowledge is recorded.
-    const s19 = cue('change', 's18');
+    const s19 = cue('change', 's19');
     vanish(ctx, '.co-decay, .moredoc', s19);
     tl.to(q('.top .lbl, .top .cus'), { opacity: 0.3, duration: 0.4 }, s19);
     tl.to(q('.top .card'), { opacity: 1, duration: 0.6 }, s19 + 0.3);

@@ -113,6 +113,7 @@ export const TARGETS: Record<string, [string, string?]> = {
   'extraction.patterns': ['What extraction shows'],
   'debt.risk': ['Fast agents, fast technical debt', 'sdlc/methodology.md#paying-down-technical-debt'],
   'fig.extraction': ['Two to three weeks for two million lines'],
+  'fig.mtt-survey-60': ['60% named estimation and code comprehension', 'sdlc/case-archetypes.md#where-the-manual-translation-tax-was-paid'],
   'fig.deploys-36': ['Deployments from 19 to 36 a month', 'sdlc/case-archetypes.md#delivery-metrics-before-and-after'],
   'fig.lead-time': ['Lead time from 2.0 to 1.42 days', 'sdlc/case-archetypes.md#delivery-metrics-before-and-after'],
   'fig.impact-replaces-investigation': ['Impact analysis in place of days of investigation', 'sdlc/case-archetypes.md#what-changed-in-how-the-team-works'],
