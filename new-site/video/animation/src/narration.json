@@ -564,19 +564,17 @@
   {
    "act": 5,
    "n": 28,
-   "title": "Three engagements",
-   "text": "Three anonymized engagements show the methodology at work on continuous SDLC. The first archetype is a live code base of more than two million lines, with five to six scrum teams. Extracting the graph from the code built all four layers in two to three weeks. On the extracted graph, impact analysis replaced three to five days of investigation by senior engineers. The second archetype is a new user-interface workstream that grew in complexity, and started with the design layer of the graph. In its first sprint under Semantic Engineering, the workstream reused 53 percent of its components from the existing design system. The third archetype is a mature spec-driven practice that rewrote more than a million lines in five to six months. The spec-driven practice now reviews pull requests of 300 to 400 files, and each review takes more than two weeks. In all three archetypes, the answer was to add structured knowledge exactly where the specification alone was not enough.",
-   "words": 162,
+   "title": "Two engagements",
+   "text": "Two anonymized engagements show the methodology at work on continuous SDLC. The first archetype is a live code base of more than two million lines, with five to six scrum teams. Extracting the graph from the code built all four layers in two to three weeks. On the extracted graph, impact analysis replaced three to five days of investigation by senior engineers. The second archetype is a new user-interface workstream that grew in complexity, and started with the design layer of the graph. In its first sprint under Semantic Engineering, the workstream reused 53 percent of its components from the existing design system. In both engagements, structured knowledge was added exactly where the specification alone was not enough.",
+   "words": 118,
    "sentences": [
-    "Three anonymized engagements show the methodology at work on continuous SDLC.",
+    "Two anonymized engagements show the methodology at work on continuous SDLC.",
     "The first archetype is a live code base of more than two million lines, with five to six scrum teams.",
     "Extracting the graph from the code built all four layers in two to three weeks.",
     "On the extracted graph, impact analysis replaced three to five days of investigation by senior engineers.",
     "The second archetype is a new user-interface workstream that grew in complexity, and started with the design layer of the graph.",
     "In its first sprint under Semantic Engineering, the workstream reused 53 percent of its components from the existing design system.",
-    "The third archetype is a mature spec-driven practice that rewrote more than a million lines in five to six months.",
-    "The spec-driven practice now reviews pull requests of 300 to 400 files, and each review takes more than two weeks.",
-    "In all three archetypes, the answer was to add structured knowledge exactly where the specification alone was not enough."
+    "In both engagements, structured knowledge was added exactly where the specification alone was not enough."
    ]
   },
   {
