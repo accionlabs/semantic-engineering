@@ -5,7 +5,7 @@
   "2": "The methodology",
   "3": "Knowledge graphs and agents in the AI-driven SDLC, with Breeze.AI",
   "4": "Legacy modernization, with ASIMOV",
-  "5": "Working together (optional)"
+  "5": "Working together"
  },
  "scenes": [
   {
@@ -540,11 +540,11 @@
    "act": 5,
    "n": 27,
    "title": "Engagement phases",
-   "text": "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize. Advise takes two to four weeks, diagnoses the team's current zone, and produces a scoped roadmap for the next transition. Launch takes about twelve weeks, builds the four-layer graph for the highest-priority product, and puts the validation gate in place on every pull request. Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work. Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs. In every phase, the client's four custodians own the four layers of the knowledge graph. Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers. Accion Labs makes four commitments for the end of an engagement. The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff.",
-   "words": 165,
+   "text": "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize. Advise takes two to four weeks, assesses how the team uses AI today and where it meets friction, and produces a scoped roadmap and a platform recommendation. Launch takes about twelve weeks, builds the four-layer graph for the highest-priority product, and puts the validation gate in place on every pull request. Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work. Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs. In every phase, the client's four custodians own the four layers of the knowledge graph. Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers. Accion Labs makes four commitments for the end of an engagement. The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff.",
+   "words": 172,
    "sentences": [
     "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize.",
-    "Advise takes two to four weeks, diagnoses the team's current zone, and produces a scoped roadmap for the next transition.",
+    "Advise takes two to four weeks, assesses how the team uses AI today and where it meets friction, and produces a scoped roadmap and a platform recommendation.",
     "Launch takes about twelve weeks, builds the four-layer graph for the highest-priority product, and puts the validation gate in place on every pull request.",
     "Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work.",
     "Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs.",
@@ -588,6 +588,23 @@
     "The framework and concepts of Semantic Engineering are public and free to apply.",
     "Breeze.AI runs the methodology for new and existing applications, and ASIMOV runs it for legacy modernization.",
     "Accion Labs works with teams to adopt the methodology, and an engagement can start with a two-day workshop."
+   ]
+  },
+  {
+   "act": 5,
+   "n": 30,
+   "title": "Products that agents use",
+   "text": "Software products are starting to open their capabilities to their customers' own agents, which act on the customer's behalf through interfaces such as MCP servers. An MCP server that exposes hundreds of tools gives an agent access, and still leaves the agent to work out which tools to use, in what order and under which rules. The knowledge graph already records what the product provides: its capabilities, workflows, entities and contracts, which are the domain invariants every customer shares. An interface for agents can be built from the graph, describing each capability in the terms of the domain, independently of the screens and APIs designed for people. The graph also governs which external agent may use which capability. A formal grammar above the graph adds the rules a schema cannot express, so an agent can write what a customer needs and check its own result by running tests. Dialect engineering is the name for this approach, which lets more of a software-as-a-service product vary per customer while the domain invariants stay shared. Dialect engineering is set out at dialect-engineering.ai, and it builds on a knowledge graph governed with Semantic Engineering.",
+   "words": 190,
+   "sentences": [
+    "Software products are starting to open their capabilities to their customers' own agents, which act on the customer's behalf through interfaces such as MCP servers.",
+    "An MCP server that exposes hundreds of tools gives an agent access, and still leaves the agent to work out which tools to use, in what order and under which rules.",
+    "The knowledge graph already records what the product provides: its capabilities, workflows, entities and contracts, which are the domain invariants every customer shares.",
+    "An interface for agents can be built from the graph, describing each capability in the terms of the domain, independently of the screens and APIs designed for people.",
+    "The graph also governs which external agent may use which capability.",
+    "A formal grammar above the graph adds the rules a schema cannot express, so an agent can write what a customer needs and check its own result by running tests.",
+    "Dialect engineering is the name for this approach, which lets more of a software-as-a-service product vary per customer while the domain invariants stay shared.",
+    "Dialect engineering is set out at dialect-engineering.ai, and it builds on a knowledge graph governed with Semantic Engineering."
    ]
   }
  ]

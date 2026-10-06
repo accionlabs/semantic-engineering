@@ -25,6 +25,10 @@ import { scene23 } from './s23-ontologies';
 import { scene24 } from './s24-parity-gates';
 import { scene25 } from './s25-modes-stages';
 import { scene26 } from './s26-results-handover';
+import { scene27 } from './s27-phases';
+import { scene28 } from './s28-engagements';
+import { scene29 } from './s29-origins';
+import { scene30 } from './s30-agent-products';
 
 /** Every scene built so far, in script order. */
-export const DEFS: SceneDef[] = [scene01, scene02, scene03, scene04, scene05, scene06, scene07, scene08, scene09, scene10, scene11, scene12, scene13, scene14, scene15, scene16, scene17, scene18, scene19, scene20, scene21, scene22, scene23, scene24, scene25, scene26].sort((a, b) => a.n - b.n);
+export const DEFS: SceneDef[] = [scene01, scene02, scene03, scene04, scene05, scene06, scene07, scene08, scene09, scene10, scene11, scene12, scene13, scene14, scene15, scene16, scene17, scene18, scene19, scene20, scene21, scene22, scene23, scene24, scene25, scene26, scene27, scene28, scene29, scene30].sort((a, b) => a.n - b.n);

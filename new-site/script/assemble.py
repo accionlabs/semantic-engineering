@@ -15,7 +15,7 @@ import sys
 MEDIA = pathlib.Path.home() / 'Documents/Documentation System/content/shared/accion-2.0/semantic-engineering-site-media/video'
 PARTS = [('overview', 'Overview'), ('act-1', 'Act 1. The shared problem'), ('act-2', 'Act 2. The methodology'),
          ('act-3', 'Act 3. Knowledge graphs and agents in the AI-driven SDLC, with Breeze.AI'),
-         ('act-4', 'Act 4. Legacy modernization, with ASIMOV'), ('act-5', 'Act 5. Working together (optional)')]
+         ('act-4', 'Act 4. Legacy modernization, with ASIMOV'), ('act-5', 'Act 5. Working together')]
 WPS = 2.6
 OPENERS = r'(They|It|That|This|These|Those|And|So|Here|But|Further down|Its|Their|Then|Also)\b'
 RULES = [
