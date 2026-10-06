@@ -92,7 +92,7 @@ const INSTRUCTIONS = `${ROLE}
 
 ${STYLE}
 
-Tools: explanation_guide holds the language, its rules, worked examples and the whole knowledge graph. graph_concepts, graph_links, concept_evidence and find_in_site help with the mapping; check_explanation checks a draft; make_explanation stores it and returns a short link that plays it for the person; give the person that link.`;
+Tools: method_steps gives the platform and the method's steps, in order, for a kind of work; call it first. explanation_guide holds the language, its rules, worked examples and the whole knowledge graph. graph_concepts, graph_links, concept_evidence and find_in_site help with the mapping; check_explanation checks a draft; make_explanation stores it and returns a short link that plays it for the person; give the person that link.`;
 
 type RpcMessage = { jsonrpc: '2.0'; id?: string | number | null; method?: string; params?: Record<string, unknown> };
 const reply = (id: RpcMessage['id'], result: unknown) => ({ jsonrpc: '2.0', id, result });

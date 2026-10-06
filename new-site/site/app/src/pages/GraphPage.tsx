@@ -7,6 +7,8 @@ import { placeOf, placeText, sceneByN } from '../reel/vocab';
 // with the film's sentences and the pages' passages that support it.
 const KINDS: { kind: Kind; title: string; note: string }[] = [
   { kind: 'context', title: 'Kinds of work', note: 'New applications, existing applications, and legacy modernization.' },
+  { kind: 'platform', title: 'Platforms', note: 'Breeze.AI runs new and existing applications; ASIMOV runs legacy modernization.' },
+  { kind: 'step', title: 'The method, step by step', note: 'Each kind of work has one starting step, marked, and the steps that follow it in order.' },
   { kind: 'layer', title: 'Layers of knowledge', note: 'The four kinds of knowledge, each with its custodian and the film\'s moments for it today and under the method.' },
   { kind: 'cause', title: 'Causes', note: 'What the symptoms trace back to: the Manual Translation Tax and the Modernization Translation Tax, with their components.' },
   { kind: 'symptom', title: 'Symptoms', note: 'What a team sees today, by the layer of knowledge where it shows.' },
@@ -19,6 +21,7 @@ const KINDS: { kind: Kind; title: string; note: string }[] = [
 const REL: Record<string, [string, string]> = {
   'part-of': ['is part of', 'has the component'], 'caused-by': ['is caused by', 'causes'], 'addressed-by': ['is addressed by', 'addresses'],
   requires: ['requires', 'is required by'], 'limited-by': ['is limited by', 'limits'], 'shown-in': ['is shown in', 'shows'], 'applies-to': ['applies to', 'is recommended by'],
+  precedes: ['then', 'comes after'], uses: ['carries out', 'is carried out by'], 'runs-on': ['runs on', 'runs'],
 };
 const WORK: Record<string, string> = { greenfield: 'new applications', brownfield: 'existing applications', 'legacy-modernization': 'legacy modernization' };
 
@@ -45,7 +48,7 @@ const Card: React.FC<{ node: Node }> = ({ node }) => {
   inE.forEach((x) => { const k = REL[x.rel][1]; groups.set(k, [...(groups.get(k) ?? []), x.from]); });
   return (
     <article className={`g-card g-${node.kind}`} id={node.id}>
-      <header><strong>{node.label}</strong> <code>{node.id}</code>{node.custodian && <span className="g-tag">kept by the {node.custodian}</span>}{node.contexts && <span className="g-tag">{node.contexts.map((c) => WORK[c]).join(', ')}</span>}</header>
+      <header><strong>{node.label}</strong> <code>{node.id}</code>{node.start && <span className="g-tag">the method starts here</span>}{node.order && <span className="g-tag">step {node.order}</span>}{node.platform && <span className="g-tag">{node.platform === 'asimov' ? 'ASIMOV' : 'Breeze.AI'}</span>}{node.custodian && <span className="g-tag">kept by the {node.custodian}</span>}{node.contexts && <span className="g-tag">{node.contexts.map((c) => WORK[c]).join(', ')}</span>}</header>
       <p className="g-def">{node.definition}</p>
       <div className="g-rels">
         {[...groups.entries()].map(([rel, list]) => (
@@ -97,7 +100,7 @@ export const GraphPage: React.FC = () => {
         <section key={kind}>
           <h2>{title} <span className="muted" style={{ fontSize: '1rem', fontWeight: 400 }}>· {NODES.filter((x) => x.kind === kind).length}</span></h2>
           <p className="muted">{note}</p>
-          <div className="g-grid">{NODES.filter((x) => x.kind === kind).map((x) => <Card key={x.id} node={x} />)}</div>
+          <div className="g-grid">{NODES.filter((x) => x.kind === kind).sort((a, b) => kind === 'step' ? (a.platform ?? '').localeCompare(b.platform ?? '') || (a.order ?? 0) - (b.order ?? 0) : 0).map((x) => <Card key={x.id} node={x} />)}</div>
         </section>
       ))}
     </div>

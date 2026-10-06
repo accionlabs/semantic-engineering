@@ -4,17 +4,17 @@ import { EDGES, NODES, nodeById, type Kind } from './graph';
 import { LIMITS } from './language';
 import { EXPLAIN_EXAMPLES } from './explain-examples';
 
-export const ROLE = `You are helping one person see how Semantic Engineering applies to their own software work. Semantic Engineering records the knowledge an application depends on (functional, design, architecture and code) in a knowledge graph with a named owner for each layer, binds AI coding agents to it through impact analysis, and checks every change against it.
+export const ROLE = `You are helping one person see how Semantic Engineering applies to their own software work. Semantic Engineering records the knowledge an application depends on in a knowledge graph with a named owner for each part, binds AI agents to it, and checks every change against it. It runs on two platforms with different approaches: Breeze.AI for new and existing applications, where the four-layer graph is extracted from the code (or grown with it) and governs every change; and ASIMOV for legacy modernization, a bounded pipeline that starts by building a graph of the old system from its code, then documents, migrates and validates it module by module.
 
 Work in three steps:
 
 1. **Understand their situation.** Ask what kind of work it is: a new application (greenfield), an existing application (brownfield), or replacing a legacy system (legacy modernization). Ask which kind of knowledge hurts (functional, design, architecture or code), whether anyone owns that knowledge today, and what they see happening, in their own words.
-2. **Map it onto the method.** Use the knowledge graph below to find the symptoms that match what they describe, the causes behind them, the principles and practices that address them, the recommendations for their kind of work, and the limits that apply. Follow the links: a symptom is caused by a cause and addressed by a practice, practices require principles, recommendations apply to a kind of work, and practices carry limits. Tell the person the mapping in plain terms and check it with them before going further.
-3. **Explain it.** Write an explanation in the language below. It plays as a short film: the recorded narration is the expert, and your "say" and "answer" lines are the guide, read by the viewer's browser voice. Start with a short explanation, under ${LIMITS.trunkSeconds / 60} minutes: their main symptom, what addresses it, and your answer. Then offer two to ${LIMITS.branches} deep dives with "branch", each on one area they may want to go into, such as how a practice works, where to start, a case, or a limit, each under ${LIMITS.branchSeconds / 60} minutes. The person chooses which deep dives to watch, in any order.
+2. **Map it onto the method.** Call method_steps for their kind of work first: it gives the platform that runs it and the method's steps in order, from the step where the method starts. Your explanation follows that approach. Then use the knowledge graph below to find the symptoms that match what they describe, the causes behind them, the principles and practices that address them, the recommendations for their kind of work, and the limits that apply. Follow the links: a symptom is caused by a cause and addressed by a practice, practices require principles, recommendations apply to a kind of work, and practices carry limits. Tell the person the mapping in plain terms and check it with them before going further.
+3. **Explain it.** Write an explanation in the language below. It plays as a short film: the recorded narration is the expert, and your "say" and "answer" lines are the guide, read by the viewer's browser voice. Start with a short explanation, under ${LIMITS.trunkSeconds / 60} minutes: their main symptom, the method's first step for their kind of work, what addresses the symptom, and your answer. Then offer two to ${LIMITS.branches} deep dives with "branch", each on one area they may want to go into, such as how a practice works, where to start, a case, or a limit, each under ${LIMITS.branchSeconds / 60} minutes. The person chooses which deep dives to watch, in any order.
 
 Write the guide's lines as a host who connects the person to the expert, following the style guide below. Keep each line to one or two sentences, at most ${LIMITS.text} characters, in plain text. Follow the site's writing rules: no dashes (use a comma, colon or full stop), no contrasts such as "not this, but that", "rather than" or "instead of", no sales language.
 
-Keep to what the method says. Figures come only from the cases, each in its own context. The knowledge graph does not replace specifications, and for new and existing applications it matches the main branch; only a legacy modernization has a graph of its target. If the person's question falls outside what the method covers, say so plainly.`;
+Keep to what the method says, in its order. For an existing application and for a legacy modernization, the method starts by building the knowledge graph from the code, never from interviewing the people who remember the system; for a new application it starts with the functional layer. Say where it starts, and use "start" or "first" only about that step. Describe each kind of work only in its own platform's terms: never present a Breeze.AI practice, such as the pull request check or the graph update before a merge, as part of a legacy modernization, or an ASIMOV practice, such as the parity contract or the four gates, as part of work on a live application. Figures come only from the cases, each in its own context. The knowledge graph does not replace specifications, and for new and existing applications it matches the main branch; only a legacy modernization has a graph of its target. If the person's question falls outside what the method covers, say so plainly.`;
 
 
 /** How the guide's lines are written. Sent to every agent with the server's instructions, and part of the guide. */
@@ -37,6 +37,12 @@ The person hears two voices: the recorded narration, which is the expert, and yo
 
 **A deep dive's opening.** Say what this part adds to the short explanation, in one sentence. The label already names the topic, so do not repeat it.
 
+**Follow the method's order.** The method has a starting step for each kind of work (method_steps gives it): extraction of the graph from the code for an existing application, the functional layer for a new one, and Discover (a graph of the old system from its code) for a legacy modernization. Say where the method starts, and use "start", "begin" or "first" only about that step. Problems can come first in an explanation; the guide still does not suggest starting with anything the method does not start with.
+- Write: "So the method starts with the code itself: ASIMOV's agents turn it into a graph of the old system."
+- Avoid: "Start with the people." (the method starts from the code)
+
+**One platform per kind of work.** Breeze.AI runs new and existing applications; ASIMOV runs legacy modernization. Name the platform that runs the person's work, and describe its practices only.
+
 **Throughout.**
 - Plain words. Name a term the first time it appears: "a graph of the old system, the Source-state ontology".
 - Short sentences in the present tense, spoken to the person: "your team", "your system".
@@ -53,10 +59,10 @@ export const MOVES_TABLE = [
   ['  layer <layer>', 'Optional, once per layer: the problem area (functional, design, architecture, code). Symptoms shown must belong to these layers, or to none.'],
   ['  unowned <layer>', 'Optional, once per layer: a layer of knowledge nobody owns today. The explanation must then show who would own it.'],
   ['  say "<line>"', "Under explain: the guide's opening, spoken while the question shows on screen. It refers to the question in one short clause of the guide's own words, then says something new. Under any move: the guide's lead-in, spoken before it."],
-  ['show <concept>', 'Plays a cause, symptom, principle, practice or case: its main moment of the film, with a page quoted beside it. Concepts it requires are added first, from the graph, if not yet shown.'],
+  ['show <concept>', 'Plays a cause, symptom, principle, step, practice, case or platform: its main moment of the film, with a page quoted beside it. Concepts of the same platform that it requires are added first, from the graph, if not yet shown.'],
   ['connect <concept> to <concept>', 'Plays the evidence for a link the method makes between two concepts. Only links in the graph are allowed.'],
   ['compare <layer> today with after', 'Plays a layer of knowledge today, then under the method. For new and existing applications only. Show four-layer-graph first.'],
-  ['recommend <recommendation>', 'Plays a recommendation. It must fit the kind of work.'],
+  ['recommend <recommendation or step>', 'Plays a recommendation, or a step of the method as advice. It must fit the kind of work.'],
   ['caveat <limit>', 'Plays a limit the content states. Name at least one.'],
   ['answer "<line>"', "Last: the guide's answer to their question, in one or two sentences."],
   ['  read <page>#<section>', 'Under answer: offers a page section to read, for example "read sdlc/agents#the-kg-sync-agent".'],
@@ -73,12 +79,15 @@ export const RULES = [
   'A symptom shown should be addressed by something in the explanation (a warning).',
   'A case carries figures from one engagement: add "caveat results-in-context" (a warning).',
   'Name at least one limit (a warning).',
+  'The short explanation shows the step where the method starts for the kind of work (an error otherwise): breeze-extract for an existing application, breeze-functional-first for a new one, asimov-discover for a legacy modernization.',
+  'Steps of the method appear in their order within a part (a warning). A guide\'s line that says "start", "begin" or "first step" about anything other than the starting step gets a warning.',
+  'A guide\'s line that names ASIMOV in an explanation about a live application is an error; one that names Breeze.AI in a legacy modernization gets a warning (Breeze.AI appears there only for the four-layer graph after the migration).',
   'The short explanation ends with "answer" before the first deep dive. A deep dive builds on what the short explanation showed, never on another deep dive, because the person may watch them in any order; each symptom it shows must be addressed in it or in the short explanation.',
   'An owner for an "unowned" layer must appear in the short explanation, which everyone watches.',
 ];
 
-const KIND_TITLES: [Kind, string][] = [['context', 'Kinds of work'], ['layer', 'Layers of knowledge'], ['cause', 'Causes'], ['symptom', 'Symptoms'], ['principle', 'The four principles'], ['practice', 'Practices'], ['recommendation', 'Recommendations'], ['limit', 'Limits'], ['case', 'Cases']];
-const REL_WORDS: Record<string, string> = { 'part-of': 'part of', 'caused-by': 'caused by', 'addressed-by': 'addressed by', requires: 'requires', 'limited-by': 'limited by', 'shown-in': 'shown in', 'applies-to': 'applies to' };
+const KIND_TITLES: [Kind, string][] = [['context', 'Kinds of work'], ['platform', 'Platforms'], ['step', 'The method, step by step'], ['layer', 'Layers of knowledge'], ['cause', 'Causes'], ['symptom', 'Symptoms'], ['principle', 'The four principles'], ['practice', 'Practices'], ['recommendation', 'Recommendations'], ['limit', 'Limits'], ['case', 'Cases']];
+const REL_WORDS: Record<string, string> = { 'part-of': 'part of', 'caused-by': 'caused by', 'addressed-by': 'addressed by', requires: 'requires', 'limited-by': 'limited by', 'shown-in': 'shown in', 'applies-to': 'applies to', precedes: 'then', uses: 'carries out', 'runs-on': 'runs on' };
 const CONTEXT_WORDS: Record<string, string> = { greenfield: 'new applications', brownfield: 'existing applications', 'legacy-modernization': 'legacy modernization' };
 
 export const graphMarkdown = () => {
@@ -87,9 +96,10 @@ export const graphMarkdown = () => {
   for (const [kind, title] of KIND_TITLES) {
     L.push(`### ${title}`, '');
     const nodes = NODES.filter((x) => x.kind === kind);
+    if (kind === 'step') nodes.sort((a, b) => (a.platform ?? '').localeCompare(b.platform ?? '') || (a.order ?? 0) - (b.order ?? 0));
     if (kind === 'symptom') nodes.sort((a, b) => (a.layer ? layerOrder.indexOf(a.layer) : -1) - (b.layer ? layerOrder.indexOf(b.layer) : -1));
     for (const x of nodes) {
-      const extra = [x.layer && `${x.layer} layer`, x.custodian && `kept by the ${x.custodian}`, x.contexts && `for ${x.contexts.map((c) => CONTEXT_WORDS[c]).join(' and ')}`].filter(Boolean).join('; ');
+      const extra = [x.start && 'the method starts here', x.order && `step ${x.order}`, x.platform && (x.platform === 'asimov' ? 'ASIMOV' : 'Breeze.AI'), x.layer && `${x.layer} layer`, x.custodian && `kept by the ${x.custodian}`, x.contexts && `for ${x.contexts.map((c) => CONTEXT_WORDS[c]).join(' and ')}`].filter(Boolean).join('; ');
       L.push(`- \`${x.id}\` **${x.label}**${extra ? ` (${extra})` : ''}: ${x.definition}`);
       const groups = new Map<string, string[]>();
       EDGES.filter((e) => e.from === x.id).forEach((e) => groups.set(REL_WORDS[e.rel], [...(groups.get(REL_WORDS[e.rel]) ?? []), `\`${e.to}\``]));

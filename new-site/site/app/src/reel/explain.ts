@@ -9,8 +9,12 @@ import { placeOf, sceneByN } from './vocab';
 import { LIMITS, clipFor, closest, quoted, readLines, readingTime, novelty, echoes, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
 
 export const MOVES = ['explain', 'for', 'context', 'layer', 'unowned', 'say', 'show', 'connect', 'compare', 'recommend', 'caveat', 'answer', 'read', 'branch'];
-const SHOWABLE: Kind[] = ['cause', 'symptom', 'principle', 'practice', 'case'];
+const SHOWABLE: Kind[] = ['cause', 'symptom', 'principle', 'step', 'practice', 'case', 'platform'];
 const CONNECTABLE: Kind[] = [...SHOWABLE, 'recommendation', 'limit', 'layer', 'context'];
+/** A guide's line that tells the person where to begin. */
+const START_WORDS = /\b(start|begin)(s|ning)?\s+(with|by|from)\b|\bfirst step\b|\bthe first thing\b/i;
+/** Where the method starts for a kind of work: its one starting step. */
+export const startStep = (context: string) => NODES.find((x) => x.kind === 'step' && x.start && x.contexts?.includes(context as never));
 const byKind = (k: Kind[]) => NODES.filter((x) => k.includes(x.kind)).map((x) => x.id);
 const CONTEXT_WORDS: Record<string, string> = { greenfield: 'a new application', brownfield: 'an existing application', 'legacy-modernization': 'a legacy modernization' };
 /** How much of a required concept is played when the graph adds it. */
@@ -72,6 +76,9 @@ export const checkExplain = (code: string): Result => {
   let shownCases: number[] = [];
   let caveats = 0;
   let trunkAnswered = false;
+  let trunkAnswerLine = 0;
+  let moveNode: Node | undefined;            // the concept of the move being written, for checks on its "say"
+  let lastStep: Node | undefined;            // the last step of the method shown in this section
   let pendingSay: { text: string; line: number } | undefined;
   let current: { word: string; line: number; ok: boolean } | undefined;
   let answered = false;
@@ -109,6 +116,9 @@ export const checkExplain = (code: string): Result => {
         if (introduced.has(r) || chain.includes(r)) continue;
         const req = nodeById(r)!;
         if (plan.context && !fits(req, plan.context)) continue;
+        // Only concepts of the same platform are added, so an ASIMOV practice never pulls in a Breeze.AI moment,
+        // and a platform's practice does not pull in the general form of a principle it already carries out.
+        if ((req.platform ?? '') !== (node.platform ?? '')) continue;
         addRequired(r, [...chain, r]);
         introduced.set(r, line);
         before.push(...fromEvidence(req.evidence, line, { move, node: r, reason: `added from the graph: ${nodeById(chain[chain.length - 1] ?? node.id)?.label ?? node.label} requires ${req.label}` }, REQUIRED_SENTENCES));
@@ -121,12 +131,27 @@ export const checkExplain = (code: string): Result => {
     out.push(...before);
     out.push(...fromEvidence(node.evidence, line, { move, node: node.id }));
     introduced.set(node.id, introduced.get(node.id) ?? line);
+    // A step carries out its practices, so they count as shown.
+    if (node.kind === 'step') EDGES.filter((x) => x.from === node.id && x.rel === 'uses').forEach((x) => introduced.set(x.to, introduced.get(x.to) ?? line));
   };
 
   // A move's "say" is written under it and spoken before it, so each move is completed at the next one.
   let queued: (() => void) | undefined;
   const flush = () => { queued?.(); queued = undefined; pendingSay = undefined; };
   const lead = (move: string, node?: string) => { if (pendingSay) out.push({ kind: 'host', role: 'bridge', text: pendingSay.text, line: pendingSay.line, seconds: speakingTime(pendingSay.text), trace: { move, node, reason: "the guide's lead-in" } }); };
+
+  // A guide's line that names the other platform describes one platform's work in the other's terms.
+  const platformWords = (t: string, line: number) => {
+    if (!plan.context) return;
+    if (plan.context !== 'legacy-modernization' && /\basimov\b/i.test(t)) err(line, `the line names ASIMOV, which runs legacy modernization; ${CONTEXT_WORDS[plan.context]} runs on Breeze.AI.`);
+    if (plan.context === 'legacy-modernization' && /\bbreeze/i.test(t)) warn(line, 'the line names Breeze.AI, which runs new and existing applications; legacy modernization runs on ASIMOV. Name Breeze.AI only for the four-layer graph built after the migration.');
+  };
+  // Steps of the method follow its order within a section.
+  const stepOrder = (node: Node, line: number) => {
+    if (node.kind !== 'step') return;
+    if (lastStep && lastStep.platform === node.platform && (node.order ?? 0) < (lastStep.order ?? 0)) warn(line, `"${node.id}" comes before "${lastStep.id}" in the method, and is shown after it. Show the steps in the method's order.`);
+    lastStep = node;
+  };
 
   // The checks that close a section: each symptom it shows is addressed in it, and each case has its context.
   const endSection = () => {
@@ -142,7 +167,7 @@ export const checkExplain = (code: string): Result => {
     const w = l.rest.split(/\s+/).filter(Boolean);
     if (i === 0 && l.word !== 'explain') err(l.n, `an explanation starts with: explain "<the person's question>". Found "${l.word}".`);
     if (answered && !child && l.word !== 'branch') err(l.n, `"answer" ends ${branch ? 'this deep dive' : 'the short explanation'}; "${l.word}" comes after it. Start a deep dive with: branch "<what it covers>".`);
-    if (!child && l.word !== 'explain') { flush(); current = { word: l.word, line: l.n, ok: true }; }
+    if (!child && l.word !== 'explain') { flush(); current = { word: l.word, line: l.n, ok: true }; moveNode = undefined; }
     const header = (what: string) => { if (!child || current?.word !== 'explain') { err(l.n, `"${l.word}" goes indented under "explain", ${what}.`); return false; } return true; };
 
     switch (l.word) {
@@ -192,18 +217,23 @@ export const checkExplain = (code: string): Result => {
         if (t === undefined) { err(l.n, 'write the guide\'s line in double quotes: say "…"'); break; }
         if (pendingSay) err(l.n, 'a move has one "say".');
         problems.push(...textProblems(t, l.n, LIMITS.text, "guide's line"));
+        platformWords(t, l.n);
+        const start = plan.context ? startStep(plan.context) : undefined;
+        if (start && moveNode && START_WORDS.test(t) && moveNode.id !== start.id) warn(l.n, `this line tells the person where to begin, before "${moveNode.id}". For ${CONTEXT_WORDS[plan.context!]} the method starts with ${start.id} (${start.label}). Use "start" or "first" only about that step.`);
         pendingSay = { text: t, line: l.n };
         break;
       }
       case 'show': {
         if (child) { err(l.n, '"show" is a move of its own; remove the indent.'); break; }
         const node = concept(w[0], l.n, SHOWABLE, '"show"');
+        moveNode = node;
         if (!node || w.length > 1) { if (node) err(l.n, `"show" takes one concept. Found "${l.rest}".`); current!.ok = false; break; }
         if (node.kind === 'symptom' && node.layer && plan.layers.length && !plan.layers.includes(node.layer)) {
           err(l.n, `"${node.id}" shows in ${node.layer} knowledge, which is not in this problem area (${plan.layers.join(', ')}). Add "layer ${node.layer}" under explain, or show a symptom of these layers: ${NODES.filter((x) => x.kind === 'symptom' && (!x.layer || plan.layers.includes(x.layer))).map((x) => x.id).join(', ')}.`);
           current!.ok = false; break;
         }
-        if ((node.kind === 'principle' || node.kind === 'practice') && plan.context && !fits(node, plan.context)) { wrongWork(node, l.n, 'show'); current!.ok = false; break; }
+        if (node.kind !== 'case' && plan.context && !fits(node, plan.context)) { wrongWork(node, l.n, 'show'); current!.ok = false; break; }
+        stepOrder(node, l.n);
         if (node.kind === 'case' && plan.context && !fits(node, plan.context)) warn(l.n, `"${node.id}" comes from ${contextsOf(node).map((c) => CONTEXT_WORDS[c]).join(' or ')}; this explanation is about ${CONTEXT_WORDS[plan.context]}. Say why it still applies.`);
         if (node.kind === 'symptom') shownSymptoms.push({ id: node.id, line: l.n });
         if (node.kind === 'case') shownCases.push(l.n);
@@ -219,7 +249,7 @@ export const checkExplain = (code: string): Result => {
         if (!a || !b) { current!.ok = false; break; }
         const links = linksBetween(a.id, b.id);
         if (!links.length) { err(l.n, `the method does not link "${a.id}" and "${b.id}". "${a.id}" connects to: ${neighbours(a.id).join(', ') || 'nothing'}.`); current!.ok = false; break; }
-        for (const x of [a, b]) if (plan.context && (x.kind === 'principle' || x.kind === 'practice' || x.kind === 'recommendation') && !fits(x, plan.context)) { wrongWork(x, l.n, 'connect'); current!.ok = false; }
+        for (const x of [a, b]) if (plan.context && x.kind !== 'case' && x.kind !== 'context' && !fits(x, plan.context)) { wrongWork(x, l.n, 'connect'); current!.ok = false; }
         if (!current!.ok) break;
         if (!introduced.has(a.id) && !introduced.has(b.id)) warn(l.n, `neither "${a.id}" nor "${b.id}" has been shown yet. Connections read best from something already on screen.`);
         const link: Edge = links[0];
@@ -250,9 +280,11 @@ export const checkExplain = (code: string): Result => {
       case 'recommend': case 'caveat': {
         if (child) { err(l.n, `"${l.word}" is a move of its own; remove the indent.`); break; }
         const kind: Kind = l.word === 'recommend' ? 'recommendation' : 'limit';
-        const node = concept(w[0], l.n, [kind], `"${l.word}"`);
+        const node = concept(w[0], l.n, l.word === 'recommend' ? ['recommendation', 'step'] : [kind], `"${l.word}"`);
+        moveNode = node;
         if (!node) { current!.ok = false; break; }
         if (plan.context && !fits(node, plan.context)) { wrongWork(node, l.n, l.word); current!.ok = false; break; }
+        stepOrder(node, l.n);
         if (kind === 'limit') caveats++;
         queued = () => bring(node, l.n, l.word, pendingSay);
         break;
@@ -263,7 +295,8 @@ export const checkExplain = (code: string): Result => {
         if (t === undefined) { err(l.n, 'write the answer in double quotes: answer "…"'); break; }
         problems.push(...textProblems(t, l.n, LIMITS.text, 'answer'));
         answered = true;
-        if (!branch) trunkAnswered = true;
+        if (!branch) { trunkAnswered = true; trunkAnswerLine = l.n; }
+        platformWords(t, l.n);
         if (echoes(plan.question, t) >= 0.5) warn(l.n, 'the answer repeats the question. Following the style guide, say what to do, in the person\'s terms, without restating what they asked.');
         if (/^(to answer your question|in answer to|so,? to answer|the answer is)\b/i.test(t)) warn(l.n, 'the answer starts by announcing itself. Following the style guide, start with what to do.');
         queued = () => out.push({ kind: 'host', role: 'close', text: t, line: l.n, seconds: speakingTime(t), trace: { move: 'answer', reason: "the guide's answer to the question" } });
@@ -289,7 +322,8 @@ export const checkExplain = (code: string): Result => {
         plan.branches.push(branch);
         out = branch.segments; reads = branch.read;
         introduced = new Map(trunkIntroduced);
-        shownSymptoms = []; shownCases = []; answered = false;
+        shownSymptoms = []; shownCases = []; answered = false; lastStep = undefined;
+        platformWords(label, l.n);
         current = { word: 'branch', line: l.n, ok: true };
         queued = () => { if (pendingSay) out.push({ kind: 'host', role: 'bridge', text: pendingSay.text, line: pendingSay.line, seconds: speakingTime(pendingSay.text), trace: { move: 'branch', reason: "the guide's opening for this deep dive" } }); };
         break;
@@ -313,6 +347,9 @@ export const checkExplain = (code: string): Result => {
   for (const layer of plan.unowned) {
     if (!OWNERSHIP.some((o) => trunk.has(o))) err(last, `nobody owns the ${layer} layer today, and the method needs a named owner for every part of the graph. Show or connect one of: ${OWNERSHIP.join(', ')} in the short explanation, so the person sees who would keep that layer.`);
   }
+  // The method's own starting point: the short explanation shows where the method starts for this kind of work.
+  const start = plan.context ? startStep(plan.context) : undefined;
+  if (start && !trunk.has(start.id)) err(trunkAnswerLine || last, `the short explanation does not show where the method starts for ${CONTEXT_WORDS[plan.context!]}: ${start.label}. Add "show ${start.id}" before the answer, so the person hears the method's first step.`);
   if (!caveats) warn(last, 'the explanation names no limit. Add at least one "caveat", so the person sees where the method stops.');
   if (!trunkAnswered) warn(last, 'the short explanation has no "answer". End it with the guide answering the question in one or two sentences.');
   if (!plan.branches.length) warn(last, 'the explanation offers no deep dives. Add two to four with "branch", so the person can choose where to go deeper.');

@@ -8,7 +8,23 @@ import { referenceMarkdown } from './reference';
 import { searchBoth } from './search';
 import { SITE } from './prompt';
 
-const KINDS: Kind[] = ['context', 'layer', 'cause', 'symptom', 'principle', 'practice', 'recommendation', 'limit', 'case'];
+const KINDS: Kind[] = ['context', 'platform', 'layer', 'cause', 'symptom', 'principle', 'step', 'practice', 'recommendation', 'limit', 'case'];
+const CONTEXTS = ['greenfield', 'brownfield', 'legacy-modernization'];
+
+/** The method for one kind of work: the platform that runs it, and its steps in order from where it starts. */
+export const methodFor = (context: string) => {
+  const platform = EDGES.find((x) => x.from === context && x.rel === 'runs-on')?.to;
+  const steps: string[] = [];
+  let cur = NODES.find((x) => x.kind === 'step' && x.start && x.contexts?.includes(context as never))?.id;
+  while (cur && !steps.includes(cur)) { steps.push(cur); cur = EDGES.find((x) => x.from === cur && x.rel === 'precedes')?.to; }
+  return {
+    context: brief(context), platform: platform ? brief(platform) : undefined,
+    steps: steps.map((id, i) => ({ ...brief(id), position: i + 1, carriesOut: EDGES.filter((x) => x.from === id && x.rel === 'uses').map((x) => x.to) })),
+    startsWith: steps[0],
+    recommendations: NODES.filter((x) => x.kind === 'recommendation' && (x.contexts?.includes(context as never) || EDGES.some((y) => y.from === x.id && y.rel === 'applies-to' && y.to === context))).map((x) => x.id),
+    principles: NODES.filter((x) => x.kind === 'principle').map((x) => x.id),
+  };
+};
 
 /** The evidence behind a concept or link, as text: the film's sentences and the pages' passages. */
 export const evidenceText = (ev: Evidence) => ({
@@ -26,7 +42,7 @@ const minutes = (sec: number) => Math.round((sec / 60) * 10) / 10;
 /** How long each part runs: the short explanation, then each deep dive. */
 export const lengths = (plan: Plan) => ({ minutes: minutes(plan.seconds), parts: plan.segments.length, deepDives: plan.branches.map((b) => ({ label: b.label, minutes: minutes(b.seconds), parts: b.segments.length })) });
 
-const brief = (id: string) => { const x = nodeById(id)!; return { id: x.id, kind: x.kind, label: x.label, definition: x.definition, ...(x.layer ? { layer: x.layer } : {}), ...(x.custodian ? { custodian: x.custodian } : {}), ...(x.contexts ? { contexts: x.contexts } : {}) }; };
+const brief = (id: string) => { const x = nodeById(id)!; return { id: x.id, kind: x.kind, label: x.label, definition: x.definition, ...(x.layer ? { layer: x.layer } : {}), ...(x.custodian ? { custodian: x.custodian } : {}), ...(x.contexts ? { contexts: x.contexts } : {}), ...(x.platform ? { platform: x.platform } : {}), ...(x.start ? { start: true } : {}) }; };
 const layerIds = () => NODES.filter((x) => x.kind === 'layer').map((x) => x.id);
 
 export const TOOLS = {
@@ -36,9 +52,15 @@ export const TOOLS = {
     inputSchema: { type: 'object', properties: {} },
     run: () => ({ guide: referenceMarkdown() }),
   },
+  method_steps: {
+    title: 'The method for a kind of work',
+    description: 'The platform that runs a kind of work (greenfield, brownfield or legacy-modernization) and the method\'s steps for it in order, from the step where the method starts, with the practices each step carries out and the recommendations that apply.',
+    inputSchema: { type: 'object', properties: { context: { type: 'string', enum: CONTEXTS } }, required: ['context'] },
+    run: ({ context }: { context: string }) => (CONTEXTS.includes(context) ? methodFor(context) : { error: `unknown kind of work "${context}". Kinds: ${CONTEXTS.join(', ')}.` }),
+  },
   graph_concepts: {
     title: 'List concepts in the knowledge graph',
-    description: 'Concepts from the knowledge graph of Semantic Engineering, optionally filtered by kind (context, layer, cause, symptom, principle, practice, recommendation, limit, case) and, for symptoms, by layer of knowledge.',
+    description: 'Concepts from the knowledge graph of Semantic Engineering, optionally filtered by kind (context, platform, layer, cause, symptom, principle, step, practice, recommendation, limit, case) and, for symptoms, by layer of knowledge.',
     inputSchema: { type: 'object', properties: { kind: { type: 'string', enum: KINDS }, layer: { type: 'string', description: 'A layer of knowledge: functional, design, architecture or code' } } },
     run: ({ kind, layer }: { kind?: Kind; layer?: string }) => {
       if (kind && !KINDS.includes(kind)) return { error: `unknown kind "${kind}". Kinds: ${KINDS.join(', ')}.` };
