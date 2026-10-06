@@ -2,9 +2,10 @@
 // explanation and the evidence tool use: "scene 13 sentence 8" and "sdlc/agents#the-kg-sync-agent p3".
 // No browser APIs, so the MCP server shares it.
 import { PAGES, SCENES } from './vocab';
+import { SITE } from './prompt';
 
 export type Hit =
-  | { kind: 'sentence'; scene: number; sentence: number; ref: string; title: string; text: string; score: number }
+  | { kind: 'sentence'; scene: number; sentence: number; ref: string; title: string; url: string; text: string; score: number }
   | { kind: 'passage'; ref: string; page: string; section: string; url: string; text: string; score: number };
 
 const STOP = new Set('a an and are as at be by can do does for from has have how i in is it its of on or our so that the their them then there these they this to us was we what when where which who why will with would you your'.split(' '));
@@ -13,10 +14,10 @@ const terms = (t: string) => t.toLowerCase().replace(/[^a-z0-9\s-]/g, ' ').split
 
 type Doc = { hit: Omit<Hit, 'score'>; words: string[] };
 const DOCS: Doc[] = [
-  ...SCENES.flatMap((s) => s.sentences.map((x) => ({ hit: { kind: 'sentence' as const, scene: s.n, sentence: x.k, ref: `${s.n}.${x.k}`, title: s.title, text: x.text }, words: terms(`${x.text} ${s.title}`) }))),
+  ...SCENES.flatMap((s) => s.sentences.map((x) => ({ hit: { kind: 'sentence' as const, scene: s.n, sentence: x.k, ref: `${s.n}.${x.k}`, title: s.title, url: `${SITE}/watch/scene-${s.n}`, text: x.text }, words: terms(`${x.text} ${s.title}`) }))),
   // Top-level sections only: a subsection's blocks are already in its section, numbered there.
   ...Object.entries(PAGES).flatMap(([key, p]) => Object.entries(p.sections).filter(([, sec]) => !sec.in).flatMap(([anchor, sec]) => sec.paras.filter((x) => x.text && x.k !== 'diagram').map((x) => ({
-    hit: { kind: 'passage' as const, ref: `${key}${anchor ? `#${anchor}` : ''} p${x.n}`, page: p.title, section: anchor ? sec.title : '', url: p.url + (anchor ? `#${anchor}` : ''), text: x.text.length > 600 ? `${x.text.slice(0, 600)}…` : x.text },
+    hit: { kind: 'passage' as const, ref: `${key}${anchor ? `#${anchor}` : ''} p${x.n}`, page: p.title, section: anchor ? sec.title : '', url: SITE + p.url + (anchor ? `#${anchor}` : ''), text: x.text.length > 600 ? `${x.text.slice(0, 600)}…` : x.text },
     words: terms(`${x.text} ${sec.title} ${p.title}`),
   })))),
 ];
