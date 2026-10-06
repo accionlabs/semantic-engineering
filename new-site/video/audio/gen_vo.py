@@ -39,6 +39,11 @@ def synth(job):
     meta = out.with_suffix('.json')
     if out.exists() and meta.exists():
         return n, k, text, say, out.name, json.loads(meta.read_text())['ms'], False
+    # The same sentence voiced earlier at another position in the scene: reuse that clip.
+    for prev in sorted(HERE.glob(f'vo/s{n:02d}-*-{h}.mp3')):
+        if prev.with_suffix('.json').exists():
+            out.write_bytes(prev.read_bytes()); meta.write_text(prev.with_suffix('.json').read_text())
+            return n, k, text, say, out.name, json.loads(meta.read_text())['ms'], False
     body = json.dumps({'text': say, 'voice_setting': VOICE, 'audio_setting': AUDIO, 'output_format': 'url'}).encode()
     req = urllib.request.Request(f'https://fal.run/{MODEL}', data=body, headers={'Authorization': f'Key {key()}', 'Content-Type': 'application/json'})
     with urllib.request.urlopen(req, timeout=180) as r:

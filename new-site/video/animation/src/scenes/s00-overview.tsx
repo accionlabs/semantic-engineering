@@ -2,7 +2,7 @@ import React from 'react';
 import type { SceneDef } from '../engine/scene';
 import { appear, vanish } from '../engine/scene';
 import { AGENT, AgentIcon, Cards, COL, Custodians, DEV, Defs, Flow, KindLabels, STATIONS, TaxArrow, Token, translate, Y } from '../parts/Landscape';
-import { Bands, GY, Ties, TraversePath } from '../parts/Graph';
+import { Bands, GRAPH_BOTTOM, GY, item, Ties, TraversePath } from '../parts/Graph';
 import { GAP_Y, LOWER, Mark, Owners } from '../parts/Act3';
 import { GraphSync, syncClear, syncMerge, syncUpdate } from '../parts/Sync';
 import { Gate, GATE_X } from './s05-principles';
@@ -21,6 +21,14 @@ const LEVELS = [
   { who: 'A large, complex or legacy application', what: 'the knowledge graph, with one team or several' },
 ];
 const USES = ['building new applications', 'changing existing ones', 'replacing legacy systems'];
+const HOW: Record<string, string> = { functional: 'traced from the screens', design: 'from the running application', architecture: 'inferred from its structure', code: 'parsed from the code' };
+const SOURCES: [string, number, string][] = [['functional', 1, 'ticket'], ['design', 3, 'design frame'], ['architecture', 2, 'document'], ['code', 1, 'code file']];
+const OUTCOMES = [
+  { f: '3 to 5 days', l: 'of senior-engineer investigation replaced by impact analysis, on one brownfield application' },
+  { f: '53%', l: 'design component reuse in the first sprint of a new user-interface workstream' },
+  { f: '23%', l: 'fewer defects, same team, same codebase' },
+  { f: '15M+ lines', l: 'of legacy code modernized with ASIMOV, across 10+ programs' },
+];
 const PRINCIPLES = ['one structured graph', 'agents bound by it', 'a named owner for each part', 'a check on every change'];
 const SPOTS = [
   { label: 'impact analysis', x: STATIONS[0].x + 150 },
@@ -88,6 +96,34 @@ export const scene00: SceneDef = {
           <text x={GATE_X + 67} y={Y.flow + 78} textAnchor="middle" fontFamily={F.mono} fontSize={13} fill={C.pass}>evidence</text>
         </g>
         <GraphSync />
+        <g className="pre xcode">
+          <rect x={560} y={LOWER.y} width={800} height={110} rx={10} fill={C.canvasRaised} stroke={C.layer.code} strokeWidth={2} />
+          {[0, 1, 2, 3].map((r) => <rect key={r} x={584} y={LOWER.y + 20 + r * 18} width={[520, 380, 460, 300][r]} height={7} rx={3} fill={C.layer.code} opacity={0.6} />)}
+          <text x={1340} y={LOWER.y + 96} textAnchor="end" fontFamily={F.mono} fontSize={15} fill={C.text}>existing application</text>
+          {[0, 1, 2].map((i) => <AgentIcon key={i} x={1410 + i * 46} y={LOWER.y + 40} s={28} />)}
+        </g>
+        {KINDS.map((k) => (
+          <g key={k.id} className={`pre how how-${k.id}`}>
+            <rect x={COL[k.id] - 140} y={GRAPH_BOTTOM + 24} width={280} height={32} rx={16} fill={C.canvasRaised} stroke={C.layer[k.id]} strokeWidth={1.5} />
+            <text x={COL[k.id]} y={GRAPH_BOTTOM + 45} textAnchor="middle" fontFamily={F.sans} fontSize={16} fill={C.text}>{HOW[k.id]}</text>
+          </g>
+        ))}
+        <g className="pre xticks">{KINDS.map((k) => <Mark key={k.id} className="" x={COL[k.id] + 52} y={Y.person - 18} />)}</g>
+        <g className="pre grow">
+          <rect className="gtok" x={STATIONS[3].x - 18} y={Y.flow + 44} width={36} height={18} rx={4} fill={C.text} />
+          <line className="gline" x1={STATIONS[3].x} y1={Y.flow - 38} x2={STATIONS[3].x - 120} y2={GY.code + 40} stroke={C.layer.code} strokeWidth={2.5} />
+          {(['functional', 'design', 'architecture', 'code'] as const).map((k, i) => <circle key={k} className={`gnew gnew-${i}`} cx={1380 + i * 40} cy={GY[k] + 40} r={0} fill={C.pass} />)}
+        </g>
+        {SOURCES.map(([k, i, t]) => {
+          const n = item(k as 'code', i);
+          return (
+            <g key={t} className={`pre src src-${k}`}>
+              <line x1={n.x} y1={n.y} x2={n.x + 26} y2={n.y - 10} stroke={C.text} strokeWidth={1.2} />
+              <rect x={n.x + 26} y={n.y - 22} width={t.length * 8 + 16} height={22} rx={11} fill={C.canvas} stroke={C.text} strokeWidth={1.2} />
+              <text x={n.x + 34} y={n.y - 7} fontFamily={F.mono} fontSize={13} fill={C.text}>{t}</text>
+            </g>
+          );
+        })}
         <Strip cls="lv" items={LEVELS.map((l) => ({ a: l.who, b: l.what }))} />
         <g className="pre spots">
           {SPOTS.map((s) => (
@@ -108,12 +144,27 @@ export const scene00: SceneDef = {
           ))}
         </g>
         <Strip cls="plat" items={[{ a: 'Breeze.AI', b: 'new and existing applications' }, { a: 'ASIMOV', b: 'legacy modernization' }]} />
+        <g className="pre out">
+          {OUTCOMES.map((o, i) => (
+            <g key={o.f} className={`out-i out-${i}`}>
+              <rect x={150 + i * 405} y={LOWER.y - 6} width={381} height={124} rx={12} fill={C.canvasRaised} stroke={C.hairline} strokeWidth={1.5} />
+              <text x={170 + i * 405} y={LOWER.y + 34} fontFamily={F.display} fontSize={32} fontWeight={700} fill={C.text}>{o.f}</text>
+              <foreignObject x={170 + i * 405} y={LOWER.y + 46} width={345} height={66}>
+                <div style={{ fontFamily: F.sans, fontSize: 17, lineHeight: 1.25, color: C.cardText }}>{o.l}</div>
+              </foreignObject>
+            </g>
+          ))}
+        </g>
         <Strip cls="pr" items={PRINCIPLES.map((p) => ({ a: p }))} />
       </Svg>
       <Callout className="pre co co-know" {...CO} kind="The knowledge it needs" text="Written down nowhere an agent can read" tone={C.warn} target="problem.knowledge" />
       <Callout className="pre co co-fast" {...CO} kind="AI writes code faster" text="Delivery still waits while the team pays the tax" tone={C.tax} target="tax.ai" />
       <Callout className="pre co co-graph" {...CO} kind="Recorded once" text="A knowledge graph of what other parts depend on" tone={C.text} target="graph" />
       <Callout className="pre co co-owner" {...CO} kind="Each layer" text="Owned by the role that holds that knowledge" tone={C.text} target="custodians" />
+      <Callout className="pre co co-extract" {...CO} kind="Built by Breeze.AI's agents" text="From the existing application itself" tone={C.text} target="extraction.brownfield" />
+      <Callout className="pre co co-weeks" {...CO} kind="Reviewed by the custodians" text="2 to 3 weeks for 2M+ lines, typically" tone={C.pass} target="fig.extraction" />
+      <Callout className="pre co co-grow" {...CO} kind="A new application" text="The graph grows as the code merges" tone={C.pass} target="graph.main-branch" />
+      <Callout className="pre co co-src" {...CO} kind="Every item" text="Points back to its source" tone={C.text} target="graph.citations" />
       <Callout className="pre co co-impact" {...CO} kind="Impact analysis" text="Before any code is written; agents cannot ignore it" tone={C.text} target="agent.impact-analysis" />
       <Callout className="pre co co-spec" {...CO} kind="The specification" text="Describes each change; the graph governs how it fits" tone={C.text} target="spec.and-graph" />
       <Callout className="pre co co-check" x={150} y={GAP_Y - 8} w={560} kind="Every change" text="Checked against the graph before it merges, with evidence" tone={C.pass} target="gate.validation" />
@@ -189,59 +240,104 @@ export const scene00: SceneDef = {
     const s10 = cue('owners', 's10');
     tl.fromTo(q('.tie line'), { attr: { 'stroke-width': 2 } }, { attr: { 'stroke-width': 4 }, duration: 0.4, immediateRender: false }, s10 + 0.3);
     appear(ctx, '.co-owner', s10 + 0.4);
-    // s11: impact analysis before coding.
-    const s11 = cue('impact', 's11');
-    vanish(ctx, '.co-owner', s11);
+    // s11 to s13: for an existing application, agents build the graph from the application; custodians review it.
+    const x1 = cue('extract', 's11');
+    vanish(ctx, '.co-owner', x1);
+    tl.to(q('.tie line'), { attr: { 'stroke-width': 2 }, duration: 0.3 }, x1);
+    tl.to(q('.g.band, .g.xlink, .tie'), { autoAlpha: 0, duration: 0.4 }, x1 + 0.2);
+    appear(ctx, '.xcode', x1 + 0.5);
+    appear(ctx, '.co-extract', x1 + 0.8);
+    const x2 = cue('derive', 's12');
+    vanish(ctx, '.co-extract', x2);
+    KINDS.slice().reverse().forEach((k, i) => {
+      tl.fromTo(q(`.band-${k.id}`), { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.6, immediateRender: false }, x2 + 0.3 + i * 1.6);
+      appear(ctx, `.how-${k.id}`, x2 + 0.5 + i * 1.6, { y: 0 });
+    });
+    tl.to(q('.g.xlink, .tie'), { autoAlpha: 1, duration: 0.5 }, x2 + 6.8);
+    const x3 = cue('review', 's13');
+    vanish(ctx, '.how', x3);
+    appear(ctx, '.xticks', x3 + 0.3, { y: 0 });
+    appear(ctx, '.co-weeks', x3 + 0.6);
+    // s14: a new application: the graph grows as code merges.
+    const x4 = cue('grow', 's14');
+    vanish(ctx, '.co-weeks, .xticks, .xcode', x4);
+    tl.set(q('.grow'), { autoAlpha: 1 }, x4 + 0.3);
+    tl.fromTo(q('.gtok'), { autoAlpha: 0, attr: { x: STATIONS[2].x - 18 } }, { autoAlpha: 1, attr: { x: STATIONS[3].x - 18 }, duration: 1.0, immediateRender: false }, x4 + 0.3);
+    tl.fromTo(q('.gline'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 0.6, immediateRender: false }, x4 + 1.4);
+    [0, 1, 2, 3].forEach((i) => tl.fromTo(q(`.gnew-${i}`), { attr: { r: 0 } }, { attr: { r: 8 }, duration: 0.4, ease: 'back.out(2)', immediateRender: false }, x4 + 2.0 + i * 0.25));
+    appear(ctx, '.co-grow', x4 + 1.0);
+    // s15: every item points to its source.
+    const x5 = cue('sources', 's15');
+    vanish(ctx, '.co-grow, .gtok, .gline', x5);
+    (['functional', 'design', 'architecture', 'code'] as const).forEach((k, i) => tl.to(q(`.gnew-${i}`), { attr: { fill: C.layer[k], r: 6 }, duration: 0.4 }, x5));
+    SOURCES.forEach(([k], i) => appear(ctx, `.src-${k}`, x5 + 0.3 + i * 0.5, { y: 0 }));
+    appear(ctx, '.co-src', x5 + 0.6);
+    // s16: impact analysis before coding.
+    const s11 = cue('impact', 's16');
+    vanish(ctx, '.co-src, .src', s11);
     tl.to(q('.tie line'), { attr: { 'stroke-width': 2 }, duration: 0.3 }, s11);
     tl.fromTo(q('.trav'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 1.4, immediateRender: false }, s11 + 0.3);
     appear(ctx, '.co-impact', s11 + 0.6);
     // s12: the specification still describes the change.
-    const s12 = cue('spec', 's12');
+    const s12 = cue('spec', 's17');
     vanish(ctx, '.co-impact, .trav', s12);
     appear(ctx, '.spec', s12 + 0.3);
     appear(ctx, '.co-spec', s12 + 0.5);
     // s13: every change checked before it merges.
-    const s13 = cue('check', 's13');
+    const s13 = cue('check', 's18');
     vanish(ctx, '.co-spec, .spec', s13);
     appear(ctx, '.gatew', s13 + 0.3, { y: 0 });
     appear(ctx, '.check', s13 + 1.0, { y: 0 });
     appear(ctx, '.co-check', s13 + 1.2);
     // s14: the graph is updated before the change merges.
-    const s14 = cue('sync', 's14');
+    const s14 = cue('sync', 's19');
     vanish(ctx, '.co-check, .check', s14);
     syncMerge(ctx, syncUpdate(ctx, s14 + 0.3) + 0.4);
     // s15 to s18: how much of the method a team needs.
-    const s15 = cue('levels', 's15');
+    const s15 = cue('levels', 's20');
     syncClear(ctx, s15);
     showStrip('lv', 3, s15 + 0.3);
-    [0, 1, 2].forEach((i) => pick('lv', i, cue(`level-${i}`, `s${16 + i}`) + 0.1));
+    pick('lv', 0, s15 + 1.4);
+    pick('lv', 1, cue('level-1', 's20+5'));
+    pick('lv', 2, cue('level-2', 's21') + 0.1);
     // s19: Breeze.AI's agents carry each change.
-    const s19 = cue('breeze', 's19');
+    const s19 = cue('breeze', 's22');
     vanish(ctx, '.lv', s19);
     tl.to(q('.gatew text'), { autoAlpha: 0, duration: 0.3 }, s19);
     appear(ctx, '.spots', s19 + 0.3);
     appear(ctx, '.co-breeze', s19 + 0.6);
     // s20: people decide; every agent has an owner.
-    const s20 = cue('people', 's20');
+    const s20 = cue('people', 's23');
     vanish(ctx, '.co-breeze, .spots', s20);
     appear(ctx, '.owners', s20 + 0.3);
     appear(ctx, '.co-people', s20 + 0.6);
     // s21: three use cases.
-    const s21 = cue('uses', 's21');
+    const s21 = cue('uses', 's24');
     vanish(ctx, '.co-people, .owners', s21);
     tl.to(q('.gatew text'), { autoAlpha: 1, duration: 0.3 }, s21 + 0.3);
     showStrip('use', 3, s21 + 0.3);
     // s22: legacy modernization has its own graphs.
-    const s22 = cue('legacy', 's22');
+    const s22 = cue('legacy', 's25');
     pick('use', 2, s22 + 0.1);
     appear(ctx, '.mini', s22 + 0.5);
     // s23: two platforms.
-    const s23 = cue('platforms', 's23');
+    const s23 = cue('platforms', 's26');
     vanish(ctx, '.use, .mini', s23);
     showStrip('plat', 2, s23 + 0.3);
     // s24: four principles.
-    const s24 = cue('principles', 's24');
-    vanish(ctx, '.plat', s24);
+    // s27 to s29: outcomes, each with its context.
+    const o1 = cue('outcome-1', 's27');
+    vanish(ctx, '.plat', o1);
+    tl.set(q('.out'), { autoAlpha: 1 }, o1 + 0.2);
+    tl.set(q('.out-i'), { autoAlpha: 0 }, 0);
+    tl.fromTo(q('.out-0'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, o1 + 0.3);
+    const o2 = cue('outcome-2', 's28');
+    tl.fromTo(q('.out-1'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, o2 + 0.3);
+    tl.fromTo(q('.out-2'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, cue('outcome-2b', 's28+4.5'));
+    const o3 = cue('outcome-3', 's29');
+    tl.fromTo(q('.out-3'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, o3 + 0.3);
+    const s24 = cue('principles', 's30');
+    vanish(ctx, '.out', s24);
     showStrip('pr', 4, s24 + 0.3);
   },
 };
