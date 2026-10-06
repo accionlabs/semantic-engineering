@@ -75,7 +75,7 @@ export const scene04: SceneDef = {
         <rect className="pre row-frame" x={200} y={Y.card - 12} width={1520} height={Y.cardH + 24} rx={14} fill="none" stroke={C.text} strokeWidth={1.5} strokeDasharray="6 6" />
       </Svg>
       <Callout className="pre co-see" x={1240} y={Y.tax - 200} w={460} kind="What the agent can read" text="Codebase · ticket · wiki (often stale)" tone={C.text} target="agent.context-limit" />
-      <Callout className="pre co-ask" x={1240} y={Y.tax - 200} w={360} kind="The agent" text="Cannot ask" tone={C.warn} target="agent.cannot-ask" />
+      <Callout className="pre co-ask" x={760} y={Y.flow + 100} w={360} kind="The agent" text="Cannot ask" tone={C.warn} target="agent.cannot-ask" />
       <Callout className="pre co-invisible" x={760} y={190} w={460} kind="The custodians' knowledge" text="Invisible to the agent" tone={C.warn} target="agent.invisible" />
       <Callout className="pre co-removed" x={1230} y={Y.tax - 200} w={520} kind="In one example" text="Calls a function removed three sprints ago" tone={C.warn} anchor={{ x: COL.code, y: Y.flow + 46 }} target="example.removed-function" />
       <Callout className="pre co-small" x={1080} y={Y.flow + 96} w={280} kind="Small, contained" text="Done well" tone={C.pass} target="agent.small-tasks" />
