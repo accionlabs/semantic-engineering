@@ -216,7 +216,7 @@
         </g>
         <g transform="matrix(11,0,0,11,-38.360352,0)">
         </g>
-        <text x="-238.632px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">Source-state ontology + annotated speciﬁcation seed the four-layer ontology on the modern stack.</text>
+        <text x="0px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);text-anchor:middle;">The graph is extracted from the new code; the annotated speciﬁcation seeds the functional layer.</text>
     </g>
     <g transform="matrix(1,0,0,1,876,607)">
         <text x="-149.201px" y="0px" style="font-family:'Helvetica';font-size:11px;fill:var(--se-text-secondary,#4b5563);">The same four custodians continue under the sprint cadence.</text>

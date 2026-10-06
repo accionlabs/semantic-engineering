@@ -192,7 +192,7 @@ Each mode consumes a different slice of the same modernization intelligence core
 - Does not replace the continuous SDLC operating model; the two do not overlap and Mode 5 is what runs until the continuous SDLC engagement starts (or instead of it)
 - Does not produce new code at modernization scale
 
-This mode is the bridge to the continuous SDLC instantiation. The Source-state ontology (now the running state of the modern system) and the custodian-annotated specification can transfer to the four-layer ontology under the continuous SDLC operating model. The four custodians who governed the modernization ontologies continue as the four custodians of the four-layer ontology; the cadence of custodianship shifts from stage-sequenced to sprint-cadenced.
+This mode is the bridge to the continuous SDLC instantiation. The four-layer ontology under the continuous SDLC operating model is built from the modernized system: the Code Ontology is extracted from the new code, and the custodian-annotated specification seeds the Functional Ontology. The four custodians who governed the modernization ontologies continue as the four custodians of the four-layer ontology; the cadence of custodianship shifts from stage-sequenced to sprint-cadenced.
 
 ## Natural Progression and Stopping Points
 

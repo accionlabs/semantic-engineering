@@ -119,11 +119,11 @@ Compared to the four-layer SDLC ontology, the modernization ontology has more st
 
 ## How the Two Instantiations Connect at the Handoff
 
-When a modernization engagement completes, the Source-state ontology that the modernization built and the Functional Ontology that the SME's annotations effectively documented are available as the seed for the four-layer ontology on the modern stack. The transition path:
+When a modernization engagement completes, the four-layer ontology on the modern stack is built from what the modernization produced. The Code Ontology is extracted from the new code, because the graph has to match what is in the main branch. The Source-state ontology describes the old system and stays as the record of it. The transition path:
 
 | Modernization output | What it becomes in the continuous SDLC instantiation |
 |---|---|
-| Source-state ontology (post-migration: now the running state of the modern system) | Seed for the four-layer Code Ontology under the Engineering Team's custodianship going forward |
+| The migrated code in the main branch | Extracted into the four-layer Code Ontology, as for any existing application, under the Engineering Team's custodianship going forward |
 | Annotated specification (Retain / Modify entries) | Seed for the Functional Ontology under the Product Owner's custodianship |
 | Target blueprint (architecture and standards) | Seed for the Architecture Ontology under the Architect's custodianship |
 | Target blueprint (design system) | Seed for the Design Ontology under the UX Designer's custodianship |

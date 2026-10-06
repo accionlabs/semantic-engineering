@@ -3,13 +3,13 @@ import type { SceneDef } from '../engine/scene';
 import { appear, vanish } from '../engine/scene';
 import { AGENT, AgentIcon, Custodians, Defs, Flow, KindLabels } from '../parts/Landscape';
 import { BAND_H, Bands, GX, GY, Ties } from '../parts/Graph';
-import { COLS, LOW_Y, P, Pipeline, ROW, rowY, TGT_H, tgtY } from '../parts/Pipeline';
+import { BAR, COLS, LOW_Y, Pipeline, ROW, rowY, TGT_H, tgtY } from '../parts/Pipeline';
 import { Body, Callout, FigureChip, Frame, Svg } from '../parts/ui';
 import { C } from '../theme';
 
 // Scene 26. Results, and the handover. The ASIMOV figures, each with its context; outcomes vary. When
-// the client wants ongoing governance, the graph is carried over: the Source-state graph seeds the code
-// layer, the Retain and Modify decisions the functional layer, the target blueprint the architecture and
+// the client wants ongoing governance, a four-layer graph is built: the code layer is extracted from the
+// new code, the Retain and Modify decisions the functional layer, the target blueprint the architecture and
 // design layers; the same custodians continue, and the work moves to regular sprints.
 const CHIPS = [
   { f: '15M+ lines', l: 'of legacy code modernized across more than ten programs', s: 'ASIMOV engagements', t: 'fig.asimov-15m-loc' },
@@ -22,7 +22,7 @@ const POS = [{ x: 150, y: 170 }, { x: 700, y: 170 }, { x: 1250, y: 170 }, { x: 1
 // Each handover moves a part of the pipeline into one layer of the four-layer graph.
 const BAND = (k: keyof typeof GY) => ({ x: GX.x0, y: GY[k], w: GX.x1 - GX.x0, h: BAND_H });
 const MOVES = [
-  { cls: 'hv-code', from: { x: COLS.source.x, y: P.y0, w: COLS.source.w, h: P.y1 - P.y0 }, to: BAND('code'), hue: C.layer.code },
+  { cls: 'hv-code', from: { x: BAR.x, y: BAR.y, w: BAR.w, h: BAR.h }, to: BAND('code'), hue: C.layer.code },
   { cls: 'hv-functional', from: { x: ROW.x, y: rowY(0), w: ROW.w, h: rowY(1) + ROW.h - rowY(0) }, to: BAND('functional'), hue: C.layer.functional },
   { cls: 'hv-architecture', from: { x: COLS.target.x + 20, y: tgtY(0), w: COLS.target.w - 40, h: tgtY(2) + TGT_H - tgtY(0) }, to: BAND('architecture'), hue: C.layer.architecture },
   { cls: 'hv-design', from: { x: COLS.target.x + 20, y: tgtY(3), w: COLS.target.w - 40, h: TGT_H }, to: BAND('design'), hue: C.layer.design },
@@ -46,7 +46,8 @@ export const scene26: SceneDef = {
       </Svg>
       {CHIPS.map((c, i) => <FigureChip key={i} className={`pre chip chip-${i}`} x={POS[i].x} y={POS[i].y} w={500} figure={c.f} label={c.l} source={c.s} target={c.t} />)}
       <Body className="pre vary" x={1250} y={480} w={520} size={24} colour={C.text}>Actual outcomes vary by engagement scope, target stack and the modules selected.</Body>
-      <Callout className="pre co co-travel" x={1130} y={LOW_Y + 10} w={640} kind="When the client wants ongoing governance" text="The graph is carried over to the new system" tone={C.text} target="handover.graph" />
+      <Callout className="pre co co-travel" x={1130} y={LOW_Y + 10} w={640} kind="When the client wants ongoing governance" text="A four-layer graph is built for the new system" tone={C.text} target="handover.graph" />
+      <Callout className="pre co co-newcode" x={1130} y={LOW_Y + 10} w={640} kind="The code layer" text="Extracted from the new code" tone={C.layer.code} target="handover.graph" />
       <Callout className="pre co co-sprints" x={1130} y={LOW_Y + 10} w={640} kind="The same four custodians" text="Project stages give way to regular sprints" tone={C.text} target="handover.custodians" />
     </Frame>
   ),
@@ -78,10 +79,13 @@ export const scene26: SceneDef = {
     };
     const s7 = cue('to-code', 's6');
     vanish(ctx, '.co-travel', s7);
-    tl.to(q('.pp-bar, .pp-gates'), { opacity: 0, duration: 0.4 }, s7);
+    tl.to(q('.pp-gates'), { opacity: 0, duration: 0.4 }, s7);
+    tl.to(q('.pp-bar'), { opacity: 0, duration: 0.5 }, s7 + 2.4);
     tl.to(q('.pp-source, .col-source'), { opacity: 0.15, duration: 0.6 }, s7 + 0.3);
-    move(0, s7 + 0.3);
+    move(0, s7 + 0.6);
+    appear(ctx, '.co-newcode', s7 + 0.8);
     const s8 = cue('to-functional', 's7');
+    vanish(ctx, '.co-newcode', s8);
     tl.to(q('.spec-row-2, .spec-row-3, .spec-row-4, .tag-2, .tag-3'), { opacity: 0.1, duration: 0.5 }, s8 + 0.2);
     tl.to(q('.spec-row-0, .spec-row-1, .tag-0, .tag-1, .col-spec'), { opacity: 0.15, duration: 0.6 }, s8 + 1.0);
     move(1, s8 + 0.9);
