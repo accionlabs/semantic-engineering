@@ -6,8 +6,8 @@ import { Base, Card, GAP_Y, LOWER, Mark } from '../parts/Act3';
 import { Callout, Frame, Svg } from '../parts/ui';
 import { C, F } from '../theme';
 
-// Scene 10. When are specifications not enough? Fine for one developer, and for one team with a spec per
-// change; past that, four limits appear; the graph sits alongside the specification and supplies the rest.
+// Scene 10. When are specifications not enough? Fine for small tasks, and for a small application with a
+// spec per change; as the application grows complex, four limits appear; the graph sits alongside the specification and supplies the rest.
 const SPEC = STATIONS[0];
 
 export const scene10: SceneDef = {
@@ -21,10 +21,10 @@ export const scene10: SceneDef = {
         {[0, 1, 2].map((i) => <Mark key={i} className={`pre tick tick-${i}`} x={STATIONS[3].x - 40 + i * 40} y={Y.flow + 58} />)}
         <Card className="pre spec" x={SPEC.x - 75} y={Y.flow - 104} w={150} h={50} lines={3} />
         <g className="pre lanes">
-          {[0, 1].map((r) => (
-            <g key={r}>
-              <text x={150} y={LOWER.y + 30 + r * 60} fontFamily={F.mono} fontSize={14} fill={C.muted}>TEAM {r === 0 ? 'B' : 'C'}</text>
-              {STATIONS.map((s) => <rect key={s.id} x={s.x - 100} y={LOWER.y + 10 + r * 60} width={200} height={34} rx={7} fill="none" stroke={C.hairline} strokeWidth={1.5} />)}
+          {['a large existing system', 'a legacy code base', 'work across team boundaries'].map((t, i) => (
+            <g key={t} className={`cx cx-${i}`}>
+              <rect x={150 + i * 548} y={LOWER.y + 10} width={524} height={56} rx={10} fill={C.canvasRaised} stroke={C.warn} strokeWidth={1.8} />
+              <text x={412 + i * 548} y={LOWER.y + 46} textAnchor="middle" fontFamily={F.sans} fontSize={21} fill={C.text}>{t}</text>
             </g>
           ))}
         </g>
@@ -42,7 +42,7 @@ export const scene10: SceneDef = {
         <text className="pre lab-change" x={SPEC.x} y={Y.flow - 116} textAnchor="middle" fontFamily={F.mono} fontSize={14} fill={C.text}>the change</text>
         <text className="pre lab-app" x={960} y={GAP_Y + 50} textAnchor="middle" fontFamily={F.mono} fontSize={16} fill={C.text}>the application the change lands in</text>
       </Svg>
-      <Callout className="pre co-team" x={1180} y={GAP_Y} w={420} kind="One team, one product" text="A written specification for each change" tone={C.text} target="spec.one-team" />
+      <Callout className="pre co-team" x={1180} y={GAP_Y} w={420} kind="A small application" text="A written specification for each change" tone={C.text} target="spec.one-team" />
       <Callout className="pre co-local" x={1180} y={GAP_Y} w={420} kind="Limit 1" text="Local context" tone={C.warn} target="limit.local-context" />
       <Callout className="pre co-drift" x={1180} y={GAP_Y} w={420} kind="Limit 2" text="Drift from the code" tone={C.warn} target="limit.drift" />
       <Callout className="pre co-one" x={1180} y={GAP_Y} w={420} kind="Limit 3" text="One layer only" tone={C.warn} target="limit.one-layer" />
@@ -53,6 +53,7 @@ export const scene10: SceneDef = {
   build: (ctx) => {
     const { tl, q, cue } = ctx;
     tl.set(q('.g, .tie, .top'), { opacity: 0.15 }, 0);
+    tl.set(q('.cx'), { autoAlpha: 0 }, 0);
     // s1: small tasks pass quickly.
     const s1 = cue('small', 's0');
     [0, 1, 2].forEach((i) => {
@@ -60,15 +61,16 @@ export const scene10: SceneDef = {
       tl.fromTo(q(`.task-${i}`), { attr: { x: STATIONS[1].x - 14 } }, { attr: { x: STATIONS[3].x - 54 + i * 40 }, duration: 1, ease: 'power1.inOut' }, s1 + i * 0.8);
       appear(ctx, `.tick-${i}`, s1 + 1 + i * 0.8, { y: 0 });
     });
-    // s2: one team, a specification per change.
+    // s2: a small application, a specification per change.
     const s2 = cue('spec', 's1');
     vanish(ctx, '.task, .tick', s2);
     appear(ctx, '.spec', s2 + 0.2);
     appear(ctx, '.co-team', s2 + 0.6);
-    // s3: work crosses teams, or reaches deep into a large system.
+    // s3: the application grows complex: a large existing system, legacy code, work across teams.
     const s3 = cue('teams', 's2');
     vanish(ctx, '.co-team', s3);
-    appear(ctx, '.lanes', s3 + 0.2);
+    tl.set(q('.lanes'), { autoAlpha: 1 }, s3 + 0.2);
+    [0, 1, 2].forEach((i) => tl.fromTo(q(`.cx-${i}`), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, s3 + 0.3 + i * 1.2));
     // s4 to s7: the four limits.
     const s4 = cue('local', 's3');
     appear(ctx, '.local', s4, { y: 0 });

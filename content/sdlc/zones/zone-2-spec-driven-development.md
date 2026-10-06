@@ -38,11 +38,13 @@ SDD is the right operating mode for a substantial set of contexts. For these tea
 
 | Context | Why SDD is sufficient |
 |---|---|
-| Single team, single product, single repository | One person can hold the architecture, product mechanics, and design system in their head. The spec carries the per-change intent; the team's mental model carries the structural context. |
+| Single team, single product, single repository, on a codebase small enough to hold in mind | One person can hold the architecture, product mechanics, and design system in their head. The spec carries the per-change intent; the team's mental model carries the structural context. |
 | Greenfield project with one clear owner per layer | The product owner, architect, and designer triangle is small enough to coordinate verbally between spec sprints. Architecture and design decisions live in the team's collective memory at acceptable accuracy. |
 | Mid-size applications without significant brownfield complexity | Codebase is small enough that "where does X live" is answerable without a knowledge graph. The team's tenure on the code is long enough that tacit knowledge is fresh. |
 | Early-stage B2B SaaS in the one-to-two-year range | The product surface is still small. Cross-team coordination has not yet emerged because there is only one team. Time-to-market matters more than long-term context infrastructure. |
 | Internal tooling for a single team | The audience and the producer are the same team. Cross-team integration risk is zero by design. |
+
+The size and complexity of the application decide the fit. A single team working on a large legacy application needs the knowledge graph, as described in [Zone 3](_index.md#zone-3-sdd-plus-semantic-engineering).
 
 Examples that fit the pattern: a five-engineer startup shipping a single B2B product where the founding architect is still hands-on; a platform team inside a larger company maintaining one well-bounded internal service where the team owns the entire stack; a greenfield rebuild where the original system's complexity has been deliberately left behind and the new system is small enough that one architect can hold its current shape.
 

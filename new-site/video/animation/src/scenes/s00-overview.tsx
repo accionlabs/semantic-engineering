@@ -16,9 +16,9 @@ import { C, F, KINDS } from '../theme';
 const CO = { x: 1180, y: GAP_Y - 8, w: 540 };
 const ROW = (i: number, n = 3) => ({ x: 150 + i * (1620 / n), w: 1620 / n - 24 });
 const LEVELS = [
-  { who: 'One developer, a prototype', what: 'chat with an AI tool' },
-  { who: 'One team, one product', what: 'a written specification per change' },
-  { who: 'Several teams, a large existing system', what: 'the knowledge graph' },
+  { who: 'A prototype or small tool', what: 'chat with an AI tool' },
+  { who: 'A small application', what: 'a written specification per change' },
+  { who: 'A large, complex or legacy application', what: 'the knowledge graph, with one team or several' },
 ];
 const USES = ['building new applications', 'changing existing ones', 'replacing legacy systems'];
 const PRINCIPLES = ['one structured graph', 'agents bound by it', 'a named owner for each part', 'a check on every change'];
