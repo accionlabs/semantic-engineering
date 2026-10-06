@@ -6,7 +6,7 @@
 // and quotes from the site's pages, which the player runs. No browser APIs, so the MCP server shares it.
 import { EDGES, NODES, nodeById, type Edge, type Evidence, type Kind, type Node } from './graph';
 import { placeOf, sceneByN } from './vocab';
-import { LIMITS, clipFor, closest, quoted, readLines, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
+import { LIMITS, clipFor, closest, quoted, readLines, readingTime, repeats, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
 
 export const MOVES = ['explain', 'for', 'context', 'layer', 'unowned', 'say', 'show', 'connect', 'compare', 'recommend', 'caveat', 'answer', 'read', 'branch'];
 const SHOWABLE: Kind[] = ['cause', 'symptom', 'principle', 'practice', 'case'];
@@ -153,7 +153,12 @@ export const checkExplain = (code: string): Result => {
         problems.push(...textProblems(q, l.n, LIMITS.question, 'question'));
         plan.question = q;
         current = { word: 'explain', line: l.n, ok: true };
-        queued = () => out.push({ kind: 'host', role: 'intro', text: pendingSay?.text ?? '', line: l.n, seconds: speakingTime(`${plan.question} ${pendingSay?.text ?? ''}`), trace: { move: 'explain', reason: "the question, and the guide's opening" } });
+        queued = () => {
+          const opening = pendingSay?.text ?? '';
+          // The question is shown, not spoken: the opening must not say it again.
+          if (pendingSay && repeats(plan.question, opening) >= 0.5) warn(pendingSay.line, 'the opening repeats the question, which is already on screen. Open with something new, for example what the explanation will show first.');
+          out.push({ kind: 'host', role: 'intro', text: opening, line: l.n, seconds: Math.max(speakingTime(opening || plan.question), readingTime(plan.question)), trace: { move: 'explain', reason: "the question on screen, and the guide's opening" } });
+        };
         break;
       }
       case 'for': {

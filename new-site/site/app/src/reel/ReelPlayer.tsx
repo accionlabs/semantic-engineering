@@ -3,7 +3,7 @@ import { FilmView, type Film } from '@film/engine/film';
 import { fontsReady } from '@film/fonts';
 import { C, F } from '@film/theme';
 import { MAIN } from '../player/Player';
-import { quoteFor, speakingTime, type Plan, type Segment } from './language';
+import { quoteFor, readingTime, speakingTime, type Plan, type Segment } from './language';
 import { speak, speechAvailable, voices, pickVoice, chooseVoice } from './speech';
 import '../player/player.css';
 import { media } from '../content/media';
@@ -101,7 +101,9 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
       } else window.setTimeout(() => { spoke = true; done(); }, speakingTime(text || ' ') * 1000);
     };
 
-    if (seg.kind === 'host') { say(seg.role === 'intro' ? `${plan.question} ${seg.text}` : seg.text, next); return; }
+    // The question is on screen; the guide speaks only the opening, and the card stays up long enough to
+    // read the question. Without an opening, the guide reads the question.
+    if (seg.kind === 'host') { say(seg.role === 'intro' ? seg.text || plan.question : seg.text, next, seg.role === 'intro' ? readingTime(plan.question) : 0); return; }
     if (seg.kind === 'quote') { timer.current = window.setTimeout(next, seg.seconds * 1000); return; }
     // An expert clip: the narration's clock drives the picture, as in the main player.
     const a = audio.current;
