@@ -24,6 +24,7 @@ RULES = [
     (r'\w, not (a|an|the|just|only|merely|\w+)\b', 'contrast "X, not Y"'),
     (r"\bnot\b[^.]{0,80}\. (It|This|That|They) (is|are)\b", 'contrast "not X. It is Y"'),
     (r"\b(is|are)(n't| not)\b[^.]{0,60}[;,] (it|they) (is|are)\b", 'contrast "is not X, it is Y"'),
+    (r'\b(rather than|instead of)\b', 'contrast "X rather than Y"'),
     (r'\b(the site|this site|on the site|the page|this page|\w+ page)\b', 'refers to where the video is hosted'),
     (r'\b(video|act \d|this act|each act|next act|the comparison|this scene|the next scene)\b', 'refers to the video itself'),
     (r'\b(revolutionary|game-changing|cutting-edge|seamless|unlock|world-class|best-in-class)\b', 'sales language'),
