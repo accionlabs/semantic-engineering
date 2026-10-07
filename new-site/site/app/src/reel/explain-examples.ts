@@ -113,6 +113,15 @@ branch "From the code to a decision on every module"
 show source-state-graph
 show target-state-graph
 show asimov-document
+sample four-decisions "Decisions on your COBOL modules"
+  say "Here is what those decisions could look like for your system."
+  line "module CLAIMS-ENTRY       Retain"
+  line "module RATE-CALC          Modify"
+  line "module DATE-UTILS         Replace"
+  line "module PRINT-STATEMENTS   Retire"
+  note 2 "Modify: the Product Owner records how the behavior changes."
+  note 4 "Retire: the module is removed, and it stays documented."
+  reject "module BATCH-RECONCILE" "It has no decision yet."
 caveat module-needs-decision
 
 branch "Migrating and proving each module"

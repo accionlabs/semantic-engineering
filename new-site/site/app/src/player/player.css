@@ -264,3 +264,4 @@
 .builder-def { display: block; font-size: 0.86rem; line-height: 1.4; margin-top: 2px; }
 .builder-go { margin-top: 16px; width: auto; display: inline-block; }
 .reel-share { margin-left: 6px; }
+.reel-tick.k-sample { background: #8a5a12; }

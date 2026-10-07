@@ -41,6 +41,8 @@ The person hears two voices: the recorded narration, which is the expert, and yo
 - Write: "So the method starts with the code itself: ASIMOV's agents turn it into a graph of the old system."
 - Avoid: "Start with the people." (the method starts from the code)
 
+**A sample.** Write it in the person's own nouns, small enough to read in a few seconds: a handful of lines, two or three notes that point to what the method records or checks, and at most one line the method would refuse, with the reason in the method's terms. Invent no figures, product names or claims about their system; the card says it is an illustration. Show the method's own version of the artefact first.
+
 **One platform per kind of work.** Breeze.AI runs new and existing applications; ASIMOV runs legacy modernization. Name the platform that runs the person's work, and describe its practices only.
 
 **Throughout.**
@@ -67,6 +69,10 @@ export const MOVES_TABLE = [
   ['answer "<line>"', "Last: the guide's answer to their question, in one or two sentences."],
   ['  read <page>#<section>', 'Under answer: offers a page section to read, for example "read sdlc/agents#the-kg-sync-agent".'],
   ['branch "<what it covers>"', `After the short explanation's answer: starts a deep dive the person can choose, labelled in up to ${LIMITS.label} characters. It holds its own moves, an optional "say" under it as the guide's opening, and an optional "answer" to close it. Up to ${LIMITS.branches} deep dives.`],
+  ['sample <concept> "<title>"', `A small sample, written by you in the person's own terms, of an artefact the method produces: four-layer-graph (an excerpt of the graph), impact-report, pr-validation (a check result) or four-decisions (decisions on modules). Shown as a card marked as an illustration. Show the concept first; one sample per part.`],
+  ['  line "<text>"', `1 to ${LIMITS.sampleLines} lines, each up to ${LIMITS.sampleWidth} characters. Spaces inside the quotes indent.`],
+  ['  note <n> "<what line n shows>"', `0 to ${LIMITS.sampleNotes} notes after the lines; the guide speaks each while its line lights up.`],
+  ['  reject "<line>" "<why>"', 'Optional, last: one line the method would refuse, such as a link the graph does not allow, a violation the check fails, or a module with no decision, and why.'],
   ['# comment', 'Ignored.'],
 ];
 
@@ -84,6 +90,7 @@ export const RULES = [
   'A guide\'s line that names ASIMOV in an explanation about a live application is an error; one that names Breeze.AI in a legacy modernization gets a warning (Breeze.AI appears there only for the four-layer graph after the migration).',
   'The short explanation ends with "answer" before the first deep dive. A deep dive builds on what the short explanation showed, never on another deep dive, because the person may watch them in any order; each symptom it shows must be addressed in it or in the short explanation.',
   'An owner for an "unowned" layer must appear in the short explanation, which everyone watches.',
+  'A sample illustrates only four-layer-graph, impact-report, pr-validation or four-decisions, fits the kind of work, comes after its concept is shown, and appears at most once per part; its lines, notes and rejected line follow the limits above and the writing rules.',
 ];
 
 const KIND_TITLES: [Kind, string][] = [['context', 'Kinds of work'], ['platform', 'Platforms'], ['step', 'The method, step by step'], ['layer', 'Layers of knowledge'], ['cause', 'Causes'], ['symptom', 'Symptoms'], ['principle', 'The four principles'], ['practice', 'Practices'], ['recommendation', 'Recommendations'], ['limit', 'Limits'], ['case', 'Cases']];

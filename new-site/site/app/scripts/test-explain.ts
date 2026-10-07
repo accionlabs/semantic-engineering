@@ -78,6 +78,17 @@ const CASES: Case[] = [
   { name: 'an ASIMOV practice adds no Breeze.AI moments', code: X('show four-gates', 'legacy-modernization', []).replace('caveat graph-not-a-spec', 'caveat contract-fixed'), ok: true },
   { name: 'a problem of live applications is not shown in a legacy modernization', code: X('show specs-fall-short', 'legacy-modernization', []).replace('caveat graph-not-a-spec', 'caveat contract-fixed'), ok: false, expect: [{ line: 3, includes: 'holds for a new application and an existing application' }] },
   { name: 'the Manual Translation Tax belongs to live applications', code: X('show manual-translation-tax', 'legacy-modernization', []).replace('caveat graph-not-a-spec', 'caveat contract-fixed'), ok: false, expect: [{ line: 3, includes: 'holds for' }] },
+  // Samples: an illustration of an artefact the method produces, written by the agent.
+  { name: 'a sample passes', code: X('show impact-report\nsample impact-report "Your alert change"\n  line "functional  outcome  weekly alerts"\n  line "code        worker   daily-digest"\n  note 2 "The worker in another repository is found before coding."\n  reject "service  billing" "Nothing links billing to this change."'), ok: true, traces: ['an illustration written by the agent'] },
+  { name: 'a sample needs an artefact the method produces', code: X('show kg-sync\nsample kg-sync "Sync"\n  line "x"'), ok: false, expect: [{ line: A + 1, includes: 'has no sample' }] },
+  { name: 'a sample comes after its concept is shown', code: X('sample impact-report "Report"\n  line "x"'), ok: false, expect: [{ line: A, includes: 'show impact-report before its sample' }] },
+  { name: 'a sample needs lines', code: X('show impact-report\nsample impact-report "Report"'), ok: false, expect: [{ line: A + 1, includes: 'has no lines' }] },
+  { name: 'a note points at a line', code: X('show impact-report\nsample impact-report "Report"\n  line "x"\n  note 3 "Nothing there."'), ok: false, expect: [{ line: A + 3, includes: 'no line 3 to note' }] },
+  { name: 'sample lines fit the card', code: X('show impact-report\nsample impact-report "Report"\n  line "' + 'x'.repeat(57) + '"'), ok: false, expect: [{ line: A + 2, includes: 'at most 56' }] },
+  { name: 'one sample per part', code: X('show impact-report\nsample impact-report "One"\n  line "x"\nsample impact-report "Two"\n  line "y"'), ok: false, expect: [{ line: A + 3, includes: 'already has a sample' }] },
+  { name: 'one rejected line', code: X('show impact-report\nsample impact-report "Report"\n  line "x"\n  reject "y" "No."\n  reject "z" "No."'), ok: false, expect: [{ line: A + 4, includes: 'one rejected line' }] },
+  { name: 'a line belongs to a sample', code: X('show impact-report\n  line "x"'), ok: false, expect: [{ line: A + 1, includes: 'goes indented under a "sample"' }] },
+  { name: 'a legacy sample does not fit live work', code: X('show impact-report\nsample four-decisions "Modules"\n  line "x"'), ok: false, expect: [{ line: A + 1, includes: 'holds for a legacy modernization' }] },
   { name: 'shows nothing from the film', code: 'explain "Q"\n  context brownfield\nanswer "A."', ok: false, expect: [{ line: 3, includes: 'does not show where the method starts' }] },
 ];
 

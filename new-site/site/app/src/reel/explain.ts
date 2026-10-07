@@ -6,9 +6,21 @@
 // and quotes from the site's pages, which the player runs. No browser APIs, so the MCP server shares it.
 import { EDGES, NODES, nodeById, type Edge, type Evidence, type Kind, type Node } from './graph';
 import { placeOf, sceneByN } from './vocab';
-import { LIMITS, clipFor, closest, quoted, readLines, readingTime, novelty, echoes, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
+import { LIMITS, clipFor, closest, quoted, readLines, readingTime, novelty, echoes, sampleLineProblems, speakingTime, textProblems, type Branch, type Plan, type Problem, type Result, type Segment } from './language';
 
-export const MOVES = ['explain', 'for', 'context', 'layer', 'unowned', 'say', 'show', 'connect', 'compare', 'recommend', 'caveat', 'answer', 'read', 'branch'];
+export const MOVES = ['explain', 'for', 'context', 'layer', 'unowned', 'say', 'show', 'connect', 'compare', 'recommend', 'caveat', 'answer', 'read', 'branch', 'sample', 'line', 'note', 'reject'];
+
+/** The artefacts an agent may illustrate with a small sample in the person's own terms, with the card's kicker
+ *  and what the guide says over a rejected line. Each belongs to its platform's kind of work. */
+export const SAMPLE_CONCEPTS: Record<string, { kicker: string; rejects: string }> = {
+  'four-layer-graph': { kicker: 'An excerpt of the graph', rejects: 'The graph refuses this line.' },
+  'impact-report': { kicker: 'An impact report', rejects: 'Impact analysis flags this line.' },
+  'pr-validation': { kicker: 'A pull request check', rejects: 'The check fails this change.' },
+  'four-decisions': { kicker: 'Decisions on modules', rejects: 'This module cannot be migrated.' },
+};
+/** How long a sample card plays: the lines typing in, each note spoken, the rejected line and its reason. */
+export const sampleSeconds = (lines: number, notes: string[], reject?: { reason: string }, rejects = '') =>
+  1.5 + 0.5 * lines + notes.reduce((t, x) => t + speakingTime(x), 0) + (reject ? 2 + speakingTime(`${rejects} ${reject.reason}`) : 0) + 1.2;
 const SHOWABLE: Kind[] = ['cause', 'symptom', 'principle', 'step', 'practice', 'case', 'platform'];
 const CONNECTABLE: Kind[] = [...SHOWABLE, 'recommendation', 'limit', 'layer', 'context'];
 /** A guide's line that tells the person where to begin. */
@@ -79,6 +91,8 @@ export const checkExplain = (code: string): Result => {
   let trunkAnswerLine = 0;
   let moveNode: Node | undefined;            // the concept of the move being written, for checks on its "say"
   let lastStep: Node | undefined;            // the last step of the method shown in this section
+  let sampled = false;                        // a part holds at most one sample
+  let sample: (Segment & { kind: 'sample' }) | undefined;   // the sample being written
   let pendingSay: { text: string; line: number } | undefined;
   let current: { word: string; line: number; ok: boolean } | undefined;
   let answered = false;
@@ -289,6 +303,59 @@ export const checkExplain = (code: string): Result => {
         queued = () => bring(node, l.n, l.word, pendingSay);
         break;
       }
+      case 'sample': {
+        if (child) { err(l.n, '"sample" is a move of its own; remove the indent.'); break; }
+        const m = l.rest.match(/^(\S+)\s+("(?:[^"\\]|\\.)*")$/);
+        if (!m) { err(l.n, 'write a sample as: sample <concept> "<title>", for example sample four-layer-graph "Your saved-search alerts in the graph".'); current!.ok = false; break; }
+        const node = concept(m[1], l.n, ['practice'], '"sample"');
+        if (!node) { current!.ok = false; break; }
+        if (!SAMPLE_CONCEPTS[node.id]) { err(l.n, `"${node.id}" is not an artefact the method produces, so it has no sample. Samples illustrate: ${Object.keys(SAMPLE_CONCEPTS).join(', ')}.`); current!.ok = false; break; }
+        if (plan.context && !fits(node, plan.context)) { wrongWork(node, l.n, 'sample'); current!.ok = false; break; }
+        if (!introduced.has(node.id)) { err(l.n, `show ${node.id} before its sample, so the person meets the method's version first.`); current!.ok = false; break; }
+        if (sampled) { err(l.n, `${branch ? 'this deep dive' : 'the short explanation'} already has a sample; a part holds at most one.`); current!.ok = false; break; }
+        const title = quoted(m[2])!;
+        problems.push(...textProblems(title, l.n, LIMITS.sampleTitle, 'sample title'));
+        sampled = true;
+        const smp: Segment & { kind: 'sample' } = { kind: 'sample', concept: node.id, title, lines: [], notes: [], line: l.n, seconds: 0, trace: { move: 'sample', node: node.id, reason: 'an illustration written by the agent, not from the method\'s sources' } };
+        sample = smp;
+        queued = () => {
+          if (!smp.lines.length) { err(smp.line, 'the sample has no lines. Add 1 to ' + LIMITS.sampleLines + ' lines with: line "<text>"'); return; }
+          lead('sample', node.id);
+          smp.seconds = sampleSeconds(smp.lines.length, smp.notes.map((x) => x.text), smp.reject, SAMPLE_CONCEPTS[node.id].rejects);
+          out.push(smp);
+        };
+        break;
+      }
+      case 'line': case 'note': case 'reject': {
+        if (!child || current?.word !== 'sample' || !sample || sample.line !== current.line) { err(l.n, `"${l.word}" goes indented under a "sample".`); break; }
+        if (!current.ok) break;
+        if (l.word === 'line') {
+          const t = quoted(l.rest);
+          if (t === undefined) { err(l.n, 'write the line in double quotes: line "<text>". Spaces inside the quotes indent it.'); break; }
+          if (sample.notes.length || sample.reject) { err(l.n, 'the lines come first, then the notes, then the rejected line.'); break; }
+          if (sample.lines.length >= LIMITS.sampleLines) { err(l.n, `a sample has at most ${LIMITS.sampleLines} lines.`); break; }
+          problems.push(...sampleLineProblems(t, l.n, 'sample line'));
+          sample.lines.push(t);
+        } else if (l.word === 'note') {
+          const m = l.rest.match(/^(\d+)\s+("(?:[^"\\]|\\.)*")$/);
+          if (!m) { err(l.n, 'write a note as: note <line number> "<what that line shows>"'); break; }
+          if (sample.reject) { err(l.n, 'the notes come before the rejected line.'); break; }
+          const k = Number(m[1]);
+          if (k < 1 || k > sample.lines.length) { err(l.n, `the sample has ${sample.lines.length} line${sample.lines.length === 1 ? '' : 's'}; there is no line ${k} to note.`); break; }
+          if (sample.notes.length >= LIMITS.sampleNotes) { err(l.n, `a sample has at most ${LIMITS.sampleNotes} notes.`); break; }
+          const t = quoted(m[2])!;
+          problems.push(...textProblems(t, l.n, LIMITS.text, 'note'));
+          sample.notes.push({ line: k, text: t });
+        } else {
+          const m = l.rest.match(/^("(?:[^"\\]|\\.)*")\s+("(?:[^"\\]|\\.)*")$/);
+          if (!m) { err(l.n, 'write the rejected line as: reject "<the line>" "<why it is refused>"'); break; }
+          if (sample.reject) { err(l.n, 'a sample has one rejected line.'); break; }
+          const text = quoted(m[1])!, reason = quoted(m[2])!;
+          problems.push(...sampleLineProblems(text, l.n, 'rejected line'), ...textProblems(reason, l.n, LIMITS.text, 'reason'));
+          sample.reject = { text, reason };
+        }
+        break;
+      }
       case 'answer': {
         if (child) { err(l.n, '"answer" is a move of its own; remove the indent.'); break; }
         const t = quoted(l.rest);
@@ -322,7 +389,7 @@ export const checkExplain = (code: string): Result => {
         plan.branches.push(branch);
         out = branch.segments; reads = branch.read;
         introduced = new Map(trunkIntroduced);
-        shownSymptoms = []; shownCases = []; answered = false; lastStep = undefined;
+        shownSymptoms = []; shownCases = []; answered = false; lastStep = undefined; sampled = false;
         platformWords(label, l.n);
         current = { word: 'branch', line: l.n, ok: true };
         queued = () => { if (pendingSay) out.push({ kind: 'host', role: 'bridge', text: pendingSay.text, line: pendingSay.line, seconds: speakingTime(pendingSay.text), trace: { move: 'branch', reason: "the guide's opening for this deep dive" } }); };
@@ -376,6 +443,7 @@ export const sectionListing = (segs: Segment[]) => segs.map((x) => {
   const why = x.trace?.reason ? `   # ${x.trace.reason}` : x.trace?.node ? `   # ${x.trace.node}` : '';
   if (x.kind === 'host') return `guide ${x.role}${why}`;
   if (x.kind === 'quote') return `quote ${x.quotes.join(', ')}${why}`;
+  if (x.kind === 'sample') return `sample ${x.concept}: ${x.lines.length} line${x.lines.length === 1 ? '' : 's'}, ${x.notes.length} note${x.notes.length === 1 ? '' : 's'}${x.reject ? ', one rejected line' : ''}${why}`;
   const sc = sceneByN(x.scene)!;
   const range = x.sentences[0] === 1 && x.sentences[1] === sc.sentences.length ? '' : x.sentences[0] === x.sentences[1] ? ` sentence ${x.sentences[0]}` : ` sentences ${x.sentences[0]}-${x.sentences[1]}`;
   return `play scene ${x.scene}${range}${x.quotes.length ? ` + quote ${x.quotes.join(', ')}` : ''}${why}`;

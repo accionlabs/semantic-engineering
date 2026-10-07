@@ -5,6 +5,7 @@ import { C, F } from '@film/theme';
 import { MAIN } from '../player/Player';
 import { quoteFor, readingTime, speakingTime, type Plan, type Segment } from './language';
 import { speak, speechAvailable, voices, pickVoice, chooseVoice } from './speech';
+import { SAMPLE_CONCEPTS } from './explain';
 import '../player/player.css';
 import { media } from '../content/media';
 
@@ -31,6 +32,37 @@ const HostCard: React.FC<{ seg: Segment & { kind: 'host' }; question: string }> 
   </div>
 );
 
+/** A sample the agent wrote: lines type in, each note lights its line, then the rejected line and its reason. */
+type SampleAt = { shown: number; note: number; rejected: boolean };
+const SampleCard: React.FC<{ seg: Segment & { kind: 'sample' }; at: SampleAt }> = ({ seg, at }) => {
+  const lit = at.note >= 0 ? seg.notes[at.note]?.line : undefined;
+  return (
+    <div key={seg.line} className="reel-card" style={{ background: C.canvas, padding: '0 150px' }}>
+      <div style={{ fontFamily: F.mono, fontSize: 22, letterSpacing: 4, color: C.warn, textTransform: 'uppercase' }}>{SAMPLE_CONCEPTS[seg.concept]?.kicker ?? 'A sample'} · an illustration</div>
+      <div style={{ fontFamily: F.display, fontWeight: 700, fontSize: 48, marginTop: 16 }}>{seg.title}</div>
+      <div style={{ display: 'flex', gap: 40, marginTop: 30, alignItems: 'flex-start' }}>
+        <div style={{ flex: '0 0 auto', minWidth: 900, background: C.canvasRaised, border: `1.5px solid ${C.hairline}`, borderRadius: 14, padding: '22px 0', fontFamily: F.mono, fontSize: 30, lineHeight: 1.55 }}>
+          {seg.lines.slice(0, at.shown).map((t, i) => (
+            <div key={i} style={{ display: 'grid', gridTemplateColumns: '70px 1fr', padding: '0 28px 0 0', background: lit === i + 1 ? 'rgba(44,197,180,0.18)' : 'transparent', color: lit === i + 1 ? C.layer.architecture : C.text, whiteSpace: 'pre' }}>
+              <span style={{ color: C.muted, textAlign: 'right', paddingRight: 22 }}>{i + 1}</span><span>{t}</span>
+            </div>
+          ))}
+          {seg.reject && at.rejected && (
+            <div style={{ borderTop: `2px dashed ${C.hairline}`, marginTop: 14, paddingTop: 14, display: 'grid', gridTemplateColumns: '70px 1fr', color: C.tax, whiteSpace: 'pre' }}>
+              <span style={{ textAlign: 'right', paddingRight: 22 }}>✕</span><span>{seg.reject.text}</span>
+            </div>
+          )}
+        </div>
+        <div style={{ flex: 1, fontFamily: F.sans, fontSize: 32, lineHeight: 1.4, color: C.text }}>
+          {at.note >= 0 && seg.notes[at.note] && <><div style={{ fontFamily: F.mono, fontSize: 22, color: C.layer.architecture, letterSpacing: 2 }}>LINE {seg.notes[at.note].line}</div><div style={{ marginTop: 8 }}>{seg.notes[at.note].text}</div></>}
+          {at.rejected && seg.reject && <><div style={{ fontFamily: F.mono, fontSize: 22, color: C.tax, letterSpacing: 2 }}>REJECTED</div><div style={{ marginTop: 8 }}>{seg.reject.reason}</div></>}
+        </div>
+      </div>
+      <div style={{ position: 'absolute', left: 150, bottom: 60, fontFamily: F.mono, fontSize: 19, color: C.muted, letterSpacing: 1 }}>ILLUSTRATION WRITTEN BY YOUR AGENT · NOT FROM THE METHOD&apos;S SOURCES, AND NOT ANY REAL SYSTEM</div>
+    </div>
+  );
+};
+
 const QuoteCard: React.FC<{ seg: Segment & { kind: 'quote' } }> = ({ seg }) => {
   const q = quoteFor(seg.quotes[0]);
   if (!q) return null;
@@ -50,6 +82,7 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
   const [ready, setReady] = useState(false);
   const [scale, setScale] = useState(0.5);
   const [index, setIndex] = useState(-1);
+  const [sampleAt, setSampleAt] = useState<SampleAt>({ shown: 0, note: -1, rejected: false });
   const [playing, setPlaying] = useState(false);
   const [sound, setSound] = useState(true);
   const [voiceList, setVoiceList] = useState<SpeechSynthesisVoice[]>([]);
@@ -118,6 +151,28 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
     // the card stays up long enough to read the question. Without an opening, the guide introduces the question.
     if (seg.kind === 'host') { say(seg.role === 'intro' ? seg.text || `You asked: ${plan.question}` : seg.text, next, seg.role === 'intro' ? readingTime(plan.question) : 0); return; }
     if (seg.kind === 'quote') { timer.current = window.setTimeout(next, seg.seconds * 1000); return; }
+    if (seg.kind === 'sample') {
+      // Lines type in, each note lights its line while the guide speaks it, then the rejected line and its reason.
+      setSampleAt({ shown: 0, note: -1, rejected: false });
+      const after = (ms: number, then: () => void) => { timer.current = window.setTimeout(() => { if (alive()) then(); }, ms); };
+      const finish = () => after(1200, next);
+      const reject = () => {
+        if (!seg.reject) return finish();
+        setSampleAt((x) => ({ ...x, note: -1, rejected: true }));
+        say(`${SAMPLE_CONCEPTS[seg.concept]?.rejects ?? ''} ${seg.reject.reason}`, finish, 2);
+      };
+      const note = (k: number) => {
+        if (k >= seg.notes.length) return reject();
+        setSampleAt((x) => ({ ...x, note: k }));
+        say(seg.notes[k].text, () => note(k + 1));
+      };
+      const type = (n: number) => {
+        setSampleAt((x) => ({ ...x, shown: n }));
+        if (n < seg.lines.length) after(450, () => type(n + 1)); else after(700, () => note(0));
+      };
+      after(500, () => type(1));
+      return;
+    }
     // An expert clip: the narration's clock drives the picture, as in the main player.
     const a = audio.current;
     const begin = startOf(seg.scene) + (from ?? seg.from), end = startOf(seg.scene) + seg.to;
@@ -185,7 +240,7 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
 
   const seg = index >= 0 && index < segs.length ? segs[index] : undefined;
   const elapsed = segs.slice(0, Math.max(0, index)).reduce((a, s) => a + s.seconds, 0);
-  const guideOnScreen = seg?.kind === 'host' || seg?.kind === 'quote';
+  const guideOnScreen = seg?.kind === 'host' || seg?.kind === 'quote' || seg?.kind === 'sample';
   return (
     <section className="player reel-player" aria-label="Your explanation">
       <div ref={box} className="player-stage" style={{ height: H * scale }} onClick={(e) => { if ((e.target as Element).closest('button, a')) return; playing ? pause() : play(); }}>
@@ -193,6 +248,7 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
           <FilmView items={MAIN} onReady={onReady} />
           {seg?.kind === 'host' && <HostCard seg={seg} question={plan.question} />}
           {seg?.kind === 'quote' && <QuoteCard seg={seg} />}
+          {seg?.kind === 'sample' && <SampleCard seg={seg} at={sampleAt} />}
           {seg?.kind === 'clip' && <div className="reel-voice">EXPERT · RECORDED NARRATION</div>}
         </div>
         {!ready && <div className="player-loading">Loading the film</div>}

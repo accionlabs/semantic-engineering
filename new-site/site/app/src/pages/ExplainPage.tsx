@@ -15,6 +15,8 @@ import { unpackExplanation } from '../reel/link';
 import { Builder } from './Builder';
 import { track } from '../reel/track';
 
+const lower = (t: string) => t.charAt(0).toLowerCase() + t.slice(1);
+
 /** A page reference ("sdlc/agents#the-kg-sync-agent p3") as a location the reader opens. */
 const locOf = (ref: string): Loc | undefined => {
   const p = placeOf(ref);
@@ -33,6 +35,14 @@ const Beside: React.FC<{ seg?: Segment; plan: Plan; onRead: (ref: string) => voi
   const parts = seg.trace?.node?.split(' ') ?? [];
   const node = parts.length === 1 ? nodeById(parts[0]) : undefined;
   const link = parts.length === 3 ? { from: nodeById(parts[0]), to: nodeById(parts[2]) } : undefined;
+  if (seg.kind === 'sample') return (
+    <aside className="companion" aria-live="polite">
+      <p className="kicker">An illustration by your agent</p>
+      <h2 className="companion-title">{seg.title}</h2>
+      {node && <p className="muted companion-note">A sample of {lower(node.label)}, written for your situation.</p>}
+      <p className="reel-why">Not from the method&apos;s sources, and not from any real system. The method&apos;s own description is in the parts before it.</p>
+    </aside>
+  );
   const quotes = seg.kind === 'clip' || seg.kind === 'quote' ? seg.quotes : [];
   return (
     <aside className="companion" aria-live="polite">

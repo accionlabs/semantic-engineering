@@ -10,6 +10,7 @@ export type Segment = (
   | { kind: 'host'; role: 'intro' | 'bridge' | 'close'; text: string; line: number; seconds: number }
   | { kind: 'clip'; scene: number; from: number; to: number; sentences: [number, number]; quotes: string[]; line: number; seconds: number }
   | { kind: 'quote'; quotes: string[]; line: number; seconds: number }
+  | { kind: 'sample'; concept: string; title: string; lines: string[]; notes: { line: number; text: string }[]; reject?: { text: string; reason: string }; line: number; seconds: number }
 ) & { trace?: Trace };
 /** A deep dive: a section the viewer chooses after the short explanation. */
 export type Branch = { label: string; line: number; segments: Segment[]; read: string[]; seconds: number };
@@ -19,7 +20,7 @@ export type Result = { ok: boolean; problems: Problem[]; plan?: Plan };
 
 /** The short explanation runs at most two minutes and each deep dive at most three, so a viewer never
  *  watches more than three minutes without choosing where to go next. */
-export const LIMITS = { question: 180, audience: 80, text: 240, label: 60, lines: 120, clips: 12, trunkSeconds: 120, branchSeconds: 180, branches: 4 };
+export const LIMITS = { question: 180, audience: 80, text: 240, label: 60, lines: 120, clips: 12, trunkSeconds: 120, branchSeconds: 180, branches: 4, sampleWidth: 56, sampleTitle: 60, sampleLines: 10, sampleNotes: 3 };
 const WORDS_PER_SECOND = 2.6;
 /** How long a guide's line takes to speak, used when the browser cannot tell us. */
 export const speakingTime = (text: string) => text.split(/\s+/).filter(Boolean).length / WORDS_PER_SECOND + 0.8;
@@ -64,6 +65,18 @@ export const textProblems = (text: string, line: number, max: number, what: stri
   if (/[–—]/.test(text)) err(`the ${what} contains a dash (– or —). The site's writing rules use a comma, colon or full stop instead.`);
   if (/\bnot\b[^.!?]{0,60}\bbut\b|\bisn't\b[^.!?]{0,40}\bit's\b|\brather than\b|\binstead of\b/i.test(text)) warn(`the ${what} reads as a contrast ("not this, but that", "rather than", "instead of"), which the site's writing rules avoid. Say what is true directly.`);
   if (/\b(revolutionary|game-changing|cutting-edge|seamless|unlock|transformative|world-class|honestly|honest)\b/i.test(text)) warn(`the ${what} uses sales language the site avoids.`);
+  return out;
+};
+
+/** A line of a sample: plain text that fits the card, with no web address, markup, dash or tab. */
+export const sampleLineProblems = (text: string, line: number, what: string): Problem[] => {
+  const out: Problem[] = [];
+  const err = (message: string) => out.push({ line, message, severity: 'error' });
+  if (text.length > LIMITS.sampleWidth) err(`the ${what} is ${text.length} characters; a sample line holds at most ${LIMITS.sampleWidth}.`);
+  if (/https?:\/\/|www\./i.test(text)) err(`the ${what} contains a web address. A sample is an illustration, not a link.`);
+  if (/[<>]/.test(text)) err(`the ${what} contains < or >. Write the sample as plain text.`);
+  if (/[–—]/.test(text)) err(`the ${what} contains a dash (– or —). The site's writing rules use a comma, colon or full stop instead.`);
+  if (/\t/.test(text)) err(`the ${what} contains a tab. Indent with spaces inside the quotes.`);
   return out;
 };
 
