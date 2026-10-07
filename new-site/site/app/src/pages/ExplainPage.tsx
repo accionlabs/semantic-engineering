@@ -12,6 +12,8 @@ import { PAGES } from '../content/data';
 import type { Loc } from '../content/film';
 import { MCP_URL } from '../reel/prompt';
 import { unpackExplanation } from '../reel/link';
+import { Builder } from './Builder';
+import { track } from '../reel/track';
 
 /** A page reference ("sdlc/agents#the-kg-sync-agent p3") as a location the reader opens. */
 const locOf = (ref: string): Loc | undefined => {
@@ -118,7 +120,17 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
       <pre className="reel-code">{saved.code}</pre></div>
   );
   const mmss = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
-  const choose = (k: number) => { setReading(null); setActive(k); setIndex(-1); if (k >= 0) setWatched((w) => new Set(w).add(k)); };
+  const choose = (k: number) => {
+    setReading(null); setActive(k); setIndex(-1);
+    if (k >= 0) { setWatched((w) => new Set(w).add(k)); track('deep_dive_choose', { label: full.branches[k].label, context: full.context ?? '' }); }
+  };
+  // Anonymous viewing events: a part starting, and a part played to its end.
+  const onIndex = (i: number) => {
+    setIndex(i);
+    const part = active < 0 ? 'short explanation' : `deep dive: ${full.branches[active]?.label ?? ''}`;
+    if (i === 0) track('explanation_play', { part, context: full.context ?? '', source: saved.source });
+    if (i === section.segments.length) track(active < 0 ? 'explanation_complete' : 'explanation_part_complete', { part, context: full.context ?? '' });
+  };
   const dives = full.branches.map((b, k) => ({ b, k })).filter(({ k }) => k !== active);
   const end = (
     <>
@@ -135,7 +147,7 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
   return (
     <div className="wrap wide watch-page">
       <p className="crumbs"><Link to="/">Home</Link> / <Link to="/explain">Explanations</Link> / {full.question}</p>
-      <p className="reel-banner">Written by an agent for one question. The scenes and quotes come from the film and the site's pages; the guide's lines are the agent's.</p>
+      <p className="reel-banner">{saved.source === 'builder' ? 'Built on this site from your choices.' : 'Written by an agent for one question.'} The scenes and quotes come from the film and the site&apos;s pages; the guide&apos;s lines are {saved.source === 'builder' ? 'templates' : "the agent's"}. <ShareButton code={saved.code} context={full.context ?? ''} /></p>
       {full.branches.length > 0 && (
         <nav className="reel-sections" aria-label="Parts of this explanation">
           <button className={`reel-chip ${active < 0 ? 'on' : ''}`} aria-current={active < 0} onClick={() => choose(-1)}>The short explanation <span className="reel-dur">{mmss(full.seconds)}</span></button>
@@ -144,7 +156,7 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
         </nav>
       )}
       <div className="watch">
-        <ReelPlayer plan={section} api={api} onIndex={(i) => setIndex(i)} endOverlay={end} autoPlay />
+        <ReelPlayer plan={section} api={api} onIndex={onIndex} endOverlay={end} autoPlay />
         <Beside seg={section.segments[index]} plan={section} onRead={(ref) => { const l = locOf(ref); if (!l) return; api.current?.pause(); setReading(l); }} />
       </div>
       <Source code={saved.code} plan={section} index={index} onLine={(line) => {
@@ -192,6 +204,34 @@ export const ExplainStored: React.FC = () => {
   return <div className="wrap narrow"><p>Opening the explanation…</p></div>;
 };
 
+/** Shares an explanation made in this browser: the server checks and stores it, and returns a short link. */
+const ShareButton: React.FC<{ code: string; context: string }> = ({ code, context }) => {
+  const [link, setLink] = useState(location.pathname.startsWith('/e/') ? location.href : '');
+  const [state, setState] = useState<'idle' | 'busy' | 'copied' | 'failed'>('idle');
+  const share = async () => {
+    try {
+      let url = link;
+      if (!url) {
+        setState('busy');
+        const r = await fetch('/api/explanations', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ code }) });
+        const body = (await r.json()) as { link?: string };
+        if (!body.link) throw new Error('not stored');
+        url = body.link; setLink(url);
+        track('builder_share', { context });
+      }
+      await navigator.clipboard?.writeText(url);
+      setState('copied');
+    } catch { setState('failed'); }
+  };
+  return (
+    <span className="reel-share">
+      <button className="linkish" onClick={share} disabled={state === 'busy'}>{state === 'copied' ? 'Link copied' : state === 'busy' ? 'Making a link…' : 'Share'}</button>
+      {link && state !== 'idle' && <code className="reel-url">{link}</code>}
+      {state === 'failed' && <span className="reel-bad"> Could not make a link.</span>}
+    </span>
+  );
+};
+
 const CopyButton: React.FC<{ text: string; label: string }> = ({ text, label }) => {
   const [done, setDone] = useState(false);
   return <button className="btn" onClick={() => navigator.clipboard?.writeText(text).then(() => { setDone(true); setTimeout(() => setDone(false), 1800); }).catch(() => {})}>{done ? 'Copied' : label}</button>;
@@ -205,8 +245,9 @@ export const ExplainHome: React.FC = () => {
     <div className="wrap narrow">
       <p className="kicker" style={{ marginTop: 28 }}>Explanations</p>
       <h1>Semantic Engineering, explained for your situation</h1>
-      <p className="lede muted">An agent can help you map Semantic Engineering onto your own software work: it asks about your situation, finds the matching symptoms, practices and limits in the knowledge graph of the method, and writes an explanation that plays as a short film. The recorded narration is the expert; the agent's lines are the guide.</p>
-      <h2>Connect your agent</h2>
+      <p className="lede muted">A short film about your own software work: the problems you see, where the method starts, and how it answers them, with deep dives you choose. Build one here from three choices, or have your own AI agent write one from a conversation.</p>
+      <Builder />
+      <h2>Or connect your agent</h2>
       <p>The site is an MCP server. Add it to your agent, then ask it to help you understand how Semantic Engineering applies to your application or your modernization.</p>
       <p><code className="reel-url">{MCP_URL}</code> <CopyButton text={MCP_URL} label="Copy" /></p>
       <ul className="reel-connect">
@@ -223,7 +264,7 @@ export const ExplainHome: React.FC = () => {
           {list.map((r) => (
             <li key={r.id}>
               <Link to={`/explain/${r.id}`}><strong>{r.question}</strong></Link>
-              <span className="muted"> {r.audience ? `· for ${r.audience} ` : ''}· {new Date(r.created).toLocaleDateString()} · {r.source === 'example' ? 'an example' : 'from your agent'}</span>
+              <span className="muted"> {r.audience ? `· for ${r.audience} ` : ''}· {new Date(r.created).toLocaleDateString()} · {r.source === 'example' ? 'an example' : r.source === 'builder' ? 'built here' : 'from your agent'}</span>
               <button className="linkish" onClick={() => { reels.remove(r.id); setList(reels.list()); }}>Remove</button>
             </li>
           ))}

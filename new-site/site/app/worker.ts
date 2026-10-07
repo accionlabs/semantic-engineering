@@ -13,8 +13,23 @@ import { ROLE, STYLE } from './src/reel/reference';
 import { SITE } from './src/reel/prompt';
 import { packExplanation } from './src/reel/link';
 
-type KV = { get: (key: string) => Promise<string | null>; put: (key: string, value: string, options?: { expirationTtl?: number }) => Promise<void> };
-type Env = { ASSETS: { fetch: (r: Request | URL) => Promise<Response> }; EXPLANATIONS?: KV };
+type KV = { get: (key: string) => Promise<string | null>; put: (key: string, value: string, options?: { expirationTtl?: number; metadata?: Record<string, string> }) => Promise<void> };
+type Usage = { writeDataPoint: (point: { indexes?: string[]; blobs?: string[]; doubles?: number[] }) => void };
+type Env = { ASSETS: { fetch: (r: Request | URL) => Promise<Response> }; EXPLANATIONS?: KV; USAGE?: Usage };
+
+// ---------- anonymous usage counts ----------
+// One data point per MCP request and per shared explanation, in Workers Analytics Engine: what was called, how it
+// went, the first checker error, the calling client and its country. No address and nothing that identifies a
+// person is recorded. Read back with scripts/insights.ts.
+type Meta = { agent: string; country: string };
+const metaOf = (request: Request): Meta => ({
+  agent: (request.headers.get('user-agent') ?? '').split(/[\s/]/)[0].slice(0, 40) || 'unknown',
+  country: String((request as unknown as { cf?: { country?: string } }).cf?.country ?? ''),
+});
+const record = (env: Env, meta: Meta, kind: string, name: string, outcome: string, detail = '', context = '') => {
+  try { env.USAGE?.writeDataPoint({ indexes: [kind], blobs: [kind, name, outcome, detail.slice(0, 80), meta.agent, meta.country, context], doubles: [1] }); } catch { /* counting never breaks a request */ }
+};
+const contextOf = (code: unknown) => (typeof code === 'string' ? code.match(/^\s+context\s+(\S+)/m)?.[1] ?? '' : '');
 
 const media = async (request: Request, env: Env, url: URL) => {
   const range = request.headers.get('range');
@@ -60,10 +75,23 @@ const idFor = async (code: string) => {
 const linkFor = async (code: string, env: Env) => {
   if (!env.EXPLANATIONS) return `${SITE}/explain/import#${await packExplanation(code)}`;
   const id = await idFor(code);
-  await env.EXPLANATIONS.put(`e:${id}`, code, { expirationTtl: KEEP_SECONDS });
+  await env.EXPLANATIONS.put(`e:${id}`, code, { expirationTtl: KEEP_SECONDS, metadata: { context: contextOf(code), created: new Date().toISOString().slice(0, 10) } });
   return `${SITE}/e/${id}`;
 };
 /** GET /api/explanations/<id>: the text of a stored explanation, for the page that plays it. */
+/** POST /api/explanations: the page shares an explanation it built; it is checked, stored, and given a short link. */
+const shareExplanation = async (request: Request, env: Env) => {
+  const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } });
+  const text = await request.text();
+  if (text.length > 64_000) return json({ error: 'too large' }, 413);
+  let code: unknown;
+  try { code = (JSON.parse(text) as { code?: unknown }).code; } catch { return json({ error: 'send JSON: {"code": "<the explanation>"}' }, 400); }
+  if (typeof code !== 'string' || !code.trim()) return json({ error: 'no explanation given' }, 400);
+  const r = checkExplain(code);
+  record(env, metaOf(request), 'share', 'page', r.ok ? 'ok' : 'problems', r.problems.find((p) => p.severity === 'error')?.message ?? '', contextOf(code));
+  if (!r.plan) return json({ ok: false, problems: r.problems }, 422);
+  return json({ ok: true, link: await linkFor(code, env) });
+};
 const storedExplanation = async (id: string, env: Env) => {
   const code = /^[A-Za-z0-9_-]{6,20}$/.test(id) ? await env.EXPLANATIONS?.get(`e:${id}`) : null;
   return code
@@ -92,17 +120,19 @@ const INSTRUCTIONS = `${ROLE}
 
 ${STYLE}
 
-Tools: method_steps gives the platform and the method's steps, in order, for a kind of work; call it first. explanation_guide holds the language, its rules, worked examples and the whole knowledge graph. graph_concepts, graph_links, concept_evidence and find_in_site help with the mapping; check_explanation checks a draft; make_explanation stores it and returns a short link that plays it for the person; give the person that link.`;
+Tools: method_steps gives the platform and the method's steps, in order, for a kind of work; call it first. explanation_guide holds the language, its rules, worked examples and the whole knowledge graph. graph_concepts, graph_links, concept_evidence and find_in_site help with the mapping; build_explanation writes a checked first draft from a kind of work, a role and the problems the person sees, which you can then tailor; check_explanation checks a draft; make_explanation stores it and returns a short link that plays it for the person; give the person that link.`;
 
 type RpcMessage = { jsonrpc: '2.0'; id?: string | number | null; method?: string; params?: Record<string, unknown> };
 const reply = (id: RpcMessage['id'], result: unknown) => ({ jsonrpc: '2.0', id, result });
 const fail = (id: RpcMessage['id'], code: number, message: string) => ({ jsonrpc: '2.0', id: id ?? null, error: { code, message } });
 
-const handle = async (m: RpcMessage, env: Env) => {
+const handle = async (m: RpcMessage, env: Env, meta: Meta) => {
   if (m.id === undefined || m.id === null) return undefined; // a notification: nothing to answer
   switch (m.method) {
     case 'initialize': {
       const asked = String(m.params?.protocolVersion ?? '');
+      const client = m.params?.clientInfo as { name?: string; version?: string } | undefined;
+      record(env, meta, 'initialize', `${client?.name ?? 'unknown'} ${client?.version ?? ''}`.trim().slice(0, 60), 'ok');
       return reply(m.id, {
         protocolVersion: VERSIONS.includes(asked) ? asked : VERSIONS[0],
         capabilities: { tools: { listChanged: false } },
@@ -118,7 +148,11 @@ const handle = async (m: RpcMessage, env: Env) => {
       const tool = REMOTE[name];
       if (!tool) return fail(m.id, -32602, `unknown tool "${name}"`);
       try {
-        const out = (await tool.run((m.params?.arguments ?? {}) as never, env)) as Record<string, unknown>;
+        const args = (m.params?.arguments ?? {}) as Record<string, unknown>;
+        const out = (await tool.run(args as never, env)) as Record<string, unknown>;
+        const problems = (out?.problems as { severity: string; message: string }[] | undefined) ?? [];
+        const firstError = problems.find((p) => p.severity === 'error')?.message ?? (typeof out?.error === 'string' ? out.error : '');
+        record(env, meta, 'tool', name, out && 'error' in out ? 'error' : out?.ok === false ? 'problems' : 'ok', firstError, String(args.context ?? contextOf(args.code)));
         return reply(m.id, { content: [{ type: 'text', text: JSON.stringify(out, null, 1) }], structuredContent: out, isError: Boolean(out && 'error' in out) });
       } catch (e) {
         return reply(m.id, { content: [{ type: 'text', text: `The tool failed: ${(e as Error).message}` }], isError: true });
@@ -129,6 +163,7 @@ const handle = async (m: RpcMessage, env: Env) => {
 };
 
 const mcp = async (request: Request, env: Env) => {
+  const meta = metaOf(request);
   if (request.method === 'OPTIONS') return new Response(null, { status: 204, headers: CORS });
   if (request.method !== 'POST') return new Response('This MCP server answers POST requests (Streamable HTTP, JSON responses).', { status: 405, headers: { ...CORS, allow: 'POST, OPTIONS' } });
   const body = await request.text();
@@ -136,7 +171,7 @@ const mcp = async (request: Request, env: Env) => {
   let parsed: RpcMessage | RpcMessage[];
   try { parsed = JSON.parse(body); } catch { return new Response(JSON.stringify(fail(null, -32700, 'parse error')), { status: 400, headers: { ...CORS, 'content-type': 'application/json' } }); }
   const messages = Array.isArray(parsed) ? parsed : [parsed];
-  const answers = (await Promise.all(messages.map((m) => handle(m, env)))).filter(Boolean);
+  const answers = (await Promise.all(messages.map((m) => handle(m, env, meta)))).filter(Boolean);
   if (!answers.length) return new Response(null, { status: 202, headers: CORS });
   return new Response(JSON.stringify(Array.isArray(parsed) ? answers : answers[0]), { status: 200, headers: { ...CORS, 'content-type': 'application/json' } });
 };
@@ -150,6 +185,7 @@ export default {
     const url = new URL(request.url);
     if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return Response.redirect(url.toString(), 301); }
     if (url.pathname === '/mcp' || url.pathname === '/mcp/') return mcp(request, env);
+    if (url.pathname === '/api/explanations' && request.method === 'POST') return shareExplanation(request, env);
     if (url.pathname.startsWith('/api/explanations/')) return storedExplanation(url.pathname.split('/')[3] ?? '', env);
     // A stored explanation's short link: the page that fetches it by id and plays it.
     if (/^\/e\/[A-Za-z0-9_-]+\/?$/.test(url.pathname)) {

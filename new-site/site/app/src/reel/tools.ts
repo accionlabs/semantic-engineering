@@ -7,6 +7,7 @@ import type { Plan } from './language';
 import { referenceMarkdown } from './reference';
 import { searchBoth } from './search';
 import { SITE } from './prompt';
+import { CONTEXTS as BUILD_CONTEXTS, ROLES as BUILD_ROLES, buildChecked, symptomsFor } from './builder';
 
 const KINDS: Kind[] = ['context', 'platform', 'layer', 'cause', 'symptom', 'principle', 'step', 'practice', 'recommendation', 'limit', 'case'];
 const CONTEXTS = ['greenfield', 'brownfield', 'legacy-modernization'];
@@ -102,6 +103,18 @@ export const TOOLS = {
     description: "Keyword search over the film's narration and the site's pages. Returns the best-matching sentences and passages with their addresses.",
     inputSchema: { type: 'object', properties: { query: { type: 'string' } }, required: ['query'] },
     run: ({ query }: { query: string }) => (typeof query === 'string' && query.trim() ? searchBoth(query, 6) : { error: 'give a query: a few words, for example "impact analysis before coding".' }),
+  },
+  build_explanation: {
+    title: 'Build an explanation from choices',
+    description: "Writes a checked explanation, without any AI, from a kind of work, an optional role and the problems the person sees (symptom ids for that kind of work, the main one first). Returns the explanation's text, which can be edited and checked, or played with make_explanation. With only a context, returns the problems to choose from.",
+    inputSchema: { type: 'object', properties: { context: { type: 'string', enum: BUILD_CONTEXTS.map((x) => x.id) }, role: { type: 'string', enum: BUILD_ROLES.map((x) => x.slug) }, symptoms: { type: 'array', items: { type: 'string' } } }, required: ['context'] },
+    run: ({ context, role, symptoms }: { context: string; role?: string; symptoms?: string[] }) => {
+      if (!BUILD_CONTEXTS.some((x) => x.id === context)) return { error: `unknown kind of work "${context}". Kinds: ${BUILD_CONTEXTS.map((x) => x.id).join(', ')}.` };
+      if (!symptoms?.length) return { context, problems: symptomsFor(context).map((x) => brief(x.id)) };
+      const r = buildChecked({ context, role, symptoms });
+      if (!r.code) return { error: r.error };
+      return { ok: r.ok, code: r.code, problems: r.problems, ...(r.plan ? lengths(r.plan) : {}) };
+    },
   },
   check_explanation: {
     title: 'Check an explanation',

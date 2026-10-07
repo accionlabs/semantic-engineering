@@ -1,6 +1,6 @@
 // Reels live in this browser only. Each saved reel keeps its source, its question and who it was for,
 // so the history can tell a new agent what this person has asked before.
-export type SavedReel = { id: string; code: string; question: string; audience?: string; created: string; updated: string; source: 'agent' | 'paste' | 'import' | 'example'; plays: number };
+export type SavedReel = { id: string; code: string; question: string; audience?: string; created: string; updated: string; source: 'agent' | 'paste' | 'import' | 'example' | 'builder'; plays: number };
 
 const KEY = 'se.explanations.v1';
 const read = (): SavedReel[] => { try { return JSON.parse(localStorage.getItem(KEY) ?? '[]'); } catch { return []; } };
