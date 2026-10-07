@@ -12,10 +12,19 @@ import { checkExplain, compiledListing } from './src/reel/explain';
 import { ROLE, STYLE } from './src/reel/reference';
 import { SITE } from './src/reel/prompt';
 import { packExplanation } from './src/reel/link';
+import { fetchUsage, summarizeStored, type Insights } from './src/reel/insights';
 
-type KV = { get: (key: string) => Promise<string | null>; put: (key: string, value: string, options?: { expirationTtl?: number; metadata?: Record<string, string> }) => Promise<void> };
+type KV = {
+  get: (key: string) => Promise<string | null>;
+  put: (key: string, value: string, options?: { expirationTtl?: number; metadata?: Record<string, string> }) => Promise<void>;
+  list: (options: { prefix?: string; cursor?: string; limit?: number }) => Promise<{ keys: { name: string; metadata?: { context?: string; created?: string } }[]; list_complete: boolean; cursor?: string }>;
+};
 type Usage = { writeDataPoint: (point: { indexes?: string[]; blobs?: string[]; doubles?: number[] }) => void };
-type Env = { ASSETS: { fetch: (r: Request | URL) => Promise<Response> }; EXPLANATIONS?: KV; USAGE?: Usage };
+type Env = {
+  ASSETS: { fetch: (r: Request | URL) => Promise<Response> }; EXPLANATIONS?: KV; USAGE?: Usage;
+  /** The insights page: Cloudflare Access's team name and application audience, the account and a read-only analytics token. */
+  ACCESS_TEAM?: string; ACCESS_AUD?: string; ACCOUNT_ID?: string; ANALYTICS_TOKEN?: string;
+};
 
 // ---------- anonymous usage counts ----------
 // One data point per MCP request and per shared explanation, in Workers Analytics Engine: what was called, how it
@@ -79,6 +88,56 @@ const linkFor = async (code: string, env: Env) => {
   return `${SITE}/e/${id}`;
 };
 /** GET /api/explanations/<id>: the text of a stored explanation, for the page that plays it. */
+// ---------- the insights page, behind Cloudflare Access ----------
+
+const b64urlBytes = (s: string) => Uint8Array.from(atob(s.replace(/-/g, '+').replace(/_/g, '/')), (c) => c.charCodeAt(0));
+/** Checks the Cloudflare Access token on the request: signature, audience, issuer and expiry. Returns the email. */
+const accessUser = async (request: Request, env: Env): Promise<string | undefined> => {
+  if (!env.ACCESS_TEAM || !env.ACCESS_AUD) return;
+  const token = request.headers.get('cf-access-jwt-assertion');
+  const parts = token?.split('.');
+  if (!parts || parts.length !== 3) return;
+  try {
+    const header = JSON.parse(new TextDecoder().decode(b64urlBytes(parts[0]))) as { kid?: string; alg?: string };
+    const payload = JSON.parse(new TextDecoder().decode(b64urlBytes(parts[1]))) as { aud?: string | string[]; iss?: string; exp?: number; email?: string };
+    const issuer = `https://${env.ACCESS_TEAM}.cloudflareaccess.com`;
+    if (header.alg !== 'RS256' || payload.iss !== issuer || !(payload.exp && payload.exp * 1000 > Date.now())) return;
+    if (!(Array.isArray(payload.aud) ? payload.aud : [payload.aud]).includes(env.ACCESS_AUD)) return;
+    const certs = (await (await fetch(`${issuer}/cdn-cgi/access/certs`)).json()) as { keys: (JsonWebKey & { kid: string })[] };
+    const jwk = certs.keys.find((k) => k.kid === header.kid);
+    if (!jwk) return;
+    const key = await crypto.subtle.importKey('jwk', jwk, { name: 'RSASSA-PKCS1-v1_5', hash: 'SHA-256' }, false, ['verify']);
+    const ok = await crypto.subtle.verify('RSASSA-PKCS1-v1_5', key, b64urlBytes(parts[2]), new TextEncoder().encode(`${parts[0]}.${parts[1]}`));
+    return ok ? payload.email ?? 'signed in' : undefined;
+  } catch { return; }
+};
+
+/** GET /api/insights?days=30: the aggregate analysis, for people Cloudflare Access lets in. */
+const insights = async (request: Request, env: Env, url: URL) => {
+  const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store', 'x-robots-tag': 'noindex' } });
+  if (!env.ACCESS_TEAM || !env.ACCESS_AUD) return json({ error: 'The insights page is not set up yet: Cloudflare Access is not configured for this site.' }, 503);
+  const user = await accessUser(request, env);
+  if (!user) return json({ error: 'Sign in through Cloudflare Access to see the insights.' }, 401);
+  const days = Math.max(1, Math.min(365, Number(url.searchParams.get('days') ?? 30) || 30));
+  const since = new Date(Date.now() - days * 864e5).toISOString().slice(0, 10);
+  const items: { code: string; created?: string }[] = [];
+  if (env.EXPLANATIONS) {
+    let cursor: string | undefined;
+    const keys: { name: string; created?: string }[] = [];
+    do {
+      const page = await env.EXPLANATIONS.list({ prefix: 'e:', cursor });
+      page.keys.forEach((k) => { if (!k.metadata?.created || k.metadata.created >= since) keys.push({ name: k.name, created: k.metadata?.created }); });
+      cursor = page.list_complete ? undefined : page.cursor;
+    } while (cursor && keys.length < 2000);
+    for (const k of keys.slice(0, 1000)) { const code = await env.EXPLANATIONS.get(k.name); if (code) items.push({ code, created: k.created }); }
+  }
+  const out: Insights = { days, generated: new Date().toISOString(), stored: summarizeStored(items) };
+  if (env.ANALYTICS_TOKEN && env.ACCOUNT_ID) {
+    try { out.usage = await fetchUsage(env.ACCOUNT_ID, env.ANALYTICS_TOKEN, 'semantic_engineering_usage', days); } catch (e) { out.usageNote = (e as Error).message; }
+  } else out.usageNote = 'Usage counts need an analytics token: run `npx wrangler secret put ANALYTICS_TOKEN` with a token that has Account Analytics: Read.';
+  return json(out);
+};
+
 /** POST /api/explanations: the page shares an explanation it built; it is checked, stored, and given a short link. */
 const shareExplanation = async (request: Request, env: Env) => {
   const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json' } });
@@ -186,6 +245,7 @@ export default {
     if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return Response.redirect(url.toString(), 301); }
     if (url.pathname === '/mcp' || url.pathname === '/mcp/') return mcp(request, env);
     if (url.pathname === '/api/explanations' && request.method === 'POST') return shareExplanation(request, env);
+    if (url.pathname === '/api/insights') return insights(request, env, url);
     if (url.pathname.startsWith('/api/explanations/')) return storedExplanation(url.pathname.split('/')[3] ?? '', env);
     // A stored explanation's short link: the page that fetches it by id and plays it.
     if (/^\/e\/[A-Za-z0-9_-]+\/?$/.test(url.pathname)) {

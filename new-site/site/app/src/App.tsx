@@ -13,6 +13,7 @@ const ExplainStored = lazy(() => import('./pages/ExplainPage').then((m) => ({ de
 const ExplainPage = lazy(() => import('./pages/ExplainPage').then((m) => ({ default: m.ExplainPage })));
 const ConnectPage = lazy(() => import('./pages/AgentPages').then((m) => ({ default: m.ConnectPage })));
 const PrivacyPage = lazy(() => import('./pages/AgentPages').then((m) => ({ default: m.PrivacyPage })));
+const InsightsPage = lazy(() => import('./pages/InsightsPage').then((m) => ({ default: m.InsightsPage })));
 const later = (el: React.ReactNode) => <Suspense fallback={<div className="wrap narrow"><p className="muted" style={{ marginTop: 28 }}>Loading</p></div>}>{el}</Suspense>;
 
 // Every page of content/ is served at the address Hugo gave it, so existing links keep working.
@@ -29,6 +30,7 @@ export const App: React.FC = () => (
       <Route path="/e/:id" element={later(<ExplainStored />)} />
       <Route path="/connect" element={later(<ConnectPage />)} />
       <Route path="/privacy" element={later(<PrivacyPage />)} />
+      <Route path="/insights" element={later(<InsightsPage />)} />
       <Route path="*" element={<PageView />} />
     </Route>
   </Routes>

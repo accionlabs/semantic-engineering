@@ -80,6 +80,7 @@ const watch = [
   { url: '/explain/', title: 'Explanations', description: 'Semantic Engineering explained for your own situation by your agent, played as a short film.' },
   { url: '/explain/saved/', title: 'Your explanation', description: 'An explanation saved in this browser.', noindex: true },
   { url: '/connect/', title: 'The Semantic Engineering connector', description: 'An MCP server that helps an agent explain how Semantic Engineering applies to a person\'s own software work.' },
+  { url: '/insights/', title: 'Insights', description: 'What people use the explanations for, in aggregate.', noindex: true },
   { url: '/privacy/', title: 'Privacy policy', description: 'What semantic-engineering.ai and its MCP connector collect.' },
 ];
 for (const w of watch) {
