@@ -273,7 +273,9 @@ const llms = [
 ].join('\n');
 fs.writeFileSync(path.join(pub, 'llms.txt'), llms);
 const bots = ['*', 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-Web', 'PerplexityBot', 'Google-Extended', 'Applebot-Extended', 'CCBot'];
-fs.writeFileSync(path.join(pub, 'robots.txt'), `${bots.map((b) => `User-agent: ${b}\nAllow: /\n`).join('\n')}\nSitemap: ${SITE_URL}/sitemap.xml\nLlms: ${SITE_URL}/llms.txt\n`);
+// Shared explanations, the insights page and the data endpoints stay out of search results.
+const hidden = ['/e/', '/explain/saved/', '/insights', '/api/'].map((p) => `Disallow: ${p}\n`).join('');
+fs.writeFileSync(path.join(pub, 'robots.txt'), `${bots.map((b) => `User-agent: ${b}\n${hidden}Allow: /\n`).join('\n')}\nSitemap: ${SITE_URL}/sitemap.xml\nLlms: ${SITE_URL}/llms.txt\n`);
 fs.writeFileSync(path.join(pub, 'sitemap.xml'), `<?xml version="1.0" encoding="utf-8" standalone="yes"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${order.map(section).filter((p) => p && !p.draft).map((p) => `  <url><loc>${SITE_URL}${p.url}</loc>${p.lastmod ? `<lastmod>${p.lastmod}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`);
 
 const blockCount = pages.reduce((s, p) => s + p.blocks.filter((b) => b.k !== 'h').length, 0);
