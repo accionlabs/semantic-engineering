@@ -207,7 +207,7 @@ export const ExplainStored: React.FC = () => {
 /** Shares an explanation made in this browser: the server checks and stores it, and returns a short link. */
 const ShareButton: React.FC<{ code: string; context: string }> = ({ code, context }) => {
   const [link, setLink] = useState(location.pathname.startsWith('/e/') ? location.href : '');
-  const [state, setState] = useState<'idle' | 'busy' | 'copied' | 'failed'>('idle');
+  const [state, setState] = useState<'idle' | 'busy' | 'copied' | 'ready' | 'failed'>('idle');
   const share = async () => {
     try {
       let url = link;
@@ -219,13 +219,13 @@ const ShareButton: React.FC<{ code: string; context: string }> = ({ code, contex
         url = body.link; setLink(url);
         track('builder_share', { context });
       }
-      await navigator.clipboard?.writeText(url);
-      setState('copied');
+      // The link exists now; copying can still be refused (no clipboard permission), so show it to copy by hand.
+      try { if (!navigator.clipboard) throw new Error('no clipboard'); await navigator.clipboard.writeText(url); setState('copied'); } catch { setState('ready'); }
     } catch { setState('failed'); }
   };
   return (
     <span className="reel-share">
-      <button className="linkish" onClick={share} disabled={state === 'busy'}>{state === 'copied' ? 'Link copied' : state === 'busy' ? 'Making a link…' : 'Share'}</button>
+      <button className="linkish" onClick={share} disabled={state === 'busy'}>{state === 'copied' ? 'Link copied' : state === 'ready' ? 'Link ready' : state === 'busy' ? 'Making a link…' : 'Share'}</button>
       {link && state !== 'idle' && <code className="reel-url">{link}</code>}
       {state === 'failed' && <span className="reel-bad"> Could not make a link.</span>}
     </span>
