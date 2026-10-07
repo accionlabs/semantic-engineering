@@ -104,6 +104,11 @@ export const NODES: Node[] = [
   n('symptom', 'duplicated-capability', 'Capability duplicated across products', 'The same capability is built more than once across products, or kept after nobody uses it.', { video: ['18.8', '19.3'], pages: ['sdlc/methodology#extraction-as-rationalization', 'sdlc/case-archetypes#a-cautionary-tale-that-surfaces-in-both-archetypes'] }, { contexts: LIVE }),
   n('symptom', 'work-not-visible', 'Work by people and agents hard to see', 'Managers need to see what people and agents are doing, and some products receive more requests than a ticket system handles well.', { video: ['17.1', '17.3'], pages: ['sdlc/process/implementation-sprint#how-the-ticket-carries-the-change', 'sdlc/agents#high-volume-support-work'] }, { contexts: LIVE }),
   n('symptom', 'legacy-experts-gone', 'The people who knew the old system are gone', 'The people who could once explain the legacy system are retiring, scarce or already gone.', { video: ['22.2'], pages: ['modernization/translation-tax#the-modernization-version-of-the-problem'] }, { contexts: LEGACY }),
+  n('symptom', 'legacy-undocumented', 'The old system is barely documented', 'Documentation of the legacy system is partial, outdated or absent, so its behavior has to be worked out from the code itself.', { video: ['22.3', '22.5'], pages: ['modernization/translation-tax#the-four-components p2'] }, { contexts: LEGACY }),
+  n('symptom', 'senior-engineers-tied-up', 'Senior engineers tied up reading old code', 'The few engineers who can read the legacy code spend their time on it, and every other part of the modernization waits for them.', { video: ['22.5'], pages: ['modernization/translation-tax#why-the-tax-compounds p2'] }, { contexts: LEGACY }),
+  n('symptom', 'unknown-quirks', 'Nobody knows which old behaviors were deliberate', 'Without the people who know why, the team either keeps every quirk of the old system, which inflates the scope, or drops some and risks breaking what the business depends on.', { video: ['22.6'], pages: ['modernization/translation-tax#why-the-tax-compounds p3'] }, { contexts: LEGACY }),
+  n('symptom', 'hand-built-checks', 'Every migrated module needs a check built by hand', 'Nothing can test the old behavior automatically, so the team builds a check for every migrated module to show it behaves as before.', { video: ['22.7'], pages: ['modernization/translation-tax#the-four-components p2'] }, { contexts: LEGACY }),
+  n('symptom', 'understanding-leaves', 'The understanding leaves when the project ends', 'The hand-over transfers the code but not the understanding behind it, so the next team pays to work it out again on the new code.', { video: ['22.8'], pages: ['modernization/translation-tax#why-the-tax-compounds p5'] }, { contexts: LEGACY }),
   n('symptom', 'modernization-stalls', 'The modernization cannot be proven complete', 'Without an executable contract that the new system behaves like the old one, nobody can show the migration is complete, and it stalls before it can deploy.', { video: ['22.9-11'], pages: ['modernization/translation-tax#why-the-tax-compounds'] }, { contexts: LEGACY }),
 
   // ---- The four principles that hold for every kind of work
@@ -211,6 +216,17 @@ export const EDGES: Edge[] = [
   e('design-duplication', 'caused-by', 'knowledge-unwritten', { pages: ['sdlc/case-archetypes#the-evolution'] }),
   e('legacy-experts-gone', 'caused-by', 'knowledge-disappearance-tax', { video: ['22.2', '22.8'] }),
   e('modernization-stalls', 'caused-by', 'validation-vacuum-tax', { video: ['22.7', '22.10-11'], pages: ['modernization/translation-tax#why-the-tax-compounds'] }),
+
+  e('legacy-undocumented', 'caused-by', 'reverse-engineering-tax', { video: ['22.5'], pages: ['modernization/translation-tax#the-four-components p2'] }),
+  e('senior-engineers-tied-up', 'caused-by', 'reverse-engineering-tax', { video: ['22.5'], pages: ['modernization/translation-tax#why-the-tax-compounds p2'] }),
+  e('unknown-quirks', 'caused-by', 'lost-context-tax', { video: ['22.6'], pages: ['modernization/translation-tax#why-the-tax-compounds p3'] }),
+  e('hand-built-checks', 'caused-by', 'validation-vacuum-tax', { video: ['22.7'], pages: ['modernization/translation-tax#the-four-components p2'] }),
+  e('understanding-leaves', 'caused-by', 'knowledge-disappearance-tax', { video: ['22.8'], pages: ['modernization/translation-tax#why-the-tax-compounds p5'] }),
+  e('legacy-undocumented', 'addressed-by', 'asimov-discover', { video: ['23.2-3'], pages: ['modernization/agents#how-the-pipeline-runs p2'] }),
+  e('senior-engineers-tied-up', 'addressed-by', 'asimov-discover', { video: ['23.2'], pages: ['modernization/translation-tax#how-the-methodology-addresses-each-component'] }),
+  e('unknown-quirks', 'addressed-by', 'asimov-document', { video: ['23.6-8'], pages: ['modernization/methodology#the-annotation-discipline-retain-modify-replace-retire'] }),
+  e('hand-built-checks', 'addressed-by', 'asimov-validate', { video: ['24.8-9'], pages: ['modernization/agents#how-the-pipeline-runs p8'] }),
+  e('understanding-leaves', 'addressed-by', 'asimov-maintain', { video: ['26.6-7'], pages: ['modernization/translation-tax#how-the-methodology-addresses-each-component'] }),
 
   // Causes and symptoms are addressed
   e('knowledge-unwritten', 'addressed-by', 'knowledge-graph', { video: ['4.11', '5.2'], pages: ['sdlc/translation-tax#the-structural-response'] }),
