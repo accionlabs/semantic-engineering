@@ -70,10 +70,13 @@ const LEGACY_ACT = 4;
 let preferLegacy = false;
 const sameClip = (a: Segment, b: Segment) => a.kind === 'clip' && b.kind === 'clip' && a.scene === b.scene && a.sentences[0] === b.sentences[0] && a.sentences[1] === b.sentences[1];
 
-export const checkExplain = (code: string): Result => {
+/** lenient: rules added or tightened over time become warnings, so an explanation stored under earlier rules
+ *  still plays as it was written. Agents' drafts, sharing and the insights count are checked strictly. */
+export const checkExplain = (code: string, opts: { lenient?: boolean } = {}): Result => {
   const problems: Problem[] = [];
   const err = (line: number, message: string) => problems.push({ line, message, severity: 'error' });
   const warn = (line: number, message: string) => problems.push({ line, message, severity: 'warning' });
+  const rule = (line: number, message: string) => (opts.lenient ? warn : err)(line, message);
   const lines = readLines(code);
   preferLegacy = /^\s+context\s+legacy-modernization\s*$/m.test(code);
   const plan: Plan = { question: '', segments: [], seconds: 0, layers: [], unowned: [], read: [], branches: [] };
@@ -157,7 +160,7 @@ export const checkExplain = (code: string): Result => {
   // A guide's line that names the other platform describes one platform's work in the other's terms.
   const platformWords = (t: string, line: number) => {
     if (!plan.context) return;
-    if (plan.context !== 'legacy-modernization' && /\basimov\b/i.test(t)) err(line, `the line names ASIMOV, which runs legacy modernization; ${CONTEXT_WORDS[plan.context]} runs on Breeze.AI.`);
+    if (plan.context !== 'legacy-modernization' && /\basimov\b/i.test(t)) rule(line, `the line names ASIMOV, which runs legacy modernization; ${CONTEXT_WORDS[plan.context]} runs on Breeze.AI.`);
     if (plan.context === 'legacy-modernization' && /\bbreeze/i.test(t)) warn(line, 'the line names Breeze.AI, which runs new and existing applications; legacy modernization runs on ASIMOV. Name Breeze.AI only for the four-layer graph built after the migration.');
   };
   // Steps of the method follow its order within a section.
@@ -312,7 +315,7 @@ export const checkExplain = (code: string): Result => {
         if (!SAMPLE_CONCEPTS[node.id]) { err(l.n, `"${node.id}" is not an artefact the method produces, so it has no sample. Samples illustrate: ${Object.keys(SAMPLE_CONCEPTS).join(', ')}.`); current!.ok = false; break; }
         if (plan.context && !fits(node, plan.context)) { wrongWork(node, l.n, 'sample'); current!.ok = false; break; }
         if (!introduced.has(node.id)) { err(l.n, `show ${node.id} before its sample, so the person meets the method's version first.`); current!.ok = false; break; }
-        if (sampled) { err(l.n, `${branch ? 'this deep dive' : 'the short explanation'} already has a sample; a part holds at most one.`); current!.ok = false; break; }
+        if (sampled) { rule(l.n, `${branch ? 'this deep dive' : 'the short explanation'} already has a sample; a part holds at most one.`); current!.ok = false; break; }
         const title = quoted(m[2])!;
         problems.push(...textProblems(title, l.n, LIMITS.sampleTitle, 'sample title'));
         sampled = true;
@@ -380,7 +383,7 @@ export const checkExplain = (code: string): Result => {
         const label = quoted(l.rest);
         if (label === undefined) { err(l.n, 'write what the deep dive covers in double quotes: branch "How the four gates prove the migration"'); break; }
         problems.push(...textProblems(label, l.n, LIMITS.label, 'deep dive label'));
-        if (!branch && !trunkAnswered) err(l.n, 'the short explanation ends with "answer" before the first deep dive, so the person has an answer before choosing where to go deeper.');
+        if (!branch && !trunkAnswered) rule(l.n, 'the short explanation ends with "answer" before the first deep dive, so the person has an answer before choosing where to go deeper.');
         if (plan.branches.length >= LIMITS.branches) err(l.n, `an explanation offers at most ${LIMITS.branches} deep dives.`);
         if (plan.branches.some((b) => b.label === label)) err(l.n, `there is already a deep dive called "${label}".`);
         endSection();
@@ -412,11 +415,11 @@ export const checkExplain = (code: string): Result => {
   if (!plan.context) err(1, 'say the kind of work: add "context greenfield", "context brownfield" or "context legacy-modernization" under explain.');
   // Named ownership: a layer nobody owns needs an owner before the method can govern it, in the part everyone watches.
   for (const layer of plan.unowned) {
-    if (!OWNERSHIP.some((o) => trunk.has(o))) err(last, `nobody owns the ${layer} layer today, and the method needs a named owner for every part of the graph. Show or connect one of: ${OWNERSHIP.join(', ')} in the short explanation, so the person sees who would keep that layer.`);
+    if (!OWNERSHIP.some((o) => trunk.has(o))) rule(last, `nobody owns the ${layer} layer today, and the method needs a named owner for every part of the graph. Show or connect one of: ${OWNERSHIP.join(', ')} in the short explanation, so the person sees who would keep that layer.`);
   }
   // The method's own starting point: the short explanation shows where the method starts for this kind of work.
   const start = plan.context ? startStep(plan.context) : undefined;
-  if (start && !trunk.has(start.id)) err(trunkAnswerLine || last, `the short explanation does not show where the method starts for ${CONTEXT_WORDS[plan.context!]}: ${start.label}. Add "show ${start.id}" before the answer, so the person hears the method's first step.`);
+  if (start && !trunk.has(start.id)) rule(trunkAnswerLine || last, `the short explanation does not show where the method starts for ${CONTEXT_WORDS[plan.context!]}: ${start.label}. Add "show ${start.id}" before the answer, so the person hears the method's first step.`);
   if (!caveats) warn(last, 'the explanation names no limit. Add at least one "caveat", so the person sees where the method stops.');
   if (!trunkAnswered) warn(last, 'the short explanation has no "answer". End it with the guide answering the question in one or two sentences.');
   if (!plan.branches.length) warn(last, 'the explanation offers no deep dives. Add two to four with "branch", so the person can choose where to go deeper.');
@@ -426,13 +429,13 @@ export const checkExplain = (code: string): Result => {
   plan.segments = dedupe(plan.segments);
   plan.seconds = total(plan.segments);
   if (!plan.segments.some((x) => x.kind === 'clip') && !problems.some((p) => p.severity === 'error')) err(last, 'the explanation shows nothing from the film. Add a "show", "connect" or "compare".');
-  if (plan.seconds > LIMITS.trunkSeconds) err(1, `the short explanation runs about ${mins(plan.seconds)}; the limit is ${LIMITS.trunkSeconds / 60} minutes. Keep the essentials here and move the rest into deep dives with "branch".`);
+  if (plan.seconds > LIMITS.trunkSeconds) rule(1, `the short explanation runs about ${mins(plan.seconds)}; the limit is ${LIMITS.trunkSeconds / 60} minutes. Keep the essentials here and move the rest into deep dives with "branch".`);
   if (plan.segments.filter((x) => x.kind === 'clip').length > LIMITS.clips) warn(1, `the short explanation plays more than ${LIMITS.clips} clips.`);
   for (const b of plan.branches) {
     b.segments = dedupe(b.segments);
     b.seconds = total(b.segments);
     if (!b.segments.some((x) => x.kind === 'clip')) err(b.line, `the deep dive "${b.label}" shows nothing from the film. Add a "show", "connect" or "compare" under it.`);
-    if (b.seconds > LIMITS.branchSeconds) err(b.line, `the deep dive "${b.label}" runs about ${mins(b.seconds)}; the limit is ${LIMITS.branchSeconds / 60} minutes. Split it into two deep dives, or show fewer concepts.`);
+    if (b.seconds > LIMITS.branchSeconds) rule(b.line, `the deep dive "${b.label}" runs about ${mins(b.seconds)}; the limit is ${LIMITS.branchSeconds / 60} minutes. Split it into two deep dives, or show fewer concepts.`);
   }
   const ok = !problems.some((p) => p.severity === 'error');
   return { ok, problems: problems.sort((a, b) => a.line - b.line), plan: ok ? plan : undefined };

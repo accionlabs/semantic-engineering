@@ -172,7 +172,7 @@ const mailContact = async (env: Env, c: StoredContact) => {
 };
 
 /** POST /api/contact: a person asks to be contacted. Checked, limited per visitor per day, stored for a year,
- *  and emailed. The visitor's address is used only as a salted daily hash for the limit, never stored. */
+ *  and emailed. The visitor's address is used only, mixed with a random daily value, to count requests; never stored. */
 const contact = async (request: Request, env: Env) => {
   const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });
   const body = await request.text();
@@ -184,12 +184,16 @@ const contact = async (request: Request, env: Env) => {
   if (!checked.contact) return json({ problem: checked.problem }, 422);
   if (!env.EXPLANATIONS) return json({ problem: 'Contact requests are not available right now. Please write to hello@semantic-engineering.ai.' }, 503);
   const day = new Date().toISOString().slice(0, 10);
-  const limitKey = `rl:${(await sha(`${request.headers.get('cf-connecting-ip') ?? ''}|${day}|contact`)).slice(0, 32)}`;
+  // The visitor's address is combined with a random value made fresh each day and discarded after two, so the
+  // daily count cannot be traced back to an address, even by trying every possible one.
+  let salt = await env.EXPLANATIONS.get(`salt:${day}`);
+  if (!salt) { salt = crypto.randomUUID(); await env.EXPLANATIONS.put(`salt:${day}`, salt, { expirationTtl: 2 * 86400 }); }
+  const limitKey = `rl:${(await sha(`${salt}|${request.headers.get('cf-connecting-ip') ?? ''}|contact`)).slice(0, 32)}`;
   const count = Number((await env.EXPLANATIONS.get(limitKey)) ?? 0);
   if (count >= CONTACT_LIMITS.perDay) return json({ problem: 'You have sent several requests today. Please write to hello@semantic-engineering.ai.' }, 429);
   await env.EXPLANATIONS.put(limitKey, String(count + 1), { expirationTtl: 86400 });
   const code = typeof input.code === 'string' && input.code.length < 64_000 ? input.code : '';
-  const plan = code ? checkExplain(code).plan : undefined;
+  const plan = code ? checkExplain(code, { lenient: true }).plan : undefined;
   const stored: StoredContact = {
     ...checked.contact, created: new Date().toISOString(),
     link: typeof input.link === 'string' && /^https:\/\/semantic-engineering\.ai\/e\/[A-Za-z0-9_-]+$/.test(input.link) ? input.link : plan ? await linkFor(code, env) : undefined,

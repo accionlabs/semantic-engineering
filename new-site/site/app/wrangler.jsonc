@@ -17,6 +17,9 @@
   "analytics_engine_datasets": [{ "binding": "USAGE", "dataset": "semantic_engineering_usage" }],
   // The insights page (/insights) is behind Cloudflare Access; the Worker checks its token too. ANALYTICS_TOKEN is a
   // secret (wrangler secret put ANALYTICS_TOKEN). ACCESS_TEAM and ACCESS_AUD come from the Access application.
-  "vars": { "ACCOUNT_ID": "bd52255ceee65acd397aafdf4ef88f8e", "ACCESS_TEAM": "accionlabs", "ACCESS_AUD": "c5effdf06046357263ebb38f364b0547164e3805e8643231278b3e98ec7e9d08" },
+  // Contact requests are emailed through Cloudflare Email Routing to the inbox hello@ forwards to (a verified
+  // destination address), from an address on this domain.
+  "send_email": [{ "name": "MAILER", "destination_address": "ashutosh.bijoor+dialengg@accionlabs.com" }],
+  "vars": { "CONTACT_FROM": "contact@semantic-engineering.ai", "CONTACT_TO": "ashutosh.bijoor+dialengg@accionlabs.com", "ACCOUNT_ID": "bd52255ceee65acd397aafdf4ef88f8e", "ACCESS_TEAM": "accionlabs", "ACCESS_AUD": "c5effdf06046357263ebb38f364b0547164e3805e8643231278b3e98ec7e9d08" },
   "kv_namespaces": [{ "binding": "EXPLANATIONS", "id": "851e5f06e3d946e9b53063b1c382f2de" }]
 }

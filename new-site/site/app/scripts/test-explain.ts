@@ -3,7 +3,7 @@
 import { checkExplain } from '../src/reel/explain';
 import { EXPLAIN_EXAMPLES } from '../src/reel/explain-examples';
 
-type Case = { name: string; code: string; ok: boolean; expect?: { line: number; includes: string; severity?: 'error' | 'warning' }[]; traces?: string[] };
+type Case = { name: string; code: string; ok: boolean; lenient?: boolean; expect?: { line: number; includes: string; severity?: 'error' | 'warning' }[]; traces?: string[] };
 // A short explanation around a body: the method's starting step for the kind of work follows the body, then a
 // caveat and the answer. Body lines start at L(layers); the start step is the line after the body.
 const START: Record<string, string> = { brownfield: 'breeze-extract', greenfield: 'breeze-functional-first', 'legacy-modernization': 'asimov-discover' };
@@ -89,12 +89,13 @@ const CASES: Case[] = [
   { name: 'one rejected line', code: X('show impact-report\nsample impact-report "Report"\n  line "x"\n  reject "y" "No."\n  reject "z" "No."'), ok: false, expect: [{ line: A + 4, includes: 'one rejected line' }] },
   { name: 'a line belongs to a sample', code: X('show impact-report\n  line "x"'), ok: false, expect: [{ line: A + 1, includes: 'goes indented under a "sample"' }] },
   { name: 'a legacy sample does not fit live work', code: X('show impact-report\nsample four-decisions "Modules"\n  line "x"'), ok: false, expect: [{ line: A + 1, includes: 'holds for a legacy modernization' }] },
+  { name: 'an older explanation plays when checked leniently', code: 'explain "Q"\n  context legacy-modernization\nshow legacy-experts-gone\ncaveat contract-fixed\nanswer "A."', ok: true, lenient: true, expect: [{ line: 5, includes: 'does not show where the method starts', severity: 'warning' }] },
   { name: 'shows nothing from the film', code: 'explain "Q"\n  context brownfield\nanswer "A."', ok: false, expect: [{ line: 3, includes: 'does not show where the method starts' }] },
 ];
 
 let failed = 0;
 for (const c of CASES) {
-  const r = checkExplain(c.code);
+  const r = checkExplain(c.code, { lenient: c.lenient });
   const why: string[] = [];
   if (r.ok !== c.ok) why.push(`expected ok=${c.ok}, got ok=${r.ok}: ${r.problems.map((p) => `${p.line} ${p.severity}: ${p.message}`).join(' | ')}`);
   if (c.expect && !c.expect.length && r.problems.some((p) => /question/.test(p.message))) why.push(`expected no problem about the question; got ${JSON.stringify(r.problems.map((p) => p.message))}`);

@@ -22,13 +22,15 @@ export const summarizeStored = (items: { code: string; created?: string }[]): St
   const kinds = tally(), madeBy = tally(), audiences = tally(), concepts = tally(), dives = tally(), weeks = tally();
   const questions: StoredSummary['questions'] = [];
   for (const { code, created } of items) {
-    const plan = checkExplain(code).plan;
+    // Counted as written; "passes" is against the current rules.
+    const plan = checkExplain(code, { lenient: true }).plan;
+    const passes = checkExplain(code).ok;
     const context = code.match(/^\s+context\s+(\S+)/m)?.[1] ?? 'unknown';
     kinds.add(context);
     audiences.add(code.match(/^\s+for\s+"([^"]*)"/m)?.[1] ?? '(not given)');
     madeBy.add(code.includes('Here is the problem you see, as the method describes it.') ? 'built on the site' : 'written by an agent');
-    madeBy.add(plan ? 'passes the current rules' : 'fails the current rules');
-    questions.push({ question: code.match(/^explain\s+"([^"]*)"/m)?.[1] ?? '(no question)', context, created, passes: !!plan });
+    madeBy.add(passes ? 'passes the current rules' : 'fails the current rules');
+    questions.push({ question: code.match(/^explain\s+"([^"]*)"/m)?.[1] ?? '(no question)', context, created, passes });
     if (created) { const d = new Date(created); d.setUTCDate(d.getUTCDate() - d.getUTCDay()); weeks.add(d.toISOString().slice(0, 10)); }
     if (!plan) continue;
     plan.branches.forEach((b) => dives.add(b.label));

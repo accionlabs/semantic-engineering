@@ -110,7 +110,9 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
   const { id: param = '' } = useParams();
   const id = localId ?? param;
   const saved = reels.get(id);
-  const result = useMemo(() => (saved ? checkExplain(saved.code) : undefined), [saved?.code]); // eslint-disable-line
+  // Plays as written: rules added since an explanation was made are notes, not reasons to refuse it.
+  const result = useMemo(() => (saved ? checkExplain(saved.code, { lenient: true }) : undefined), [saved?.code]); // eslint-disable-line
+  const madeEarlier = useMemo(() => !!saved && !!result?.plan && !checkExplain(saved.code).ok, [saved?.code, result]); // eslint-disable-line
   const api = useRef<ReelApi | null>(null);
   const [index, setIndex] = useState(-1);
   const [active, setActive] = useState(-1);          // -1: the short explanation; else a deep dive
@@ -159,6 +161,7 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
   return (
     <div className="wrap wide watch-page">
       <p className="crumbs"><Link to="/">Home</Link> / <Link to="/explain">Explanations</Link> / {full.question}</p>
+      {madeEarlier && <p className="reel-banner">Made before some of the current rules. It plays as it was written; the notes from the checker below say what has changed.</p>}
       <p className="reel-banner">{saved.source === 'builder' ? 'Built on this site from your choices.' : 'Written by an agent for one question.'} The scenes and quotes come from the film and the site&apos;s pages; the guide&apos;s lines are {saved.source === 'builder' ? 'templates' : "the agent's"}. <ShareButton code={saved.code} context={full.context ?? ''} /></p>
       {full.branches.length > 0 && (
         <nav className="reel-sections" aria-label="Parts of this explanation">
@@ -190,7 +193,7 @@ export const ExplainImport: React.FC = () => {
   useEffect(() => {
     unpackExplanation(location.hash.slice(1)).then((code) => {
       if (!code) { setBroken(true); return; }
-      const r = checkExplain(code);
+      const r = checkExplain(code, { lenient: true });
       const saved = reels.save(code, { question: r.plan?.question ?? code.match(/"([^"]*)"/)?.[1] ?? 'Explanation', audience: r.plan?.audience }, 'import');
       navigate(`/explain/${saved.id}`, { replace: true });
     });
@@ -208,7 +211,7 @@ export const ExplainStored: React.FC = () => {
   useEffect(() => {
     setLocal(null); setMissing(false);
     fetch(`/api/explanations/${encodeURIComponent(id)}`).then((r) => (r.ok ? r.text() : Promise.reject())).then((code) => {
-      const r = checkExplain(code);
+      const r = checkExplain(code, { lenient: true });
       setLocal(reels.save(code, { question: r.plan?.question ?? code.match(/"([^"]*)"/)?.[1] ?? 'Explanation', audience: r.plan?.audience }, 'import').id);
     }).catch(() => setMissing(true));
   }, [id]); // eslint-disable-line
