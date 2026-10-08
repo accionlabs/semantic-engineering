@@ -23,14 +23,23 @@ const follow = (path: string) => { if (location.pathname !== path) history.repla
 
 const NotFound = () => <div className="wrap narrow"><h1>Page not found</h1><p><Link to="/watch">All acts and scenes</Link></p></div>;
 
+/** Opens one of the paths below the video, by its tab, and scrolls to it. */
+const openTab = (tab: string) => (e: React.MouseEvent) => {
+  e.preventDefault();
+  history.replaceState(null, '', `#${tab}`);
+  dispatchEvent(new HashChangeEvent('hashchange'));
+  document.getElementById('paths')?.scrollIntoView({ behavior: 'smooth' });
+};
+
 const OverviewEnd: React.FC = () => (
   <>
     <p className="kicker">The overview</p>
     <h2>Go deeper</h2>
-    <p className="muted">Follow the full story, one part at a time, or pick a scene.</p>
+    <p className="muted">Follow the full story, one part at a time, pick your role, or have it explained for your own situation.</p>
     <div className="act-end-actions">
       <Link className="btn primary" to="/watch">Follow the story</Link>
-      <a className="btn" href="#roles" onClick={(e) => { e.preventDefault(); history.replaceState(null, '', '#roles'); dispatchEvent(new HashChangeEvent('hashchange')); document.getElementById('paths')?.scrollIntoView({ behavior: 'smooth' }); }}>Pick your role</a>
+      <a className="btn" href="#roles" onClick={openTab('roles')}>Pick your role</a>
+      <a className="btn" href="#explain" onClick={openTab('explain')}>Explain it for my situation</a>
     </div>
   </>
 );
@@ -129,7 +138,7 @@ export const HomeWatch: React.FC = () => {
 const HomeBody: React.FC = () => (
   <div className="wrap wide home-watch">
     <LiveVideo tldr endOverlay={<OverviewEnd />} fallbackScenes={[0]} />
-    <p className="home-intro muted">Prefer to read? <Link to="/introduction/">Start with the introduction</Link>, or use the sections in the menu.</p>
+    <p className="home-intro muted">Want it for your own situation? <a href="#explain" onClick={openTab('explain')}>Build a short explanation</a> from three choices. Prefer to read? <Link to="/introduction/">Start with the introduction</Link>, or use the sections in the menu.</p>
     <Transcript scenes={[0]} />
     <Paths />
   </div>

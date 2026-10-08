@@ -1,14 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Story } from './Story';
 import { QUESTIONS, ROLES, SITUATIONS, sceneTitle, type Path } from '../content/paths';
 
-export type Tab = 'story' | 'roles' | 'situations' | 'questions';
+// The builder carries the knowledge graph, so it loads only when its tab opens.
+const Builder = lazy(() => import('../pages/Builder').then((m) => ({ default: m.Builder })));
+
+export type Tab = 'story' | 'roles' | 'situations' | 'questions' | 'explain';
 const TABS: { id: Tab; label: string; note: string }[] = [
   { id: 'story', label: 'Follow the story', note: 'The full video in six parts and an appendix, one part at a time.' },
   { id: 'roles', label: 'Pick your role', note: 'The scenes that matter most for your role, in order.' },
   { id: 'situations', label: 'Pick your situation', note: 'A new application, an existing one, or a legacy modernization.' },
   { id: 'questions', label: 'Ask a question', note: 'The questions engineering leaders ask, each answered in one scene.' },
+  { id: 'explain', label: 'Explain it for you', note: 'A short film built for your own situation, from three choices, with deep dives you choose. Or have your AI agent write one.' },
 ];
 const fromHash = (): Tab | undefined => {
   if (typeof location === 'undefined') return undefined;
@@ -63,6 +67,12 @@ export const Paths: React.FC<{ initial?: Tab; current?: { act?: number; scene?: 
         {tab === 'roles' && <PathList paths={ROLES} prefix="role" current={current?.role} />}
         {tab === 'situations' && <PathList paths={SITUATIONS} prefix="use" current={current?.situation} />}
         {tab === 'questions' && <Questions current={current?.scene} />}
+        {tab === 'explain' && (
+          <>
+            <Suspense fallback={<p className="muted">Loading</p>}><Builder /></Suspense>
+            <p className="muted">Using an AI agent such as Claude? <Link to="/connect">Connect it to this site</Link> and it can write an explanation from a conversation with you. Explanations saved in this browser are on <Link to="/explain">the explanations page</Link>.</p>
+          </>
+        )}
       </div>
     </section>
   );
