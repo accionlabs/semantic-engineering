@@ -13,6 +13,7 @@ import type { Loc } from '../content/film';
 import { MCP_URL } from '../reel/prompt';
 import { unpackExplanation } from '../reel/link';
 import { Builder } from './Builder';
+import { ContactForm } from './ContactForm';
 import { track } from '../reel/track';
 
 const lower = (t: string) => t.charAt(0).toLowerCase() + t.slice(1);
@@ -150,6 +151,7 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
         {dives.map(({ b, k }) => <button key={k} className="btn primary" onClick={() => choose(k)}>{b.label} <span className="reel-dur">{watched.has(k) ? 'watched · ' : ''}{mmss(b.seconds)}</span></button>)}
         {active >= 0 && <button className="btn" onClick={() => choose(-1)}>Back to the short explanation</button>}
         {section.read.map((r) => { const l = locOf(r); return l ? <button key={r} className="btn" onClick={() => setReading(l)}>Read: {l.heading ?? l.page.title}</button> : null; })}
+        <a className="btn" href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Talk to us about this</a>
         <Link className="btn" to="/explain">Your explanations</Link>
       </div>
     </>
@@ -174,6 +176,7 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
         if (k !== active) { choose(k); return; }
         const i = section.segments.findIndex((x) => x.line >= line); if (i >= 0) api.current?.goto(i);
       }} />
+      <ContactForm code={saved.code} context={full.context} />
       {result.problems.length > 0 && <details className="reel-warnings"><summary>{result.problems.length} note{result.problems.length > 1 ? 's' : ''} from the checker</summary><ul>{result.problems.map((p, i) => <li key={i}>Line {p.line}: {p.message}</li>)}</ul></details>}
       {reading && <Reader loc={reading} onClose={() => setReading(null)} onResume={() => { setReading(null); api.current?.play(); }} />}
     </div>

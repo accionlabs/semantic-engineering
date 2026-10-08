@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import type { Count, Insights } from '../reel/insights';
+import { REQUESTS } from '../reel/contact';
 
 // /insights: what people use the explanations and the connector for, in aggregate. Behind Cloudflare Access;
 // the Worker checks the sign-in again before it answers.
@@ -27,7 +28,7 @@ export const InsightsPage: React.FC = () => {
     <div className="wrap wide insights-page">
       <p className="kicker" style={{ marginTop: 28 }}>Insights</p>
       <h1>What people use the explanations for</h1>
-      <p className="lede muted">Stored explanations and anonymous connector counts, in aggregate. Nothing here identifies a person.</p>
+      <p className="lede muted">Contact requests, stored explanations and anonymous connector counts. Contact requests hold personal details people chose to send: use them only to reply, and they are deleted after 12 months.</p>
       <div className="builder-row" role="group" aria-label="Period">
         {[7, 30, 90].map((d) => <button key={d} className={`reel-chip ${days === d ? 'on' : ''}`} aria-pressed={days === d} onClick={() => setDays(d)}>Last {d} days</button>)}
       </div>
@@ -35,6 +36,24 @@ export const InsightsPage: React.FC = () => {
       {!data && !error && <p className="muted" style={{ marginTop: 20 }}>Loading</p>}
       {data && (
         <>
+          <h2>Contact requests <span className="muted" style={{ fontWeight: 400 }}>· {data.contacts?.length ?? 0}</span></h2>
+          {!data.contacts?.length ? <p className="muted">None in this period.</p> : (
+            <div className="table-wrap"><table>
+              <thead><tr><th>When</th><th>Request</th><th>Name</th><th>Email</th><th>Company</th><th>Message</th><th>Explanation</th></tr></thead>
+              <tbody>{data.contacts.map((c, i) => (
+                <tr key={i}>
+                  <td>{c.created.slice(0, 10)}</td>
+                  <td>{REQUESTS.find((r) => r.id === c.request)?.label ?? c.request}</td>
+                  <td>{c.name}</td>
+                  <td><a href={`mailto:${c.email}`}>{c.email}</a></td>
+                  <td>{c.company}</td>
+                  <td style={{ whiteSpace: 'pre-wrap', maxWidth: 320 }}>{c.message}</td>
+                  <td>{c.link ? <a href={c.link} target="_blank" rel="noopener">{c.question ?? 'Watch'}</a> : c.question ?? ''}{c.context ? <span className="muted"> · {c.context}{c.role ? `, ${c.role}` : ''}</span> : null}</td>
+                </tr>
+              ))}</tbody>
+            </table></div>
+          )}
+
           <h2>Explanations stored <span className="muted" style={{ fontWeight: 400 }}>· {data.stored.total}</span></h2>
           <div className="ins-grid">
             <Table title="Kinds of work" rows={data.stored.kinds} />

@@ -9,7 +9,8 @@ export type StoredSummary = {
   questions: { question: string; context: string; created?: string; passes: boolean }[];
 };
 export type UsageSummary = { requests: Count[]; outcomes: Count[]; errors: Count[]; clients: Count[]; kinds: Count[]; countries: Count[] };
-export type Insights = { days: number; generated: string; stored: StoredSummary; usage?: UsageSummary; usageNote?: string };
+export type ContactRow = { created: string; name: string; email: string; company: string; request: string; message: string; link?: string; context?: string; role?: string; question?: string };
+export type Insights = { days: number; generated: string; stored: StoredSummary; usage?: UsageSummary; usageNote?: string; contacts?: ContactRow[] };
 
 const tally = () => {
   const m = new Map<string, number>();

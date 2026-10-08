@@ -13,6 +13,7 @@ import { ROLE, STYLE } from './src/reel/reference';
 import { SITE } from './src/reel/prompt';
 import { packExplanation } from './src/reel/link';
 import { fetchUsage, summarizeStored, type Insights } from './src/reel/insights';
+import { CONTACT_LIMITS, KEEP_CONTACT_DAYS, checkContact, contactEmail, type Contact } from './src/reel/contact';
 
 type KV = {
   get: (key: string) => Promise<string | null>;
@@ -24,6 +25,8 @@ type Env = {
   ASSETS: { fetch: (r: Request | URL) => Promise<Response> }; EXPLANATIONS?: KV; USAGE?: Usage;
   /** The insights page: Cloudflare Access's team name and application audience, the account and a read-only analytics token. */
   ACCESS_TEAM?: string; ACCESS_AUD?: string; ACCOUNT_ID?: string; ANALYTICS_TOKEN?: string;
+  /** Contact requests: Cloudflare Email Routing's send binding, the address it sends from, and where to. */
+  MAILER?: { send: (message: unknown) => Promise<void> }; CONTACT_FROM?: string; CONTACT_TO?: string;
 };
 
 // ---------- anonymous usage counts ----------
@@ -131,11 +134,72 @@ const insights = async (request: Request, env: Env, url: URL) => {
     } while (cursor && keys.length < 2000);
     for (const k of keys.slice(0, 1000)) { const code = await env.EXPLANATIONS.get(k.name); if (code) items.push({ code, created: k.created }); }
   }
-  const out: Insights = { days, generated: new Date().toISOString(), stored: summarizeStored(items) };
+  const contacts: StoredContact[] = [];
+  if (env.EXPLANATIONS) {
+    let cursor: string | undefined;
+    do {
+      const page = await env.EXPLANATIONS.list({ prefix: 'lead:', cursor });
+      for (const k of page.keys) if (!k.metadata?.created || k.metadata.created >= since) { const v = await env.EXPLANATIONS.get(k.name); if (v) contacts.push(JSON.parse(v)); }
+      cursor = page.list_complete ? undefined : page.cursor;
+    } while (cursor && contacts.length < 500);
+  }
+  contacts.sort((a, b) => b.created.localeCompare(a.created));
+  const out: Insights = { days, generated: new Date().toISOString(), stored: summarizeStored(items), contacts };
   if (env.ANALYTICS_TOKEN && env.ACCOUNT_ID) {
     try { out.usage = await fetchUsage(env.ACCOUNT_ID, env.ANALYTICS_TOKEN, 'semantic_engineering_usage', days); } catch (e) { out.usageNote = (e as Error).message; }
   } else out.usageNote = 'Usage counts need an analytics token: run `npx wrangler secret put ANALYTICS_TOKEN` with a token that has Account Analytics: Read.';
   return json(out);
+};
+
+// ---------- contact requests ----------
+
+type StoredContact = Contact & { created: string; link?: string; context?: string; role?: string; question?: string };
+const sha = async (s: string) => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)))].map((b) => b.toString(16).padStart(2, '0')).join('');
+
+/** Emails a contact request through Cloudflare Email Routing, when the binding and addresses are set up. */
+const mailContact = async (env: Env, c: StoredContact) => {
+  if (!env.MAILER || !env.CONTACT_FROM || !env.CONTACT_TO) return false;
+  const { EmailMessage } = await import('cloudflare:email');
+  const subject = `Contact request: ${c.name}${c.company ? `, ${c.company}` : ''}`;
+  const raw = [
+    `From: Semantic Engineering <${env.CONTACT_FROM}>`, `To: ${env.CONTACT_TO}`, `Reply-To: ${c.email}`,
+    `Subject: ${subject.replace(/[\r\n]+/g, ' ')}`, `Message-ID: <${crypto.randomUUID()}@semantic-engineering.ai>`, `Date: ${new Date().toUTCString()}`,
+    'MIME-Version: 1.0', 'Content-Type: text/plain; charset=utf-8', 'Content-Transfer-Encoding: 8bit', '',
+    contactEmail(c, { ...c, site: SITE }),
+  ].join('\r\n');
+  await env.MAILER.send(new EmailMessage(env.CONTACT_FROM, env.CONTACT_TO, raw));
+  return true;
+};
+
+/** POST /api/contact: a person asks to be contacted. Checked, limited per visitor per day, stored for a year,
+ *  and emailed. The visitor's address is used only as a salted daily hash for the limit, never stored. */
+const contact = async (request: Request, env: Env) => {
+  const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { 'content-type': 'application/json', 'cache-control': 'no-store' } });
+  const body = await request.text();
+  if (body.length > 70_000) return json({ problem: 'The request is too large.' }, 413);
+  let input: Record<string, unknown>;
+  try { input = JSON.parse(body); } catch { return json({ problem: 'The request could not be read.' }, 400); }
+  const checked = checkContact(input);
+  if (checked.bot) return json({ ok: true });
+  if (!checked.contact) return json({ problem: checked.problem }, 422);
+  if (!env.EXPLANATIONS) return json({ problem: 'Contact requests are not available right now. Please write to hello@semantic-engineering.ai.' }, 503);
+  const day = new Date().toISOString().slice(0, 10);
+  const limitKey = `rl:${(await sha(`${request.headers.get('cf-connecting-ip') ?? ''}|${day}|contact`)).slice(0, 32)}`;
+  const count = Number((await env.EXPLANATIONS.get(limitKey)) ?? 0);
+  if (count >= CONTACT_LIMITS.perDay) return json({ problem: 'You have sent several requests today. Please write to hello@semantic-engineering.ai.' }, 429);
+  await env.EXPLANATIONS.put(limitKey, String(count + 1), { expirationTtl: 86400 });
+  const code = typeof input.code === 'string' && input.code.length < 64_000 ? input.code : '';
+  const plan = code ? checkExplain(code).plan : undefined;
+  const stored: StoredContact = {
+    ...checked.contact, created: new Date().toISOString(),
+    link: typeof input.link === 'string' && /^https:\/\/semantic-engineering\.ai\/e\/[A-Za-z0-9_-]+$/.test(input.link) ? input.link : plan ? await linkFor(code, env) : undefined,
+    context: plan?.context, role: plan?.audience, question: plan?.question,
+  };
+  await env.EXPLANATIONS.put(`lead:${stored.created}:${crypto.randomUUID().slice(0, 8)}`, JSON.stringify(stored), { expirationTtl: KEEP_CONTACT_DAYS * 86400, metadata: { created: day, request: stored.request } });
+  let mailed = false;
+  try { mailed = await mailContact(env, stored); } catch { /* stored; the insights page lists it */ }
+  record(env, metaOf(request), 'contact', stored.request, mailed ? 'mailed' : 'stored', '', stored.context ?? '');
+  return json({ ok: true });
 };
 
 /** POST /api/explanations: the page shares an explanation it built; it is checked, stored, and given a short link. */
@@ -245,6 +309,7 @@ export default {
     if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return Response.redirect(url.toString(), 301); }
     if (url.pathname === '/mcp' || url.pathname === '/mcp/') return mcp(request, env);
     if (url.pathname === '/api/explanations' && request.method === 'POST') return shareExplanation(request, env);
+    if (url.pathname === '/api/contact' && request.method === 'POST') return contact(request, env);
     if (url.pathname === '/api/insights') return insights(request, env, url);
     if (url.pathname.startsWith('/api/explanations/')) return storedExplanation(url.pathname.split('/')[3] ?? '', env);
     // A stored explanation's short link: the page that fetches it by id and plays it.

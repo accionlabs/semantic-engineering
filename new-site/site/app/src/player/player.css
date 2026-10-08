@@ -265,3 +265,16 @@
 .builder-go { margin-top: 16px; width: auto; display: inline-block; }
 .reel-share { margin-left: 6px; }
 .reel-tick.k-sample { background: #8a5a12; }
+/* Talk to us: the opt-in contact request below an explanation. */
+.contact { background: var(--surface); border: 1px solid var(--hairline); border-radius: 14px; padding: 18px 20px; margin: 22px 0; max-width: 760px; }
+.contact h2 { margin-top: 0; }
+.contact-open { width: auto; display: inline-block; }
+.contact-form { display: grid; gap: 12px; }
+.contact-form fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 6px; }
+.contact-form legend { font-weight: 600; margin-bottom: 4px; }
+.contact-form label { display: grid; gap: 4px; font-size: 0.95rem; }
+.contact-form input:not([type=radio]):not([type=checkbox]), .contact-form textarea { font: inherit; padding: 8px 10px; border-radius: 8px; border: 1px solid var(--hairline); background: var(--raised); color: var(--fg); }
+.contact-choice, .contact-consent { display: flex !important; gap: 8px; align-items: flex-start; }
+.contact-consent { font-size: 0.88rem; line-height: 1.45; }
+.contact-hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form .btn { width: auto; justify-self: start; }
