@@ -10,14 +10,15 @@ export const Builder: React.FC = () => {
   const [context, setContext] = useState('');
   const [role, setRole] = useState('');
   const [picked, setPicked] = useState<string[]>([]);
+  const [above, setAbove] = useState(false);
   const [error, setError] = useState('');
   const options = useMemo(() => (context ? symptomsFor(context) : []), [context]);
   const toggle = (id: string) => setPicked((p) => (p.includes(id) ? p.filter((x) => x !== id) : [...p, id]));
   const build = () => {
-    const r = buildChecked({ context, role: role || undefined, symptoms: picked });
+    const r = buildChecked({ context, role: role || undefined, symptoms: picked, above });
     if (!r.ok || !r.code || !r.plan) { setError(r.error ?? 'This combination could not be built. Choose fewer problems and try again.'); return; }
     const saved = reels.save(r.code, { question: r.plan.question, audience: r.plan.audience }, 'builder');
-    track('builder_build', { context, role: role || 'none', problems: picked.length });
+    track('builder_build', { context, role: role || 'none', problems: picked.length, above });
     navigate(`/explain/${saved.id}`);
   };
   return (
@@ -55,6 +56,16 @@ export const Builder: React.FC = () => {
               );
             })}
           </ul>
+        </fieldset>
+      )}
+
+      {context && context !== 'legacy-modernization' && (
+        <fieldset>
+          <legend>4. Does each customer need a version of the product of their own? <span className="muted">(optional)</span></legend>
+          <label className={`builder-above ${above ? 'on' : ''}`}>
+            <input type="checkbox" checked={above} onChange={(e) => setAbove(e.target.checked)} />
+            <span><strong>Yes: faster onboarding, rules of their own, or interfaces for their own agents</strong><span className="muted builder-def">Adds a deep dive on Dialect Engineering, which works above the water and builds on the same knowledge graph.</span></span>
+          </label>
         </fieldset>
       )}
 

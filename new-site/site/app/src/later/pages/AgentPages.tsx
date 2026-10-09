@@ -4,7 +4,7 @@ import { TOOLS } from '../reel/tools';
 import { CONTACT, MCP_URL, SITE } from '../reel/prompt';
 
 const EXAMPLE_PROMPTS = [
-  'Help me understand how the dialect engineering paper applies to our onboarding. It takes us months and customers find configuration errors after go-live.',
+  'Help me understand how the Dialect Engineering paper applies to our onboarding. It takes us months and customers find configuration errors after go-live.',
   'We sell a payroll product priced by tier, and customers say they pay for features they never use. What does the paper suggest?',
   'We are starting a new HR product from scratch. What would the paper have us design differently?',
   'Our customers keep asking for changes that end up as special cases in shared code. How does the paper see that problem, and where would we start?',

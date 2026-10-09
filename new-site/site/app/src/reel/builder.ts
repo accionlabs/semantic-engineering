@@ -5,7 +5,8 @@
 import { EDGES, NODES, nodeById, type Kind, type Node } from './graph';
 import { checkExplain, fits, startStep } from './explain';
 
-export type Choices = { context: string; role?: string; symptoms: string[] };
+/** above: the product has to vary per customer, so the explanation adds a deep dive on Dialect Engineering. */
+export type Choices = { context: string; role?: string; symptoms: string[]; above?: boolean };
 
 /** The roles a person can pick, with what each cares about most, for the guide's opening. */
 export const ROLES: { slug: string; name: string; focus: string }[] = [
@@ -99,7 +100,9 @@ export const buildExplanation = (c: Choices): { code?: string; error?: string } 
   L.push('', `answer ${quote(`${ANSWER[c.context]}${then}`)}`, `  read ${READ[c.context]}`);
 
   // Deep dives: each further problem, the rest of the method in order, and results.
-  for (const id of symptoms.slice(1, 3)) {
+  // Above the water takes one deep dive, so one fewer further problem fits within the four.
+  const above = !!c.above && c.context !== 'legacy-modernization';
+  for (const id of symptoms.slice(1, above ? 2 : 3)) {
     const s = nodeById(id)!, f = fixFor(id, c.context);
     L.push('', `branch ${quote(s.label.slice(0, 60))}`, `  say ${quote('This part shows how the method answers this problem.')}`, `show ${id}`);
     if (f) L.push(`connect ${id} to ${f.id}`);
@@ -109,6 +112,7 @@ export const buildExplanation = (c: Choices): { code?: string; error?: string } 
     L.push('', `branch ${quote('The method, step by step')}`, `  say ${quote('This part follows the rest of the method, in order.')}`);
     steps.forEach((s) => L.push(`show ${s}`));
   }
+  if (above) L.push('', `branch ${quote('Above the water: Dialect Engineering')}`, `  say ${quote('This part shows what applies when each customer needs a version of the product of their own.')}`, 'recommend above-the-water');
   L.push('', `branch ${quote('Results from engagements')}`, `  say ${quote('This part shows what one engagement found.')}`, `show ${CASE[c.context]}`, 'caveat results-in-context');
   return { code: L.join('\n') };
 };

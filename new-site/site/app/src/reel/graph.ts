@@ -156,7 +156,7 @@ export const NODES: Node[] = [
   n('practice', 'modernization-handover', 'The handover to the four-layer graph', 'When a modernization completes, a four-layer graph is built for the new system, its code layer extracted from the new code.', { video: ['26.6-10', '9.9'], pages: ['modernization/methodology#how-the-two-instantiations-connect-at-the-handoff'] }, { contexts: [...LEGACY, 'brownfield'], ...ASIMOV }),
 
   // ---- Products that agents use
-  n('practice', 'graph-for-agents', 'An interface for agents from the graph', 'The graph records what a product provides, so an interface for customers\' agents can be built from it, and the graph governs which agent may use which capability.', { video: ['29.3-5'], pages: ['home#graphs-for-agent-facing-products'] }, { contexts: LIVE, ...BREEZE }),
+  n('practice', 'graph-for-agents', 'An interface for agents from the graph', 'The graph records what a product provides, so an interface for customers\' agents can be built from it, and the graph governs which agent may use which capability.', { video: ['29.4-7'], pages: ['home#graphs-for-agent-facing-products'] }, { contexts: LIVE, ...BREEZE }),
 
   // ---- Recommendations
   n('recommendation', 'graph-for-complex', 'Use the graph where the application is complex', 'A large, complex or legacy application needs the knowledge graph, even when a single team works on it; complexity decides, and team count is one factor.', { video: ['10.3', '9.10'], pages: ['sdlc/zones/zone-2-spec-driven-development#when-this-zone-stops-working'] }),
@@ -168,6 +168,8 @@ export const NODES: Node[] = [
   n('recommendation', 'add-spec-sprint', 'Add a spec sprint, keep the rest', 'The sprint, the ticket system and code review stay as they are; the team adds a spec sprint ahead of implementation.', { video: ['20.1-2'], pages: ['sdlc/process/spec-sprint#when-the-spec-sprint-is-worth-a-separate-cadence'] }, { contexts: LIVE, ...BREEZE }),
   n('recommendation', 'choose-a-mode', 'Choose an engagement mode', 'A modernization enters through one of five modes, from Documentation Only to Full Modernization, and may stop at any mode.', { video: ['25.1-8'], pages: ['modernization/engagement-modes#the-five-engagement-modes'] }, { contexts: LEGACY, ...ASIMOV }),
   n('recommendation', 'first-module', 'Migrate one module first', 'Full Modernization migrates one first module while subject-matter experts review the output and tune the agents, then migrates the rest.', { video: ['25.9-10'], pages: ['modernization/process/operating-model#stage-3-mvp-migration-one-identified-module'] }, { contexts: LEGACY, ...ASIMOV }),
+
+  n('recommendation', 'above-the-water', 'Above the water: add Dialect Engineering', 'When the product itself has to vary per customer (faster onboarding, rules of a customer\'s own, interfaces for customers\' own agents), add Dialect Engineering above the water: a language over the knowledge graph Semantic Engineering has extracted, which is the product\'s canonical model.', { video: ['29.2-6'], pages: ['home#below-and-above-the-water p3', 'home#below-and-above-the-water p4', 'home#graphs-for-agent-facing-products'] }),
 
   // ---- Limits the content states
   n('limit', 'small-apps-need-specs', 'A small application needs specifications only', 'A small application its team can hold in mind works well with a written specification for each change.', { video: ['10.1-2'], pages: ['sdlc/zones/zone-2-spec-driven-development'] }, { contexts: LIVE, ...BREEZE }),
@@ -308,7 +310,7 @@ export const EDGES: Edge[] = [
   e('four-gates', 'requires', 'validation-gates', { video: ['24.4'] }),
   e('expert-review', 'requires', 'four-gates', { video: ['24.11'] }),
   e('modernization-handover', 'requires', 'four-layer-graph', { video: ['26.6-7'] }),
-  e('graph-for-agents', 'requires', 'knowledge-graph', { video: ['29.3-4'] }),
+  e('graph-for-agents', 'requires', 'knowledge-graph', { video: ['29.3-5'] }),
 
   // Stated limits
   e('knowledge-graph', 'limited-by', 'graph-not-a-spec', { video: ['5.5'] }),
@@ -382,6 +384,8 @@ export const EDGES: Edge[] = [
   e('add-spec-sprint', 'applies-to', 'brownfield', { video: ['20.2'] }),
   e('choose-a-mode', 'applies-to', 'legacy-modernization', { video: ['25.1'] }),
   e('first-module', 'applies-to', 'legacy-modernization', { video: ['25.9'] }),
+  e('above-the-water', 'applies-to', 'brownfield', { video: ['29.8'], pages: ['home#below-and-above-the-water p5'] }),
+  e('above-the-water', 'applies-to', 'greenfield', { video: ['29.8'], pages: ['home#below-and-above-the-water p5'] }),
   e('graph-for-complex', 'applies-to', 'greenfield', { video: ['10.3'], pages: ['sdlc/case-archetypes#methodology-takeaways'] }),
   e('graph-for-complex', 'applies-to', 'brownfield', { video: ['10.3'] }),
   e('graph-for-complex', 'applies-to', 'legacy-modernization', { video: ['10.3'] }),

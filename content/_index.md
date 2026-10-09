@@ -67,7 +67,25 @@ Semantic Engineering is the methodology we developed at Accion Labs for running 
 
 ![Semantic Engineering at a Glance](/diagrams/hero-semantic-engineering-at-a-glance.svg)
 
-This page is the executive overview. Each section links to a deep dive in the topic area it summarizes. If you want to jump straight to a use case, the two anchor sections are [Agentic Software Engineering (SDLC)](sdlc/_index.md) and [Agentic Legacy Modernization](modernization/_index.md).
+This page is the executive overview. The section [Below and Above the Water](#below-and-above-the-water) places Semantic Engineering beside its sister method, Dialect Engineering. Each section links to a deep dive in the topic area it summarizes. If you want to jump straight to a use case, the two anchor sections are [Agentic Software Engineering (SDLC)](sdlc/_index.md) and [Agentic Legacy Modernization](modernization/_index.md).
+
+## Below and Above the Water
+
+When code becomes cheap, a software product can change in two places.
+
+**Below the water**, the product stays as it is, and building and changing it becomes faster and safer. That is Semantic Engineering: the knowledge the product depends on is recorded in a knowledge graph, AI agents work from it, and every change is checked against it. The product's architecture, screens and customers are untouched.
+
+**Above the water**, the product itself changes shape. Each customer's needs are written in a language over what every customer shares, so more of the product can vary per customer without special cases in shared code. That is [Dialect Engineering](https://dialect-engineering.ai), set out in the paper *SaaS architecture when code is cheap*.
+
+**One foundation.** Both stand on the same knowledge graph. The graph records the product's entities, workflows, rules and contracts: its canonical model, the part every customer shares. Semantic Engineering extracts that graph from the existing code and data model, so the canonical model is read from the product itself, without being designed from scratch. Dialect Engineering builds its language on that graph: the language's words are the graph's entities, and its rules say how a customer's needs may combine them.
+
+**Which one a product needs:**
+
+| The product | What applies |
+|---|---|
+| Stays as it is, and needs to be built and changed faster and more safely | Semantic Engineering |
+| Has to vary per customer: faster onboarding, per-customer rules, interfaces for customers' own agents | Both, with the graph first |
+| Is a legacy system being replaced | Semantic Engineering's legacy modernization, then either of the above for the new system |
 
 ## The Shared Problem
 
@@ -203,7 +221,7 @@ Software products are starting to open their capabilities to their customers' ow
 
 The knowledge graph already records what a product provides: its capabilities, workflows, entities and contracts. These are the domain invariants every customer shares. An interface for agents can be built from the graph, describing each capability in the terms of the domain, independently of the screens and APIs designed for people. The graph also governs which external agent may use which capability.
 
-A formal grammar above the graph adds the rules a schema cannot express. With it, an agent can write what a customer needs and check its own result by running tests. This approach is called dialect engineering: it lets more of a software-as-a-service product vary per customer while the domain invariants stay shared. It is set out in the paper *SaaS architecture when code is cheap*, at [dialect-engineering.ai](https://dialect-engineering.ai).
+A formal grammar above the graph adds the rules a schema cannot express. With it, an agent can write what a customer needs and check its own result by running tests. This approach is called Dialect Engineering: it lets more of a software-as-a-service product vary per customer while the domain invariants stay shared. It is set out in the paper *SaaS architecture when code is cheap*, at [dialect-engineering.ai](https://dialect-engineering.ai).
 
 ## Where to Go Next
 

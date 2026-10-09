@@ -9,7 +9,9 @@ import { Gate, GATE_X } from './s05-principles';
 import { Callout, Frame, Svg } from '../parts/ui';
 import { C, F, KINDS } from '../theme';
 
-// The overview: the whole story in one scene. What Semantic Engineering is for; why AI coding agents
+// The overview: the whole story in one scene. The shared opening with Dialect Engineering.ai: a product
+// can change below the water (Semantic Engineering) and above it (Dialect Engineering), on one knowledge
+// graph. Then what Semantic Engineering is for; why AI coding agents
 // fail on large applications; the four kinds of knowledge and their holders; the Manual Translation Tax;
 // the knowledge graph and how it governs each change; how much of the method a team needs; Breeze.AI's
 // agents and their owners; the three use cases and two platforms; the four principles.
@@ -59,7 +61,39 @@ export const scene00: SceneDef = {
     <Frame act="Overview" scene="Semantic Engineering">
       <Svg>
         <Defs />
-        <g className="intro">
+        {/* The shared opening: a product on a waterline; below, the graph and the flow; above, customer variants. */}
+        <g className="pre water">
+          <rect x={0} y={560} width={1920} height={520} fill="rgba(44,197,180,0.07)" />
+          <line x1={0} y1={560} x2={1920} y2={560} stroke={C.layer.architecture} strokeWidth={2} strokeDasharray="14 10" opacity={0.7} />
+          <text x={150} y={548} fontFamily={F.mono} fontSize={18} letterSpacing={3} fill={C.layer.architecture} opacity={0.8}>THE WATERLINE</text>
+          <g className="w-product">
+            <rect x={760} y={380} width={400} height={330} rx={16} fill={C.canvasRaised} stroke={C.text} strokeWidth={2.5} />
+            <text x={960} y={430} textAnchor="middle" fontFamily={F.display} fontSize={34} fontWeight={700} fill={C.text}>a software product</text>
+          </g>
+          <g className="pre w-below">
+            {KINDS.map((k, i) => <rect key={k.id} x={790} y={590 + i * 26} width={340} height={16} rx={5} fill="none" stroke={C.layer[k.id]} strokeWidth={2} />)}
+            <text x={960} y={772} textAnchor="middle" fontFamily={F.mono} fontSize={20} letterSpacing={2} fill={C.text}>SEMANTIC ENGINEERING · BELOW THE WATER</text>
+            <text x={960} y={804} textAnchor="middle" fontFamily={F.sans} fontSize={22} fill={C.cardText}>the product stays as it is; building and changing it gets faster and safer</text>
+          </g>
+          <g className="pre w-above">
+            {[0, 1, 2].map((i) => (
+              <g key={i} className={`w-tenant w-tenant-${i}`}>
+                <rect x={760 + i * 140} y={210} width={120} height={84} rx={10} fill={C.canvasRaised} stroke={C.warn} strokeWidth={2} />
+                {[0, 1, 2].map((r) => <rect key={r} x={776 + i * 140} y={228 + r * 16} width={[80, 60, 70][r]} height={6} rx={3} fill={C.warn} opacity={0.8} />)}
+                <line x1={820 + i * 140} y1={294} x2={820 + i * 140} y2={380} stroke={C.warn} strokeWidth={1.5} strokeDasharray="4 5" />
+              </g>
+            ))}
+            <text x={960} y={152} textAnchor="middle" fontFamily={F.mono} fontSize={20} letterSpacing={2} fill={C.warn}>DIALECT ENGINEERING · ABOVE THE WATER</text>
+            <text x={960} y={184} textAnchor="middle" fontFamily={F.sans} fontSize={22} fill={C.cardText}>each customer's needs, written in a language over what every customer shares</text>
+          </g>
+          <g className="pre w-graph">
+            <rect x={300} y={846} width={1320} height={60} rx={14} fill="rgba(238,241,247,0.05)" stroke={C.text} strokeWidth={2} />
+            <line x1={360} y1={876} x2={1556} y2={876} stroke={C.muted} strokeWidth={1.2} />
+            {Array.from({ length: 14 }, (_, i) => <circle key={i} cx={360 + i * 92} cy={876} r={7} fill={C.layer[KINDS[i % 4].id]} />)}
+            <text x={960} y={944} textAnchor="middle" fontFamily={F.mono} fontSize={20} letterSpacing={2} fill={C.text}>ONE FOUNDATION: THE KNOWLEDGE GRAPH</text>
+          </g>
+        </g>
+        <g className="pre intro">
           <text x={960} y={430} textAnchor="middle" fontFamily={F.display} fontSize={84} fontWeight={700} fill={C.text}>Semantic Engineering</text>
           <text x={960} y={500} textAnchor="middle" fontFamily={F.sans} fontSize={30} fill={C.cardText}>making AI coding agents work reliably on large enterprise software</text>
         </g>
@@ -186,32 +220,49 @@ export const scene00: SceneDef = {
       for (let i = 0; i < n; i++) tl.fromTo(q(`.${cls}-${i}`), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, at + i * 0.3);
     };
     tl.set(q('.lv-i, .use-i, .plat-i, .pr-i, .top .lbl'), { autoAlpha: 0 }, 0);
-    // s0: what it is for.
-    const s0 = cue('title', 's0');
-    tl.fromTo(q('.intro'), { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.8 }, s0);
+    // The shared opening. w1: a product on the waterline.
+    const w1 = cue('waterline', 's0');
+    appear(ctx, '.water', w1 + 0.2, { y: 0 });
+    // w2: below the water, Semantic Engineering.
+    const w2 = cue('below', 's1');
+    appear(ctx, '.w-below', w2 + 0.3);
+    // w3: above the water, Dialect Engineering: the product splits into customer variants.
+    const w3 = cue('above', 's2');
+    tl.to(q('.w-below'), { opacity: 0.4, duration: 0.4 }, w3);
+    appear(ctx, '.w-above', w3 + 0.2, { y: 0 });
+    [0, 1, 2].forEach((i) => tl.fromTo(q(`.w-tenant-${i}`), { autoAlpha: 0, y: 30 }, { autoAlpha: 1, y: 0, duration: 0.5, immediateRender: false }, w3 + 0.6 + i * 0.35));
+    // w4: one foundation, the knowledge graph under both.
+    const w4 = cue('foundation', 's3');
+    tl.to(q('.w-below'), { opacity: 1, duration: 0.4 }, w4);
+    appear(ctx, '.w-graph', w4 + 0.3, { y: 0 });
+    tl.fromTo(q('.w-graph rect'), { attr: { 'stroke-width': 2 } }, { attr: { 'stroke-width': 4 }, duration: 0.5, repeat: 3, yoyo: true, immediateRender: false }, w4 + 1.0);
+    // s0: what Semantic Engineering is for.
+    const s0 = cue('title', 's4');
+    vanish(ctx, '.water', s0);
+    tl.fromTo(q('.intro'), { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.8 }, s0 + 0.3);
     // s1: fast on small tasks.
-    const s1 = cue('small', 's1');
+    const s1 = cue('small', 's5');
     vanish(ctx, '.intro', s1);
     appear(ctx, '.small', s1 + 0.3);
     tl.fromTo(q('.small-tick'), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, immediateRender: false }, s1 + 1.2);
     // s2: mistakes on a large application.
-    const s2 = cue('large', 's2');
+    const s2 = cue('large', 's6');
     tl.to(q('.small'), { opacity: 0.35, duration: 0.4 }, s2);
     appear(ctx, '.large', s2 + 0.3);
     tl.set(q('.miss'), { autoAlpha: 0 }, 0);
     [0, 1, 2, 3].forEach((i) => tl.to(q(`.miss-${i}`), { autoAlpha: 1, duration: 0.2 }, s2 + 1.4 + i * 0.4));
     appear(ctx, '.co-know', s2 + 2.6);
     // s3: four kinds of knowledge.
-    const s3 = cue('kinds', 's3');
+    const s3 = cue('kinds', 's7');
     vanish(ctx, '.small, .large, .co-know', s3);
     tl.set(q('.top'), { autoAlpha: 1 }, s3 + 0.3);
     tl.set(q('.top .cus'), { autoAlpha: 0 }, s3 + 0.3);
     KINDS.forEach((k, i) => tl.fromTo(q(`.top .lbl-${k.id}`), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, immediateRender: false }, s3 + 0.4 + i * 0.4));
     // s4: who holds each.
-    const s4 = cue('holders', 's4');
+    const s4 = cue('holders', 's8');
     KINDS.forEach((k, i) => tl.to(q(`.top .cus-${k.id}`), { autoAlpha: 1, duration: 0.4 }, s4 + 0.3 + i * 1.6));
     // s5: by hand, losing a little at each handoff.
-    const s5 = cue('handoff', 's5');
+    const s5 = cue('handoff', 's9');
     appear(ctx, '.cards', s5 + 0.2);
     appear(ctx, '.bottom', s5 + 0.4, { y: 0 });
     KINDS.forEach((k, i) => {
@@ -219,48 +270,48 @@ export const scene00: SceneDef = {
       translate(ctx, `.tk-${k.id}`, { x: COL[k.id], y: Y.card + Y.cardH }, s5 + 1.4 + i * 0.4, 1.6, DEV);
     });
     // s6: the Manual Translation Tax.
-    const s6 = cue('tax', 's6');
+    const s6 = cue('tax', 's10');
     vanish(ctx, '.tk', s6);
     appear(ctx, '.taxband, .taxlabel', s6 + 0.2, { y: 0 });
     // s7: faster code, no faster delivery.
-    const s7 = cue('ai', 's7');
+    const s7 = cue('ai', 's11');
     [0, 1, 2, 3, 4, 5].forEach((i) => tl.fromTo(q(`.bt-${i}`), { attr: { x: AGENT.x + 50 } }, { attr: { x: STATIONS[2].x - 220 + i * 6 }, duration: 0.5, immediateRender: false }, s7 + 0.4 + i * 0.25));
     tl.set(q('.burst'), { autoAlpha: 1 }, s7 + 0.4);
     appear(ctx, '.co-fast', s7 + 1.4);
     // s8: recorded once, in a knowledge graph.
-    const s8 = cue('graph', 's8');
+    const s8 = cue('graph', 's12');
     vanish(ctx, '.co-fast, .burst, .tax, .taxband, .taxlabel', s8);
     tl.to(q('.cards'), { y: 40, autoAlpha: 0, duration: 0.8 }, s8 + 0.2);
     appear(ctx, '.graph', s8 + 0.8, { y: 0 });
     appear(ctx, '.co-graph', s8 + 1.2);
     // s9: four layers.
-    const s9 = cue('layers', 's9');
+    const s9 = cue('layers', 's13');
     vanish(ctx, '.co-graph', s9);
     KINDS.forEach((k, i) => tl.fromTo(q(`.band-${k.id} .band-rect`), { attr: { 'stroke-width': 1.8 } }, { attr: { 'stroke-width': 5 }, duration: 0.3, repeat: 1, yoyo: true, immediateRender: false }, s9 + 0.5 + i * 0.5));
     // s10: each layer has an owner.
-    const s10 = cue('owners', 's10');
+    const s10 = cue('owners', 's14');
     tl.fromTo(q('.tie line'), { attr: { 'stroke-width': 2 } }, { attr: { 'stroke-width': 4 }, duration: 0.4, immediateRender: false }, s10 + 0.3);
     appear(ctx, '.co-owner', s10 + 0.4);
     // s11 to s13: for an existing application, agents build the graph from the application; custodians review it.
-    const x1 = cue('extract', 's11');
+    const x1 = cue('extract', 's15');
     vanish(ctx, '.co-owner', x1);
     tl.to(q('.tie line'), { attr: { 'stroke-width': 2 }, duration: 0.3 }, x1);
     tl.to(q('.g.band, .g.xlink, .tie'), { autoAlpha: 0, duration: 0.4 }, x1 + 0.2);
     appear(ctx, '.xcode', x1 + 0.5);
     appear(ctx, '.co-extract', x1 + 0.8);
-    const x2 = cue('derive', 's12');
+    const x2 = cue('derive', 's16');
     vanish(ctx, '.co-extract', x2);
     KINDS.slice().reverse().forEach((k, i) => {
       tl.fromTo(q(`.band-${k.id}`), { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.6, immediateRender: false }, x2 + 0.3 + i * 1.6);
       appear(ctx, `.how-${k.id}`, x2 + 0.5 + i * 1.6, { y: 0 });
     });
     tl.to(q('.g.xlink, .tie'), { autoAlpha: 1, duration: 0.5 }, x2 + 6.8);
-    const x3 = cue('review', 's13');
+    const x3 = cue('review', 's17');
     vanish(ctx, '.how', x3);
     appear(ctx, '.xticks', x3 + 0.3, { y: 0 });
     appear(ctx, '.co-weeks', x3 + 0.6);
     // s14: a new application: the graph grows as code merges.
-    const x4 = cue('grow', 's14');
+    const x4 = cue('grow', 's18');
     vanish(ctx, '.co-weeks, .xticks, .xcode', x4);
     tl.set(q('.grow'), { autoAlpha: 1 }, x4 + 0.3);
     tl.fromTo(q('.gtok'), { autoAlpha: 0, attr: { x: STATIONS[2].x - 18 } }, { autoAlpha: 1, attr: { x: STATIONS[3].x - 18 }, duration: 1.0, immediateRender: false }, x4 + 0.3);
@@ -268,77 +319,77 @@ export const scene00: SceneDef = {
     [0, 1, 2, 3].forEach((i) => tl.fromTo(q(`.gnew-${i}`), { attr: { r: 0 } }, { attr: { r: 8 }, duration: 0.4, ease: 'back.out(2)', immediateRender: false }, x4 + 2.0 + i * 0.25));
     appear(ctx, '.co-grow', x4 + 1.0);
     // s15: every item points to its source.
-    const x5 = cue('sources', 's15');
+    const x5 = cue('sources', 's19');
     vanish(ctx, '.co-grow, .gtok, .gline', x5);
     (['functional', 'design', 'architecture', 'code'] as const).forEach((k, i) => tl.to(q(`.gnew-${i}`), { attr: { fill: C.layer[k], r: 6 }, duration: 0.4 }, x5));
     SOURCES.forEach(([k], i) => appear(ctx, `.src-${k}`, x5 + 0.3 + i * 0.5, { y: 0 }));
     appear(ctx, '.co-src', x5 + 0.6);
     // s16: impact analysis before coding.
-    const s11 = cue('impact', 's16');
+    const s11 = cue('impact', 's20');
     vanish(ctx, '.co-src, .src', s11);
     tl.to(q('.tie line'), { attr: { 'stroke-width': 2 }, duration: 0.3 }, s11);
     tl.fromTo(q('.trav'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 1.4, immediateRender: false }, s11 + 0.3);
     appear(ctx, '.co-impact', s11 + 0.6);
     // s12: the specification still describes the change.
-    const s12 = cue('spec', 's17');
+    const s12 = cue('spec', 's21');
     vanish(ctx, '.co-impact, .trav', s12);
     appear(ctx, '.spec', s12 + 0.3);
     appear(ctx, '.co-spec', s12 + 0.5);
     // s13: every change checked before it merges.
-    const s13 = cue('check', 's18');
+    const s13 = cue('check', 's22');
     vanish(ctx, '.co-spec, .spec', s13);
     appear(ctx, '.gatew', s13 + 0.3, { y: 0 });
     appear(ctx, '.check', s13 + 1.0, { y: 0 });
     appear(ctx, '.co-check', s13 + 1.2);
     // s14: the graph is updated before the change merges.
-    const s14 = cue('sync', 's19');
+    const s14 = cue('sync', 's23');
     vanish(ctx, '.co-check, .check', s14);
     syncMerge(ctx, syncUpdate(ctx, s14 + 0.3) + 0.4);
     // s15 to s18: how much of the method a team needs.
-    const s15 = cue('levels', 's20');
+    const s15 = cue('levels', 's24');
     syncClear(ctx, s15);
     showStrip('lv', 3, s15 + 0.3);
     pick('lv', 0, s15 + 1.4);
-    pick('lv', 1, cue('level-1', 's20+5'));
-    pick('lv', 2, cue('level-2', 's21') + 0.1);
+    pick('lv', 1, cue('level-1', 's24+5'));
+    pick('lv', 2, cue('level-2', 's25') + 0.1);
     // s19: Breeze.AI's agents carry each change.
-    const s19 = cue('breeze', 's22');
+    const s19 = cue('breeze', 's26');
     vanish(ctx, '.lv', s19);
     tl.to(q('.gatew text'), { autoAlpha: 0, duration: 0.3 }, s19);
     appear(ctx, '.spots', s19 + 0.3);
     appear(ctx, '.co-breeze', s19 + 0.6);
     // s20: people decide; every agent has an owner.
-    const s20 = cue('people', 's23');
+    const s20 = cue('people', 's27');
     vanish(ctx, '.co-breeze, .spots', s20);
     appear(ctx, '.owners', s20 + 0.3);
     appear(ctx, '.co-people', s20 + 0.6);
     // s21: three use cases.
-    const s21 = cue('uses', 's24');
+    const s21 = cue('uses', 's28');
     vanish(ctx, '.co-people, .owners', s21);
     tl.to(q('.gatew text'), { autoAlpha: 1, duration: 0.3 }, s21 + 0.3);
     showStrip('use', 3, s21 + 0.3);
     // s22: legacy modernization has its own graphs.
-    const s22 = cue('legacy', 's25');
+    const s22 = cue('legacy', 's29');
     pick('use', 2, s22 + 0.1);
     appear(ctx, '.mini', s22 + 0.5);
     // s23: two platforms.
-    const s23 = cue('platforms', 's26');
+    const s23 = cue('platforms', 's30');
     vanish(ctx, '.use, .mini', s23);
     showStrip('plat', 2, s23 + 0.3);
     // s24: four principles.
     // s27 to s30: outcomes, each with its context.
-    const o0 = cue('outcome-0', 's27');
+    const o0 = cue('outcome-0', 's31');
     vanish(ctx, '.plat', o0);
     tl.set(q('.out'), { autoAlpha: 1 }, o0 + 0.2);
     tl.set(q('.out-i'), { autoAlpha: 0 }, 0);
     const show = (i: number, at: number) => tl.fromTo(q(`.out-${i}`), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, at);
     show(0, o0 + 0.3);
-    show(1, cue('outcome-1', 's28') + 0.3);
-    const o2 = cue('outcome-2', 's29');
+    show(1, cue('outcome-1', 's32') + 0.3);
+    const o2 = cue('outcome-2', 's33');
     show(2, o2 + 0.3);
-    show(3, cue('outcome-2b', 's29+4.5'));
-    show(4, cue('outcome-3', 's30') + 0.3);
-    const s24 = cue('principles', 's31');
+    show(3, cue('outcome-2b', 's33+4.5'));
+    show(4, cue('outcome-3', 's34') + 0.3);
+    const s24 = cue('principles', 's35');
     vanish(ctx, '.out', s24);
     showStrip('pr', 4, s24 + 0.3);
   },

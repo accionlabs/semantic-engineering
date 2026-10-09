@@ -132,6 +132,8 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
       <ul>{result?.problems.map((p, i) => <li key={i}>Line {p.line}: {p.message}</li>)}</ul>
       <pre className="reel-code">{saved.code}</pre></div>
   );
+  // An explanation that recommends Dialect Engineering ends with a way to it.
+  const usesAbove = [...full.segments, ...full.branches.flatMap((b) => b.segments)].some((x) => x.trace?.node === 'above-the-water');
   const mmss = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.round(sec % 60)).padStart(2, '0')}`;
   const choose = (k: number) => {
     setReading(null); setActive(k); setIndex(-1);
@@ -153,6 +155,7 @@ export const ExplainPage: React.FC<{ localId?: string }> = ({ localId }) => {
         {dives.map(({ b, k }) => <button key={k} className="btn primary" onClick={() => choose(k)}>{b.label} <span className="reel-dur">{watched.has(k) ? 'watched · ' : ''}{mmss(b.seconds)}</span></button>)}
         {active >= 0 && <button className="btn" onClick={() => choose(-1)}>Back to the short explanation</button>}
         {section.read.map((r) => { const l = locOf(r); return l ? <button key={r} className="btn" onClick={() => setReading(l)}>Read: {l.heading ?? l.page.title}</button> : null; })}
+        {usesAbove && <a className="btn" href="https://dialect-engineering.ai" target="_blank" rel="noopener">Dialect Engineering, above the water</a>}
         <a className="btn" href="#contact" onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}>Talk to us about this</a>
         <Link className="btn" to="/explain">Your explanations</Link>
       </div>

@@ -155,7 +155,7 @@ export const TARGETS: Record<string, [string, string?]> = {
   'fig.brownfield-extraction': ['All four layers in two to three weeks'], 'fig.brownfield-impact': ['Days of investigation replaced'],
   'fig.greenfield-reuse': ['53% reuse in the first sprint'],
   'next.agent-interfaces': ['An interface for agents, built from the graph'],
-  'next.dialect-engineering': ['Dialect engineering', 'https://dialect-engineering.ai'],
+  'next.dialect-engineering': ['Dialect Engineering', 'https://dialect-engineering.ai'],
   'origin.breeze': ['Breeze, 2017'], 'origin.drug-discovery': ['Drug discovery, 2022'], 'origin.kaps': ['KAPS, 2023'],
   'origin.breeze-ai': ['Breeze.AI, 2024'], 'next.public': ['Public and free to apply'], 'next.contact': ['A two-day workshop'],
   'platform.breeze-ai': ['Breeze.AI'],

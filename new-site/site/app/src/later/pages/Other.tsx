@@ -91,7 +91,7 @@ export const About: React.FC = () => (
     <p>The animation is drawn in code and animated with GSAP. The same scenes play live on this site, so you can pause and click the diagrams, and are rendered frame by frame in a browser to produce the downloadable video.</p>
     <p>The narration is AI-generated with a synthetic voice (MiniMax Speech-02 HD, through fal.ai), read from the approved script. Counts of tenants shown in the video are illustrative; every other figure comes from the paper, with its source.</p>
     <h2>Related</h2>
-    <p>Semantic engineering governs change below the multi-tenancy line: <a href="https://semantic-engineering.ai" target="_blank" rel="noopener">semantic-engineering.ai</a>. Dialect engineering, the subject of this site, governs each customer's language above it.</p>
+    <p>Semantic engineering governs change below the multi-tenancy line: <a href="https://semantic-engineering.ai" target="_blank" rel="noopener">semantic-engineering.ai</a>. Dialect Engineering, the subject of this site, governs each customer's language above it.</p>
     {PAPER.appendixA && (<><h2>The earlier papers in this programme</h2><p className="muted">These are not published on this site.</p><Blocks blocks={PAPER.appendixA.blocks} /></>)}
     <p><a href={media('explainer-720p.mp4')} download>Download the video (720p, MP4)</a></p>
   </div>

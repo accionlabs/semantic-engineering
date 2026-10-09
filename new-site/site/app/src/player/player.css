@@ -278,3 +278,6 @@
 .contact-consent { font-size: 0.88rem; line-height: 1.45; }
 .contact-hp { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .contact-form .btn { width: auto; justify-self: start; }
+.builder-above { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border: 1px solid var(--hairline); border-radius: 10px; cursor: pointer; }
+.builder-above.on { border-color: var(--accent); background: var(--raised); }
+.builder-above input { margin-top: 4px; }

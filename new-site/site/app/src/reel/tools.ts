@@ -107,11 +107,11 @@ export const TOOLS = {
   build_explanation: {
     title: 'Build an explanation from choices',
     description: "Writes a checked explanation, without any AI, from a kind of work, an optional role and the problems the person sees (symptom ids for that kind of work, the main one first). Returns the explanation's text, which can be edited and checked, or played with make_explanation. With only a context, returns the problems to choose from.",
-    inputSchema: { type: 'object', properties: { context: { type: 'string', enum: BUILD_CONTEXTS.map((x) => x.id) }, role: { type: 'string', enum: BUILD_ROLES.map((x) => x.slug) }, symptoms: { type: 'array', items: { type: 'string' } } }, required: ['context'] },
-    run: ({ context, role, symptoms }: { context: string; role?: string; symptoms?: string[] }) => {
+    inputSchema: { type: 'object', properties: { context: { type: 'string', enum: BUILD_CONTEXTS.map((x) => x.id) }, role: { type: 'string', enum: BUILD_ROLES.map((x) => x.slug) }, symptoms: { type: 'array', items: { type: 'string' } }, above: { type: 'boolean', description: 'True when each customer needs a version of the product of their own: adds a deep dive on Dialect Engineering' } }, required: ['context'] },
+    run: ({ context, role, symptoms, above }: { context: string; role?: string; symptoms?: string[]; above?: boolean }) => {
       if (!BUILD_CONTEXTS.some((x) => x.id === context)) return { error: `unknown kind of work "${context}". Kinds: ${BUILD_CONTEXTS.map((x) => x.id).join(', ')}.` };
       if (!symptoms?.length) return { context, problems: symptomsFor(context).map((x) => brief(x.id)) };
-      const r = buildChecked({ context, role, symptoms });
+      const r = buildChecked({ context, role, symptoms, above });
       if (!r.code) return { error: r.error };
       return { ok: r.ok, code: r.code, problems: r.problems, ...(r.plan ? lengths(r.plan) : {}) };
     },
