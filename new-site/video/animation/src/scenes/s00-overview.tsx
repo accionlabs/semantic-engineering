@@ -236,160 +236,86 @@ export const scene00: SceneDef = {
     tl.to(q('.w-below'), { opacity: 1, duration: 0.4 }, w4);
     appear(ctx, '.w-graph', w4 + 0.3, { y: 0 });
     tl.fromTo(q('.w-graph rect'), { attr: { 'stroke-width': 2 } }, { attr: { 'stroke-width': 4 }, duration: 0.5, repeat: 3, yoyo: true, immediateRender: false }, w4 + 1.0);
-    // s0: what Semantic Engineering is for.
+    // s4: what Semantic Engineering is for.
     const s0 = cue('title', 's4');
     vanish(ctx, '.water', s0);
     tl.fromTo(q('.intro'), { autoAlpha: 0, y: 20 }, { autoAlpha: 1, y: 0, duration: 0.8 }, s0 + 0.3);
-    // s1: fast on small tasks.
-    const s1 = cue('small', 's5');
-    vanish(ctx, '.intro', s1);
-    appear(ctx, '.small', s1 + 0.3);
-    tl.fromTo(q('.small-tick'), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3, immediateRender: false }, s1 + 1.2);
-    // s2: mistakes on a large application.
-    const s2 = cue('large', 's6');
-    tl.to(q('.small'), { opacity: 0.35, duration: 0.4 }, s2);
+    // s5: mistakes on a large application.
+    const s2 = cue('large', 's5');
+    vanish(ctx, '.intro', s2);
     appear(ctx, '.large', s2 + 0.3);
     tl.set(q('.miss'), { autoAlpha: 0 }, 0);
     [0, 1, 2, 3].forEach((i) => tl.to(q(`.miss-${i}`), { autoAlpha: 1, duration: 0.2 }, s2 + 1.4 + i * 0.4));
     appear(ctx, '.co-know', s2 + 2.6);
-    // s3: four kinds of knowledge.
-    const s3 = cue('kinds', 's7');
-    vanish(ctx, '.small, .large, .co-know', s3);
+    // s6: four kinds of knowledge.
+    const s3 = cue('kinds', 's6');
+    vanish(ctx, '.large, .co-know', s3);
     tl.set(q('.top'), { autoAlpha: 1 }, s3 + 0.3);
     tl.set(q('.top .cus'), { autoAlpha: 0 }, s3 + 0.3);
     KINDS.forEach((k, i) => tl.fromTo(q(`.top .lbl-${k.id}`), { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.4, immediateRender: false }, s3 + 0.4 + i * 0.4));
-    // s4: who holds each.
-    const s4 = cue('holders', 's8');
-    KINDS.forEach((k, i) => tl.to(q(`.top .cus-${k.id}`), { autoAlpha: 1, duration: 0.4 }, s4 + 0.3 + i * 1.6));
-    // s5: by hand, losing a little at each handoff.
-    const s5 = cue('handoff', 's9');
-    appear(ctx, '.cards', s5 + 0.2);
-    appear(ctx, '.bottom', s5 + 0.4, { y: 0 });
+    // s7: by hand, losing a little at each handoff; the people who hold each kind appear.
+    const s5 = cue('handoff', 's7');
+    KINDS.forEach((k, i) => tl.to(q(`.top .cus-${k.id}`), { autoAlpha: 1, duration: 0.4 }, s5 + 0.1 + i * 0.2));
+    appear(ctx, '.cards', s5 + 0.6);
+    appear(ctx, '.bottom', s5 + 0.8, { y: 0 });
     KINDS.forEach((k, i) => {
-      appear(ctx, `.tax-${k.id}`, s5 + 1.0 + i * 0.3, { y: 0 });
-      translate(ctx, `.tk-${k.id}`, { x: COL[k.id], y: Y.card + Y.cardH }, s5 + 1.4 + i * 0.4, 1.6, DEV);
+      appear(ctx, `.tax-${k.id}`, s5 + 1.4 + i * 0.3, { y: 0 });
+      translate(ctx, `.tk-${k.id}`, { x: COL[k.id], y: Y.card + Y.cardH }, s5 + 1.8 + i * 0.4, 1.6, DEV);
     });
-    // s6: the Manual Translation Tax.
-    const s6 = cue('tax', 's10');
+    // s8: the Manual Translation Tax.
+    const s6 = cue('tax', 's8');
     vanish(ctx, '.tk', s6);
     appear(ctx, '.taxband, .taxlabel', s6 + 0.2, { y: 0 });
-    // s7: faster code, no faster delivery.
-    const s7 = cue('ai', 's11');
-    [0, 1, 2, 3, 4, 5].forEach((i) => tl.fromTo(q(`.bt-${i}`), { attr: { x: AGENT.x + 50 } }, { attr: { x: STATIONS[2].x - 220 + i * 6 }, duration: 0.5, immediateRender: false }, s7 + 0.4 + i * 0.25));
-    tl.set(q('.burst'), { autoAlpha: 1 }, s7 + 0.4);
-    appear(ctx, '.co-fast', s7 + 1.4);
-    // s8: recorded once, in a knowledge graph.
-    const s8 = cue('graph', 's12');
-    vanish(ctx, '.co-fast, .burst, .tax, .taxband, .taxlabel', s8);
+    // s9: recorded once, in a knowledge graph.
+    const s8 = cue('graph', 's9');
+    vanish(ctx, '.tax, .taxband, .taxlabel', s8);
     tl.to(q('.cards'), { y: 40, autoAlpha: 0, duration: 0.8 }, s8 + 0.2);
     appear(ctx, '.graph', s8 + 0.8, { y: 0 });
     appear(ctx, '.co-graph', s8 + 1.2);
-    // s9: four layers.
-    const s9 = cue('layers', 's13');
-    vanish(ctx, '.co-graph', s9);
-    KINDS.forEach((k, i) => tl.fromTo(q(`.band-${k.id} .band-rect`), { attr: { 'stroke-width': 1.8 } }, { attr: { 'stroke-width': 5 }, duration: 0.3, repeat: 1, yoyo: true, immediateRender: false }, s9 + 0.5 + i * 0.5));
-    // s10: each layer has an owner.
-    const s10 = cue('owners', 's14');
-    tl.fromTo(q('.tie line'), { attr: { 'stroke-width': 2 } }, { attr: { 'stroke-width': 4 }, duration: 0.4, immediateRender: false }, s10 + 0.3);
-    appear(ctx, '.co-owner', s10 + 0.4);
-    // s11 to s13: for an existing application, agents build the graph from the application; custodians review it.
-    const x1 = cue('extract', 's15');
-    vanish(ctx, '.co-owner', x1);
-    tl.to(q('.tie line'), { attr: { 'stroke-width': 2 }, duration: 0.3 }, x1);
+    // s10 to s12: for an existing application, agents build the graph from the application; custodians review it.
+    const x1 = cue('extract', 's10');
+    vanish(ctx, '.co-graph', x1);
     tl.to(q('.g.band, .g.xlink, .tie'), { autoAlpha: 0, duration: 0.4 }, x1 + 0.2);
     appear(ctx, '.xcode', x1 + 0.5);
     appear(ctx, '.co-extract', x1 + 0.8);
-    const x2 = cue('derive', 's16');
+    const x2 = cue('derive', 's11');
     vanish(ctx, '.co-extract', x2);
     KINDS.slice().reverse().forEach((k, i) => {
       tl.fromTo(q(`.band-${k.id}`), { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.6, immediateRender: false }, x2 + 0.3 + i * 1.6);
       appear(ctx, `.how-${k.id}`, x2 + 0.5 + i * 1.6, { y: 0 });
     });
     tl.to(q('.g.xlink, .tie'), { autoAlpha: 1, duration: 0.5 }, x2 + 6.8);
-    const x3 = cue('review', 's17');
+    const x3 = cue('review', 's12');
     vanish(ctx, '.how', x3);
     appear(ctx, '.xticks', x3 + 0.3, { y: 0 });
     appear(ctx, '.co-weeks', x3 + 0.6);
-    // s14: a new application: the graph grows as code merges.
-    const x4 = cue('grow', 's18');
-    vanish(ctx, '.co-weeks, .xticks, .xcode', x4);
-    tl.set(q('.grow'), { autoAlpha: 1 }, x4 + 0.3);
-    tl.fromTo(q('.gtok'), { autoAlpha: 0, attr: { x: STATIONS[2].x - 18 } }, { autoAlpha: 1, attr: { x: STATIONS[3].x - 18 }, duration: 1.0, immediateRender: false }, x4 + 0.3);
-    tl.fromTo(q('.gline'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 0.6, immediateRender: false }, x4 + 1.4);
-    [0, 1, 2, 3].forEach((i) => tl.fromTo(q(`.gnew-${i}`), { attr: { r: 0 } }, { attr: { r: 8 }, duration: 0.4, ease: 'back.out(2)', immediateRender: false }, x4 + 2.0 + i * 0.25));
-    appear(ctx, '.co-grow', x4 + 1.0);
-    // s15: every item points to its source.
-    const x5 = cue('sources', 's19');
-    vanish(ctx, '.co-grow, .gtok, .gline', x5);
-    (['functional', 'design', 'architecture', 'code'] as const).forEach((k, i) => tl.to(q(`.gnew-${i}`), { attr: { fill: C.layer[k], r: 6 }, duration: 0.4 }, x5));
-    SOURCES.forEach(([k], i) => appear(ctx, `.src-${k}`, x5 + 0.3 + i * 0.5, { y: 0 }));
-    appear(ctx, '.co-src', x5 + 0.6);
-    // s16: impact analysis before coding.
-    const s11 = cue('impact', 's20');
-    vanish(ctx, '.co-src, .src', s11);
-    tl.to(q('.tie line'), { attr: { 'stroke-width': 2 }, duration: 0.3 }, s11);
+    // s13: impact analysis before coding.
+    const s11 = cue('impact', 's13');
+    vanish(ctx, '.co-weeks, .xticks, .xcode', s11);
     tl.fromTo(q('.trav'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 1.4, immediateRender: false }, s11 + 0.3);
     appear(ctx, '.co-impact', s11 + 0.6);
-    // s12: the specification still describes the change.
-    const s12 = cue('spec', 's21');
-    vanish(ctx, '.co-impact, .trav', s12);
-    appear(ctx, '.spec', s12 + 0.3);
-    appear(ctx, '.co-spec', s12 + 0.5);
-    // s13: every change checked before it merges.
-    const s13 = cue('check', 's22');
-    vanish(ctx, '.co-spec, .spec', s13);
+    // s14: every change checked before it merges.
+    const s13 = cue('check', 's14');
+    vanish(ctx, '.co-impact, .trav', s13);
     appear(ctx, '.gatew', s13 + 0.3, { y: 0 });
     appear(ctx, '.check', s13 + 1.0, { y: 0 });
     appear(ctx, '.co-check', s13 + 1.2);
-    // s14: the graph is updated before the change merges.
-    const s14 = cue('sync', 's23');
+    // s15: the graph is updated before the change merges.
+    const s14 = cue('sync', 's15');
     vanish(ctx, '.co-check, .check', s14);
     syncMerge(ctx, syncUpdate(ctx, s14 + 0.3) + 0.4);
-    // s15 to s18: how much of the method a team needs.
-    const s15 = cue('levels', 's24');
-    syncClear(ctx, s15);
-    showStrip('lv', 3, s15 + 0.3);
-    pick('lv', 0, s15 + 1.4);
-    pick('lv', 1, cue('level-1', 's24+5'));
-    pick('lv', 2, cue('level-2', 's25') + 0.1);
-    // s19: Breeze.AI's agents carry each change.
-    const s19 = cue('breeze', 's26');
-    vanish(ctx, '.lv', s19);
-    tl.to(q('.gatew text'), { autoAlpha: 0, duration: 0.3 }, s19);
-    appear(ctx, '.spots', s19 + 0.3);
-    appear(ctx, '.co-breeze', s19 + 0.6);
-    // s20: people decide; every agent has an owner.
-    const s20 = cue('people', 's27');
-    vanish(ctx, '.co-breeze, .spots', s20);
-    appear(ctx, '.owners', s20 + 0.3);
-    appear(ctx, '.co-people', s20 + 0.6);
-    // s21: three use cases.
-    const s21 = cue('uses', 's28');
-    vanish(ctx, '.co-people, .owners', s21);
-    tl.to(q('.gatew text'), { autoAlpha: 1, duration: 0.3 }, s21 + 0.3);
-    showStrip('use', 3, s21 + 0.3);
-    // s22: legacy modernization has its own graphs.
-    const s22 = cue('legacy', 's29');
-    pick('use', 2, s22 + 0.1);
-    appear(ctx, '.mini', s22 + 0.5);
-    // s23: two platforms.
-    const s23 = cue('platforms', 's30');
-    vanish(ctx, '.use, .mini', s23);
+    // s16: two platforms.
+    const s23 = cue('platforms', 's16');
+    syncClear(ctx, s23);
     showStrip('plat', 2, s23 + 0.3);
-    // s24: four principles.
-    // s27 to s30: outcomes, each with its context.
-    const o0 = cue('outcome-0', 's31');
+    // s17: an outcome, with its context.
+    const o0 = cue('outcome-0', 's17');
     vanish(ctx, '.plat', o0);
     tl.set(q('.out'), { autoAlpha: 1 }, o0 + 0.2);
     tl.set(q('.out-i'), { autoAlpha: 0 }, 0);
-    const show = (i: number, at: number) => tl.fromTo(q(`.out-${i}`), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, at);
-    show(0, o0 + 0.3);
-    show(1, cue('outcome-1', 's32') + 0.3);
-    const o2 = cue('outcome-2', 's33');
-    show(2, o2 + 0.3);
-    show(3, cue('outcome-2b', 's33+4.5'));
-    show(4, cue('outcome-3', 's34') + 0.3);
-    const s24 = cue('principles', 's35');
+    tl.fromTo(q('.out-0'), { autoAlpha: 0, y: 14 }, { autoAlpha: 1, y: 0, duration: 0.4, immediateRender: false }, o0 + 0.3);
+    // s18: four principles.
+    const s24 = cue('principles', 's18');
     vanish(ctx, '.out', s24);
     showStrip('pr', 4, s24 + 0.3);
   },
