@@ -269,10 +269,12 @@ An engagement with Breeze.AI across three products, delivered by the client's ex
 | Metric | Before | End of pilot | Change | Basis |
 |---|---|---|---|---|
 | Deployment frequency | 19 a month | 36 a month | +90% | Measured |
-| Lead time for changes | 2.0 days | 1.42 days | −29% | Measured |
+| Lead time for changes | 2.0 days | 1.62 days | −19% | Measured |
 | Change failure rate | 4% | 0% | | Baseline estimated by the client before AI adoption; held throughout the pilot |
 | Mean time to recovery | 8 hours | under 2 hours | | Baseline estimated by the client before AI adoption; held throughout the pilot |
 | Coding agent token use | | | up to 53% lower | Projected from cost calculations before and after; not a measured outcome |
+
+Source for the measured delivery metrics: Breeze.AI Executive Leadership Report, Q3 2026 (figures as at 20 October 2026).
 
 ### Where the Manual Translation Tax Was Paid
 
@@ -283,7 +285,7 @@ The same team was surveyed twice, at the start and at the end of the pilot (n = 
 | 60%: estimation and code comprehension | A query on the graph | 50% report an overall productivity impact |
 | 47%: requirement translation and rework | One authoritative reading per requirement | 42% report improved requirement clarity |
 | 43%: code risk analysis | Impact checks against the graph before the build | Under 1% change failure at nearly double the deployment rate |
-| 27%: delivery predictability | Delivery metrics embedded in the workflow | Lead time from 2.0 to 1.42 days; deployments from 19 to 36 a month |
+| 27%: delivery predictability | Delivery metrics embedded in the workflow | Lead time from 2.0 to 1.62 days; deployments from 19 to 36 a month |
 
 ### Methodology Takeaway
 

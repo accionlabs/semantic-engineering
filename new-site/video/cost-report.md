@@ -30,3 +30,4 @@
 | 2026-10-06 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 4 | 509 | 0.05 |
 | 2026-10-06 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 1 | 151 | 0.02 |
 | 2026-10-09 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 14 | 1773 | 0.18 |
+| 2026-10-27 | fal-ai/minimax/speech-02-hd | Narration, voice Deep_Voice_Man, per sentence | 2 | 240 | 0.02 |

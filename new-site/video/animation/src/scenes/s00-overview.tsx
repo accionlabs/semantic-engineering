@@ -26,7 +26,7 @@ const USES = ['building new applications', 'changing existing ones', 'replacing 
 const HOW: Record<string, string> = { functional: 'traced from the screens', design: 'from the running application', architecture: 'inferred from its structure', code: 'parsed from the code' };
 const SOURCES: [string, number, string][] = [['functional', 1, 'ticket'], ['design', 3, 'design frame'], ['architecture', 2, 'document'], ['code', 1, 'code file']];
 const OUTCOMES = [
-  { f: '19 → 36', l: 'deployments a month across three products; lead time from 2.0 to 1.42 days' },
+  { f: '19 → 36', l: 'deployments a month across three products; lead time from 2.0 to 1.62 days' },
   { f: '3 to 5 days', l: 'of senior-engineer investigation replaced by impact analysis, on one brownfield application' },
   { f: '53%', l: 'design component reuse in the first sprint of a new user-interface workstream' },
   { f: '23%', l: 'fewer defects, same team, same codebase' },

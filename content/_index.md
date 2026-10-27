@@ -176,7 +176,7 @@ Outcomes measured on engagements running under this methodology. Anonymized walk
 | Number | Context |
 |---|---|
 | **19 to 36** deployments a month, a 90% rise, over a 14-week pilot | Three products on one engagement; measured at the start and the end of the pilot |
-| **2.0 to 1.42 days** lead time for changes, 29% shorter | Same engagement, same measurement |
+| **2.0 to 1.62 days** lead time for changes, 19% shorter | Same engagement, same measurement. Source for both: Breeze.AI Executive Leadership Report, Q3 2026 (figures as at 20 October 2026) |
 | **60%** of the team named estimation and code comprehension as where the Manual Translation Tax was paid | Same team surveyed at the start and the end of the pilot (n = 30); 50% reported an overall productivity impact at the end |
 | **2 to 3 weeks** to extract a 2M+ LOC codebase into the four-layer graph | Brownfield extraction on a Node.js, TypeScript and React application |
 | **53%** design component reuse in the first sprint | First sprint under SE-governed UI development on a greenfield workstream |

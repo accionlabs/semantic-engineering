@@ -8,7 +8,7 @@ import { FigureChip, Frame, Heading, Svg } from '../parts/ui';
 // the delivery metrics of one multi-product engagement first; the cost figure is marked as modeled.
 const CHIPS = [
   { t: 'fig.deploys-36', f: '19 → 36', l: 'deployments a month across three products, over a 14-week pilot', s: 'engagement result, measured' },
-  { t: 'fig.lead-time', f: '1.42 days', l: 'lead time for changes, down from 2.0 days, on the same engagement', s: 'engagement result, measured' },
+  { t: 'fig.lead-time', f: '1.62 days', l: 'lead time for changes, down from 2.0 days, on the same engagement', s: 'engagement result, measured' },
   { t: 'fig.extraction', f: '2 to 3 weeks', l: 'to extract the graph of a codebase of more than two million lines', s: 'engagement result' },
   { t: 'fig.impact-replaces-investigation', f: '3 to 5 days', l: 'of senior-engineer investigation replaced by impact analysis, on one brownfield application', s: 'engagement result' },
   { t: 'fig.reuse-53', f: '53%', l: 'design component reuse in the first sprint of a new user-interface workstream', s: 'engagement result' },
