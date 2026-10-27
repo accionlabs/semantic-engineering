@@ -21,5 +21,18 @@
   // destination address), from an address on this domain.
   "send_email": [{ "name": "MAILER", "destination_address": "ashutosh.bijoor+dialengg@accionlabs.com" }],
   "vars": { "CONTACT_FROM": "contact@semantic-engineering.ai", "CONTACT_TO": "ashutosh.bijoor+dialengg@accionlabs.com", "ACCOUNT_ID": "bd52255ceee65acd397aafdf4ef88f8e", "ACCESS_TEAM": "accionlabs", "ACCESS_AUD": "c5effdf06046357263ebb38f364b0547164e3805e8643231278b3e98ec7e9d08" },
-  "kv_namespaces": [{ "binding": "EXPLANATIONS", "id": "851e5f06e3d946e9b53063b1c382f2de" }]
+  "kv_namespaces": [{ "binding": "EXPLANATIONS", "id": "851e5f06e3d946e9b53063b1c382f2de" }],
+  "env": {
+    // staging.semantic-engineering.ai: the Worker "semantic-engineering-staging", built with the draft pages
+    // (npm run deploy:staging). Its own store for explanations, no contact email, no analytics, and every response
+    // marked noindex (STAGING in worker.ts).
+    "staging": {
+      "routes": [{ "pattern": "staging.semantic-engineering.ai", "custom_domain": true }],
+      "workers_dev": false,
+      "vars": { "STAGING": "1" },
+      "send_email": [],
+      "analytics_engine_datasets": [],
+      "kv_namespaces": [{ "binding": "EXPLANATIONS", "id": "7426fad8656349e282c7fb937c0ffc10" }]
+    }
+  }
 }

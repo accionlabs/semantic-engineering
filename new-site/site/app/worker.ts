@@ -27,6 +27,8 @@ type Env = {
   ACCESS_TEAM?: string; ACCESS_AUD?: string; ACCOUNT_ID?: string; ANALYTICS_TOKEN?: string;
   /** Contact requests: Cloudflare Email Routing's send binding, the address it sends from, and where to. */
   MAILER?: { send: (message: unknown) => Promise<void> }; CONTACT_FROM?: string; CONTACT_TO?: string;
+  /** Set on the staging Worker (staging.semantic-engineering.ai): every response is kept out of search engines. */
+  STAGING?: string;
 };
 
 // ---------- anonymous usage counts ----------
@@ -307,29 +309,40 @@ const mcp = async (request: Request, env: Env) => {
 const wantsMarkdown = (request: Request) => /text\/markdown/.test(request.headers.get('accept') ?? '');
 const AGENT_PAGES = ['/graph', '/explain', '/connect'];
 
-export default {
-  async fetch(request: Request, env: Env): Promise<Response> {
-    const url = new URL(request.url);
-    if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return Response.redirect(url.toString(), 301); }
-    if (url.pathname === '/mcp' || url.pathname === '/mcp/') return mcp(request, env);
-    if (url.pathname === '/api/explanations' && request.method === 'POST') return shareExplanation(request, env);
-    if (url.pathname === '/api/contact' && request.method === 'POST') return contact(request, env);
-    if (url.pathname === '/api/insights') return insights(request, env, url);
-    if (url.pathname.startsWith('/api/explanations/')) return storedExplanation(url.pathname.split('/')[3] ?? '', env);
-    // A stored explanation's short link: the page that fetches it by id and plays it.
-    if (/^\/e\/[A-Za-z0-9_-]+\/?$/.test(url.pathname)) {
-      const res = await env.ASSETS.fetch(new Request(new URL('/explain/saved/', url)));
-      const headers = new Headers(res.headers); headers.set('x-robots-tag', 'noindex');
-      return new Response(res.body, { status: res.status, headers });
-    }
-    if (url.pathname.startsWith('/media/')) return media(request, env, url);
-    if (wantsMarkdown(request) && AGENT_PAGES.some((p) => url.pathname === p || url.pathname === `${p}/`)) return env.ASSETS.fetch(new Request(new URL('/explanation-language.md', url)));
-    // Saved explanations live in the visitor's browser; every /explain/<id> address is the same page.
-    if (url.pathname.startsWith('/explain/') && url.pathname !== '/explain/') {
-      const res = await env.ASSETS.fetch(new Request(new URL('/explain/saved/', url)));
-      const headers = new Headers(res.headers); headers.set('x-robots-tag', 'noindex');
-      return new Response(res.body, { status: res.status, headers });
-    }
-    return env.ASSETS.fetch(request);
-  },
+/** Staging shows draft pages for review, so search engines are told to leave all of it alone. */
+const staging = async (request: Request, env: Env): Promise<Response> => {
+  if (new URL(request.url).pathname === '/robots.txt') return new Response('User-agent: *\nDisallow: /\n', { headers: { 'content-type': 'text/plain', 'x-robots-tag': 'noindex' } });
+  const res = await site(request, env);
+  const out = new Response(res.body, res);
+  out.headers.set('x-robots-tag', 'noindex, nofollow');
+  return out;
 };
+
+export default {
+  fetch: (request: Request, env: Env): Promise<Response> => (env.STAGING ? staging(request, env) : site(request, env)),
+};
+
+async function site(request: Request, env: Env): Promise<Response> {
+  const url = new URL(request.url);
+  if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return Response.redirect(url.toString(), 301); }
+  if (url.pathname === '/mcp' || url.pathname === '/mcp/') return mcp(request, env);
+  if (url.pathname === '/api/explanations' && request.method === 'POST') return shareExplanation(request, env);
+  if (url.pathname === '/api/contact' && request.method === 'POST') return contact(request, env);
+  if (url.pathname === '/api/insights') return insights(request, env, url);
+  if (url.pathname.startsWith('/api/explanations/')) return storedExplanation(url.pathname.split('/')[3] ?? '', env);
+  // A stored explanation's short link: the page that fetches it by id and plays it.
+  if (/^\/e\/[A-Za-z0-9_-]+\/?$/.test(url.pathname)) {
+    const res = await env.ASSETS.fetch(new Request(new URL('/explain/saved/', url)));
+    const headers = new Headers(res.headers); headers.set('x-robots-tag', 'noindex');
+    return new Response(res.body, { status: res.status, headers });
+  }
+  if (url.pathname.startsWith('/media/')) return media(request, env, url);
+  if (wantsMarkdown(request) && AGENT_PAGES.some((p) => url.pathname === p || url.pathname === `${p}/`)) return env.ASSETS.fetch(new Request(new URL('/explanation-language.md', url)));
+  // Saved explanations live in the visitor's browser; every /explain/<id> address is the same page.
+  if (url.pathname.startsWith('/explain/') && url.pathname !== '/explain/') {
+    const res = await env.ASSETS.fetch(new Request(new URL('/explain/saved/', url)));
+    const headers = new Headers(res.headers); headers.set('x-robots-tag', 'noindex');
+    return new Response(res.body, { status: res.status, headers });
+  }
+  return env.ASSETS.fetch(request);
+}

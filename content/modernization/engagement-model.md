@@ -43,7 +43,7 @@ The two engagement models look superficially similar (both have a sequence of na
 | **Enablement frame** | The [SDLC enablement partnership](../sdlc/process/enablement-partnership.md) with five principles and three tiers | The [modernization enablement frame](process/enablement-frame.md) sized for a bounded project |
 | **Platform** | [Breeze.AI](../practitioner/breeze-ai.md) | [ASIMOV](../practitioner/asimov.md) |
 
-A client who runs both shapes (modernization first, then continuous SDLC on the modernized system) goes through the modernization modes first and then the continuous SDLC phases starting from Advise. The transition point is the hand-over at the end of the [Maintain mode](engagement-modes/_index.md#mode-5-maintain-operate-and-convergence), where the knowledge graph that the modernization built becomes the seed for the four-layer ontology.
+A client who runs both shapes (modernization first, then continuous SDLC on the modernized system) goes through the modernization modes first and then the continuous SDLC phases starting from Advise. The transition point is the hand-over at the end of the [Maintain mode](engagement-modes/_index.md#mode-5-maintain-operate-and-convergence), where the four-layer ontology is built for the modernized system: the Code Ontology is extracted from the new code, and the annotated specification and the target blueprint seed the other three layers.
 
 ## Pricing for Modernization Modes
 
@@ -79,7 +79,7 @@ A common engagement shape is: modernization first under the five modes, then tra
 
 ![Modernization engagement modes flowing into the continuous SDLC phases at hand-over](/diagrams/modernization-to-sdlc-handoff.svg)
 
-The hand-over at the end of Maintain is the transition point. The modernization knowledge graph seeds the four-layer ontology; the four custodians who governed the modernization ontologies continue under the sprint cadence of the SDLC operating model; the modernization agent fleet hands over to the SDLC agent fleet; the bounded engagement transitions into a continuous engagement.
+The hand-over at the end of Maintain is the transition point. The Code Ontology is extracted from the new code and the annotated specification and target blueprint seed the other three layers; the four custodians who governed the modernization ontologies continue under the sprint cadence of the SDLC operating model; the modernization agent fleet hands over to the SDLC agent fleet; the bounded engagement transitions into a continuous engagement.
 
 The two models can also run independently. A client who modernizes one product can stop at hand-over without engaging Maintain or transitioning to continuous SDLC. A client who has no legacy to modernize can engage directly at Advise on the continuous SDLC model. The methodology accommodates both pure cases and the hybrid sequence.
 

@@ -8,6 +8,8 @@
     "dev": "npm run content && vite",
     "build": "npm run content && npm test && tsc --noEmit && vite build && vite build --ssr src/entry-server.tsx --outDir dist-ssr && node scripts/postbuild.mjs",
     "preview": "vite preview",
+    "deploy:staging": "npm run build && wrangler deploy --env staging",
+    "deploy:production": "DRAFTS=off npm run build && wrangler deploy",
     "check": "node scripts/check-pages.mjs",
     "check-targets": "node scripts/check-targets.mjs",
     "test": "tsx scripts/test-graph.ts && tsx scripts/test-explain.ts && tsx scripts/test-builder.ts && tsx scripts/test-contact.ts",
