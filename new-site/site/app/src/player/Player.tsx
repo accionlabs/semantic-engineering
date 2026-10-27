@@ -58,9 +58,11 @@ type PlayerProps = {
   endOverlay?: React.ReactNode;
   /** A custom path through the film: scenes played in this order, one at a time. */
   path?: { scenes: number[]; nextLabel: (n: number) => string; end: React.ReactNode };
+  /** Full screen for the video and the panel beside it, when the browser allows it. */
+  fullscreen?: { on: boolean; toggle: () => void };
 };
 
-export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api, stopMode: mode, actByAct, onActEnd, tldr, start: startAt, endOverlay, path }) => {
+export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api, stopMode: mode, actByAct, onActEnd, tldr, start: startAt, endOverlay, path, fullscreen }) => {
   const stopMode = mode ?? (actByAct ? 'act' : undefined);
   const ITEMS = tldr ? TLDR : MAIN;
   const [film, setFilm] = useState<Film | null>(null);
@@ -247,9 +249,10 @@ export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api
       if (e.key === 'Escape' && panel) { setPanel(null); return; }
       const inside = box.current?.contains(document.activeElement) || document.activeElement === document.body;
       if (e.key === ' ' && inside && !(document.activeElement instanceof HTMLInputElement && document.activeElement.type !== 'range')) { e.preventDefault(); playing ? pause() : play(); }
+      if ((e.key === 'f' || e.key === 'F') && fullscreen && (inside || fullscreen.on) && !e.metaKey && !e.ctrlKey && !e.altKey) { e.preventDefault(); fullscreen.toggle(); }
     };
     addEventListener('keydown', onKey); return () => removeEventListener('keydown', onKey);
-  }, [panel, playing, play, pause]);
+  }, [panel, playing, play, pause, fullscreen]);
 
   useEffect(() => { if (explore && !playing) collect(); }, [explore, playing, collect]);
 
@@ -334,6 +337,7 @@ export const Player: React.FC<PlayerProps> = ({ from, to, deepLink, onScene, api
           navigator.clipboard?.writeText(u.toString()).then(() => { setCopied(true); setTimeout(() => setCopied(false), 1800); }).catch(() => {});
         }}>{copied ? 'Copied' : 'Link'}</button>
         <button className={`ctl ${explore ? 'on' : ''}`} aria-pressed={explore} onClick={() => { if (playing) pause(); setExplore(!explore); }}>Explore</button>
+        {fullscreen && <button className={`ctl ${fullscreen.on ? 'on' : ''}`} aria-pressed={fullscreen.on} title={fullscreen.on ? 'Exit full screen (F)' : 'Full screen, with the pages beside the video (F)'} onClick={fullscreen.toggle}>{fullscreen.on ? 'Exit full screen' : 'Full screen'}</button>}
       </div>
       {tldr ? null : cardNow ? <p className="now muted">{actLabel(cardNow)}: {ACT_NAMES[String(cardNow)]}</p> : scene !== undefined && (() => {
         const main = sceneSources(scene)[0];

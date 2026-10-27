@@ -34,9 +34,18 @@ const Watch: React.FC<WatchProps> = ({ tldr, start, stopMode, endOverlay, path, 
   useEffect(() => {
     if (playing && matchMedia('(max-width: 700px)').matches) watch.current?.scrollIntoView({ block: 'start', behavior: 'smooth' });
   }, [playing]);
+  // Full screen takes the video and the pages beside it together. Browsers without it (iPhone Safari) get no button.
+  const [full, setFull] = useState(false);
+  useEffect(() => {
+    const onChange = () => setFull(document.fullscreenElement === watch.current);
+    document.addEventListener('fullscreenchange', onChange); return () => document.removeEventListener('fullscreenchange', onChange);
+  }, []);
+  const fullscreen = document.fullscreenEnabled
+    ? { on: full, toggle: () => { if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); else watch.current?.requestFullscreen().catch(() => {}); } }
+    : undefined;
   return (
     <div className="watch" ref={watch}>
-      <Player deepLink tldr={tldr} start={start} stopMode={stopMode} endOverlay={endOverlay} path={path} onActEnd={setActEnd} api={api}
+      <Player deepLink tldr={tldr} start={start} stopMode={stopMode} endOverlay={endOverlay} path={path} onActEnd={setActEnd} api={api} fullscreen={fullscreen}
         onScene={(n, p, c) => { setScene(n ?? (tldr ? 0 : undefined)); setPlaying(p); setCard(c); onPosition?.(n, c); }} />
       <Companion scene={scene} card={card} playing={playing} actEnd={actEnd}
         onRead={(l) => { api.current?.pause(); setReading(l); }}
