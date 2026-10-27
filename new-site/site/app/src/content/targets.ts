@@ -145,6 +145,12 @@ export const TARGETS: Record<string, [string, string?]> = {
   'fig.asimov-15m-loc': ['15M+ lines modernized'], 'fig.up-to-4x': ['Up to four times faster, indicative'],
   'fig.up-to-70pct': ['Up to 70% less migration time, indicative'], 'fig.java-21-upgrade': ['Java 8 to Java 21'],
   'fig.delphi-net8': ['Delphi to .NET 8'],
+  // Scene 23, the ASIMOV film: the legacy system, the platform, and how a program runs.
+  'legacy.system': ['A legacy system', 'asimov/_index.md#who-it-is-for'], 'legacy.pressure': ['Why legacy systems are under pressure', 'asimov/_index.md#who-it-is-for'],
+  'legacy.rules': ['Business rules buried in the code', 'asimov/_index.md#the-problem-it-solves'], 'legacy.translation': ['Translating the code copies its shape', 'asimov/_index.md#the-problem-it-solves'],
+  'platform.asimov': ['ASIMOV', 'asimov/_index.md'], 'asimov.tests': ['Tests that compare the two systems', 'asimov/how-it-works.md#showing-the-new-system-behaves-like-the-old-one'],
+  'fig.cobol-net8': ['COBOL on AS/400 to .NET 8', 'asimov/results.md#programs'], 'asimov.phases': ['How a full modernization runs', 'asimov/how-it-works.md#the-delivery-phases'],
+  'asimov.documentation-only': ['Documentation Only', 'asimov/pricing.md#the-five-modes'],
   'handover.graph': ['The graph for the modernized system'], 'handover.custodians': ['The same custodians continue'],
 
   // Act 5, Act 6 and the appendix.

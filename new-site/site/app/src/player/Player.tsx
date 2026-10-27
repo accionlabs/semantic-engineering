@@ -10,8 +10,8 @@ import './player.css';
 import { media } from '../content/media';
 
 const W = 1920, H = 1080;
-// The full film is scenes 1 to 30 with the title and act cards; the overview (scene 0) plays on its own.
-export const MAIN = itemsFor(DEFS, 1, 30);
+// The full film is scenes 1 to 32 with the title and act cards; the overview (scene 0) plays on its own.
+export const MAIN = itemsFor(DEFS, 1, Math.max(...DEFS.map((d) => d.n)));
 const TLDR = itemsFor(DEFS, 0, 0, false);
 export const TLDR_SCENE = 0;
 type Target = { id: string; label: string; rect: { x: number; y: number; w: number; h: number }; el: Element; area: number };

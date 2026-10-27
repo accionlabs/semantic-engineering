@@ -28,11 +28,11 @@ const MOVES = [
   { cls: 'hv-design', from: { x: COLS.target.x + 20, y: tgtY(3), w: COLS.target.w - 40, h: TGT_H }, to: BAND('design'), hue: C.layer.design },
 ];
 
-export const scene26: SceneDef = {
-  n: 26,
+export const scene28: SceneDef = {
+  n: 28,
   id: 'results-and-handover',
   View: () => (
-    <Frame act="Act 4" scene="Scene 26 · Results, and the handover">
+    <Frame act="Act 4" scene="Scene 28 · Results, and the handover">
       <Svg>
         <g className="pipe"><Pipeline show={['frame', 'source', 'spec', 'tags', 'target', 'bar', 'gates']} /></g>
         {MOVES.map((m) => <rect key={m.cls} className={`pre hv ${m.cls}`} x={m.from.x} y={m.from.y} width={m.from.w} height={m.from.h} rx={10} fill="rgba(20,27,45,0.7)" stroke={m.hue} strokeWidth={4} />)}

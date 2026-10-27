@@ -11,11 +11,11 @@ import { C, F } from '../theme';
 // the organization's own reporting.
 const COLS = ['To do', 'In progress', 'In review', 'Done'];
 
-export const scene17: SceneDef = {
-  n: 17,
+export const scene18: SceneDef = {
+  n: 18,
   id: 'managers-see',
   View: () => (
-    <Frame act="Act 3" scene="Scene 17 · How do managers see what people and agents are doing?">
+    <Frame act="Act 3" scene="Scene 18 · How do managers see what people and agents are doing?">
       <Svg>
         <Base />
         <g className="pre board">

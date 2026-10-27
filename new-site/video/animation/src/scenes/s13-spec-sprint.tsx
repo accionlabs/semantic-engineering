@@ -12,11 +12,11 @@ import { C, F, KINDS } from '../theme';
 // proposed in the specification; the graph represents the main branch, so it gains them only on merge.
 const LANE_Y = LOWER.y + 47;
 
-export const scene12: SceneDef = {
-  n: 12,
+export const scene13: SceneDef = {
+  n: 13,
   id: 'spec-sprint',
   View: () => (
-    <Frame act="Act 3" scene="Scene 12 · Who prepares a change before coding starts?">
+    <Frame act="Act 3" scene="Scene 13 · Who prepares a change before coding starts?">
       <Svg>
         <Base />
         <text className="pre impl-label" x={150} y={Y.flow - 50} fontFamily={F.mono} fontSize={15} letterSpacing={2} fill={C.muted}>IMPLEMENTATION SPRINT</text>

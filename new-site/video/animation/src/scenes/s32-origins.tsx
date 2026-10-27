@@ -16,11 +16,11 @@ const CL = { x: 1590, y: 420 };
 const CLUSTER = [[-70, -40], [0, -60], [70, -30], [-50, 30], [30, 20], [90, 50]];
 const CO = { x: 1180, y: GAP_Y - 8, w: 540 };
 
-export const scene29: SceneDef = {
-  n: 30,
+export const scene32: SceneDef = {
+  n: 32,
   id: 'where-it-came-from',
   View: () => (
-    <Frame act="Appendix" scene="Scene 30 · Where it came from">
+    <Frame act="Appendix" scene="Scene 32 · Where it came from">
       <Svg>
         <Defs />
         <g className="intro">

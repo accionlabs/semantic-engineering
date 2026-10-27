@@ -17,11 +17,11 @@ const CHIPS = [
   { t: 'fig.tco-81', f: '81%', l: 'lower five-year cost with the AI run on the client’s own infrastructure', s: 'a cost model; not measured on an engagement', tag: 'modeled' },
 ];
 
-export const scene21: SceneDef = {
-  n: 21,
+export const scene22: SceneDef = {
+  n: 22,
   id: 'results',
   View: () => (
-    <Frame act="Act 3" scene="Scene 21 · What results have teams seen?">
+    <Frame act="Act 3" scene="Scene 22 · What results have teams seen?">
       <Svg><g className="land"><Base /></g></Svg>
       <Heading className="pre title" x={150} y={110} size={44}>Results, each with its context</Heading>
       {CHIPS.map((c, i) => (

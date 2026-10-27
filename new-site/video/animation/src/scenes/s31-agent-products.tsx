@@ -24,11 +24,11 @@ const AG = [1290, 1440, 1590];
 const AGY = 380;
 const CO = { x: 1240, y: 600, w: 600 };
 
-export const scene30: SceneDef = {
-  n: 29,
+export const scene31: SceneDef = {
+  n: 31,
   id: 'below-above-water',
   View: () => (
-    <Frame act="Act 6" scene="Scene 29 · Below and above the water">
+    <Frame act="Act 6" scene="Scene 31 · Below and above the water">
       <Svg>
         <g className="pre water">
           <rect x={0} y={WL} width={1920} height={1080 - WL} fill="rgba(44,197,180,0.07)" />

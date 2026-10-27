@@ -13,11 +13,11 @@ import { C, F, KINDS } from '../theme';
 const LAYERS = ['custodians', 'implementation teams', 'enablement (Accion Labs)'];
 const INPUTS = ['customer calls', 'user research', 'vendor contracts', 'compliance decisions'];
 
-export const scene20: SceneDef = {
-  n: 20,
+export const scene21: SceneDef = {
+  n: 21,
   id: 'the-team',
   View: () => (
-    <Frame act="Act 3" scene="Scene 20 · What changes for the team?">
+    <Frame act="Act 3" scene="Scene 21 · What changes for the team?">
       <Svg>
         <Base />
         <g className="pre kept">

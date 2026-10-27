@@ -18,11 +18,11 @@ const ax = (i: number) => 150 + i * 830;
 const AW = 790;
 const CO = { x: 1180, y: GAP_Y - 8, w: 540 };
 
-export const scene28: SceneDef = {
-  n: 28,
+export const scene30: SceneDef = {
+  n: 30,
   id: 'three-engagements',
   View: () => (
-    <Frame act="Act 5" scene="Scene 28 · Two engagements">
+    <Frame act="Act 5" scene="Scene 30 · Two engagements">
       <Svg>
         <g className="land"><Base /></g>
         <TraversePath className="pre trav" />

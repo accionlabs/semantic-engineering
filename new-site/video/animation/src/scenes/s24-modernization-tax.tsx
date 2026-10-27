@@ -19,11 +19,11 @@ const TAX = [
 const AX0 = COLS.source.x + COLS.source.w + 10, AX1 = COLS.target.x - 14;
 const CO = { x: 1130, y: LOW_Y + 10, w: 640 };
 
-export const scene22: SceneDef = {
-  n: 22,
+export const scene24: SceneDef = {
+  n: 24,
   id: 'modernization-tax',
   View: () => (
-    <Frame act="Act 4" scene="Scene 22 · The modernization tax">
+    <Frame act="Act 4" scene="Scene 24 · The modernization tax">
       <Svg>
         <Pipeline show={['frame']} />
         <g className="legacy" data-target="card.legacy-code">

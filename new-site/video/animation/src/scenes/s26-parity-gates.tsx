@@ -23,11 +23,11 @@ const Lock: React.FC<{ x: number; y: number }> = ({ x, y }) => (
   <g><rect x={x - 9} y={y - 4} width={18} height={14} rx={3} fill={C.text} /><path d={`M${x - 5} ${y - 4} v-5 a5 5 0 0 1 10 0 v5`} fill="none" stroke={C.text} strokeWidth={2.5} /></g>
 );
 
-export const scene24: SceneDef = {
-  n: 24,
+export const scene26: SceneDef = {
+  n: 26,
   id: 'parity-contract-and-gates',
   View: () => (
-    <Frame act="Act 4" scene="Scene 24 · The parity contract and the four gates">
+    <Frame act="Act 4" scene="Scene 26 · The parity contract and the four gates">
       <Svg>
         <Pipeline show={['frame', 'source', 'spec', 'tags', 'target']} />
         <rect className="pre bracket" x={BAR.x - 16} y={P.y0 - 14} width={BAR.w + 32} height={BAR.y + BAR.h - P.y0 + 30} rx={18} fill="none" stroke={C.text} strokeWidth={2} strokeDasharray="10 8" />

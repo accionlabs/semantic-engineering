@@ -18,11 +18,11 @@ const WHEN = [
   { label: 'pull request, whole history', x: STATIONS[2].x + 105 },
 ];
 
-export const scene13: SceneDef = {
-  n: 13,
+export const scene14: SceneDef = {
+  n: 14,
   id: 'impact-analysis',
   View: () => (
-    <Frame act="Act 3" scene="Scene 13 · What does impact analysis tell you, and when does it run?">
+    <Frame act="Act 3" scene="Scene 14 · What does impact analysis tell you, and when does it run?">
       <Svg>
         <Base named />
         <TraversePath className="pre path" />

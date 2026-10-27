@@ -17,11 +17,11 @@ const RECORDS = [
 const TICKET_Y = Y.flow - 120;
 const STATUS = ['To do', 'In progress', 'In review', 'Done'];
 
-export const scene11: SceneDef = {
-  n: 11,
+export const scene12: SceneDef = {
+  n: 12,
   id: 'state-of-the-work',
   View: () => (
-    <Frame act="Act 3" scene="Scene 11 · Where is the state of the work kept?">
+    <Frame act="Act 3" scene="Scene 12 · Where is the state of the work kept?">
       <Svg>
         <Base />
         {RECORDS.map((r, i) => (

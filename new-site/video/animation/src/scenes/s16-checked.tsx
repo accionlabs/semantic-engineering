@@ -14,11 +14,11 @@ import { GraphSync, syncMerge, syncUpdate } from '../parts/Sync';
 const REASONS: [typeof KINDS[number]['id'], string][] = [['functional', 'misses a required outcome'], ['design', 'duplicates a component'], ['architecture', 'crosses a service boundary'], ['code', 'breaks a dependent']];
 const PR = STATIONS[2];
 
-export const scene15: SceneDef = {
-  n: 15,
+export const scene16: SceneDef = {
+  n: 16,
   id: 'checked-and-current',
   View: () => (
-    <Frame act="Act 3" scene="Scene 15 · How is each change checked, and how does the graph stay current?">
+    <Frame act="Act 3" scene="Scene 16 · How is each change checked, and how does the graph stay current?">
       <Svg>
         <Base />
         <text className="pre gate-label" x={GATE_X} y={Y.flow + 72} textAnchor="middle" fontFamily={F.mono} fontSize={13} fill={C.text}>PR Validation Agent</text>

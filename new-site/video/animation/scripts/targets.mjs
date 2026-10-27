@@ -6,7 +6,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const here = path.dirname(fileURLToPath(import.meta.url));
 const b = await chromium.launch({ channel: 'chrome' });
 const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
-await p.goto(pathToFileURL(path.resolve(here, '../dist/index.html')).href + '?scenes=0-30&notitle');
+await p.goto(pathToFileURL(path.resolve(here, '../dist/index.html')).href + '?scenes=0-32&notitle');
 await p.evaluate(() => window.__ready);
 const out = await p.evaluate(() => {
   const keyToN = Object.fromEntries(window.__film.chapters.filter((c) => c.n !== undefined).map((c) => [c.key, c.n]));

@@ -1,6 +1,6 @@
 """Builds the site's narration tracks from the voiced clips, laid on the film's timeline as the site plays it.
 
-  python3 site_audio.py      writes site/app/public/media/narration.m4a (scenes 1 to 30, with the title and
+  python3 site_audio.py      writes site/app/public/media/narration.m4a (scenes 1 to 32, with the title and
                              act cards) and overview.m4a (the overview alone, no title)
 
 Each sentence is placed at its scene's start plus the lead, then one after another with the gap, as the
@@ -46,5 +46,5 @@ def track(scenes, flags, name):
     raw.unlink()
     print(f'{name}.m4a: {placed} sentences, {film["duration"]:.1f} s')
 
-track('1-30', [], 'narration')
+track('1-32', [], 'narration')
 track('0-0', ['--notitle'], 'overview')

@@ -54,11 +54,11 @@ const Strip: React.FC<{ cls: string; items: { name: string; dur: string }[]; num
   </g>
 );
 
-export const scene25: SceneDef = {
-  n: 25,
+export const scene27: SceneDef = {
+  n: 27,
   id: 'modes-and-stages',
   View: () => (
-    <Frame act="Act 4" scene="Scene 25 · Five engagement modes and five delivery stages">
+    <Frame act="Act 4" scene="Scene 27 · Five engagement modes and five delivery stages">
       <Svg>
         <Pipeline show={['frame', 'source', 'spec', 'tags', 'target', 'bar', 'gates']} />
         <g className="pre deps">

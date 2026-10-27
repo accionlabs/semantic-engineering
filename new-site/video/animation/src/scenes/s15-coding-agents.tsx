@@ -12,11 +12,11 @@ import { C, F } from '../theme';
 // machine; the code varies in detail only, so review moves to the details.
 const LIT: [ 'design' | 'architecture' | 'code', number][] = [['design', 4], ['architecture', 4], ['code', 3]];
 
-export const scene14: SceneDef = {
-  n: 14,
+export const scene15: SceneDef = {
+  n: 15,
   id: 'coding-agents',
   View: () => (
-    <Frame act="Act 3" scene="Scene 14 · How do coding agents use the graph?">
+    <Frame act="Act 3" scene="Scene 15 · How do coding agents use the graph?">
       <Svg>
         <Base />
         <g className="pre tools">

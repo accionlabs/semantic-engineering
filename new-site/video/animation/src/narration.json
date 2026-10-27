@@ -400,6 +400,57 @@
   {
    "act": 3,
    "n": 10,
+   "title": "What Breeze.AI is and how it works",
+   "text": "On a large enterprise application, AI coding agents are fast on small tasks and make mistakes on changes that reach across the system. The knowledge those changes need is held by the product owner, the designer, the architect and the engineering team, and the documents about it go out of date. The platform Accion Labs built for this work is called Breeze.AI. For an existing application, its agents build a knowledge graph with four layers, functional, design, architecture and code, from the code, the database schemas, the documents and the running user interface. For an application of more than two million lines, extraction takes about two to three weeks, and then the named owner of each layer reviews it. The graph holds only the parts whose change affects other parts, and every item cites the ticket, document, design or file it came from. When a change is specified in a ticket, the impact analysis agent reports everything it affects across the four layers, before any code is written. Engineers keep the AI coding assistant they already use, and the assistant receives the impact report and the graph's tools in the editor. When the code is ready, each pull request is checked against the graph and the impact report, and a change that fails is blocked until it is fixed. Acceptance tests are generated from the functional layer and run in the same pipeline. Before the change merges, the graph is updated, so the graph always matches the main branch. Product owners, architects and designers work in a web application, engineers use a plugin in Claude Code, and CI pipelines use a command-line tool, all on the same graph. The platform runs hosted by Accion Labs, in the client's own cloud account, or on the client's premises with local models. The graph is stored in Neo4j by default, people sign in with single sign-on, and every agent action is recorded in the client's monitoring tools. The platform connects to the version control, ticket system, documents, design files and CI pipeline the team already runs. People decide which work goes to agents, and each agent has a named owner and earns more autonomy as it shows reliable results. On one engagement across three products, deployments rose from 19 to 36 a month over a 14-week pilot, and lead time for changes fell from 2.0 to 1.62 days. On other engagements, defects fell by 23 percent, and tests generated from the functional layer reached 93.4 percent coverage. Most clients start with the System Model Pilot, in which Breeze.AI builds the graph of one application in two to three weeks and runs impact analysis on a real item from the client's backlog.",
+   "words": 448,
+   "sentences": [
+    "On a large enterprise application, AI coding agents are fast on small tasks and make mistakes on changes that reach across the system.",
+    "The knowledge those changes need is held by the product owner, the designer, the architect and the engineering team, and the documents about it go out of date.",
+    "The platform Accion Labs built for this work is called Breeze.AI.",
+    "For an existing application, its agents build a knowledge graph with four layers, functional, design, architecture and code, from the code, the database schemas, the documents and the running user interface.",
+    "For an application of more than two million lines, extraction takes about two to three weeks, and then the named owner of each layer reviews it.",
+    "The graph holds only the parts whose change affects other parts, and every item cites the ticket, document, design or file it came from.",
+    "When a change is specified in a ticket, the impact analysis agent reports everything it affects across the four layers, before any code is written.",
+    "Engineers keep the AI coding assistant they already use, and the assistant receives the impact report and the graph's tools in the editor.",
+    "When the code is ready, each pull request is checked against the graph and the impact report, and a change that fails is blocked until it is fixed.",
+    "Acceptance tests are generated from the functional layer and run in the same pipeline.",
+    "Before the change merges, the graph is updated, so the graph always matches the main branch.",
+    "Product owners, architects and designers work in a web application, engineers use a plugin in Claude Code, and CI pipelines use a command-line tool, all on the same graph.",
+    "The platform runs hosted by Accion Labs, in the client's own cloud account, or on the client's premises with local models.",
+    "The graph is stored in Neo4j by default, people sign in with single sign-on, and every agent action is recorded in the client's monitoring tools.",
+    "The platform connects to the version control, ticket system, documents, design files and CI pipeline the team already runs.",
+    "People decide which work goes to agents, and each agent has a named owner and earns more autonomy as it shows reliable results.",
+    "On one engagement across three products, deployments rose from 19 to 36 a month over a 14-week pilot, and lead time for changes fell from 2.0 to 1.62 days.",
+    "On other engagements, defects fell by 23 percent, and tests generated from the functional layer reached 93.4 percent coverage.",
+    "Most clients start with the System Model Pilot, in which Breeze.AI builds the graph of one application in two to three weeks and runs impact analysis on a real item from the client's backlog."
+   ],
+   "sources": [
+    "breeze-ai/_index.md",
+    "breeze-ai/how-it-works.md",
+    "breeze-ai/features.md",
+    "breeze-ai/specifications.md",
+    "breeze-ai/deployment.md",
+    "breeze-ai/security.md",
+    "breeze-ai/pricing.md#ways-to-start",
+    "breeze-ai/results.md",
+    "sdlc/case-archetypes.md#delivery-outcomes-on-a-multi-product-engagement"
+   ],
+   "targets": {
+    "platform.breeze-ai": "breeze-ai/_index.md",
+    "graph.extract": "breeze-ai/how-it-works.md#1-build-the-graph-from-the-code",
+    "impact.analysis": "breeze-ai/how-it-works.md#3-check-each-change-before-code-is-written",
+    "gate.validation": "breeze-ai/how-it-works.md#4-check-again-before-it-merges",
+    "graph.sync": "breeze-ai/how-it-works.md#5-update-the-graph-before-it-merges",
+    "breeze.interfaces": "breeze-ai/features.md#three-ways-to-use-it",
+    "breeze.deployment": "breeze-ai/deployment.md",
+    "breeze.integrations": "breeze-ai/specifications.md#integrations",
+    "breeze.results": "breeze-ai/results.md",
+    "breeze.start": "breeze-ai/pricing.md#ways-to-start"
+   }
+  },
+  {
+   "act": 3,
+   "n": 11,
    "title": "When are specifications not enough?",
    "text": "AI coding tools are fast for one developer working on small, contained tasks. A small application that its team can hold in mind works well with a written specification for each change, which the coding agent builds from and the reviewer checks against. Specifications start to fall short as the application grows complex: a large existing system, a legacy code base, or work that crosses team boundaries. Each specification describes one change, and knows little about the rest of the application. Specifications drift from the code under deadline pressure. A specification carries the product owner's functional knowledge, and little of the design, architecture and code knowledge the change depends on. Writing specifications becomes the slowest step in the process. The knowledge graph sits alongside the specifications and supplies the design, architecture and code knowledge they lack. Each specification still describes the change, and the knowledge graph describes the application the change lands in.",
    "words": 153,
@@ -429,7 +480,7 @@
   },
   {
    "act": 3,
-   "n": 11,
+   "n": 12,
    "title": "Where is the state of the work kept?",
    "text": "Three records hold the state of the work, and each answers a different question. The specification says what one change should do. The ticket system, such as Jira, says who is doing what, and how far the work has got. The knowledge graph says what the application does today. The ticket carries each change from start to finish. When a specification is written, a hook in the ticket system runs impact analysis and attaches the report to the ticket. Every later step updates the ticket's status and attaches its results, such as test results and a second impact analysis after coding. At the end, the final impact analysis uses the whole history of the ticket. The ticket works the same way whether people, agents or both do the work. Teams design the workflow between the steps to fit their own process.",
    "words": 141,
@@ -459,7 +510,7 @@
   },
   {
    "act": 3,
-   "n": 12,
+   "n": 13,
    "title": "Who prepares a change before coding starts?",
    "text": "With AI, writing code is fast, so preparing good specifications becomes the slowest step. The methodology gives that work its own sprint, the spec sprint, which runs a step ahead of the implementation sprint. The custodians meet for one or two days and work through several requests together. The product owner drafts the specification from a standard template. Impact analysis reports everything the specification will touch. Each custodian reviews the report for their own layer: functional, design, architecture and code. Impact analysis can show that a change needs new items, and the custodians propose them in the specification; the items enter the graph only when their code merges. The finished specification, with its impact report, goes into the implementation backlog. The implementation sprint works from specifications whose risks are already known. A specification that turns out to be missing context goes back to the spec sprint.",
    "words": 146,
@@ -490,7 +541,7 @@
   },
   {
    "act": 3,
-   "n": 13,
+   "n": 14,
    "title": "What does impact analysis tell you, and when does it run?",
    "text": "Impact analysis follows the links in the knowledge graph from a specification to everything it touches: outcomes, components, services, database tables and code. For people, impact analysis writes a readable report with the reasons for each finding. For another agent, impact analysis returns structured data that lists the IDs of the affected items in each layer. When an agent owns the work, the agent reads the structured form and continues without waiting for a person. Impact analysis runs when the specification is written, again after the code is written, and again at the pull request, using the whole history of the change. One example is the saved-search alert feature, on an application of 1.6 million lines. The report found three things that would have been hard to find by hand. The report found that the database already had the column the feature needed, so no database change was required. The report flagged a likely and serious risk: without a new filter, weekly subscribers would also receive a daily email. The report also set the order of deployment across three repositories. A senior engineer would need three to five working days to produce a comparable analysis.",
    "words": 195,
@@ -525,7 +576,7 @@
   },
   {
    "act": 3,
-   "n": 14,
+   "n": 15,
    "title": "How do coding agents use the graph?",
    "text": "Developers keep the coding agents they already use, such as Claude Code or Cursor. The coding agents connect to the knowledge graph through the Breeze.AI MCP server, a standard interface that AI tools use to call other services. The impact report goes into the coding agent's prompt. With the report in its prompt, the coding agent knows which services, components and tables the change must touch. The coding agent cannot ignore what the impact report found, and the specification tells it what to build. Rules for the functional layer are checked on the developer's machine before any change reaches the graph. Code generated twice from the same prompt still differs in detail, such as variable names and the order of operations. The impact report fixes the structure of the change, so the remaining differences are in detail only. Code review moves from asking whether the agent changed the right files to asking whether the details are right.",
    "words": 157,
@@ -556,7 +607,7 @@
   },
   {
    "act": 3,
-   "n": 15,
+   "n": 16,
    "title": "How is each change checked, and how does the graph stay current?",
    "text": "Every pull request goes through the PR Validation Agent before it can merge. The PR Validation Agent compares the change with the impact report, and checks the change against all four layers of the graph. The check fails when a change misses an outcome the specification required, duplicates an existing design component, crosses a service boundary, or breaks something that depends on it. A failed check names the violation and the item in the graph involved, and a mismatch with the impact report goes to a person for review. Style, linting and unit test coverage stay in the team's existing build pipeline. The BDD Generation Agent writes test scenarios from the functional layer, each describing how the application should respond to a user's action. Before the pull request merges, the KG Sync Agent updates the graph to match the new code. The graph then matches the main branch, and the next impact analysis runs against the application as it is.",
    "words": 160,
@@ -586,7 +637,7 @@
   },
   {
    "act": 3,
-   "n": 16,
+   "n": 17,
    "title": "Who decides which work agents do?",
    "text": "Every agent has a named human owner, and no agent runs on its own without one. People decide which work goes to agents, in sprint planning or in support triage. Work with a repeatable pattern suits an agent: support requests, customer customizations, changes to workflows and forms, new fields and custom reports. An agent takes on a pattern once it has a record of reliable results on that pattern. New scope stays with people, because a new feature needs product, design and architecture judgment. Agents earn autonomy over five levels, from suggesting a change to acting without review. Each step up is recorded in a written agreement that names the evidence, the threshold, the person who approved it, and the conditions for stepping back down. When an agent's results fall below the threshold, the agent steps back down automatically. The agents that run impact analysis and pull request checks typically operate at the fourth level, where people review their results on a regular schedule.",
    "words": 164,
@@ -619,7 +670,7 @@
   },
   {
    "act": 3,
-   "n": 17,
+   "n": 18,
    "title": "How do managers see what people and agents are doing?",
    "text": "Managers see the work of people and agents in the ticket system they already use. Every step of a change updates the ticket, whether a person or an agent did it. Some products receive support and data requests at a volume a ticket system handles poorly, because it holds no knowledge of the application. For those products, the requests can move to an agent workbench. Triage agents in the workbench classify every request, apply the product's own priorities, and route the request to a person or to an agent. Metrics are kept per product, per graph and per agent. Organizations bring these metrics into their own reporting.",
    "words": 107,
@@ -645,7 +696,7 @@
   },
   {
    "act": 3,
-   "n": 18,
+   "n": 19,
    "title": "What happens across many products?",
    "text": "Each product has one knowledge graph, shared by every team that works on that product. Graphs are kept to one product because queries slow down as a graph grows. A portfolio adopts the methodology one product at a time. The first product builds its graph, sets up the process, and hands its repeatable work to agents, and after a few months the next product follows. Some knowledge belongs to the whole enterprise: compliance and security rules, infrastructure preferences, shared deployment pipelines, and an enterprise design system. Enterprise knowledge is defined once, and every product's agents read it according to their access rights. Where products integrate, impact analysis follows the integration points into the other products' graphs. Every quarter, an agent looks across the product graphs for capabilities that are duplicated or no longer used.",
    "words": 134,
@@ -676,7 +727,7 @@
   },
   {
    "act": 3,
-   "n": 19,
+   "n": 20,
    "title": "What about existing systems and technical debt?",
    "text": "For an existing application, agents extract the knowledge graph from the code, and the custodians review it. Extraction typically takes two to three weeks for an application of more than two million lines. Extraction shows the application as it actually is, including duplicated and tangled parts that nobody had mapped. Agents that write code quickly can also add technical debt quickly. An enterprise often decides on a target that some products have not reached yet. One example is a new authorization service that some products have not adopted. Until the change reaches the code, the target lives in the specifications, because the knowledge graph keeps strict parity with the code. When a change touches that area, impact analysis shows everything in the current code that the change touches, and the specification can move that code toward the target. Large-scale legacy modernization is the exception: there, the target has a graph of its own.",
    "words": 153,
@@ -706,7 +757,7 @@
   },
   {
    "act": 3,
-   "n": 20,
+   "n": 21,
    "title": "What changes for the team?",
    "text": "The sprint, the ticket system and code review stay as they are. The team adds a spec sprint ahead of implementation. The team works in three layers: the custodians, the implementation teams, and an enablement layer from Accion Labs. Forward-deployed engineers from Accion Labs fill any custodian role the client cannot staff yet. Specialists work part-time across several workstreams, and one architect can cover two or three of them. The custodians stay human. Much of what the custodians know comes from customer calls, compliance decisions, vendor contracts and user research, which no agent can read. Agents draft updates to the graph, and the custodians approve them.",
    "words": 106,
@@ -736,7 +787,7 @@
   },
   {
    "act": 3,
-   "n": 21,
+   "n": 22,
    "title": "What results have teams seen?",
    "text": "Engagements under Breeze.AI report these results, each in its own context. On one engagement across three products, deployments rose from 19 to 36 a month over a fourteen-week pilot. On the same engagement, lead time for changes fell from 2.0 to 1.62 days. Extracting the graph from a codebase of more than two million lines took two to three weeks. On one brownfield application, impact analysis replaced three to five days of investigation by a senior engineer before each change. In the first sprint of a new user-interface workstream, 53% of design components were reused. Defects fell 23% compared with the same team's results before Semantic Engineering, on the same codebase. Test coverage reached 93.4%, with test scenarios generated from the functional layer and no manual scenario writing. A cost model puts five-year total cost 81% lower when the AI runs on the client's own infrastructure; the figure comes from the model and was not measured on an engagement.",
    "words": 159,
@@ -768,7 +819,56 @@
   },
   {
    "act": 4,
-   "n": 22,
+   "n": 23,
+   "title": "What ASIMOV is and how it works",
+   "text": "Many businesses still run on software written decades ago, in COBOL, Delphi, VB.NET or early versions of Java and ASP.NET. Skills for these systems are scarce, running costs rise, and support for the old platforms ends. Most modernization programs overrun because nobody fully knows what the old system does, since its business rules are buried in the code and the documents are missing or out of date. Translating the code into a new language with AI copies the old structure and misses behavior that was never written down. The platform Accion Labs built for legacy modernization is called ASIMOV, and it starts by reconstructing what the old system does. Agents read the legacy code, configuration, schemas and interfaces into a source graph, and read the approved target architecture into a target graph. From the two graphs, the platform writes a specification people can read, with business requirements, test scenarios and a chat interface to the code. The client's product owner and architect review the specification and mark each module to keep, change, replace or retire. Agents then build the new code one module at a time, from the reviewed specification and the target graph. Every module passes four quality gates: architecture, design, standards, and a functional gate that checks the business rules behave as they did in the old system. A module that fails a gate goes back to the agents with the evidence, and the loop runs until every gate passes. Experts then review the new code, and tests compare the two systems: agents using the running interfaces of both, generated unit tests, and end-to-end business workflows. The platform runs in the client's environment, and the new system depends neither on ASIMOV nor on any cloud provider. The client receives the new code, the tests, the documentation, and the evidence for every module. More than 15 million lines of legacy code have gone through ASIMOV, in more than ten programs. A Java 8 platform of 2.1 million lines moved to Java 21 in about three and a half months. A Delphi platform of about 3 million lines moved to .NET 8 with about 60 percent less effort than manual work, and an insurer's 600,000 lines of COBOL on AS/400 became .NET 8 services. A full modernization begins with discovery in two to four weeks, then a first module in six to twelve weeks, then the rest in waves. Clients can also start smaller, with Documentation Only, which records what a system that will keep running does, in two to six weeks.",
+   "words": 422,
+   "sentences": [
+    "Many businesses still run on software written decades ago, in COBOL, Delphi, VB.NET or early versions of Java and ASP.NET.",
+    "Skills for these systems are scarce, running costs rise, and support for the old platforms ends.",
+    "Most modernization programs overrun because nobody fully knows what the old system does, since its business rules are buried in the code and the documents are missing or out of date.",
+    "Translating the code into a new language with AI copies the old structure and misses behavior that was never written down.",
+    "The platform Accion Labs built for legacy modernization is called ASIMOV, and it starts by reconstructing what the old system does.",
+    "Agents read the legacy code, configuration, schemas and interfaces into a source graph, and read the approved target architecture into a target graph.",
+    "From the two graphs, the platform writes a specification people can read, with business requirements, test scenarios and a chat interface to the code.",
+    "The client's product owner and architect review the specification and mark each module to keep, change, replace or retire.",
+    "Agents then build the new code one module at a time, from the reviewed specification and the target graph.",
+    "Every module passes four quality gates: architecture, design, standards, and a functional gate that checks the business rules behave as they did in the old system.",
+    "A module that fails a gate goes back to the agents with the evidence, and the loop runs until every gate passes.",
+    "Experts then review the new code, and tests compare the two systems: agents using the running interfaces of both, generated unit tests, and end-to-end business workflows.",
+    "The platform runs in the client's environment, and the new system depends neither on ASIMOV nor on any cloud provider.",
+    "The client receives the new code, the tests, the documentation, and the evidence for every module.",
+    "More than 15 million lines of legacy code have gone through ASIMOV, in more than ten programs.",
+    "A Java 8 platform of 2.1 million lines moved to Java 21 in about three and a half months.",
+    "A Delphi platform of about 3 million lines moved to .NET 8 with about 60 percent less effort than manual work, and an insurer's 600,000 lines of COBOL on AS/400 became .NET 8 services.",
+    "A full modernization begins with discovery in two to four weeks, then a first module in six to twelve weeks, then the rest in waves.",
+    "Clients can also start smaller, with Documentation Only, which records what a system that will keep running does, in two to six weeks."
+   ],
+   "sources": [
+    "asimov/_index.md",
+    "asimov/how-it-works.md",
+    "asimov/what-it-modernizes.md",
+    "asimov/deliverables.md",
+    "asimov/deployment.md#where-it-runs",
+    "asimov/pricing.md#the-five-modes",
+    "asimov/results.md",
+    "modernization/case-archetypes.md"
+   ],
+   "targets": {
+    "platform.asimov": "asimov/_index.md",
+    "graph.source": "asimov/how-it-works.md#the-five-stages",
+    "graph.target": "asimov/how-it-works.md#the-five-stages",
+    "asimov.annotate": "asimov/how-it-works.md#where-people-review",
+    "gate.parity": "asimov/how-it-works.md#the-four-quality-gates",
+    "asimov.tests": "asimov/how-it-works.md#showing-the-new-system-behaves-like-the-old-one",
+    "asimov.deliverables": "asimov/deliverables.md",
+    "asimov.results": "asimov/results.md",
+    "asimov.modes": "asimov/pricing.md#the-five-modes"
+   }
+  },
+  {
+   "act": 4,
+   "n": 24,
    "title": "The modernization tax",
    "text": "In a legacy modernization, a team replaces an old technology stack with a modern one, and keeps the behavior the business has built up over years. The people who could once explain the legacy system are often retiring, scarce or already gone. The legacy code is the only authoritative record of what the system actually does. The cost of working from that record by hand is the Modernization Translation Tax, and the tax has four components. The reverse-engineering tax is the work of finding out, from the legacy code, what the system does, which needs senior engineers. The lost-context tax covers business decisions the code does not show, such as deliberate edge cases and old workarounds. The validation-vacuum tax arises because nothing can test the old behavior automatically, so every migrated module needs a hand-built check that it behaves as before. The knowledge-disappearance tax arrives after the project, when the people who built up the understanding leave with the engagement. The first three components make each other worse. Without an executable contract that proves the new system behaves like the old one, nobody can show the migration is complete. A modernization that cannot be proven complete stalls before it can deploy.",
    "words": 201,
@@ -805,7 +905,7 @@
   },
   {
    "act": 4,
-   "n": 23,
+   "n": 25,
    "title": "Graphs of the old and new systems",
    "text": "The methodology replaces this manual work with three structured records, each fixed for the length of the project. The Source-state ontology is a graph of the old system, built from the legacy code by agents: its files, classes, functions, statements and APIs. The Source-state ontology keeps the actual code statements, as evidence of the behavior the new system must reproduce. The Target-state ontology is a graph of the new system, built from the target blueprint: its architecture, runtime, standards and design system. The specification connects the two graphs, and produces a requirements document, test scenarios, end-to-end test scripts and a chatbot that answers questions about the code. The Product Owner and Architect mark every module of the old system, in the specification, with one of four decisions. Retain keeps the module's behavior while its structure changes. Modify changes the behavior in defined ways that the Product Owner records. Replace hands the function to a different solution, such as a modern library. Retire removes the function, and the retired items stay documented. A module without a decision cannot be migrated.",
    "words": 179,
@@ -844,7 +944,7 @@
   },
   {
    "act": 4,
-   "n": 24,
+   "n": 26,
    "title": "The parity contract and the four gates",
    "text": "Together, the two graphs and the marked-up specification form the parity contract: the agreed definition of how the new system must behave, which the agents must follow. Neither the recorded legacy behavior nor the target architecture can change during the project. Migration agents write the new code one module at a time, from the specification and the Target-state ontology. Every piece of migrated code then passes through four validation gates, each run by its own agent. The architecture gate checks conformance to the target blueprint's architecture. The design gate checks the design system and UI guidelines. The standards gate checks security rules and coding standards. The functional gate checks that the new code behaves like the legacy code recorded in the Source-state ontology. Code that fails any gate goes back with the gate's evidence attached, until all four gates pass. Nine named agents cover five stages: Discover, Document, Migrate, Validate and Maintain. People check the work at two points: the decisions in the specification before migration, and a modernization expert's review of the code that has passed the gates. The five stages run on a platform called ASIMOV.",
    "words": 188,
@@ -895,7 +995,7 @@
   },
   {
    "act": 4,
-   "n": 25,
+   "n": 27,
    "title": "Five engagement modes and five delivery stages",
    "text": "A modernization client enters through one of five engagement modes, each sized to the work the client is ready to commit to. The modes differ in how much of the work the client takes on. Documentation Only produces documentation and test scenarios from the legacy code, with no migration. Discovery and Documentation adds an inventory of the applications, maps of their dependencies, the business rules, and review material for subject-matter experts. Migration Readiness adds a scope for each module, its place in the new system, the order of migration, and the marked-up specification. Full Modernization runs the whole pipeline, over quarters to years. Maintain, Operate and Convergence keeps the knowledge graph up to date on the modern system. Each mode addresses a defined part of the modernization tax, and a client may stop at any mode. Full Modernization runs in five stages: discovery and analysis, building the graphs, migrating one first module, migrating the rest, and user acceptance testing with deployment. While the first module is migrated, subject-matter experts review the output and tune the agents to the project.",
    "words": 179,
@@ -939,7 +1039,7 @@
   },
   {
    "act": 4,
-   "n": 26,
+   "n": 28,
    "title": "Results, and the handover",
    "text": "More than fifteen million lines of legacy code have been modernized with ASIMOV, across more than ten programs. On a one-million-line standalone codebase, the indicative figures are up to four times faster than manual modernization, and up to seventy percent less migration time. An inventory and warehouse platform moved 2.1 million lines from Java 8 to Java 21 in about three and a half months. A European education-technology provider moved three million lines of Delphi to cloud-native .NET 8, with about sixty percent less effort than manual. Actual outcomes vary by engagement scope, target stack and the modules selected. When a modernization completes and the client wants ongoing governance of the new system, a four-layer graph is built for it. The code layer is then extracted from the new code by Breeze.AI's agents, so the graph matches the modernized system from the start. The Retain and Modify decisions in the specification become the starting point for the functional layer. The target blueprint becomes the starting point for the architecture and design layers. The same four custodians continue, and the work moves from project stages to regular sprints.",
    "words": 187,
@@ -978,7 +1078,7 @@
   },
   {
    "act": 5,
-   "n": 27,
+   "n": 29,
    "title": "Engagement phases",
    "text": "A continuous SDLC engagement runs in four phases: Advise, Launch, Scale and Optimize. Advise takes two to four weeks, assesses how the team uses AI today and where it meets friction, and produces a scoped roadmap and a platform recommendation. Launch takes about twelve weeks, builds the four-layer graph for the highest-priority product, and puts the validation gate in place on every pull request. Scale extends the methodology across the portfolio over quarters to years, with agents gaining autonomy on routine, repeatable work. Optimize is continuous operation, with governance audits every quarter and regular clean-up of the graphs. In every phase, the client's four custodians own the four layers of the knowledge graph. During an engagement, Accion Labs customizes the platform, sets up the initial graph, and provides managed support in one of three tiers. For the end of an engagement, Accion Labs makes four commitments. The graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles Accion Labs filled can be handed to the client's own staff.",
    "words": 175,
@@ -1019,7 +1119,7 @@
   },
   {
    "act": 5,
-   "n": 28,
+   "n": 30,
    "title": "Two engagements",
    "text": "Two anonymized engagements show the methodology at work on continuous SDLC. The first archetype is a live code base of more than two million lines, with five to six scrum teams. Extracting the graph from the code built all four layers in two to three weeks. On the extracted graph, impact analysis replaced three to five days of investigation by senior engineers. The second archetype is a new user-interface workstream that grew in complexity, and started with the design layer of the graph. In its first sprint under Semantic Engineering, the workstream reused 53 percent of its components from the existing design system. In both engagements, structured knowledge was added exactly where the specification alone was not enough.",
    "words": 118,
@@ -1055,7 +1155,7 @@
   },
   {
    "act": 6,
-   "n": 29,
+   "n": 31,
    "title": "Below and above the water",
    "text": "Semantic Engineering works below the water: the product stays as it is, and the graph governs how it is built and changed. Some products need to change above the water as well, so that more of each customer's needs can vary without special cases in shared code. Dialect Engineering is the method for that, and it starts from the graph Semantic Engineering has already built. The graph records what every customer shares: the product's entities, workflows, rules and contracts, which together form its canonical model. Because the graph is extracted from the code and the data model, the canonical model is read from the product itself, without being designed from scratch. A language over the graph lets an agent write one customer's needs, such as how their own data maps onto the canonical model during onboarding, and check the result by running tests. The same language gives customers' own agents a way to use the product in the terms of its domain, with the graph governing which agent may use which capability. A product that stays as it is needs Semantic Engineering; a product that has to vary per customer needs both, with the graph first. Dialect Engineering is set out at dialect-engineering.ai.",
    "words": 203,
@@ -1080,7 +1180,7 @@
   },
   {
    "act": 7,
-   "n": 30,
+   "n": 32,
    "title": "Where it came from",
    "text": "Semantic Engineering was assembled over eight years of client work at Accion Labs, from 2017 to 2025. In 2017, an internal Accion Labs framework called Breeze set out what product owners, UX designers and architects need to produce. Teams maintained the Breeze documents by hand, and tended to drop them under deadline pressure. In 2022, on a drug-discovery project for a pharmaceutical client, connecting the AI model to a knowledge graph kept its hallucinations, the answers it invents, under control. In 2023, the knowledge-graph approach became a commercial platform, KAPS, used across customer engagements. By 2024, the Breeze guidelines had become the four layers of the knowledge graph, with agents built around them, in a platform named Breeze.AI. The method took the name Semantic Engineering in 2025. The framework and concepts of Semantic Engineering are public and free to apply. The methodology runs on Breeze.AI for new and existing applications, and on ASIMOV for legacy modernization. Teams can adopt the methodology with Accion Labs, and an engagement can start with a two-day workshop.",
    "words": 173,

@@ -10,11 +10,11 @@ import { C, F } from '../theme';
 // spec per change; as the application grows complex, four limits appear; the graph sits alongside the specification and supplies the rest.
 const SPEC = STATIONS[0];
 
-export const scene10: SceneDef = {
-  n: 10,
+export const scene11: SceneDef = {
+  n: 11,
   id: 'when-specs-are-not-enough',
   View: () => (
-    <Frame act="Act 3" scene="Scene 10 · When are specifications not enough?">
+    <Frame act="Act 3" scene="Scene 11 · When are specifications not enough?">
       <Svg>
         <Base gate={false} />
         {[0, 1, 2].map((i) => <rect key={i} className={`pre task task-${i}`} x={STATIONS[1].x - 14} y={Y.flow + 50} width={28} height={14} rx={3} fill={C.text} />)}

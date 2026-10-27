@@ -12,11 +12,11 @@ const PATTERNS = ['support request', 'customization', 'workflow change', 'form c
 const LEVELS = ['Suggest', 'Assist', 'Execute under approval', 'Execute with audit', 'Execute autonomously'];
 const LAD = { x: 1240, y: LOWER.y + 128 };
 
-export const scene16: SceneDef = {
-  n: 16,
+export const scene17: SceneDef = {
+  n: 17,
   id: 'who-decides',
   View: () => (
-    <Frame act="Act 3" scene="Scene 16 · Who decides which work agents do?">
+    <Frame act="Act 3" scene="Scene 17 · Who decides which work agents do?">
       <Svg>
         <Base />
         <Owners className="pre owners" />

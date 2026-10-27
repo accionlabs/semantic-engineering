@@ -14,11 +14,11 @@ import { GraphSync, syncClear, syncMerge, syncUpdate } from '../parts/Sync';
 // parity with the code; legacy modernization is the exception, with a graph for the target.
 const CODE = { x: 150, y: LOWER.y + 10, w: 560, h: 120 };
 
-export const scene19: SceneDef = {
-  n: 19,
+export const scene20: SceneDef = {
+  n: 20,
   id: 'existing-systems-tech-debt',
   View: () => (
-    <Frame act="Act 3" scene="Scene 19 · What about existing systems and technical debt?">
+    <Frame act="Act 3" scene="Scene 20 · What about existing systems and technical debt?">
       <Svg>
         <Base />
         <g className="pre codebase">

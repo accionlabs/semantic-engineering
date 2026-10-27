@@ -26,11 +26,11 @@ const COMMIT = [
 ];
 const CO = { x: 1180, y: GAP_Y - 8, w: 540 };
 
-export const scene27: SceneDef = {
-  n: 27,
+export const scene29: SceneDef = {
+  n: 29,
   id: 'engagement-phases',
   View: () => (
-    <Frame act="Act 5" scene="Scene 27 · Engagement phases">
+    <Frame act="Act 5" scene="Scene 29 · Engagement phases">
       <Svg>
         <g className="land"><Base /></g>
         {PHASES.map((p, i) => (

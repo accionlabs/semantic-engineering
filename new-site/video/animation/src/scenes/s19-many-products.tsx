@@ -25,11 +25,11 @@ const MiniProduct: React.FC<{ i: number }> = ({ i }) => {
   );
 };
 
-export const scene18: SceneDef = {
-  n: 18,
+export const scene19: SceneDef = {
+  n: 19,
   id: 'many-products',
   View: () => (
-    <Frame act="Act 3" scene="Scene 18 · What happens across many products?">
+    <Frame act="Act 3" scene="Scene 19 · What happens across many products?">
       <Svg>
         <Base />
         <g className="pre teams">

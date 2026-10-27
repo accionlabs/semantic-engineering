@@ -13,11 +13,11 @@ const CO = { x: 1130, y: LOW_Y + 10, w: 640 };
 const EXTRACT = ['requirements document', 'test scenarios', 'end-to-end test scripts', 'code chatbot'];
 const LIB = { x: 1560, y: P.y1 - 40, w: 190, h: 30 };
 
-export const scene23: SceneDef = {
-  n: 23,
+export const scene25: SceneDef = {
+  n: 25,
   id: 'source-and-target-graphs',
   View: () => (
-    <Frame act="Act 4" scene="Scene 23 · Graphs of the old and new systems">
+    <Frame act="Act 4" scene="Scene 25 · Graphs of the old and new systems">
       <Svg>
         <Pipeline show={['frame']} />
         <g className="legacy">
