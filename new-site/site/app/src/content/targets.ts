@@ -145,6 +145,10 @@ export const TARGETS: Record<string, [string, string?]> = {
   'fig.asimov-15m-loc': ['15M+ lines modernized'], 'fig.up-to-4x': ['Up to four times faster, indicative'],
   'fig.up-to-70pct': ['Up to 70% less migration time, indicative'], 'fig.java-21-upgrade': ['Java 8 to Java 21'],
   'fig.delphi-net8': ['Delphi to .NET 8'],
+  // Scene 10, the Breeze.AI film: the platform, its interfaces, where it runs and what it connects to.
+  'breeze.citations': ['Functional items cite their source', 'breeze-ai/how-it-works.md#1-build-the-graph-from-the-code'], 'breeze.interfaces': ['Three ways to use Breeze.AI', 'breeze-ai/features.md#three-ways-to-use-it'],
+  'breeze.deployment': ['Where Breeze.AI runs', 'breeze-ai/deployment.md#where-it-runs'], 'breeze.stack': ['What Breeze.AI is built on', 'breeze-ai/deployment.md#components'],
+  'breeze.integrations': ['The tools Breeze.AI connects to', 'breeze-ai/specifications.md#integrations'], 'breeze.start': ['The System Model Pilot', 'breeze-ai/pricing.md#ways-to-start'],
   // Scene 23, the ASIMOV film: the legacy system, the platform, and how a program runs.
   'legacy.system': ['A legacy system', 'asimov/_index.md#who-it-is-for'], 'legacy.pressure': ['Why legacy systems are under pressure', 'asimov/_index.md#who-it-is-for'],
   'legacy.rules': ['Business rules buried in the code', 'asimov/_index.md#the-problem-it-solves'], 'legacy.translation': ['Translating the code copies its shape', 'asimov/_index.md#the-problem-it-solves'],

@@ -38,7 +38,7 @@ See the [SDLC Engagement Model](../sdlc/engagement-model.md) for the activities,
 
 - The size of the application, in lines of code and number of repositories.
 - The number of products and teams.
-- The deployment option: hosted by Accion Labs, in the client's cloud, or on premises.
+- The deployment option: hosted by Accion Labs, or in the client's environment.
 - How much of the ongoing work the client's own team takes on.
 
 ## Costs Outside the Engagement

@@ -12,7 +12,7 @@ audience:
   - procurement
 ---
 
-Breeze.AI is Accion Labs' platform for building and changing large applications with AI agents. It keeps a knowledge graph of the application, checks every change against that graph before any code is written, and checks it again before the change merges. People and agents work from the same graph, so changes to a large codebase cause fewer regressions.
+Breeze.AI is Accion Labs' platform for building and changing large applications with AI agents. It keeps a knowledge graph of the application, checks every change against that graph before any code is written, and checks each pull request against it again. People and agents work from the same graph, so changes to a large codebase cause fewer regressions.
 
 Breeze.AI is the platform behind [Agentic Software Engineering (SDLC)](../sdlc/_index.md), the part of Semantic Engineering for new and existing applications.
 
@@ -32,12 +32,12 @@ Breeze.AI records that knowledge once, in a knowledge graph with four layers: fu
 
 | Capability | What it gives the team |
 |---|---|
-| Graph extraction | A four-layer graph built from the existing code, database schemas, documents and user interface. About two to three weeks for an application of more than two million lines of code. |
+| Graph extraction | A four-layer graph built from the existing code, database schemas, documents and frontend. About two to three weeks for an application of more than two million lines of code. |
 | Impact analysis | Before any code is written, a report of everything the change affects across the four layers. |
-| Check before merge | Each pull request is checked against the graph and the impact report before it merges. |
-| Graph sync | The graph is updated with each change before it merges, so it always matches the main branch. |
-| Test generation | Acceptance tests generated from the functional layer. |
-| Three ways in | A web application for product owners, architects and designers; a Claude Code plugin for engineers; a command-line tool for CI pipelines. |
+| Pull request check | Each pull request is checked against the graph and the impact report, with the findings posted on the pull request. The check can be set to block a merge. |
+| Graph sync | The code layer is updated when each change merges, so the graph keeps matching the main branch. |
+| Specifications, code and tests | A functional specification document, and code with test cases, generated from the graphs. |
+| Three ways in | A web application for product owners, architects and designers; a Claude Code plugin for engineers; an API for other tools. |
 
 See [How It Works](how-it-works.md) and [Features](features.md).
 
@@ -54,7 +54,7 @@ Source: Breeze.AI Executive Leadership Report, Q3 2026 (figures as at 20 October
 
 ## Where It Runs
 
-Breeze.AI runs hosted by Accion Labs, in the client's own cloud account, or on the client's premises. The client chooses the AI models. See [Deployment and Architecture](deployment.md).
+Breeze.AI runs hosted by Accion Labs, or deployed in the client's own environment. See [Deployment and Architecture](deployment.md).
 
 ## How to Start
 

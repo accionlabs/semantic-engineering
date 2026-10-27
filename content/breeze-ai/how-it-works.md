@@ -1,7 +1,7 @@
 ---
 title: "How Breeze.AI Works"
 linkTitle: "How It Works"
-description: "The knowledge graph Breeze.AI keeps, the people who own it, and the checks every change goes through, from the specification to the merge."
+description: "The knowledge graph Breeze.AI keeps, the people who own it, and what happens to every change: impact analysis on the ticket, a check on the pull request, and the graph updated when the change merges."
 weight: 10
 date: 2026-10-27
 lastmod: 2026-10-27
@@ -12,44 +12,49 @@ Breeze.AI works in the same order on every application: it builds a graph from t
 
 ## 1. Build the Graph from the Code
 
-For an existing application, Breeze.AI extracts the graph from what already exists:
+For an existing application, Breeze.AI builds the graph from what already exists:
 
-- **Code:** parsers read the source code in ten languages, and AI models add a description of what each part does.
-- **Data:** database and search schemas become part of the graph: tables, columns, constraints and indexes.
-- **Design:** browser agents go through the running user interface and record its screens and components.
-- **Documents:** specifications, Confluence pages and other documents are read for the functional and architecture layers.
+- **Code:** a parser reads the source code with Tree-sitter, an open-source parser, and records files, classes, functions, routes and database queries, and the links between them. No AI model is involved in this step. An optional pass adds AI-written descriptions.
+- **Data:** database schemas become part of the architecture layer: tables, columns, constraints, indexes, views and procedures, and search indexes.
+- **Functional:** agents in Claude Code read the frontend and the backend and write the personas, outcomes, scenarios, steps and actions. They stop for a person to approve the personas, then the list of entry points, then a pilot on a few entry points, before the full run.
+- **Design:** agents read the frontend code together with the functional scenarios and record the screens and components.
+- **Documents:** specifications, Confluence pages, PDFs and images can be read into the functional and architecture layers.
 
 The graph has four layers:
 
 | Layer | What it records | Owner |
 |---|---|---|
-| Functional | Who uses the system and what they do with it: personas, outcomes, scenarios, steps and actions | Product Owner |
+| Functional | Who uses the system and what they do with it: personas, outcomes, scenarios, steps, actions and the APIs behind them | Product Owner |
 | Design | Screens and components, from the design system to each page | UX Designer |
-| Architecture | Services, APIs, events, data stores and infrastructure | Architect |
-| Code | The modules, classes and functions whose change would affect other parts of the system | Engineering Team |
+| Architecture | Eight layers of the running system, from the user interface to the infrastructure, with every data store | Architect |
+| Code | Files, classes, functions and the links between them | Engineering Team |
 
-The graph holds only the parts of the application whose change affects other parts. The details stay in the specifications and the code, and the graph points agents to them. Every item in the graph cites its source: a ticket, a document, a design frame or a code file.
+Each scenario, step and action in the functional layer cites where it came from: a ticket, a document, a screen or a code file.
 
 For an application of more than two million lines of code, extraction takes about two to three weeks.
 
 ## 2. The Owners Review It
 
-Each layer has a named owner who reviews what was extracted and keeps it accurate. The owners are the four roles above. A full deployment usually has three to five named people, including the person who looks after the graph's structure and one engineer per workstream who works alongside the client's team.
+Each layer has a named owner who reviews what was built and keeps it accurate. Product owners, architects and designers edit their layers in the web application. The code layer is read from the code, so it is viewed there and changed only through the code.
 
 ## 3. Check Each Change Before Code Is Written
 
-When a change is specified, usually in a ticket, the Impact Analysis Agent reads the graph and reports everything the change affects across the four layers. The report goes on the ticket. People read it when they own the decision; an agent reads the structured form, a list of the affected graph items, when it owns the work. Agents cannot ignore what the analysis finds.
+When a Jira ticket moves into the impact analysis status, or someone mentions Breeze.AI in a comment, the Impact Analysis Agent reads the graph and reports everything the change affects across the four layers. The report goes on the ticket and into a Confluence folder, usually within a few minutes. People read it when they own the decision; an agent reads the structured form, a list of the affected graph items, when it owns the work.
 
-## 4. Check Again Before It Merges
+The detailed report includes the affected items in each layer, diagrams, a traceability matrix, risks, a test plan and a rating of how far the change reaches.
 
-When the code is ready, the PR Validation Agent checks the pull request against the graph and the impact report. A pull request that fails a check is blocked until the problem is fixed. Acceptance tests generated from the functional layer run in the same pipeline.
+## 4. Check Each Pull Request
 
-## 5. Update the Graph Before It Merges
+When a pull request is opened, the PR Validator Agent checks it against the graph and the impact report and posts its findings on the pull request. The check can be set to block a merge.
 
-The KG Sync Agent updates the graph with what changed before the pull request merges. The graph always matches the main branch. New items found during impact analysis go into the specification first, and enter the graph when their code merges.
+## 5. Update the Graph When the Change Merges
+
+When the pull request merges, the KG Sync Agent updates the code layer from what changed, so the graph keeps matching the main branch. Updating the functional, design and architecture layers in the same way is in early support.
+
+> **To confirm with the Breeze.AI lead:** when the check can block merges for all clients, and when sync of the other three layers is generally available.
 
 ## Where People Decide
 
-People decide what is built, which work goes to agents, and what each agent may do on its own. Agents earn more autonomy over five levels as they show reliable results on a kind of work. Each agent has a named human owner.
+People decide what is built and which work goes to agents. Each agent has a named human owner.
 
 The method behind these steps is described in [Semantic Knowledge Graphs](../sdlc/methodology.md), [The Agents](../sdlc/agents.md) and [The Team](../sdlc/process/team.md).

@@ -9,6 +9,7 @@ import { scene06 } from './s06-four-layers';
 import { scene07 } from './s07-what-goes-in';
 import { scene08 } from './s08-keeping-accurate';
 import { scene09 } from './s09-two-kinds';
+import { scene10 } from './s10-breeze-ai';
 import { scene11 } from './s11-specs-enough';
 import { scene12 } from './s12-state-of-work';
 import { scene13 } from './s13-spec-sprint';
@@ -33,4 +34,4 @@ import { scene32 } from './s32-origins';
 import { scene31 } from './s31-agent-products';
 
 /** Every scene built so far, in script order. */
-export const DEFS: SceneDef[] = [scene00, scene01, scene02, scene03, scene04, scene05, scene06, scene07, scene08, scene09, scene11, scene12, scene13, scene14, scene15, scene16, scene17, scene18, scene19, scene20, scene21, scene22, scene23, scene24, scene25, scene26, scene27, scene28, scene29, scene30, scene32, scene31].sort((a, b) => a.n - b.n);
+export const DEFS: SceneDef[] = [scene00, scene01, scene02, scene03, scene04, scene05, scene06, scene07, scene08, scene09, scene10, scene11, scene12, scene13, scene14, scene15, scene16, scene17, scene18, scene19, scene20, scene21, scene22, scene23, scene24, scene25, scene26, scene27, scene28, scene29, scene30, scene32, scene31].sort((a, b) => a.n - b.n);

@@ -1,7 +1,7 @@
 ---
 title: "Breeze.AI Features"
 linkTitle: "Features"
-description: "The three ways to use Breeze.AI, the agents that work on the graph, the guardrails that keep the graph consistent, and the governance metrics."
+description: "The three ways to use Breeze.AI, the agents that work on the graph, the commands engineers use, and the rules that keep the graph consistent."
 weight: 20
 date: 2026-10-27
 lastmod: 2026-10-27
@@ -10,47 +10,55 @@ draft: true
 
 ## Three Ways to Use It
 
-The same graph sits behind all three. A product owner in the web application and an engineer in their editor see the same items, the same sources and the same check results.
+The same graph sits behind all three. A product owner in the web application and an engineer in their editor see the same items and the same sources.
 
 | Interface | Who uses it | What it provides |
 |---|---|---|
-| **Web application** | Product owners, architects, UX designers, compliance and audit reviewers | A visual graph editor, a chat for each of the four layers, document upload and project administration. Nothing to install. |
-| **Claude Code plugin** | Engineers, in their editor | Breeze.AI commands for common tasks, about forty-three tools that read and update the graph, and guardrails that check graph changes before they are sent. |
-| **Command-line tool** | CI pipelines and batch jobs | Access to the graph with an API key, where no one signs in through a browser. CI pipelines use it to update the graph on every pull request before it merges. |
+| **Web application** | Product owners, architects, UX designers, reviewers | An editor for each layer, import of functional items from CSV and of database schemas from SQL files, a graph view, a code explorer that groups the code into clusters, and project administration. Nothing to install. |
+| **Claude Code plugin** | Engineers, in their editor | Breeze.AI commands for common tasks, more than fifty tools that read and update the graph, and rules that check graph changes before they are sent. |
+| **API** | Other tools and scripts | Reading and updating the graph with an API key created in the web application. |
 
-The plugin's tools use the Model Context Protocol (MCP), an open standard for connecting AI assistants to tools. Cursor, Cline, Windsurf and other MCP clients can use the tools too; the commands and guardrails are specific to Claude Code.
+The plugin's tools use the Model Context Protocol (MCP), an open standard for connecting AI assistants to tools. Cursor, Cline, Windsurf and other MCP clients can use the tools too; the commands and rules are specific to Claude Code.
 
 ## The Agents
 
-| Agent | What it does |
-|---|---|
-| Impact Analysis | Reports everything a change affects across the four layers, before and after the code is written. Returns a report for people or a list of affected items for another agent. |
-| PR Validation | Checks each pull request against the graph in the CI pipeline before it merges. |
-| KG Sync | Watches GitHub, Bitbucket and Jira and updates the graph with what changed, before the pull request merges. |
-| BDD Generation | Writes acceptance tests in Gherkin, a plain-language test format, from the functional layer. |
-| Cross-Product Impact | Follows a change across the graphs of several products. |
-| Portfolio Rationalization | Finds duplicated and unused capabilities across products, once a quarter. |
+| Agent | When it runs | What it does |
+|---|---|---|
+| Impact Analysis | A Jira ticket moves into the impact analysis status, or someone mentions Breeze.AI in a comment | Reports everything the change affects across the four layers, on the ticket and in Confluence |
+| Scope Analysis | A ticket's scope changes in Jira | Keeps the ticket's scope in step with Breeze.AI |
+| PR Validator | A pull request is opened | Checks it against the graph and the impact report, and posts the findings on the pull request |
+| KG Sync | A pull request merges | Updates the code layer from what changed |
 
 Teams add their own agents for their own workflows. On one engagement the team ran 22 agents across delivery and support.
 
-## Guardrails
+## Commands for Engineers
 
-Rules for the functional layer are checked when an item is written, in the web application and in the plugin:
+The plugin has 19 commands. The main ones:
 
-- Only the five item types (persona, outcome, scenario, step, action) are allowed.
-- A persona is a role from the business, such as Customer or Administrator. Technical names such as Developer or API are blocked.
+| Command | What it does |
+|---|---|
+| Project setup | Links the workspace to a Breeze.AI project and signs in |
+| Onboard repository | Builds the code layer of a repository |
+| Generate functional | Builds the functional layer from the frontend or the backend |
+| Generate design | Builds the design layer from the frontend and the functional scenarios |
+| Analyze architecture | Checks a requirement against the architecture layer |
+| Impact analysis | Reports what a change affects, as a summary or a detailed document |
+| Search | Answers questions about the application from the four layers |
+| Generate spec | Writes a functional specification document from the functional layer |
+| Generate code | Generates code and test cases from the graphs |
+
+## Rules for the Functional Layer
+
+Rules are checked when an item is written, in the web application and in the plugin:
+
+- Only the six item types (persona, outcome, scenario, step, action, API) are allowed.
+- A persona is a role from the business, such as Customer or Administrator, or one of the standard System and External System personas. Technical names such as Developer are blocked.
 - An outcome is written in the user's words.
 - Every item has a parent, so no item stands alone.
-- Scenarios, steps and actions must have a description.
+- Scenarios, steps and actions must have a description and cite their source.
 
-## Governance
+## Graph Quality
 
-| Feature | What it gives the team |
-|---|---|
-| Metrics | 29 metrics per product, per graph and per agent, as data the client can add to its own reporting |
-| Verification checks | 14 checks on the graph that run automatically |
-| Autonomy levels | Five levels, with a written agreement each time an agent moves up a level |
-| Audit trail | A record of every agent action, sent to the client's monitoring tools |
-| Sources | Every graph item cites the ticket, document, design frame or file it came from |
+A metrics tool reports the quality and coverage of each graph, and agent activity through the tools is logged.
 
-> **To confirm with the Breeze.AI lead:** the current count of plugin tools and commands (the plugin is at version 0.6.0), and whether the web application has a separate dashboard for managers.
+> **To confirm with the Breeze.AI lead:** whether the BDD Generation, Cross-Product Impact and Portfolio Rationalization agents, the 29 governance metrics, the 14 verification checks and the five autonomy levels described in the method pages are available in the product today; and whether managers have a dashboard.

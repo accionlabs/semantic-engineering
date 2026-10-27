@@ -1,7 +1,7 @@
 ---
 title: "Breeze.AI Security and Data"
 linkTitle: "Security and Data"
-description: "Where a client's code and data go in each Breeze.AI deployment, how people and pipelines sign in, what is recorded, and what the client keeps when an engagement ends."
+description: "Where a client's code and data go when Breeze.AI builds and uses the graph, how people sign in, what is recorded, and what the client keeps when an engagement ends."
 weight: 60
 date: 2026-10-27
 lastmod: 2026-10-27
@@ -10,33 +10,35 @@ draft: true
 
 ## Where Code and Data Go
 
-| Deployment | Code and graph | Prompts to AI models |
+| Step | Where it runs | What leaves the client's repository |
 |---|---|---|
-| Hosted by Accion Labs | Accion Labs' managed infrastructure, in an environment dedicated to the client | Sent to the cloud provider the client chooses |
-| In the client's cloud | Stay in the client's cloud account | Sent to the cloud provider the client chooses, or to the client's own endpoint |
-| On the client's premises | Stay in the client's data center | Stay in the client's data center, with local models |
+| Building the code layer | The code parser runs on the engineer's machine | The parsed structure of the code is sent to the Breeze.AI backend |
+| Building the functional and design layers | Claude Code on the engineer's machine | The code the agents read goes to the AI model provider: Anthropic, or AWS Bedrock where the client requires it |
+| Impact analysis and search | The Breeze.AI backend | Graph items go to Claude models and embedding models through AWS Bedrock, or to the embedding provider chosen |
 
-The graph holds the structure of the application and points to the code. The code itself stays in the client's repositories.
+Hosted by Accion Labs, the graphs are stored in a shared environment that serves several clients. Deployed in the client's environment, they stay there.
 
-> **To confirm with the Breeze.AI lead:** which parts of the code are sent to AI models during extraction and analysis, and the data retention terms with each model provider.
+Configuration files are read only for the names of their settings, never the values, and only when a repository opts in.
+
+> **To confirm with the Breeze.AI lead:** how clients' data is kept apart in the hosted environment, and the data retention terms with each model provider.
 
 ## Signing In
 
-- People sign in through single sign-on, for the web application and for the plugin. No passwords or keys are pasted into the editor.
-- CI pipelines use an API key kept in the pipeline's secrets. The project file that holds a developer's key is left out of version control by default.
-- The plugin checks that a workspace is linked to the right project before any tool runs.
+- People sign in through single sign-on: Keycloak, connected to the client's Microsoft Entra ID, for the web application and the plugin.
+- Engineers sign in to the plugin in the browser. No password or key is pasted into the editor, and the sign-in lasts about a week.
+- Tools that use the API use a key created in the web application. The project file that holds it is left out of version control by default.
 
 > **To confirm with the Breeze.AI lead:** user roles and permissions inside a project, and whether access can be limited to some layers or products.
 
 ## What Is Recorded
 
-- Every graph item cites the ticket, document, design frame or code file it came from.
-- Every agent action is recorded and sent to the client's monitoring tools.
-- Every impact report and check result is kept on the ticket and the pull request.
+- Scenarios, steps and actions cite the ticket, document, screen or code file they came from.
+- Impact reports are kept on the ticket and in Confluence; pull request findings are kept on the pull request.
+- Changes to the graph and agent activity through the tools are logged.
 
 ## When the Engagement Ends
 
-In the client's cloud or on its premises, the platform and the graph stay where they run. In every deployment, Accion Labs commits that the graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles can be handed to the client's own staff.
+Deployed in the client's environment, the platform and the graph stay where they run. In every case, Accion Labs commits that the graph can be exported, the agents can be reproduced, the governance framework is documented, and the roles can be handed to the client's own staff.
 
 > **To confirm with the Breeze.AI lead:** the licence terms for continuing to use the platform after an engagement ends.
 

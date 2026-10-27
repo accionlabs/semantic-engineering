@@ -1,81 +1,82 @@
 ---
 title: "Breeze.AI Deployment and Architecture"
 linkTitle: "Deployment and Architecture"
-description: "How Breeze.AI is installed for a client: the three deployment options, the platform's components and tech stack, what it needs from the client, and the steps from setup to the first checked change."
+description: "How Breeze.AI is set up for a client: where it runs, its components and tech stack, what it needs from the client and from each engineer's machine, and the steps from setup to the first checked change."
 weight: 50
 date: 2026-10-27
 lastmod: 2026-10-27
 draft: true
 ---
 
-## Three Ways to Deploy
+## Where It Runs
 
-![Three Breeze.AI deployment modes: SaaS (Accion Labs-hosted), Client-hosted dedicated, On-premises (Gen AI in a Box), showing where the platform, the graph, and the inference live for each](/diagrams/breeze-deployment-modes.svg)
+| Option | What it means |
+|---|---|
+| **Hosted by Accion Labs** | The client uses the platform on Accion Labs' managed infrastructure, a shared environment that serves several clients |
+| **In the client's environment** | The platform is deployed for the client, with its own address and sign-in |
 
-| Option | Where the platform runs | Where the graph is stored | Where the AI models run |
-|---|---|---|---|
-| **Hosted by Accion Labs** | A dedicated environment for the client on Accion Labs' managed infrastructure | Accion Labs' managed graph storage | Cloud providers (OpenAI, Anthropic, AWS Bedrock) |
-| **In the client's cloud** | The client's own AWS, Azure or Google Cloud account | The client's cloud account | Cloud providers, or endpoints the client manages |
-| **On the client's premises** | The client's data center | The client's data center | Local models through GenAI in a Box |
+The client and Accion Labs choose the option at the start of the engagement. The choice depends on where the client's code and data may go, the client's compliance rules, and the tools it already runs.
 
-The client and Accion Labs choose the option at the start of the engagement. The choice depends on where the client's code and data may go, the client's compliance rules, the tools it already runs, and cost.
+> **To confirm with the Breeze.AI lead:** whether a deployment on the client's premises with local AI models can be offered, and on which clouds the client-environment option has run.
 
 ## Components
 
 | Component | What it does | Built on |
 |---|---|---|
-| Graph database | Stores the four-layer graph | Neo4j Community Edition by default; another graph database where the client has its own standard |
-| Platform service | Runs extraction, impact analysis, validation and graph sync; serves the API | |
-| Web application | The graph editor and chat for product owners, architects and designers | |
-| MCP server | Gives AI coding assistants about forty-three tools for reading and updating the graph | Model Context Protocol over HTTP |
-| Sign-in | Single sign-on for the web application and the MCP server | Keycloak |
-| Sync agents | Watch the client's repositories and ticket system and update the graph | Webhooks from GitHub, Bitbucket and Jira |
-| Code parsers | Read source code into the code layer | Tree-sitter |
-| Claude Code plugin | Installed on each engineer's machine; adds commands, tools and guardrails | Claude Code plugin marketplace |
-| Command-line tool | Used by CI pipelines to update and check the graph | API key held in the pipeline's secrets |
+| Web application | Editors for each layer, imports, the graph view and the code explorer | |
+| Backend API | Stores and serves the graphs; runs impact analysis and the agents | Behind an API gateway |
+| Graph store | Holds the four layers, with search indexes on the items | Neo4j |
+| Relational store | Holds ticket scope and the documents used for search | PostgreSQL with pgvector |
+| Agent workflows | Run the Impact Analysis, Scope Analysis, PR Validator and KG Sync agents on events from Jira and the repositories | n8n |
+| MCP server | Gives AI coding assistants more than fifty tools for reading and updating the graph | Python; Model Context Protocol over HTTP |
+| Sign-in | Single sign-on for the web application and the MCP server | Keycloak, connected to the client's Microsoft Entra ID |
+| AI models | Platform services and search | Claude models and embeddings through AWS Bedrock; OpenAI or Gemini embeddings where chosen |
+| Code parser | Reads source code into the code layer, on the engineer's machine | Python and Tree-sitter, run with uv |
+| Claude Code plugin | Commands, tools and rules on each engineer's machine | Claude Code plugin marketplace |
 
-> **To confirm with the Breeze.AI lead:** the platform service's language and framework, the web application's framework, how the platform is packaged (containers, Kubernetes, Helm charts or Terraform), and the minimum compute, memory and storage for a typical application.
+> **To confirm with the Breeze.AI lead:** the frameworks of the backend and the web application, how the platform is packaged and installed (containers, Kubernetes, Helm charts or Terraform), and the minimum compute, memory and storage for a client deployment.
 
 ## What Breeze.AI Needs from the Client
 
 | Dependency | Why it is needed | Required or optional |
 |---|---|---|
-| Read access to the source repositories | To extract the code layer and watch for changes | Required |
-| Webhooks from the version control system | To update the graph on each pull request | Required |
-| A pipeline step in CI/CD | To run the check before merge | Required |
-| Access to the ticket system | To attach impact reports and follow ticket states | Required |
-| AI model access | Keys for a cloud provider, or a client-managed or local model endpoint | Required |
-| Read access to database schemas | To add tables and columns to the graph | Recommended |
-| Documents and Confluence spaces | To build the functional and architecture layers | Recommended |
-| Access to the running application | For browser agents to record the design layer | Recommended |
-| Figma access, with the Figma MCP server | To build the design layer from the design files | Optional |
-| Claude Code for engineers | For the plugin's commands and guardrails; other MCP clients get the tools only | Recommended |
+| GitHub or Bitbucket, with a repository webhook to Breeze.AI | To check pull requests and update the graph when they merge | Required |
+| Jira, with administrator access for setup | Three custom fields, two workflow statuses, a webhook to Breeze.AI and an API token, set up once per organization | Required for impact analysis on tickets |
+| Confluence | A space and folder for impact reports | Required for impact analysis on tickets |
+| Microsoft Entra ID | Single sign-on through Keycloak | Required for sign-in with company accounts |
+| Read access to the source code | To build the code, functional and design layers | Required |
+| Database schemas as SQL files | To add the data stores to the architecture layer | Recommended |
+| Documents and Confluence pages | To add to the functional and architecture layers | Recommended |
+| Figma designs | To compare the built interface with the design | Optional |
 | Named owners for each layer | To review the graph and keep it accurate | Required |
 
-For the client's own cloud or premises, the client also provides the environment: a cloud account or servers, network access to the repositories and ticket system, and the single sign-on connection to its identity provider.
+## What Each Engineer's Machine Needs
 
-> **To confirm with the Breeze.AI lead:** which identity providers Keycloak is connected to in current deployments (for example Microsoft Entra ID or Okta), and the network ports and outbound addresses the platform needs.
+| Need | Detail |
+|---|---|
+| Claude Code | With Claude Opus and Claude Sonnet, or the same models through AWS Bedrock |
+| Python | Version 3.10 or later, with uv and git, for the code parser |
+| Windows | The parser runs under WSL |
 
 ## From Setup to the First Checked Change
 
 | Step | What happens | Typical time |
 |---|---|---|
-| 1. Choose the deployment | Where the platform, graph and models run | Part of the first workshop |
-| 2. Set up the environment | Install the platform, connect sign-in, connect the model endpoint | |
-| 3. Connect the tools | Repositories, CI pipeline, ticket system, documents | |
-| 4. Extract the graph | Code, schemas, documents and the running interface | About two to three weeks for two million lines of code |
-| 5. Owners review | Each owner checks their layer | |
-| 6. Switch on the checks | Impact analysis on tickets, the check before merge, graph sync | |
-| 7. Engineers install the plugin | Two commands in Claude Code, then a browser sign-in | Minutes per engineer |
+| 1. Choose where it runs | Hosted by Accion Labs, or in the client's environment | Part of the first workshop |
+| 2. Connect the tools | Repository webhooks; Jira fields, statuses and webhook; the Confluence folder; sign-in | Once per organization |
+| 3. Install the plugin | Add the marketplace, install and enable the plugin, restart Claude Code, then run project setup and sign in in the browser | Minutes per engineer |
+| 4. Build the graph | Code first, then the functional layer with approval at each stage, then design and architecture | A first graph of a small repository in about ten minutes; about two to three weeks for two million lines of code |
+| 5. Owners review | Each owner checks their layer; a new stack usually needs two or three rounds of checking and fixing | |
+| 6. Switch on the agents | Impact analysis on tickets, the pull request check and graph sync | |
 
-> **To confirm with the Breeze.AI lead:** typical times for steps 2, 3, 5 and 6, and whether steps 2 to 4 fit inside the two-to-three-week System Model Pilot.
+> **To confirm with the Breeze.AI lead:** typical times for steps 5 and 6, and whether steps 2 to 5 fit inside the two-to-three-week System Model Pilot.
 
 ## Running It
 
 | Topic | Current practice |
 |---|---|
-| Updates | The plugin updates through its marketplace; engineers reinstall to take a new version |
-| The graph's database licence | Neo4j Community Edition is free; enterprise support matters only when a graph grows large enough to need it. Accion Labs is a Neo4j partner. |
-| Monitoring | Agent actions go to the client's monitoring tools |
+| Plugin updates | Through the plugin marketplace; engineers reinstall to take a new version |
+| Parser updates | Fetched on first use and kept per version |
+| Sign-in | Engineers sign in again about once a week |
 
-> **To confirm with the Breeze.AI lead:** how platform updates are delivered in each deployment option, backup and recovery of the graph, availability targets, and who runs the platform day to day in the client's cloud.
+> **To confirm with the Breeze.AI lead:** how platform updates are delivered in each option, backup and recovery of the graph, availability targets, and who runs the platform day to day in the client's environment.
