@@ -322,7 +322,8 @@ const staging = async (request: Request, env: Env): Promise<Response> => {
  *  src/pages/ExplainPage.tsx). The rest of the site sends no framing policy. */
 const EMBEDDERS = ['https://saleskit.accionlabs.com', 'http://localhost:8088'];
 const framing = async (request: Request, res: Promise<Response>): Promise<Response> => {
-  if (!new URL(request.url).searchParams.has('embed')) return res;
+  const url = new URL(request.url);
+  if (!url.searchParams.has('embed') && url.pathname.replace(/\/$/, '') !== '/embed') return res;
   const out = new Response((await res).body, await res);
   out.headers.set('content-security-policy', `frame-ancestors 'self' ${EMBEDDERS.join(' ')}`);
   return out;
@@ -348,8 +349,9 @@ async function site(request: Request, env: Env): Promise<Response> {
   }
   if (url.pathname.startsWith('/media/')) return media(request, env, url);
   if (wantsMarkdown(request) && AGENT_PAGES.some((p) => url.pathname === p || url.pathname === `${p}/`)) return env.ASSETS.fetch(new Request(new URL('/explanation-language.md', url)));
-  // Saved explanations live in the visitor's browser; every /explain/<id> address is the same page.
-  if (url.pathname.startsWith('/explain/') && url.pathname !== '/explain/') {
+  // Saved explanations live in the visitor's browser; every /explain/<id> address is the same page, and so is
+  // the embed view's /embed#z.<packed>.
+  if ((url.pathname.startsWith('/explain/') && url.pathname !== '/explain/') || url.pathname.replace(/\/$/, '') === '/embed') {
     const res = await env.ASSETS.fetch(new Request(new URL('/explain/saved/', url)));
     const headers = new Headers(res.headers); headers.set('x-robots-tag', 'noindex');
     return new Response(res.body, { status: res.status, headers });

@@ -28,6 +28,7 @@ export const App: React.FC = () => (
       <Route path="/explain/import" element={later(<ExplainImport />)} />
       <Route path="/explain/:id" element={later(<ExplainPage />)} />
       <Route path="/e/:id" element={later(<ExplainStored />)} />
+      <Route path="/embed" element={later(<ExplainImport />)} />
       <Route path="/connect" element={later(<ConnectPage />)} />
       <Route path="/privacy" element={later(<PrivacyPage />)} />
       <Route path="/insights" element={later(<InsightsPage />)} />

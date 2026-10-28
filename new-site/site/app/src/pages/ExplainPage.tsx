@@ -107,13 +107,16 @@ const sectionOfLine = (plan: Plan, line: number) => {
   return k;
 };
 
-/** ?embed=1: the player alone, for a page that frames it, such as the sales kit. */
-const isEmbed = () => typeof location !== 'undefined' && new URLSearchParams(location.search).has('embed');
+/** The embed view, for a page that frames the player (the sales kit): /embed#z.<packed>, or ?embed=1 on
+ *  /e/<id> and /explain/import. The same addresses and events as dialect-engineering.ai's embed view. */
+const isEmbed = () => typeof location !== 'undefined' && (location.pathname.replace(/\/$/, '') === '/embed' || new URLSearchParams(location.search).has('embed'));
 /** Pages allowed to frame the embed view (worker.ts sends the same list as frame-ancestors); they hear its events. */
 const EMBEDDERS = ['https://saleskit.accionlabs.com', 'http://localhost:8088'];
-const tell = (event: 'started' | 'ended' | 'deep_dive', detail: Record<string, unknown>) => {
-  if (window.parent === window) return;
-  EMBEDDERS.forEach((origin) => { try { window.parent.postMessage({ source: 'se-reel', event, ...detail }, origin); } catch { /* not that parent */ } });
+type EmbedEvent = 'ready' | 'play' | 'part_end' | 'deep_dive' | 'error';
+const tell = (type: EmbedEvent, detail: Record<string, unknown>) => {
+  if (typeof window === 'undefined' || window.parent === window) return;
+  const msg = { source: 'explanation-embed', site: 'semantic-engineering.ai', type, ...detail };
+  EMBEDDERS.forEach((origin) => { try { window.parent.postMessage(msg, origin); } catch { /* not that parent */ } });
 };
 
 /** Plays a saved explanation; given `code`, plays that text without the browser's store (the embed view). */
@@ -134,6 +137,12 @@ export const ExplainPage: React.FC<{ localId?: string; code?: string; shareId?: 
   const [reading, setReading] = useState<Loc | null>(null);
   useEffect(() => { if (saved && !code) reels.played(saved.id); }, [id]); // eslint-disable-line
   const full = result?.plan;
+  // The embed view says what it holds once it has checked it, or why it cannot play.
+  useEffect(() => {
+    if (!embed || !saved) return;
+    if (full) tell('ready', { id: shareId, question: full.question, context: full.context ?? null, seconds: Math.round(full.seconds), deepDives: full.branches.map((b) => b.label) });
+    else tell('error', { id: shareId, problem: 'This explanation does not check.' });
+  }, [full]); // eslint-disable-line
   const section = useMemo<Plan | undefined>(() => {
     if (!full) return undefined;
     const b = full.branches[active];
@@ -152,7 +161,9 @@ export const ExplainPage: React.FC<{ localId?: string; code?: string; shareId?: 
   const choose = (k: number) => {
     setReading(null); setActive(k); setIndex(-1);
     if (k >= 0) { setWatched((w) => new Set(w).add(k)); track('deep_dive_choose', { label: full.branches[k].label, context: full.context ?? '' }); }
-    if (embed && k >= 0) tell('deep_dive', { id: shareId ?? null, label: full.branches[k].label });
+    if (embed && k >= 0) tell('deep_dive', { id: shareId, label: full.branches[k].label, index: k });
+    // A chosen part says it is playing itself: the player's index may not change when a part is chosen at its start.
+    if (embed) tell('play', { id: shareId, part: k >= 0 ? `deep dive: ${full.branches[k].label}` : 'short explanation' });
   };
   // Anonymous viewing events: a part starting, and a part played to its end.
   const onIndex = (i: number) => {
@@ -160,8 +171,8 @@ export const ExplainPage: React.FC<{ localId?: string; code?: string; shareId?: 
     const part = active < 0 ? 'short explanation' : `deep dive: ${full.branches[active]?.label ?? ''}`;
     if (i === 0) track('explanation_play', { part, context: full.context ?? '', source: saved.source });
     if (i === section.segments.length) track(active < 0 ? 'explanation_complete' : 'explanation_part_complete', { part, context: full.context ?? '' });
-    if (embed && i === 0) tell('started', { id: shareId ?? null, part });
-    if (embed && i === section.segments.length) tell('ended', { id: shareId ?? null, part, deepDivesLeft: full.branches.filter((_, k) => k !== active && !watched.has(k)).length });
+    if (embed && i === 0) tell('play', { id: shareId, part });
+    if (embed && i === section.segments.length) tell('part_end', { id: shareId, part });
   };
   const dives = full.branches.map((b, k) => ({ b, k })).filter(({ k }) => k !== active);
   const end = (
@@ -222,7 +233,7 @@ export const ExplainImport: React.FC = () => {
   const [embedded, setEmbedded] = useState<string | null>(null);
   useEffect(() => {
     unpackExplanation(location.hash.slice(1)).then((code) => {
-      if (!code) { setBroken(true); return; }
+      if (!code) { setBroken(true); if (isEmbed()) tell('error', { problem: 'The link is incomplete.' }); return; }
       if (isEmbed()) { setEmbedded(code); return; }
       const r = checkExplain(code, { lenient: true });
       const saved = reels.save(code, { question: r.plan?.question ?? code.match(/"([^"]*)"/)?.[1] ?? 'Explanation', audience: r.plan?.audience }, 'import');
@@ -247,7 +258,7 @@ export const ExplainStored: React.FC = () => {
       if (isEmbed()) { setEmbedded(code); return; }
       const r = checkExplain(code, { lenient: true });
       setLocal(reels.save(code, { question: r.plan?.question ?? code.match(/"([^"]*)"/)?.[1] ?? 'Explanation', audience: r.plan?.audience }, 'import').id);
-    }).catch(() => setMissing(true));
+    }).catch(() => { setMissing(true); if (isEmbed()) tell('error', { id, problem: 'No explanation with this address, or it has expired.' }); });
   }, [id]); // eslint-disable-line
   if (embedded) return <ExplainPage code={embedded} shareId={id} />;
   if (local) return <ExplainPage localId={local} />;

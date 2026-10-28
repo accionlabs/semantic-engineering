@@ -18,7 +18,7 @@ const ld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replac
 const ogImage = `${SITE_URL}/og-image.png`;
 const publisher = { '@type': 'Organization', name: 'Accion Labs', url: 'https://www.accionlabs.com', logo: { '@type': 'ImageObject', url: ogImage } };
 // Google Analytics runs on the live address only, so test deployments and local previews are not counted.
-const analytics = `<script>if(location.hostname==='semantic-engineering.ai'){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=${GA}';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${GA}')}</script>`;
+const analytics = `<script>if(location.hostname==='semantic-engineering.ai'&&location.pathname.replace(/\\/$/,'')!=='/embed'&&!/[?&]embed(=|&|$)/.test(location.search)){var g=document.createElement('script');g.async=true;g.src='https://www.googletagmanager.com/gtag/js?id=${GA}';document.head.appendChild(g);window.dataLayer=window.dataLayer||[];window.gtag=function(){dataLayer.push(arguments)};gtag('js',new Date());gtag('config','${GA}')}</script>`;
 
 const head = (p) => {
   const url = SITE_URL + p.url;

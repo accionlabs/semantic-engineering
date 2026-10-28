@@ -54,7 +54,7 @@ declare global { interface Window { gtag?: (...a: unknown[]) => void } }
 export const Layout: React.FC = () => {
   const { pathname, hash, search } = useLocation();
   // ?embed=1 on an explanation: the player alone, for a page that frames it (no header, menu or footer).
-  const embed = new URLSearchParams(search).has('embed') && (pathname.startsWith('/e/') || pathname.startsWith('/explain/'));
+  const embed = pathname.replace(/\/$/, '') === '/embed' || (new URLSearchParams(search).has('embed') && (pathname.startsWith('/e/') || pathname.startsWith('/explain/')));
   const current = pathname === '/' ? 'video-home' : pageByUrl(pathname)?.key ?? ['/graph', '/explain', '/connect'].find((p) => pathname === p || pathname.startsWith(`${p}/`)) ?? '';
   // WebMCP: where the browser supports it, the page offers the connector's tools to an agent running in it.
   const navigate = useNavigate();
