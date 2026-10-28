@@ -5,7 +5,7 @@ description: "Where a client's code and data go when Breeze.AI builds and uses t
 weight: 60
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## Where Code and Data Go

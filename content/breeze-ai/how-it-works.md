@@ -5,7 +5,7 @@ description: "The knowledge graph Breeze.AI keeps, the people who own it, and wh
 weight: 10
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 Breeze.AI works in the same order on every application: it builds a graph from the code, the owners review it, and then every change is checked against it.

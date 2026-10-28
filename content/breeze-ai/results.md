@@ -5,7 +5,7 @@ description: "Measured outcomes from client engagements that use Breeze.AI, with
 weight: 80
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## Delivery on a Multi-Product Engagement

@@ -4,7 +4,7 @@ description: "ASIMOV is Accion Labs' platform for modernizing legacy software wi
 weight: 45
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 audience:
   - cto
   - cio

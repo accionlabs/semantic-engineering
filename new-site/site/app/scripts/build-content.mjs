@@ -128,6 +128,8 @@ const toBlocks = (body, page) => {
   const tokens = md.lexer(body);
   for (const t of tokens) {
     if (t.type === 'space' || t.type === 'hr' || t.type === 'def') continue;
+    // "> **To confirm with …**" notes on draft pages are open questions for the team: shown on staging, left out of the live site.
+    if (!DRAFTS && t.type === 'blockquote' && /^\*\*To confirm\b/.test(t.text.trim())) { blocks.push({ k: 'dropped' }); continue; }
     if (t.type === 'heading') {
       const html = md.parser([t]);
       const h = current.lastHeading;
@@ -148,7 +150,9 @@ const toBlocks = (body, page) => {
     if (k === 'diagram') { block.diagram = current.diagram; block.text = t.tokens[0].text; } else block.text = plain(html);
     blocks.push(block);
   }
-  return blocks;
+  // A section whose only content was a "To confirm" note loses its heading too.
+  const onlyNotes = (i) => { let j = i + 1, any = false; while (j < blocks.length && !(blocks[j].k === 'h' && blocks[j].level <= blocks[i].level)) { if (blocks[j].k !== 'dropped') return false; any = true; j++; } return any; };
+  return blocks.filter((b, i) => b.k !== 'dropped' && !(b.k === 'h' && onlyNotes(i)));
 };
 
 // ---------- pages ----------

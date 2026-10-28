@@ -5,7 +5,7 @@ description: "Where Breeze.AI is used: existing applications, new applications t
 weight: 30
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## An Existing Application

@@ -5,7 +5,7 @@ description: "The three ways to use Breeze.AI, the agents that work on the graph
 weight: 20
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## Three Ways to Use It

@@ -5,7 +5,7 @@ description: "Where a client's legacy code and data go during an ASIMOV program,
 weight: 50
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## Where Code and Data Go

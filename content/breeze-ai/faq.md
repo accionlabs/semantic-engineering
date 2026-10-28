@@ -5,7 +5,7 @@ description: "Questions buyers ask about Breeze.AI: languages, tools, deployment
 weight: 90
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 faqs:
   - question: "Does Breeze.AI replace the AI coding tools we already use?"
     answer: "No. Engineers keep the assistant they use. Claude Code gets all of Breeze.AI's commands; Cursor, Cline, Windsurf and other assistants that support MCP get the graph's tools. Each pull request is then checked against the graph."

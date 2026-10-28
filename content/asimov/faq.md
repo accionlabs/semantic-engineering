@@ -5,7 +5,7 @@ description: "Questions buyers ask about ASIMOV: stacks, how parity is shown, wh
 weight: 90
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 faqs:
   - question: "Which legacy stacks can ASIMOV modernize?"
     answer: "Delivered programs include COBOL on AS/400, Delphi, VB.NET, ASP.NET Web Forms, ASP.NET MVC, Struts and Hibernate, and Java 8. The stages and gates are the same for every stack; new stacks need a language adapter for the migration agents."

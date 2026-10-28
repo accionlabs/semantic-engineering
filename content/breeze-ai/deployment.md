@@ -5,7 +5,7 @@ description: "How Breeze.AI is set up for a client: where it runs, its component
 weight: 50
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## Where It Runs

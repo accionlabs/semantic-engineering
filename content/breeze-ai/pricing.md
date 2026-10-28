@@ -5,7 +5,7 @@ description: "How a Breeze.AI engagement is priced, phase by phase: a fixed-pric
 weight: 70
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 audience:
   - cfo
   - procurement

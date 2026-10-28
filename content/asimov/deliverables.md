@@ -5,7 +5,7 @@ description: "What a client receives from an ASIMOV program: knowledge of the le
 weight: 30
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## What the Client Receives

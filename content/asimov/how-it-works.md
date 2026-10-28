@@ -5,7 +5,7 @@ description: "ASIMOV's five stages, from reading the legacy code to maintaining 
 weight: 10
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ![ASIMOV architecture: Five pillars across the legacy modernization lifecycle. AGIE produces Source Graph and Target Graph (Discover). ASF is the human-readable specification format that the Product Owner and Architect annotate, with input from the other custodians (Document). AMM is the agentic migration machine (Migrate). AVF is the validation framework with four named gates feeding back into AMM (Validate). Maintain covers ongoing operation of the modernized system (Maintain).](/diagrams/asimov-architecture.svg)

@@ -5,7 +5,7 @@ description: "The legacy stacks ASIMOV has moved, the targets it has moved them 
 weight: 20
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## Kinds of Modernization

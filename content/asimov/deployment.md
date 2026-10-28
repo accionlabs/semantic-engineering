@@ -5,7 +5,7 @@ description: "How ASIMOV is installed for a modernization program: where it runs
 weight: 40
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 ---
 
 ## Where It Runs

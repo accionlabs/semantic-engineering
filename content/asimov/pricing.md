@@ -5,7 +5,7 @@ description: "The five ways to engage ASIMOV, from Documentation Only to Maintai
 weight: 60
 date: 2026-10-27
 lastmod: 2026-10-27
-draft: true
+draft: false
 audience:
   - cfo
   - procurement
