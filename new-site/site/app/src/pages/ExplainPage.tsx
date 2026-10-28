@@ -140,7 +140,7 @@ export const ExplainPage: React.FC<{ localId?: string; code?: string; shareId?: 
   // The embed view says what it holds once it has checked it, or why it cannot play.
   useEffect(() => {
     if (!embed || !saved) return;
-    if (full) tell('ready', { id: shareId, question: full.question, context: full.context ?? null, seconds: Math.round(full.seconds), deepDives: full.branches.map((b) => b.label) });
+    if (full) tell('ready', { id: shareId, question: full.question, context: full.context ?? null, seconds: Math.round(full.seconds), deepDives: full.branches.map((b) => ({ label: b.label, seconds: Math.round(b.seconds) })) });
     else tell('error', { id: shareId, problem: 'This explanation does not check.' });
   }, [full]); // eslint-disable-line
   const section = useMemo<Plan | undefined>(() => {
