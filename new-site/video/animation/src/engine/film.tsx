@@ -16,7 +16,6 @@ const titleItem = (): Item => ({
     <Frame act="" scene="">
       <div className="t" style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
         <div style={{ fontFamily: F.display, fontWeight: 700, fontSize: 92, letterSpacing: -1 }}>Semantic Engineering</div>
-        <div style={{ fontFamily: F.mono, fontSize: 22, color: C.warn, marginTop: 30, letterSpacing: 2 }}>REVIEW CUT · TEXT IN PLACE OF VOICE · NO AUDIO</div>
       </div>
     </Frame>
   ),
