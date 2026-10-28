@@ -295,3 +295,13 @@ body:has(.embed-main) { background: var(--bg); }
 .embed-reel .reel-sections { margin: 0; align-self: stretch; }
 .embed-reel .player { margin: 0; width: min(100%, calc((100vh - 140px) * 16 / 9)); }
 .embed-reel:fullscreen { padding: 16px; justify-content: center; }
+
+/* The film's embed view (?embed=1 on /watch, /watch/overview, /watch/act-<n>, /watch/scene-<n>). html.embed-view is set
+   before the app starts (index.html), so the prerendered header, footer and page parts never show in the frame. */
+html.embed-view .skip, html.embed-view .header, html.embed-view .footer, html.embed-view .sidebar, html.embed-view .scrim,
+html.embed-view .watch-page > :not(.watch), html.embed-view .home-watch > :not(.watch), html.embed-view .companion { display: none !important; }
+html.embed-view body { background: var(--bg); }
+html.embed-view .main { padding: 0; }
+.film-embed { display: block; margin: 0; padding: 8px; }
+.film-embed .player { width: min(100%, calc((100vh - 110px) * 16 / 9)); margin: 0 auto; }
+.film-embed:fullscreen { padding: 16px; background: var(--bg); }

@@ -6,6 +6,14 @@ import { LiveVideo } from '../player/LiveVideo';
 import { Paths, type Tab } from '../parts/Paths';
 import { Transcript } from '../parts/Transcript';
 import { roleBySlug, sceneTitle, situationBySlug, type Path } from '../content/paths';
+import { isEmbed } from '../reel/embed';
+
+/** The film's embed view: what is playing, named for the framing page's events, and the parts it can play. */
+const filmEmbed = (overview = false) => ({
+  part: (scene: number | undefined, card: number | undefined) => overview ? 'The overview'
+    : card ? `${actLabel(card)}: ${ACT_NAMES[String(card)]}` : scene ? `Scene ${scene}: ${sceneInfo(scene)?.title ?? ''}` : 'The film',
+  acts: Object.keys(ACT_NAMES).map(Number).filter((a) => a > 0).map((a) => `${actLabel(a)}: ${ACT_NAMES[String(a)]}`),
+});
 
 /**
  * Every way through the video has its own address:
@@ -94,6 +102,8 @@ const FilmWatch: React.FC<{ slug: string }> = ({ slug }) => {
   const nowScene = kind === 'scene' ? pos.scene ?? n : undefined, nowAct = kind === 'act' ? pos.act ?? n : undefined;
   const title = kind === 'overview' ? 'The overview' : kind === 'full' ? 'The full video' : nowAct !== undefined ? `${actLabel(nowAct)}: ${ACT_NAMES[String(nowAct)]}` : `Scene ${nowScene}: ${sceneInfo(nowScene!)?.title}`;
   useEffect(() => { document.title = `${title} · Semantic Engineering`; }, [title]);
+  const embed = isEmbed();
+  if (kind === 'overview' && embed) return <LiveVideo tldr fallbackScenes={[0]} embed={filmEmbed(true)} />;
   if (kind === 'overview') {
     return (
       <div className="wrap wide watch-page">
@@ -116,6 +126,7 @@ const FilmWatch: React.FC<{ slug: string }> = ({ slug }) => {
     if (a && a !== act) { setPos({ act: a }); if (kind === 'act') follow(actPath(a)); }
   };
   const fallbackScenes = kind === 'scene' ? [n] : kind === 'act' ? scenesOf(n).map((s) => s.n) : undefined;
+  if (embed) return <LiveVideo key={slug} start={{ act: kind === 'act' ? n : undefined, scene: kind === 'scene' ? n : undefined }} stopMode={stopMode} onPosition={onPosition} fallbackScenes={fallbackScenes} embed={filmEmbed()} />;
   return (
     <div className="wrap wide watch-page">
       <p className="crumbs"><Link to="/">Home</Link> / <Link to="/watch">Follow the story</Link> / {title}</p>

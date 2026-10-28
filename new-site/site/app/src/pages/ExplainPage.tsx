@@ -9,6 +9,7 @@ import { placeOf, sceneByN } from '../reel/vocab';
 import { EXPLAIN_EXAMPLES } from '../reel/explain-examples';
 import { Reader } from '../player/Reader';
 import { useFullscreen } from '../player/fullscreen';
+import { isEmbed, postEmbed } from '../reel/embed';
 import { PAGES } from '../content/data';
 import type { Loc } from '../content/film';
 import { MCP_URL } from '../reel/prompt';
@@ -107,17 +108,7 @@ const sectionOfLine = (plan: Plan, line: number) => {
   return k;
 };
 
-/** The embed view, for a page that frames the player (the sales kit): /embed#z.<packed>, or ?embed=1 on
- *  /e/<id> and /explain/import. The same addresses and events as dialect-engineering.ai's embed view. */
-const isEmbed = () => typeof location !== 'undefined' && (location.pathname.replace(/\/$/, '') === '/embed' || new URLSearchParams(location.search).has('embed'));
-/** Pages allowed to frame the embed view (worker.ts sends the same list as frame-ancestors); they hear its events. */
-const EMBEDDERS = ['https://saleskit.accionlabs.com', 'http://localhost:8088'];
-type EmbedEvent = 'ready' | 'play' | 'part_end' | 'deep_dive' | 'error';
-const tell = (type: EmbedEvent, detail: Record<string, unknown>) => {
-  if (typeof window === 'undefined' || window.parent === window) return;
-  const msg = { source: 'explanation-embed', site: 'semantic-engineering.ai', type, ...detail };
-  EMBEDDERS.forEach((origin) => { try { window.parent.postMessage(msg, origin); } catch { /* not that parent */ } });
-};
+const tell = postEmbed;
 
 /** Plays a saved explanation; given `code`, plays that text without the browser's store (the embed view). */
 export const ExplainPage: React.FC<{ localId?: string; code?: string; shareId?: string }> = ({ localId, code, shareId }) => {
