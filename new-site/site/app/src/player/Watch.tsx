@@ -11,7 +11,7 @@ export type WatchProps = {
   start?: { act?: number; scene?: number }; stopMode?: 'act' | 'scene'; endOverlay?: React.ReactNode;
   path?: React.ComponentProps<typeof Player>['path'];
   /** The embed view: the player alone; `part` names what plays, for the framing page's events. */
-  embed?: { part: (scene: number | undefined, card: number | undefined) => string; acts: string[] };
+  embed?: { part: (scene: number | undefined, card: number | undefined) => string; acts: { act: number; title: string }[] };
 };
 
 /** The live player with the pages it draws on beside it, and the reader over both. */

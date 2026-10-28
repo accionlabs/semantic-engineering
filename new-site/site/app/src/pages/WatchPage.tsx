@@ -10,9 +10,9 @@ import { isEmbed } from '../reel/embed';
 
 /** The film's embed view: what is playing, named for the framing page's events, and the parts it can play. */
 const filmEmbed = (overview = false) => ({
-  part: (scene: number | undefined, card: number | undefined) => overview ? 'The overview'
-    : card ? `${actLabel(card)}: ${ACT_NAMES[String(card)]}` : scene ? `Scene ${scene}: ${sceneInfo(scene)?.title ?? ''}` : 'The film',
-  acts: Object.keys(ACT_NAMES).map(Number).filter((a) => a > 0).map((a) => `${actLabel(a)}: ${ACT_NAMES[String(a)]}`),
+  part: (scene: number | undefined, card: number | undefined) => overview ? 'the overview'
+    : card ? `${actLabel(card).toLowerCase()}: ${ACT_NAMES[String(card)]}` : scene ? `scene ${scene}: ${sceneInfo(scene)?.title ?? ''}` : 'the film',
+  acts: Object.keys(ACT_NAMES).map(Number).filter((a) => a > 0).map((a) => ({ act: a, title: ACT_NAMES[String(a)] })),
 });
 
 /**
