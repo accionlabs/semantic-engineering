@@ -286,3 +286,12 @@
 .builder-above { display: flex; gap: 10px; align-items: flex-start; padding: 8px 10px; border: 1px solid var(--hairline); border-radius: 10px; cursor: pointer; }
 .builder-above.on { border-color: var(--accent); background: var(--raised); }
 .builder-above input { margin-top: 4px; }
+
+/* The embed view (?embed=1 on an explanation): the parts of the explanation and the player fill the frame.
+   The player keeps its shape and fits the frame's height under the parts and the controls. */
+.embed-main { margin: 0; padding: 8px; background: var(--bg); min-height: 100vh; box-sizing: border-box; }
+body:has(.embed-main) { background: var(--bg); }
+.embed-reel { display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--bg); }
+.embed-reel .reel-sections { margin: 0; align-self: stretch; }
+.embed-reel .player { margin: 0; width: min(100%, calc((100vh - 140px) * 16 / 9)); }
+.embed-reel:fullscreen { padding: 16px; justify-content: center; }

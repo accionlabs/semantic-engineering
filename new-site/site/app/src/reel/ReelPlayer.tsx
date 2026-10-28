@@ -77,7 +77,7 @@ const QuoteCard: React.FC<{ seg: Segment & { kind: 'quote' } }> = ({ seg }) => {
 
 /** Plays one section of an explanation. Given a new section (a deep dive the person chose), it stops, and
  *  starts the new one at once when autoPlay is set, without loading the film again. */
-export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<ReelApi | null>; onIndex?: (i: number, playing: boolean) => void; endOverlay?: React.ReactNode; autoPlay?: boolean }> = ({ plan, api, onIndex, endOverlay, autoPlay }) => {
+export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<ReelApi | null>; onIndex?: (i: number, playing: boolean) => void; endOverlay?: React.ReactNode; autoPlay?: boolean; fullscreen?: { on: boolean; toggle: () => void } }> = ({ plan, api, onIndex, endOverlay, autoPlay, fullscreen }) => {
   const [film, setFilm] = useState<Film | null>(null);
   const [ready, setReady] = useState(false);
   const [scale, setScale] = useState(0.5);
@@ -264,6 +264,7 @@ export const ReelPlayer: React.FC<{ plan: Plan; api?: React.MutableRefObject<Ree
         </div>
         <span className="time">{mmss(Math.min(total, elapsed))} / {mmss(total)}</span>
         <button className={`ctl ${sound ? 'on' : ''}`} aria-pressed={sound} onClick={() => setSound(!sound)}>{sound ? 'Sound' : 'Muted'}</button>
+        {fullscreen && <button className={`ctl ${fullscreen.on ? 'on' : ''}`} aria-pressed={fullscreen.on} onClick={fullscreen.toggle}>{fullscreen.on ? 'Exit full screen' : 'Full screen'}</button>}
         {voiceList.length > 1 && (
           <select className="ctl" aria-label="Guide's voice" defaultValue={pickVoice()?.name} onChange={(e) => chooseVoice(e.target.value)}>
             {voiceList.map((v) => <option key={v.name} value={v.name}>{v.name.replace(/\s*\(.*\)$/, '')}</option>)}

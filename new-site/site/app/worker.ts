@@ -318,8 +318,18 @@ const staging = async (request: Request, env: Env): Promise<Response> => {
   return out;
 };
 
+/** The embed view of an explanation (?embed=1) may be framed only by these pages (the same list as EMBEDDERS in
+ *  src/pages/ExplainPage.tsx). The rest of the site sends no framing policy. */
+const EMBEDDERS = ['https://saleskit.accionlabs.com', 'http://localhost:8088'];
+const framing = async (request: Request, res: Promise<Response>): Promise<Response> => {
+  if (!new URL(request.url).searchParams.has('embed')) return res;
+  const out = new Response((await res).body, await res);
+  out.headers.set('content-security-policy', `frame-ancestors 'self' ${EMBEDDERS.join(' ')}`);
+  return out;
+};
+
 export default {
-  fetch: (request: Request, env: Env): Promise<Response> => (env.STAGING ? staging(request, env) : site(request, env)),
+  fetch: (request: Request, env: Env): Promise<Response> => framing(request, env.STAGING ? staging(request, env) : site(request, env)),
 };
 
 async function site(request: Request, env: Env): Promise<Response> {

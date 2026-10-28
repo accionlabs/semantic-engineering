@@ -52,7 +52,9 @@ export const Sidebar: React.FC<{ current: string; onGo: () => void }> = ({ curre
 declare global { interface Window { gtag?: (...a: unknown[]) => void } }
 
 export const Layout: React.FC = () => {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, search } = useLocation();
+  // ?embed=1 on an explanation: the player alone, for a page that frames it (no header, menu or footer).
+  const embed = new URLSearchParams(search).has('embed') && (pathname.startsWith('/e/') || pathname.startsWith('/explain/'));
   const current = pathname === '/' ? 'video-home' : pageByUrl(pathname)?.key ?? ['/graph', '/explain', '/connect'].find((p) => pathname === p || pathname.startsWith(`${p}/`)) ?? '';
   // WebMCP: where the browser supports it, the page offers the connector's tools to an agent running in it.
   const navigate = useNavigate();
@@ -86,6 +88,7 @@ export const Layout: React.FC = () => {
   }, [pathname]); // eslint-disable-line
   // A new page starts at the top; PageView scrolls to an anchor once the page's content has loaded.
   useEffect(() => { if (!hash) window.scrollTo(0, 0); }, [pathname]); // eslint-disable-line
+  if (embed) return <main id="main" className="embed-main"><Outlet /></main>;
   return (
     <>
       <a className="skip" href="#main">Skip to content</a>
