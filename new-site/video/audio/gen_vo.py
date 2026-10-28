@@ -24,7 +24,7 @@ SAY = [(r'\bBreeze\.AI\b', 'Breeze AI'), (r'\bASIMOV\b', 'Asseemov'), (r'\bSDLC\
        (r'\bUX\b', 'U X'), (r'\bMCP\b', 'M C P'), (r'\bKAPS\b', 'caps'), (r'\bSaaS\b', 'sass'),
        (r'\bJava 21\b', 'Java twenty-one'), (r'\bJava 8\b', 'Java eight'),
        (r'dialect-engineering\.ai', 'dialect engineering dot AI'), (r'\b2\.0\b', 'two point oh'), (r'\b1\.42\b', 'one point four two'),
-       (r'\b1\.62\b', 'one point six two'), (r'\bAS/400\b', 'A S four hundred'), (r' \(SSO\)', ', S S O,')]
+       (r'\b1\.62\b', 'one point six two'), (r'\bAS/400\b', 'A S four hundred'), (r' \(SSO\)', ', essesso')]
 
 def spoken(text):
     for pat, rep in SAY:
