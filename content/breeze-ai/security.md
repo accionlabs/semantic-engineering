@@ -24,7 +24,7 @@ Configuration files are read only for the names of their settings, never the val
 
 ## Signing In
 
-- People sign in through single sign-on: Keycloak, connected to the client's Microsoft Entra ID, for the web application and the plugin.
+- People sign in through single sign-on (SSO), for the web application and the plugin.
 - Engineers sign in to the plugin in the browser. No password or key is pasted into the editor, and the sign-in lasts about a week.
 - Tools that use the API use a key created in the web application. The project file that holds it is left out of version control by default.
 

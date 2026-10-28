@@ -21,7 +21,7 @@ export const SITUATIONS: Path[] = [
 ];
 
 /** Ask a question: the questions Act 3 answers, one scene each. */
-export const QUESTIONS = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+export const QUESTIONS = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
 
 export const roleBySlug = (s: string) => ROLES.find((r) => r.slug === s);
 export const situationBySlug = (s: string) => SITUATIONS.find((r) => r.slug === s);

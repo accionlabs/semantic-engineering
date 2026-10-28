@@ -29,7 +29,7 @@ The client and Accion Labs choose the option at the start of the engagement. The
 | Relational store | Holds ticket scope and the documents used for search | PostgreSQL with pgvector |
 | Agent workflows | Run the Impact Analysis, Scope Analysis, PR Validator and KG Sync agents on events from Jira and the repositories | n8n |
 | MCP server | Gives AI coding assistants more than fifty tools for reading and updating the graph | Python; Model Context Protocol over HTTP |
-| Sign-in | Single sign-on for the web application and the MCP server | Keycloak, connected to the client's Microsoft Entra ID |
+| Sign-in | Single sign-on (SSO) for the web application and the MCP server | Keycloak |
 | AI models | Platform services and search | Claude models and embeddings through AWS Bedrock; OpenAI or Gemini embeddings where chosen |
 | Code parser | Reads source code into the code layer, on the engineer's machine | Python and Tree-sitter, run with uv |
 | Claude Code plugin | Commands, tools and rules on each engineer's machine | Claude Code plugin marketplace |
@@ -43,7 +43,7 @@ The client and Accion Labs choose the option at the start of the engagement. The
 | GitHub or Bitbucket, with a repository webhook to Breeze.AI | To check pull requests and update the graph when they merge | Required |
 | Jira, with administrator access for setup | Three custom fields, two workflow statuses, a webhook to Breeze.AI and an API token, set up once per organization | Required for impact analysis on tickets |
 | Confluence | A space and folder for impact reports | Required for impact analysis on tickets |
-| Microsoft Entra ID | Single sign-on through Keycloak | Required for sign-in with company accounts |
+| The client's identity provider | Single sign-on (SSO) with company accounts | Required for sign-in with company accounts |
 | Read access to the source code | To build the code, functional and design layers | Required |
 | Database schemas as SQL files | To add the data stores to the architecture layer | Recommended |
 | Documents and Confluence pages | To add to the functional and architecture layers | Recommended |

@@ -19,7 +19,7 @@ const ENTRY = [
   { label: 'Claude Code plugin', who: 'engineers' },
   { label: 'API', who: 'other tools' },
 ];
-const STACK = ['Neo4j graph store', 'PostgreSQL', 'Sign-in through Microsoft Entra ID', 'Agent activity logged'];
+const STACK = ['Neo4j graph store', 'PostgreSQL', 'Single sign-on (SSO)', 'Agent activity logged'];
 const LINKS = ['GitHub', 'Bitbucket', 'Jira', 'Confluence', 'Figma'];
 const RING = { x: 960, y: 470, r: 290 };
 const CITED = [2, 3, 4];

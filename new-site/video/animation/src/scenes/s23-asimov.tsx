@@ -15,6 +15,9 @@ const LEG = { x: 300, y: 300, w: 560, h: 380 };
 const COPY = { x: 1120, y: 300, w: 560, h: 380 };
 const OUTPUTS = ['Business requirements', 'Test scenarios', 'Code chat'];
 const TESTS = ['Running interfaces compared', 'Unit tests', 'End-to-end workflows'];
+// Pills sized to their text (as Pill does by default), laid out left to right with a gap.
+const pillW = (t: string) => t.length * 9.6 + 30;
+const rowX = (items: string[], x0: number, gap = 16) => items.map((_, i) => x0 + items.slice(0, i).reduce((a, t) => a + pillW(t) + gap, 0));
 const KEEP = [
   { label: 'Code', glyph: '</>' },
   { label: 'Tests', glyph: '✓' },
@@ -87,7 +90,7 @@ export const scene23: SceneDef = {
       <Svg className="pre pipe">
         <Pipeline show={['frame']} />
         <g className="pre outs">
-          {OUTPUTS.map((o, i) => <Pill key={o} className={`out out-${i}`} x={COLS.spec.x + 10 + i * 150} y={LOW_Y} text={o} colour={C.cardText} w={140} />)}
+          {OUTPUTS.map((o, i) => <Pill key={o} className={`out out-${i}`} x={rowX(OUTPUTS, COLS.spec.x - 30)[i]} y={LOW_Y} text={o} colour={C.cardText} />)}
         </g>
         <g className="pre reviewers">
           <Person x={COLS.spec.x + 60} y={LOW_Y + 6} r={18} />
@@ -103,7 +106,7 @@ export const scene23: SceneDef = {
           <text x={EXPERT.x + 34} y={EXPERT.y + 30} fontFamily={F.sans} fontSize={20} fill={C.text}>expert review</text>
         </g>
         <g className="pre tests" data-target="asimov.tests">
-          {TESTS.map((t, i) => <Pill key={t} className={`test test-${i}`} x={720 + i * 330} y={LOW_Y + 10} text={t} colour={C.pass} w={280} />)}
+          {TESTS.map((t, i) => <Pill key={t} className={`test test-${i}`} x={rowX(TESTS, 720, 24)[i]} y={LOW_Y + 10} text={t} colour={C.pass} />)}
         </g>
       </Svg>
       <Callout className="pre co co-graphs" x={COLS.spec.x} y={LOW_Y - 10} w={600} kind="Two graphs" text="What the old system does, and the approved target" tone={C.layer.architecture} target="graph.source-state" />
