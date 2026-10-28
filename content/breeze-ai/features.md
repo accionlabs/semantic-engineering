@@ -1,10 +1,10 @@
 ---
 title: "Breeze.AI Features"
 linkTitle: "Features"
-description: "The three ways to use Breeze.AI, the agents that work on the graph, the commands engineers use, and the rules that keep the graph consistent."
+description: "The three ways to use Breeze.AI, the agents that carry each change from the ticket to the merge, the commands engineers use, and the rules that keep the graph consistent."
 weight: 20
 date: 2026-10-27
-lastmod: 2026-10-27
+lastmod: 2026-10-28
 draft: false
 ---
 
@@ -14,35 +14,39 @@ The same graph sits behind all three. A product owner in the web application and
 
 | Interface | Who uses it | What it provides |
 |---|---|---|
-| **Web application** | Product owners, architects, UX designers, reviewers | An editor for each layer, import of functional items from CSV and of database schemas from SQL files, a graph view, a code explorer that groups the code into clusters, and project administration. Nothing to install. |
-| **Claude Code plugin** | Engineers, in their editor | Breeze.AI commands for common tasks, more than fifty tools that read and update the graph, and rules that check graph changes before they are sent. |
-| **API** | Other tools and scripts | Reading and updating the graph with an API key created in the web application. |
+| **Web application** | Product owners, architects, UX designers, reviewers, administrators | An editor for each layer; document analysis that proposes graph changes for a person to approve; a chat that answers questions across the four layers; a graph view and a code explorer; project snapshots, export and import; and, for administrators, the cost of each run and integrity reports across projects. Nothing to install. |
+| **Plugin for Claude Code and Cursor** | Engineers, in their editor | 29 Breeze.AI commands for common tasks, 44 tools that read and update the graph, and rules that check graph changes before they are sent |
+| **API** | Other tools and scripts | Reading and updating the graph with an API key created in the web application |
 
-The plugin's tools use the Model Context Protocol (MCP), an open standard for connecting AI assistants to tools. Cursor, Cline, Windsurf and other MCP clients can use the tools too; the commands and rules are specific to Claude Code.
+The plugin's tools use the Model Context Protocol (MCP), an open standard for connecting AI assistants to tools, so Cline, Windsurf and other MCP clients can use them too.
+
+## Document Analysis in the Web Application
+
+A person uploads a document (a specification, a presentation, a spreadsheet, a PDF or an image) and chooses which layers to analyse. Breeze.AI compares it with the existing graph and proposes changes for each layer. The person approves, rejects or asks for changes in a chat before anything is written. Documents of up to about 15,000 characters give the best results.
 
 ## The Agents
 
 | Agent | When it runs | What it does |
 |---|---|---|
-| Impact Analysis | A Jira ticket moves into the impact analysis status, or someone mentions Breeze.AI in a comment | Reports everything the change affects across the four layers, on the ticket and in Confluence |
-| Scope Analysis | A ticket's scope changes in Jira | Keeps the ticket's scope in step with Breeze.AI |
-| PR Validator | A pull request is opened | Checks it against the graph and the impact report, and posts the findings on the pull request |
-| KG Sync | A pull request merges | Updates the code layer from what changed |
+| Scope Analysis | A Jira ticket is created, updated or commented on, or reaches a status the team has chosen | Reports everything the change affects across the four layers, records the change's scope, fills in fields on the ticket and writes a report to Confluence |
+| Merge Validation | A pull request is opened, updated or commented on | Checks that the changed files fall within the ticket's scope, posts its findings on the pull request and the ticket, and blocks the merge when the change goes outside that scope |
+| KG Sync | A pull request merges | Applies the change to the functional, design and architecture layers and rebuilds the code layer from the merged code |
 
 Teams add their own agents for their own workflows. On one engagement the team ran 22 agents across delivery and support.
 
 ## Commands for Engineers
 
-The plugin has 19 commands. The main ones:
+The main ones:
 
 | Command | What it does |
 |---|---|
 | Project setup | Links the workspace to a Breeze.AI project and signs in |
 | Onboard repository | Builds the code layer of a repository |
-| Generate functional | Builds the functional layer from the frontend or the backend |
-| Generate design | Builds the design layer from the frontend and the functional scenarios |
-| Analyze architecture | Checks a requirement against the architecture layer |
-| Impact analysis | Reports what a change affects, as a summary or a detailed document |
+| Generate functional | Builds the functional layer from the frontend or the backend, with specialized versions for ASP.NET Web Forms, ASP.NET MVC and metadata-driven applications |
+| Generate design | Builds the design layer from the frontend and the functional scenarios, and checks the built interface against Figma designs |
+| Generate architecture | Builds the architecture layer from the code, infrastructure definitions, database schemas and documents |
+| Update from a change | Updates the functional and design layers from the difference between two commits |
+| Impact analysis | Reports what a change affects, as a summary or a detailed document with diagrams, a traceability matrix, risks and a test plan |
 | Search | Answers questions about the application from the four layers |
 | Generate spec | Writes a functional specification document from the functional layer |
 | Generate code | Generates code and test cases from the graphs |
@@ -55,10 +59,8 @@ Rules are checked when an item is written, in the web application and in the plu
 - A persona is a role from the business, such as Customer or Administrator, or one of the standard System and External System personas. Technical names such as Developer are blocked.
 - An outcome is written in the user's words.
 - Every item has a parent, so no item stands alone.
-- Scenarios, steps and actions must have a description and cite their source.
+- Scenarios, steps and actions must have a description and cite their source. A source is recorded once and linked to every item that uses it.
 
 ## Graph Quality
 
-A metrics tool reports the quality and coverage of each graph, and agent activity through the tools is logged.
-
-> **To confirm with the Breeze.AI lead:** whether the BDD Generation, Cross-Product Impact and Portfolio Rationalization agents, the 29 governance metrics, the 14 verification checks and the five autonomy levels described in the method pages are available in the product today; and whether managers have a dashboard.
+A metrics tool reports the quality and coverage of each graph. Administrators can run integrity checks across projects and download them as reports.

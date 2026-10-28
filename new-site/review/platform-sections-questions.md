@@ -10,24 +10,19 @@ The new sections `content/breeze-ai/` and `content/asimov/` are drafts. Each ope
 4. Whether a graph database enterprise licence is ever included. (breeze-ai/pricing)
 5. Whether a client can keep a Breeze.AI licence on its own after the engagement ends, and how it is priced. (breeze-ai/pricing, breeze-ai/security)
 6. Whether there is a separate ASIMOV licence fee. (asimov/pricing)
-7. Cost input for AI usage: the team sizes functional extraction at about 500,000 lines of code a week per Claude Max 20x account (marked preliminary), so two million lines need about four accounts for a week. Who pays for these accounts, and whether this goes in the price. (breeze-ai/pricing; not for publication)
+7. Cost input for AI usage: the team sizes functional extraction at about 500,000 lines of code a week per Claude Max 20x account (marked preliminary), so two million lines need about four accounts for a week. The October 2026 documentation adds two options for about 1M lines: two dedicated Max seats at about $400 a month, or metered AWS Bedrock use at about $1,800 to $3,600 once; and AWS infrastructure for a client deployment at about $1,900 to $2,080 a month (a July 2026 estimate the document calls out of date). Who pays for each, and whether it goes in the price. (breeze-ai/pricing; not for publication)
 
 ## For the Breeze.AI lead
 
-The team's SharePoint site (SemanticEngineering-Breeze) answered several earlier questions on 27 October 2026; these remain.
+The team's SharePoint site (27 October 2026) and the Breeze.AI documentation of October 2026 (28 October 2026) answered the earlier questions; these remain.
 
-1. Whether a deployment on the client's premises with local AI models can be offered, and on which clouds the client-environment option has run. (breeze-ai/deployment)
-2. The frameworks of the backend and the web application, how the platform is packaged and installed (containers, Kubernetes, Helm charts or Terraform), and the minimum compute, memory and storage for a client deployment. (breeze-ai/deployment)
-3. Typical times for steps 5 and 6, and whether steps 2 to 5 fit inside the two-to-three-week System Model Pilot. (breeze-ai/deployment)
-4. How platform updates are delivered in each option, backup and recovery of the graph, availability targets, and who runs the platform day to day in the client's environment. (breeze-ai/deployment)
-5. Whether the BDD Generation, Cross-Product Impact and Portfolio Rationalization agents, the 29 governance metrics, the 14 verification checks and the five autonomy levels described in the method pages are available in the product today; and whether managers have a dashboard. (breeze-ai/features)
-6. When the check can block merges for all clients, and when sync of the other three layers is generally available. (breeze-ai/how-it-works)
-7. How clients' data is kept apart in the hosted environment, and the data retention terms with each model provider. (breeze-ai/security)
-8. User roles and permissions inside a project, and whether access can be limited to some layers or products. (breeze-ai/security)
-9. The licence terms for continuing to use the platform after an engagement ends. (breeze-ai/security)
-10. Security certifications that cover the platform or Accion Labs' hosting (for example SOC 2 or ISO 27001), encryption of stored data and data in transit, results of penetration tests, and the security questionnaire answers the team can share with clients. (breeze-ai/security)
-11. The supported languages. The team's newest page lists TypeScript, JavaScript, Python, Java, C#, VB.NET, Kotlin, Groovy, C++ and GraphQL; older pages also list Go, PHP, Apex, Perl and Vue. (breeze-ai/specifications)
-12. Support for GitLab, Azure DevOps, Linear and GitHub Copilot, which earlier pages of this site listed. (breeze-ai/specifications)
+1. The minimum size for a client deployment, and how size grows with the number of applications and lines of code. (breeze-ai/deployment)
+2. Typical times for steps 5 and 6, and whether steps 2 to 5 fit inside the two-to-three-week System Model Pilot. (breeze-ai/deployment)
+3. Availability targets, and who runs the platform day to day in the client's account. (breeze-ai/deployment)
+4. How clients' data is kept apart in the hosted environment, and the data retention terms with each model provider. (breeze-ai/security)
+5. The licence terms for continuing to use the platform after an engagement ends. (breeze-ai/security)
+6. Security certifications that cover the platform or Accion Labs' hosting (for example SOC 2 or ISO 27001), results of penetration tests, and the security questionnaire answers the team can share with clients. (breeze-ai/security)
+7. For the Breeze.AI team, not for publication: the documentation (October 2026, pages 180 and 199) says the inbound Jira and repository webhooks are not authenticated. Please confirm whether they are, and if not, when they will be.
 
 ## For the ASIMOV lead (Aditya Kaole)
 

@@ -401,8 +401,8 @@
    "act": 3,
    "n": 10,
    "title": "What Breeze.AI is and how it works",
-   "text": "On a large enterprise application, AI coding agents are fast on small tasks and make mistakes on changes that reach across the system. The knowledge those changes need is held by the product owner, the designer, the architect and the engineering team, and the documents about it go out of date. The platform Accion Labs built for this work is called Breeze.AI. For an existing application, its agents build a knowledge graph with four layers, functional, design, architecture and code, from the code, the database schemas, the documents and the frontend. For an application of more than two million lines, extraction takes about two to three weeks, and then the named owner of each layer reviews it. Each scenario, step and action in the functional layer cites the ticket, document, screen or code file it came from. When a Jira ticket moves to impact analysis, an agent reports everything the change affects across the four layers, before any code is written. Engineers keep the AI coding assistant they already use, and the assistant receives the impact report and the graph's tools in the editor. When the code is ready, an agent checks each pull request against the graph and the impact report and posts its findings, and the check can be set to block a merge. Code and test cases can also be generated from the graphs, with the functional layer as their source. When the change merges, an agent updates the code layer of the graph, so the graph keeps matching the main branch. Product owners, architects and designers work in a web application, engineers use a plugin in Claude Code, and other tools connect through an API, all on the same graph. The platform runs hosted by Accion Labs or deployed in the client's own environment. The graph is stored in Neo4j alongside PostgreSQL, people sign in through single sign-on (SSO), and agent activity is logged. The platform connects to GitHub or Bitbucket, to Jira and Confluence, and to Figma designs. People decide which work goes to agents, and each agent has a named human owner. On one engagement across three products, deployments rose from 19 to 36 a month over a 14-week pilot, and lead time for changes fell from 2.0 to 1.62 days. On other engagements, defects fell by 23 percent, and tests generated from the functional layer reached 93.4 percent coverage. Most clients start with the System Model Pilot, in which Breeze.AI builds the graph of one application in two to three weeks and runs impact analysis on a real item from the client's backlog.",
-   "words": 430,
+   "text": "On a large enterprise application, AI coding agents are fast on small tasks and make mistakes on changes that reach across the system. The knowledge those changes need is held by the product owner, the designer, the architect and the engineering team, and the documents about it go out of date. The platform Accion Labs built for this work is called Breeze.AI. For an existing application, its agents build a knowledge graph with four layers, functional, design, architecture and code, from the code, the database schemas, the documents and the frontend. For an application of more than two million lines, extraction takes about two to three weeks, and then the named owner of each layer reviews it. Each scenario, step and action in the functional layer cites the ticket, document, screen or code file it came from. When a Jira ticket is written or updated, an agent reports everything the change affects across the four layers, before any code is written. Engineers keep the AI coding assistant they already use, and the assistant receives the impact report and the graph's tools in the editor. When the code is ready, an agent checks that each pull request stays within the scope of its ticket, posts its findings, and blocks a merge that goes outside it. Code and test cases can also be generated from the graphs, with the functional layer as their source. When the change merges, an agent updates the graph, so the graph keeps matching the main branch. Product owners, architects and designers work in a web application, engineers use a plugin in Claude Code, and other tools connect through an API, all on the same graph. The platform runs hosted by Accion Labs or deployed in the client's own environment. The graph is stored in Neo4j alongside PostgreSQL, people sign in through single sign-on (SSO), and agent activity is logged. The platform connects to GitHub, GitLab, Bitbucket or Azure DevOps, to Jira and Confluence, and to Figma designs. People decide which work goes to agents, and each agent has a named human owner. On one engagement across three products, deployments rose from 19 to 36 a month over a 14-week pilot, and lead time for changes fell from 2.0 to 1.62 days. On other engagements, defects fell by 23 percent, and tests generated from the functional layer reached 93.4 percent coverage. Most clients start with the System Model Pilot, in which Breeze.AI builds the graph of one application in two to three weeks and runs impact analysis on a real item from the client's backlog.",
+   "words": 427,
    "sentences": [
     "On a large enterprise application, AI coding agents are fast on small tasks and make mistakes on changes that reach across the system.",
     "The knowledge those changes need is held by the product owner, the designer, the architect and the engineering team, and the documents about it go out of date.",
@@ -410,15 +410,15 @@
     "For an existing application, its agents build a knowledge graph with four layers, functional, design, architecture and code, from the code, the database schemas, the documents and the frontend.",
     "For an application of more than two million lines, extraction takes about two to three weeks, and then the named owner of each layer reviews it.",
     "Each scenario, step and action in the functional layer cites the ticket, document, screen or code file it came from.",
-    "When a Jira ticket moves to impact analysis, an agent reports everything the change affects across the four layers, before any code is written.",
+    "When a Jira ticket is written or updated, an agent reports everything the change affects across the four layers, before any code is written.",
     "Engineers keep the AI coding assistant they already use, and the assistant receives the impact report and the graph's tools in the editor.",
-    "When the code is ready, an agent checks each pull request against the graph and the impact report and posts its findings, and the check can be set to block a merge.",
+    "When the code is ready, an agent checks that each pull request stays within the scope of its ticket, posts its findings, and blocks a merge that goes outside it.",
     "Code and test cases can also be generated from the graphs, with the functional layer as their source.",
-    "When the change merges, an agent updates the code layer of the graph, so the graph keeps matching the main branch.",
+    "When the change merges, an agent updates the graph, so the graph keeps matching the main branch.",
     "Product owners, architects and designers work in a web application, engineers use a plugin in Claude Code, and other tools connect through an API, all on the same graph.",
     "The platform runs hosted by Accion Labs or deployed in the client's own environment.",
     "The graph is stored in Neo4j alongside PostgreSQL, people sign in through single sign-on (SSO), and agent activity is logged.",
-    "The platform connects to GitHub or Bitbucket, to Jira and Confluence, and to Figma designs.",
+    "The platform connects to GitHub, GitLab, Bitbucket or Azure DevOps, to Jira and Confluence, and to Figma designs.",
     "People decide which work goes to agents, and each agent has a named human owner.",
     "On one engagement across three products, deployments rose from 19 to 36 a month over a 14-week pilot, and lead time for changes fell from 2.0 to 1.62 days.",
     "On other engagements, defects fell by 23 percent, and tests generated from the functional layer reached 93.4 percent coverage.",
@@ -592,16 +592,16 @@
     "Code review moves from asking whether the agent changed the right files to asking whether the details are right."
    ],
    "sources": [
-    "practitioner/breeze-ai.md#the-claude-code-plugin",
-    "practitioner/breeze-ai.md#integration-surface",
-    "practitioner/breeze-ai.md#ontology-guardrails",
+    "breeze-ai/features.md#three-ways-to-use-it",
+    "breeze-ai/features.md#integration-surface",
+    "breeze-ai/features.md#ontology-guardrails",
     "sdlc/agents.md#the-cognitive-shortcut-framing",
     "sdlc/agents.md#the-variance-bounding-insight",
     "_index.md#the-methodology"
    ],
    "targets": {
-    "tool.mcp-server": "practitioner/breeze-ai.md#integration-surface",
-    "guardrail.functional": "practitioner/breeze-ai.md#ontology-guardrails",
+    "tool.mcp-server": "breeze-ai/specifications.md#integrations",
+    "guardrail.functional": "breeze-ai/features.md#rules-for-the-functional-layer",
     "variance.bounded": "sdlc/agents.md#the-variance-bounding-insight"
    }
   },
@@ -967,8 +967,8 @@
     "modernization/agents.md#named-agents",
     "modernization/agents.md#validation-stage-agents",
     "modernization/process/operating-model.md#the-expert-review-pattern",
-    "practitioner/asimov.md#the-five-pillars-of-asimov",
-    "practitioner/asimov.md#humans-validate-agents-execute"
+    "asimov/architecture.md#the-five-pillars-of-asimov",
+    "asimov/architecture.md#humans-validate-agents-execute"
    ],
    "targets": {
     "contract.parity": "modernization/methodology.md#the-parity-contract",
@@ -986,11 +986,11 @@
     "stage.maintain": "modernization/agents.md#named-agents",
     "human.annotation": "modernization/process/operating-model.md#the-expert-review-pattern",
     "human.expert-review": "modernization/process/operating-model.md#the-expert-review-pattern",
-    "pillar.agie": "practitioner/asimov.md#the-five-pillars-of-asimov",
-    "pillar.asf": "practitioner/asimov.md#the-five-pillars-of-asimov",
-    "pillar.amm": "practitioner/asimov.md#the-five-pillars-of-asimov",
-    "pillar.avf": "practitioner/asimov.md#the-five-pillars-of-asimov",
-    "pillar.maintain": "practitioner/asimov.md#the-five-pillars-of-asimov"
+    "pillar.agie": "asimov/architecture.md#the-five-pillars-of-asimov",
+    "pillar.asf": "asimov/architecture.md#the-five-pillars-of-asimov",
+    "pillar.amm": "asimov/architecture.md#the-five-pillars-of-asimov",
+    "pillar.avf": "asimov/architecture.md#the-five-pillars-of-asimov",
+    "pillar.maintain": "asimov/architecture.md#the-five-pillars-of-asimov"
    }
   },
   {
@@ -1214,8 +1214,8 @@
     "origin.name": "_index.md#how-we-arrived-here",
     "next.sdlc": "sdlc/_index.md",
     "next.modernization": "modernization/_index.md",
-    "next.breeze-ai": "practitioner/breeze-ai.md",
-    "next.asimov": "practitioner/asimov.md",
+    "next.breeze-ai": "breeze-ai/_index.md",
+    "next.asimov": "asimov/_index.md",
     "next.public": "_index.md#about-the-methodology",
     "next.practitioner": "practitioner/_index.md#the-two-day-deep-dive-workshop",
     "next.contact": "practitioner/contact.md#request-a-two-day-workshop",

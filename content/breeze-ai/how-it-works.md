@@ -1,7 +1,7 @@
 ---
 title: "How Breeze.AI Works"
 linkTitle: "How It Works"
-description: "The knowledge graph Breeze.AI keeps, the people who own it, and what happens to every change: impact analysis on the ticket, a check on the pull request, and the graph updated when the change merges."
+description: "The knowledge graph Breeze.AI keeps, the people who own it, and what happens to every change: scope analysis on the ticket, a check of each pull request against that scope, and the graph updated when the change merges."
 weight: 10
 date: 2026-10-27
 lastmod: 2026-10-27
@@ -12,13 +12,13 @@ Breeze.AI works in the same order on every application: it builds a graph from t
 
 ## 1. Build the Graph from the Code
 
-For an existing application, Breeze.AI builds the graph from what already exists:
+For an existing application, Breeze.AI builds the graph from what already exists, usually in this order: code, functional, design, architecture. For a new application it starts from the documents, then the functional and design layers.
 
-- **Code:** a parser reads the source code with Tree-sitter, an open-source parser, and records files, classes, functions, routes and database queries, and the links between them. No AI model is involved in this step. An optional pass adds AI-written descriptions.
-- **Data:** database schemas become part of the architecture layer: tables, columns, constraints, indexes, views and procedures, and search indexes.
+- **Code:** a parser reads the source code with Tree-sitter, an open-source parser, and records files, classes, functions, routes and database queries, and the links between them. No AI model is involved in this step. An optional pass adds AI-written descriptions. Breeze.AI can clone the repository itself, or an engineer can run the parser and send only the result.
+- **Data:** database schemas become part of the architecture layer: tables, columns, constraints, indexes, views and procedures, NoSQL collections, and search indexes.
 - **Functional:** agents in Claude Code read the frontend and the backend and write the personas, outcomes, scenarios, steps and actions. They stop for a person to approve the personas, then the list of entry points, then a pilot on a few entry points, before the full run.
 - **Design:** agents read the frontend code together with the functional scenarios and record the screens and components.
-- **Documents:** specifications, Confluence pages, PDFs and images can be read into the functional and architecture layers.
+- **Documents:** specifications, Word, PowerPoint and Excel files, PDFs and images are uploaded and analysed against the existing graph, so a new document extends the graph without duplicating it. Pages from Confluence, SharePoint or OneDrive are brought in through Claude and uploaded.
 
 The graph has four layers:
 
@@ -39,19 +39,19 @@ Each layer has a named owner who reviews what was built and keeps it accurate. P
 
 ## 3. Check Each Change Before Code Is Written
 
-When a Jira ticket moves into the impact analysis status, or someone mentions Breeze.AI in a comment, the Impact Analysis Agent reads the graph and reports everything the change affects across the four layers. The report goes on the ticket and into a Confluence folder, usually within a few minutes. People read it when they own the decision; an agent reads the structured form, a list of the affected graph items, when it owns the work.
+When a Jira ticket is created or updated, or reaches a status the team has chosen, the Scope Analysis Agent reads the four layers of the graph and reports everything the change affects. It writes the change's scope to Breeze.AI, fills in fields on the ticket and writes a report to Confluence. People read the report when they own the decision; an agent reads the structured form, the list of affected graph items, when it owns the work. Scope that someone types into Jira directly is brought back into the graph.
 
 The detailed report includes the affected items in each layer, diagrams, a traceability matrix, risks, a test plan and a rating of how far the change reaches.
 
 ## 4. Check Each Pull Request
 
-When a pull request is opened, the PR Validator Agent checks it against the graph and the impact report and posts its findings on the pull request. The check can be set to block a merge.
+When a pull request is opened or updated, the Merge Validation Agent checks that the files it changes fall within the scope recorded for its ticket. It posts its findings on the pull request and on the ticket, and sets a status check that blocks the merge when the change goes outside that scope.
 
 ## 5. Update the Graph When the Change Merges
 
-When the pull request merges, the KG Sync Agent updates the code layer from what changed, so the graph keeps matching the main branch. Updating the functional, design and architecture layers in the same way is in early support.
+When the pull request merges, the KG Sync Agent applies the change to the functional, design and architecture layers in one step, checking for duplicates, and rebuilds the code layer from the merged code. The graph keeps matching the main branch.
 
-> **To confirm with the Breeze.AI lead:** when the check can block merges for all clients, and when sync of the other three layers is generally available.
+The three agents share only the scope recorded for each ticket, and none calls another.
 
 ## Where People Decide
 

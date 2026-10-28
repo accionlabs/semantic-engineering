@@ -20,8 +20,8 @@ const ENTRY = [
   { label: 'API', who: 'other tools' },
 ];
 const STACK = ['Neo4j graph store', 'PostgreSQL', 'Single sign-on (SSO)', 'Agent activity logged'];
-const LINKS = ['GitHub', 'Bitbucket', 'Jira', 'Confluence', 'Figma'];
-const RING = { x: 960, y: 470, r: 290 };
+const LINKS = ['GitHub', 'GitLab', 'Bitbucket', 'Azure DevOps', 'Jira', 'Confluence', 'Figma'];
+const RING = { x: 960, y: 480, r: 330 };
 const CITED = [2, 3, 4];
 const SPEC = STATIONS[0], MERGE = STATIONS[3];
 const CHIPS = [
@@ -52,10 +52,10 @@ export const scene10: SceneDef = {
         </g>
         <Card className="pre ticket" x={SPEC.x - 80} y={GAP_Y + 10} w={160} h={40} label="Jira ticket" tone={C.layer.functional} />
         <TraversePath className="pre trav" />
-        <Card className="pre report" x={SPEC.x + 100} y={GAP_Y + 10} w={170} h={40} label="impact report" tone={C.text} />
+        <Card className="pre report" x={SPEC.x + 100} y={GAP_Y + 10} w={170} h={40} label="scope report" tone={C.text} />
         <rect className="pre tok-pr" x={STATIONS[1].x - 18} y={Y.flow + 44} width={36} height={18} rx={4} fill={C.text} />
-        <Card className="pre findings" x={GATE_X - 260} y={GAP_Y + 10} w={220} h={40} label="findings on the pull request" tone={C.text} />
-        <Pill className="pre canblock" x={GATE_X - 90} y={Y.flow + 72} text="can block a merge" colour={C.muted} w={180} />
+        <Card className="pre findings" x={GATE_X - 300} y={GAP_Y + 10} w={260} h={40} label="findings on the pull request" tone={C.text} />
+        <Pill className="pre canblock" x={GATE_X - 165} y={Y.flow + 72} text="blocks a merge outside the scope" colour={C.muted} w={330} />
         <g className="pre gen">
           <Card className="gen-code" x={item('functional', 1).x - 80} y={LOWER.y + 20} w={160} h={44} label="code" tone={C.layer.code} />
           <Card className="gen-tests" x={item('functional', 1).x + 110} y={LOWER.y + 20} w={160} h={44} label="test cases" tone={C.layer.functional} />
@@ -81,10 +81,10 @@ export const scene10: SceneDef = {
       <Body className="pre subtitle" x={166} y={520} w={1200} size={32} colour={C.text}>One knowledge graph of the application, for people and agents.</Body>
       <FigureChip className="pre chip-extract" x={1150} y={LOWER.y - 30} w={600} figure="2 to 3 weeks" label="to build the graph of more than two million lines of code" source="brownfield extraction" target="fig.extraction" />
       <Callout className="pre co co-cited" x={1150} y={GAP_Y - 6} w={600} kind="Functional layer" text="Each scenario, step and action cites its source" tone={C.layer.functional} target="breeze.citations" />
-      <Callout className="pre co co-impact" x={1150} y={GAP_Y - 6} w={600} kind="Impact Analysis Agent" text="Everything the change affects, before any code is written" tone={C.text} target="agent.impact-analysis" />
+      <Callout className="pre co co-impact" x={1150} y={GAP_Y - 6} w={600} kind="Scope Analysis Agent" text="Everything the change affects, before any code is written" tone={C.text} target="agent.impact-analysis" />
       <Callout className="pre co co-agent" x={1150} y={GAP_Y - 6} w={600} kind="The coding assistant you use" text="Gets the impact report and the graph's tools" tone={C.text} target="flow.coding-agent" />
-      <Callout className="pre co co-pr" x={150} y={LOWER.y} w={640} kind="PR Validator Agent" text="Checks each pull request against the graph and the report" tone={C.text} target="agent.pr-validation" />
-      <Callout className="pre co co-sync" x={150} y={LOWER.y} w={640} kind="KG Sync Agent" text="Updates the code layer when the change merges" tone={C.pass} target="agent.kg-sync" />
+      <Callout className="pre co co-pr" x={150} y={LOWER.y} w={640} kind="Merge Validation Agent" text="Checks each pull request stays within its ticket's scope" tone={C.text} target="agent.pr-validation" />
+      <Callout className="pre co co-sync" x={150} y={LOWER.y} w={640} kind="KG Sync Agent" text="Updates the graph when the change merges" tone={C.pass} target="agent.kg-sync" />
 
       {/* s13 to s16: where it runs, what it is built on, what it connects to, who decides */}
       <div className="pre deploy" data-target="breeze.deployment" style={{ position: 'absolute', left: 200, top: 260, display: 'flex', gap: 40 }}>
@@ -204,7 +204,7 @@ export const scene10: SceneDef = {
     appear(ctx, '.tok-merge', s11 + 0.2, { y: 0 });
     tl.to(q('.tok-merge'), { attr: { x: MERGE.x - 18 }, duration: 1, ease: 'power1.inOut' }, s11 + 0.4);
     tl.fromTo(q('.pulse'), { autoAlpha: 1, drawSVG: '0%' }, { drawSVG: '100%', duration: 0.8 }, s11 + 1.6);
-    tl.fromTo(q('.base-top .band-code .band-rect'), { attr: { 'stroke-width': 1.8 } }, { attr: { 'stroke-width': 5 }, duration: 0.4, yoyo: true, repeat: 1 }, s11 + 2.4);
+    tl.fromTo(q('.base-top .band .band-rect'), { attr: { 'stroke-width': 1.8 } }, { attr: { 'stroke-width': 5 }, duration: 0.4, yoyo: true, repeat: 1 }, s11 + 2.4);
     appear(ctx, '.co-sync', s11 + 2);
     appear(ctx, '.synced', s11 + 3.2, { y: 0 });
     // s12: three ways in, on the same graph.

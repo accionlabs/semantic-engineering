@@ -22,7 +22,7 @@ Each product has its own graph, shared by every team that works on it. Knowledge
 
 ## Tests
 
-Acceptance tests are generated from the functional layer, in formats that Jest, Cypress, Playwright and JUnit can run. On one engagement this reached 93.4% test coverage with no tests written by hand.
+Code and test cases, including Gherkin scenarios, are generated from the graphs, with the functional layer as their source. On one engagement, tests generated this way reached 93.4% coverage with no tests written by hand.
 
 ## Documentation and Onboarding
 

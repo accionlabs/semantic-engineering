@@ -33,11 +33,11 @@ Breeze.AI records that knowledge once, in a knowledge graph with four layers: fu
 | Capability | What it gives the team |
 |---|---|
 | Graph extraction | A four-layer graph built from the existing code, database schemas, documents and frontend. About two to three weeks for an application of more than two million lines of code. |
-| Impact analysis | Before any code is written, a report of everything the change affects across the four layers. |
-| Pull request check | Each pull request is checked against the graph and the impact report, with the findings posted on the pull request. The check can be set to block a merge. |
-| Graph sync | The code layer is updated when each change merges, so the graph keeps matching the main branch. |
+| Scope analysis | When a ticket is written, before any code: a report of everything the change affects across the four layers. |
+| Pull request check | Each pull request is checked against the scope recorded for its ticket, with the findings posted on the pull request; a change outside that scope is blocked from merging. |
+| Graph sync | The graph is updated when each change merges, so it keeps matching the main branch. |
 | Specifications, code and tests | A functional specification document, and code with test cases, generated from the graphs. |
-| Three ways in | A web application for product owners, architects and designers; a Claude Code plugin for engineers; an API for other tools. |
+| Three ways in | A web application for product owners, architects and designers; a plugin for Claude Code and Cursor for engineers; an API for other tools. |
 
 See [How It Works](how-it-works.md) and [Features](features.md).
 
@@ -54,7 +54,7 @@ Source: Breeze.AI Executive Leadership Report, Q3 2026 (figures as at 20 October
 
 ## Where It Runs
 
-Breeze.AI runs hosted by Accion Labs, or deployed in the client's own environment. See [Deployment and Architecture](deployment.md).
+Breeze.AI runs hosted by Accion Labs, or deployed in the client's own AWS account. See [Deployment and Architecture](deployment.md).
 
 ## How to Start
 
