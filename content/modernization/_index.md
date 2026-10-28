@@ -38,7 +38,7 @@ The pages below are sequenced to build understanding in reading order. A reader 
 
 ## What This Section Maps To
 
-The legacy modernization instantiation is operationalized by the [ASIMOV platform](../practitioner/asimov.md). The ASIMOV page covers the production implementation: the five pillars (AGIE, ASF, AMM, AVF, Maintain), the four quality gates, the deployment architecture, and the operational track record across 15M+ LOC modernized.
+The legacy modernization instantiation is operationalized by the [ASIMOV platform](../asimov/_index.md). The ASIMOV page covers the production implementation: the five pillars (AGIE, ASF, AMM, AVF, Maintain), the four quality gates, the deployment architecture, and the operational track record across 15M+ LOC modernized.
 
 The [About Accion Labs](../practitioner/_index.md) page covers the firm. Engagement entry point for modernization work is on the [Contact](../practitioner/contact.md) page.
 

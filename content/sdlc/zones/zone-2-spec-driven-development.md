@@ -338,7 +338,7 @@ Both shifts are developed in [Team](../process/team.md). The adoption playbook w
 
 > **How Accion Labs operationalizes this**
 >
-> The [Breeze.AI platform](../../practitioner/breeze-ai.md) implements the four-layer knowledge graph, the brownfield extraction process, and the Impact Analysis Agent. The [ASIMOV platform](../../practitioner/asimov.md) is the peer agentic platform that applies the same Semantic Engineering principles to legacy modernization, with a focused subset of the ontologies and a fully agentic flow.
+> The [Breeze.AI platform](../../breeze-ai/_index.md) implements the four-layer knowledge graph, the brownfield extraction process, and the Impact Analysis Agent. The [ASIMOV platform](../../asimov/_index.md) is the peer agentic platform that applies the same Semantic Engineering principles to legacy modernization, with a focused subset of the ontologies and a fully agentic flow.
 
 ---
 

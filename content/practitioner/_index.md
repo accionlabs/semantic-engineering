@@ -150,8 +150,8 @@ The technical implementations we bring to a Semantic Engineering engagement. Eac
 
 | Platform | What it does | When it engages |
 |---|---|---|
-| [Breeze.AI](breeze-ai.md) | The AI-native SDLC platform. Operates the full four-layer knowledge graph plus the agent fleet (Impact Analysis, PR Validation, BDD Generation, KG Sync, Extraction). Developer is in the loop on per-change decisions. | When the engagement is ongoing SDLC governance and evolution of a live application. |
-| [ASIMOV](asimov.md) | The agentic legacy modernization platform. Builds on Semantic Engineering principles. Five-pillar architecture across the legacy modernization lifecycle: AGIE (Discover), ASF (Document, with BRD / Gherkin / Playwright / chatbot extraction), AMM (Migrate), AVF (Validate, with four named gates: Architecture, Design, Standards, Functional), Maintain. Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Five engagement modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain, Operate, and Convergence). Humans validate at SME annotation and Expert Review; everything between is agentic. Track record: 15M+ LOC modernized across 10+ programs over 3+ years. Up to 4× faster than manual modernization. | When the engagement scope is replacing a legacy system (COBOL, Delphi, VB.NET, older Java, ASP.Net) with a modern stack (.NET 8/10, Java 21, React 19, Spring MVC, Angular 19) while preserving behavior. |
+| [Breeze.AI](../breeze-ai/_index.md) | The AI-native SDLC platform. Operates the full four-layer knowledge graph plus the agent fleet (Impact Analysis, PR Validation, BDD Generation, KG Sync, Extraction). Developer is in the loop on per-change decisions. | When the engagement is ongoing SDLC governance and evolution of a live application. |
+| [ASIMOV](../asimov/_index.md) | The agentic legacy modernization platform. Builds on Semantic Engineering principles. Five-pillar architecture across the legacy modernization lifecycle: AGIE (Discover), ASF (Document, with BRD / Gherkin / Playwright / chatbot extraction), AMM (Migrate), AVF (Validate, with four named gates: Architecture, Design, Standards, Functional), Maintain. Three core capabilities: Legacy System Renewal, Scalable Architecture Redesign, AI-Guided Upgrades. Five engagement modes (Documentation Only, Discovery + Documentation, Migration Readiness, Full Modernization, Maintain, Operate, and Convergence). Humans validate at SME annotation and Expert Review; everything between is agentic. Track record: 15M+ LOC modernized across 10+ programs over 3+ years. Up to 4× faster than manual modernization. | When the engagement scope is replacing a legacy system (COBOL, Delphi, VB.NET, older Java, ASP.Net) with a modern stack (.NET 8/10, Java 21, React 19, Spring MVC, Angular 19) while preserving behavior. |
 
 ### Other Accion Labs Platforms Referenced in the Methodology
 
@@ -195,8 +195,8 @@ The deployment model is decided during the Advise phase of the engagement. The F
 
 The depth coverage of each platform lives on its own page.
 
-- [Breeze.AI](breeze-ai.md) covers heritage of the name, what Breeze.AI implements per methodology element, deployment architecture, integration surface, operational maturity, and engagement lifecycle.
-- [ASIMOV](asimov.md) covers what ASIMOV does end-to-end, supported migration paths, operational track record, how it relates to Breeze.AI, when it is the right platform, and the engagement pattern.
+- [Breeze.AI](../breeze-ai/_index.md) covers heritage of the name, what Breeze.AI implements per methodology element, deployment architecture, integration surface, operational maturity, and engagement lifecycle.
+- [ASIMOV](../asimov/_index.md) covers what ASIMOV does end-to-end, supported migration paths, operational track record, how it relates to Breeze.AI, when it is the right platform, and the engagement pattern.
 
 ---
 
@@ -311,7 +311,7 @@ For engagements where the trigger is legacy modernization (replacing a legacy sy
 
 The extraction process runs against the legacy system. The four-layer graph captures the legacy system's actual behavior. The graph then becomes the specification for the modern system. The implementation team builds against the graph. The methodology is in place from Day 1 of the modern system.
 
-This is the pattern we use for [ASIMOV](asimov.md)-based legacy modernization engagements.
+This is the pattern we use for [ASIMOV](../asimov/_index.md)-based legacy modernization engagements.
 
 ### Expected Outcomes
 

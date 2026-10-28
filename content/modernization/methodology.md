@@ -132,7 +132,7 @@ The graph travels. The four custodians of the modernization instantiation contin
 
 > **How Accion Labs operationalizes the modernization ontology**
 >
-> The [ASIMOV platform](../practitioner/asimov.md) implements all three modernization ontologies and the parity contract: the ingestion and enrichment agents that build the Source-state ontology, the blueprint ingestion agent that produces the Target-state ontology, the specification extraction agent and the human-readable extractions, the migration agents, and the four validation gates. The [Modernization Operating Model](process/operating-model.md) covers the delivery discipline that runs on top of the ontology.
+> The [ASIMOV platform](../asimov/_index.md) implements all three modernization ontologies and the parity contract: the ingestion and enrichment agents that build the Source-state ontology, the blueprint ingestion agent that produces the Target-state ontology, the specification extraction agent and the human-readable extractions, the migration agents, and the four validation gates. The [Modernization Operating Model](process/operating-model.md) covers the delivery discipline that runs on top of the ontology.
 
 ---
 

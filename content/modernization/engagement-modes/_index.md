@@ -230,4 +230,4 @@ The transition from a legacy system to a modern system rarely happens in one cut
 
 ---
 
-The companion pages: [The Manual Translation Tax](../translation-tax.md) names the problem. [Ontologies for Legacy Modernization](../methodology.md) covers the methodology depth. [Modernization Operating Model](../process/operating-model.md) covers the operating model that delivers the modes. [ASIMOV](../../practitioner/asimov.md) is the platform that operationalizes the methodology.
+The companion pages: [The Manual Translation Tax](../translation-tax.md) names the problem. [Ontologies for Legacy Modernization](../methodology.md) covers the methodology depth. [Modernization Operating Model](../process/operating-model.md) covers the operating model that delivers the modes. [ASIMOV](../../asimov/_index.md) is the platform that operationalizes the methodology.

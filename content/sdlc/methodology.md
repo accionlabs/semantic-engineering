@@ -370,7 +370,7 @@ Large-scale modernization is the exception. There the target has a graph of its 
 
 > **How Accion Labs operationalizes graph operation**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) maintains the product-partitioned graphs, runs the brownfield extraction, runs the 29-metric framework and 14 verification checks, and runs the three Impact Analysis variants. The [Managed Support tiers](process/enablement-partnership.md) (Light, Medium, Deep) determine which cadence of metrics review Accion Labs runs alongside the client's custodians.
+> The [Breeze.AI platform](../breeze-ai/_index.md) maintains the product-partitioned graphs, runs the brownfield extraction, runs the 29-metric framework and 14 verification checks, and runs the three Impact Analysis variants. The [Managed Support tiers](process/enablement-partnership.md) (Light, Medium, Deep) determine which cadence of metrics review Accion Labs runs alongside the client's custodians.
 
 ---
 

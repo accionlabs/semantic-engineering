@@ -309,6 +309,9 @@ const mcp = async (request: Request, env: Env) => {
 const wantsMarkdown = (request: Request) => /text\/markdown/.test(request.headers.get('accept') ?? '');
 const AGENT_PAGES = ['/graph', '/explain', '/connect'];
 
+/** Pages that moved, old address to new. */
+const MOVED: Record<string, string> = { '/practitioner/breeze-ai/': '/breeze-ai/', '/practitioner/asimov/': '/asimov/' };
+
 /** Staging shows draft pages for review, so search engines are told to leave all of it alone. */
 const staging = async (request: Request, env: Env): Promise<Response> => {
   if (new URL(request.url).pathname === '/robots.txt') return new Response('User-agent: *\nDisallow: /\n', { headers: { 'content-type': 'text/plain', 'x-robots-tag': 'noindex' } });
@@ -336,6 +339,9 @@ export default {
 async function site(request: Request, env: Env): Promise<Response> {
   const url = new URL(request.url);
   if (url.hostname.startsWith('www.')) { url.hostname = url.hostname.slice(4); return Response.redirect(url.toString(), 301); }
+  // The Breeze.AI and ASIMOV pages moved from Practitioner to sections of their own.
+  const moved = MOVED[url.pathname.replace(/\/?$/, '/')];
+  if (moved) { url.pathname = moved; return Response.redirect(url.toString(), 301); }
   if (url.pathname === '/mcp' || url.pathname === '/mcp/') return mcp(request, env);
   if (url.pathname === '/api/explanations' && request.method === 'POST') return shareExplanation(request, env);
   if (url.pathname === '/api/contact' && request.method === 'POST') return contact(request, env);

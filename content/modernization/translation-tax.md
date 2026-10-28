@@ -87,7 +87,7 @@ A client who runs both engagement types over time sees both taxes resolved by th
 
 > **How Accion Labs operationalizes the response**
 >
-> The [ASIMOV platform](../practitioner/asimov.md) implements the five-stage modernization lifecycle and the four named validation gates that address the modernization translation tax. The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the continuous SDLC response to the SDLC translation tax. Both platforms apply the same Semantic Engineering principles.
+> The [ASIMOV platform](../asimov/_index.md) implements the five-stage modernization lifecycle and the four named validation gates that address the modernization translation tax. The [Breeze.AI platform](../breeze-ai/_index.md) implements the continuous SDLC response to the SDLC translation tax. Both platforms apply the same Semantic Engineering principles.
 
 ---
 

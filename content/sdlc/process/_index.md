@@ -84,7 +84,7 @@ Zone 4 is the operating mode at portfolio scale. Multiple products operate under
 
 > **How Accion Labs operationalizes the continuous SDLC operating model**
 >
-> The [Breeze.AI platform](../../practitioner/breeze-ai.md) implements the per-change SDLC flow, the four-ontology validation gate, and the agent fleet. The [Engagement Model](../engagement-model.md) staffs the operating model across Advise, Launch, Scale, and Optimize phases.
+> The [Breeze.AI platform](../../breeze-ai/_index.md) implements the per-change SDLC flow, the four-ontology validation gate, and the agent fleet. The [Engagement Model](../engagement-model.md) staffs the operating model across Advise, Launch, Scale, and Optimize phases.
 
 ---
 

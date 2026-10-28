@@ -48,6 +48,8 @@ Three kinds of tests run against the new application:
 
 ## The Delivery Phases
 
+![ASIMOV five-phase delivery: Discovery and Analysis, Code Graph Generation and Enrichment, MVP Iterative Migration, Scaled Iterative Migration, UAT and Deployment](/diagrams/asimov-four-phase-delivery.svg)
+
 | Phase | What happens | Typical duration |
 |---|---|---|
 | Discovery and analysis | Analysis report, migration plan, target architecture, choice of a first module | Two to four weeks |

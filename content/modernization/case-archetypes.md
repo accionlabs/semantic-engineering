@@ -110,4 +110,4 @@ Indicative outcomes on a 1M LOC standalone codebase: up to **4× faster** than m
 
 ---
 
-The companion to this page is [Case Archetypes: Continuous SDLC](../sdlc/case-archetypes.md), which covers two SDLC archetypes (brownfield enterprise modernization at 2M LOC and greenfield growing into complexity). [ASIMOV](../practitioner/asimov.md) is the platform that operationalizes the methodology for legacy modernization. [Engagement Modes of Legacy Modernization](engagement-modes/_index.md) covers the five engagement modes under which these case studies were delivered.
+The companion to this page is [Case Archetypes: Continuous SDLC](../sdlc/case-archetypes.md), which covers two SDLC archetypes (brownfield enterprise modernization at 2M LOC and greenfield growing into complexity). [ASIMOV](../asimov/_index.md) is the platform that operationalizes the methodology for legacy modernization. [Engagement Modes of Legacy Modernization](engagement-modes/_index.md) covers the five engagement modes under which these case studies were delivered.

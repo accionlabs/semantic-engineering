@@ -27,6 +27,12 @@ The name stands for Agentic Software Intelligence for Migration, Optimization an
 
 Most modernization programs overrun because nobody fully knows what the old system does. Business rules are buried in code written decades ago, the documents are missing or out of date, and the people who wrote it have left. AI code translation on its own copies the old structure into a new language and misses behavior that was never written down.
 
+| Where AI tools fall short on legacy systems | What goes wrong |
+|---|---|
+| **Code and structure** | Tangled code with no clear structure, and an architecture that does not match the organization's target stack |
+| **Knowledge and context** | Systems too large for an AI tool to take in at once, documentation that is missing, and no requirements to test against |
+| **Integration and execution** | Migrating into an existing target application, external dependencies that break behavior, and agents that guess without a structure to check against |
+
 ASIMOV starts by recording what the system does, as a graph and a specification people can read. The client decides what to keep, change, replace or retire. Agents then build the new system against a target graph of the approved architecture, and every module is checked against both.
 
 ## What It Does
@@ -59,6 +65,7 @@ Once the new system is live, the team can keep changing it with [Breeze.AI](../b
 | Page | What it covers |
 |---|---|
 | [How It Works](how-it-works.md) | The five stages, the review points and the quality gates |
+| [Architecture](architecture.md) | The five pillars, the pipeline end to end, the agent behind each gate and the validation streams |
 | [What It Modernizes](what-it-modernizes.md) | Source and target stacks, and the kinds of modernization |
 | [Deliverables](deliverables.md) | What the client receives |
 | [Deployment and Architecture](deployment.md) | How ASIMOV is installed for a client, its components and dependencies |

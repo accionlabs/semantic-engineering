@@ -41,7 +41,7 @@ The two engagement models look superficially similar (both have a sequence of na
 | **Anchored on** | The four ontology custodians maintaining the four-layer ontology continuously | The same four custodians governing the three modernization ontologies through the modernization stages and into the modernized system's operation |
 | **Operating model** | Sprint-cadenced ([spec sprint](../sdlc/process/spec-sprint.md) + [implementation sprint](../sdlc/process/implementation-sprint.md)) | Stage-sequenced (the five-stage [modernization operating model](process/operating-model.md)) |
 | **Enablement frame** | The [SDLC enablement partnership](../sdlc/process/enablement-partnership.md) with five principles and three tiers | The [modernization enablement frame](process/enablement-frame.md) sized for a bounded project |
-| **Platform** | [Breeze.AI](../practitioner/breeze-ai.md) | [ASIMOV](../practitioner/asimov.md) |
+| **Platform** | [Breeze.AI](../breeze-ai/_index.md) | [ASIMOV](../asimov/_index.md) |
 
 A client who runs both shapes (modernization first, then continuous SDLC on the modernized system) goes through the modernization modes first and then the continuous SDLC phases starting from Advise. The transition point is the hand-over at the end of the [Maintain mode](engagement-modes/_index.md#mode-5-maintain-operate-and-convergence), where the four-layer ontology is built for the modernized system: the Code Ontology is extracted from the new code, and the annotated specification and the target blueprint seed the other three layers.
 
@@ -85,7 +85,7 @@ The two models can also run independently. A client who modernizes one product c
 
 > **How Accion Labs operationalizes this**
 >
-> The [ASIMOV platform](../practitioner/asimov.md) implements the five modernization engagement modes. The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the continuous SDLC engagement model. The [Engagement Modes of Legacy Modernization](engagement-modes/_index.md) section covers the modes in depth.
+> The [ASIMOV platform](../asimov/_index.md) implements the five modernization engagement modes. The [Breeze.AI platform](../breeze-ai/_index.md) implements the continuous SDLC engagement model. The [Engagement Modes of Legacy Modernization](engagement-modes/_index.md) section covers the modes in depth.
 
 ---
 

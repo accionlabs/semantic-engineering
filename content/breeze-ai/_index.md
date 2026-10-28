@@ -60,6 +60,14 @@ Breeze.AI runs hosted by Accion Labs, or deployed in the client's own environmen
 
 Most clients start with the System Model Pilot: in two to three weeks, Breeze.AI builds the graph of one application and runs impact analysis on a real item from the client's backlog. See [Pricing and Engagement](pricing.md).
 
+## Where the Name Comes From
+
+![Two roots into Breeze.AI: the 2017 Breeze manual blueprint for role governance, and the 2022 knowledge-graph constraint pattern from drug discovery, converging into the 2026 platform that operationalizes both](/diagrams/breeze-heritage-timeline.svg)
+
+Breeze.AI carries the name of an earlier framework. The original Breeze, published inside Accion Labs in 2017, set out what product owners, architects and UX designers need to produce. Teams kept its documents up to date by hand, which took a lot of coordination across engagements, and under deadline pressure the documents were often skipped.
+
+Breeze.AI keeps the same roles and what each one owns, as the four layers of the graph and their owners. The upkeep that teams could not sustain by hand is done by agents. See [Origins](../about/origins.md).
+
 ## In This Section
 
 | Page | What it covers |

@@ -40,7 +40,7 @@ The pages below are sequenced to build understanding in reading order. A reader 
 
 ## What This Section Maps To
 
-The continuous SDLC instantiation is operationalized by the [Breeze.AI platform](../practitioner/breeze-ai.md). The Breeze.AI page covers the production implementation: the four-layer knowledge graph storage, the agent fleet implementation, the integration surface, deployment modes, and the operational maturity numbers from production engagements.
+The continuous SDLC instantiation is operationalized by the [Breeze.AI platform](../breeze-ai/_index.md). The Breeze.AI page covers the production implementation: the four-layer knowledge graph storage, the agent fleet implementation, the integration surface, deployment modes, and the operational maturity numbers from production engagements.
 
 The [About Accion Labs](../practitioner/_index.md) page covers the firm, the AI evolution timeline from 2017 through 2026, the AI Operating Model, and the services catalog. Workshop request and engagement entry point are on the [Contact](../practitioner/contact.md) page.
 

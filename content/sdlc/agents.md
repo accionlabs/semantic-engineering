@@ -38,7 +38,7 @@ The methodology is rolled out faster than the operating model. The operating mod
 
 > **How Accion Labs operationalizes the agent fleet**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the agent fleet described in this section. Each agent in production has a named human owner from Accion Labs's engagement team.
+> The [Breeze.AI platform](../breeze-ai/_index.md) implements the agent fleet described in this section. Each agent in production has a named human owner from Accion Labs's engagement team.
 
 ## The SDLC Agent Fleet
 
@@ -219,7 +219,7 @@ Senior engineers spend their time on judgment. The senior engineer's most valuab
 
 > **How Accion Labs operationalizes the Impact Analysis Agent**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the Impact Analysis Agent in both pre and post implementation modes against the four-layer knowledge graph. For cross-product changes, the Cross-Product Impact Extension consults multiple product graphs in sequence. See [Partition by Product](methodology.md#partition-by-product).
+> The [Breeze.AI platform](../breeze-ai/_index.md) runs the Impact Analysis Agent in both pre and post implementation modes against the four-layer knowledge graph. For cross-product changes, the Cross-Product Impact Extension consults multiple product graphs in sequence. See [Partition by Product](methodology.md#partition-by-product).
 
 ## The PR Validation Agent
 
@@ -286,7 +286,7 @@ The cost of a single production incident traceable to a structural violation typ
 
 > **How Accion Labs operationalizes the PR Validation Agent**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the PR Validation Agent in the client's CI/CD pipeline. The agent's configuration is owned by the workstream's Tech Lead. The override audit trail is reviewed by the engagement's Chief Architect on a quarterly cadence.
+> The [Breeze.AI platform](../breeze-ai/_index.md) runs the PR Validation Agent in the client's CI/CD pipeline. The agent's configuration is owned by the workstream's Tech Lead. The override audit trail is reviewed by the engagement's Chief Architect on a quarterly cadence.
 
 ## The BDD Generation Agent
 
@@ -369,7 +369,7 @@ For non-functional testing, the team continues to use the same patterns they use
 
 > **How Accion Labs operationalizes the BDD Generation Agent**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the BDD Generation Agent against the client's Functional Ontology. Generated scenarios are committed to the test suite repository with the Tech Lead as the named approver for diffs.
+> The [Breeze.AI platform](../breeze-ai/_index.md) runs the BDD Generation Agent against the client's Functional Ontology. Generated scenarios are committed to the test suite repository with the Tech Lead as the named approver for diffs.
 
 ## The KG Sync Agent
 
@@ -426,7 +426,7 @@ Sync falling behind is rare in practice. Per-change sync on a 1.6M LOC applicati
 
 > **How Accion Labs operationalizes the KG Sync Agent**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) runs the KG Sync Agent as part of the client's CI/CD pipeline. Sync is triggered automatically on every pull request, before it merges, so the graph stays in step with the main branch. The Ontology Maintainer from the Accion Labs engagement team owns the agent's operational health.
+> The [Breeze.AI platform](../breeze-ai/_index.md) runs the KG Sync Agent as part of the client's CI/CD pipeline. Sync is triggered automatically on every pull request, before it merges, so the graph stays in step with the main branch. The Ontology Maintainer from the Accion Labs engagement team owns the agent's operational health.
 
 ## Progressive Autonomy
 
@@ -532,7 +532,7 @@ The levels shift over time as evidence accumulates. The promotion path for each 
 
 > **How Accion Labs operationalizes progressive autonomy**
 >
-> The [Breeze.AI platform](../practitioner/breeze-ai.md) implements the five autonomy levels and the Promotion Agreement workflow. The Engagement Council reviews promotion decisions on a quarterly cadence as part of the [enablement engagement](process/enablement-partnership.md).
+> The [Breeze.AI platform](../breeze-ai/_index.md) implements the five autonomy levels and the Promotion Agreement workflow. The Engagement Council reviews promotion decisions on a quarterly cadence as part of the [enablement engagement](process/enablement-partnership.md).
 
 ---
 

@@ -130,7 +130,7 @@ The modernization fleet has nine agents. The fleet was sized to cover the five s
 
 > **How Accion Labs operationalizes the modernization fleet**
 >
-> The [ASIMOV platform](../practitioner/asimov.md) implements all nine modernization agents. The five-stage pipeline runs as a bounded modernization project under the [Modernization Operating Model](process/operating-model.md). Engagement-specific autonomy is calibrated during the MVP phase, then operated at steady state during the Scaled Migration phase.
+> The [ASIMOV platform](../asimov/_index.md) implements all nine modernization agents. The five-stage pipeline runs as a bounded modernization project under the [Modernization Operating Model](process/operating-model.md). Engagement-specific autonomy is calibrated during the MVP phase, then operated at steady state during the Scaled Migration phase.
 
 ---
 

@@ -162,8 +162,8 @@ The methodology is operationalized by two production platforms. Each one is size
 
 | Platform | Use case | Operationalizes |
 |---|---|---|
-| **[Breeze.AI](practitioner/breeze-ai.md)** | Continuous SDLC (greenfield and brownfield) | Four-layer ontology storage, the SDLC agent fleet, integration surface, deployment modes, governance metrics. |
-| **[ASIMOV](practitioner/asimov.md)** | Legacy Modernization | Five pillars (AGIE, ASF, AMM, AVF, Maintain) across the modernization lifecycle. Four validation gates. Bounded delivery pipeline at scale. |
+| **[Breeze.AI](breeze-ai/_index.md)** | Continuous SDLC (greenfield and brownfield) | Four-layer ontology storage, the SDLC agent fleet, integration surface, deployment modes, governance metrics. |
+| **[ASIMOV](asimov/_index.md)** | Legacy Modernization | Five pillars (AGIE, ASF, AMM, AVF, Maintain) across the modernization lifecycle. Four validation gates. Bounded delivery pipeline at scale. |
 
 The platforms are peers under the same methodology. They differ in graph shape and operating cadence because the use cases differ. They share the same principles, the same enablement discipline, and the same governance posture.
 
@@ -230,8 +230,8 @@ A formal grammar above the graph adds the rules a schema cannot express. With it
 | Walk the continuous SDLC instantiation end to end                     | [Agentic Software Engineering (SDLC)](sdlc/_index.md)   |
 | Walk the legacy modernization instantiation end to end                | [Agentic Legacy Modernization](modernization/_index.md) |
 | Understand how Accion Labs engage commercially                        | [Practitioner](practitioner/_index.md)                  |
-| See the SDLC platform that operationalizes continuous work            | [Breeze.AI](practitioner/breeze-ai.md)                  |
-| See the modernization platform that operationalizes legacy work       | [ASIMOV](practitioner/asimov.md)                        |
+| See the SDLC platform that operationalizes continuous work            | [Breeze.AI](breeze-ai/_index.md)                  |
+| See the modernization platform that operationalizes legacy work       | [ASIMOV](asimov/_index.md)                        |
 | Look up methodology terminology                                       | [Resources / Glossary](resources/_index.md)             |
 | Read the origin story and how the methodology evolved                 | [About / Origins](about/_index.md)                      |
 
